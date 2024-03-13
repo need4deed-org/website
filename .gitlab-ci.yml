@@ -1,0 +1,20 @@
+stages:
+  - lint
+  - build
+
+lint_job:
+  stage: lint
+  image: node:20-alpine
+  script:
+    - npm install
+    - npm run lint
+
+build_job:
+  stage: build
+  image: node:20-alpine
+  script:
+    - npm install
+    - npm run build
+  artifacts: 
+    paths:
+      - dist/
