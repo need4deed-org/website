@@ -1,0 +1,34 @@
+.main-container {
+    padding: 60px;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .navbar-main-container {
+    background-image: url('../public/need4deed.jpg');
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the background image */
+
+  }
+.main-text-container {
+  color: #fcfcfc;
+}
+
+.volunteer-cta {
+    margin: 60px;
+    background-color: #fcfcfc;
+    border-color: transparent;
+    border-radius: 25px;
+    padding: 10px 20px; 
+    color: #000000;
+}
+
+.volunteer-cta:hover {
+    background-color: #e9e7e7; 
+
+  }

@@ -1,0 +1,60 @@
+.volunteer-opportunity-container {
+    padding: 60px 80px;
+    background-color: #C7E1E3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.volunteer-opportunity-heading {
+   text-align: center;
+   margin-bottom: 15px;
+}
+.img-container {
+    display: flex;
+    gap: 60px;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.become-a-mentor-img {
+    background-image: url('../../../public/mentor.jpg');
+    transition: transform 0.3s ease-in-out;
+}
+
+.child-care-img {
+    background-image: url('../../../public/child-care.jpg');
+    transition: transform 0.3s ease-in-out;
+}
+
+.sport-programmes-img {
+    background-image: url('../../../public/sport-offer.JPG');
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.volunteer-opportunity-img {
+    width: 100%;
+    background-size: cover;
+    border-radius: 8px;
+   
+}
+
+.volunteer-opportunity-text {
+    background-color: rgba(245, 245, 245, 0.514);
+    color: #252525; 
+    height: 100%;
+    padding: 60px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.volunteer-opportunity-text h5 {
+   margin-bottom: 15px;
+}
+
+.volunteer-opportunity-text p {
+    font-size: 16px; 
+    line-height: 2; 
+}
+
