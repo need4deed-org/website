@@ -1,0 +1,8 @@
+.navbar {
+    padding: 10px 20px !important;
+    background-color: rgba(126, 126, 126, 0.308);
+}
+
+.nav-link {
+    color: white !important;
+}
