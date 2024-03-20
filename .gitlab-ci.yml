@@ -15,6 +15,19 @@ build_job:
   script:
     - npm install
     - npm run build
-  artifacts: 
+  artifacts:
     paths:
-      - dist/
+      - dist
+
+pages:
+  stage: build
+  needs:
+    - job: build_job
+  script:
+    - find . -maxdepth 1 ! -name 'dist' ! -name '.' ! -name '..' -exec rm -rf {} +
+    - cp -r dist public
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
