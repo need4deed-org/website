@@ -1,12 +1,12 @@
-import './Main.css';  // Assuming your CSS file is named styles.css
+import './Main.css';  
 
 function Main() {
   return (
     <>
     <div className='main-container'>
       <div className='main-text-container'>
-      <h1>NEED 4 DEED</h1>
-      <h5>Bedarfsorientierte ehrenamtliche Unterstützung für Geflüchtete in Berlin</h5>
+      <h1 className='heading'>NEED 4 DEED</h1>
+      <h5 className='slogan'>Bedarfsorientierte ehrenamtliche Unterstützung für Geflüchtete in Berlin</h5>
       </div>
       <button className="volunteer-cta">
         Mach mit als Freiwilliger!

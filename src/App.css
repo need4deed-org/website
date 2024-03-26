@@ -1,5 +1,0 @@
-.app-container {
-    display: grid;
-    grid-template-rows: 2.5fr 0.5fr 2fr 0.5fr 0.5fr;
-    height: 300vh;
-}

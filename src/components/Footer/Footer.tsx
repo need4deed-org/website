@@ -22,7 +22,7 @@ function Footer() {
         <div className="footer-column">
           <h6>Contact</h6>
           <ul>
-          <li>E-mail: <a href="mailto:info@blabla">info@blabla</a></li>
+          <li>E-mail: <a href="info@need4deed.org">info@need4deed.org</a></li>
           </ul>
         </div>
       </div>

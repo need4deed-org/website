@@ -14,8 +14,8 @@ function App() {
       <Header/>
       <Main/>
     </div>
-    <Sponsors/>
     <VolunteerOpportunity/>
+    <Sponsors/>
     <AboutProject/>
     <Footer/>
   </div>
