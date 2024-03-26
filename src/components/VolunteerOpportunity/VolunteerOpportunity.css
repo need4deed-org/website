@@ -10,44 +10,38 @@
    text-align: center;
    margin-bottom: 15px;
 }
-.img-container {
-    display: flex;
-    gap: 60px;
-    height: 100%;
-    overflow: hidden;
-}
-
 
 .become-a-mentor-img {
     background-image: url('../../../public/mentor.jpg');
-    transition: transform 0.3s ease-in-out;
 }
 
 .child-care-img {
     background-image: url('../../../public/child-care.jpg');
-    transition: transform 0.3s ease-in-out;
 }
 
 .sport-programmes-img {
     background-image: url('../../../public/sport-offer.JPG');
-    transition: transform 0.3s ease-in-out;
-
 }
 
 .volunteer-opportunity-img {
     width: 100%;
     background-size: cover;
-    border-radius: 8px;
    
 }
 
 .volunteer-opportunity-text {
     background-color: rgba(245, 245, 245, 0.514);
+    text-align: justify;
     color: #252525; 
-    height: 100%;
-    padding: 60px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 240px 120px;
 }
+
+@media (max-width: 768px) {
+    .volunteer-opportunity-text {
+      padding: 48px;
+    }
+  }
+  
 
 .volunteer-opportunity-text h5 {
    margin-bottom: 15px;
@@ -58,3 +52,28 @@
     line-height: 2; 
 }
 
+.learn-more {
+    position: absolute;
+    bottom: 150px;
+    right: 250px;
+    padding: 16px;
+    color: rgb(33, 39, 39);
+}
+
+@media (max-width: 768px) {
+    .learn-more {
+        bottom: 16px;
+        right: 16px;
+        position: absolute;
+        padding: 6px;
+      
+    }
+  }
+  
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 4rem !important;
+  height: 8rem !important;
+}

@@ -9,5 +9,5 @@
 
 .sponsor-img {
     height: 70%;
-    width: 50%;
+    min-width: 50%;
 }
