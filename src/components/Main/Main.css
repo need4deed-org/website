@@ -1,49 +1,47 @@
 .main-container {
-    padding: 60px;
-    display: flex; 
-    flex-direction: column; 
-    align-items: center;
-    justify-content: center;
-    height: 700px;
-  
-  }
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 700px;
+  justify-content: center;
+  padding: 60px;
+}
 
-  .navbar-main-container {
-    background-image: url('../public/need4deed.jpg');
-    background-size: cover; 
-    background-position: center;
-    
-  }
+.navbar-main-container {
+  background-image: url("images/need4deed.jpg");
+  background-position: center;
+  background-size: cover;
+}
 
-  .main-text-container {
-    color: #fcfcfc;
-    background-color:rgba(126, 122, 122, 0.336);
-    padding: 40px;
-    border-radius: 12px;
-  }
+.main-text-container {
+  background-color: rgba(126, 122, 122, 0.336);
+  border-radius: 12px;
+  color: #fcfcfc;
+  padding: 40px;
+}
 
-  .heading {
-    letter-spacing: 4px;
-  }
+.heading {
+  letter-spacing: 4px;
+}
 
-  .slogan {
-    padding-top: 10px;
-    letter-spacing: 1px;
-  }
+.slogan {
+  letter-spacing: 1px;
+  padding-top: 10px;
+}
 
 .volunteer-cta {
-    margin: 60px;
-    background-color: #fcfcfc;
-    border-color: transparent;
-    border-radius: 25px;
-    padding: 10px 20px; 
-    color: #000000;
+  background-color: #fcfcfc;
+  border-color: transparent;
+  border-radius: 25px;
+  color: #000000;
+  margin: 60px;
+  padding: 10px 20px;
 }
 
 .volunteer-cta:hover {
-    background-color: #e9e7e7; 
-  }
+  background-color: #e9e7e7;
+}
 
-  .fa-solid {
-    color: white;
-  }
+.fa-solid {
+  color: white;
+}

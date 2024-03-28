@@ -1,0 +1,52 @@
+{
+    "language": "English",
+    "need4deed": "Need 4 Deed",
+    "workingWithRefugees": "Volunteering with refugees",
+    "learnMoreButton": "Learn more",
+    "projectIntro": {
+        "slogan": "Need based voluntary support for refugees in Berlin",
+        "beVolunteerButton": "Become a Volunteer!"
+    },
+    "volunteeringProjects": {
+        "overComeObstaclesHeading": "Overcome barriers together!",
+        "overComeObstaclesSubheading": "In the project “Hürdenspringer” in Tempelhof-Schöneberg, you get to know new people and support them in getting a foothold in Berlin. German language skills of B1 level are required to take part in the project.",
+        "childCareHeading": "Childcare",
+        "childCareSubheading": "In various refugee accommodation places, there are recreational activities for children. For these, we are looking for volunteers who already have experience in working with children and young people. ",
+        "sportProgramHeading": "Sport activities",
+        "sportProgramSubheading": "We are looking for volunteers to help us organize sports activities for children, teenagers or adults in community shelters!"
+    },
+    "aboutProject": {
+        "aboutProjectHeading": "About the project",
+        "aboutProjectSubheading": "The number of people fleeing conflict zones, persecution and human rights violations worldwide has never been as high as it is today. Need4Deed is set to promote the inclusion and integration of refugees in Berlin through the actions of civil society by making volunteering more accessible. We aim to build a sustainable and scalable mechanism for this purpose by connecting volunteers with refugees that are living in community shelters in Berlin based on their specific needs."
+    },
+    "values": {
+        "valuesHeading": "Our values",
+        "equalOpportunityHeading": "Equal opportunities",
+        "equalOpportunitySubheading": "People living under destitute life conditions should be given equal opportunities. The latter includes underserved individuals and groups affected by forced migration.",
+        "responsibilityHeading": "Responsibility",
+        "responsibilitySubheading": "Both countries (the state) and civil society, have responsibility towards its underserved communities including those affected by forced migration.",
+        "migranToMigranSupportHeading": "Migrant-to-migrant support",
+        "migranToMigranSupportSubheading": "In particular, groups and individuals who have undergone forced migration could be best understood and supported by others with migration background in the course of their integration process, so that they receive equal opportunities and eventually benefit society themselves.",
+        "activeParticipationHeading": "Active participation",
+        "activeParticipationSubheading": "A migrant-to-migrant support alongside non-migrant support, can both play a key social role by facilitating a more rapid integration process and active participation of the supported communities.",
+        "technologyHeading": "Technology",
+        "technologySubheading": "Applying technology in the effort to support underserved communities is a key value to make support giving and receiving more inclusive, accessible and scalable."
+    },
+    "footer": {
+        "aboutUs": {
+            "aboutUsHeading": "About us",
+            "project": "The Project",
+            "aboutUs": "About us"
+        },
+        "legal": {
+            "legalHeading": "Legal",
+            "impressum": "Legal notice",
+            "dataPrivacy": "Privacy"
+        },
+        "contact": {
+            "contactHeading": "Contact",
+            "email": "E-mail",
+            "emailAddress": "info@need4deed.org"
+        }
+    }
+}
