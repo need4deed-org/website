@@ -1,19 +1,19 @@
 .about-project-container {
-    padding: 120px;
+  padding: 80px 100px;
 }
 
 @media (max-width: 768px) {
-    .about-project-container {
-      padding: 48px; 
-    }
+  .about-project-container {
+    padding: 48px;
   }
-  
+}
+
 .about-project-container p {
-    font-size: 14px;
-    line-height: 2;
-    text-align: justify;
+  font-size: 14px;
+  line-height: 2;
+  text-align: justify;
 }
 
 h2 {
-    margin: 24px 0;
+  margin: 24px 0;
 }

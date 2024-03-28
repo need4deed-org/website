@@ -1,17 +1,16 @@
 .navbar {
-    padding: 10px 20px !important;
-    background-color:rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px !important;
 }
 
 .nav-link {
-    color: white !important;
+  color: white !important;
 }
 
 #navbarSupportedContent {
-    padding: 10px 20px !important;
+  padding: 10px 20px !important;
 }
 
 .navbar-toggler-icon {
-    background-image:
-url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }

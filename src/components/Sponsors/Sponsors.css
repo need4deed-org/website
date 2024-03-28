@@ -1,13 +1,11 @@
-
 .sponsor-img-container {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    padding: 30px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
 }
 
-
 .sponsor-img {
-    height: 70%;
-    min-width: 50%;
+  height: 70%;
+  min-width: 50%;
 }

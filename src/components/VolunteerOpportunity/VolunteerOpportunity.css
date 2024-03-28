@@ -1,79 +1,75 @@
 .volunteer-opportunity-container {
-    padding: 60px 80px;
-    background-color: #C7E1E3;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  background-color: #c7e1e3;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 60px 80px;
 }
 
 .volunteer-opportunity-heading {
-   text-align: center;
-   margin-bottom: 15px;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
 .become-a-mentor-img {
-    background-image: url('../../../public/mentor.jpg');
+  background-image: url("/images/mentor.jpg");
+  height: 100%;
 }
 
 .child-care-img {
-    background-image: url('../../../public/child-care.jpg');
+  background-image: url("/images/child-care.jpg");
 }
 
 .sport-programmes-img {
-    background-image: url('../../../public/sport-offer.JPG');
+  background-image: url("/images/sport-offer.JPG");
 }
 
 .volunteer-opportunity-img {
-    width: 100%;
-    background-size: cover;
-   
+  background-size: cover;
+  width: 100%;
 }
 
 .volunteer-opportunity-text {
-    background-color: rgba(245, 245, 245, 0.514);
-    text-align: justify;
-    color: #252525; 
-    padding: 240px 120px;
+  background-color: rgba(245, 245, 245, 0.514);
+  color: #252525;
+  padding: 240px 120px;
+  text-align: justify;
 }
 
 @media (max-width: 768px) {
-    .volunteer-opportunity-text {
-      padding: 48px;
-    }
+  .volunteer-opportunity-text {
+    padding: 48px;
   }
-  
+}
 
 .volunteer-opportunity-text h5 {
-   margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .volunteer-opportunity-text p {
-    font-size: 16px; 
-    line-height: 2; 
+  font-size: 16px;
+  line-height: 2;
 }
 
 .learn-more {
-    position: absolute;
-    bottom: 150px;
-    right: 250px;
-    padding: 16px;
-    color: rgb(33, 39, 39);
+  bottom: 150px;
+  color: rgb(33, 39, 39);
+  padding: 16px;
+  position: absolute;
+  right: 250px;
 }
 
 @media (max-width: 768px) {
-    .learn-more {
-        bottom: 16px;
-        right: 16px;
-        position: absolute;
-        padding: 6px;
-      
-    }
+  .learn-more {
+    bottom: 16px;
+    padding: 6px;
+    position: absolute;
+    right: 16px;
   }
-  
-
+}
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  width: 4rem !important;
   height: 8rem !important;
+  width: 4rem !important;
 }
