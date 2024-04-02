@@ -16,6 +16,7 @@ function Header() {
     i18n.changeLanguage(lng);
   };
 
+  /* TODO: dropdown doesn't look integrated when it's open. Make it pretty :) */
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
@@ -42,13 +43,13 @@ function Header() {
         >
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link" href="#volunteer-opportunities-section">
+              <a className="nav-link" href="#volunteer-opportunities">
                 {t("workingWithRefugees")}
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                BAS (2022)
+              <a className="nav-link" href={t("basLink")}>
+                {t("bas2022")}
               </a>
             </li>
             <li className="nav-item dropdown">

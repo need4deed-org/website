@@ -1,8 +1,10 @@
 {
     "language": "العربية",
-    "need4deed": "Need 4 Deed",
+    "need4deed": "NEED 4 DEED",
     "workingWithRefugees": "التطوع مع اللاجئين",
     "learnMoreButton": "اقرأ المزيد",
+    "bas2022": "BAS (2022)",
+    "basLink": "https://bevos.org/bas-documentation/?lang=en",
     "projectIntro": {
         "slogan": "دعم العمل التطوعي استجابة لاحتياجات اللاجئين في برلين",
         "beVolunteerButton": "!تطوع معنا"

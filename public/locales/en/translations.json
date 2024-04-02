@@ -1,8 +1,10 @@
 {
     "language": "English",
-    "need4deed": "Need 4 Deed",
+    "need4deed": "NEED 4 DEED",
     "workingWithRefugees": "Volunteering with refugees",
     "learnMoreButton": "Learn more",
+    "bas2022": "BAS (2022)",
+    "basLink": "https://bevos.org/bas-documentation/?lang=en",
     "projectIntro": {
         "slogan": "Need based voluntary support for refugees in Berlin",
         "beVolunteerButton": "Become a Volunteer!"

@@ -1,8 +1,10 @@
 {
     "language": "Русский",
-    "need4deed": "Need 4 Deed",
+    "need4deed": "NEED 4 DEED",
     "workingWithRefugees": "Волонтерство с беженцами",
     "learnMoreButton": "Узнать больше",
+    "bas2022": "BAS (2022)",
+    "basLink": "https://bevos.org/bas-documentation/?lang=en",
     "projectIntro": {
         "slogan": "Волонтерская поддержка беженцев в Берлине, ориентированная на их потребности",
         "beVolunteerButton": "Стань волонтером!"
