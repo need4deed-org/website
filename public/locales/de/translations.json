@@ -1,8 +1,10 @@
 {
     "language": "Deutsch",
-    "need4deed": "Need 4 Deed",
+    "need4deed": "NEED 4 DEED",
     "workingWithRefugees": "Freiwilligenarbeit mit Geflüchteten",
     "learnMoreButton": "Mehr erfahren",
+    "bas2022": "BAS (2022)",
+    "basLink": "https://bevos.org/bas-dokumentation/",
     "projectIntro": {
         "slogan": "Bedarfsorientierte ehrenamtliche Unterstützung für Geflüchtete in Berlin",
         "beVolunteerButton": "Mach mit als Freiwilliger!"

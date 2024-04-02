@@ -1,8 +1,10 @@
 {
     "language": "فارسی",
-    "need4deed": "Need 4 Deed",
+    "need4deed": "NEED 4 DEED",
     "workingWithRefugees": "کار داوطلبانه با پناهندگان",
     "learnMoreButton": "اطلاعات بیشتر",
+    "bas2022": "BAS (2022)",
+    "basLink": "https://bevos.org/bas-documentation/?lang=en",
     "projectIntro": {
         "slogan": "حمایت داوطلبانه مبتنی بر نیاز برای پناهجویان در برلین",
         "beVolunteerButton": "به عنوان داوطلب همکاری کنید!"

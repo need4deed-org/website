@@ -11,6 +11,7 @@
   text-align: center;
 }
 
+/* TODO: Make the images same size: they have different heights */
 .become-a-mentor-img {
   background-image: url("/images/mentor.jpg");
   height: 100%;
