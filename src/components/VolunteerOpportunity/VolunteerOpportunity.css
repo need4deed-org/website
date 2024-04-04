@@ -14,7 +14,6 @@
 /* TODO: Make the images same size: they have different heights */
 .become-a-mentor-img {
   background-image: url("/images/mentor.jpg");
-  height: 100%;
 }
 
 .child-care-img {
@@ -26,6 +25,7 @@
 }
 
 .volunteer-opportunity-img {
+  background-position: center;
   background-size: cover;
   width: 100%;
 }
@@ -37,10 +37,18 @@
   text-align: justify;
 }
 
+.fixed-height {
+  height: 600px;
+}
+
 @media (max-width: 768px) {
   .volunteer-opportunity-text {
     padding: 48px;
   }
+  .fixed-height {
+    height: 300px;
+  }
+
 }
 
 .volunteer-opportunity-text h5 {

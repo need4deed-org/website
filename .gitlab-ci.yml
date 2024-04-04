@@ -24,10 +24,11 @@ pages:
   needs:
     - job: build_job
   script:
-    - find . -maxdepth 1 ! -name 'dist' ! -name '.' ! -name '..' -exec rm -rf {} +
+    - rm -rf public
     - cp -r dist public
+    - rm -rf dist
   artifacts:
     paths:
       - public
-  only:
-    - main
+  # only:
+  #   - main
