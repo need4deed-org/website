@@ -11,7 +11,6 @@
   text-align: center;
 }
 
-/* TODO: Make the images same size: they have different heights */
 .become-a-mentor-img {
   background-image: url("/images/mentor.jpg");
 }
@@ -37,8 +36,8 @@
   text-align: justify;
 }
 
-.fixed-height {
-  height: 600px;
+.volunteer-opportunity-text p {
+  min-height: 100px;
 }
 
 @media (max-width: 768px) {
@@ -48,7 +47,12 @@
   .fixed-height {
     height: 300px;
   }
-
+  .learn-more {
+    bottom: 16px;
+    padding: 6px;
+    position: absolute;
+    right: 16px;
+  }
 }
 
 .volunteer-opportunity-text h5 {
@@ -66,15 +70,6 @@
   padding: 16px;
   position: absolute;
   right: 250px;
-}
-
-@media (max-width: 768px) {
-  .learn-more {
-    bottom: 16px;
-    padding: 6px;
-    position: absolute;
-    right: 16px;
-  }
 }
 
 .carousel-control-prev-icon,
