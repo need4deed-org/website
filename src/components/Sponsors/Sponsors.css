@@ -5,7 +5,16 @@
   padding: 30px;
 }
 
+.sponsor-img-container span {
+  width: 100%;
+  border-top: solid 1px black;
+}
+
 .sponsor-img {
   height: 70%;
   min-width: 50%;
+}
+
+.flex-column {
+  flex-direction: column;
 }
