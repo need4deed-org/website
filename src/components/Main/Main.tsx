@@ -1,5 +1,5 @@
-import "./Main.css";
 import { useTranslation } from "react-i18next";
+import "./Main.css";
 
 function Main() {
   const { t } = useTranslation();
@@ -12,9 +12,9 @@ function Main() {
       </div>
 
       <button className="volunteer-cta">
-        {/* TODO: Add link to translation because there are two different surveys: German and English */}
         <a
-          href="https://docs.google.com/forms/d/1qWcRXmyNPtuUJ4xQ9IEIOEYklyMO696AEGn4LoK_Tj4/viewform?edit_requested=true"
+          href="https://forms.gle/XWnU4znoAFaU9HfW9"
+          target="_blank"
           className="volunteer-cta-link"
         >
           {t("projectIntro.beVolunteerButton")}
