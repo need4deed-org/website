@@ -1,22 +1,23 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
+
 import "./Header.css";
+import { Lang } from "../../types";
 
 function Header() {
-  const { i18n } = useTranslation();
   const { t } = useTranslation();
-
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setIsOpen(prev => !prev);
   };
 
-  const handleLanguageChange = (lng: string) => {
-    i18n.changeLanguage(lng);
+  const handleLanguageChange = (lng: Lang) => {
+    navigate(`/${lng}`);
   };
 
-  /* TODO: dropdown doesn't look integrated when it's open. Make it pretty :) */
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
@@ -69,7 +70,7 @@ function Header() {
                 <li>
                   <button
                     className="dropdown-item"
-                    onClick={() => handleLanguageChange("de")}
+                    onClick={() => handleLanguageChange(Lang.DE)}
                   >
                     Deutsch
                   </button>
@@ -77,7 +78,7 @@ function Header() {
                 <li>
                   <button
                     className="dropdown-item"
-                    onClick={() => handleLanguageChange("en")}
+                    onClick={() => handleLanguageChange(Lang.EN)}
                   >
                     English
                   </button>
@@ -85,7 +86,7 @@ function Header() {
                 <li>
                   <button
                     className="dropdown-item"
-                    onClick={() => handleLanguageChange("ar")}
+                    onClick={() => handleLanguageChange(Lang.AR)}
                   >
                     العربية
                   </button>
@@ -93,7 +94,7 @@ function Header() {
                 <li>
                   <button
                     className="dropdown-item"
-                    onClick={() => handleLanguageChange("fa")}
+                    onClick={() => handleLanguageChange(Lang.FA)}
                   >
                     فارسی
                   </button>
@@ -101,7 +102,7 @@ function Header() {
                 <li>
                   <button
                     className="dropdown-item"
-                    onClick={() => handleLanguageChange("ru")}
+                    onClick={() => handleLanguageChange(Lang.RU)}
                   >
                     Русский
                   </button>
