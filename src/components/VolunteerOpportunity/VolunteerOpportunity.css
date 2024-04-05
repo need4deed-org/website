@@ -65,6 +65,7 @@
 }
 
 .learn-more {
+  visibility: hidden;
   bottom: 150px;
   color: rgb(33, 39, 39);
   padding: 16px;
