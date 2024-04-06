@@ -1,6 +1,7 @@
 stages:
   - lint
   - build
+  - deploy
 
 lint_job:
   stage: lint
@@ -30,5 +31,17 @@ pages:
   artifacts:
     paths:
       - public
-  # only:
-  #   - main
+
+deploy_job:
+  stage: deploy
+  image: python:3.12-alpine
+  dependencies: 
+    - build_job
+  needs:
+    - job: build_job
+  script:
+    - pip install awscli
+    - aws s3 sync dist/ s3://need4deed --delete
+  when: manual
+  only:
+    - main
