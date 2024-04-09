@@ -28,6 +28,7 @@ pages:
     - rm -rf public
     - cp -r dist public
     - rm -rf dist
+    - cp public/index.html public/404.html
   artifacts:
     paths:
       - public
@@ -35,7 +36,7 @@ pages:
 deploy_job:
   stage: deploy
   image: python:3.12-alpine
-  dependencies: 
+  dependencies:
     - build_job
   needs:
     - job: build_job
