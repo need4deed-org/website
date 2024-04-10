@@ -1,5 +1,6 @@
 stages:
   - lint
+  - test
   - build
   - deploy
 
@@ -9,6 +10,13 @@ lint_job:
   script:
     - npm install
     - npm run lint
+
+test_job:
+  stage: test
+  image: node:20-alpine
+  script:
+    - npm install
+    - npm run test
 
 build_job:
   stage: build

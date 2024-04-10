@@ -5,3 +5,9 @@ export enum Lang {
   AR = "ar",
   FA = "fa",
 }
+
+export enum Env {
+  DEVELOP = "develop",
+  TEST = "test",
+  PRODUCTION = "production",
+}
