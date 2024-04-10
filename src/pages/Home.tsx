@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate, useParams } from "react-router-dom";
 
 import AboutProject from "../components/AboutProject/AboutProject";
 import Footer from "../components/Footer/Footer";
@@ -8,18 +9,20 @@ import Main from "../components/Main/Main";
 import Sponsors from "../components/Sponsors/Sponsors";
 import VolunteerOpportunity from "../components/VolunteerOpportunity/VolunteerOpportunity";
 import { Lang } from "../types";
+import { isEnumValue } from "../utils";
 import "./Home.css";
 
-interface Props {
-  lng?: Lang;
-}
-
-function Home({ lng = Lang.EN }: Props) {
+function Home() {
   const { i18n } = useTranslation();
+  const { lng } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    i18n.changeLanguage(lng);
-  }, [lng, i18n]);
+    if (isEnumValue(Lang, lng)) i18n.changeLanguage(lng);
+    else {
+      navigate(`/${Lang.EN}`, { replace: true });
+    }
+  }, [lng, i18n, navigate]);
 
   return (
     <div className="app-container">
