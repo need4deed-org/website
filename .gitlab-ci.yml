@@ -28,6 +28,12 @@ build_job:
     paths:
       - dist
 
+clean_ci_for_amplify:
+  stage: build
+  image: node:20-alpine
+  script:
+    - npm ci
+
 pages:
   stage: build
   needs:
