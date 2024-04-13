@@ -2,8 +2,8 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
-import "./Header.css";
 import { Lang } from "../../types";
+import "./Header.css";
 
 function Header() {
   const { t } = useTranslation();
@@ -19,7 +19,7 @@ function Header() {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg">
+    <nav className="navbar navbar-expand-md">
       <div className="container-fluid">
         <button
           className={`navbar-toggler ${isOpen ? "collapsed" : ""}`}
@@ -40,7 +40,7 @@ function Header() {
         </button>
         <div
           className={`collapse navbar-collapse ${isOpen ? "show" : ""}`}
-          id="navbarSupportedContent"
+          // id="navbarSupportedContent"
         >
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">

@@ -18,6 +18,8 @@ function Footer() {
     rel: "noopener noreferrer",
   };
 
+  const email = "info@need4deed.org";
+
   return (
     <footer>
       <div className="footer-container">
@@ -44,8 +46,9 @@ function Footer() {
           <h6>{t("footer.contact.contactHeading")}</h6>
           <ul>
             <li>
-              {`${t("footer.contact.email")}: `}
-              <a {...mailToLinkProps}>info@need4deed.org</a>
+              <a {...mailToLinkProps}>
+                {`${t("footer.contact.email")}: ${email}`}
+              </a>
             </li>
           </ul>
         </div>

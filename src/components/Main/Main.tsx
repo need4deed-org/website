@@ -7,8 +7,8 @@ function Main() {
   return (
     <div className="main-container">
       <div className="main-text-container">
-        <h1 className="heading">{t("need4deed")}</h1>
-        <h5 className="slogan">{t("projectIntro.slogan")}</h5>
+        <h1>{t("need4deed")}</h1>
+        <h5>{t("projectIntro.slogan")}</h5>
       </div>
 
       <button className="volunteer-cta">

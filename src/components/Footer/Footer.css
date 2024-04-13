@@ -1,14 +1,14 @@
 footer {
-  background-color: #141414;
-  color: #fcfcfc;
-  padding: 40px 40px;
-  text-decoration: none;
+  margin-top: var(--n4d-gap);
+  background-color: var(--n4d-darkest-clr);
+  padding: 40px 0 60px;
 }
 
 .footer-container {
   display: flex;
-  justify-content: center;
-  text-decoration: none;
+  justify-content: space-between;
+  margin-inline: auto;
+  width: var(--n4d-w);
 }
 
 .footer-column {
@@ -23,13 +23,14 @@ footer {
     Roboto,
     sans-serif system-ui,
     Ubuntu;
-  font-size: 12px;
+  font-size: var(--n4d-footer-f-sz);
+  text-decoration: none;
   line-height: 2;
   min-width: 15%;
-  padding: 10px;
 }
 
 .footer-column h6 {
+  color: var(--n4d-primary-light);
   margin-bottom: 10px;
 }
 
@@ -39,6 +40,6 @@ footer {
 }
 
 .footer-column a {
-  color: #fcfcfc;
+  color: var(--n4d-primary-light);
   text-decoration: none;
 }

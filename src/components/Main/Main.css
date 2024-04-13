@@ -16,17 +16,18 @@
 .main-text-container {
   background-color: rgba(126, 122, 122, 0.336);
   border-radius: 12px;
-  color: #fcfcfc;
   padding: 40px;
 }
 
-.heading {
+.main-text-container h1 {
+  color: var(--n4d-title-clr);
   letter-spacing: 4px;
 }
 
-.slogan {
+.main-text-container h5 {
   letter-spacing: 1px;
   padding-top: 10px;
+  color: var(--n4d-primary-light);
 }
 
 .volunteer-cta {

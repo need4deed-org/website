@@ -3,12 +3,23 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 60px 80px;
+  padding-block: var(--n4d-gap);
 }
 
 .volunteer-opportunity-heading {
   margin-bottom: 15px;
   text-align: center;
+}
+
+.n4d-carousel-container {
+  margin-inline: auto;
+  max-width: var(--n4d-carousel-w);
+  height: var(--n4d-carousel-h);
+}
+
+.n4d-full-space {
+  width: 100%;
+  height: 100%;
 }
 
 .become-a-mentor-img {
@@ -24,35 +35,19 @@
 }
 
 .volunteer-opportunity-img {
+  position: relative;
   background-position: center;
   background-size: cover;
   width: 100%;
+  height: 100%;
 }
 
 .volunteer-opportunity-text {
-  background-color: rgba(245, 245, 245, 0.514);
-  color: #252525;
-  padding: 240px 120px;
-  text-align: justify;
-}
-
-.volunteer-opportunity-text p {
-  min-height: 100px;
-}
-
-@media (max-width: 768px) {
-  .volunteer-opportunity-text {
-    padding: 48px;
-  }
-  .fixed-height {
-    height: 300px;
-  }
-  .learn-more {
-    bottom: 16px;
-    padding: 6px;
-    position: absolute;
-    right: 16px;
-  }
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, var(--n4d-carousel-opc));
+  color: var(--n4d--darkest-color);
+  padding: var(--n4d-carousel-t-pd);
 }
 
 .volunteer-opportunity-text h5 {
@@ -60,17 +55,14 @@
 }
 
 .volunteer-opportunity-text p {
-  font-size: 16px;
+  font-size: var(--n4d-volunteer-p-f-sz);
   line-height: 2;
 }
 
 .learn-more {
   visibility: hidden;
-  bottom: 150px;
+  align-self: end;
   color: rgb(33, 39, 39);
-  padding: 16px;
-  position: absolute;
-  right: 250px;
 }
 
 .carousel-control-prev-icon,

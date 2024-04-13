@@ -31,8 +31,8 @@ function Home() {
         <Main />
       </div>
       <VolunteerOpportunity />
-      <Sponsors />
       <AboutProject />
+      <Sponsors />
       <Footer />
     </div>
   );

@@ -1,19 +1,15 @@
 .about-project-container {
-  padding: 80px 100px;
-}
-
-@media (max-width: 768px) {
-  .about-project-container {
-    padding: 48px;
-  }
+  padding-top: var(--n4d-gap);
+  margin-inline: auto;
+  width: var(--n4d-w);
 }
 
 .about-project-container p {
-  font-size: 14px;
+  font-size: var(--n4d-about-p-f-sz);
   line-height: 2;
   text-align: justify;
 }
 
 h2 {
-  margin: 24px 0;
+  margin-block: 24px 18px;
 }

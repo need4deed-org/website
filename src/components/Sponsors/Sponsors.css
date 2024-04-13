@@ -1,18 +1,17 @@
 .sponsor-img-container {
+  padding-top: var(--n4d-gap);
   align-items: center;
   display: flex;
   justify-content: center;
-  padding: 30px;
 }
 
 .sponsor-img-container span {
-  width: 100%;
+  width: 90%;
   border-top: solid 1px black;
 }
 
-.sponsor-img {
-  height: 70%;
-  min-width: 50%;
+.img-width {
+  width: min(100%, var(--n4d-w));
 }
 
 .flex-column {
