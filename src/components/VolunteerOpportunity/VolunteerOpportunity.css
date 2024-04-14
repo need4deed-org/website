@@ -56,6 +56,7 @@
 
 .volunteer-opportunity-text p {
   font-size: var(--n4d-volunteer-p-f-sz);
+  font-weight: var(--n4d-carousel-p-f-w);
   line-height: 2;
 }
 
