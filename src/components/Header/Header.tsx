@@ -42,18 +42,8 @@ function Header() {
           className={`collapse navbar-collapse ${isOpen ? "show" : ""}`}
           // id="navbarSupportedContent"
         >
-          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <a className="nav-link" href="#volunteer-opportunities">
-                {t("workingWithRefugees")}
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href={t("basLink")}>
-                {t("bas2022")}
-              </a>
-            </li>
-            <li className="nav-item dropdown">
+          <ul className="navbar-nav ms-auto mb-0">
+          <li className="nav-item dropdown">
               <button
                 className="btn nav-link dropdown-toggle"
                 id="navbarDropdown"
@@ -108,6 +98,16 @@ function Header() {
                   </button>
                 </li>
               </ul>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#volunteer-opportunities">
+                {t("workingWithRefugees")}
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href={t("basLink")}>
+                {t("bas2022")}
+              </a>
             </li>
           </ul>
         </div>
