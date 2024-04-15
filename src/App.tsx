@@ -1,11 +1,17 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import React, { useEffect } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import './App.css';
+import Land404 from './components/Land404';
+import Home from './pages/Home';
 
-import "./App.css";
-import Land404 from "./components/Land404";
-import Home from "./pages/Home";
+const App: React.FC = () => {
+  useEffect(() => {
+    fetch('/version.json')
+      .then(response => response.json())
+      .then(data => console.log('Current version:', data.commitHash))
+      .catch(error => console.error('Failed to load version info:', error));
+  }, []);
 
-function App() {
   return (
     <BrowserRouter>
       <Routes>
@@ -18,3 +24,4 @@ function App() {
 }
 
 export default App;
+
