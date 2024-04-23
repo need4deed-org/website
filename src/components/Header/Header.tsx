@@ -43,7 +43,7 @@ function Header() {
           // id="navbarSupportedContent"
         >
           <ul className="navbar-nav ms-auto mb-0">
-          <li className="nav-item dropdown">
+            <li className="nav-item dropdown">
               <button
                 className="btn nav-link dropdown-toggle"
                 id="navbarDropdown"
@@ -105,7 +105,7 @@ function Header() {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href={t("basLink")}>
+              <a className="nav-link" href={t("basLink")} target="_blank">
                 {t("bas2022")}
               </a>
             </li>
