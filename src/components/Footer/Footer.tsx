@@ -1,16 +1,18 @@
 import { useTranslation } from "react-i18next";
+import { HashLink } from "react-router-hash-link";
 import "./Footer.css";
 
 function Footer() {
-  const { t } = useTranslation();
-  const aboutUsLinkProps = { href: "#" };
+  const { t, i18n } = useTranslation();
+  const aboutUsLinkProps = {
+    smooth: true,
+    to: `/${i18n.language}#about-project`,
+  };
   const legalNoticeLinkProps = {
-    href: "https://bevos.org/impressum/",
-    target: "_blank",
+    href: `/impressum/${i18n.language}`,
   };
   const privacyLinkProps = {
-    href: "https://bevos.org/datenschutzerklaerung/",
-    target: "_blank",
+    href: `/datenschutzerklaerung/${i18n.language}`,
   };
   const mailToLinkProps = {
     href: "mailto:info@need4deed.org",
@@ -27,7 +29,9 @@ function Footer() {
           <h6>{t("footer.aboutUs.aboutUsHeading")}</h6>
           <ul>
             <li>
-              <a {...aboutUsLinkProps}>{t("footer.aboutUs.project")}</a>
+              <HashLink {...aboutUsLinkProps}>
+                {t("footer.aboutUs.project")}
+              </HashLink>
             </li>
           </ul>
         </div>

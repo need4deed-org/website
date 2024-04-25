@@ -1,5 +1,5 @@
-import "./AboutProject.css";
 import { useTranslation } from "react-i18next";
+import "./AboutProject.css";
 
 function AboutProject() {
   const { t } = useTranslation();

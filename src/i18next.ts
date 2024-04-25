@@ -1,7 +1,7 @@
 import i18next from "i18next";
 import { initReactI18next } from "react-i18next";
-
 import arTranslation from "../public/locales/ar/translations.json";
+import legal from "../public/locales/de/legal.json";
 import deTranslation from "../public/locales/de/translations.json";
 import enTranslation from "../public/locales/en/translations.json";
 import faTranslation from "../public/locales/fa/translations.json";
@@ -13,11 +13,11 @@ i18next.use(initReactI18next).init({
   fallbackLng: Lang.EN,
   debug: process.env.NODE_ENV === Env.DEVELOP,
   resources: {
-    [Lang.EN]: { translation: enTranslation },
-    [Lang.DE]: { translation: deTranslation },
-    [Lang.AR]: { translation: arTranslation },
-    [Lang.FA]: { translation: faTranslation },
-    [Lang.RU]: { translation: ruTranslation },
+    [Lang.EN]: { translation: enTranslation, legal },
+    [Lang.DE]: { translation: deTranslation, legal },
+    [Lang.AR]: { translation: arTranslation, legal },
+    [Lang.FA]: { translation: faTranslation, legal },
+    [Lang.RU]: { translation: ruTranslation, legal },
   },
   interpolation: { escapeValue: false },
 });

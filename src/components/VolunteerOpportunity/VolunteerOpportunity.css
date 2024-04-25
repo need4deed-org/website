@@ -70,4 +70,5 @@
 .carousel-control-next-icon {
   height: 8rem !important;
   width: 4rem !important;
+  filter: brightness(0.3);
 }

@@ -1,54 +1,54 @@
 {
-    "language": "Deutsch",
-    "need4deed": "NEED 4 DEED",
-    "workingWithRefugees": "Freiwilligenarbeit mit Geflüchteten",
-    "learnMoreButton": "Mehr erfahren",
-    "bas2022": "BAS (2022)",
-    "basLink": "https://bevos.org/bas-dokumentation/",
-    "projectIntro": {
-        "slogan": "Bedarfsorientierte ehrenamtliche Unterstützung für Geflüchtete in Berlin",
-        "beVolunteerButton": "Mach mit als Freiwilliger!"
+  "language": "Deutsch",
+  "need4deed": "NEED 4 DEED",
+  "workingWithRefugees": "Freiwilligenarbeit mit Geflüchteten",
+  "learnMoreButton": "Mehr erfahren",
+  "bas2022": "BAS (2022)",
+  "basLink": "https://bevos.org/bas-dokumentation/",
+  "projectIntro": {
+    "slogan": "Bedarfsorientierte ehrenamtliche Unterstützung für Geflüchtete in Berlin",
+    "beVolunteerButton": "Mach mit als Freiwilliger!"
+  },
+  "volunteeringProjects": {
+    "overComeObstaclesHeading": "Hürden gemeinsam überwinden!",
+    "overComeObstaclesSubheading": "Im Projekt Hürdenspringer in Tempelhof-Schöneberg lernst Du neue Menschen kennen und unterstützt sie dabei, in Berlin Fuß zu fassen, ihr Hobby auszuüben oder sich einzubringen.",
+    "childCareHeading": "Kinderbetreuung",
+    "childCareSubheading": "In verschiedenen Unterkünften für Geflüchtete gibt es Freizeitangebote für Kinder. Für diese suchen wir Freiwillige, die bereits Erfahrungen in der Arbeit mit Kinder- und Jugendlichen haben.",
+    "sportProgramHeading": "Sportangebote",
+    "sportProgramSubheading": "Für Gemeinschaftsunterkünfte suchen wir Freiwillige, die uns dabei helfen Sportangebote für Kinder und Jugendliche zu organisieren!"
+  },
+  "aboutProject": {
+    "aboutProjectHeading": "Über das Projekt",
+    "aboutProjectSubheading": "Die Zahl der Menschen, die weltweit vor Konflikten, Verfolgung und Menschenrechtsverletzungen fliehen, war noch nie so hoch wie heute. Need4Deed will die Inklusion und Integration von Geflüchteten in Berlin durch zivilgesellschaftliches Engagement fördern, indem es den Zugang zu ehrenamtlicher Arbeit erleichtert. Unser Ziel ist es, einen nachhaltigen und skalierbaren Mechanismus für diesen Zweck aufzubauen, indem wir Freiwillige mit Geflüchteten, die in Berliner Gemeinschaftsunterkünften leben, auf der Grundlage ihrer spezifischen Bedürfnisse zusammenbringen."
+  },
+  "values": {
+    "valuesHeading": "Unsere Werte",
+    "equalOpportunityHeading": "Chancengleichheit",
+    "equalOpportunitySubheading": "Menschen, die unter bedürftigen Lebensbedingungen leben, sollten gleiche Chancen erhalten. Dazu gehören auch unterversorgte Personen und Gruppen, die von Zwangsmigration betroffen sind.",
+    "responsibilityHeading": "Verantwortung",
+    "responsibilitySubheading": "Sowohl die Länder (der Staat) als auch die Zivilgesellschaft tragen Verantwortung für ihre unterversorgten Gemeinschaften, einschließlich der von erzwungener Migration Betroffenen.",
+    "migranToMigranSupportHeading": "Unterstützung von Migranten zu Migranten",
+    "migranToMigranSupportSubheading": "Insbesondere Gruppen und Einzelpersonen, die eine erzwungene Migration hinter sich haben, können am besten von anderen Personen mit Migrationshintergrund in ihrem Integrationsprozess verstanden und unterstützt werden, so dass sie gleiche Chancen erhalten und schließlich selbst von der Gesellschaft profitieren.",
+    "activeParticipationHeading": "Aktive Beteiligung",
+    "activeParticipationSubheading": "Eine Unterstützungsstruktur von Migranten für Migranten neben der Unterstützung von Nicht-Migranten eine wichtige soziale Rolle in Gesellschaften spielen kann, indem es einen schnelleren Integrationsprozess und eine aktive Beteiligung der unterstützten Gemeinschaften ermöglicht.",
+    "technologyHeading": "Technologie",
+    "technologySubheading": "Der Einsatz von Technologie zur Unterstützung unterversorgter Gemeinschaften ist ein entscheidender Wert, um das Geben und Nehmen von Unterstützung integrativer, zugänglicher und skalierbarer zu machen."
+  },
+  "footer": {
+    "aboutUs": {
+      "aboutUsHeading": "Über uns",
+      "project": "Das Projekt",
+      "aboutUs": "Über uns"
     },
-    "volunteeringProjects": {
-        "overComeObstaclesHeading": "Hürden gemeinsam überwinden!",
-        "overComeObstaclesSubheading": "Im Projekt Hürdenspringer in Tempelhof-Schöneberg lernst Du neue Menschen kennen und unterstützt sie dabei, in Berlin Fuß zu fassen, ihr Hobby auszuüben oder sich einzubringen.",
-        "childCareHeading": "Kinderbetreuung",
-        "childCareSubheading": "In verschiedenen Unterkünften für Geflüchtete gibt es Freizeitangebote für Kinder. Für diese suchen wir Freiwillige, die bereits Erfahrungen in der Arbeit mit Kinder- und Jugendlichen haben.",
-        "sportProgramHeading": "Sportangebote",
-        "sportProgramSubheading": "Für Gemeinschaftsunterkünfte suchen wir Freiwillige, die uns dabei helfen Sportangebote für Kinder und Jugendliche zu organisieren!"
+    "legal": {
+      "legalHeading": "Legal",
+      "impressum": "Impressum",
+      "dataPrivacy": "Datenschutzerklärung"
     },
-    "aboutProject": {
-        "aboutProjectHeading": "Über das Projekt",
-        "aboutProjectSubheading": "Die Zahl der Menschen, die weltweit vor Konflikten, Verfolgung und Menschenrechtsverletzungen fliehen, war noch nie so hoch wie heute. Need4Deed will die Inklusion und Integration von Geflüchteten in Berlin durch zivilgesellschaftliches Engagement fördern, indem es den Zugang zu ehrenamtlicher Arbeit erleichtert. Unser Ziel ist es, einen nachhaltigen und skalierbaren Mechanismus für diesen Zweck aufzubauen, indem wir Freiwillige mit Geflüchteten, die in Berliner Gemeinschaftsunterkünften leben, auf der Grundlage ihrer spezifischen Bedürfnisse zusammenbringen."
-    },
-    "values": {
-        "valuesHeading": "Unsere Werte",
-        "equalOpportunityHeading": "Chancengleichheit",
-        "equalOpportunitySubheading": "Menschen, die unter bedürftigen Lebensbedingungen leben, sollten gleiche Chancen erhalten. Dazu gehören auch unterversorgte Personen und Gruppen, die von Zwangsmigration betroffen sind.",
-        "responsibilityHeading": "Verantwortung",
-        "responsibilitySubheading": "Sowohl die Länder (der Staat) als auch die Zivilgesellschaft tragen Verantwortung für ihre unterversorgten Gemeinschaften, einschließlich der von erzwungener Migration Betroffenen.",
-        "migranToMigranSupportHeading": "Unterstützung von Migranten zu Migranten",
-        "migranToMigranSupportSubheading": "Insbesondere Gruppen und Einzelpersonen, die eine erzwungene Migration hinter sich haben, können am besten von anderen Personen mit Migrationshintergrund in ihrem Integrationsprozess verstanden und unterstützt werden, so dass sie gleiche Chancen erhalten und schließlich selbst von der Gesellschaft profitieren.",
-        "activeParticipationHeading": "Aktive Beteiligung",
-        "activeParticipationSubheading": "Eine Unterstützungsstruktur von Migranten für Migranten neben der Unterstützung von Nicht-Migranten eine wichtige soziale Rolle in Gesellschaften spielen kann, indem es einen schnelleren Integrationsprozess und eine aktive Beteiligung der unterstützten Gemeinschaften ermöglicht.",
-        "technologyHeading": "Technologie",
-        "technologySubheading": "Der Einsatz von Technologie zur Unterstützung unterversorgter Gemeinschaften ist ein entscheidender Wert, um das Geben und Nehmen von Unterstützung integrativer, zugänglicher und skalierbarer zu machen."
-    },
-    "footer": {
-        "aboutUs": {
-            "aboutUsHeading": "Über uns",
-            "project": "Das Projekt",
-            "aboutUs": "Über uns"
-        },
-        "legal": {
-            "legalHeading": "Legal",
-            "impressum": "Impressum",
-            "dataPrivacy": "Datenschutzerklärung"
-        },
-        "contact": {
-            "contactHeading": "Kontakt",
-            "email": "E-mail",
-            "emailAddress": "info@need4deed.org"
-        }
+    "contact": {
+      "contactHeading": "Kontakt",
+      "email": "E-mail",
+      "emailAddress": "info@need4deed.org"
     }
+  }
 }

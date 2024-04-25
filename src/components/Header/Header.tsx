@@ -3,10 +3,11 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 import { Lang } from "../../types";
+import { getBaseUrl } from "../../utils";
 import "./Header.css";
 
 function Header() {
-  const { t } = useTranslation();
+  const { i18n, t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
 
@@ -15,12 +16,15 @@ function Header() {
   };
 
   const handleLanguageChange = (lng: Lang) => {
-    navigate(`/${lng}`);
+    navigate(`${getBaseUrl(window.location.href)}/${lng}`);
   };
 
   return (
     <nav className="navbar navbar-expand-md">
       <div className="container-fluid">
+        <a href={`/${i18n.language}`}>
+          <span className="home-icon"></span>
+        </a>
         <button
           className={`navbar-toggler ${isOpen ? "collapsed" : ""}`}
           type="button"
