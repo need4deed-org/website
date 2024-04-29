@@ -1,19 +1,15 @@
 import "@testing-library/jest-dom";
 
-// jsdom doesn't support window.matchMedia method
+import { getMockMatchMedia } from "./utils";
+
+// this mock is needed cos jsdom doesn't support window.matchMedia method
+const { fireEventListenerCB, mockMatchMedia, setMockSelector } =
+  getMockMatchMedia();
 Object.defineProperty(window, "matchMedia", {
   writable: true,
-  value: vi.fn().mockImplementation(query => ({
-    matches: false,
-    media: query,
-    onchange: null,
-    addListener: vi.fn(), // Deprecated
-    removeListener: vi.fn(), // Deprecated
-    addEventListener: vi.fn(),
-    removeEventListener: vi.fn(),
-    dispatchEvent: vi.fn(),
-  })),
+  value: mockMatchMedia,
 });
+export { fireEventListenerCB, setMockSelector };
 
-// inint i18next
+// init i18next
 import "../i18next";

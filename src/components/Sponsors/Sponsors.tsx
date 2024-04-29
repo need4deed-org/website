@@ -1,4 +1,4 @@
-import useMediaWidth from "../../hooks/useMediaWidth";
+import useMatchMedia from "../../hooks/useMatchMedia";
 import "./Sponsors.css";
 import berlin from "/images/berlin-beaufragte-intergration-migration.jpg";
 import clubDialog from "/images/club-dialog.jpg";
@@ -7,7 +7,7 @@ import schoenebergHilft from "/images/schoeneberg-hilft.jpg";
 import allSponsors from "/images/sponsers-partners.jpg";
 
 function Sponsors() {
-  const isMobile = useMediaWidth();
+  const isMobile = useMatchMedia();
 
   return (
     <>
