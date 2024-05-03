@@ -30,6 +30,10 @@
   color: var(--n4d-primary-light);
 }
 
+.main-container {
+  direction: var(--n4d-lang-direction);
+}
+
 .volunteer-cta {
   background-color: #fcfcfc;
   border-color: transparent;

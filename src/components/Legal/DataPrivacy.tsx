@@ -1,8 +1,10 @@
 import { useTranslation } from "react-i18next";
 
+import useMatchMedia from "../../hooks/useMatchMedia";
 import "./index.css";
 
 function DataPrivacy() {
+  const isWrappingNeeded = useMatchMedia("(max-width: 400px)");
   const { t } = useTranslation();
 
   return (
@@ -222,7 +224,9 @@ function DataPrivacy() {
         {t("legal:dataPrivacy.tools.google.description.para2")}
         <a href="https://www.google.com/intl/de_de/help/terms_maps.html">
           <strong>
-            https://www.google.com/intl/de_de/help/terms_maps.html
+            {isWrappingNeeded
+              ? "https://www.google.com/intl/de_de\n/help/terms_maps.html"
+              : "https://www.google.com/intl/de_de/help/terms_maps.html"}
           </strong>
         </a>
       </p>

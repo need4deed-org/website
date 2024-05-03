@@ -42,4 +42,10 @@ footer {
 .footer-column a {
   color: var(--n4d-primary-light);
   text-decoration: none;
+  display: block;
+}
+
+.footer-column ul,
+.footer-column h6 {
+  direction: var(--n4d-lang-direction);
 }

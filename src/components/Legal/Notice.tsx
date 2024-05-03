@@ -10,7 +10,7 @@ function LegalNotice() {
       <h2>{t("legal:notice.header")}</h2>
       <p>CLUB DIALOG e.V.</p>
       <p>Lindower Straße 18</p>
-      <p>1313347 Berlin-Wedding</p>
+      <p>13347 Berlin-Wedding</p>
       <p>
         <span>{t("legal:notice.contacts.tel")}</span>: +49 30 2044859
       </p>

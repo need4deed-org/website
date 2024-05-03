@@ -1,21 +1,25 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
+import { HashLink } from "react-router-hash-link";
+import { AppContainerContext } from "../../App";
 import { Lang } from "../../types";
-import { getBaseUrl } from "../../utils";
+import { getBaseUrl, setJustification } from "../../utils";
 import "./Header.css";
 
 function Header() {
   const { i18n, t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
+  const containerRef = useContext(AppContainerContext);
 
   const toggleMenu = () => {
     setIsOpen(prev => !prev);
   };
 
   const handleLanguageChange = (lng: Lang) => {
+    setJustification(containerRef, lng as Lang);
     navigate(`${getBaseUrl(window.location.href)}/${lng}`);
   };
 
@@ -43,10 +47,10 @@ function Header() {
           ></span>
         </button>
         <div
-          className={`collapse navbar-collapse ${isOpen ? "show" : ""}`}
+          className={`collapse navbar-collapse ${isOpen ? "show droped" : ""}`}
           // id="navbarSupportedContent"
         >
-          <ul className="navbar-nav ms-auto mb-0">
+          <ul className="navbar-nav mb-0">
             <li className="nav-item dropdown">
               <button
                 className="btn nav-link dropdown-toggle"
@@ -88,14 +92,6 @@ function Header() {
                 <li>
                   <button
                     className="dropdown-item"
-                    onClick={() => handleLanguageChange(Lang.FA)}
-                  >
-                    فارسی
-                  </button>
-                </li>
-                <li>
-                  <button
-                    className="dropdown-item"
                     onClick={() => handleLanguageChange(Lang.RU)}
                   >
                     Русский
@@ -104,9 +100,13 @@ function Header() {
               </ul>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#volunteer-opportunities">
+              <HashLink
+                className="nav-link"
+                smooth
+                to={`/${i18n.language}#volunteer-opportunities`}
+              >
                 {t("workingWithRefugees")}
-              </a>
+              </HashLink>
             </li>
             <li className="nav-item">
               <a className="nav-link" href={t("basLink")} target="_blank">

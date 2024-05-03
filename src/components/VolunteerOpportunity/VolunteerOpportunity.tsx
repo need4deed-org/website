@@ -12,7 +12,10 @@ function VolunteerOpportunity() {
       className="carousel slide volunteer-opportunity-container"
       data-bs-ride="carousel"
     >
-      <div className="volunteer-opportunity-heading">
+      <div
+        id="volunteer-opportunities"
+        className="volunteer-opportunity-heading"
+      >
         <h3 id="volunteer-opportuinities-section">
           {t("workingWithRefugees")}
         </h3>

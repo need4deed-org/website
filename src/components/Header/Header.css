@@ -1,11 +1,16 @@
 .navbar {
   background-color: rgba(0, 0, 0, 0.5);
+  direction: var(--n4d-lang-direction);
 }
 
 .container-fluid {
   padding: 0 !important;
   width: var(--n4d-w);
   height: var(--n4d-navbar-h);
+}
+
+.dropdown-toggle {
+  margin-inline-end: auto;
 }
 
 .nav-link {
@@ -26,7 +31,11 @@
 }
 
 .navbar-toggler {
-  margin-left: auto;
+  margin-inline-start: auto;
+}
+
+.navbar-nav {
+  margin-inline-start: auto;
 }
 
 .dropdown-menu-dark {
@@ -35,4 +44,17 @@
   --bs-dropdown-spacer: 1.33em;
   --bs-dropdown-link-hover-color: #fff;
   --bs-dropdown-link-hover-bg: rgba(0, 0, 0, 0.55);
+}
+
+@media (max-width: 768px) {
+  .navbar-nav li {
+    padding-inline-start: calc(100% - 16rem);
+  }
+  .dropdown-menu-dark {
+    --bs-dropdown-spacer: 0;
+  }
+}
+
+.dropdown-item {
+  width: auto;
 }

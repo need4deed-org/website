@@ -25,8 +25,8 @@
 }
 
 .legal-container h2,
-h3,
-h4,
-h6 {
+.legal-container h3,
+.legal-container h4,
+.legal-container h6 {
   margin-block: 24px 18px;
 }

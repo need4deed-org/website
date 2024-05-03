@@ -21,6 +21,8 @@
   --n4d-carousel-p-f-w: 500;
 
   --n4d-navbar-h: 4em;
+
+  --n4d-lang-direction: ltr;
 }
 
 @media (max-width: 576px) {
