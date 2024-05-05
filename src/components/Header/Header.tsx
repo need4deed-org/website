@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { AppContainerContext } from "../../App";
 import { Lang } from "../../types";
-import { getBaseUrl, setJustification } from "../../utils";
+import { getBaseUrl, setLangDirection } from "../../utils";
 import "./Header.css";
 
 function Header() {
@@ -19,7 +19,7 @@ function Header() {
   };
 
   const handleLanguageChange = (lng: Lang) => {
-    setJustification(containerRef, lng as Lang);
+    setLangDirection(containerRef, lng as Lang);
     navigate(`${getBaseUrl(window.location.href)}/${lng}`);
   };
 

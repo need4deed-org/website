@@ -10,7 +10,7 @@ import Main from "../components/Main/Main";
 import Sponsors from "../components/Sponsors/Sponsors";
 import VolunteerOpportunity from "../components/VolunteerOpportunity/VolunteerOpportunity";
 import { Lang } from "../types";
-import { isEnumValue, setJustification } from "../utils";
+import { isEnumValue, setLangDirection } from "../utils";
 import "./Home.css";
 
 function Home() {
@@ -22,7 +22,7 @@ function Home() {
   useEffect(() => {
     if (isEnumValue(Lang, lng)) {
       i18n.changeLanguage(lng);
-      setJustification(containerRef, lng as Lang);
+      setLangDirection(containerRef, lng as Lang);
     } else {
       navigate(`/${Lang.EN}`, { replace: true });
     }

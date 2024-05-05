@@ -8,7 +8,7 @@ import Header from "../components/Header/Header";
 import DataPrivacy from "../components/Legal/DataPrivacy";
 import LegalNotice from "../components/Legal/Notice";
 import { Lang, Legals } from "../types";
-import { isEnumValue, setJustification } from "../utils";
+import { isEnumValue, setLangDirection } from "../utils";
 
 interface Props {
   type: Legals;
@@ -23,7 +23,7 @@ function Legal({ type }: Props) {
   useEffect(() => {
     if (isEnumValue(Lang, lng)) {
       i18n.changeLanguage(lng);
-      setJustification(containerRef, lng as Lang);
+      setLangDirection(containerRef, lng as Lang);
     } else {
       navigate(`/${type}/${Lang.EN}`, { replace: true });
     }

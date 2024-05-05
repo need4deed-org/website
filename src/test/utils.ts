@@ -20,8 +20,6 @@ export function getMockMatchMedia() {
     mockMatchMedia: vi.fn(query => {
       return {
         matches: query === selector,
-        media: query,
-        onchange: vi.fn(),
         addEventListener: function (
           eventType: string,
           eventHandler: (event: unknown) => void,
@@ -30,8 +28,6 @@ export function getMockMatchMedia() {
             eventListenerCB = eventHandler;
           }
         },
-        removeEventListener: vi.fn(),
-        dispatchEvent: vi.fn(),
       };
     }),
   };

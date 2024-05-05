@@ -3,7 +3,9 @@ import { MutableRefObject } from "react";
 import { Lang } from "../types";
 
 export function isEnumValue<E>(enumObject: object, value: E) {
-  return Object.values(enumObject).includes(value);
+  return typeof enumObject === "object"
+    ? Object.values(enumObject).includes(value)
+    : false;
 }
 
 export function getBaseUrl(url: string) {
@@ -11,13 +13,15 @@ export function getBaseUrl(url: string) {
   return baseUrl ? "/" + baseUrl : "";
 }
 
-export function setJustification(
+export const rtlLangs = [Lang.AR, Lang.FA];
+export function setLangDirection(
   containerRef: MutableRefObject<HTMLDivElement | null>,
   lng: Lang,
 ) {
-  if ([Lang.AR, Lang.FA].includes(lng)) {
-    containerRef?.current?.style.setProperty("--n4d-lang-direction", "rtl");
-  } else {
-    containerRef?.current?.style.setProperty("--n4d-lang-direction", "ltr");
+  if (isEnumValue(Lang, lng)) {
+    containerRef?.current?.style.setProperty(
+      "--n4d-lang-direction",
+      rtlLangs.includes(lng) ? "rtl" : "ltr",
+    );
   }
 }
