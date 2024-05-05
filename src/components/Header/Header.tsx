@@ -97,6 +97,14 @@ function Header() {
                     Русский
                   </button>
                 </li>
+                <li>
+                  <button
+                    className="dropdown-item"
+                    onClick={() => handleLanguageChange(Lang.TR)}
+                  >
+                    Türkçe
+                  </button>
+                </li>
               </ul>
             </li>
             <li className="nav-item">

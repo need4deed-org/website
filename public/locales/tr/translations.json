@@ -1,0 +1,54 @@
+{
+  "language": "Türkçe",
+  "need4deed": "NEED 4 DEED",
+  "workingWithRefugees": "Mülteciler için Gönüllülük",
+  "learnMoreButton": "Daha fazla bilgi için",
+  "bas2022": "BAS (2022)",
+  "basLink": "https://bevos.org/bas-documentation/?lang=en",
+  "projectIntro": {
+    "slogan": "Berlin’de mülteciler için gönüllü desteği",
+    "beVolunteerButton": "Gönüllü Olun!"
+  },
+  "volunteeringProjects": {
+    "overComeObstaclesHeading": "Mentor olmak ister misiniz?",
+    "overComeObstaclesSubheading": " Hürdenspringer projesinde, eşleştiğiniz bir kişiyle, o Berlin'de ilk adımlarını atarken hobilerine eşlik ederek veya birlikte kararlaştırdığınız herhangi bir aktiviteyi yaparak ona destek olacaksınız. Bu programda mültecilerin yaşadığı Hürdenspringer Tempelhof-Schöneberg'den özel bir ekip de görev almaktadır.",
+    "childCareHeading": "Çocuk Bakımı",
+    "childCareSubheading": "Konaklama Merkezlerinde çocuklarla ilgili çalışmaları yürütecek ve bunlara yardımcı olacak olacak gönüllülere ihtiyacımız var.",
+    "sportProgramHeading": "Spor Etkinlikleri",
+    "sportProgramSubheading": "Konaklama Merkezlerinde çocuklarla, gençlerle ve yetişkinlerle spor aktiviteleri gerçekleştirmemize yardımcı olacak gönüllülere ihtiyacımız var."
+  },
+  "aboutProject": {
+    "aboutProjectHeading": "Proje Hakkında",
+    "aboutProjectSubheading": "Dünya genelinde çatışma bölgelerinden, baskılardan, insan hakları ihlallerinden kaçan insanların sayısı hiç bu kadar yüksek olmamıştı. Need4Deed, gönüllülüğü kolay erişilebilir duruma getirerek sivil toplumun etkinliği aracılığı ile mültecilerin Berlin’de toplumsal yaşama katılımını ve uyum sağlamasını teşvik etmeyi amaçlamaktadır. Bunun için Berlin’de konaklama merkezlerinde kalan mültecilerin ihtiyaçları ile gönüllüleri ilişkilendirecek, sürdürülebilir ve yaygınlaştırılabilir bir işleyiş oluşturmayı hedeflemektedir."
+  },
+  "values": {
+    "valuesHeading": "Değerlerimiz",
+    "equalOpportunityHeading": "Fırsat eşitliği",
+    "equalOpportunitySubheading": "Dezavantajlı koşullarda yaşayan insanlara eşit fırsatlar sunulması gerekmektedir. Zorunlu göçten etkilenerek hizmetlere erişimde zorluk çeken bireyler ve gruplar da bu kapsama dahildir.",
+    "responsibilityHeading": "Sorumluluk",
+    "responsibilitySubheading": "Hem ülkelerin (devletin) hem de sivil toplumun, zorunlu göçten etkilenenler dahil olmak üzere hizmetlere erişmekte zorluk çeken topluluklara karşı sorumlulukları vardır.",
+    "migranToMigranSupportHeading": "Göçmenden göçmene destek",
+    "migranToMigranSupportSubheading": "Zorunlu göçe maruz kalmış gruplar ve bireyler, entegrasyon süreçleri boyunca göçmenlik geçmişi olanlar tarafından daha iyi anlaşılabilir ve desteklenebilir, böylece eşit fırsatlar elde edebilir ve nihayetinde topluma katkı sağlayabilir.",
+    "activeParticipationHeading": "Aktif Katılım",
+    "activeParticipationSubheading": "Hem göçmenlerin birbirini desteklemesi hem de göçmen olmayanların desteği, hızlı bir uyum sağlama ve aktif katılım sürecini kolaylaştırarak önemli bir sosyal görev üstlenir.",
+    "technologyHeading": "Teknoloji",
+    "technologySubheading": "Hizmetlere erişimde zorluk çeken toplulukları destekleme çalışmalarında teknolojinin kullanılması, destek verme ve almanın daha kapsayıcı, erişilebilir ve yaygınlaştırılabilir hale getirilmesinde anahtar bir rol oynar."
+  },
+  "footer": {
+    "aboutUs": {
+      "aboutUsHeading": "Hakkımızda",
+      "project": "Proje",
+      "aboutUs": "Hakkımızda"
+    },
+    "legal": {
+      "legalHeading": "Yasal",
+      "impressum": "Yasal Bildirim",
+      "dataPrivacy": "Gizlilik"
+    },
+    "contact": {
+      "contactHeading": "İletişim",
+      "email": "Email",
+      "emailAddress": "info@need4deed.org"
+    }
+  }
+}

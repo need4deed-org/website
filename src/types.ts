@@ -4,6 +4,7 @@ export enum Lang {
   RU = "ru",
   AR = "ar",
   FA = "fa",
+  TR = "tr",
 }
 
 export enum Env {
