@@ -25,3 +25,33 @@ export function setLangDirection(
     );
   }
 }
+
+const typeToImg = {
+  Accompanying: "/images/type-accompanying.jpg",
+  Arts: "/images/type-arts.jpg",
+  Assistance: "/images/type-assistance.jpg",
+  "Clean-up": "/images/type-cleanup.jpg",
+  Clothing: "/images/type-cloths.jpg",
+  Consulting: "/images/type-assistance.jpg",
+  Culture: "/images/type-culture.jpg",
+  Daycare: "/images/type-daycare.jpg",
+  Gardening: "/images/type-gardening.jpg",
+  IT: "/images/type-tutoring.jpg",
+  Language: "/images/type-language.jpg",
+  Mentorship: "/images/type-mentorship.jpg",
+  Reading: "/images/type-assistance.jpg",
+  Renovation: "/images/type-renovation.jpg",
+  Translation: "/images/type-language.jpg",
+  Sports: "/images/type-sports.jpg",
+  Tandem: "/images/type-tandem.jpg",
+  Tutoring: "/images/type-tutoring.jpg",
+
+  default: "/images/type-assistance.jpg",
+};
+
+export function getOpportunityImg(type: string) {
+  const [firstTag] = type.split(",");
+  const [typeForImg] = firstTag.split(" ");
+
+  return typeToImg[typeForImg as keyof typeof typeToImg] ?? typeToImg.default;
+}

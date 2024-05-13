@@ -2,7 +2,6 @@ import { useContext, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
-import { HashLink } from "react-router-hash-link";
 import { AppContainerContext } from "../../App";
 import { Lang } from "../../types";
 import { getBaseUrl, setLangDirection } from "../../utils";
@@ -108,13 +107,9 @@ function Header() {
               </ul>
             </li>
             <li className="nav-item">
-              <HashLink
-                className="nav-link"
-                smooth
-                to={`/${i18n.language}#volunteer-opportunities`}
-              >
+              <a className="nav-link" href={`/opportunities/${i18n.language}`}>
                 {t("workingWithRefugees")}
-              </HashLink>
+              </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href={t("basLink")} target="_blank">

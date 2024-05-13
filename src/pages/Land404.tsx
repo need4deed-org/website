@@ -1,4 +1,4 @@
-import Home from "../pages/Home";
+import Home from "./Home";
 
 function Land404() {
   return <Home />;

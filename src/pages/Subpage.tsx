@@ -7,14 +7,15 @@ import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import DataPrivacy from "../components/Legal/DataPrivacy";
 import LegalNotice from "../components/Legal/Notice";
-import { Lang, Legals } from "../types";
+import Opportunities from "../components/Opportunities";
+import { Lang, Subpages } from "../types";
 import { isEnumValue, setLangDirection } from "../utils";
 
 interface Props {
-  type: Legals;
+  type: Subpages;
 }
 
-function Legal({ type }: Props) {
+function Subpage({ type }: Props) {
   const { i18n } = useTranslation();
   const { lng } = useParams();
   const navigate = useNavigate();
@@ -29,12 +30,14 @@ function Legal({ type }: Props) {
     }
   }, [containerRef, i18n, lng, navigate, type]);
 
-  const component = (type: Legals) => {
+  const component = (type: Subpages) => {
     switch (type) {
-      case Legals.DATA_PROTECTION:
+      case Subpages.DATA_PROTECTION:
         return <DataPrivacy />;
-      case Legals.NOTICE:
+      case Subpages.NOTICE:
         return <LegalNotice />;
+      case Subpages.OPPORTUNITIES:
+        return <Opportunities />;
     }
   };
 
@@ -49,4 +52,4 @@ function Legal({ type }: Props) {
   );
 }
 
-export default Legal;
+export default Subpage;

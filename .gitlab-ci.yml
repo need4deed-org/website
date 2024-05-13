@@ -17,6 +17,13 @@ test_job:
     - npm install
     - npm run test
 
+validate_job:
+  stage: test
+  image: node:20-alpine
+  script:
+    - apk add jq
+    - ./validate_data.sh
+
 build_job:
   stage: build
   image: node:20-alpine

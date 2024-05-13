@@ -13,7 +13,8 @@ export enum Env {
   PRODUCTION = "production",
 }
 
-export enum Legals {
+export enum Subpages {
   NOTICE = "impressum",
   DATA_PROTECTION = "datenschutzerklaerung",
+  OPPORTUNITIES = "opportunities",
 }

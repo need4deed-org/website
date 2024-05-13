@@ -1,10 +1,10 @@
 import { FC, MutableRefObject, createContext, useEffect, useRef } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Land404 from "./components/Land404";
 import Home from "./pages/Home";
-import Legal from "./pages/Legal";
-import { Legals } from "./types";
+import Land404 from "./pages/Land404";
+import Subpage from "./pages/Subpage";
+import { Subpages } from "./types";
 
 export const AppContainerContext = createContext<
   MutableRefObject<HTMLDivElement | null>
@@ -26,12 +26,16 @@ const App: FC = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route
-              path={`/${Legals.NOTICE}/:lng`}
-              element={<Legal type={Legals.NOTICE} />}
+              path={`/${Subpages.NOTICE}/:lng`}
+              element={<Subpage type={Subpages.NOTICE} />}
             />
             <Route
-              path={`/${Legals.DATA_PROTECTION}/:lng`}
-              element={<Legal type={Legals.DATA_PROTECTION} />}
+              path={`/${Subpages.DATA_PROTECTION}/:lng`}
+              element={<Subpage type={Subpages.DATA_PROTECTION} />}
+            />
+            <Route
+              path={`/${Subpages.OPPORTUNITIES}/:lng`}
+              element={<Subpage type={Subpages.OPPORTUNITIES} />}
             />
             <Route path="/:lng" element={<Home />} />
             <Route path="*" element={<Land404 />} />

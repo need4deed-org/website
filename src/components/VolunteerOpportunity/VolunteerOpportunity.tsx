@@ -4,7 +4,8 @@ import "./VolunteerOpportunity.css";
 const carouselInterval = "6000";
 
 function VolunteerOpportunity() {
-  const { t } = useTranslation();
+  const { i18n, t } = useTranslation();
+  const opportuinitiesUrl = `/opportunities/${i18n.language}`;
 
   return (
     <div
@@ -29,7 +30,7 @@ function VolunteerOpportunity() {
             <div className="n4d-full-space volunteer-opportunity-text">
               <h5>{t("volunteeringProjects.overComeObstaclesHeading")}</h5>
               <p>{t("volunteeringProjects.overComeObstaclesSubheading")}</p>
-              <a href="#" className="btn btn-light learn-more">
+              <a href={opportuinitiesUrl} className="btn btn-light learn-more">
                 {t("learnMoreButton")}
               </a>
             </div>
@@ -43,7 +44,7 @@ function VolunteerOpportunity() {
             <div className="n4d-full-space volunteer-opportunity-text">
               <h5>{t("volunteeringProjects.childCareHeading")}</h5>
               <p>{t("volunteeringProjects.childCareSubheading")}</p>
-              <a href="#" className="btn btn-light learn-more">
+              <a href={opportuinitiesUrl} className="btn btn-light learn-more">
                 {t("learnMoreButton")}
               </a>
             </div>
@@ -57,7 +58,7 @@ function VolunteerOpportunity() {
             <div className="n4d-full-space volunteer-opportunity-text">
               <h5>{t("volunteeringProjects.sportProgramHeading")}</h5>
               <p>{t("volunteeringProjects.sportProgramSubheading")}</p>
-              <a href="#" className="btn btn-light learn-more">
+              <a href={opportuinitiesUrl} className="btn btn-light learn-more">
                 {t("learnMoreButton")}
               </a>
             </div>

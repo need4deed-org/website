@@ -32,7 +32,7 @@
     --n4d-footer-f-sz: clamp(0.675em, 2.1vw, 0.75em);
 
     --n4d-carousel-w: clamp(35ch, 99vw, 101ch);
-    --n4d-carousel-h: 23em;
+    --n4d-carousel-h: 26em;
     --n4d-carousel-t-pd: 2em 5em;
   }
   .h1,
