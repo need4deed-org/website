@@ -1,0 +1,10 @@
+.calendar-container {
+  padding-top: var(--n4d-gap);
+  margin-inline: auto;
+  width: var(--n4d-w);
+}
+
+.calendar-container iframe {
+  width: var(--n4d-w);
+  height: clamp(25rem, 50vh, 50rem);
+}

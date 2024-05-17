@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 
 import { AppContainerContext } from "../App";
 import AboutProject from "../components/AboutProject/AboutProject";
+import Calendar from "../components/Calendar";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import Main from "../components/Main/Main";
@@ -35,6 +36,7 @@ function Home() {
         <Main />
       </div>
       <VolunteerOpportunity />
+      <Calendar />
       <AboutProject />
       <Sponsors />
       <Footer />
