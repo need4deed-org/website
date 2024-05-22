@@ -1,18 +1,21 @@
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
-import { getOpportunityImg } from "../../utils";
+import { Lang } from "../../types";
+import { getOpportunityImg, isRtlLang } from "../../utils";
 
 interface Props {
   opportunity: Record<string, string>;
 }
 
 export default function Opportunity({ opportunity }: Props) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const titleBtn = t("projectIntro.beVolunteerButton");
   const srcImg = useMemo(
     () => getOpportunityImg(opportunity.type),
     [opportunity.type],
   );
+
   return (
     <div className="opportunity-card">
       <img src={srcImg} alt="image" />
@@ -27,7 +30,9 @@ export default function Opportunity({ opportunity }: Props) {
       <h6>Location:</h6>
       <p>{opportunity.district}</p>
       <a className="btn btn-light" href={t("formLink")} target="_blank">
-        {t("projectIntro.beVolunteerButton")}
+        {titleBtn.at(-1) === "!" && isRtlLang(i18n.language as Lang)
+          ? titleBtn.slice(0, -1)
+          : titleBtn}
       </a>
     </div>
   );

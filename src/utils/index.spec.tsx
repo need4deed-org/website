@@ -3,7 +3,7 @@ import { RefObject, createRef } from "react";
 import { act } from "react-dom/test-utils";
 
 import { Lang } from "../types";
-import { getBaseUrl, isEnumValue, rtlLangs, setLangDirection } from "./index";
+import { getBaseUrl, isEnumValue, setLangDirection } from "./index";
 
 describe("utils", () => {
   describe("isEnumValue()", () => {
@@ -50,6 +50,7 @@ describe("utils", () => {
   describe("setLangDirection()", () => {
     let containerRef: RefObject<HTMLDivElement>;
     const [ltr, rtl] = ["ltr", "rtl"];
+    const rtlLangs = [Lang.AR, Lang.FA];
 
     beforeEach(() => {
       containerRef = createRef<HTMLDivElement>();

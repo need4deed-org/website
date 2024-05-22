@@ -13,7 +13,7 @@ export function getBaseUrl(url: string) {
   return baseUrl ? "/" + baseUrl : "";
 }
 
-export const rtlLangs = [Lang.AR, Lang.FA];
+export const isRtlLang = (lang: Lang) => [Lang.AR, Lang.FA].includes(lang);
 export function setLangDirection(
   containerRef: MutableRefObject<HTMLDivElement | null>,
   lng: Lang,
@@ -21,7 +21,7 @@ export function setLangDirection(
   if (isEnumValue(Lang, lng)) {
     containerRef?.current?.style.setProperty(
       "--n4d-lang-direction",
-      rtlLangs.includes(lng) ? "rtl" : "ltr",
+      isRtlLang(lng) ? "rtl" : "ltr",
     );
   }
 }
