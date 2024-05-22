@@ -1,4 +1,5 @@
 import { useMemo } from "react";
+import { useTranslation } from "react-i18next";
 
 import { getOpportunityImg } from "../../utils";
 
@@ -7,6 +8,7 @@ interface Props {
 }
 
 export default function Opportunity({ opportunity }: Props) {
+  const { t } = useTranslation();
   const srcImg = useMemo(
     () => getOpportunityImg(opportunity.type),
     [opportunity.type],
@@ -24,12 +26,8 @@ export default function Opportunity({ opportunity }: Props) {
       <p>{opportunity.schedule}</p>
       <h6>Location:</h6>
       <p>{opportunity.district}</p>
-      <a
-        className="btn btn-light"
-        href="https://forms.gle/XWnU4znoAFaU9HfW9"
-        target="_blank"
-      >
-        Become a Volunteer!
+      <a className="btn btn-light" href={t("formLink")} target="_blank">
+        {t("projectIntro.beVolunteerButton")}
       </a>
     </div>
   );

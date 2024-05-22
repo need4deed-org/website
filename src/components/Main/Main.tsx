@@ -12,11 +12,7 @@ function Main() {
       </div>
 
       <button className="volunteer-cta">
-        <a
-          href="https://forms.gle/XWnU4znoAFaU9HfW9"
-          target="_blank"
-          className="volunteer-cta-link"
-        >
+        <a href={t("formLink")} target="_blank" className="volunteer-cta-link">
           {t("projectIntro.beVolunteerButton")}
         </a>{" "}
       </button>
