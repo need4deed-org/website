@@ -4,18 +4,19 @@ import { useNavigate, useParams } from "react-router-dom";
 
 import { AppContainerContext } from "../App";
 import AboutProject from "../components/AboutProject/AboutProject";
-import Calendar from "../components/Calendar";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
+import IFrame from "../components/IFrame";
 import Main from "../components/Main/Main";
 import Sponsors from "../components/Sponsors/Sponsors";
 import VolunteerOpportunity from "../components/VolunteerOpportunity/VolunteerOpportunity";
+import VolunteerWorkflow from "../components/VolunteerWorkflow/VolunteerWorkflow";
 import { Lang } from "../types";
 import { isEnumValue, setLangDirection } from "../utils";
 import "./Home.css";
 
 function Home() {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
   const { lng } = useParams();
   const navigate = useNavigate();
   const containerRef = useContext(AppContainerContext);
@@ -36,8 +37,17 @@ function Home() {
         <Main />
       </div>
       <VolunteerOpportunity />
-      <Calendar />
+      <IFrame
+        title={t("iframeTitles.calendar")}
+        src="https://calendar.google.com/calendar/embed?wkst=2&ctz=Europe%2FBerlin&bgcolor=%23c7e1e3&showNav=1&showPrint=0&showTabs=0&showCalendars=0&src=Y18zYWQ3YTNlYzE2OGI0ZTY4YTMxOGZlMDEwN2ZmOTc0MzZhMWQ5YTAwMzEyZDhhYzQ1ZWFmYzVjZTBlODA1MTYxQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20"
+      />
       <AboutProject />
+      <VolunteerWorkflow />
+      <IFrame
+        wrappingClassName="greenish wrapper"
+        title={t("iframeTitles.howToVolunteer")}
+        src="https://www.youtube.com/embed/tk5akHPd9oo?si=k01Klx7SxIWwKHO_&rel=0&autoplay=0"
+      />
       <Sponsors />
       <Footer />
     </>

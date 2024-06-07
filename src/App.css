@@ -1,7 +1,8 @@
 :root {
   --n4d-w: min(90vw, 1080px);
-  --n4d-gap: 5em;
+  --n4d-gap: 0;
 
+  --n4d-greenish: #c7e1e3;
   --n4d-primary-light: #fcfcfc;
   --n4d-primary-dark: #252525;
   --n4d-darkest-clr: #141414;
@@ -61,4 +62,11 @@
   :root {
     --n4d-navbar-h: auto;
   }
+}
+
+.greenish {
+  background-color: var(--n4d-greenish);
+}
+.wrapper {
+  padding-block: 1rem;
 }

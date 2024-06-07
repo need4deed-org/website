@@ -5,8 +5,8 @@ function AboutProject() {
   const { t } = useTranslation();
 
   return (
-    <section id="about-project">
-      <div className="about-project-container">
+    <div className="greenish wrapper">
+      <div id="about-project" className="about-project-container">
         <h2>{t("aboutProject.aboutProjectHeading")}</h2>
         <p>{t("aboutProject.aboutProjectSubheading")}</p>
 
@@ -27,7 +27,7 @@ function AboutProject() {
         <h6>{t("values.technologyHeading")}</h6>
         <p>{t("values.technologySubheading")}</p>
       </div>
-    </section>
+    </div>
   );
 }
 

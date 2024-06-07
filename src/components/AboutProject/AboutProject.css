@@ -7,6 +7,11 @@
 .about-project-container p {
   font-size: var(--n4d-about-p-f-sz);
   line-height: 2;
+  margin: 0;
+}
+
+.about-project-container h6 {
+  margin-top: 1rem;
 }
 
 .about-project-container p,
@@ -16,5 +21,5 @@
 }
 
 .about-project-container h2 {
-  margin-block: 24px 18px;
+  margin-block: 0 18px;
 }

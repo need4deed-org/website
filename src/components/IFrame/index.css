@@ -1,10 +1,11 @@
-.calendar-container {
+.iframe-container {
   padding-top: var(--n4d-gap);
   margin-inline: auto;
   width: var(--n4d-w);
+  direction: var(--n4d-lang-direction);
 }
 
-.calendar-container iframe {
+.iframe-container iframe {
   width: var(--n4d-w);
   height: clamp(25rem, 50vh, 50rem);
 }

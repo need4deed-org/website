@@ -10,6 +10,10 @@
     "slogan": "Need based voluntary support for refugees in Berlin",
     "beVolunteerButton": "Become a Volunteer!"
   },
+  "iframeTitles": {
+    "calendar": "Calendar",
+    "howToVolunteer": "How To Volunteer"
+  },
   "volunteeringProjects": {
     "overComeObstaclesHeading": "Overcome barriers together!",
     "overComeObstaclesSubheading": "In the project “Hürdenspringer” in Tempelhof-Schöneberg, you get to know new people and support them in getting a foothold in Berlin. German language skills of B1 level are required to take part in the project.",

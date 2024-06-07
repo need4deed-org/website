@@ -10,7 +10,7 @@ function Sponsors() {
   const isMobile = useMatchMedia();
 
   return (
-    <>
+    <div className="wrapper">
       {isMobile ? (
         <div className="sponsor-img-container flex-column">
           <img className="img-width" src={clubDialog} alt="Club Dialog" />
@@ -30,7 +30,7 @@ function Sponsors() {
           <img className="img-width" src={allSponsors} alt="all-sponsors" />
         </div>
       )}
-    </>
+    </div>
   );
 }
 

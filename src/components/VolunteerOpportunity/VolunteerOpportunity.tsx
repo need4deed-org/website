@@ -10,16 +10,16 @@ function VolunteerOpportunity() {
   return (
     <div
       id="carouselExampleAutoplaying"
-      className="carousel slide volunteer-opportunity-container"
+      className="wrapper carousel slide volunteer-opportunity-container"
       data-bs-ride="carousel"
     >
       <div
         id="volunteer-opportunities"
         className="volunteer-opportunity-heading"
       >
-        <h3 id="volunteer-opportuinities-section">
+        <h2 id="volunteer-opportuinities-section">
           {t("workingWithRefugees")}
-        </h3>
+        </h2>
       </div>
       <div className="carousel-inner n4d-carousel-container">
         <div
