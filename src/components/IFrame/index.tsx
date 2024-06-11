@@ -2,7 +2,7 @@ import "./index.css";
 
 interface Prop {
   wrappingClassName?: string;
-  title: string;
+  title?: string;
   src: string;
 }
 
@@ -14,7 +14,7 @@ export default function IFrame({
   return (
     <div className={wrappingClassName}>
       <div className="iframe-container">
-        <h2>{title}</h2>
+        {title && <h2>{title}</h2>}
         <iframe src={src} />
       </div>
     </div>
