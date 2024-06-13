@@ -1,5 +1,5 @@
 .opportunity-container {
-  padding-top: var(--n4d-gap);
+  padding-block: 1em;
   margin-inline: auto;
   width: var(--n4d-w);
 

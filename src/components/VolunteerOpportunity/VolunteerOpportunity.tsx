@@ -26,6 +26,20 @@ function VolunteerOpportunity() {
           className="n4d-full-space carousel-item active"
           data-bs-interval={carouselInterval}
         >
+          <div className="translation-img volunteer-opportunity-img">
+            <div className="n4d-full-space volunteer-opportunity-text">
+              <h5>{t("volunteeringProjects.translationHeading")}</h5>
+              <p>{t("volunteeringProjects.translationSubheading")}</p>
+              <a href={opportuinitiesUrl} className="btn btn-light learn-more">
+                {t("learnMoreButton")}
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          className="n4d-full-space carousel-item"
+          data-bs-interval={carouselInterval}
+        >
           <div className="become-a-mentor-img volunteer-opportunity-img">
             <div className="n4d-full-space volunteer-opportunity-text">
               <h5>{t("volunteeringProjects.overComeObstaclesHeading")}</h5>

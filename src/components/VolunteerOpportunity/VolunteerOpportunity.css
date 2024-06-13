@@ -32,6 +32,10 @@
   background-image: url("/images/sport-offer.jpg");
 }
 
+.translation-img {
+  background-image: url("/images/translation.jpg");
+}
+
 .volunteer-opportunity-img {
   position: relative;
   background-position: center;

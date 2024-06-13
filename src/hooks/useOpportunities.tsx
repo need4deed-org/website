@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 export type FilterTarget = Array<{ key: string; values: Array<string> }>;
 
 const defaultFilterTarget = [
-  { key: "Priority", values: ["hign", "medium"] },
   { key: "Status", values: ["Volunteers Needed"] },
+  { key: "Priority", values: ["high", "medium"] },
 ];
 export default function useOpportunities(
   filePath: string = "/data/opportunities.json",
