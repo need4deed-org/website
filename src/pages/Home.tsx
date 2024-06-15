@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 
 import { AppContainerContext } from "../App";
 import AboutProject from "../components/AboutProject/AboutProject";
+import ContactForRAC from "../components/ContactForRAC";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import IFrame from "../components/IFrame";
@@ -48,6 +49,7 @@ function Home() {
         src="https://www.youtube.com/embed/tk5akHPd9oo?si=k01Klx7SxIWwKHO_&rel=0&autoplay=0"
       />
       <VolunteerWorkflow />
+      <ContactForRAC />
       <Sponsors />
       <Footer />
     </>

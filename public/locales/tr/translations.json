@@ -14,6 +14,10 @@
     "calendar": "Takvim",
     "howToVolunteer": "Harekete Geçin! - Gönüllü Olun"
   },
+  "contactForRAC": {
+    "heading": "Mülteci konaklama merkezinde gönüllü koordinatörü müsünüz?",
+    "emailUs": "bize yazın"
+  },
   "volunteeringProjects": {
     "overComeObstaclesHeading": "Mentor olmak ister misiniz?",
     "overComeObstaclesSubheading": " Hürdenspringer projesinde, eşleştiğiniz bir kişiyle, o Berlin'de ilk adımlarını atarken hobilerine eşlik ederek veya birlikte kararlaştırdığınız herhangi bir aktiviteyi yaparak ona destek olacaksınız. Bu programda mültecilerin yaşadığı Hürdenspringer Tempelhof-Schöneberg'den özel bir ekip de görev almaktadır.",
@@ -22,7 +26,7 @@
     "sportProgramHeading": "Spor Etkinlikleri",
     "sportProgramSubheading": "Konaklama Merkezlerinde çocuklarla, gençlerle ve yetişkinlerle spor aktiviteleri gerçekleştirmemize yardımcı olacak gönüllülere ihtiyacımız var.",
     "translationHeading": "Almanca ve ikinci bir dilde mi akıcı konuşuyorsunuz?",
-    "translationSubheading": "Doktorda, JobCenter'da veya ihtiyaç duyulan herhangi bir yerde Arapça/Ukraynaca/Rusça/Darice/Farsça/Türkçe/Fransızca ve daha fazlasından çeviri yaparak mültecilere destek olun!"
+    "translationSubheading": "Doktorda, JobCenter'da veya ihtiyaç duyulan herhangi bir yerde Arapça / Ukraynaca / Rusça / Darice / Farsça / Türkçe / Fransızca ve daha fazlasından çeviri yaparak mültecilere destek olun!"
   },
   "aboutProject": {
     "aboutProjectHeading": "Proje Hakkında",

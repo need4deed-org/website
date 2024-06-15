@@ -1,0 +1,14 @@
+.contact-for-rac-container {
+  margin-inline: auto;
+  max-width: var(--n4d-w);
+  direction: var(--n4d-lang-direction);
+}
+
+.contact-for-rac-container a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.contact-for-rac-container em {
+  font-weight: bold;
+}
