@@ -1,7 +1,8 @@
 {
   "language": "Türkçe",
   "need4deed": "NEED 4 DEED",
-  "workingWithRefugees": "Mülteciler için Gönüllülük",
+  "workingWithRefugees": "Mültecilerle çalışma konusunda genel gönüllülük fırsatları",
+  "accompanyTranslate": "Eşlik edin ve çevirin",
   "learnMoreButton": "Seçenekleri Görüntüle",
   "bas2022": "BAS (2022)",
   "basLink": "https://bevos.org/bas-documentation/?lang=en",
@@ -19,6 +20,7 @@
     "emailUs": "bize yazın"
   },
   "volunteeringProjects": {
+    "header": "Gönüllülük Fırsatları",
     "overComeObstaclesHeading": "Mentor olmak ister misiniz?",
     "overComeObstaclesSubheading": " Hürdenspringer projesinde, eşleştiğiniz bir kişiyle, o Berlin'de ilk adımlarını atarken hobilerine eşlik ederek veya birlikte kararlaştırdığınız herhangi bir aktiviteyi yaparak ona destek olacaksınız. Bu programda mültecilerin yaşadığı Hürdenspringer Tempelhof-Schöneberg'den özel bir ekip de görev almaktadır.",
     "childCareHeading": "Çocuk Bakımı",

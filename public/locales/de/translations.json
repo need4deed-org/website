@@ -1,7 +1,8 @@
 {
   "language": "Deutsch",
   "need4deed": "NEED 4 DEED",
-  "workingWithRefugees": "Freiwilligenarbeit mit Geflüchteten",
+  "workingWithRefugees": "Allgemeine Freiwilligenangebote für die Arbeit mit Flüchtlingen",
+  "accompanyTranslate": "Begleiten und übersetzen",
   "learnMoreButton": "Möglichkeiten anzeigen",
   "bas2022": "BAS (2022)",
   "basLink": "https://bevos.org/bas-dokumentation/",
@@ -19,6 +20,7 @@
     "emailUs": "Schreiben Sie an"
   },
   "volunteeringProjects": {
+    "header": "Freiwilligenangebote",
     "overComeObstaclesHeading": "Hürden gemeinsam überwinden!",
     "overComeObstaclesSubheading": "Im Projekt Hürdenspringer in Tempelhof-Schöneberg lernst Du neue Menschen kennen und unterstützt sie dabei, in Berlin Fuß zu fassen, ihr Hobby auszuüben oder sich einzubringen.",
     "childCareHeading": "Kinderbetreuung",

@@ -6,6 +6,7 @@ const carouselInterval = "6000";
 function VolunteerOpportunity() {
   const { i18n, t } = useTranslation();
   const opportuinitiesUrl = `/opportunities/${i18n.language}`;
+  const translationsUrl = `/translations/${i18n.language}`;
 
   return (
     <div
@@ -18,7 +19,7 @@ function VolunteerOpportunity() {
         className="volunteer-opportunity-heading"
       >
         <h2 id="volunteer-opportuinities-section">
-          {t("workingWithRefugees")}
+          {t("volunteeringProjects.header")}
         </h2>
       </div>
       <div className="carousel-inner n4d-carousel-container">
@@ -30,8 +31,8 @@ function VolunteerOpportunity() {
             <div className="n4d-full-space volunteer-opportunity-text">
               <h5>{t("volunteeringProjects.translationHeading")}</h5>
               <p>{t("volunteeringProjects.translationSubheading")}</p>
-              <a href={opportuinitiesUrl} className="btn btn-light learn-more">
-                {t("learnMoreButton")}
+              <a href={translationsUrl} className="btn btn-light learn-more">
+                {t("accompanyTranslate")}
               </a>
             </div>
           </div>
@@ -45,7 +46,7 @@ function VolunteerOpportunity() {
               <h5>{t("volunteeringProjects.overComeObstaclesHeading")}</h5>
               <p>{t("volunteeringProjects.overComeObstaclesSubheading")}</p>
               <a href={opportuinitiesUrl} className="btn btn-light learn-more">
-                {t("learnMoreButton")}
+                {t("workingWithRefugees")}
               </a>
             </div>
           </div>
@@ -59,7 +60,7 @@ function VolunteerOpportunity() {
               <h5>{t("volunteeringProjects.childCareHeading")}</h5>
               <p>{t("volunteeringProjects.childCareSubheading")}</p>
               <a href={opportuinitiesUrl} className="btn btn-light learn-more">
-                {t("learnMoreButton")}
+                {t("workingWithRefugees")}
               </a>
             </div>
           </div>
@@ -73,7 +74,7 @@ function VolunteerOpportunity() {
               <h5>{t("volunteeringProjects.sportProgramHeading")}</h5>
               <p>{t("volunteeringProjects.sportProgramSubheading")}</p>
               <a href={opportuinitiesUrl} className="btn btn-light learn-more">
-                {t("learnMoreButton")}
+                {t("workingWithRefugees")}
               </a>
             </div>
           </div>

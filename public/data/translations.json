@@ -1,0 +1,26 @@
+[
+  {
+    "Name": "Sozialmedizinisches Institut Berlin",
+    "Address": "Wilhelmsaue 132, 10715 Berlin\nSozialmedizinisches Institut Berlin",
+    "Appointment Type": "Retirement",
+    "Date": "June 26, 2024 11:00 AM (GMT+2)",
+    "District (Appointment)": "Charlottenburg-Wilmersdorf",
+    "Languages": "German, Russian"
+  },
+  {
+    "Name": "Hostpital ",
+    "Address": "Warener Straße 7, 12683 Berlin\nUnfallkrankenhaus Berlin, Klinik für Urologie",
+    "Appointment Type": "Doctor's, Surgery",
+    "Date": "June 27, 2024 8:00 AM (GMT+2)",
+    "District (Appointment)": "Marzahn-Hellersdorf",
+    "Languages": "Dari, English, German"
+  },
+  {
+    "Name": "Translate at Charite",
+    "Address": "Mittelallee 9, 13353 Berlin\nHochschulambulanz WPNC-AMB Pädiatrische Neurochirurg-Ambulanz\nUG, Campus Virchow Klinikum",
+    "Appointment Type": "Doctor's",
+    "Date": "June 25, 2024 2:00 PM (GMT+2)",
+    "District (Appointment)": "Mitte",
+    "Languages": "German, Russian"
+  }
+]

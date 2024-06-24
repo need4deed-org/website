@@ -7,7 +7,7 @@ import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import DataPrivacy from "../components/Legal/DataPrivacy";
 import LegalNotice from "../components/Legal/Notice";
-import Opportunities from "../components/Opportunities";
+import OpportunityCards from "../components/OpportunityCards";
 import { Lang, Subpages } from "../types";
 import { isEnumValue, setLangDirection } from "../utils";
 
@@ -37,14 +37,43 @@ function Subpage({ type }: Props) {
       case Subpages.NOTICE:
         return <LegalNotice />;
       case Subpages.OPPORTUNITIES:
-        return <Opportunities />;
+        return (
+          <OpportunityCards
+            dataFileUrl="/data/opportunities.json"
+            filterTarget={[
+              { key: "Status", values: ["Volunteers Needed"] },
+              { key: "Priority", values: ["high", "medium"] },
+            ]}
+            keyMap={{
+              type: "type",
+              name: "name",
+              languages: "languages",
+              time: "schedule",
+              location: "district",
+            }}
+          />
+        );
+      case Subpages.TRANSLATIONS:
+        return (
+          <OpportunityCards
+            dataFileUrl="/data/translations.json"
+            filterTarget={[]}
+            keyMap={{
+              type: "appointment",
+              name: "name",
+              languages: "languages",
+              time: "time",
+              location: "location",
+            }}
+          />
+        );
     }
   };
 
   return (
     <>
       <div className="navbar-main-container">
-        <Header />
+        <Header showTranslations={type === Subpages.OPPORTUNITIES} />
       </div>
       {component(type)}
       <Footer />

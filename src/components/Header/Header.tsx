@@ -3,11 +3,15 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 import { AppContainerContext } from "../../App";
-import { Lang } from "../../types";
+import { Lang, Subpages } from "../../types";
 import { getBaseUrl, setLangDirection } from "../../utils";
 import "./Header.css";
 
-function Header() {
+interface Props {
+  showTranslations?: boolean;
+}
+
+function Header({ showTranslations = false }: Props) {
   const { i18n, t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
@@ -107,10 +111,23 @@ function Header() {
               </ul>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href={`/opportunities/${i18n.language}`}>
+              <a
+                className="nav-link"
+                href={`/${Subpages.OPPORTUNITIES}/${i18n.language}`}
+              >
                 {t("workingWithRefugees")}
               </a>
             </li>
+            {showTranslations && (
+              <li className="nav-item">
+                <a
+                  className="nav-link"
+                  href={`/${Subpages.TRANSLATIONS}/${i18n.language}`}
+                >
+                  {t("accompanyTranslate")}
+                </a>
+              </li>
+            )}
             <li className="nav-item">
               <a className="nav-link" href={t("basLink")} target="_blank">
                 {t("bas2022")}

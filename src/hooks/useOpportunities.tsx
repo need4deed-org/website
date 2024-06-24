@@ -1,15 +1,9 @@
 import { useEffect, useState } from "react";
+import { FilterTarget } from "../types";
 
-// conjunction between keys and disjunction between possible values are applied
-export type FilterTarget = Array<{ key: string; values: Array<string> }>;
-
-const defaultFilterTarget = [
-  { key: "Status", values: ["Volunteers Needed"] },
-  { key: "Priority", values: ["high", "medium"] },
-];
 export default function useOpportunities(
-  filePath: string = "/data/opportunities.json",
-  filterTarget: FilterTarget = defaultFilterTarget,
+  filePath: string,
+  filterTarget: FilterTarget,
 ) {
   const [opportunities, setOpportunities] = useState<
     Array<Record<string, string>>

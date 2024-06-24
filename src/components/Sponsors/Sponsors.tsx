@@ -7,7 +7,7 @@ import schoenebergHilft from "/images/schoeneberg-hilft.jpg";
 import allSponsors from "/images/sponsers-partners.jpg";
 
 function Sponsors() {
-  const isMobile = useMatchMedia();
+  const isMobile = useMatchMedia("(max-width: 768px)");
 
   return (
     <div className="wrapper">

@@ -10,7 +10,7 @@ describe("hooks", () => {
     });
 
     it("should return initial state using default selector", () => {
-      const { result } = renderHook(() => useMatchMedia());
+      const { result } = renderHook(() => useMatchMedia("(max-width: 768px)"));
 
       expect(result.current).toBe(true);
     });
@@ -29,7 +29,7 @@ describe("hooks", () => {
     });
 
     it("should update the state when the media change", () => {
-      const { result } = renderHook(() => useMatchMedia());
+      const { result } = renderHook(() => useMatchMedia("(max-width: 768px)"));
 
       expect(result.current).toBe(true);
 

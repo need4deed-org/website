@@ -37,6 +37,10 @@ const App: FC = () => {
               path={`/${Subpages.OPPORTUNITIES}/:lng`}
               element={<Subpage type={Subpages.OPPORTUNITIES} />}
             />
+            <Route
+              path={`/${Subpages.TRANSLATIONS}/:lng`}
+              element={<Subpage type={Subpages.TRANSLATIONS} />}
+            />
             <Route path="/:lng" element={<Home />} />
             <Route path="*" element={<Land404 />} />
           </Routes>

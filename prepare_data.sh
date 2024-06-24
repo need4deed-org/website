@@ -19,16 +19,10 @@ if [ "$json_type" != '"array"' ]; then
   exit 1
 fi
 
-jq_expression='all(.[]; '
+jq_expression='map({'
 for prop in "$@"; do
-  jq_expression="$jq_expression has(\"$prop\") and "
+  jq_expression="$jq_expression \"$prop\": .\"$prop\","
 done
-jq_expression="${jq_expression% and })"
+jq_expression="${jq_expression%,} })"
 
-properties=$(jq "$jq_expression" "$file_path")
-if [ "$properties" != 'true' ]; then
-  echo "Error: Some elements in the array are missing required properties"
-  exit 1
-fi
-
-echo "File '$file_path' is a valid JSON array with all required properties."
+jq "$jq_expression" "$file_path"

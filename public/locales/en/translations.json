@@ -1,7 +1,8 @@
 {
   "language": "English",
   "need4deed": "NEED 4 DEED",
-  "workingWithRefugees": "Volunteering with refugees",
+  "workingWithRefugees": "General volunteering opportunities",
+  "accompanyTranslate": "Accompany and translate",
   "learnMoreButton": "View opportunities",
   "bas2022": "BAS (2022)",
   "basLink": "https://bevos.org/bas-documentation/?lang=en",
@@ -19,6 +20,7 @@
     "emailUs": "write us to"
   },
   "volunteeringProjects": {
+    "header": "Volunteering opportunities",
     "overComeObstaclesHeading": "Overcome barriers together!",
     "overComeObstaclesSubheading": "In the project “Hürdenspringer” in Tempelhof-Schöneberg, you get to know new people and support them in getting a foothold in Berlin. German language skills of B1 level are required to take part in the project.",
     "childCareHeading": "Childcare",

@@ -1,7 +1,8 @@
 {
   "language": "فارسی",
   "need4deed": "NEED 4 DEED",
-  "workingWithRefugees": "کار داوطلبانه با پناهندگان",
+  "workingWithRefugees": "فرص داوطلبانه عمومی برای کار با پناهندگان",
+  "accompanyTranslate": "همراهی و ترجمه",
   "learnMoreButton": "نمایش فرصت ها",
   "bas2022": "BAS (2022)",
   "basLink": "https://bevos.org/bas-documentation/?lang=en",
@@ -19,6 +20,7 @@
     "emailUs": "برای ما بنویسید"
   },
   "volunteeringProjects": {
+    "header": "فرص داوطلبانه",
     "overComeObstaclesHeading": "!به یک راهنما تبدیل شوید",
     "overComeObstaclesSubheading": ".در پروژه Hürdenspringer، شما با یک فرد جدید هماهنگ می‌شوید و او را در حین اولین گام‌هایش در برلین همراهی می‌کنید؛ در این برنامه شما به او کمک میکنید سرگرمی‌هایش را دنبال کند یا به‌ طور مشترک تصمیم می‌گیرید چه فعالیتی را در کنار هم انجام دهید. این برنامه با همراهی دیوید و تیم ویژه از Hürdenspringer Tempelhof-Schöneberg که یکی از مراکز اقامت پناهجویان است انجام میشود",
     "childCareHeading": "مراقبت از کودکان",
