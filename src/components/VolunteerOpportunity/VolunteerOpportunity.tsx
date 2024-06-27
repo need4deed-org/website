@@ -3,7 +3,11 @@ import "./VolunteerOpportunity.css";
 
 const carouselInterval = "6000";
 
-function VolunteerOpportunity() {
+interface Props {
+  wrappingClassName?: string;
+}
+
+function VolunteerOpportunity({ wrappingClassName }: Props) {
   const { i18n, t } = useTranslation();
   const opportuinitiesUrl = `/opportunities/${i18n.language}`;
   const translationsUrl = `/translations/${i18n.language}`;
@@ -11,7 +15,7 @@ function VolunteerOpportunity() {
   return (
     <div
       id="carouselExampleAutoplaying"
-      className="wrapper carousel slide volunteer-opportunity-container"
+      className={`${wrappingClassName} carousel slide volunteer-opportunity-container`}
       data-bs-ride="carousel"
     >
       <div

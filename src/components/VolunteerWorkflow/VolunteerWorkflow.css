@@ -14,7 +14,7 @@
   margin-inline: auto;
   margin-block-start: 1.5rem;
   padding: 1rem;
-  background-color: #c7e1e3;
+  background-color: var(--n4d-secondary);
   border-radius: 1.5rem;
 }
 
@@ -39,13 +39,13 @@
   }
 
   .volunteer-workflow-img-wrapper::-webkit-scrollbar-thumb {
-    background: var(--n4d-greenish-darker);
+    background: var(--n4d-secondary-darker);
     border-radius: 5px !important;
   }
 
   .volunteer-workflow-img-wrapper::-webkit-scrollbar-track {
     border-radius: 5px !important;
-    background-color: var(--n4d-greenish-lighter);
+    background-color: var(--n4d-secondary-lighter);
   }
 
   .volunteer-workflow-img-wrapper img {

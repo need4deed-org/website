@@ -6,11 +6,15 @@ import eu from "/images/europaeischen-union.jpg";
 import schoenebergHilft from "/images/schoeneberg-hilft.jpg";
 import allSponsors from "/images/sponsers-partners.jpg";
 
-function Sponsors() {
+interface Props {
+  wrappingClassName: string;
+}
+
+function Sponsors({ wrappingClassName }: Props) {
   const isMobile = useMatchMedia("(max-width: 768px)");
 
   return (
-    <div className="wrapper">
+    <div className={wrappingClassName}>
       {isMobile ? (
         <div className="sponsor-img-container flex-column">
           <img className="img-width" src={clubDialog} alt="Club Dialog" />

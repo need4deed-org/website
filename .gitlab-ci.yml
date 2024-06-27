@@ -22,8 +22,8 @@ validate_job:
   image: node:20-alpine
   script:
     - apk add jq
-    - ./validate_data.sh ./public/data/opportunities.json Status Name Type Priority District Schedule "Languages needed"
-    - ./validate_data.sh ./public/data/translations.json Name Address "Appointment Type" Date "District (Appointment)" Languages
+    - ./validate_data.sh ./public/data/opportunities.json Status Name Type District Schedule "Languages needed"
+    - ./validate_data.sh ./public/data/translations.json Name Address "Appointment Type" Date "District (Appointment)" Languages Status "Active volunteers"
 
 build_job:
   stage: build

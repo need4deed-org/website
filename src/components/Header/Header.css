@@ -1,5 +1,5 @@
 .navbar {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(50, 50, 50, 0.5);
   direction: var(--n4d-lang-direction);
 }
 
@@ -23,11 +23,11 @@
 
 .home-icon {
   display: inline-block;
-  background-image: url("/images/home-icon-256.png");
+  background-image: url("/images/N4D-4-white.svg");
   background-size: contain;
   background-repeat: no-repeat;
-  width: 1.5em;
-  height: 1.5em;
+  width: 2.2em;
+  height: 2.2em;
 }
 
 .navbar-toggler {

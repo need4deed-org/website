@@ -41,8 +41,10 @@ function Subpage({ type }: Props) {
           <OpportunityCards
             dataFileUrl="/data/opportunities.json"
             filterTarget={[
-              { key: "Status", values: ["Volunteers Needed"] },
-              { key: "Priority", values: ["high", "medium"] },
+              {
+                key: "Status",
+                values: ["Volunteers Needed", "Search in process"],
+              },
             ]}
             keyMap={{
               type: "type",
@@ -57,13 +59,16 @@ function Subpage({ type }: Props) {
         return (
           <OpportunityCards
             dataFileUrl="/data/translations.json"
-            filterTarget={[]}
+            filterTarget={[
+              { key: "Status", values: ["Confirmed with the RAC"] },
+              { key: "Active volunteers", values: [""] },
+            ]}
             keyMap={{
               type: "appointment",
               name: "name",
               languages: "languages",
-              time: "time",
-              location: "location",
+              time: "date",
+              location: "district",
             }}
           />
         );

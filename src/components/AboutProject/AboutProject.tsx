@@ -1,11 +1,15 @@
 import { useTranslation } from "react-i18next";
 import "./AboutProject.css";
 
-function AboutProject() {
+interface Prop {
+  wrappingClassName: string;
+}
+
+function AboutProject({ wrappingClassName }: Prop) {
   const { t } = useTranslation();
 
   return (
-    <div className="greenish wrapper">
+    <div className={wrappingClassName}>
       <div id="about-project" className="about-project-container">
         <h2>{t("aboutProject.aboutProjectHeading")}</h2>
         <p>{t("aboutProject.aboutProjectSubheading")}</p>

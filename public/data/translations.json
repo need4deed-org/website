@@ -1,26 +1,112 @@
 [
   {
-    "Name": "Sozialmedizinisches Institut Berlin",
-    "Address": "Wilhelmsaue 132, 10715 Berlin\nSozialmedizinisches Institut Berlin",
-    "Appointment Type": "Retirement",
-    "Date": "June 26, 2024 11:00 AM (GMT+2)",
-    "District (Appointment)": "Charlottenburg-Wilmersdorf",
-    "Languages": "German, Russian"
-  },
-  {
-    "Name": "Hostpital ",
-    "Address": "Warener Straße 7, 12683 Berlin\nUnfallkrankenhaus Berlin, Klinik für Urologie",
-    "Appointment Type": "Doctor's, Surgery",
-    "Date": "June 27, 2024 8:00 AM (GMT+2)",
+    "Name": "Support by translating during an elementary school appointment",
+    "Address": "Alberichstraße 24, 12683 Berlin , vor der Klasse H203",
+    "Appointment Type": "School",
+    "Date": "July 4, 2024 11:00 AM (GMT+2)",
     "District (Appointment)": "Marzahn-Hellersdorf",
-    "Languages": "Dari, English, German"
+    "Languages": "Dari, Farsi, German",
+    "Status": "Confirmed with the RAC",
+    "Active volunteers": ""
   },
   {
-    "Name": "Translate at Charite",
+    "Name": "Accompanying to an appointment from Marzahn to Reinickendorf",
+    "Address": "Oranienburger Str. 86 13437 Berlin (Reinickendorf) - Dr.Aminalai",
+    "Appointment Type": "Supporting with getting to the appointment",
+    "Date": "July 3, 2024 9:00 AM (GMT+2)",
+    "District (Appointment)": "Reinickendorf",
+    "Languages": "Dari, English, German",
+    "Status": "Confirmed with the RAC",
+    "Active volunteers": ""
+  },
+  {
+    "Name": "Accompanying to an appointment from Marzahn to Kreuzberg",
+    "Address": "Paul-Lincke-Ufer 41, 10999 Berlin- Dr. Bamdad Sarwghad",
+    "Appointment Type": "Supporting with getting to the appointment",
+    "Date": "July 2, 2024 10:00 AM (GMT+2)",
+    "District (Appointment)": "Friedrichshain-Kreuzberg",
+    "Languages": "Dari, English, German",
+    "Status": "Confirmed with the RAC",
+    "Active volunteers": ""
+  },
+  {
+    "Name": "Sprachmittlung Russisch beim Kardiologen",
+    "Address": "Wisbyer Straße 16/17, 10439 Berlin (Kardiologie bei Dr. Ahmad Mosen)",
+    "Appointment Type": "Doctor's",
+    "Date": "July 5, 2024 10:00 AM (GMT+2)",
+    "District (Appointment)": "Pankow",
+    "Languages": "German, Russian",
+    "Status": "Confirmed with the RAC",
+    "Active volunteers": ""
+  },
+  {
+    "Name": "Sprachmittlung bei Klinikum Berlin-Buch für ein Kind",
+    "Address": "Schwanebecker Chaussee 50, 13125 Berlin\nTumor-Orthopädische Sprechstunde B1-E",
+    "Appointment Type": "Doctor's",
+    "Date": "July 10, 2024 8:00 AM (GMT+2)",
+    "District (Appointment)": "Pankow",
+    "Languages": "German, Russian, Ukrainian",
+    "Status": "Confirmed with the RAC",
+    "Active volunteers": ""
+  },
+  {
+    "Name": "Sprachmittlung beim Erstgespräch mit Psychologin",
+    "Address": "",
+    "Appointment Type": "",
+    "Date": "July 1, 2024 10:00 AM (GMT+2)",
+    "District (Appointment)": "Mitte",
+    "Languages": "German, Turkish",
+    "Status": "Confirmed with the RAC",
+    "Active volunteers": ""
+  },
+  {
+    "Name": "Sprachmittlung bei der Charité ",
+    "Address": "Einsatzadresse: Luisenstraße 64/65, 10117 Berlin Interne Adresse/ Fachgebiet: Bettenhaus, Brustzentrum, 2 Etage Treffpunkt: Am Empfang der Station des Brustzentrums",
+    "Appointment Type": "Doctor's",
+    "Date": "July 2, 2024 12:30 PM (GMT+2)",
+    "District (Appointment)": "Mitte",
+    "Languages": "Armenian, German, Russian",
+    "Status": "Confirmed with the RAC",
+    "Active volunteers": "Maria.sergeevna.golubeva@gmail.com (https://www.notion.so/Maria-sergeevna-golubeva-gmail-com-2820f5f77695422ba833fae9b66b5c2b?pvs=21)"
+  },
+  {
+    "Name": "Translation for a doctor’s appointment at the Charité",
+    "Address": "Mittelallee 8, 13353 Virchow Klinikum der Chaité",
+    "Appointment Type": "Doctor's",
+    "Date": "June 28, 2024 10:00 AM (GMT+2)",
+    "District (Appointment)": "Mitte",
+    "Languages": "Dari, German",
+    "Status": "Cancelled by us",
+    "Active volunteers": ""
+  },
+  {
+    "Name": "Sprachmittlung beim Termin im Gesundheitsamt für die schulärztliche Untersuchung",
+    "Address": "Bezirksamt Neukölln von Berlin\nKarl-Marx-Straße 83, 12040 Berlin ",
+    "Appointment Type": "Doctor's",
+    "Date": "July 2, 2024 2:00 PM (GMT+2)",
+    "District (Appointment)": "Neukölln",
+    "Languages": "German, Russian",
+    "Status": "Confirmed with the RAC",
+    "Active volunteers": "Untitled (https://www.notion.so/94091f09683a4092bfb3b5742bf63267?pvs=21)"
+  },
+  {
+    "Name": "Translation at Charite for a child",
     "Address": "Mittelallee 9, 13353 Berlin\nHochschulambulanz WPNC-AMB Pädiatrische Neurochirurg-Ambulanz\nUG, Campus Virchow Klinikum",
     "Appointment Type": "Doctor's",
     "Date": "June 25, 2024 2:00 PM (GMT+2)",
     "District (Appointment)": "Mitte",
-    "Languages": "German, Russian"
+    "Languages": "German, Russian",
+    "Status": "Confirmed with the RAC",
+    "Active volunteers": "Kseni.aza@posteo.net (https://www.notion.so/Kseni-aza-posteo-net-ed9a22dc145548ff90ea35b57123c43e?pvs=21)"
+  },
+  {
+    "Name": "Translate at Sozialmedizinisches Institut Berlin",
+    "Address": "Wilhelmsaue 132, 10715 Berlin\nSozialmedizinisches Institut Berlin",
+    "Appointment Type": "Doctor's",
+    "Date": "June 26, 2024 11:00 AM (GMT+2)",
+    "District (Appointment)": "Charlottenburg-Wilmersdorf",
+    "Languages": "German, Russian",
+    "Status": "Matched but not needed (RAC is at fault)",
+    "Active volunteers": "machairodus2012@gmail.com (https://www.notion.so/machairodus2012-gmail-com-9300e53c87614cf3a89d894051c09959?pvs=21)"
   }
 ]

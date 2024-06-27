@@ -24,10 +24,10 @@ export default function Translation({ opportunity }: Props) {
         <strong>{opportunity.languages}</strong>
       </p>
       <h6>Time:</h6>
-      <p>{opportunity.date}</p>
+      <p>{opportunity.time}</p>
       <h6>Location:</h6>
-      <p>{opportunity.district}</p>
-      <a className="btn n4d-secondary-btn" href={t("formLink")} target="_blank">
+      <p>{opportunity.location}</p>
+      <a className="btn n4d-primary-btn" href={t("formLink")} target="_blank">
         {titleBtn.at(-1) === "!" && isRtlLang(i18n.language as Lang)
           ? titleBtn.slice(0, -1)
           : titleBtn}
