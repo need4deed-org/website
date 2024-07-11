@@ -37,20 +37,20 @@ function Home() {
         <Header />
         <Main />
       </div>
-      <VolunteerOpportunity wrappingClassName="wrapper secondary" />
+      <VolunteerOpportunity wrappingClassName="wrapper second" />
       <IFrame
-        wrappingClassName="wrapper primary"
+        wrappingClassName="wrapper first"
         title={t("iframeTitles.calendar")}
         src="https://calendar.google.com/calendar/embed?wkst=2&ctz=Europe%2FBerlin&bgcolor=%2341f28d&showNav=1&showPrint=0&showTabs=0&showCalendars=0&src=Y18zYWQ3YTNlYzE2OGI0ZTY4YTMxOGZlMDEwN2ZmOTc0MzZhMWQ5YTAwMzEyZDhhYzQ1ZWFmYzVjZTBlODA1MTYxQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20"
       />
-      <AboutProject wrappingClassName="wrapper secondary" />
+      <AboutProject wrappingClassName="wrapper second" />
       <IFrame
-        wrappingClassName="wrapper primary"
+        wrappingClassName="wrapper first"
         title={t("iframeTitles.howToVolunteer")}
         src="https://www.youtube.com/embed/tk5akHPd9oo?si=k01Klx7SxIWwKHO_&rel=0&autoplay=0"
       />
-      <VolunteerWorkflow wrappingClassName="wrapper secondary" />
-      <ContactForRAC wrappingClassName="wrapper primary" />
+      <VolunteerWorkflow wrappingClassName="wrapper second" />
+      <ContactForRAC wrappingClassName="wrapper first" />
       <Sponsors wrappingClassName="wrapper" />
       <Footer />
     </>

@@ -28,7 +28,7 @@ function VolunteerOpportunity({ wrappingClassName }: Props) {
       </div>
       <div className="carousel-inner n4d-carousel-container">
         <div
-          className="n4d-full-space carousel-item active"
+          className="n4d-full-space carousel-item"
           data-bs-interval={carouselInterval}
         >
           <div className="translation-img volunteer-opportunity-img">
@@ -42,7 +42,7 @@ function VolunteerOpportunity({ wrappingClassName }: Props) {
           </div>
         </div>
         <div
-          className="n4d-full-space carousel-item"
+          className="n4d-full-space carousel-item active"
           data-bs-interval={carouselInterval}
         >
           <div className="become-a-mentor-img volunteer-opportunity-img">
