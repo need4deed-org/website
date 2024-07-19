@@ -10,7 +10,6 @@ interface Props {
 function VolunteerOpportunity({ wrappingClassName }: Props) {
   const { i18n, t } = useTranslation();
   const opportuinitiesUrl = `/opportunities/${i18n.language}`;
-  const translationsUrl = `/translations/${i18n.language}`;
 
   return (
     <div
@@ -35,8 +34,8 @@ function VolunteerOpportunity({ wrappingClassName }: Props) {
             <div className="n4d-full-space volunteer-opportunity-text">
               <h5>{t("volunteeringProjects.translationHeading")}</h5>
               <p>{t("volunteeringProjects.translationSubheading")}</p>
-              <a href={translationsUrl} className="btn btn-light learn-more">
-                {t("accompanyTranslate")}
+              <a href={opportuinitiesUrl} className="btn btn-light learn-more">
+                {t("workingWithRefugees")}
               </a>
             </div>
           </div>
