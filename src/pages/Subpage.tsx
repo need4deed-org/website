@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useNavigate, useParams } from "react-router-dom";
 
 import { AppContainerContext } from "../App";
+import Event831 from "../components/Event/Event831";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import DataPrivacy from "../components/Legal/DataPrivacy";
@@ -72,6 +73,8 @@ function Subpage({ type }: Props) {
             }}
           />
         );
+      case Subpages.EVENT:
+        return <Event831 />;
     }
   };
 

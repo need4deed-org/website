@@ -19,6 +19,23 @@
     "heading": "Are you a volunteer coordinator in a refugee accommodation center?",
     "emailUs": "write us to"
   },
+  "event": {
+    "header": "Need4deed Sommerfest",
+    "paras": {
+      "para1": "Dear volunteers, we are pleased to invite you to our Sommerfest organized in collaboration with Du für Berlin on Saturday August 31st from 13.00 till 18.00.",
+      "para2": "Whether you’re already a volunteer or interested in volunteering with refugees, come join us, bring a friend or more!",
+      "para3": "There will be an amazing lineup of musicians, workshops for children, and of course food  and drinks. More details about the program and menu are coming soon. Stay tuned! 🎵 🥗 🥪 🍻 😋",
+      "para4": "The event will take place at ArtSpace in Exile, Elsenstraße 87, 12435 Berlin (Alt-Treptow)"
+    },
+    "rsvp": {
+      "invite": "Free Admission. Please RSVP here:",
+      "registration": "Registration form"
+    },
+    "final": {
+      "feelFree": "If you have any questions, please do not hesitate to contact us!",
+      "team": "Team"
+    }
+  },
   "volunteeringProjects": {
     "header": "Volunteering opportunities",
     "overComeObstaclesHeading": "Overcome barriers together!",

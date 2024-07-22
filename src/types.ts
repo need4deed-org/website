@@ -18,6 +18,7 @@ export enum Subpages {
   DATA_PROTECTION = "datenschutzerklaerung",
   OPPORTUNITIES = "opportunities",
   TRANSLATIONS = "translations",
+  EVENT = "event",
 }
 
 // conjunction between keys and disjunction between possible values are applied
