@@ -9,7 +9,6 @@ import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import IFrame from "../components/IFrame";
 import Main from "../components/Main/Main";
-import Sponsors from "../components/Sponsors/Sponsors";
 import VolunteerOpportunity from "../components/VolunteerOpportunity/VolunteerOpportunity";
 import VolunteerWorkflow from "../components/VolunteerWorkflow/VolunteerWorkflow";
 import { Lang } from "../types";
@@ -51,7 +50,6 @@ function Home() {
       />
       <VolunteerWorkflow wrappingClassName="wrapper second" />
       <ContactForRAC wrappingClassName="wrapper first" />
-      <Sponsors wrappingClassName="wrapper" />
       <Footer />
     </>
   );

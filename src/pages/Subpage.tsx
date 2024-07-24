@@ -81,7 +81,7 @@ function Subpage({ type }: Props) {
   return (
     <>
       <div className="navbar-main-container">
-        <Header showTranslations={type === Subpages.OPPORTUNITIES} />
+        <Header />
       </div>
       {component(type)}
       <Footer />
