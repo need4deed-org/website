@@ -19,6 +19,24 @@
     "heading": "Bist Du Ehrenamtskoordinator*in in einer Gemeinschaftsunterkunft?",
     "emailUs": "Schreib uns an"
   },
+  "event": {
+    "header": "Need4Deed Sommerfest",
+    "menuItem": "Sommerfest",
+    "paras": {
+      "para1": "Liebe Freiwillige, wir freuen uns, euch zu unserem Sommerfest einladen zu dürfen, das in Zusammenarbeit mit Du für Berlin am Samstag, den 31. August von 13.00 bis 18.00 Uhr organisiert wird.",
+      "para2": "Egal, ob Sie bereits freiwillig helfen oder sich für die Freiwilligenarbeit mit Flüchtlingen interessieren, kommen Sie vorbei, bringen Sie einen Freund oder mehrere mit!",
+      "para3": "Es wird ein tolles Line-up von Musikern, Workshops für Kinder und natürlich Essen und Trinken geben. Weitere Informationen zum Programm und Menü folgen in Kürze. Bleiben Sie dran!     ",
+      "para4": "Die Veranstaltung findet im ArtSpace in Exile, Elsenstraße 87, 12435 Berlin (Alt-Treptow) statt."
+    },
+    "rsvp": {
+      "invite": "Freier Eintritt. Bitte hier anmelden:",
+      "registration": "Anmeldeformular"
+    },
+    "final": {
+      "feelFree": "Wenn Sie Fragen haben, zögern Sie bitte nicht, uns zu kontaktieren!",
+      "team": "Team"
+    }
+  },
   "volunteeringProjects": {
     "header": "Möglichkeiten für Dein Engagement",
     "overComeObstaclesHeading": "Hürden gemeinsam überwinden!",

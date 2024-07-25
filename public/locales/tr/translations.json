@@ -19,6 +19,24 @@
     "heading": "Mülteci konaklama merkezinde gönüllü koordinatörü müsünüz?",
     "emailUs": "bize yazın"
   },
+  "event": {
+    "header": "Need4Deed Yaz Şenliği",
+    "menuItem": "Yaz Şenliği",
+    "paras": {
+      "para1": "Sevgili gönüllüler, Du für Berlin işbirliğiyle 31 Ağustos Cumartesi günü saat 13.00'ten 18.00'e kadar düzenleyeceğimiz Yaz Şenliğimize sizleri davet etmekten mutluluk duyuyoruz.",
+      "para2": "İster halihazırda gönüllü olun, ister mültecilerle gönüllü olmakla ilgilenin, bize katılın, bir arkadaşınızı veya daha fazlasını getirin!",
+      "para3": "Harika müzisyenlerden oluşan bir kadro, çocuklar içinワークショップ (wākuushoppu, workshop) ve tabii ki yemek ve içecek olacak. Program ve menü hakkında daha fazla bilgi yakında gelecek. Takipte kalın!     ",
+      "para4": "Etkinlik, ArtSpace in Exile, Elsenstraße 87, 12435 Berlin (Alt-Treptow) adresinde gerçekleşecektir."
+    },
+    "rsvp": {
+      "invite": "Ücretsiz Giriş. Lütfen buradan kaydolun:",
+      "registration": "Kayıt Formu"
+    },
+    "final": {
+      "feelFree": "Herhangi bir sorunuz varsa, lütfen bizimle iletişime geçmekten çekinmeyin!",
+      "team": "Takım"
+    }
+  },
   "volunteeringProjects": {
     "header": "Gönüllülük Fırsatları",
     "overComeObstaclesHeading": "Mentor olmak ister misiniz?",

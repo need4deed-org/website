@@ -51,7 +51,6 @@ function Header({ showTranslations = false }: Props) {
         </button>
         <div
           className={`collapse navbar-collapse ${isOpen ? "show droped" : ""}`}
-          // id="navbarSupportedContent"
         >
           <ul className="navbar-nav mb-0">
             <li className="nav-item dropdown">
@@ -131,6 +130,14 @@ function Header({ showTranslations = false }: Props) {
             <li className="nav-item">
               <a className="nav-link" href={t("basLink")} target="_blank">
                 {t("bas2022")}
+              </a>
+            </li>
+            <li className="nav-item">
+              <a
+                className="nav-link nav-link-secondary"
+                href={`/${Subpages.EVENT}/${i18n.language}`}
+              >
+                {t("event.menuItem")}
               </a>
             </li>
           </ul>

@@ -1,6 +1,22 @@
 [
   {
     "Status": "Volunteers Needed",
+    "Name": "Sorting and giving out donations from Tafel",
+    "Type": "Assistance",
+    "District": "Pankow",
+    "Schedule": "14-17, Friday, Monday",
+    "Languages needed": "English, German"
+  },
+  {
+    "Status": "Volunteers Needed",
+    "Name": "Accompany children to external events",
+    "Type": "Accompanying",
+    "District": "Berlin",
+    "Schedule": "",
+    "Languages needed": "English, German"
+  },
+  {
+    "Status": "Volunteers Needed",
     "Name": "Organise activities for a men group: Talking and Discussing",
     "Type": "Culture, Language café, Mentorship",
     "District": "Pankow",
@@ -24,7 +40,7 @@
     "Languages needed": "German"
   },
   {
-    "Status": "Volunteers Needed",
+    "Status": "DONE",
     "Name": "Organising and supporting a women’s group",
     "Type": "Mentorship",
     "District": "Lichtenberg",
@@ -32,7 +48,7 @@
     "Languages needed": "Arabic, Georgian, German, Russian, Turkish"
   },
   {
-    "Status": "Volunteers Needed",
+    "Status": "Search in process",
     "Name": "Support repair bikes with the residents of an accommodation centre",
     "Type": "Bike repairs",
     "District": "Zehlendorf",
@@ -41,7 +57,7 @@
   },
   {
     "Status": "Volunteers Needed",
-    "Name": "Support with accompanying kids around in the neighbourhood",
+    "Name": "Support with accompanying kids around in the neighborhood",
     "Type": "Accompanying",
     "District": "Zehlendorf",
     "Schedule": "",
@@ -49,8 +65,56 @@
   },
   {
     "Status": "Volunteers Needed",
+    "Name": "Accompany residents to a FreiluftKino",
+    "Type": "Accompanying",
+    "District": "Prenzlauer Berg",
+    "Schedule": "20-22:30, Wednesday",
+    "Languages needed": "English, German, Turkish"
+  },
+  {
+    "Status": "Volunteers Needed",
     "Name": "Support with daycare",
     "Type": "Daycare",
+    "District": "Wilmersdorf",
+    "Schedule": "15-17",
+    "Languages needed": "Arabic, English, German, Turkish"
+  },
+  {
+    "Status": "Volunteers Needed",
+    "Name": "Support the residents of an accommodation centre get to know their neighbourhood better.",
+    "Type": "Assistance, Mentorship",
+    "District": "Wilmersdorf",
+    "Schedule": "Flexible",
+    "Languages needed": "Arabic, Dari, English, Farsi, German, Russian, Turkish"
+  },
+  {
+    "Status": "Volunteers Needed",
+    "Name": "Assist an Arabic-speaking family finding activities for children",
+    "Type": "Assistance, Mentorship",
+    "District": "Wilmersdorf",
+    "Schedule": "Flexible",
+    "Languages needed": "Arabic, German"
+  },
+  {
+    "Status": "Volunteers Needed",
+    "Name": "Help with homework for elementary school students",
+    "Type": "Homework, Tutoring",
+    "District": "Wilmersdorf",
+    "Schedule": "9-17, Friday, Monday, Thursday, Tuesday, Wednesday",
+    "Languages needed": "German"
+  },
+  {
+    "Status": "Volunteers Needed",
+    "Name": "Play with kids and organise activities for the during a summer festival",
+    "Type": "Festival",
+    "District": "Wilmersdorf",
+    "Schedule": "13-16, August 22nd",
+    "Languages needed": "English, German"
+  },
+  {
+    "Status": "Volunteers Needed",
+    "Name": "Support with daycare",
+    "Type": "",
     "District": "Zehlendorf",
     "Schedule": "9-17, Flexible",
     "Languages needed": "English, German, Russian, Turkish"
@@ -62,14 +126,6 @@
     "District": "Zehlendorf",
     "Schedule": "9-18, Flexible",
     "Languages needed": "German, Kurdish, Russian"
-  },
-  {
-    "Status": "Volunteers Needed",
-    "Name": "Support during a summer festival in Steglitz",
-    "Type": "Festival",
-    "District": "Steglitz-Zehlendorf",
-    "Schedule": "11-18, August 1st",
-    "Languages needed": "English, German"
   },
   {
     "Status": "Volunteers Needed",
@@ -104,14 +160,6 @@
     "Languages needed": ""
   },
   {
-    "Status": "Inactive",
-    "Name": "Accompanying to Agentur für Arbeit Tempelhof-Schöneberg",
-    "Type": "Accompanying",
-    "District": "Tempelhof-Schöneberg",
-    "Schedule": "9-11, May 29th",
-    "Languages needed": "German, Russian"
-  },
-  {
     "Status": "No Volunteers Needed",
     "Name": "Group of volunteers to help the Volunteer Coordinators of Hangars",
     "Type": "Assistance",
@@ -126,14 +174,6 @@
     "District": "Marienfelde",
     "Schedule": "9-17, Friday, Monday, Thursday, Tuesday, Wednesday",
     "Languages needed": "English, German, Russian"
-  },
-  {
-    "Status": "No Volunteers Needed",
-    "Name": "Support with daycare",
-    "Type": "Daycare",
-    "District": "Marzahn-Hellersdorf",
-    "Schedule": "14:30-17:00, Monday, Thursday, Tuesday, Wednesday",
-    "Languages needed": "Arabic, German, Persian, Russian"
   },
   {
     "Status": "DONE",
@@ -152,7 +192,7 @@
     "Languages needed": "German"
   },
   {
-    "Status": "Volunteers Needed",
+    "Status": "Search in process",
     "Name": "Support an Arabic-speaking family settle in Berlin",
     "Type": "Assistance, Mentorship",
     "District": "Moabit",
@@ -168,38 +208,6 @@
     "Languages needed": ""
   },
   {
-    "Status": "No Volunteers Needed",
-    "Name": "Sorting letters and papers with the refugees",
-    "Type": "Consulting",
-    "District": "Marzahn-Hellersdorf",
-    "Schedule": "Flexible",
-    "Languages needed": "Arabic, German, Persian, Russian"
-  },
-  {
-    "Status": "No Volunteers Needed",
-    "Name": "Teaching people how to use a PC",
-    "Type": "IT, Tutoring",
-    "District": "Lichtenberg, Marzahn-Hellersdorf",
-    "Schedule": "Flexible",
-    "Languages needed": "Arabic, German, Persian, Russian, Turkish"
-  },
-  {
-    "Status": "No Volunteers Needed",
-    "Name": "Opening bank accounts",
-    "Type": "Accompanying",
-    "District": "Marzahn-Hellersdorf, Treptow-Köpenick",
-    "Schedule": "Flexible",
-    "Languages needed": "Arabic, French, German, Persian, Russian"
-  },
-  {
-    "Status": "Volunteers Needed",
-    "Name": "Support with daycare ",
-    "Type": "Daycare",
-    "District": "Hellersdorf",
-    "Schedule": "14-17, Friday, Monday, Thursday, Tuesday, Wednesday",
-    "Languages needed": "Arabic, English, German, Persian, Russian"
-  },
-  {
     "Status": "Inactive",
     "Name": "Operation doctors translation persian",
     "Type": "Translation",
@@ -208,7 +216,7 @@
     "Languages needed": "Dari, Persian"
   },
   {
-    "Status": "Search in process",
+    "Status": "DONE",
     "Name": "Support during a summer festival ",
     "Type": "Assistance, Culture, Festival",
     "District": "Tegel",
@@ -232,7 +240,15 @@
     "Languages needed": "Dari, German, Persian"
   },
   {
-    "Status": "Volunteers Needed",
+    "Status": "Search in process",
+    "Name": "Support during a summer festival in Zehlendorf ",
+    "Type": "Festival",
+    "District": "Zehlendorf",
+    "Schedule": "11-18, August 1st",
+    "Languages needed": "English, German"
+  },
+  {
+    "Status": "Check with the VC",
     "Name": "Help an older Ukrainian woman learn and practice German ",
     "Type": "Language Tandem, Tutoring",
     "District": "Moabit",
@@ -240,28 +256,196 @@
     "Languages needed": "German, Russian, Ukrainian"
   },
   {
-    "Status": "No Volunteers Needed",
-    "Name": "Accompanying children to activities outside of refugee accommodation centres",
-    "Type": "Accompanying",
-    "District": "Friedrichshain-Kreuzberg, Tempelhof-Schöneberg",
-    "Schedule": "Flexible",
-    "Languages needed": "Arabic, English, German, Persian, Russian, Turkish"
+    "Status": "Volunteers Needed",
+    "Name": "Support with daycare during summer break",
+    "Type": "Daycare",
+    "District": "Hellersdorf",
+    "Schedule": "14-17, Friday, Monday, Thursday, Tuesday, Wednesday",
+    "Languages needed": "Arabic, English, German, Persian, Russian"
+  },
+  {
+    "Status": "Inactive",
+    "Name": "Clean-Up at GU Columbidamm 84",
+    "Type": "Clean-up",
+    "District": "Tempelhof",
+    "Schedule": "",
+    "Languages needed": "English, German"
+  },
+  {
+    "Status": "Inactive",
+    "Name": "Translation at Amtsgericht Schöneberg on the 28th of March at 9:30",
+    "Type": "Translation",
+    "District": "Schöneberg",
+    "Schedule": "Once",
+    "Languages needed": "French, German"
+  },
+  {
+    "Status": "Check with the VC",
+    "Name": "Sports",
+    "Type": "Sports",
+    "District": "Marzahn",
+    "Schedule": "Friday, Monday, Thursday, Tuesday, Wednesday",
+    "Languages needed": ""
+  },
+  {
+    "Status": "Check with the VC",
+    "Name": "Lead a German language café",
+    "Type": "Language café",
+    "District": "Marzahn",
+    "Schedule": "10-12, Monday, Thursday",
+    "Languages needed": "German"
   },
   {
     "Status": "No Volunteers Needed",
-    "Name": "Sorting men’s clothing",
+    "Name": "Clothing sorting",
     "Type": "Clothing Sorting",
-    "District": "Tempelhof-Schöneberg",
-    "Schedule": "12-14, Friday, Wednesday",
+    "District": "Hellersdorf",
+    "Schedule": "Friday, Monday, Thursday, Tuesday, Wednesday",
+    "Languages needed": ""
+  },
+  {
+    "Status": "No Volunteers Needed",
+    "Name": "Laloka",
+    "Type": "Accompanying, Daycare, Translation",
+    "District": "Hellersdorf",
+    "Schedule": "Flexible, Short notice",
+    "Languages needed": "English, French, German"
+  },
+  {
+    "Status": "Inactive",
+    "Name": "Translation Support",
+    "Type": "Translation",
+    "District": "Treptow",
+    "Schedule": "",
+    "Languages needed": "Arabic, Georgian, Persian, Russian, Spanish"
+  },
+  {
+    "Status": "Inactive",
+    "Name": "Translation support",
+    "Type": "Translation",
+    "District": "Hellersdorf",
+    "Schedule": "10-12, 14-16, 9:30-12:30, Friday, Monday, Thursday, Tuesday, Wednesday",
+    "Languages needed": "French, Pashto"
+  },
+  {
+    "Status": "No Volunteers Needed",
+    "Name": "Sports - Help for preschool teachers",
+    "Type": "Daycare",
+    "District": "Hellersdorf",
+    "Schedule": "15:30-17:00",
+    "Languages needed": ""
+  },
+  {
+    "Status": "No Volunteers Needed",
+    "Name": "Supporting a French speaking mother",
+    "Type": "Mentorship",
+    "District": "Marzahn",
+    "Schedule": "Flexible",
+    "Languages needed": "English, French, German"
+  },
+  {
+    "Status": "No Volunteers Needed",
+    "Name": "German Exam Prep",
+    "Type": "Language Tandem",
+    "District": "Treptow",
+    "Schedule": "Flexible",
+    "Languages needed": "German, Turkish"
+  },
+  {
+    "Status": "Inactive",
+    "Name": "Help with building a pavilion for a RAC",
+    "Type": "Renovation",
+    "District": "Hellersdorf",
+    "Schedule": "Flexible",
     "Languages needed": "English, German"
+  },
+  {
+    "Status": "Inactive",
+    "Name": "Accompanying to administrative offices",
+    "Type": "Accompanying, Translation",
+    "District": "Berlin",
+    "Schedule": "Flexible, Short notice",
+    "Languages needed": "Arabic, English, Georgian, German, Persian, Russian"
+  },
+  {
+    "Status": "Inactive",
+    "Name": "Accompanying to doctor’s appointments",
+    "Type": "Accompanying, Translation",
+    "District": "Berlin",
+    "Schedule": "Flexible, Short notice",
+    "Languages needed": "Arabic, Georgian, German, Persian, Russian, Turkish"
+  },
+  {
+    "Status": "Inactive",
+    "Name": "Begleitung beim Arzttermin",
+    "Type": "Accompanying",
+    "District": "Marzahn",
+    "Schedule": "10:00, May 17th",
+    "Languages needed": "English, German, Kurdish, Turkish"
+  },
+  {
+    "Status": "Inactive",
+    "Name": "JobCenter Tempelhof-Schöneberg",
+    "Type": "Accompanying",
+    "District": "Schöneberg",
+    "Schedule": "8:15, June 3rd",
+    "Languages needed": "German, Russian"
+  },
+  {
+    "Status": "Inactive",
+    "Name": "Artztermin Radiografie",
+    "Type": "Accompanying",
+    "District": "Charlottenburg",
+    "Schedule": "11:45, June 4th",
+    "Languages needed": "German, Russian"
+  },
+  {
+    "Status": "Inactive",
+    "Name": "Teach German in a language café",
+    "Type": "Language café",
+    "District": "Treptow",
+    "Schedule": "17-18, Monday",
+    "Languages needed": "German, Persian, Turkish"
+  },
+  {
+    "Status": "No Volunteers Needed",
+    "Name": "Gardening group",
+    "Type": "Gardening",
+    "District": "Tempelhof",
+    "Schedule": "Flexible, Friday",
+    "Languages needed": ""
+  },
+  {
+    "Status": "Inactive",
+    "Name": "Doctors appointments ",
+    "Type": "Accompanying",
+    "District": "Marzahn",
+    "Schedule": "03.07.24, 10.06.24, 10.07.24",
+    "Languages needed": "Persian"
   },
   {
     "Status": "No Volunteers Needed",
     "Name": "Sorting women’s clothing",
     "Type": "Clothing Sorting",
-    "District": "Tempelhof-Schöneberg",
+    "District": "Tempelhof",
     "Schedule": "12-14, Thursday, Tuesday",
     "Languages needed": "English, German"
+  },
+  {
+    "Status": "No Volunteers Needed",
+    "Name": "Sorting men’s clothing",
+    "Type": "Clothing Sorting",
+    "District": "Tempelhof",
+    "Schedule": "12-14, Friday, Wednesday",
+    "Languages needed": "English, German"
+  },
+  {
+    "Status": "No Volunteers Needed",
+    "Name": "Accompanying children to activities outside of refugee accommodation centres",
+    "Type": "Accompanying",
+    "District": "Friedrichshain, Tempelhof",
+    "Schedule": "Flexible",
+    "Languages needed": "Arabic, English, German, Persian, Russian, Turkish"
   },
   {
     "Status": "No Volunteers Needed",
@@ -288,7 +472,127 @@
     "Languages needed": "German, Russian"
   },
   {
+    "Status": "No Volunteers Needed",
+    "Name": "Opening bank accounts",
+    "Type": "Accompanying",
+    "District": "Hellersdorf, Treptow",
+    "Schedule": "Flexible",
+    "Languages needed": "Arabic, French, German, Persian, Russian"
+  },
+  {
+    "Status": "No Volunteers Needed",
+    "Name": "Teaching people how to use a PC",
+    "Type": "IT, Tutoring",
+    "District": "Hellersdorf, Lichtenberg",
+    "Schedule": "Flexible",
+    "Languages needed": "Arabic, German, Persian, Russian, Turkish"
+  },
+  {
+    "Status": "No Volunteers Needed",
+    "Name": "Sorting letters and papers with the refugees",
+    "Type": "Consulting",
+    "District": "Hellersdorf",
+    "Schedule": "Flexible",
+    "Languages needed": "Arabic, German, Persian, Russian"
+  },
+  {
+    "Status": "No Volunteers Needed",
+    "Name": "Support with daycare",
+    "Type": "Daycare",
+    "District": "Hellersdorf",
+    "Schedule": "14:30-17:00, Monday, Thursday, Tuesday, Wednesday",
+    "Languages needed": "Arabic, German, Persian, Russian"
+  },
+  {
+    "Status": "Inactive",
+    "Name": "Accompanying to Agentur für Arbeit Tempelhof-Schöneberg",
+    "Type": "Accompanying",
+    "District": "Schöneberg",
+    "Schedule": "9-11, May 29th",
+    "Languages needed": "German, Russian"
+  },
+  {
+    "Status": "Search in process",
+    "Name": "Arts and crafts for children and their families",
+    "Type": "Arts",
+    "District": "Schöneberg",
+    "Schedule": "16-18, Tuesday",
+    "Languages needed": "English, German, Persian"
+  },
+  {
     "Status": "Volunteers Needed",
+    "Name": "Hürdenspringer",
+    "Type": "Mentorship",
+    "District": "Schöneberg, Tempelhof",
+    "Schedule": "Flexible",
+    "Languages needed": "German"
+  },
+  {
+    "Status": "Search in process",
+    "Name": "German language support for women",
+    "Type": "Language café",
+    "District": "Hellersdorf",
+    "Schedule": "Thursday",
+    "Languages needed": "German"
+  },
+  {
+    "Status": "Search in process",
+    "Name": "IB Marzahn",
+    "Type": "Arts, Culture, Theatre",
+    "District": "Marzahn",
+    "Schedule": "9-18, Flexible",
+    "Languages needed": "Arabic, English, Georgian, German, Persian, Turkish"
+  },
+  {
+    "Status": "Search in process",
+    "Name": "Sports and activities for kids and teens",
+    "Type": "Sports",
+    "District": "Hellersdorf, Lichtenberg",
+    "Schedule": "Flexible, Saturday, Sunday",
+    "Languages needed": "Arabic, English, German, Persian, Turkish"
+  },
+  {
+    "Status": "Volunteers Needed",
+    "Name": "German language exchange",
+    "Type": "Language Tandem",
+    "District": "Neukölln, Schöneberg",
+    "Schedule": "Flexible",
+    "Languages needed": ""
+  },
+  {
+    "Status": "Volunteers Needed",
+    "Name": "Sewing or Knitting with Women",
+    "Type": "Arts",
+    "District": "Köpenick",
+    "Schedule": "9-18, Friday, Monday, Thursday, Tuesday, Wednesday",
+    "Languages needed": "Arabic, English, German, Persian, Russian"
+  },
+  {
+    "Status": "Volunteers Needed",
+    "Name": "Gardening (Vegetable Garden)",
+    "Type": "Gardening",
+    "District": "Köpenick",
+    "Schedule": "9-18, Friday, Monday, Thursday, Tuesday, Wednesday",
+    "Languages needed": "English, German"
+  },
+  {
+    "Status": "Volunteers Needed",
+    "Name": "Support a Turkish-speaking kid with learning German",
+    "Type": "Tutoring",
+    "District": "Köpenick",
+    "Schedule": "Flexible",
+    "Languages needed": "German, Turkish"
+  },
+  {
+    "Status": "Volunteers Needed",
+    "Name": "Support during a sports festival",
+    "Type": "Festival",
+    "District": "Hellersdorf",
+    "Schedule": "11-16, August 26th",
+    "Languages needed": "English, German"
+  },
+  {
+    "Status": "Inactive",
     "Name": "Gardening in Neukölln",
     "Type": "Gardening",
     "District": "Neukölln",
@@ -297,43 +601,11 @@
   },
   {
     "Status": "Inactive",
-    "Name": "Doctors appointments ",
-    "Type": "Accompanying",
-    "District": "Marzahn-Hellersdorf",
-    "Schedule": "03.07.24, 10.06.24, 10.07.24",
-    "Languages needed": "Persian"
-  },
-  {
-    "Status": "Inactive",
     "Name": "Multi Translation Buchholtz ",
     "Type": "Translation",
     "District": "Pankow",
     "Schedule": "13.06.24",
     "Languages needed": "Arabic, German, Turkish"
-  },
-  {
-    "Status": "Volunteers Needed",
-    "Name": "Support a Turkish-speaking kid with learning German",
-    "Type": "Tutoring",
-    "District": "Treptow-Köpenick",
-    "Schedule": "Flexible",
-    "Languages needed": "German, Turkish"
-  },
-  {
-    "Status": "Volunteers Needed",
-    "Name": "Gardening (Vegetable Garden)",
-    "Type": "Gardening",
-    "District": "Treptow-Köpenick",
-    "Schedule": "9-18, Friday, Monday, Thursday, Tuesday, Wednesday",
-    "Languages needed": "English, German"
-  },
-  {
-    "Status": "Volunteers Needed",
-    "Name": "Sewing or Knitting with Women",
-    "Type": "Arts",
-    "District": "Treptow-Köpenick",
-    "Schedule": "9-18, Friday, Monday, Thursday, Tuesday, Wednesday",
-    "Languages needed": "Arabic, English, German, Persian, Russian"
   },
   {
     "Status": "Volunteers Needed",
@@ -360,7 +632,7 @@
     "Languages needed": "Arabic, English, German, Persian, Russian"
   },
   {
-    "Status": "Search in process",
+    "Status": "DONE",
     "Name": "Going for walks with a resident of a refugee acommodation centre",
     "Type": "Mentorship",
     "District": "Lichtenberg",
@@ -384,7 +656,7 @@
     "Languages needed": "Arabic, German, Persian"
   },
   {
-    "Status": "Volunteers Needed",
+    "Status": "Inactive",
     "Name": "Going to appointments with a visually impaired person",
     "Type": "Accompanying",
     "District": "Lichtenberg",
@@ -400,15 +672,7 @@
     "Languages needed": "Vietnamese"
   },
   {
-    "Status": "No Volunteers Needed",
-    "Name": "Gardening group",
-    "Type": "Gardening",
-    "District": "Tempelhof-Schöneberg",
-    "Schedule": "Flexible, Friday",
-    "Languages needed": ""
-  },
-  {
-    "Status": "Urgent",
+    "Status": "Inactive",
     "Name": "Doctor’s Appointment: Kid",
     "Type": "Accompanying",
     "District": "Spandau",
@@ -448,36 +712,12 @@
     "Languages needed": "German"
   },
   {
-    "Status": "Volunteers Needed",
-    "Name": "Teach German in a language café",
-    "Type": "Language café",
-    "District": "Treptow-Köpenick",
-    "Schedule": "17-18, Monday",
-    "Languages needed": "German, Persian, Turkish"
-  },
-  {
     "Status": "No Volunteers Needed",
     "Name": "Garden volunteering day in mitte ",
     "Type": "Clean-up, Gardening",
     "District": "Mitte",
     "Schedule": "",
     "Languages needed": ""
-  },
-  {
-    "Status": "Inactive",
-    "Name": "Artztermin Radiografie",
-    "Type": "Accompanying",
-    "District": "Charlottenburg-Wilmersdorf",
-    "Schedule": "11:45, June 4th",
-    "Languages needed": "German, Russian"
-  },
-  {
-    "Status": "Inactive",
-    "Name": "JobCenter Tempelhof-Schöneberg",
-    "Type": "Accompanying",
-    "District": "Tempelhof-Schöneberg",
-    "Schedule": "8:15, June 3rd",
-    "Languages needed": "German, Russian"
   },
   {
     "Status": "Inactive",
@@ -496,7 +736,7 @@
     "Languages needed": "English, German"
   },
   {
-    "Status": "Urgent",
+    "Status": "Inactive",
     "Name": "Sprachmittlung Farsi",
     "Type": "Accompanying",
     "District": "Mitte",
@@ -537,14 +777,6 @@
   },
   {
     "Status": "Inactive",
-    "Name": "Begleitung beim Arzttermin",
-    "Type": "Accompanying",
-    "District": "Marzahn-Hellersdorf",
-    "Schedule": "10:00, May 17th",
-    "Languages needed": "English, German, Kurdish, Turkish"
-  },
-  {
-    "Status": "Inactive",
     "Name": "Begleitung für Mutter mit 5jähriger Tochter zu einer Sprachstandsfeststellung",
     "Type": "Accompanying",
     "District": "Neukölln",
@@ -560,7 +792,7 @@
     "Languages needed": "Georgian, German, Russian"
   },
   {
-    "Status": "Search in process",
+    "Status": "Inactive",
     "Name": "Charite accompanying Persian ",
     "Type": "Accompanying",
     "District": "Mitte",
@@ -576,76 +808,12 @@
     "Languages needed": "Arabic, German, Persian, Russian, Turkish"
   },
   {
-    "Status": "Volunteers Needed",
-    "Name": "German language exchange",
-    "Type": "Language Tandem",
-    "District": "Friedrichshain-Kreuzberg, Neukölln, Tempelhof-Schöneberg",
-    "Schedule": "Flexible",
-    "Languages needed": ""
-  },
-  {
-    "Status": "Search in process",
-    "Name": "Sports and activities for kids and teens",
-    "Type": "Sports",
-    "District": "Lichtenberg, Marzahn-Hellersdorf",
-    "Schedule": "Flexible, Saturday, Sunday",
-    "Languages needed": "Arabic, English, German, Persian, Turkish"
-  },
-  {
-    "Status": "Search in process",
+    "Status": "Check with the VC",
     "Name": "Support a Syrian family find their way in Germany",
     "Type": "Mentorship",
     "District": "Lichtenberg",
     "Schedule": "Flexible",
     "Languages needed": "Arabic, German"
-  },
-  {
-    "Status": "Volunteers Needed",
-    "Name": "Accompanying to doctor’s appointments",
-    "Type": "Accompanying, Translation",
-    "District": "Friedrichshain-Kreuzberg, Marzahn-Hellersdorf, Mitte, Pankow, Tempelhof-Schöneberg, Treptow-Köpenick",
-    "Schedule": "Flexible, Short notice",
-    "Languages needed": "Arabic, Georgian, German, Persian, Russian, Turkish"
-  },
-  {
-    "Status": "Volunteers Needed",
-    "Name": "Accompanying to administrative offices",
-    "Type": "Accompanying, Translation",
-    "District": "Lichtenberg, Marzahn-Hellersdorf, Mitte, Tempelhof-Schöneberg, Treptow-Köpenick",
-    "Schedule": "Flexible, Short notice",
-    "Languages needed": "Arabic, English, Georgian, German, Persian, Russian"
-  },
-  {
-    "Status": "Inactive",
-    "Name": "Help with building a pavilion for a RAC",
-    "Type": "Renovation",
-    "District": "Marzahn-Hellersdorf",
-    "Schedule": "Flexible",
-    "Languages needed": "English, German"
-  },
-  {
-    "Status": "No Volunteers Needed",
-    "Name": "German Exam Prep",
-    "Type": "Language Tandem",
-    "District": "Treptow-Köpenick",
-    "Schedule": "Flexible",
-    "Languages needed": "German, Turkish"
-  },
-  {
-    "Status": "No Volunteers Needed",
-    "Name": "Supporting a French speaking mother",
-    "Type": "Mentorship",
-    "District": "Marzahn-Hellersdorf",
-    "Schedule": "Flexible",
-    "Languages needed": "English, French, German"
-  },
-  {
-    "Status": "Search in process",
-    "Name": "IB Marzahn",
-    "Type": "Arts, Culture, Theatre",
-    "District": "Marzahn-Hellersdorf",
-    "Schedule": "9-18, Flexible",
-    "Languages needed": "Arabic, English, Georgian, German, Persian, Turkish"
   },
   {
     "Status": "Volunteers Needed",
@@ -657,14 +825,6 @@
   },
   {
     "Status": "No Volunteers Needed",
-    "Name": "Sports - Help for preschool teachers",
-    "Type": "Daycare",
-    "District": "Marzahn-Hellersdorf",
-    "Schedule": "15:30-17:00",
-    "Languages needed": ""
-  },
-  {
-    "Status": "No Volunteers Needed",
     "Name": "Supporting with daycare",
     "Type": "Daycare",
     "District": "Neukölln",
@@ -673,7 +833,7 @@
   },
   {
     "Status": "Volunteers Needed",
-    "Name": "Leading a women’s group",
+    "Name": "Lead a women’s group",
     "Type": "Mentorship",
     "District": "Neukölln",
     "Schedule": "15-17, Monday",
@@ -686,14 +846,6 @@
     "District": "Lichtenberg",
     "Schedule": "17-19, Friday, Monday, Thursday, Tuesday, Wednesday",
     "Languages needed": "Arabic, German, Persian"
-  },
-  {
-    "Status": "Volunteers Needed",
-    "Name": "Translation support",
-    "Type": "Translation",
-    "District": "Marzahn-Hellersdorf",
-    "Schedule": "10-12, 14-16, 9:30-12:30, Friday, Monday, Thursday, Tuesday, Wednesday",
-    "Languages needed": "French, Pashto"
   },
   {
     "Status": "Volunteers Needed",
@@ -720,7 +872,7 @@
     "Languages needed": ""
   },
   {
-    "Status": "Volunteers Needed",
+    "Status": "Inactive",
     "Name": "Translation Support",
     "Type": "Translation",
     "District": "Pankow",
@@ -728,7 +880,7 @@
     "Languages needed": "Georgian, Persian, Serbian, Turkish"
   },
   {
-    "Status": "No Volunteers Needed",
+    "Status": "Inactive",
     "Name": "Translation Support",
     "Type": "Translation",
     "District": "Pankow",
@@ -736,20 +888,12 @@
     "Languages needed": "Romanes"
   },
   {
-    "Status": "No Volunteers Needed",
+    "Status": "Inactive",
     "Name": "Translation Support",
     "Type": "Translation",
     "District": "Neukölln",
     "Schedule": "",
     "Languages needed": "English, German, Turkish"
-  },
-  {
-    "Status": "No Volunteers Needed",
-    "Name": "Translation Support",
-    "Type": "Translation",
-    "District": "Treptow-Köpenick",
-    "Schedule": "",
-    "Languages needed": "Arabic, Georgian, Persian, Russian, Spanish"
   },
   {
     "Status": "Volunteers Needed",
@@ -760,28 +904,12 @@
     "Languages needed": "Arabic, English, German, Persian, Turkish"
   },
   {
-    "Status": "Search in process",
-    "Name": "German language support for women",
-    "Type": "Language café",
-    "District": "Marzahn-Hellersdorf",
-    "Schedule": "Thursday",
-    "Languages needed": "German"
-  },
-  {
     "Status": "No Volunteers Needed",
     "Name": "Bike Repair",
     "Type": "Bike repairs",
     "District": "Neukölln",
     "Schedule": "",
     "Languages needed": ""
-  },
-  {
-    "Status": "No Volunteers Needed",
-    "Name": "Laloka",
-    "Type": "Accompanying, Daycare, Translation",
-    "District": "Marzahn-Hellersdorf",
-    "Schedule": "Flexible, Short notice",
-    "Languages needed": "English, French, German"
   },
   {
     "Status": "No Volunteers Needed",
@@ -800,20 +928,12 @@
     "Languages needed": "English, German, Persian, Russian"
   },
   {
-    "Status": "No Volunteers Needed",
+    "Status": "Inactive",
     "Name": "Translation Support",
     "Type": "Translation",
     "District": "Pankow",
     "Schedule": "10-11, 14-15, Friday, Monday, Thursday, Tuesday, Wednesday",
     "Languages needed": "Georgian, German, Turkish"
-  },
-  {
-    "Status": "No Volunteers Needed",
-    "Name": "Clothing sorting",
-    "Type": "Clothing Sorting",
-    "District": "Marzahn-Hellersdorf",
-    "Schedule": "Friday, Monday, Thursday, Tuesday, Wednesday",
-    "Languages needed": ""
   },
   {
     "Status": "Volunteers Needed",
@@ -833,30 +953,6 @@
   },
   {
     "Status": "Volunteers Needed",
-    "Name": "Lead a German language café",
-    "Type": "Language café",
-    "District": "Marzahn-Hellersdorf",
-    "Schedule": "10-12, Monday, Thursday",
-    "Languages needed": "German"
-  },
-  {
-    "Status": "Volunteers Needed",
-    "Name": "Sports",
-    "Type": "Sports",
-    "District": "Marzahn-Hellersdorf",
-    "Schedule": "Friday, Monday, Thursday, Tuesday, Wednesday",
-    "Languages needed": ""
-  },
-  {
-    "Status": "Search in process",
-    "Name": "Arts and crafts for children and their families",
-    "Type": "Arts",
-    "District": "Tempelhof-Schöneberg",
-    "Schedule": "16-18, Tuesday",
-    "Languages needed": "English, German, Persian"
-  },
-  {
-    "Status": "Volunteers Needed",
     "Name": "German language cafe ",
     "Type": "Language café",
     "District": "Mitte",
@@ -865,7 +961,7 @@
   },
   {
     "Status": "Volunteers Needed",
-    "Name": "Set up a Language Café",
+    "Name": "Help with a Language Café",
     "Type": "Language café",
     "District": "Lichtenberg",
     "Schedule": "Flexible",
@@ -888,14 +984,6 @@
     "Languages needed": ""
   },
   {
-    "Status": "Volunteers Needed",
-    "Name": "Hürdenspringer",
-    "Type": "Mentorship",
-    "District": "Tempelhof-Schöneberg",
-    "Schedule": "Flexible",
-    "Languages needed": "German"
-  },
-  {
     "Status": "Inactive",
     "Name": "Translation at LEA on the 4th of March at 10:10",
     "Type": "Translation",
@@ -904,35 +992,11 @@
     "Languages needed": "German, Persian"
   },
   {
-    "Status": "Inactive",
-    "Name": "Translation at Amtsgericht Schöneberg on the 28th of March at 9:30",
-    "Type": "Translation",
-    "District": "Marzahn-Hellersdorf",
-    "Schedule": "Once",
-    "Languages needed": "French, German"
-  },
-  {
     "Status": "No Volunteers Needed",
-    "Name": "",
-    "Type": "",
-    "District": "",
-    "Schedule": "",
-    "Languages needed": ""
-  },
-  {
-    "Status": "Volunteers Needed",
     "Name": "Create activities for a summer festival",
     "Type": "Arts, Assistance, Clean-up, Culture, Theatre",
     "District": "Reinickendorf",
     "Schedule": "July 7th",
-    "Languages needed": "English, German"
-  },
-  {
-    "Status": "Inactive",
-    "Name": "Clean-Up at GU Columbidamm 84",
-    "Type": "Clean-up",
-    "District": "Tempelhof-Schöneberg",
-    "Schedule": "",
     "Languages needed": "English, German"
   },
   {

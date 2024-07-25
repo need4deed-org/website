@@ -14,7 +14,25 @@
 }
 
 .nav-link {
-  color: white !important;
+  --bs-navbar-active-color: white;
+  color: white;
+  border-radius: 1rem;
+}
+
+.nav-link:hover {
+  color: white;
+  background: rgba(20, 20, 20, 0.2);
+}
+
+.nav-link-secondary {
+  color: var(--n4d-neutral-dark);
+  background: var(--n4d-secondary);
+  text-align: center;
+}
+
+.nav-link-secondary:hover {
+  color: var(--n4d-neutral-dark);
+  background: var(--n4d-secondary-darker);
 }
 
 .navbar-toggler-icon {
