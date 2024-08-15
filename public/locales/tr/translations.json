@@ -15,6 +15,7 @@
     "calendar": "Takvim",
     "howToVolunteer": "Harekete Geçin! - Gönüllü Olun"
   },
+  "linkToPrevProj": "Mültecilerle Gönüllü Olmak Hakkında",
   "contactForRAC": {
     "heading": "Mülteci konaklama merkezinde gönüllü koordinatörü müsünüz?",
     "emailUs": "bize yazın"
@@ -96,7 +97,8 @@
     "legal": {
       "legalHeading": "Yasal",
       "impressum": "Yasal Bildirim",
-      "dataPrivacy": "Gizlilik"
+      "dataPrivacy": "Gizlilik",
+      "agreement": "Gönüllü Katılım Sözleşmesi"
     },
     "contact": {
       "contactHeading": "İletişim",

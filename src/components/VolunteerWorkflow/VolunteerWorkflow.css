@@ -14,18 +14,24 @@
   margin-inline: auto;
   margin-block-start: 1.5rem;
   padding: 1rem;
+  color: var(--n4d-neutral-dark);
   background-color: var(--n4d-secondary);
   border-radius: 1.5rem;
 }
 
-.volunteer-workflow-btn:hover {
-  background-color: #a7c1c3;
+.volunteer-workflow-btn a {
+  text-decoration: none;
 }
 
-.volunteer-workflow-btn button {
+.volunteer-workflow-btn button,
+.volunteer-workflow-btn a {
   background: none;
   border: none;
   color: inherit;
+}
+
+.volunteer-workflow-btn:hover {
+  background-color: var(--n4d-secondary-lighter);
 }
 
 @media (max-width: 768px) {

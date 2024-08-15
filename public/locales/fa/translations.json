@@ -15,6 +15,7 @@
     "calendar": "تقویم",
     "howToVolunteer": "اقدام کنید! - داوطلب شوید"
   },
+  "linkToPrevProj": "درباره داوطلب شدن با پناهندگان",
   "contactForRAC": {
     "heading": "آیا شما هماهنگ کننده داوطلب در مرکز اسکان پناهندگان هستید؟",
     "emailUs": "برای ما بنویسید"
@@ -97,7 +98,8 @@
     "legal": {
       "legalHeading": "قوانین",
       "impressum": "اطلاعات حقوقی",
-      "dataPrivacy": "حریم خصوصی"
+      "dataPrivacy": "حریم خصوصی",
+      "agreement": "توافقنامه مشارکت داوطلبانه"
     },
     "contact": {
       "contactHeading": "ارتباط",

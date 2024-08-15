@@ -277,13 +277,13 @@ function DataPrivacy() {
         <span>{t("legal:dataPrivacy.tools.font.possibility.para22")}</span>
       </p>
       {/*  */}
-      <h3>{t("legal:transfer.header")}</h3>
-      <p>{t("legal:transfer.para1")}</p>
+      <h3>{t("legal:dataPrivacy:transfer.header")}</h3>
+      <p>{t("legal:dataPrivacy:transfer.para1")}</p>
       <p>
         <strong>
-          <i>{t("legal:transfer.bold1")}</i>
+          <i>{t("legal:dataPrivacy:transfer.bold1")}</i>
         </strong>
-        <span>{t("legal:transfer.bold1Text")}</span>
+        <span>{t("legal:dataPrivacy:transfer.bold1Text")}</span>
         <a href="https://ec.europa.eu/info/law/law-topic/data-protection/data-transfers-outside-eu/adequacy-protection-personal-data-non-eu-countries_en">
           <strong>
             https://ec.europa.eu/info/law/law-topic/data-protection/data-transfers-outside-eu/adequacy-protection-personal-data-non-eu-countries_en
@@ -292,9 +292,9 @@ function DataPrivacy() {
       </p>
       <p>
         <strong>
-          <i>{t("legal:transfer.bold2")}</i>
+          <i>{t("legal:dataPrivacy:transfer.bold2")}</i>
         </strong>
-        <span>{t("legal:transfer.bold2Text")}</span>
+        <span>{t("legal:dataPrivacy:transfer.bold2Text")}</span>
         <a href="https://eur-lex.europa.eu/eli/dec_impl/2021/914/oj?uri=CELEX%3A32021D0914&locale=en">
           <strong>
             https://eur-lex.europa.eu/eli/dec_impl/2021/914/oj?uri=CELEX%3A32021D0914&locale=en
@@ -303,96 +303,96 @@ function DataPrivacy() {
       </p>
       <p>
         <strong>
-          <i>{t("legal:transfer.bold3")}</i>
+          <i>{t("legal:dataPrivacy:transfer.bold3")}</i>
         </strong>
-        <span>{t("legal:transfer.bold3Text")}</span>
+        <span>{t("legal:dataPrivacy:transfer.bold3Text")}</span>
       </p>
       <p>
         <strong>
-          <i>{t("legal:transfer.bold4")}</i>
+          <i>{t("legal:dataPrivacy:transfer.bold4")}</i>
         </strong>
-        <span>{t("legal:transfer.bold4Text")}</span>
+        <span>{t("legal:dataPrivacy:transfer.bold4Text")}</span>
       </p>
       {/*  */}
-      <h3>{t("legal:rights.header")}</h3>
-      <p>{t("legal:rights.para")}</p>
+      <h3>{t("legal:dataPrivacy:rights.header")}</h3>
+      <p>{t("legal:dataPrivacy:rights.para")}</p>
       {/*  */}
-      <h4>{t("legal:rights.revoke.header")}</h4>
-      <p>{t("legal:rights.revoke.para")}</p>
-      <h4>{t("legal:rights.information.header")}</h4>
-      <p>{t("legal:rights.information.para")}</p>
+      <h4>{t("legal:dataPrivacy:rights.revoke.header")}</h4>
+      <p>{t("legal:dataPrivacy:rights.revoke.para")}</p>
+      <h4>{t("legal:dataPrivacy:rights.information.header")}</h4>
+      <p>{t("legal:dataPrivacy:rights.information.para")}</p>
       <ul>
-        <li>{t("legal:rights.information.bullet1")}</li>
-        <li>{t("legal:rights.information.bullet2")}</li>
-        <li>{t("legal:rights.information.bullet3")}</li>
-        <li>{t("legal:rights.information.bullet4")}</li>
-        <li>{t("legal:rights.information.bullet5")}</li>
-        <li>{t("legal:rights.information.bullet6")}</li>
-        <li>{t("legal:rights.information.bullet7")}</li>
-        <li>{t("legal:rights.information.bullet8")}</li>
+        <li>{t("legal:dataPrivacy:rights.information.bullet1")}</li>
+        <li>{t("legal:dataPrivacy:rights.information.bullet2")}</li>
+        <li>{t("legal:dataPrivacy:rights.information.bullet3")}</li>
+        <li>{t("legal:dataPrivacy:rights.information.bullet4")}</li>
+        <li>{t("legal:dataPrivacy:rights.information.bullet5")}</li>
+        <li>{t("legal:dataPrivacy:rights.information.bullet6")}</li>
+        <li>{t("legal:dataPrivacy:rights.information.bullet7")}</li>
+        <li>{t("legal:dataPrivacy:rights.information.bullet8")}</li>
       </ul>
       {/*  */}
-      <h4>{t("legal:rights.correction.header")}</h4>
-      <p>{t("legal:rights.correction.para1")}</p>
-      <p>{t("legal:rights.correction.para2")}</p>
+      <h4>{t("legal:dataPrivacy:rights.correction.header")}</h4>
+      <p>{t("legal:dataPrivacy:rights.correction.para1")}</p>
+      <p>{t("legal:dataPrivacy:rights.correction.para2")}</p>
       <ul>
-        <li>{t("legal:rights.correction.bullet1")}</li>
-        <li>{t("legal:rights.correction.bullet2")}</li>
-        <li>{t("legal:rights.correction.bullet3")}</li>
-        <li>{t("legal:rights.correction.bullet4")}</li>
-        <li>{t("legal:rights.correction.bullet5")}</li>
-        <li>{t("legal:rights.correction.bullet6")}</li>
+        <li>{t("legal:dataPrivacy:rights.correction.bullet1")}</li>
+        <li>{t("legal:dataPrivacy:rights.correction.bullet2")}</li>
+        <li>{t("legal:dataPrivacy:rights.correction.bullet3")}</li>
+        <li>{t("legal:dataPrivacy:rights.correction.bullet4")}</li>
+        <li>{t("legal:dataPrivacy:rights.correction.bullet5")}</li>
+        <li>{t("legal:dataPrivacy:rights.correction.bullet6")}</li>
       </ul>
-      <p>{t("legal:rights.correction.para3")}</p>
+      <p>{t("legal:dataPrivacy:rights.correction.para3")}</p>
       <p>
-        <span>{t("legal:rights.correction.para41")}</span>
+        <span>{t("legal:dataPrivacy:rights.correction.para41")}</span>
         <span>
-          <strong>{t("legal:rights.correction.para42")}</strong>
+          <strong>{t("legal:dataPrivacy:rights.correction.para42")}</strong>
         </span>
-        <span>{t("legal:rights.correction.para43")}</span>
+        <span>{t("legal:dataPrivacy:rights.correction.para43")}</span>
       </p>
       <ul>
-        <li>{t("legal:rights.correction.bullet7")}</li>
-        <li>{t("legal:rights.correction.bullet8")}</li>
-        <li>{t("legal:rights.correction.bullet9")}</li>
-        <li>{t("legal:rights.correction.bullet10")}</li>
-        <li>{t("legal:rights.correction.bullet11")}</li>
+        <li>{t("legal:dataPrivacy:rights.correction.bullet7")}</li>
+        <li>{t("legal:dataPrivacy:rights.correction.bullet8")}</li>
+        <li>{t("legal:dataPrivacy:rights.correction.bullet9")}</li>
+        <li>{t("legal:dataPrivacy:rights.correction.bullet10")}</li>
+        <li>{t("legal:dataPrivacy:rights.correction.bullet11")}</li>
       </ul>
       {/*  */}
-      <h4>{t("legal:rights.restriction.header")}</h4>
-      <p>{t("legal:rights.restriction.para1")}</p>
+      <h4>{t("legal:dataPrivacy:rights.restriction.header")}</h4>
+      <p>{t("legal:dataPrivacy:rights.restriction.para1")}</p>
       <ul>
-        <li>{t("legal:rights.restriction.bullet1")}</li>
-        <li>{t("legal:rights.restriction.bullet2")}</li>
-        <li>{t("legal:rights.restriction.bullet3")}</li>
-        <li>{t("legal:rights.restriction.bullet4")}</li>
+        <li>{t("legal:dataPrivacy:rights.restriction.bullet1")}</li>
+        <li>{t("legal:dataPrivacy:rights.restriction.bullet2")}</li>
+        <li>{t("legal:dataPrivacy:rights.restriction.bullet3")}</li>
+        <li>{t("legal:dataPrivacy:rights.restriction.bullet4")}</li>
       </ul>
-      <p>{t("legal:rights.restriction.para2")}</p>
-      <p>{t("legal:rights.restriction.para3")}</p>
+      <p>{t("legal:dataPrivacy:rights.restriction.para2")}</p>
+      <p>{t("legal:dataPrivacy:rights.restriction.para3")}</p>
       {/*  */}
-      <h4>{t("legal:rights.information2.header")}</h4>
-      <p>{t("legal:rights.information2.para1")}</p>
-      <p>{t("legal:rights.information2.para2")}</p>
+      <h4>{t("legal:dataPrivacy:rights.information2.header")}</h4>
+      <p>{t("legal:dataPrivacy:rights.information2.para1")}</p>
+      <p>{t("legal:dataPrivacy:rights.information2.para2")}</p>
       {/*  */}
-      <h4>{t("legal:rights.portability.header")}</h4>
-      <p>{t("legal:rights.portability.para1")}</p>
+      <h4>{t("legal:dataPrivacy:rights.portability.header")}</h4>
+      <p>{t("legal:dataPrivacy:rights.portability.para1")}</p>
       <ul>
-        <li>{t("legal:rights.portability.bullet1")}</li>
-        <li>{t("legal:rights.portability.bullet2")}</li>
+        <li>{t("legal:dataPrivacy:rights.portability.bullet1")}</li>
+        <li>{t("legal:dataPrivacy:rights.portability.bullet2")}</li>
       </ul>
-      <p>{t("legal:rights.portability.para2")}</p>
-      <p>{t("legal:rights.portability.para3")}</p>
+      <p>{t("legal:dataPrivacy:rights.portability.para2")}</p>
+      <p>{t("legal:dataPrivacy:rights.portability.para3")}</p>
       {/*  */}
-      <h4>{t("legal:rights.object.header")}</h4>
-      <p>{t("legal:rights.object.para1")}</p>
-      <p>{t("legal:rights.object.para2")}</p>
+      <h4>{t("legal:dataPrivacy:rights.object.header")}</h4>
+      <p>{t("legal:dataPrivacy:rights.object.para1")}</p>
+      <p>{t("legal:dataPrivacy:rights.object.para2")}</p>
       {/*  */}
-      <h4>{t("legal:rights.complain.header")}</h4>
-      <p>{t("legal:rights.complain.para1")}</p>
-      <p>{t("legal:rights.complain.para2")}</p>
+      <h4>{t("legal:dataPrivacy:rights.complain.header")}</h4>
+      <p>{t("legal:dataPrivacy:rights.complain.para1")}</p>
+      <p>{t("legal:dataPrivacy:rights.complain.para2")}</p>
       {/*  */}
-      <h3>{t("legal:excercise.header")}</h3>
-      <p>{t("legal:excercise.para1")}</p>
+      <h3>{t("legal:dataPrivacy:excercise.header")}</h3>
+      <p>{t("legal:dataPrivacy:excercise.para1")}</p>
       <p>Kemal Webersohn von der WS Datenschutz GmbH</p>
       <p>
         <strong>
@@ -401,15 +401,15 @@ function DataPrivacy() {
           </a>
         </strong>
       </p>
-      <p>{t("legal:excercise.para2")}</p>
+      <p>{t("legal:dataPrivacy:excercise.para2")}</p>
       <p>WS Datenschutz GmbH</p>
       <p>Dircksenstraße 51</p>
       <p>D-10178 Berlin</p>
 
       {/*  */}
-      <h3>{t("legal:change.header")}</h3>
-      <p>{t("legal:change.para1")}</p>
-      <p>{t("legal:change.para2")}</p>
+      <h3>{t("legal:dataPrivacy:change.header")}</h3>
+      <p>{t("legal:dataPrivacy:change.para1")}</p>
+      <p>{t("legal:dataPrivacy:change.para2")}</p>
     </div>
   );
 }

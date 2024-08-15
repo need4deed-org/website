@@ -20,6 +20,13 @@
   font-size: inherit;
 }
 
+.legal-container ul {
+  list-style-type: "- ";
+}
+.legal-container ul > ul {
+  list-style-type: "-- ";
+}
+
 .legal-container a:hover {
   text-decoration: underline;
 }

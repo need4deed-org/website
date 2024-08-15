@@ -34,6 +34,10 @@ const App: FC = () => {
               element={<Subpage type={Subpages.DATA_PROTECTION} />}
             />
             <Route
+              path={`/${Subpages.AGREEMENT}/:lng`}
+              element={<Subpage type={Subpages.AGREEMENT} />}
+            />
+            <Route
               path={`/${Subpages.OPPORTUNITIES}/:lng`}
               element={<Subpage type={Subpages.OPPORTUNITIES} />}
             />

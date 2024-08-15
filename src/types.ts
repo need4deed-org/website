@@ -16,6 +16,7 @@ export enum Env {
 export enum Subpages {
   NOTICE = "impressum",
   DATA_PROTECTION = "datenschutzerklaerung",
+  AGREEMENT = "vereinbarung",
   OPPORTUNITIES = "opportunities",
   TRANSLATIONS = "translations",
   EVENT = "event",

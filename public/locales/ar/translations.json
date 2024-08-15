@@ -15,6 +15,7 @@
     "calendar": "تقويم",
     "howToVolunteer": "كيفية التطوع"
   },
+  "linkToPrevProj": "حول التطوع مع اللاجئين",
   "contactForRAC": {
     "heading": "هل أنت منسق متطوعين في مركز إيواء اللاجئين؟",
     "emailUs": "اكتب لنا على"
@@ -93,7 +94,8 @@
     "legal": {
       "legalHeading": "شؤون قانونية",
       "impressum": "إشعار قانوني",
-      "dataPrivacy": "حماية البيانات"
+      "dataPrivacy": "حماية البيانات",
+      "agreement": "اتفاقية المشاركة الطوعية"
     },
     "contact": {
       "contactHeading": "اتصل بنا",

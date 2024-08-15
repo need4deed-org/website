@@ -6,6 +6,7 @@ import { AppContainerContext } from "../App";
 import Event831 from "../components/Event/Event831";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
+import Agreement from "../components/Legal/Agreement";
 import DataPrivacy from "../components/Legal/DataPrivacy";
 import LegalNotice from "../components/Legal/Notice";
 import OpportunityCards from "../components/OpportunityCards";
@@ -37,6 +38,8 @@ function Subpage({ type }: Props) {
         return <DataPrivacy />;
       case Subpages.NOTICE:
         return <LegalNotice />;
+      case Subpages.AGREEMENT:
+        return <Agreement />;
       case Subpages.OPPORTUNITIES:
         return (
           <OpportunityCards

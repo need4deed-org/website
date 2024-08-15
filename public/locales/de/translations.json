@@ -15,6 +15,7 @@
     "calendar": "Kalender",
     "howToVolunteer": "Mach mit! - Ehrenamtliches Engagement"
   },
+  "linkToPrevProj": "Über Freiwilligenarbeit mit Geflüchteten",
   "contactForRAC": {
     "heading": "Bist Du Ehrenamtskoordinator*in in einer Gemeinschaftsunterkunft?",
     "emailUs": "Schreib uns an"
@@ -93,7 +94,8 @@
     "legal": {
       "legalHeading": "Legal",
       "impressum": "Impressum",
-      "dataPrivacy": "Datenschutzerklärung"
+      "dataPrivacy": "Datenschutzerklärung",
+      "agreement": "Vereinbarung zur Ehrenamtlichen Teilnahme"
     },
     "contact": {
       "contactHeading": "Kontakt",

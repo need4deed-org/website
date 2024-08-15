@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { HashLink } from "react-router-hash-link";
 
+import { Subpages } from "../../types";
 import Sponsors from "../Sponsors/Sponsors";
 import "./Footer.css";
 
@@ -15,10 +16,13 @@ function Footer({ showSponsors = true }: Props) {
     to: `/${i18n.language}#about-project`,
   };
   const legalNoticeLinkProps = {
-    href: `/impressum/${i18n.language}`,
+    href: `/${Subpages.NOTICE}/${i18n.language}`,
   };
   const privacyLinkProps = {
-    href: `/datenschutzerklaerung/${i18n.language}`,
+    href: `/${Subpages.DATA_PROTECTION}/${i18n.language}`,
+  };
+  const agreementLinkProps = {
+    href: `/${Subpages.AGREEMENT}/${i18n.language}`,
   };
   const mailToLinkProps = {
     href: "mailto:info@need4deed.org",
@@ -51,6 +55,9 @@ function Footer({ showSponsors = true }: Props) {
               </li>
               <li>
                 <a {...privacyLinkProps}>{t("footer.legal.dataPrivacy")}</a>
+              </li>
+              <li>
+                <a {...agreementLinkProps}>{t("footer.legal.agreement")}</a>
               </li>
             </ul>
           </div>

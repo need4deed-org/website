@@ -15,6 +15,7 @@
     "calendar": "Calendar",
     "howToVolunteer": "Take action! - volunteer"
   },
+  "linkToPrevProj": "About Volunteering with Refugees",
   "contactForRAC": {
     "heading": "Are you a volunteer coordinator in a refugee accommodation center?",
     "emailUs": "write us to"
@@ -93,7 +94,8 @@
     "legal": {
       "legalHeading": "Legal",
       "impressum": "Legal notice",
-      "dataPrivacy": "Privacy"
+      "dataPrivacy": "Privacy",
+      "agreement": "Voluntary Participation Agreement"
     },
     "contact": {
       "contactHeading": "Contact",
