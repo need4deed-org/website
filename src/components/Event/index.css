@@ -9,14 +9,27 @@
   margin-block: 1rem 0;
 }
 
+.event-timeslot {
+  font-weight: bold;
+}
+
+.event-location {
+  margin-block-start: 2rem;
+}
+
 .event-rsvp {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-block-start: 2rem;
 }
 
 .event-rsvp p:first-of-type {
   margin-block: 0;
+}
+
+.event-rsvp p:nth-of-type(2) {
+  margin-block: 1rem;
 }
 
 .event-rsvp a {

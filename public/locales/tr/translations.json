@@ -25,7 +25,29 @@
     "paras": {
       "para1": "Sevgili gönüllüler, Du für Berlin işbirliğiyle 31 Ağustos Cumartesi günü saat 13.00'ten 18.00'e kadar düzenleyeceğimiz Yaz Şenliğimize sizleri davet etmekten mutluluk duyuyoruz.",
       "para2": "İster halihazırda gönüllü olun, ister mültecilerle gönüllü olmakla ilgilenin, bize katılın, bir arkadaşınızı veya daha fazlasını getirin!",
-      "para3": "Harika müzisyenlerden oluşan bir kadro, çocuklar içinワークショップ (wākuushoppu, workshop) ve tabii ki yemek ve içecek olacak. Program ve menü hakkında daha fazla bilgi yakında gelecek. Takipte kalın!     ",
+      "para3": {
+        "morning": {
+          "timeslot": "13:00-13:30",
+          "title1": "Tanışma ve Karşılama"
+        },
+        "day": {
+          "timeslot": "13:30-18:00",
+          "title1": "Canlı Müzik (Bağlama)",
+          "title2": "Canlı Müzik (Caz ve Sukus)",
+          "title3": "Canlı Elektronik DJ Seti"
+        },
+        "afternoon": {
+          "timeslot": "13:30-17:00",
+          "title1": "Über den Tellerand e.V. işbirliğiyle Yemek Atölyesi",
+          "title2": "Tohum Bombası Atölyesi",
+          "title3": "Grup Atölyesi"
+        },
+        "all": {
+          "timeslot": "All Day",
+          "title1": "Çocuk Alanı",
+          "title2": "Hafif yemek ve içecekler ikramımız!"
+        }
+      },
       "para4": "Etkinlik, ArtSpace in Exile, Elsenstraße 87, 12435 Berlin (Alt-Treptow) adresinde gerçekleşecektir."
     },
     "rsvp": {

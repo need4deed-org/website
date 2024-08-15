@@ -25,7 +25,26 @@
     "paras": {
       "para1": "Liebe Freiwillige, wir freuen uns, euch zu unserem Sommerfest einladen zu dürfen, das in Zusammenarbeit mit Du für Berlin am Samstag, den 31. August von 13.00 bis 18.00 Uhr organisiert wird.",
       "para2": "Egal, ob Sie bereits freiwillig helfen oder sich für die Freiwilligenarbeit mit Flüchtlingen interessieren, kommen Sie vorbei, bringen Sie einen Freund oder mehrere mit!",
-      "para3": "Es wird ein tolles Line-up von Musikern, Workshops für Kinder und natürlich Essen und Trinken geben. Weitere Informationen zum Programm und Menü folgen in Kürze. Bleiben Sie dran!     ",
+      "para3": {
+        "morning": { "timeslot": "13:00-13:30", "title1": "Begrüßung" },
+        "day": {
+          "timeslot": "13:30-18:00",
+          "title1": "Live Musik (Bağlama)",
+          "title2": "Live Musik (Jazz und Soukous)",
+          "title3": "Live Electronic DJ Set"
+        },
+        "afternoon": {
+          "timeslot": "13:30-17:00",
+          "title1": "Buffet Der Begegung mit Über den Tellerand e.V.",
+          "title2": "Samenbomben-Workshop",
+          "title3": "Gruppenworkshop"
+        },
+        "all": {
+          "timeslot": "All Day",
+          "title1": "Kinderbereich",
+          "title2": "Leichte Speisen und Getränke gratis!"
+        }
+      },
       "para4": "Die Veranstaltung findet im ArtSpace in Exile, Elsenstraße 87, 12435 Berlin (Alt-Treptow) statt."
     },
     "rsvp": {
