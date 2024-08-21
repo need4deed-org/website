@@ -1,27 +1,32 @@
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Lang } from "../../types";
-import { getOpportunityImg, isRtlLang } from "../../utils";
+import { getOpportunityImg, isoCodesToNames, isRtlLang } from "../../utils";
 
 interface Props {
   opportunity: Record<string, string>;
+  pre?: boolean;
 }
 
-export default function Translation({ opportunity }: Props) {
+export default function Translation({ opportunity, pre = false }: Props) {
   const { t, i18n } = useTranslation();
   const titleBtn = t("projectIntro.beVolunteerButton");
   const srcImg = useMemo(
     () => getOpportunityImg(opportunity.type),
     [opportunity.type],
   );
-  return (
+  return pre ? (
+    <pre className="opportunity-card">
+      {JSON.stringify(opportunity, null, 2)}
+    </pre>
+  ) : (
     <div className="opportunity-card">
       <img src={srcImg} alt="image" />
       <h5>{opportunity.name}</h5>
       <p>{opportunity.type}</p>
       <h6>Languages:</h6>
       <p>
-        <strong>{opportunity.languages}</strong>
+        <strong>{isoCodesToNames(opportunity.languages)}</strong>
       </p>
       <h6>Time:</h6>
       <p>{opportunity.time}</p>

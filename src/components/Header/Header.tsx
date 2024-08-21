@@ -7,11 +7,7 @@ import { Lang, Subpages } from "../../types";
 import { getBaseUrl, setLangDirection } from "../../utils";
 import "./Header.css";
 
-interface Props {
-  showTranslations?: boolean;
-}
-
-function Header({ showTranslations = false }: Props) {
+function Header() {
   const { i18n, t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
@@ -117,16 +113,6 @@ function Header({ showTranslations = false }: Props) {
                 {t("workingWithRefugees")}
               </a>
             </li>
-            {showTranslations && (
-              <li className="nav-item">
-                <a
-                  className="nav-link"
-                  href={`/${Subpages.TRANSLATIONS}/${i18n.language}`}
-                >
-                  {t("accompanyTranslate")}
-                </a>
-              </li>
-            )}
             <li className="nav-item">
               <a className="nav-link" href={t("basLink")} target="_blank">
                 {t("bas2022")}

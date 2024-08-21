@@ -33,3 +33,6 @@ public/version.json
 
 # docker
 dev.*
+
+# env
+.env

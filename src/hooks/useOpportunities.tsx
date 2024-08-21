@@ -1,37 +1,54 @@
 import { useEffect, useState } from "react";
-import { FilterTarget } from "../types";
+import { OpportunityParams } from "../types";
 
 export default function useOpportunities(
   filePath: string,
-  filterTarget: FilterTarget,
+  opportunityParams: OpportunityParams,
 ) {
   const [opportunities, setOpportunities] = useState<
     Array<Record<string, string>>
   >([]);
 
   useEffect(() => {
-    fetch(filePath)
+    const isUrl = filePath.toLowerCase().startsWith("http://");
+    fetch(
+      isUrl ? getUrlWithEncodedParams(filePath, opportunityParams) : filePath,
+    )
       .then(res => res.json())
       .then(data =>
         setOpportunities(
-          data.filter(getFilter(filterTarget)).map(mapToOpportunity),
+          isUrl
+            ? data
+            : data
+                .filter(getFilter(opportunityParams?.search))
+                .map(mapToOpportunity),
         ),
       )
       .catch(console.error);
-  }, [filePath, filterTarget]);
+  }, [filePath, opportunityParams]);
 
   return opportunities;
 }
 
-export function getFilter(target: FilterTarget) {
-  return function (item: Record<string, string>) {
-    return target.reduce(
-      (trg, el) =>
-        trg &&
-        el.values.reduce((vls, value) => vls || item[el.key] === value, false),
-      true,
-    );
-  };
+export function getFilter(search: OpportunityParams["search"]) {
+  return search
+    ? function (item: Record<string, string>) {
+        return Object.entries(search).reduce(
+          (target, [searchKey, searchValues]) => {
+            return (
+              target &&
+              searchValues.reduce(
+                (trg, value) => trg || item[searchKey] === value,
+                false,
+              )
+            );
+          },
+          true,
+        );
+      }
+    : function () {
+        return true;
+      };
 }
 
 export function mapToOpportunity(opportunity: Record<string, string>) {
@@ -43,4 +60,17 @@ export function mapToOpportunity(opportunity: Record<string, string>) {
     },
     {},
   );
+}
+
+export function getUrlWithEncodedParams(
+  url: string,
+  params: OpportunityParams,
+) {
+  const search = params.search
+    ? `search=${encodeURIComponent(JSON.stringify(params.search))}`
+    : "";
+  const primaryKeys = params.primaryKeys
+    ? `primary_keys=${encodeURIComponent(JSON.stringify(params.primaryKeys))}`
+    : "";
+  return `${url}?${[...(primaryKeys ? [primaryKeys] : []), ...(search ? [search] : [])].join("&")}`;
 }

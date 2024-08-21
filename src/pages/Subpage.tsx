@@ -13,6 +13,8 @@ import OpportunityCards from "../components/OpportunityCards";
 import { Lang, Subpages } from "../types";
 import { isEnumValue, setLangDirection } from "../utils";
 
+const urlOpportunitiesAlfred =
+  import.meta.env.VITE_API_URL ?? "http://localhost:8000/api/opportunity/";
 interface Props {
   type: Subpages;
 }
@@ -24,6 +26,7 @@ function Subpage({ type }: Props) {
   const containerRef = useContext(AppContainerContext);
 
   useEffect(() => {
+    urlOpportunitiesAlfred;
     if (isEnumValue(Lang, lng)) {
       i18n.changeLanguage(lng);
       setLangDirection(containerRef, lng as Lang);
@@ -44,12 +47,11 @@ function Subpage({ type }: Props) {
         return (
           <OpportunityCards
             dataFileUrl="/data/opportunities.json"
-            filterTarget={[
-              {
-                key: "Status",
-                values: ["Volunteers Needed", "Search in process"],
+            opportunityParams={{
+              search: {
+                Status: ["Volunteers Needed", "Search in process"],
               },
-            ]}
+            }}
             keyMap={{
               type: "type",
               name: "name",
@@ -59,20 +61,22 @@ function Subpage({ type }: Props) {
             }}
           />
         );
-      case Subpages.TRANSLATIONS:
+      case Subpages.OPPORTUNITIES_TEST:
         return (
           <OpportunityCards
-            dataFileUrl="/data/translations.json"
-            filterTarget={[
-              { key: "Status", values: ["Confirmed with the RAC"] },
-              { key: "Active volunteers", values: [""] },
-            ]}
+            dataFileUrl={urlOpportunitiesAlfred}
+            opportunityParams={{
+              search: {
+                status: ["Volunteers Needed", "Search in process"],
+              },
+              primaryKeys: ["title", "name", "iso_code"],
+            }}
             keyMap={{
-              type: "appointment",
-              name: "name",
+              type: "activities",
+              name: "title",
               languages: "languages",
-              time: "date",
-              location: "district",
+              time: "timeslots",
+              location: "locations",
             }}
           />
         );

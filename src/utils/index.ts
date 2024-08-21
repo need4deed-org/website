@@ -50,8 +50,35 @@ const typeToImg = {
 };
 
 export function getOpportunityImg(type: string) {
+  if (!type || typeof type !== "string") return typeToImg.default;
+
   const [firstTag] = type.split(",");
   const [typeForImg] = firstTag.split(" ");
 
   return typeToImg[typeForImg as keyof typeof typeToImg] ?? typeToImg.default;
+}
+
+export const mapCodeToLanguage = {
+  en: "English",
+  de: "German",
+  ar: "Arabic",
+  fa: "Farsi",
+  ru: "Russian",
+  uk: "Ukrainian",
+  tr: "Turkish",
+  es: "Spanish",
+  ot: "Other",
+};
+
+export function isoCodesToNames(isoCodes: string) {
+  function getLanguageName(code: string) {
+    if (code in mapCodeToLanguage)
+      return mapCodeToLanguage[code as keyof typeof mapCodeToLanguage];
+    return code;
+  }
+  return isoCodes
+    .split(",")
+    .map(code => code.trim())
+    .map(getLanguageName)
+    .join(", ");
 }
