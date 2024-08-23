@@ -20,6 +20,7 @@ export enum Subpages {
   AGREEMENT = "vereinbarung",
   OPPORTUNITIES = "opportunities",
   OPPORTUNITIES_TEST = "f47ac8e3b925d1f5",
+  ACCOMPANYING = "accompanying",
   EVENT = "event",
 }
 

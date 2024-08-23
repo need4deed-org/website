@@ -25,6 +25,8 @@ for prop in "$@"; do
 done
 jq_expression="${jq_expression% and })"
 
+echo "jq_expression '$jq_expression'"
+
 properties=$(jq "$jq_expression" "$file_path")
 if [ "$properties" != 'true' ]; then
   echo "Error: Some elements in the array are missing required properties"

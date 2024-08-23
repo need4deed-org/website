@@ -1,6 +1,86 @@
 [
   {
     "Status": "Volunteers Needed",
+    "Name": "German Tandem (1 on 1)",
+    "Type": "Language Tandem",
+    "District": "Hellersdorf",
+    "Schedule": "Flexible",
+    "Languages needed": "German"
+  },
+  {
+    "Status": "Volunteers Needed",
+    "Name": "Clothing sorting",
+    "Type": "Clothing Sorting",
+    "District": "Hellersdorf",
+    "Schedule": "9-17, Flexible, Wednesday",
+    "Languages needed": "English, German"
+  },
+  {
+    "Status": "Volunteers Needed",
+    "Name": "Lead a German language café - Help residents with homework",
+    "Type": "Language café, Tutoring",
+    "District": "Hellersdorf",
+    "Schedule": "10-12, Flexible, Monday, Thursday",
+    "Languages needed": "German"
+  },
+  {
+    "Status": "Volunteers Needed",
+    "Name": "Clothing Sorting - Clothing Bank",
+    "Type": "Clothing Sorting",
+    "District": "Pankow",
+    "Schedule": "11-18, Friday, Monday, Thursday, Tuesday, Wednesday",
+    "Languages needed": "English, German"
+  },
+  {
+    "Status": "Volunteers Needed",
+    "Name": "Support with daycare",
+    "Type": "Daycare",
+    "District": "Tempelhof",
+    "Schedule": "12:30-16:30, Friday, Monday, Thursday, Tuesday, Wednesday",
+    "Languages needed": ""
+  },
+  {
+    "Status": "Volunteers Needed",
+    "Name": "Reading books for kids",
+    "Type": "Reading books for kids",
+    "District": "Reinickendorf",
+    "Schedule": "9-17, Flexible, Friday, Monday, Thursday, Tuesday, Wednesday",
+    "Languages needed": "German"
+  },
+  {
+    "Status": "Volunteers Needed",
+    "Name": "Support a German language café in Britz",
+    "Type": "Language café",
+    "District": "Neukölln",
+    "Schedule": "9-17, Flexible, Friday, Monday, Thursday, Tuesday, Wednesday",
+    "Languages needed": "Arabic, Dari, Farsi, German, Turkish"
+  },
+  {
+    "Status": "Volunteers Needed",
+    "Name": "Organise and lead a Männer*café ",
+    "Type": "Excursions, Mentorship",
+    "District": "Neukölln",
+    "Schedule": "9-17, Flexible, Friday, Monday, Thursday, Tuesday, Wednesday",
+    "Languages needed": "Arabic, English, Farsi, German"
+  },
+  {
+    "Status": "Volunteers Needed",
+    "Name": "Support women get to know the neighbourhood and Berlin",
+    "Type": "Excursions, Mentorship",
+    "District": "Neukölln",
+    "Schedule": "Flexible",
+    "Languages needed": "Arabic, English, German, Persian, Turkish"
+  },
+  {
+    "Status": "Volunteers Needed",
+    "Name": "Support the clothing bank in Lichtenberg",
+    "Type": "Clothing Sorting",
+    "District": "Lichtenberg",
+    "Schedule": "11-13, Wednesday",
+    "Languages needed": "Any, English, German"
+  },
+  {
+    "Status": "Volunteers Needed",
     "Name": "Support during a summer festival in Lichtenberg",
     "Type": "Festival, One timer",
     "District": "Lichtenberg",
@@ -48,7 +128,7 @@
     "Languages needed": "English, German"
   },
   {
-    "Status": "DONE",
+    "Status": "No Volunteers Needed",
     "Name": "Support with daycare in Wilmersdorf",
     "Type": "Daycare",
     "District": "Wilmersdorf",
@@ -57,7 +137,7 @@
   },
   {
     "Status": "Volunteers Needed",
-    "Name": "Accompany residents to a FreiluftKino in Prenzlauer Berg",
+    "Name": "Accompany residents to a FreiluftKino in Prenzlauerberg",
     "Type": "Accompanying",
     "District": "Prenzlauer Berg",
     "Schedule": "20-22:30, Wednesday",
@@ -88,7 +168,7 @@
     "Languages needed": "German"
   },
   {
-    "Status": "Search in process",
+    "Status": "DONE",
     "Name": "Play with kids and organise activities for the during a summer festival in Wilmersdorf",
     "Type": "Festival, One timer",
     "District": "Wilmersdorf",
@@ -104,7 +184,7 @@
     "Languages needed": "German"
   },
   {
-    "Status": "Volunteers Needed",
+    "Status": "Search in process",
     "Name": "Support with daycare in Zehlendorf",
     "Type": "Daycare",
     "District": "Zehlendorf",
@@ -120,7 +200,7 @@
     "Languages needed": "German, Kurdish, Russian"
   },
   {
-    "Status": "Search in process",
+    "Status": "No Volunteers Needed",
     "Name": "Support an Arabic-speaking family settle in Moabit",
     "Type": "Assistance, Mentorship",
     "District": "Moabit",
@@ -128,7 +208,7 @@
     "Languages needed": "Arabic, English, German"
   },
   {
-    "Status": "Check with the VC",
+    "Status": "No Volunteers Needed",
     "Name": "Help an older Ukrainian woman learn and practice German ",
     "Type": "Language Tandem, Tutoring",
     "District": "Moabit",
@@ -208,14 +288,6 @@
     "Languages needed": "Arabic, English, German, Persian, Turkish"
   },
   {
-    "Status": "No Volunteers Needed",
-    "Name": "German Tandem (1 on 1)",
-    "Type": "Language Tandem",
-    "District": "Tempelhof",
-    "Schedule": "Flexible",
-    "Languages needed": "German"
-  },
-  {
     "Status": "Volunteers Needed",
     "Name": "Helping with homework in Neukölln",
     "Type": "Tutoring",
@@ -244,7 +316,7 @@
     "Name": "Organise games and fun activities in a playroom in Neukölln",
     "Type": "Daycare",
     "District": "Neukölln",
-    "Schedule": "18:30-20:00, Monday, Wednesday",
+    "Schedule": "13:30-15:00 Sat, 18:30-20:00, Monday, Saturday, Wednesday",
     "Languages needed": "English, German, Russian, Turkish"
   },
   {
@@ -272,7 +344,7 @@
     "Languages needed": "Arabic, English, German, Persian, Russian"
   },
   {
-    "Status": "Check with the VC",
+    "Status": "Volunteers Needed",
     "Name": "Accompanying a family from Afghanistan to doctor’s appointments around Berlin",
     "Type": "Translation",
     "District": "Berlin",
@@ -326,14 +398,6 @@
     "District": "Köpenick",
     "Schedule": "9-19, Flexible",
     "Languages needed": "Arabic, English, German, Russian"
-  },
-  {
-    "Status": "No Volunteers Needed",
-    "Name": "Support with daycare",
-    "Type": "Daycare",
-    "District": "Tempelhof",
-    "Schedule": "12:30-16:30, Friday, Monday, Thursday, Tuesday, Wednesday",
-    "Languages needed": ""
   },
   {
     "Status": "Volunteers Needed",
@@ -416,14 +480,6 @@
     "Languages needed": "Arabic, English, Georgian, German, Persian, Turkish"
   },
   {
-    "Status": "Check with the VC",
-    "Name": "Lead a women’s group",
-    "Type": "Mentorship",
-    "District": "Neukölln",
-    "Schedule": "15-17, Monday",
-    "Languages needed": "Arabic, English, German, Persian, Turkish"
-  },
-  {
     "Status": "Volunteers Needed",
     "Name": "Accompany kids during KinderKulturMonat in October in Berlin",
     "Type": "Accompanying, Arts, Daycare, Workshops",
@@ -440,7 +496,7 @@
     "Languages needed": "Arabic, English, German, Persian, Russian"
   },
   {
-    "Status": "Check with the VC",
+    "Status": "No Volunteers Needed",
     "Name": "Support a Turkish-speaking kid with learning German in Treptow-Köpenick",
     "Type": "Tutoring",
     "District": "Köpenick",
@@ -456,14 +512,6 @@
     "Languages needed": "English, German"
   },
   {
-    "Status": "Check with the VC",
-    "Name": "Lead a German language café",
-    "Type": "Language café",
-    "District": "Marzahn",
-    "Schedule": "10-12, Monday, Thursday",
-    "Languages needed": "German"
-  },
-  {
     "Status": "Volunteers Needed",
     "Name": "Support with daycare in Mitte",
     "Type": "Daycare",
@@ -472,19 +520,11 @@
     "Languages needed": "English, German, Russian, Turkish, Ukrainian"
   },
   {
-    "Status": "Check with the VC",
+    "Status": "Inactive",
     "Name": "Sports",
     "Type": "Sports",
     "District": "Marzahn",
     "Schedule": "Friday, Monday, Thursday, Tuesday, Wednesday",
-    "Languages needed": ""
-  },
-  {
-    "Status": "No Volunteers Needed",
-    "Name": "",
-    "Type": "",
-    "District": "",
-    "Schedule": "",
     "Languages needed": ""
   },
   {
@@ -512,7 +552,7 @@
     "Languages needed": "German, Russian"
   },
   {
-    "Status": "No Volunteers Needed",
+    "Status": "DONE",
     "Name": "Sorting Papers for Residents",
     "Type": "Translation",
     "District": "Lichtenberg",
@@ -520,7 +560,7 @@
     "Languages needed": "German, Russian"
   },
   {
-    "Status": "No Volunteers Needed",
+    "Status": "Inactive",
     "Name": "Action day asked for by Aprilsix volunteers",
     "Type": "Clothing Sorting",
     "District": "",
@@ -528,7 +568,7 @@
     "Languages needed": ""
   },
   {
-    "Status": "No Volunteers Needed",
+    "Status": "DONE",
     "Name": "Garden volunteering day in mitte ",
     "Type": "Clean-up, Gardening",
     "District": "Mitte",
@@ -672,7 +712,7 @@
     "Languages needed": "German, Persian"
   },
   {
-    "Status": "No Volunteers Needed",
+    "Status": "DONE",
     "Name": "Create activities for a summer festival",
     "Type": "Arts, Assistance, Clean-up, Culture, Theatre",
     "District": "Reinickendorf",
@@ -712,7 +752,7 @@
     "Languages needed": "Georgian, German, Russian"
   },
   {
-    "Status": "No Volunteers Needed",
+    "Status": "Volunteers Needed",
     "Name": "Supporting with daycare",
     "Type": "Daycare",
     "District": "Neukölln",
@@ -768,14 +808,6 @@
     "Languages needed": "English, German"
   },
   {
-    "Status": "No Volunteers Needed",
-    "Name": "Reading books for kids",
-    "Type": "Reading books for kids",
-    "District": "Pankow, Reinickendorf",
-    "Schedule": "Flexible",
-    "Languages needed": "German"
-  },
-  {
     "Status": "Inactive",
     "Name": "Translation at Amtsgericht Schöneberg on the 28th of March at 9:30",
     "Type": "Translation",
@@ -792,7 +824,7 @@
     "Languages needed": "English, German"
   },
   {
-    "Status": "No Volunteers Needed",
+    "Status": "Inactive",
     "Name": "Sorting letters and papers with the refugees",
     "Type": "Consulting",
     "District": "Hellersdorf",
@@ -800,7 +832,7 @@
     "Languages needed": "Arabic, German, Persian, Russian"
   },
   {
-    "Status": "Check with the VC",
+    "Status": "Inactive",
     "Name": "Support a Syrian family find their way in Germany",
     "Type": "Mentorship",
     "District": "Lichtenberg",
@@ -808,7 +840,7 @@
     "Languages needed": "Arabic, German"
   },
   {
-    "Status": "No Volunteers Needed",
+    "Status": "Inactive",
     "Name": "Support with the community garden",
     "Type": "Gardening",
     "District": "Lichtenberg",
@@ -816,7 +848,7 @@
     "Languages needed": "German"
   },
   {
-    "Status": "No Volunteers Needed",
+    "Status": "Inactive",
     "Name": "Teaching people how to use a PC",
     "Type": "IT, Tutoring",
     "District": "Hellersdorf, Lichtenberg",
@@ -864,7 +896,7 @@
     "Languages needed": "German, Persian"
   },
   {
-    "Status": "No Volunteers Needed",
+    "Status": "DONE",
     "Name": "Supporting a French speaking mother",
     "Type": "Mentorship",
     "District": "Marzahn",
@@ -872,7 +904,7 @@
     "Languages needed": "English, French, German"
   },
   {
-    "Status": "No Volunteers Needed",
+    "Status": "DONE",
     "Name": "German Exam Prep",
     "Type": "Language Tandem",
     "District": "Treptow",
@@ -904,7 +936,7 @@
     "Languages needed": "English, German, Turkish"
   },
   {
-    "Status": "No Volunteers Needed",
+    "Status": "Inactive",
     "Name": "Gardening group",
     "Type": "Gardening",
     "District": "Tempelhof",
@@ -920,15 +952,7 @@
     "Languages needed": "Georgian, Persian, Serbian, Turkish"
   },
   {
-    "Status": "No Volunteers Needed",
-    "Name": "Clothing Sorting",
-    "Type": "Clothing Sorting",
-    "District": "Pankow",
-    "Schedule": "",
-    "Languages needed": ""
-  },
-  {
-    "Status": "No Volunteers Needed",
+    "Status": "Inactive",
     "Name": "Clothing Sorting",
     "Type": "Clothing Sorting",
     "District": "Pankow",
@@ -960,7 +984,7 @@
     "Languages needed": ""
   },
   {
-    "Status": "No Volunteers Needed",
+    "Status": "Inactive",
     "Name": "Bike Repair",
     "Type": "Bike repairs",
     "District": "Neukölln",
@@ -968,18 +992,10 @@
     "Languages needed": ""
   },
   {
-    "Status": "No Volunteers Needed",
+    "Status": "Check with the VC",
     "Name": "Daycare",
     "Type": "Daycare",
     "District": "Mitte",
-    "Schedule": "Friday, Monday, Thursday, Tuesday, Wednesday",
-    "Languages needed": ""
-  },
-  {
-    "Status": "No Volunteers Needed",
-    "Name": "Clothing sorting",
-    "Type": "Clothing Sorting",
-    "District": "Hellersdorf",
     "Schedule": "Friday, Monday, Thursday, Tuesday, Wednesday",
     "Languages needed": ""
   },
@@ -1000,7 +1016,7 @@
     "Languages needed": "French, Pashto"
   },
   {
-    "Status": "No Volunteers Needed",
+    "Status": "Inactive",
     "Name": "Sports - Help for preschool teachers",
     "Type": "Daycare",
     "District": "Hellersdorf",
@@ -1016,7 +1032,7 @@
     "Languages needed": "Arabic, German, Persian, Russian"
   },
   {
-    "Status": "No Volunteers Needed",
+    "Status": "Inactive",
     "Name": "Bike Repair",
     "Type": "Bike repairs",
     "District": "Lichtenberg",
@@ -1024,7 +1040,7 @@
     "Languages needed": "English, German"
   },
   {
-    "Status": "No Volunteers Needed",
+    "Status": "Inactive",
     "Name": "Translations (Farsi, Russian)",
     "Type": "Translation",
     "District": "Lichtenberg",

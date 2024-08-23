@@ -43,6 +43,24 @@ function Subpage({ type }: Props) {
         return <LegalNotice />;
       case Subpages.AGREEMENT:
         return <Agreement />;
+      case Subpages.ACCOMPANYING:
+        return (
+          <OpportunityCards
+            dataFileUrl="/data/accompanying.json"
+            opportunityParams={{
+              search: {
+                Status: ["Not started"],
+              },
+            }}
+            keyMap={{
+              type: "appointment",
+              name: "name",
+              languages: "languages", // need to combine refugee lang and lang translation lang
+              time: "date",
+              location: "district",
+            }}
+          />
+        );
       case Subpages.OPPORTUNITIES:
         return (
           <OpportunityCards

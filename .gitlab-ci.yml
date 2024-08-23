@@ -23,7 +23,7 @@ validate_job:
   script:
     - apk add jq
     - ./validate_data.sh ./public/data/opportunities.json Status Name Type District Schedule "Languages needed"
-    - ./validate_data.sh ./public/data/translations.json Name Address "Appointment Type" Date "District (Appointment)" Languages Status "Active volunteers"
+    - ./validate_data.sh ./public/data/accompanying.json Name Address "Appointment Type" Date "District (Appointment)" Languages Status
 
 build_job:
   stage: build
