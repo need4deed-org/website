@@ -1,34 +1,52 @@
 [
   {
     "Status": "Volunteers Needed",
-    "Name": "German Tandem (1 on 1)",
+    "Name": "Help with homework for school students in Neukölln",
+    "Type": "Homework, Tutoring",
+    "District": "Neukölln",
+    "Schedule": "9-17, Friday, Monday, Thursday, Tuesday, Wednesday",
+    "Languages needed": "German",
+    "VO information": "It’s a regular volunteering opportunity (once a week). Support is needed for school kids with different subjects. The kids speak German so the volunteer should also be able to speak German."
+  },
+  {
+    "Status": "Volunteers Needed",
+    "Name": "Support with filling out forms for residents",
+    "Type": "Assistance",
+    "District": "Treptow",
+    "Schedule": "9-17, Flexible, Friday, Monday, Thursday, Tuesday, Wednesday",
+    "Languages needed": "Arabic, Dari, Farsi, Georgian, German, Russian, Turkish",
+    "VO information": "Support residents of a refugee accommodation centre in Treptow-Köpenick by filling out different forms with them, e.g. Jobcenter, Sozialamt, Familienkasse etc.\nThe schedule can be arranged individually with the volunteer coordinator.\nGerman skills are required."
+  },
+  {
+    "Status": "Volunteers Needed",
+    "Name": "Be a part of German language exchange (1 on 1) in Hellersdorf",
     "Type": "Language Tandem",
     "District": "Hellersdorf",
     "Schedule": "Flexible",
     "Languages needed": "German",
-    "VO information": "Residents who want to improve their German can also teach other people their language. E.g. if someone wants to learn Farsi they can do a Sprachtandem with a resident one on one and help each other. \nThe languages of the residents are Farsi, Arabic, Turkish, Russian and French."
+    "VO information": "Residents of the refugee accommodation centre want to improve their German and can also teach other people their language. E.g. if someone wants to learn Farsi they can do a language tandem with a resident one on one and help each other. \nThe languages of the residents are Farsi, Arabic, Turkish, Russian and French."
   },
   {
     "Status": "Volunteers Needed",
-    "Name": "Clothing sorting",
+    "Name": "Support a clothing bank in Hellersdorf",
     "Type": "Clothing Sorting",
     "District": "Hellersdorf",
     "Schedule": "9-17, Flexible, Wednesday",
     "Languages needed": "English, German",
-    "VO information": "There is a clothing bank in the RAC and two of the residents (young men) volunteer there. They would like to get some support from other volunteers.\nThe schedule can be discussed with the volunteer coordinator.\nThey also need volunteers who can help with asking for donations of winter clothes and collecting them."
+    "VO information": "There is a clothing bank in the refugee accommodation centre and two of the residents volunteer there. They would like to get some support from other volunteers.\nThe schedule can be discussed with the volunteer coordinator.\nThey also need volunteers who can help with looking for donations of winter clothes and collecting them."
   },
   {
     "Status": "Volunteers Needed",
-    "Name": "Lead a German language café - Help residents with homework",
+    "Name": "Lead a German language café - Help residents with homework in Hellersdorf",
     "Type": "Language café, Tutoring",
     "District": "Hellersdorf",
     "Schedule": "10-12, Flexible, Monday, Thursday",
     "Languages needed": "German",
-    "VO information": "Some of the residents of this RAC already attend a German course and need support with their homework/grammar etc. The schedule is flexible and can be changed according to the availability of the volunteer. \nIt is not a classical language cafe and rather tutoring for adults."
+    "VO information": "Some of the residents of the refugee accommodation centre already attend a German course and need support with their homework, grammar, etc. The schedule is flexible and can be changed according to your availability.\nIt is not a classical language cafe. rather tutoring for adults."
   },
   {
     "Status": "Volunteers Needed",
-    "Name": "Clothing Sorting - Clothing Bank",
+    "Name": "Support a clothing bank in Pankow",
     "Type": "Clothing Sorting",
     "District": "Pankow",
     "Schedule": "11-18, Friday, Monday, Thursday, Tuesday, Wednesday",
@@ -37,21 +55,21 @@
   },
   {
     "Status": "Volunteers Needed",
-    "Name": "Support with daycare",
+    "Name": "Support with daycare in Tempelhof",
     "Type": "Daycare",
     "District": "Tempelhof",
     "Schedule": "12:30-16:30, Friday, Monday, Thursday, Tuesday, Wednesday",
     "Languages needed": "",
-    "VO information": "Any time within this timeframe.\nThere is currently only one person doing daycare and two volunteers, so they need support.\nThey would be happy to get volunteers who can come regularly and organise creative activities for the kids."
+    "VO information": "Support the daycare staff with organising games and activities for chidlren.\nThey would be happy to get volunteers who can come regularly and organise creative activities for the kids between 12:30 and 16:30. "
   },
   {
     "Status": "Volunteers Needed",
-    "Name": "Reading books for kids",
+    "Name": "Read books for kids in Renickendorf",
     "Type": "Reading books for kids",
     "District": "Reinickendorf",
     "Schedule": "9-17, Flexible, Friday, Monday, Thursday, Tuesday, Wednesday",
     "Languages needed": "German",
-    "VO information": "There is a small library in the RAC with books in different languages. They need volunteers who can read the books for or with the children."
+    "VO information": "There is a small library in the refugee accommodation centre with books in different languages. They need volunteers who enjoy reading books for or with the children.\nThe schedule is flexible and can be discussed individually."
   },
   {
     "Status": "Volunteers Needed",
@@ -60,11 +78,11 @@
     "District": "Neukölln",
     "Schedule": "9-17, Flexible, Friday, Monday, Thursday, Tuesday, Wednesday",
     "Languages needed": "Arabic, Dari, Farsi, German, Turkish",
-    "VO information": "Every resident of the RAC is welcome to join it. The idea for it is to give the residents a safe space to practice German and learn useful words ans phrases. \nIt should be very accessible.\nIt does not exist there so volunteers should be also able to set it up and run it."
+    "VO information": "Every resident of the refugee accommodation centre is welcome to join language café. The idea for it is to give the residents a safe space to practice German and learn useful words ans phrases. \nIt should be very accessible.\nIt does not exist there so volunteers should be also able to set it up and run it."
   },
   {
     "Status": "Volunteers Needed",
-    "Name": "Organise and lead a Männer*café ",
+    "Name": "Organise and lead a Männer*café  in Neukölln",
     "Type": "Excursions, Mentorship",
     "District": "Neukölln",
     "Schedule": "9-17, Flexible, Friday, Monday, Thursday, Tuesday, Wednesday",
@@ -73,12 +91,12 @@
   },
   {
     "Status": "Volunteers Needed",
-    "Name": "Support women get to know the neighbourhood and Berlin",
+    "Name": "Support women get to know their neighbourhood in Britz and Berlin in general",
     "Type": "Excursions, Mentorship",
     "District": "Neukölln",
     "Schedule": "Flexible",
     "Languages needed": "Arabic, English, German, Persian, Turkish",
-    "VO information": "There is a women’s group in the RAC (Frauencafe), and the women would like to go out and learn more about Berlin. Volunteers can take them to museums, walk around the neighbourhood or do other fun things. Museums and galleries sometimes provide free tickets for refugees."
+    "VO information": "Members of a women’s group in the refugee accommodation centre (Frauencafe) would like to go out and learn more about Berlin. Volunteers can take them to museums, walk around the neighbourhood or do other fun things. Museums and galleries sometimes provide free tickets for refugees."
   },
   {
     "Status": "Volunteers Needed",
@@ -87,7 +105,7 @@
     "District": "Lichtenberg",
     "Schedule": "11-13, Wednesday",
     "Languages needed": "Any, English, German",
-    "VO information": "Unser Kleiderkammer braucht Verstärkung.Vielleicht hast gerade Jemand,der sich im Bereich engagieren möchte. Es geht um aussortieren Kleidungstücke von Spende und an die Bewohnenden zur Verfügung stellen .Momentan haben wir nur eine nette Dame,die uns hilft. Es wäre super,wir jemand zusätzlich finden.Die Kleiderkammer ist Mittwochs von 11:00 bis 13:00 geöffnet .Die Person kann auch gerne mehr als zwei Stunden bleiben:)."
+    "VO information": "The clothing bank needs help and someone who would like to get involved. At the moment they only have one volunteer who helps them. It is open on Wednesdays from 11:00 to 13:00 and the volunteers are welcome stay for around two hours or more."
   },
   {
     "Status": "Volunteers Needed",
@@ -96,7 +114,7 @@
     "District": "Lichtenberg",
     "Schedule": "14-18, September 24th",
     "Languages needed": "English, German",
-    "VO information": "Am 24.09 machen wir ein Sommerfest hier in unserer Unterkunft. Daher bin ich auch der Suche nach helfende Hände an dem Tag von 14:00-18:00 für zum Beispiel: Auf und Abbau Tische/ Stühle, Kinderschminken, Hüpburg, Getränke und Popkorn Ausgabe, Tombola, etc…"
+    "VO information": "On 24.09 there is a summer party in the refugee accommodation centre. Therefore they are looking for helping hands on that day from 14:00-18:00 for e.g: Setting up and taking down tables/chairs, face painting, bouncy castle, serving drinks and popcorn, tombola, etc."
   },
   {
     "Status": "Volunteers Needed",
@@ -202,7 +220,7 @@
     "Name": "Support with accompanying kids around in the neighborhood in Zehlendorf",
     "Type": "Accompanying",
     "District": "Zehlendorf",
-    "Schedule": "",
+    "Schedule": "Flexible",
     "Languages needed": "German",
     "VO information": "Accompany children around the neighbourhood to different activities, e.g. football etc."
   },
@@ -590,6 +608,15 @@
     "Type": "Sports",
     "District": "Marzahn",
     "Schedule": "Friday, Monday, Thursday, Tuesday, Wednesday",
+    "Languages needed": "",
+    "VO information": ""
+  },
+  {
+    "Status": "No Volunteers Needed",
+    "Name": "",
+    "Type": "",
+    "District": "",
+    "Schedule": "",
     "Languages needed": "",
     "VO information": ""
   },

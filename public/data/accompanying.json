@@ -3,7 +3,7 @@
     "Name": "Translation at Charite for a child",
     "Address": "Mittelallee 9, 13353 Berlin\nHochschulambulanz WPNC-AMB Pädiatrische Neurochirurg-Ambulanz\nUG, Campus Virchow Klinikum",
     "Appointment Type": "Doctor's",
-    "Date": "June 25, 2024 3:00 PM (GMT+3)",
+    "Date": "June 25, 2024 2:00 PM (GMT+2)",
     "District (Appointment)": "Mitte",
     "Languages": "Russian, German",
     "Status": "Done"
@@ -12,7 +12,7 @@
     "Name": "Translate at Sozialmedizinisches Institut Berlin",
     "Address": "Wilhelmsaue 132, 10715 Berlin\nSozialmedizinisches Institut Berlin",
     "Appointment Type": "Doctor's",
-    "Date": "June 26, 2024 12:00 PM (GMT+3)",
+    "Date": "June 26, 2024 11:00 AM (GMT+2)",
     "District (Appointment)": "Charlottenburg-Wilmersdorf",
     "Languages": "Russian, German",
     "Status": "Matched but not needed (RAC is at fault)"
@@ -21,7 +21,7 @@
     "Name": "Translation for a doctor’s appointment at the Charité",
     "Address": "Mittelallee 8, 13353 Virchow Klinikum der Chaité",
     "Appointment Type": "Doctor's",
-    "Date": "June 28, 2024 11:00 AM (GMT+3)",
+    "Date": "June 28, 2024 10:00 AM (GMT+2)",
     "District (Appointment)": "Mitte",
     "Languages": "Dari, German",
     "Status": "Cancelled by us"
@@ -29,8 +29,8 @@
   {
     "Name": "Sprachmittlung beim Erstgespräch mit Psychologin",
     "Address": "",
-    "Appointment Type": "",
-    "Date": "July 1, 2024 11:00 AM (GMT+3)",
+    "Appointment Type": "Doctor's",
+    "Date": "July 1, 2024 10:00 AM (GMT+2)",
     "District (Appointment)": "Mitte",
     "Languages": "Turkish, English, German",
     "Status": "Done"
@@ -39,7 +39,7 @@
     "Name": "Accompanying to an appointment from Marzahn to Kreuzberg",
     "Address": "Paul-Lincke-Ufer 41, 10999 Berlin- Dr. Bamdad Sarwghad",
     "Appointment Type": "Supporting with getting to the appointment",
-    "Date": "July 2, 2024 11:00 AM (GMT+3)",
+    "Date": "July 2, 2024 10:00 AM (GMT+2)",
     "District (Appointment)": "Friedrichshain-Kreuzberg",
     "Languages": "Dari, English, German",
     "Status": "Cancelled by RAC"
@@ -48,7 +48,7 @@
     "Name": "Sprachmittlung bei der Charité ",
     "Address": "Einsatzadresse: Luisenstraße 64/65, 10117 Berlin Interne Adresse/ Fachgebiet: Bettenhaus, Brustzentrum, 2 Etage Treffpunkt: Am Empfang der Station des Brustzentrums",
     "Appointment Type": "Doctor's",
-    "Date": "July 2, 2024 1:30 PM (GMT+3)",
+    "Date": "July 2, 2024 12:30 PM (GMT+2)",
     "District (Appointment)": "Mitte",
     "Languages": "Armenian, Russian, German",
     "Status": "Matched but not needed (RAC is at fault)"
@@ -57,7 +57,7 @@
     "Name": "Sprachmittlung beim Termin im Gesundheitsamt für die schulärztliche Untersuchung",
     "Address": "Bezirksamt Neukölln von Berlin\nKarl-Marx-Straße 83, 12040 Berlin ",
     "Appointment Type": "Doctor's",
-    "Date": "July 2, 2024 3:00 PM (GMT+3)",
+    "Date": "July 2, 2024 2:00 PM (GMT+2)",
     "District (Appointment)": "Neukölln",
     "Languages": "Russian, German",
     "Status": "Matched but not needed (RAC is at fault)"
@@ -66,7 +66,7 @@
     "Name": "Accompanying to an appointment from Marzahn to Reinickendorf",
     "Address": "Oranienburger Str. 86 13437 Berlin (Reinickendorf) - Dr.Aminalai",
     "Appointment Type": "Supporting with getting to the appointment",
-    "Date": "July 3, 2024 10:00 AM (GMT+3)",
+    "Date": "July 3, 2024 9:00 AM (GMT+2)",
     "District (Appointment)": "Reinickendorf",
     "Languages": "Dari, English, German",
     "Status": "Cancelled by us"
@@ -75,7 +75,7 @@
     "Name": "Sprachmittlung beim Hals-Nasen-Ohren-Arzt",
     "Address": "Mehrower Allee 22, 12687 Berlin",
     "Appointment Type": "Doctor's",
-    "Date": "July 3, 2024 3:00 PM (GMT+3)",
+    "Date": "July 3, 2024 2:00 PM (GMT+2)",
     "District (Appointment)": "Marzahn-Hellersdorf",
     "Languages": "Turkish, English",
     "Status": "Done"
@@ -84,7 +84,7 @@
     "Name": "Support by translating during an elementary school appointment",
     "Address": "Alberichstraße 24, 12683 Berlin , vor der Klasse H203",
     "Appointment Type": "School",
-    "Date": "July 4, 2024 12:00 PM (GMT+3)",
+    "Date": "July 4, 2024 11:00 AM (GMT+2)",
     "District (Appointment)": "Marzahn-Hellersdorf",
     "Languages": "Dari, Farsi, German",
     "Status": "Cancelled by RAC"
@@ -93,7 +93,7 @@
     "Name": "Sprachmittlung Russisch beim Kardiologen",
     "Address": "Wisbyer Straße 16/17, 10439 Berlin (Kardiologie bei Dr. Ahmad Mosen)",
     "Appointment Type": "Doctor's",
-    "Date": "July 5, 2024 11:00 AM (GMT+3)",
+    "Date": "July 5, 2024 10:00 AM (GMT+2)",
     "District (Appointment)": "Pankow",
     "Languages": "Russian, German",
     "Status": "Cancelled by us"
@@ -102,7 +102,7 @@
     "Name": "Accompanying to a doctor’s appointment",
     "Address": "Königsberger Straße 46, 12207",
     "Appointment Type": "Doctor's",
-    "Date": "July 8, 2024 1:30 PM (GMT+3)",
+    "Date": "July 8, 2024 12:30 PM (GMT+2)",
     "District (Appointment)": "Steglitz-Zehlendorf",
     "Languages": "Russian, German",
     "Status": "Cancelled by us"
@@ -111,7 +111,7 @@
     "Name": "Showing the way to an appointment",
     "Address": "Neurologische Praxis Schlüterstr. 38, 10629 Berlin",
     "Appointment Type": "Supporting with getting to the appointment",
-    "Date": "July 9, 2024 2:30 PM (GMT+3)",
+    "Date": "July 9, 2024 1:30 PM (GMT+2)",
     "District (Appointment)": "Charlottenburg-Wilmersdorf",
     "Languages": "Arabic, English, German",
     "Status": "Done"
@@ -120,7 +120,7 @@
     "Name": "Showing the way to the appointment",
     "Address": "Herr Dr. med. Alireza Aminalai\nhttps://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=/maps/place//data%3D!4m2!3m1!1s0x47a853780c65bc11:0x4d313dd4cef22c63%3Fsa%3DX%26ved%3D1t:8290%26ictx%3D111&ved=2ahUKEwjT_MaEzpeHAxXYhf0HHRX1CKYQ4kB6BAgbEAM&usg=AOvVaw1yIn95XYb2fUTJN48su2n4",
     "Appointment Type": "Supporting with getting to the appointment",
-    "Date": "July 10, 2024 9:00 AM (GMT+3)",
+    "Date": "July 10, 2024 8:00 AM (GMT+2)",
     "District (Appointment)": "Reinickendorf",
     "Languages": "Dari, ",
     "Status": "Done"
@@ -129,7 +129,7 @@
     "Name": "Sprachmittlung bei Klinikum Berlin-Buch für ein Kind",
     "Address": "Schwanebecker Chaussee 50, 13125 Berlin\nTumor-Orthopädische Sprechstunde B1-E",
     "Appointment Type": "Doctor's",
-    "Date": "July 10, 2024 9:00 AM (GMT+3)",
+    "Date": "July 10, 2024 8:00 AM (GMT+2)",
     "District (Appointment)": "Pankow",
     "Languages": "Russian, Ukrainian, German",
     "Status": "Cancelled by us"
@@ -138,7 +138,7 @@
     "Name": "Accompanying to Jobcenter Tempelhof-Schöneberg",
     "Address": "Wolframstraße 89 - 92, 12105 Berlin",
     "Appointment Type": "Jobcenter",
-    "Date": "July 11, 2024 10:15 AM (GMT+3)",
+    "Date": "July 11, 2024 9:15 AM (GMT+2)",
     "District (Appointment)": "Tempelhof-Schöneberg",
     "Languages": "Russian, German",
     "Status": "Done"
@@ -147,7 +147,7 @@
     "Name": "Showing the way to an appointment",
     "Address": "open-med-Ambulanz Teltower Damm 8, 14169 Berlin",
     "Appointment Type": "Supporting with getting to the appointment",
-    "Date": "July 11, 2024 2:00 PM (GMT+3)",
+    "Date": "July 11, 2024 1:00 PM (GMT+2)",
     "District (Appointment)": "Steglitz-Zehlendorf",
     "Languages": "Arabic, ",
     "Status": "Done"
@@ -165,7 +165,7 @@
     "Name": "Sprachmittlung beim Artztermin",
     "Address": "Leberzentrum, Bergmannstr. 5, 10961 Berlin",
     "Appointment Type": "Doctor's",
-    "Date": "July 15, 2024 12:20 PM (GMT+3)",
+    "Date": "July 15, 2024 11:20 AM (GMT+2)",
     "District (Appointment)": "Friedrichshain-Kreuzberg",
     "Languages": "Russian, Ukrainian, German",
     "Status": "Cancelled by us"
@@ -174,7 +174,7 @@
     "Name": "Accompanying to a doctor’s appointment ",
     "Address": "ringbahnstraße 76-80,12103 Berlin",
     "Appointment Type": "Doctor's",
-    "Date": "July 15, 2024 1:00 PM (GMT+3)",
+    "Date": "July 15, 2024 12:00 PM (GMT+2)",
     "District (Appointment)": "Tempelhof-Schöneberg",
     "Languages": "Russian, Ukrainian, German",
     "Status": "Done"
@@ -183,16 +183,16 @@
     "Name": "Translation at a doctor’s (infectology)",
     "Address": "Schloßstraße 88, 12163, Infektiologisches Zentrum Stegliz, Dr. Weinberg",
     "Appointment Type": "Doctor's",
-    "Date": "July 16, 2024 5:30 PM (GMT+3)",
+    "Date": "July 16, 2024 4:30 PM (GMT+2)",
     "District (Appointment)": "Steglitz-Zehlendorf",
     "Languages": "Russian, English",
-    "Status": "Volunteer connected"
+    "Status": "Done"
   },
   {
     "Name": "Accompanying to Vivantes Humboldt Klinikum",
     "Address": "Am Nordgraben 2, 13509 Berlin",
     "Appointment Type": "Doctor's",
-    "Date": "July 17, 2024 11:20 AM (GMT+3)",
+    "Date": "July 17, 2024 10:20 AM (GMT+2)",
     "District (Appointment)": "Reinickendorf",
     "Languages": "Dari, German",
     "Status": "Done"
@@ -201,7 +201,7 @@
     "Name": "Begleitung zum Jobcenter Mitte",
     "Address": "Lehrter Str. 46, 10557 Berlin",
     "Appointment Type": "Jobcenter",
-    "Date": "July 18, 2024 10:30 AM (GMT+3)",
+    "Date": "July 18, 2024 9:30 AM (GMT+2)",
     "District (Appointment)": "Mitte",
     "Languages": "Farsi, German",
     "Status": "Cancelled by RAC"
@@ -210,7 +210,7 @@
     "Name": "Accompanying a pregnant woman to the Charite",
     "Address": "Augustenburgerplatz 1, 13353 Berlin; Charite Virchow, Klinik für Geburtsmedizin, Schwangerenbetreuung, Diabetessprechstunde",
     "Appointment Type": "Doctor's",
-    "Date": "July 24, 2024 2:30 PM (GMT+3)",
+    "Date": "July 24, 2024 1:30 PM (GMT+2)",
     "District (Appointment)": "Mitte",
     "Languages": "Dari, Farsi, English, German",
     "Status": "Done"
@@ -219,7 +219,7 @@
     "Name": "Translation for a doctor’s appointment",
     "Address": "Nazarethkirchstraße 52, 13347 Berlin\nDiabetologie",
     "Appointment Type": "Doctor's",
-    "Date": "July 25, 2024 12:00 PM (GMT+3)",
+    "Date": "July 25, 2024 11:00 AM (GMT+2)",
     "District (Appointment)": "Mitte",
     "Languages": "Russian, English, German",
     "Status": "Done"
@@ -228,7 +228,7 @@
     "Name": "Accompanying to the Vivantes",
     "Address": "Dieffenbachstraße 1, 10967 Berlin",
     "Appointment Type": "Doctor's",
-    "Date": "July 26, 2024 10:00 AM (GMT+3)",
+    "Date": "July 26, 2024 9:00 AM (GMT+2)",
     "District (Appointment)": "Friedrichshain-Kreuzberg",
     "Languages": "Dari, Farsi, English, German",
     "Status": "Done"
@@ -237,7 +237,7 @@
     "Name": "Translate for a pregnant woman in Vivantes",
     "Address": "Rudower Str. 48, 12351 Berlin",
     "Appointment Type": "Doctor's",
-    "Date": "July 26, 2024 3:30 PM (GMT+3)",
+    "Date": "July 26, 2024 2:30 PM (GMT+2)",
     "District (Appointment)": "Neukölln",
     "Languages": "Dari, Farsi, English, German",
     "Status": "Done"
@@ -246,7 +246,7 @@
     "Name": "Translate at an eye doctor",
     "Address": "Glienicker Straße 6B, 13467 Berlin",
     "Appointment Type": "Doctor's",
-    "Date": "August 1, 2024 4:20 PM (GMT+3)",
+    "Date": "August 1, 2024 3:20 PM (GMT+2)",
     "District (Appointment)": "Reinickendorf",
     "Languages": "Russian, English, German",
     "Status": "Cancelled by RAC"
@@ -255,7 +255,7 @@
     "Name": "Accompany to a psychologist’s appointment",
     "Address": "Vorbergstr. 9, 10823 Berlin\nam Europa-Center\nPsychologie, Psychotherapie\nLiliana Chandia Fuentealba, 030/83193768",
     "Appointment Type": "Doctor's",
-    "Date": "August 2, 2024 1:00 PM (GMT+3)",
+    "Date": "August 2, 2024 12:00 PM (GMT+2)",
     "District (Appointment)": "Tempelhof-Schöneberg",
     "Languages": "Arabic, German",
     "Status": "Done"
@@ -264,7 +264,7 @@
     "Name": "Sprachmittlung für einen ärztlichen Termin (Sonographie/Ultraschall)",
     "Address": "Dr. Med. Ali Abboud, Karl-Marx-Str. 112, 12043 Berlin",
     "Appointment Type": "Doctor's",
-    "Date": "August 8, 2024 10:30 AM (GMT+3)",
+    "Date": "August 8, 2024 9:30 AM (GMT+2)",
     "District (Appointment)": "Neukölln",
     "Languages": "Georgian, Russian, German",
     "Status": "Cancelled by us"
@@ -273,7 +273,7 @@
     "Name": "Sprachmittlung beim Sozialamt Friedrichshain-Kreuzberg",
     "Address": "Frankfurter Allee 35/37, 10247 Berlin\nBezirksamt Friedrichshain-Kreuzberg von Berlin, Abt. Jugend, Familie und Gesundheit, Jugendamt – Beistandschaften\nAufgang C (hinten rechts, hinter Edeka), 1. Etage, Zimmer: 1514",
     "Appointment Type": "Sozialamt",
-    "Date": "August 8, 2024 12:00 PM (GMT+3)",
+    "Date": "August 8, 2024 11:00 AM (GMT+2)",
     "District (Appointment)": "Friedrichshain-Kreuzberg",
     "Languages": "Russian, German",
     "Status": "Done"
@@ -282,7 +282,7 @@
     "Name": "Accompanying to a doctor’s appointment in Zehlendorf",
     "Address": "Teltower Damm 23, 14169 Berlin",
     "Appointment Type": "Doctor's",
-    "Date": "August 8, 2024 1:00 PM (GMT+3)",
+    "Date": "August 8, 2024 12:00 PM (GMT+2)",
     "District (Appointment)": "Steglitz-Zehlendorf",
     "Languages": "English, Somali, German",
     "Status": "Matched but not needed (our fault)"
@@ -291,7 +291,7 @@
     "Name": "Accompany to a psychologist’s appointment",
     "Address": "Vorbergstr. 9, 10823 Berlin\nam Europa-Center\nPsychologie, Psychotherapie\nLiliana Chandia Fuentealba, 030/83193768",
     "Appointment Type": "Doctor's",
-    "Date": "August 8, 2024 5:00 PM (GMT+3)",
+    "Date": "August 8, 2024 4:00 PM (GMT+2)",
     "District (Appointment)": "Tempelhof-Schöneberg",
     "Languages": "Arabic, German",
     "Status": "Done"
@@ -300,7 +300,7 @@
     "Name": "Begleitung zum LEA Berlin",
     "Address": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x47a85182ca5cd4bf:0x602506ce1a5774ec?sa=X&ved=1t:8290&ictx=111",
     "Appointment Type": "LEA",
-    "Date": "August 12, 2024 10:30 AM (GMT+3)",
+    "Date": "August 12, 2024 9:30 AM (GMT+2)",
     "District (Appointment)": "Mitte",
     "Languages": "Russian, Ukrainian, German",
     "Status": "Done"
@@ -309,7 +309,7 @@
     "Name": "Sprachmittlung beim Augenarzt",
     "Address": "Hermannstr. 147,12051 Berlin bei Dr. Elif Nuhoglu",
     "Appointment Type": "Doctor's",
-    "Date": "August 12, 2024 12:00 PM (GMT+3)",
+    "Date": "August 12, 2024 11:00 AM (GMT+2)",
     "District (Appointment)": "Neukölln",
     "Languages": "Arabic, German",
     "Status": "Done"
@@ -318,7 +318,7 @@
     "Name": "Sprachmittlung und Begleitung zur Krippe",
     "Address": "Lobeckstraße 11, 10969 Berlin",
     "Appointment Type": "Kita",
-    "Date": "August 14, 2024 3:00 PM (GMT+3)",
+    "Date": "August 14, 2024 2:00 PM (GMT+2)",
     "District (Appointment)": "Friedrichshain-Kreuzberg",
     "Languages": "Russian, Turkish, German",
     "Status": "Done"
@@ -327,7 +327,7 @@
     "Name": "Translate and support with opening a bank account",
     "Address": "Stendaler Str. 21, 12627 Berlin",
     "Appointment Type": "Bank account",
-    "Date": "August 15, 2024 12:30 PM (GMT+3)",
+    "Date": "August 15, 2024 11:30 AM (GMT+2)",
     "District (Appointment)": "Marzahn-Hellersdorf",
     "Languages": "Arabic, German",
     "Status": "Cancelled by us"
@@ -336,7 +336,7 @@
     "Name": "Sprachmittlung und Begleitung zur Krippe",
     "Address": "Lobeckstraße 11, 10969 Berlin",
     "Appointment Type": "Kita",
-    "Date": "August 15, 2024 4:00 PM (GMT+3)",
+    "Date": "August 15, 2024 3:00 PM (GMT+2)",
     "District (Appointment)": "Friedrichshain-Kreuzberg",
     "Languages": "Russian, Turkish, German",
     "Status": "Done"
@@ -345,7 +345,7 @@
     "Name": "Accompany to a psychologist’s appointment",
     "Address": "Vorbergstr. 9, 10823 Berlin\nam Europa-Center\nPsychologie, Psychotherapie\nLiliana Chandia Fuentealba, 030/83193768",
     "Appointment Type": "Doctor's",
-    "Date": "August 15, 2024 5:00 PM (GMT+3)",
+    "Date": "August 15, 2024 4:00 PM (GMT+2)",
     "District (Appointment)": "Tempelhof-Schöneberg",
     "Languages": "Arabic, German",
     "Status": "Cancelled by refugee"
@@ -354,7 +354,7 @@
     "Name": "Translate at a doctor’s (Charite)",
     "Address": "Luisenstr. 64, 10117 Berlin / Hochschulambulanz mit Brustzentrum / 2. Ebene / Bettenhaus",
     "Appointment Type": "Doctor's",
-    "Date": "August 16, 2024 12:00 PM (GMT+3)",
+    "Date": "August 16, 2024 11:00 AM (GMT+2)",
     "District (Appointment)": "Mitte",
     "Languages": "Dari, Farsi, English, German",
     "Status": "Done"
@@ -363,7 +363,7 @@
     "Name": "Accompanying to Hautklinik Charité Mitte",
     "Address": "Hautklinik Charité Mitte\nhttps://www.google.com/maps/place//data=!4m2!3m1!1s0x47a85194d6a0b899:0x3d78bd48d7ecab39?sa=X&ved=1t:8290&ictx=111",
     "Appointment Type": "Doctor's",
-    "Date": "August 20, 2024 9:15 AM (GMT+3)",
+    "Date": "August 20, 2024 8:15 AM (GMT+2)",
     "District (Appointment)": "Mitte",
     "Languages": "Rumanian, Russian, English, German",
     "Status": "Done"
@@ -372,7 +372,7 @@
     "Name": "Begleitung zu der Charitè Berlin (Augenklinik)",
     "Address": "Hochschulambulanz für Augenheilkunde\nMittelallee 4; Erdgeschoss\nAugustenburger Platz 1 - 13353 Berlin",
     "Appointment Type": "Doctor's",
-    "Date": "August 20, 2024 1:00 PM (GMT+3)",
+    "Date": "August 20, 2024 12:00 PM (GMT+2)",
     "District (Appointment)": "Mitte",
     "Languages": "Dari, Pashto, Turkish, English",
     "Status": "Matched but not needed (RAC is at fault)"
@@ -381,16 +381,16 @@
     "Name": "Sprachmittlung beim Sozialamt Friedrichshain-Kreuzberg ",
     "Address": "Bezirksamt Friedrichshain-Kreuzberg von Berlin, Abt. Jugend, Familie und Gesundheit, Jugendamt – Beistandschaften, \nFrankfurter Allee 35/37, Aufgang C (hinten rechts, hinter Edeka), 1. Etage, Wartebereich 1501-1518",
     "Appointment Type": "Sozialamt",
-    "Date": "August 20, 2024 2:00 PM (GMT+3)",
+    "Date": "August 20, 2024 1:00 PM (GMT+2)",
     "District (Appointment)": "Friedrichshain-Kreuzberg",
     "Languages": "Russian, Ukrainian, German",
-    "Status": "Matched"
+    "Status": "Done"
   },
   {
     "Name": "Sprachmittlung und Begleitung zur Krippe",
     "Address": "Lobeckstraße 11, 10969 Berlin",
     "Appointment Type": "Kita",
-    "Date": "August 20, 2024 3:00 PM (GMT+3)",
+    "Date": "August 20, 2024 2:00 PM (GMT+2)",
     "District (Appointment)": "Friedrichshain-Kreuzberg",
     "Languages": "Russian, Turkish, German",
     "Status": "Cancelled by refugee"
@@ -399,16 +399,16 @@
     "Name": "Accompanying to a doctor’s appointment in Vivantes",
     "Address": "Rubensstraße 125, 12157 Berlin\nVivianes MVZ am Auguste-Viktoria-Klinikum. Praxis für Infektionsmedizin/ Haus 11",
     "Appointment Type": "Doctor's",
-    "Date": "August 21, 2024 12:20 PM (GMT+3)",
+    "Date": "August 21, 2024 11:20 AM (GMT+2)",
     "District (Appointment)": "Tempelhof-Schöneberg",
     "Languages": "Russian, English, German",
-    "Status": "Matched"
+    "Status": "Done"
   },
   {
     "Name": "Begleitung zum Brustzentrum (Charité)",
     "Address": "Campus Charite Mitte , Luisenstr. 6410117 Berlin\nInterne Adresse : Hochschulambulanz mit Brustzentrum / 2.Ebene / Bettenhaus   ",
     "Appointment Type": "Doctor's",
-    "Date": "August 23, 2024 9:00 AM (GMT+3)",
+    "Date": "August 23, 2024 8:00 AM (GMT+2)",
     "District (Appointment)": "Mitte",
     "Languages": "Dari, Farsi, English, German",
     "Status": "Cancelled by us"
@@ -417,37 +417,37 @@
     "Name": "Translation for a workshop for women",
     "Address": "Kurt-Schumacher-Damm 202, 13405 Berlin",
     "Appointment Type": "Workshop",
-    "Date": "August 23, 2024 12:00 PM (GMT+3)",
+    "Date": "August 23, 2024 11:00 AM (GMT+2)",
     "District (Appointment)": "Reinickendorf",
     "Languages": "Arabic, Farsi, Russian, Turkish, English, German",
-    "Status": "Matched"
+    "Status": "Cancelled by RAC"
   },
   {
     "Name": "Accompanying to physiotherapy",
     "Address": "Physiotherapie Marsch Berlin-Mitte GmbH Habersaathstrasse 37 · 10115 Berlin",
     "Appointment Type": "Doctor's",
-    "Date": "August 27, 2024 10:50 AM (GMT+3)",
+    "Date": "August 27, 2024 9:50 AM (GMT+2)",
     "District (Appointment)": "Mitte",
     "Languages": "Armenian, Russian, German",
-    "Status": "In progress"
+    "Status": "Done"
   },
   {
     "Name": "Begleitung zum Kinderarzt",
     "Address": "Dr. A. van der Brock, Dr. R. Bartezky, Kottbusser Damm 64, 10967 Berlin\nTermin für das Kind Kirill Fedorchenko",
     "Appointment Type": "Doctor's",
-    "Date": "August 27, 2024 11:45 AM (GMT+3)",
+    "Date": "August 27, 2024 10:45 AM (GMT+2)",
     "District (Appointment)": "Friedrichshain-Kreuzberg",
     "Languages": "Russian, Ukrainian, German",
-    "Status": "Matched"
+    "Status": "Done"
   },
   {
     "Name": "Accompanying to CT",
     "Address": "Praxis MVZ blikk Radiologie am Europa-Center Nürnberger Str. 67, 10787 Berlin",
     "Appointment Type": "Doctor's",
-    "Date": "August 27, 2024 2:15 PM (GMT+3)",
+    "Date": "August 27, 2024 1:15 PM (GMT+2)",
     "District (Appointment)": "Mitte",
     "Languages": "Russian, Turkish, German",
-    "Status": "Matched"
+    "Status": "Done"
   },
   {
     "Name": "Accompanying to a bank to open a bank account",
@@ -456,31 +456,31 @@
     "Date": "August 28, 2024",
     "District (Appointment)": "Marzahn-Hellersdorf",
     "Languages": "French, German",
-    "Status": "In progress"
+    "Status": "Matched"
   },
   {
     "Name": "Begleitung zum LAF (Landesamt für Flüchtlingsangelegenheiten) ",
     "Address": "Darwinstraße 14-18, 10589 Berlin",
     "Appointment Type": "LAF",
-    "Date": "August 28, 2024 9:00 AM (GMT+3)",
+    "Date": "August 28, 2024 8:00 AM (GMT+2)",
     "District (Appointment)": "Mitte",
     "Languages": "Turkish, German",
-    "Status": "In progress"
+    "Status": "Cancelled by us"
   },
   {
     "Name": "Begletung zur Agentur für Arbeit",
     "Address": " Agentur für Arbeit Pankow, Storkower Str. 120, 10407Berlin Raum 120a.",
     "Appointment Type": "Jobcenter",
-    "Date": "August 28, 2024 12:15 PM (GMT+3)",
+    "Date": "August 28, 2024 11:15 AM (GMT+2)",
     "District (Appointment)": "Pankow",
     "Languages": "Kurdish, Turkish, German",
-    "Status": "In progress"
+    "Status": "Cancelled by us"
   },
   {
     "Name": "Begleitung zum Arzt",
     "Address": "Doz. Dr. med. Olaf Schulz. Innere Medizin. Markt 5. 13597 Berlin",
     "Appointment Type": "Doctor's",
-    "Date": "August 29, 2024 11:00 AM (GMT+3)",
+    "Date": "August 29, 2024 10:00 AM (GMT+2)",
     "District (Appointment)": "Spandau",
     "Languages": "Rumanian, Russian, English, German",
     "Status": "Matched"
@@ -489,7 +489,7 @@
     "Name": "Begleitung zur ärztlichen Schuluntersuchung",
     "Address": "Teichstr.65 - Haus4 - 2.  Etage - Zimmer 228, 13407 Berlin",
     "Appointment Type": "Doctor's",
-    "Date": "August 29, 2024 12:00 PM (GMT+3)",
+    "Date": "August 29, 2024 11:00 AM (GMT+2)",
     "District (Appointment)": "Reinickendorf",
     "Languages": "Dari, Farsi, German",
     "Status": "Cancelled by RAC"
@@ -498,34 +498,79 @@
     "Name": "Begleitung zum Krankenhaus",
     "Address": "Fanningerstraße 32, 10365 Berlin\nEltern/Kind Zentrum Kreisambulanz",
     "Appointment Type": "Doctor's",
-    "Date": "September 2, 2024 2:30 PM (GMT+3)",
+    "Date": "September 2, 2024 1:30 PM (GMT+2)",
     "District (Appointment)": "Lichtenberg",
-    "Languages": "Turkish, German",
+    "Languages": "Turkish, English, German",
+    "Status": "Matched"
+  },
+  {
+    "Name": "Accompanying to an eye doctor",
+    "Address": "Albrechtstraße 99, 12167 Berlin",
+    "Appointment Type": "Doctor's",
+    "Date": "September 6, 2024 9:20 AM (GMT+2)",
+    "District (Appointment)": "Steglitz-Zehlendorf",
+    "Languages": "Armenian, Russian, English, German",
+    "Status": "Cancelled by RAC"
+  },
+  {
+    "Name": "Accompanying to physiotherapy",
+    "Address": "Physiotherapie Marsch Berlin-Mitte GmbH Habersaathstrasse 37 · 10115 Berlin",
+    "Appointment Type": "Doctor's",
+    "Date": "September 10, 2024 1:20 PM (GMT+2)",
+    "District (Appointment)": "Mitte",
+    "Languages": "Armenian, Russian, German",
+    "Status": "Matched"
+  },
+  {
+    "Name": "Begleitung zum Landesamt für Einwanderung",
+    "Address": "Friedrich-Krause-Ufer 24, 13353 Berlin",
+    "Appointment Type": "LEA",
+    "Date": "September 11, 2024 10:30 AM (GMT+2)",
+    "District (Appointment)": "Mitte",
+    "Languages": "Dari, Farsi, German",
+    "Status": "In progress"
+  },
+  {
+    "Name": "Begletung zur schulärztlichen Untersuchung",
+    "Address": "Teichstr. 65, 13407 Berlin (Haus 4, 2. Etage)",
+    "Appointment Type": "Doctor's",
+    "Date": "September 16, 2024 10:00 AM (GMT+2)",
+    "District (Appointment)": "Reinickendorf",
+    "Languages": "Dari, Farsi, German",
     "Status": "Not started"
   },
   {
     "Name": "Accompanying to physiotherapy",
     "Address": "Physiotherapie Marsch Berlin-Mitte GmbH Habersaathstrasse 37 · 10115 Berlin",
     "Appointment Type": "Doctor's",
-    "Date": "September 10, 2024 2:20 PM (GMT+3)",
+    "Date": "September 16, 2024 1:10 PM (GMT+2)",
     "District (Appointment)": "Mitte",
     "Languages": "Armenian, Russian, German",
+    "Status": "In progress"
+  },
+  {
+    "Name": "Begleitung zur HNO-Klinik der Charite",
+    "Address": "Camous Charite HNO-Klinik in der Luisenstraße 13 Poli2 E1 2591",
+    "Appointment Type": "Doctor's",
+    "Date": "September 19, 2024 9:30 AM (GMT+2)",
+    "District (Appointment)": "Mitte",
+    "Languages": "English, German, Arabic",
     "Status": "Not started"
   },
   {
-    "Name": "Accompanying to physiotherapy",
-    "Address": "Physiotherapie Marsch Berlin-Mitte GmbH Habersaathstrasse 37 · 10115 Berlin",
-    "Appointment Type": "Doctor's",
-    "Date": "September 16, 2024 2:10 PM (GMT+3)",
+    "Name": "Accompany to counseling for men",
+    "Address": "Leipziger Straße 31-33, 10117 Berlin",
+    "Appointment Type": "Counceling",
+    "Date": "September 19, 2024 2:00 PM (GMT+2)",
     "District (Appointment)": "Mitte",
-    "Languages": "Armenian, Russian, German",
+    "Languages": "Italian, English",
     "Status": "Not started"
   },
   {
     "Name": "Begleitung zum Kinderzahnarzt",
     "Address": "Turmstraße 72-73 10551 Berlin, Kidsdocs Zahnärzte für Kinder",
     "Appointment Type": "Doctor's",
-    "Date": "October 9, 2024 9:15 AM (GMT+3)",
+    "Date": "October 9, 2024 8:15 AM (GMT+2)",
     "District (Appointment)": "Mitte",
     "Languages": "Dari, Farsi, German",
     "Status": "Not started"
