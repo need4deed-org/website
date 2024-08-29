@@ -12,7 +12,7 @@ export default function VolunteerWorkflow({ wrappingClassName }: Props) {
 
   return (
     <div className={wrappingClassName}>
-      <div className="volunteer-workflow-img-container">
+      <div className="n4d-container volunteer-workflow-img-container">
         <div className="volunteer-workflow-img-wrapper">
           <img src="/images/volunteer-workflow.jpg" alt="volunteer-workflow" />
         </div>

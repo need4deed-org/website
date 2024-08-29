@@ -13,7 +13,7 @@ export default function IFrame({
 }: Prop) {
   return (
     <div className={wrappingClassName}>
-      <div className="iframe-container">
+      <div className="n4d-container iframe-container">
         {title && <h2>{title}</h2>}
         <iframe src={src} />
       </div>

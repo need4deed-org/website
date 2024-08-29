@@ -12,12 +12,13 @@
   --n4d-tertiary: #0540f2;
   --n4d-tertiary-lighter: #0055b8;
   --n4d-tertiary-darker: #055eaa;
-  --n4d-neutral-light: #fff;
-  --n4d-neutral-dark: #000;
-  --n4d-neutral-darkest: #000;
+  --n4d-neutral-900: #fff;
+  --n4d-neutral-800: #eee;
+  --n4d-neutral-200: #111;
+  --n4d-neutral-100: #000;
 
-  --n4d-title-clr: var(--n4d-neutral-light);
-  --bs-heading-color: var(--n4d-neutral-dark);
+  --n4d-title-clr: var(--n4d-neutral-900);
+  --bs-heading-color: var(--n4d-neutral-200);
 
   --n4d-volunteer-p-f-sz: 1em;
   --n4d-about-p-f-sz: 0.875em;
@@ -75,50 +76,57 @@
 
 .first {
   background-color: var(--n4d-primary);
-  color: var(--n4d-neutral-light);
-  --bs-heading-color: var(--n4d-neutral-light);
+  color: var(--n4d-neutral-900);
+  --bs-heading-color: var(--n4d-neutral-900);
 }
 
 .second {
-  background-color: var(--n4d-neutral-light);
-  color: var(--n4d-neutral-dark);
-  --bs-heading-color: var(--n4d-neutral-dark);
+  background-color: var(--n4d-neutral-900);
+  color: var(--n4d-neutral-200);
+  --bs-heading-color: var(--n4d-neutral-200);
 }
 
 .wrapper {
   padding-block: 1rem;
 }
 
+.n4d-container {
+  padding-top: var(--n4d-gap);
+  margin-inline: auto;
+  width: var(--n4d-w);
+  direction: var(--n4d-lang-direction);
+}
+
 .n4d-primary-btn {
-  --bs-btn-color: var(--n4d-neutral-light);
+  --bs-btn-color: var(--n4d-neutral-900);
   --bs-btn-bg: var(--n4d-primary);
   --bs-btn-border-color: var(--n4d-primary);
-  --bs-btn-hover-color: var(--n4d-neutral-light);
+  --bs-btn-hover-color: var(--n4d-neutral-900);
   --bs-btn-hover-bg: var(--n4d-primary-darker);
   --bs-btn-hover-border-color: var(--n4d-primary-darker);
   --bs-btn-focus-shadow-rgb: 0, 212, 0;
-  --bs-btn-active-color: var(--n4d-neutral-light);
+  --bs-btn-active-color: var(--n4d-neutral-900);
   --bs-btn-active-bg: var(--n4d-primary);
   --bs-btn-active-border-color: var(--n4d-primary);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: var(--n4d-neutral-dark);
+  --bs-btn-disabled-color: var(--n4d-neutral-200);
   --bs-btn-disabled-bg: #f8f9fa;
   --bs-btn-disabled-border-color: #f8f9fa;
 }
 
 .n4d-secondary-btn {
-  --bs-btn-color: var(--n4d-neutral-dark);
+  --bs-btn-color: var(--n4d-neutral-200);
   --bs-btn-bg: var(--n4d-secondary);
   --bs-btn-border-color: var(--n4d-secondary);
-  --bs-btn-hover-color: var(--n4d-neutral-dark);
+  --bs-btn-hover-color: var(--n4d-neutral-200);
   --bs-btn-hover-bg: var(--n4d-primary-darker);
   --bs-btn-hover-border-color: var(--n4d-secondary-darker);
   --bs-btn-focus-shadow-rgb: 0, 212, 0;
-  --bs-btn-active-color: var(--n4d-neutral-dark);
+  --bs-btn-active-color: var(--n4d-neutral-200);
   --bs-btn-active-bg: var(--n4d-secondary);
   --bs-btn-active-border-color: var(--n4d-secondary);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: var(--n4d-neutral-dark);
+  --bs-btn-disabled-color: var(--n4d-neutral-200);
   --bs-btn-disabled-bg: #f8f9fa;
   --bs-btn-disabled-border-color: #f8f9fa;
 }

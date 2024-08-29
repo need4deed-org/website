@@ -7,7 +7,7 @@ const registrationHref =
 export default function Event831() {
   const { t } = useTranslation();
   return (
-    <div className="event-container">
+    <div className="n4d-container event-container">
       <h1>{t("event.header")}</h1>
       <div className="pic-and-text">
         <div className="sommer-fest-pic"></div>

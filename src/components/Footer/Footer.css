@@ -1,6 +1,6 @@
 footer {
   margin-top: var(--n4d-gap);
-  background-color: var(--n4d-neutral-darkest);
+  background-color: var(--n4d-neutral-100);
   padding: 40px 0 60px;
 }
 
@@ -30,7 +30,7 @@ footer {
 }
 
 .footer-column h6 {
-  color: var(--n4d-neutral-light);
+  color: var(--n4d-neutral-900);
   margin-bottom: 10px;
 }
 
@@ -40,7 +40,7 @@ footer {
 }
 
 .footer-column a {
-  color: var(--n4d-neutral-light);
+  color: var(--n4d-neutral-900);
   text-decoration: none;
   display: block;
 }

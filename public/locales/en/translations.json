@@ -11,6 +11,10 @@
     "slogan": "Need based voluntary support for refugees in Berlin",
     "beVolunteerButton": "Become a Volunteer!"
   },
+  "emptyList": {
+    "header": "Opportunities are being updated...",
+    "para": "We are currently updating the volunteering opportunities. This may take a while. We recommend refreshing the page later on today.  If you have any specific question please contact us at volunteer@need4deed.org"
+  },
   "iframeTitles": {
     "calendar": "Calendar",
     "howToVolunteer": "Take action! - volunteer"

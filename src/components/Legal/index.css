@@ -1,9 +1,3 @@
-.legal-container {
-  padding-top: var(--n4d-gap);
-  margin-inline: auto;
-  width: var(--n4d-w);
-}
-
 .legal-container p,
 .legal-container li,
 .legal-container a {

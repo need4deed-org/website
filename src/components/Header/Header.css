@@ -25,13 +25,13 @@
 }
 
 .nav-link-secondary {
-  color: var(--n4d-neutral-dark);
+  color: var(--n4d-neutral-200);
   background: var(--n4d-secondary);
   text-align: center;
 }
 
 .nav-link-secondary:hover {
-  color: var(--n4d-neutral-dark);
+  color: var(--n4d-neutral-200);
   background: var(--n4d-secondary-darker);
 }
 

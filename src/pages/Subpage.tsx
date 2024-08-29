@@ -76,6 +76,7 @@ function Subpage({ type }: Props) {
               languages: "languages",
               time: "schedule",
               location: "district",
+              vo: "vo",
             }}
           />
         );
@@ -85,7 +86,7 @@ function Subpage({ type }: Props) {
             dataFileUrl={urlOpportunitiesAlfred}
             opportunityParams={{
               search: {
-                status: ["Volunteers Needed", "Search in process"],
+                status: ["e2e_test"],
               },
               primaryKeys: ["title", "name", "iso_code"],
             }}
@@ -95,6 +96,7 @@ function Subpage({ type }: Props) {
               languages: "languages",
               time: "timeslots",
               location: "locations",
+              vo: "vo_information",
             }}
           />
         );

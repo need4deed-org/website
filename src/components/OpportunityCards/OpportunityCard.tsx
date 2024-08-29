@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Lang } from "../../types";
 import { getOpportunityImg, isoCodesToNames, isRtlLang } from "../../utils";
+import VOInformation from "./VOInformation";
 
 interface Props {
   opportunity: Record<string, string>;
@@ -23,7 +24,17 @@ export default function Translation({ opportunity, pre = false }: Props) {
     <div className="opportunity-card">
       <img src={srcImg} alt="image" />
       <h5>{opportunity.name}</h5>
-      <p>{opportunity.type}</p>
+      {opportunity.vo ? (
+        <>
+          <VOInformation title={opportunity.vo} />
+          <p>
+            <strong>{opportunity.type}</strong>
+          </p>
+        </>
+      ) : (
+        <p>{opportunity.type}</p>
+      )}
+
       <h6>Languages:</h6>
       <p>
         <strong>{isoCodesToNames(opportunity.languages)}</strong>

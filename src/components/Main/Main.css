@@ -34,7 +34,7 @@
 .main-text-container h5 {
   letter-spacing: 1px;
   padding-top: 10px;
-  color: var(--n4d-neutral-light);
+  color: var(--n4d-neutral-900);
 }
 
 .main-container {
@@ -43,7 +43,7 @@
 
 .volunteer-cta {
   background-color: var(--n4d-secondary);
-  color: var(--n4d-neutral-dark);
+  color: var(--n4d-neutral-200);
   border-color: transparent;
   border-radius: 25px;
   margin: 60px;

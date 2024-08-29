@@ -1,13 +1,9 @@
 .opportunity-container {
   padding-block: 1em;
-  margin-inline: auto;
-  width: var(--n4d-w);
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
-
-  direction: ltr;
 }
 
 .opportunity-container p {
@@ -29,6 +25,7 @@
 }
 
 .opportunity-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 1rem;
@@ -54,6 +51,71 @@
   width: 100%;
   height: 10rem;
   object-fit: cover;
+}
+
+.opportunity-epsilon {
+  padding-inline: 3px;
+  border: solid 1px black;
+  border-radius: 3px;
+}
+
+.opportunity-epsilon:hover {
+  cursor: pointer;
+  background: var(--n4d-neutral-800);
+}
+
+.opportunity-vo-information-tooltip {
+  position: absolute;
+  top: 10rem;
+  left: -1rem;
+  right: -1rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0.05rem 0.08rem 0.4rem 0.03rem;
+  background: var(--n4d-neutral-900);
+  border-radius: 3px;
+}
+
+.opportunity-vo-information-tooltip h1 {
+  font-size: 1.3rem;
+  padding: 0.3rem;
+}
+
+.opportunity-vo-information-tooltip p {
+  padding: 0.3rem;
+}
+
+.opportunity-vo-information-tooltip button {
+  border-radius: 50%;
+  margin-inline: auto 0.3rem;
+  margin-block: 0.3rem;
+  width: 2rem;
+  height: 2rem;
+  background: var(--n4d-neutral-900);
+}
+.opportunity-vo-information-tooltip button:hover {
+  background: var(--n4d-neutral-800);
+}
+
+.opportunity-vo-information {
+  position: relative;
+}
+
+.opportunity-vo-information i[role="tooltip"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding-block-end: 0.3rem;
+  background: var(--n4d-neutral-900);
+  display: none;
+  transition: display 0.3s ease;
+}
+
+.opportunity-vo-information-hover:hover i[role="tooltip"] {
+  display: inline;
+  outline: solid 1px var(--n4d-neutral-800);
+  z-index: 1;
 }
 
 @media (max-width: 992px) {

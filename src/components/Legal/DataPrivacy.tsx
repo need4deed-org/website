@@ -8,7 +8,7 @@ function DataPrivacy() {
   const { t } = useTranslation();
 
   return (
-    <div className="legal-container">
+    <div className="n4d-container legal-container">
       <h2>{t("legal:dataPrivacy.header")}</h2>
       <p>{t("legal:dataPrivacy.intro1")}</p>
       <p>{t("legal:dataPrivacy.intro2")}</p>

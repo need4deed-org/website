@@ -1,8 +1,5 @@
 .volunteer-workflow-img-container {
   position: relative;
-  padding-top: var(--n4d-gap);
-  margin-inline: auto;
-  max-width: var(--n4d-w);
 }
 
 .volunteer-workflow-img-wrapper img {
@@ -14,7 +11,7 @@
   margin-inline: auto;
   margin-block-start: 1.5rem;
   padding: 1rem;
-  color: var(--n4d-neutral-dark);
+  color: var(--n4d-neutral-200);
   background-color: var(--n4d-secondary);
   border-radius: 1.5rem;
 }

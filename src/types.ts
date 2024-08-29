@@ -41,4 +41,5 @@ export type KeyMap = {
   languages: string;
   time: string;
   location: string;
+  vo?: string;
 };

@@ -6,7 +6,7 @@ function LegalNotice() {
   const { t } = useTranslation();
 
   return (
-    <div className="legal-container">
+    <div className="n4d-container legal-container">
       <h2>{t("legal:notice.header")}</h2>
       <p>CLUB DIALOG e.V.</p>
       <p>Lindower Straße 18</p>

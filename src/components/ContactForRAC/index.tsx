@@ -11,7 +11,7 @@ export default function ContactForRAC({ wrappingClassName }: Props) {
   const { t } = useTranslation();
   return (
     <div className={wrappingClassName}>
-      <div className="contact-for-rac-container">
+      <div className="n4d-container contact-for-rac-container">
         <h2>{t("contactForRAC.heading")}</h2>
         <a href={`mailto:${emailForRAC}`}>
           {`${t("contactForRAC.emailUs")}: `}

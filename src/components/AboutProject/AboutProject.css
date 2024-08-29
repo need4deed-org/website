@@ -1,9 +1,3 @@
-.about-project-container {
-  padding-top: var(--n4d-gap);
-  margin-inline: auto;
-  width: var(--n4d-w);
-}
-
 .about-project-container p {
   font-size: var(--n4d-about-p-f-sz);
   line-height: 2;
@@ -12,12 +6,6 @@
 
 .about-project-container h6 {
   margin-top: 1rem;
-}
-
-.about-project-container p,
-.about-project-container h2,
-.about-project-container h6 {
-  direction: var(--n4d-lang-direction);
 }
 
 .about-project-container h2 {

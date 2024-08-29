@@ -10,7 +10,7 @@ function AboutProject({ wrappingClassName }: Prop) {
 
   return (
     <div className={wrappingClassName}>
-      <div id="about-project" className="about-project-container">
+      <div id="about-project" className="n4d-container about-project-container">
         <h2>{t("aboutProject.aboutProjectHeading")}</h2>
         <p>{t("aboutProject.aboutProjectSubheading")}</p>
 
