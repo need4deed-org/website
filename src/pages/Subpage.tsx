@@ -3,14 +3,13 @@ import { useTranslation } from "react-i18next";
 import { useNavigate, useParams } from "react-router-dom";
 
 import { AppContainerContext } from "../App";
-import Event831 from "../components/Event/Event831";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import Agreement from "../components/Legal/Agreement";
 import DataPrivacy from "../components/Legal/DataPrivacy";
 import LegalNotice from "../components/Legal/Notice";
 import OpportunityCards from "../components/OpportunityCards";
-import { Lang, Subpages } from "../types";
+import { Lang, OpportuntyType, Subpages } from "../types";
 import { isEnumValue, setLangDirection } from "../utils";
 
 const urlOpportunitiesAlfred =
@@ -85,9 +84,7 @@ function Subpage({ type }: Props) {
           <OpportunityCards
             dataFileUrl={urlOpportunitiesAlfred}
             opportunityParams={{
-              search: {
-                status: ["e2e_test"],
-              },
+              search: { status: ["Volunteers Needed", "Search in process"] },
               primaryKeys: ["title", "name", "iso_code"],
             }}
             keyMap={{
@@ -100,8 +97,27 @@ function Subpage({ type }: Props) {
             }}
           />
         );
+      case Subpages.ACCOMPANYING_TEST:
+        return (
+          <OpportunityCards
+            type={OpportuntyType.ACCOMPANYING}
+            dataFileUrl={urlOpportunitiesAlfred}
+            opportunityParams={{
+              search: { status: ["Not started"] },
+              primaryKeys: ["title", "name"],
+            }}
+            keyMap={{
+              type: "activities",
+              name: "title",
+              languages: "languages",
+              time: "timeslots",
+              location: "locations",
+              vo: "vo_information",
+            }}
+          />
+        );
       case Subpages.EVENT:
-        return <Event831 />;
+        return <></>;
     }
   };
 

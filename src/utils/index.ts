@@ -1,6 +1,12 @@
 import { MutableRefObject } from "react";
 
-import { Lang } from "../types";
+import {
+  AlfredOpportunity,
+  KeyMap,
+  Lang,
+  Opportunity,
+  OpportunityParams,
+} from "../types";
 
 export function isEnumValue<E>(enumObject: object, value: E) {
   return typeof enumObject === "object"
@@ -27,24 +33,24 @@ export function setLangDirection(
 }
 
 const typeToImg = {
-  Accompanying: "/images/type-accompanying.jpg",
-  Arts: "/images/type-arts.jpg",
-  Assistance: "/images/type-assistance.jpg",
-  "Clean-up": "/images/type-cleanup.jpg",
-  Clothing: "/images/type-cloths.jpg",
-  Consulting: "/images/type-assistance.jpg",
-  Culture: "/images/type-culture.jpg",
-  Daycare: "/images/type-daycare.jpg",
-  Gardening: "/images/type-gardening.jpg",
-  IT: "/images/type-tutoring.jpg",
-  Language: "/images/type-language.jpg",
-  Mentorship: "/images/type-mentorship.jpg",
-  Reading: "/images/type-assistance.jpg",
-  Renovation: "/images/type-renovation.jpg",
-  Translation: "/images/type-language.jpg",
-  Sports: "/images/type-sports.jpg",
-  Tandem: "/images/type-tandem.jpg",
-  Tutoring: "/images/type-tutoring.jpg",
+  accompanying: "/images/type-accompanying.jpg",
+  arts: "/images/type-arts.jpg",
+  assistance: "/images/type-assistance.jpg",
+  "clean-up": "/images/type-cleanup.jpg",
+  clothing: "/images/type-cloths.jpg",
+  consulting: "/images/type-assistance.jpg",
+  culture: "/images/type-culture.jpg",
+  daycare: "/images/type-daycare.jpg",
+  gardening: "/images/type-gardening.jpg",
+  it: "/images/type-tutoring.jpg",
+  language: "/images/type-language.jpg",
+  mentorship: "/images/type-mentorship.jpg",
+  reading: "/images/type-assistance.jpg",
+  renovation: "/images/type-renovation.jpg",
+  translation: "/images/type-language.jpg",
+  sports: "/images/type-sports.jpg",
+  tandem: "/images/type-tandem.jpg",
+  tutoring: "/images/type-tutoring.jpg",
 
   default: "/images/type-assistance.jpg",
 };
@@ -55,7 +61,10 @@ export function getOpportunityImg(type: string) {
   const [firstTag] = type.split(",");
   const [typeForImg] = firstTag.split(" ");
 
-  return typeToImg[typeForImg as keyof typeof typeToImg] ?? typeToImg.default;
+  return (
+    typeToImg[typeForImg.trim().toLowerCase() as keyof typeof typeToImg] ??
+    typeToImg.default
+  );
 }
 
 export const mapCodeToLanguage = {
@@ -76,9 +85,103 @@ export function isoCodesToNames(isoCodes: string) {
       return mapCodeToLanguage[code as keyof typeof mapCodeToLanguage];
     return code;
   }
-  return isoCodes
-    .split(",")
-    .map(code => code.trim())
-    .map(getLanguageName)
-    .join(", ");
+  try {
+    return isoCodes
+      .split(",")
+      .map(code => code.trim())
+      .map(getLanguageName)
+      .join(", ");
+  } catch (error) {
+    console.error(error);
+    return "";
+  }
+}
+
+export function getFilter(search: OpportunityParams["search"]) {
+  return search
+    ? function (item: Record<string, string>) {
+        return Object.entries(search).reduce(
+          (target, [searchKey, searchValues]) => {
+            return (
+              target &&
+              searchValues.reduce(
+                (trg, value) => trg || item[searchKey] === value,
+                false,
+              )
+            );
+          },
+          true,
+        );
+      }
+    : function () {
+        return true;
+      };
+}
+
+export function mapToOpportunity(opportunity: Record<string, string>) {
+  return Object.entries(opportunity).reduce(
+    (result: Record<string, string>, [key, value]) => {
+      const newKey = key.split(" ")[0].toLowerCase();
+      result[newKey] = value;
+      return result;
+    },
+    {},
+  );
+}
+
+export function mapOpportunity(opportunity: AlfredOpportunity, keyMap: KeyMap) {
+  return Object.entries(keyMap).reduce((mapped: Opportunity, [key, value]) => {
+    const path = value.split(".");
+    let mappedValue = opportunity;
+    path.forEach(opportunityKey => {
+      const nextValue = mappedValue[opportunityKey];
+      mappedValue = Array.isArray(nextValue)
+        ? pivotArrayToObj(nextValue)
+        : nextValue;
+    });
+    mapped[key] = Array.isArray(mappedValue)
+      ? mappedValue.join(", ")
+      : (mappedValue as unknown as string);
+    return mapped;
+  }, {});
+}
+
+export function pivotArrayToObj(arr: Array<Record<string, unknown>>) {
+  const [first] = arr;
+  if (typeof first !== "object") return arr;
+
+  const init = Object.keys(first).reduce(
+    (obj: Record<string, unknown[]>, key) => {
+      obj[key] = [];
+      return obj;
+    },
+    {},
+  );
+
+  return arr.reduce((obj: typeof init, item) => {
+    Object.entries(item).forEach(([key, value]) => {
+      obj[key].push(value);
+    });
+    return obj;
+  }, init);
+}
+
+export function getUrlWithEncodedParams(
+  url: string,
+  params: OpportunityParams,
+) {
+  try {
+    if (!("search" in params) && !("primaryKeys" in params)) return url;
+  } catch (error) {
+    console.error(error);
+    return url;
+  }
+
+  const search = params.search
+    ? `search=${encodeURIComponent(JSON.stringify(params.search))}`
+    : "";
+  const primaryKeys = params.primaryKeys
+    ? `primary_keys=${encodeURIComponent(JSON.stringify(params.primaryKeys))}`
+    : "";
+  return `${url}?${[...(primaryKeys ? [primaryKeys] : []), ...(search ? [search] : [])].join("&")}`;
 }

@@ -19,9 +19,20 @@ export enum Subpages {
   DATA_PROTECTION = "datenschutzerklaerung",
   AGREEMENT = "vereinbarung",
   OPPORTUNITIES = "opportunities",
-  OPPORTUNITIES_TEST = "f47ac8e3b925d1f5",
+  OPPORTUNITIES_TEST = "0pp4-test",
   ACCOMPANYING = "accompanying",
+  ACCOMPANYING_TEST = "4cc0-test",
   EVENT = "event",
+  PAST_EVENTS = "past-events",
+}
+
+export enum Events {
+  EVENT_8_31_24 = "event-8-31-24",
+}
+
+export enum OpportuntyType {
+  GENERAL = "general",
+  ACCOMPANYING = "accompanying",
 }
 
 // conjunction between keys and disjunction between possible values are applied for seach

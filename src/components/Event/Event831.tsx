@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
 import "./index.css";
 
-const registrationHref =
-  "https://docs.google.com/forms/d/e/1FAIpQLSe5wRZ0U0wEb_QvRbfuGzM196jRIVflUBC_273wSk2Dl3Gcnw/viewform";
+const registrationHref = "";
+("https://docs.google.com/forms/d/e/1FAIpQLSe5wRZ0U0wEb_QvRbfuGzM196jRIVflUBC_273wSk2Dl3Gcnw/viewform");
 
 export default function Event831() {
   const { t } = useTranslation();

@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
 import Land404 from "./pages/Land404";
+import PastEvents from "./pages/PastEvents";
 import Subpage from "./pages/Subpage";
 import { Subpages } from "./types";
 
@@ -30,7 +31,15 @@ const App: FC = () => {
               element={<Subpage type={Subpages.NOTICE} />}
             />
             <Route
+              path={`/${Subpages.NOTICE}`}
+              element={<Subpage type={Subpages.NOTICE} />}
+            />
+            <Route
               path={`/${Subpages.DATA_PROTECTION}/:lng`}
+              element={<Subpage type={Subpages.DATA_PROTECTION} />}
+            />
+            <Route
+              path={`/${Subpages.DATA_PROTECTION}`}
               element={<Subpage type={Subpages.DATA_PROTECTION} />}
             />
             <Route
@@ -38,7 +47,15 @@ const App: FC = () => {
               element={<Subpage type={Subpages.AGREEMENT} />}
             />
             <Route
+              path={`/${Subpages.AGREEMENT}`}
+              element={<Subpage type={Subpages.AGREEMENT} />}
+            />
+            <Route
               path={`/${Subpages.OPPORTUNITIES}/:lng`}
+              element={<Subpage type={Subpages.OPPORTUNITIES} />}
+            />
+            <Route
+              path={`/${Subpages.OPPORTUNITIES}`}
               element={<Subpage type={Subpages.OPPORTUNITIES} />}
             />
             <Route
@@ -46,11 +63,23 @@ const App: FC = () => {
               element={<Subpage type={Subpages.ACCOMPANYING} />}
             />
             <Route
-              path={`/${Subpages.OPPORTUNITIES_TEST}`}
-              element={<Subpage type={Subpages.OPPORTUNITIES_TEST} />}
+              path={`/${Subpages.ACCOMPANYING}`}
+              element={<Subpage type={Subpages.ACCOMPANYING} />}
+            />
+            <Route
+              path={`/${Subpages.ACCOMPANYING_TEST}/:lng`}
+              element={<Subpage type={Subpages.ACCOMPANYING_TEST} />}
+            />
+            <Route
+              path={`/${Subpages.ACCOMPANYING_TEST}`}
+              element={<Subpage type={Subpages.ACCOMPANYING_TEST} />}
             />
             <Route
               path={`/${Subpages.OPPORTUNITIES_TEST}/:lng`}
+              element={<Subpage type={Subpages.OPPORTUNITIES_TEST} />}
+            />
+            <Route
+              path={`/${Subpages.OPPORTUNITIES_TEST}`}
               element={<Subpage type={Subpages.OPPORTUNITIES_TEST} />}
             />
             <Route
@@ -60,6 +89,10 @@ const App: FC = () => {
             <Route
               path={`/${Subpages.EVENT}`}
               element={<Subpage type={Subpages.EVENT} />}
+            />
+            <Route
+              path={`/${Subpages.PAST_EVENTS}/:event`}
+              element={<PastEvents />}
             />
             <Route path="/:lng" element={<Home />} />
             <Route path="*" element={<Land404 />} />

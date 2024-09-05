@@ -7,7 +7,11 @@ import { Lang, Subpages } from "../../types";
 import { getBaseUrl, setLangDirection } from "../../utils";
 import "./Header.css";
 
-function Header() {
+interface Props {
+  showEvent?: boolean;
+}
+
+function Header({ showEvent = false }: Props) {
   const { i18n, t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
@@ -118,14 +122,16 @@ function Header() {
                 {t("bas2022")}
               </a>
             </li>
-            <li className="nav-item">
-              <a
-                className="nav-link nav-link-secondary"
-                href={`/${Subpages.EVENT}/${i18n.language}`}
-              >
-                {t("event.menuItem")}
-              </a>
-            </li>
+            {showEvent ? (
+              <li className="nav-item">
+                <a
+                  className="nav-link nav-link-secondary"
+                  href={`/${Subpages.EVENT}/${i18n.language}`}
+                >
+                  {t("event.menuItem")}
+                </a>
+              </li>
+            ) : null}
           </ul>
         </div>
       </div>
