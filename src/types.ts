@@ -30,7 +30,7 @@ export enum Events {
   EVENT_8_31_24 = "event-8-31-24",
 }
 
-export enum OpportuntyType {
+export enum OpportunityType {
   GENERAL = "general",
   ACCOMPANYING = "accompanying",
 }

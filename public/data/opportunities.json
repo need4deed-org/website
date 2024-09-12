@@ -1,5 +1,59 @@
 [
   {
+    "Status": "Search in process",
+    "Name": "Child care",
+    "Type": "Daycare",
+    "District": "Spandau",
+    "Schedule": "9-17, Flexible",
+    "Languages needed": "Russian",
+    "VO information": ""
+  },
+  {
+    "Status": "Volunteers Needed",
+    "Name": "Sommerfest Refugium ",
+    "Type": "Festival",
+    "District": "Lichtenberg",
+    "Schedule": "",
+    "Languages needed": "",
+    "VO information": " Auf-Abbau, Kinderschminken, Getränke/Snacks Ausgabe, Spielangebote, Hüpfburg Betreuung"
+  },
+  {
+    "Status": "Volunteers Needed",
+    "Name": "Support with setting up a clothing bank in Marzahn",
+    "Type": "Clothing Sorting",
+    "District": "Marzahn",
+    "Schedule": "September 13th",
+    "Languages needed": "English, German",
+    "VO information": "The volunteer coordinator would like to set up a clothing bank in the refugee accommodation centre. \nThey are looking for 5-6 people who can assist with this task."
+  },
+  {
+    "Status": "Volunteers Needed",
+    "Name": "Play sports with residents of an accommodation centre",
+    "Type": "Sports",
+    "District": "Lichtenberg",
+    "Schedule": "Flexible, Friday, Monday, Saturday, Sunday, Thursday, Tuesday, Wednesday",
+    "Languages needed": "Arabic, Dari, English, German, Russian, Turkish",
+    "VO information": "Residents of an accommodation centre would like to play football, volleyball, table tennis and other games with volunteers. The schedule is flexible and can be discussed with the volunteer coordinator."
+  },
+  {
+    "Status": "Volunteers Needed",
+    "Name": "Translate for social workers once a week",
+    "Type": "Translation",
+    "District": "Pankow, Remote",
+    "Schedule": "Flexible, Friday, Monday, Thursday, Tuesday, Wednesday",
+    "Languages needed": "French, German",
+    "VO information": "Social workers of a refugee accommodation centre in Pankow need support translating into French and German for new residents. The schedule is flexible and should not take more that 2-3 hours a day once a week or less if you is not available every week.\nIf you can translate over the phone it would also be a huge help."
+  },
+  {
+    "Status": "Volunteers Needed",
+    "Name": "Make cotton candy at a Summer Festival",
+    "Type": "One timer",
+    "District": "Treptow",
+    "Schedule": "September 17th",
+    "Languages needed": "Any, English, German",
+    "VO information": "Support with making cotton candy at a summer festival in a refugee accommodation centre. If you have a couple of hours of free time please let us know!"
+  },
+  {
     "Status": "Volunteers Needed",
     "Name": "Help with homework for school students in Neukölln",
     "Type": "Homework, Tutoring",
@@ -447,7 +501,7 @@
     "District": "Pankow",
     "Schedule": "12-14, Saturday",
     "Languages needed": "",
-    "VO information": "Starting on April, 6th."
+    "VO information": "Started on April, 6th. 2024"
   },
   {
     "Status": "Volunteers Needed",
@@ -608,6 +662,15 @@
     "Type": "Sports",
     "District": "Marzahn",
     "Schedule": "Friday, Monday, Thursday, Tuesday, Wednesday",
+    "Languages needed": "",
+    "VO information": ""
+  },
+  {
+    "Status": "Search in process",
+    "Name": "",
+    "Type": "",
+    "District": "",
+    "Schedule": "",
     "Languages needed": "",
     "VO information": ""
   },

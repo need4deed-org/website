@@ -12,9 +12,11 @@ export default function useOpportunities(
   const [opportunities, setOpportunities] = useState<
     Array<Record<string, string>>
   >([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const isUrl = filePath.toLowerCase().match(regexHttpSchema);
+    setLoading(true);
     fetch(
       isUrl ? getUrlWithEncodedParams(filePath, opportunityParams) : filePath,
     )
@@ -28,8 +30,11 @@ export default function useOpportunities(
                 .map(mapToOpportunity),
         ),
       )
-      .catch(console.error);
+      .catch(console.error)
+      .finally(() => {
+        setLoading(false);
+      });
   }, [filePath, opportunityParams]);
 
-  return opportunities;
+  return { opportunities, loading };
 }

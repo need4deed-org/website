@@ -9,7 +9,7 @@ import Agreement from "../components/Legal/Agreement";
 import DataPrivacy from "../components/Legal/DataPrivacy";
 import LegalNotice from "../components/Legal/Notice";
 import OpportunityCards from "../components/OpportunityCards";
-import { Lang, OpportuntyType, Subpages } from "../types";
+import { Lang, OpportunityType, Subpages } from "../types";
 import { isEnumValue, setLangDirection } from "../utils";
 
 const urlOpportunitiesAlfred =
@@ -100,7 +100,7 @@ function Subpage({ type }: Props) {
       case Subpages.ACCOMPANYING_TEST:
         return (
           <OpportunityCards
-            type={OpportuntyType.ACCOMPANYING}
+            type={OpportunityType.ACCOMPANYING}
             dataFileUrl={urlOpportunitiesAlfred}
             opportunityParams={{
               search: { status: ["Not started"] },

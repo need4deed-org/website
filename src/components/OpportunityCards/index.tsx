@@ -1,7 +1,7 @@
 import useOpportunities from "../../hooks/useOpportunities";
-import { KeyMap, OpportunityParams, OpportuntyType } from "../../types";
+import { KeyMap, OpportunityParams, OpportunityType } from "../../types";
 import { mapOpportunity } from "../../utils";
-import EmptyList from "../EmtyList";
+import EmptyList from "../EmptyList";
 import OpportunityCard from "./OpportunityCard";
 import "./index.css";
 
@@ -9,16 +9,19 @@ interface Props {
   dataFileUrl: string;
   opportunityParams: OpportunityParams;
   keyMap: KeyMap;
-  type?: OpportuntyType;
+  type?: OpportunityType;
 }
 
 export default function OpportunityCards({
   dataFileUrl,
   opportunityParams,
   keyMap,
-  type = OpportuntyType.GENERAL,
+  type = OpportunityType.GENERAL,
 }: Props) {
-  const opportunities = useOpportunities(dataFileUrl, opportunityParams);
+  const { opportunities, loading } = useOpportunities(
+    dataFileUrl,
+    opportunityParams,
+  );
 
   return (
     <div className="n4d-container opportunity-container">
@@ -37,7 +40,7 @@ export default function OpportunityCards({
             />
           ))
       ) : (
-        <EmptyList />
+        <EmptyList copies={loading ? "spinner" : "emptyList"} />
       )}
     </div>
   );

@@ -456,7 +456,7 @@
     "Date": "August 28, 2024",
     "District (Appointment)": "Marzahn-Hellersdorf",
     "Languages": "French, German",
-    "Status": "Matched"
+    "Status": "Matched but not needed (our fault)"
   },
   {
     "Name": "Begleitung zum LAF (Landesamt für Flüchtlingsangelegenheiten) ",
@@ -483,7 +483,7 @@
     "Date": "August 29, 2024 10:00 AM (GMT+2)",
     "District (Appointment)": "Spandau",
     "Languages": "Rumanian, Russian, English, German",
-    "Status": "Matched"
+    "Status": "Done"
   },
   {
     "Name": "Begleitung zur ärztlichen Schuluntersuchung",
@@ -501,7 +501,7 @@
     "Date": "September 2, 2024 1:30 PM (GMT+2)",
     "District (Appointment)": "Lichtenberg",
     "Languages": "Turkish, English, German",
-    "Status": "Matched"
+    "Status": "Cancelled by refugee"
   },
   {
     "Name": "Accompanying to an eye doctor",
@@ -513,6 +513,24 @@
     "Status": "Cancelled by RAC"
   },
   {
+    "Name": "Begleitung zur Praxis für Hämatologie",
+    "Address": "Bundesallee 55, 10715 Berlin",
+    "Appointment Type": "Doctor's",
+    "Date": "September 9, 2024 12:15 AM (GMT+2)",
+    "District (Appointment)": "Tempelhof-Schöneberg",
+    "Languages": "Turkish, German",
+    "Status": "Volunteer connected"
+  },
+  {
+    "Name": "Showing the way to Zentrum Überleben",
+    "Address": "Turmstraße 21, 10559 Berlin\nZentrum Überleben",
+    "Appointment Type": "Supporting with getting to the appointment",
+    "Date": "September 10, 2024 8:30 AM (GMT+2)",
+    "District (Appointment)": "Mitte",
+    "Languages": "Arabic, English, Farsi, Greek, Turkish, ",
+    "Status": "Cancelled by us"
+  },
+  {
     "Name": "Accompanying to physiotherapy",
     "Address": "Physiotherapie Marsch Berlin-Mitte GmbH Habersaathstrasse 37 · 10115 Berlin",
     "Appointment Type": "Doctor's",
@@ -522,13 +540,22 @@
     "Status": "Matched"
   },
   {
+    "Name": "Begleitung zum MVZ Ärtzehaus",
+    "Address": "Herzbergstraße 79/ Haus 100\n10365 Berlin\nMVZ Ärztehaus am KEH mit Epilepsie-Zentrum gGmbH\nFabian Müller (Neurologe)",
+    "Appointment Type": "Doctor's",
+    "Date": "September 11, 2024 9:15 AM (GMT+2)",
+    "District (Appointment)": "Lichtenberg",
+    "Languages": "Russian, English, German",
+    "Status": "Matched"
+  },
+  {
     "Name": "Begleitung zum Landesamt für Einwanderung",
     "Address": "Friedrich-Krause-Ufer 24, 13353 Berlin",
     "Appointment Type": "LEA",
     "Date": "September 11, 2024 10:30 AM (GMT+2)",
     "District (Appointment)": "Mitte",
     "Languages": "Dari, Farsi, German",
-    "Status": "In progress"
+    "Status": "Matched"
   },
   {
     "Name": "Begletung zur schulärztlichen Untersuchung",
@@ -536,8 +563,8 @@
     "Appointment Type": "Doctor's",
     "Date": "September 16, 2024 10:00 AM (GMT+2)",
     "District (Appointment)": "Reinickendorf",
-    "Languages": "Dari, Farsi, German",
-    "Status": "Not started"
+    "Languages": "Dari, Farsi, English, German",
+    "Status": "Matched but not needed (RAC is at fault)"
   },
   {
     "Name": "Accompanying to physiotherapy",
@@ -546,6 +573,51 @@
     "Date": "September 16, 2024 1:10 PM (GMT+2)",
     "District (Appointment)": "Mitte",
     "Languages": "Armenian, Russian, German",
+    "Status": "Matched"
+  },
+  {
+    "Name": "Begleitung zur Charite",
+    "Address": "Aßmannshauser Str. 4-6, 14197 Berlin\nCentrum 3 für Zahn-, Mund- und Kieferheilkunde I Charité - Universitätsmedizin Berlin",
+    "Appointment Type": "Doctor's",
+    "Date": "September 16, 2024 1:45 PM (GMT+2)",
+    "District (Appointment)": "Steglitz-Zehlendorf",
+    "Languages": "Arabic, English, German",
+    "Status": "Matched"
+  },
+  {
+    "Name": "Gastroenterologie RU ",
+    "Address": "Luisenstraße 64",
+    "Appointment Type": "Doctor's",
+    "Date": "September 17, 2024 8:00 AM (GMT+2)",
+    "District (Appointment)": "Mitte",
+    "Languages": "Georgian, Russian, German",
+    "Status": "In progress"
+  },
+  {
+    "Name": "wheelchair for bank account opening ",
+    "Address": "Am  Berlin",
+    "Appointment Type": "Bank account",
+    "Date": "September 18, 2024 10:00 AM (GMT+2)",
+    "District (Appointment)": "",
+    "Languages": "Arabic, no need",
+    "Status": "Matched"
+  },
+  {
+    "Name": "Begleitung zur Praxis für Neurologie",
+    "Address": "Baumschulenstr. 31\n12437 Berlin ",
+    "Appointment Type": "Doctor's",
+    "Date": "September 18, 2024 3:00 PM (GMT+2)",
+    "District (Appointment)": "Neukölln",
+    "Languages": "Rumanian, Russian, English, German",
+    "Status": "Matched"
+  },
+  {
+    "Name": "Begleitung zum Brustzentrum (Charité)",
+    "Address": "Campus Charite Mitte , Luisenstr. 6410117 Berlin\nInterne Adresse : Hochschulambulanz mit Brustzentrum / 2.Ebene / Bettenhaus   ",
+    "Appointment Type": "Doctor's",
+    "Date": "September 19, 2024 12:30 AM (GMT+2)",
+    "District (Appointment)": "Mitte",
+    "Languages": "Dari, Farsi, English, German",
     "Status": "In progress"
   },
   {
@@ -554,8 +626,8 @@
     "Appointment Type": "Doctor's",
     "Date": "September 19, 2024 9:30 AM (GMT+2)",
     "District (Appointment)": "Mitte",
-    "Languages": "English, German, Arabic",
-    "Status": "Not started"
+    "Languages": "Arabic, English, German",
+    "Status": "Matched"
   },
   {
     "Name": "Accompany to counseling for men",
@@ -563,7 +635,52 @@
     "Appointment Type": "Counceling",
     "Date": "September 19, 2024 2:00 PM (GMT+2)",
     "District (Appointment)": "Mitte",
-    "Languages": "Italian, English",
+    "Languages": "Italian, English, German",
+    "Status": "Matched"
+  },
+  {
+    "Name": "Begleitung zur Havelklinik",
+    "Address": "Baumschulenstr. 31\n12437 Berlin ",
+    "Appointment Type": "Doctor's",
+    "Date": "September 23, 2024 11:30 AM (GMT+2)",
+    "District (Appointment)": "Spandau",
+    "Languages": "Rumanian, Russian, English, German",
+    "Status": "In progress"
+  },
+  {
+    "Name": "Accompanying to a doctor’s appointment",
+    "Address": "Hermann-Hesse-Straße 4, 13156\nFrau Dr. Berit Schoof (Diabetologin). ",
+    "Appointment Type": "Doctor's",
+    "Date": "September 23, 2024 2:20 PM (GMT+2)",
+    "District (Appointment)": "Pankow",
+    "Languages": "Georgian, Russian, German",
+    "Status": "Cancelled by RAC"
+  },
+  {
+    "Name": "Sprachmittlung für einen Zahnarzttermin",
+    "Address": "Mariendorfer Damm 19-21, 12109 Berlin",
+    "Appointment Type": "Doctor's",
+    "Date": "September 25, 2024 10:30 AM (GMT+2)",
+    "District (Appointment)": "Tempelhof-Schöneberg",
+    "Languages": "French, German",
+    "Status": "Matched"
+  },
+  {
+    "Name": "Augenarzttermin: Englisch/Farsi - Deutsch",
+    "Address": "Kaiser-Wilhelm-Str. 84, 12247 Berlin",
+    "Appointment Type": "Doctor's",
+    "Date": "September 26, 2024 11:30 AM (GMT+2)",
+    "District (Appointment)": "",
+    "Languages": "English, Farsi, German",
+    "Status": "Not started"
+  },
+  {
+    "Name": "Doctors appointment ",
+    "Address": "Hermann-Hesse-Str 4, 13156 Berlin.",
+    "Appointment Type": "Doctor's",
+    "Date": "October 7, 2024 2:00 PM (GMT+2)",
+    "District (Appointment)": "Pankow",
+    "Languages": "Russian, German, Russian",
     "Status": "Not started"
   },
   {
@@ -573,6 +690,15 @@
     "Date": "October 9, 2024 8:15 AM (GMT+2)",
     "District (Appointment)": "Mitte",
     "Languages": "Dari, Farsi, German",
+    "Status": "Cancelled by RAC"
+  },
+  {
+    "Name": "Kardiologie ",
+    "Address": "Mehringdamm 50, 10961 Berlin",
+    "Appointment Type": "",
+    "Date": "October 15, 2024 8:00 AM (GMT+2)",
+    "District (Appointment)": "Friedrichshain-Kreuzberg",
+    "Languages": "Russian, Ukrainian, German",
     "Status": "Not started"
   }
 ]
