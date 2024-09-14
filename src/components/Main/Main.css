@@ -41,26 +41,12 @@
   direction: var(--n4d-lang-direction);
 }
 
-.volunteer-cta {
-  background-color: var(--n4d-secondary);
-  color: var(--n4d-neutral-200);
-  border-color: transparent;
-  border-radius: 25px;
-  margin: 60px;
-  padding: 15px 25px;
-}
-
-.volunteer-cta a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.volunteer-cta:hover {
-  background-color: var(--n4d-secondary-darker);
-}
-
 .fa-solid {
   color: white;
+}
+
+.main-cta {
+  margin: 60px;
 }
 
 @media (max-width: 576px) {

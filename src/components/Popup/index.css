@@ -1,8 +1,40 @@
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: transparent;
-  height: 100%;
-  width: 100vw;
+.popup-information-tooltip {
+  position: absolute;
+  top: 1rem;
+  left: -1rem;
+  right: -1rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--n4d-box-shadow);
+  background: var(--n4d-neutral-900);
+  border-radius: 3px;
+}
+
+.popup-information-tooltip h1 {
+  font-size: 1.3rem;
+  padding: 0.3rem;
+}
+
+.popup-information-tooltip p {
+  line-height: unset !important;
+  padding: 0.3rem !important;
+}
+
+.popup-information-tooltip button {
+  padding: 0;
+  color: var(--n4d-neutral-500);
+  background: unset;
+  border: unset;
+  border-radius: 50%;
+  margin-inline-start: auto;
+}
+
+.popup-information-tooltip svg {
+  width: 2rem;
+  height: 2rem;
+  fill: var(--n4d-neutral-500);
+}
+
+.popup-information-tooltip button:hover {
+  background: var(--n4d-neutral-800);
 }

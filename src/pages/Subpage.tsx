@@ -3,6 +3,8 @@ import { useTranslation } from "react-i18next";
 import { useNavigate, useParams } from "react-router-dom";
 
 import { AppContainerContext } from "../App";
+import Annoucement from "../components/Announcement";
+import BecomeVolunteer from "../components/BecomeVolunteer";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import Agreement from "../components/Legal/Agreement";
@@ -97,6 +99,10 @@ function Subpage({ type }: Props) {
             }}
           />
         );
+      case Subpages.BECOME_VOLUNTEER:
+        return <BecomeVolunteer />;
+      case Subpages.THANK_YOU:
+        return <Annoucement copies="becomeVolunteer.thanksVolunteer" />;
       case Subpages.ACCOMPANYING_TEST:
         return (
           <OpportunityCards

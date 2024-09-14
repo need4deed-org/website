@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import Close from "../svg/Close";
 import "./index.css";
 
 interface Props {
@@ -11,11 +12,12 @@ interface Props {
 export default function Popup({ className, children, title, close }: Props) {
   return (
     <>
-      <div className="backdrop" onClick={() => close()}></div>
-      <div className={className}>
-        <h1>{title}</h1>
-        {children}
-        <button onClick={() => close()}>X</button>
+      <div className={`popup-information-tooltip ${className}`}>
+        {title ? <h1>{title}</h1> : null}
+        <p>{children}</p>
+        <button tabIndex={0} type="button" onClick={() => close()}>
+          <Close />
+        </button>
       </div>
     </>
   );

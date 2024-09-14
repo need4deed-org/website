@@ -83,6 +83,14 @@ const App: FC = () => {
               element={<Subpage type={Subpages.OPPORTUNITIES_TEST} />}
             />
             <Route
+              path={`/${Subpages.BECOME_VOLUNTEER}/:lng`}
+              element={<Subpage type={Subpages.BECOME_VOLUNTEER} />}
+            />
+            <Route
+              path={`/${Subpages.THANK_YOU}/:lng`}
+              element={<Subpage type={Subpages.THANK_YOU} />}
+            />
+            <Route
               path={`/${Subpages.EVENT}/:lng`}
               element={<Subpage type={Subpages.EVENT} />}
             />

@@ -13,7 +13,6 @@ import VolunteerOpportunity from "../components/VolunteerOpportunity/VolunteerOp
 import VolunteerWorkflow from "../components/VolunteerWorkflow/VolunteerWorkflow";
 import { Lang } from "../types";
 import { isEnumValue, setLangDirection } from "../utils";
-import "./Home.css";
 
 function Home() {
   const { i18n, t } = useTranslation();

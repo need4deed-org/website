@@ -1,7 +1,12 @@
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Lang } from "../../types";
-import { getOpportunityImg, isoCodesToNames, isRtlLang } from "../../utils";
+import {
+  getMainCtaUrl,
+  getOpportunityImg,
+  isoCodesToNames,
+  isRtlLang,
+} from "../../utils";
 import VOInformation from "./VOInformation";
 
 interface Props {
@@ -16,6 +21,11 @@ export default function Translation({ opportunity, pre = false }: Props) {
     () => getOpportunityImg(opportunity.type),
     [opportunity.type],
   );
+  const urlMainCTA = getMainCtaUrl({
+    lng: i18n.language as Lang,
+    id: opportunity.id,
+    title: opportunity.name,
+  });
   return pre ? (
     <pre className="opportunity-card">
       {JSON.stringify(opportunity, null, 2)}
@@ -43,7 +53,7 @@ export default function Translation({ opportunity, pre = false }: Props) {
       <p>{opportunity.time}</p>
       <h6>Location:</h6>
       <p>{opportunity.location}</p>
-      <a className="btn n4d-primary-btn" href={t("formLink")} target="_blank">
+      <a className="btn n4d-primary-btn" href={urlMainCTA} target="_blank">
         {titleBtn.at(-1) === "!" && isRtlLang(i18n.language as Lang)
           ? titleBtn.slice(0, -1)
           : titleBtn}

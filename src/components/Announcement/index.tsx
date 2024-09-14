@@ -4,7 +4,7 @@ interface Props {
   copies: string;
 }
 
-export default function EmptyList({ copies }: Props) {
+export default function Annoucement({ copies }: Props) {
   const { t } = useTranslation();
   return (
     <div className="n4d-container">

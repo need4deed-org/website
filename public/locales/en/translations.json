@@ -7,6 +7,26 @@
   "bas2022": "BAS (2022)",
   "basLink": "https://bevos.org/bas-documentation/?lang=en",
   "formLink": "https://forms.gle/XWnU4znoAFaU9HfW9",
+  "weekdays": {
+    "monday": "Monday",
+    "tuesday": "Tuesday",
+    "wednesday": "Wednesday",
+    "thursday": "Thursday",
+    "friday": "Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday",
+    "onetime": "Occasionally available"
+  },
+  "languages": {
+    "arabic": "Arabic",
+    "farsi": "Farsi/Dari",
+    "turkish": "Turkish",
+    "russian": "Russian",
+    "english": "English",
+    "german": "German",
+    "ukrainian": "Ukrainian",
+    "kurdish": "Kurdish"
+  },
   "projectIntro": {
     "slogan": "Need based voluntary support for refugees in Berlin",
     "beVolunteerButton": "Become a Volunteer!"
@@ -27,6 +47,98 @@
   "contactForRAC": {
     "heading": "Are you a volunteer coordinator in a refugee accommodation center?",
     "emailUs": "write us to"
+  },
+  "becomeVolunteer": {
+    "header": "Become a Volunteer with",
+    "thanksVolunteer": { "header": "Thank You!", "para": "" },
+    "thanks": "Thank you for choosing",
+    "submit": "Submit",
+    "errors": "Errors",
+    "reset": "Reset",
+    "fields": {
+      "required": "This field is required",
+      "name": { "label": "Name" },
+      "email": { "label": "E-mail", "error": "Must be a valid email" },
+      "phone": {
+        "label": "Phone Number or Telegram Handle",
+        "error": "Must be a phone number"
+      },
+      "postcode": {
+        "label": "PLZ (Berlin) of your location",
+        "error": "Must be a valid postcode of Berlin"
+      },
+      "locations": {
+        "header": "Preferred districts* (Berlin)",
+        "para": "*keep in mind that most accommodation centers are outside the ring!",
+        "error": "Please pick at least one location",
+        "helpText": "In case we cant find a perfect match we might send you offers that are also based on your location!",
+        "helpTitle": ""
+      },
+      "availability": {
+        "header": "Preferred timeframes*",
+        "para": "*keep in mind that most opportunities are limited to the 9-17 working hours, at least for the beginning!",
+        "error": "Please pick at least one timeframe",
+        "helpText": "The Mon-Sun availabilities refer to regularly repeating volunteering. If the time frames are limited to some periods or need explaining, please write in the comments at the last section",
+        "helpTitle": ""
+      },
+      "languages": {
+        "header": "Languages",
+        "languagesFluent": {
+          "header": "Native/Fluent",
+          "error": "Please pick at least one language"
+        },
+        "languagesIntermediate": {
+          "header": "Intermediate"
+        },
+        "helpText": "Fluent means you think you can support it in case some translations between languages are needed",
+        "helpTitle": ""
+      },
+      "activities": {
+        "header": "Preferred Activities",
+        "error": "Please pick at least one activity",
+        "helpText": "These are the most common needs that require voluntary support. Sometimes they can change once you started volunteering.",
+        "helpTitle": ""
+      },
+      "skills": {
+        "header": "Additional skills or experience",
+        "helpText": "Anything you feel that you can share from your experience, abilities or expertise can  be useful to know, but don't worry, its not a must for volunteering!",
+        "helpTitle": ""
+      },
+      "certOfGoodConduct": {
+        "header": "Certificate of Good Conduct (Erweitertes Führungszeungnis)",
+        "error": "Please pick at least one activity",
+        "why": "Why do I need this?",
+        "yes": "I have one",
+        "no": " Need to apply",
+        "helpText": "",
+        "helpTitle": ""
+      },
+      "certMeaslesVaccination": {
+        "header": "Certificate of Measles Vaccination",
+        "error": "Please pick at least one activity",
+        "yes": "I have one",
+        "no": "Need to prove it",
+        "helpText": "",
+        "helpTitle": ""
+      },
+      "leadFrom": {
+        "header": "Where did you hear about us?",
+        "helpText": "",
+        "helpTitle": ""
+      },
+      "comments": {
+        "label": "Other comments (times, locations, activities skills etc.)",
+        "helpText": "",
+        "helpTitle": ""
+      },
+      "consent": {
+        "header": "I hereby agree to the:",
+        "and": "and",
+        "label": "",
+        "helpText": "",
+        "helpTitle": ""
+      }
+    }
   },
   "event": {
     "header": "Need4Deed Sommerfest",

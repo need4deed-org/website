@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
 
-import { OpportunityParams } from "../types";
-import { getFilter, getUrlWithEncodedParams, mapToOpportunity } from "../utils";
+import { OpportunityParams } from "../../types";
+import {
+  getFilter,
+  getUrlWithEncodedParams,
+  mapToOpportunity,
+} from "../../utils";
 
 const regexHttpSchema = RegExp("^(http|https)://.*$");
 

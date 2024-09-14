@@ -14,7 +14,12 @@
   --n4d-tertiary-darker: #055eaa;
   --n4d-neutral-900: #fff;
   --n4d-neutral-800: #eee;
-  --n4d-neutral-200: #111;
+  --n4d-neutral-700: #ddd;
+  --n4d-neutral-600: #ccc;
+  --n4d-neutral-500: #bbb;
+  --n4d-neutral-400: #aaa;
+  --n4d-neutral-300: #888;
+  --n4d-neutral-200: #444;
   --n4d-neutral-100: #000;
 
   --n4d-title-clr: var(--n4d-neutral-900);
@@ -34,6 +39,13 @@
   --n4d-navbar-h: 4em;
 
   --n4d-lang-direction: ltr;
+
+  --n4d-box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15),
+    0px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+*:focus {
+  outline: solid 1px var(--n4d-secondary-lighter);
 }
 
 @media (max-width: 576px) {
@@ -93,8 +105,41 @@
 .n4d-container {
   padding-top: var(--n4d-gap);
   margin-inline: auto;
-  width: var(--n4d-w);
+  max-width: var(--n4d-w);
   direction: var(--n4d-lang-direction);
+}
+
+.n4d-information-tooltip-parent {
+  position: relative;
+}
+
+.n4d-cta {
+  background-color: var(--n4d-secondary);
+  color: var(--n4d-neutral-200);
+  border-color: transparent;
+  border-radius: 25px;
+  padding: 15px 25px;
+}
+
+.n4d-cta[disabled] {
+  background-color: var(--n4d-neutral-700);
+  color: var(--n4d-neutral-200);
+  border-color: transparent;
+  border-radius: 25px;
+  padding: 15px 25px;
+}
+
+.n4d-cta a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.n4d-cta:hover {
+  background-color: var(--n4d-secondary-darker);
+}
+
+.n4d-cta[disabled]:hover {
+  background-color: var(--n4d-neutral-700);
 }
 
 .n4d-primary-btn {

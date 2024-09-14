@@ -29,7 +29,7 @@
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  box-shadow: 0.05rem 0.08rem 0.4rem 0.03rem;
+  box-shadow: var(--n4d-box-shadow);
   border-radius: 0.3rem;
   transition: transform 0.34s ease;
 }
@@ -65,15 +65,9 @@
 }
 
 .opportunity-vo-information-tooltip {
-  position: absolute;
   top: 10rem;
   left: -1rem;
   right: -1rem;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0.05rem 0.08rem 0.4rem 0.03rem;
-  background: var(--n4d-neutral-900);
-  border-radius: 3px;
 }
 
 .opportunity-vo-information-tooltip h1 {
@@ -95,10 +89,6 @@
 }
 .opportunity-vo-information-tooltip button:hover {
   background: var(--n4d-neutral-800);
-}
-
-.opportunity-vo-information {
-  position: relative;
 }
 
 .opportunity-vo-information i[role="tooltip"] {

@@ -12,9 +12,12 @@
     "test": "NODE_ENV=test vitest"
   },
   "dependencies": {
+    "@tanstack/react-form": "^0.26.4",
+    "@tanstack/react-query": "^5.52.2",
     "@types/react-bootstrap": "^0.32.36",
     "aws-amplify": "^6.0.28",
     "bootstrap": "^5.3.3",
+    "email-validator": "^2.0.4",
     "i18next": "^23.10.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.1",

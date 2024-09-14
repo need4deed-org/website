@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
+import useOutsideClick from "../../hooks/useOutsideClick";
 import Popup from "../Popup";
 import Epsilon from "./Epsilon";
 
@@ -9,6 +10,7 @@ interface Props {
 
 export default function VOInformation({ title, maxLength = 100 }: Props) {
   const [show, setShow] = useState(false);
+  const ref = useRef<HTMLSpanElement>(null);
 
   const isTruncated = title.length > maxLength;
   const trunkateAt = isTruncated
@@ -16,23 +18,28 @@ export default function VOInformation({ title, maxLength = 100 }: Props) {
     : maxLength;
   const truncated = title.slice(0, trunkateAt);
 
+  useOutsideClick({
+    ref,
+    handler: () => setShow(false),
+  });
+
   return (
     <>
-      <span className="opportunity-vo-information">
+      <span ref={ref} className="opportunity-vo-information">
         <span className="opportunity-vo-information-hover">
           <i>{truncated} </i>
           {isTruncated ? <i role="tooltip">{title}</i> : ""}
         </span>
         {isTruncated ? <Epsilon onClick={() => setShow(prev => !prev)} /> : ""}
+        {show ? (
+          <Popup
+            className="opportunity-vo-information-tooltip"
+            close={() => setShow(false)}
+          >
+            <p>{title}</p>
+          </Popup>
+        ) : null}
       </span>
-      {show ? (
-        <Popup
-          className="opportunity-vo-information-tooltip"
-          close={() => setShow(false)}
-        >
-          <p>{title}</p>
-        </Popup>
-      ) : null}
     </>
   );
 }

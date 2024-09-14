@@ -6,6 +6,7 @@ import {
   Lang,
   Opportunity,
   OpportunityParams,
+  Subpages,
 } from "../types";
 
 export function isEnumValue<E>(enumObject: object, value: E) {
@@ -184,4 +185,18 @@ export function getUrlWithEncodedParams(
     ? `primary_keys=${encodeURIComponent(JSON.stringify(params.primaryKeys))}`
     : "";
   return `${url}?${[...(primaryKeys ? [primaryKeys] : []), ...(search ? [search] : [])].join("&")}`;
+}
+
+interface MainCtaUrl {
+  lng: Lang;
+  id?: string;
+  title?: string;
+}
+export function getMainCtaUrl({ lng, id = "", title = "" }: MainCtaUrl) {
+  const goFormLive = false;
+  return goFormLive
+    ? `/${Subpages.BECOME_VOLUNTEER}/${lng}/?id=${id}&title=${title}`
+    : lng === "de"
+      ? "https://forms.gle/yU4mg6YXfmheKmio6"
+      : "https://forms.gle/XWnU4znoAFaU9HfW9";
 }
