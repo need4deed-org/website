@@ -70,6 +70,7 @@ function Subpage({ type }: Props) {
               search: {
                 Status: ["Volunteers Needed", "Search in process"],
               },
+              primaryKeys: ["title", "name"],
             }}
             keyMap={{
               type: "type",
@@ -87,7 +88,7 @@ function Subpage({ type }: Props) {
             dataFileUrl={urlOpportunitiesAlfred}
             opportunityParams={{
               search: { status: ["Volunteers Needed", "Search in process"] },
-              primaryKeys: ["title", "name", "iso_code"],
+              primaryKeys: ["title", "name"],
             }}
             keyMap={{
               type: "activities",

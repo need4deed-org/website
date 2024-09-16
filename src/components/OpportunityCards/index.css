@@ -65,7 +65,7 @@
 }
 
 .opportunity-vo-information-tooltip {
-  top: 10rem;
+  top: -4rem;
   left: -1rem;
   right: -1rem;
 }
@@ -89,6 +89,10 @@
 }
 .opportunity-vo-information-tooltip button:hover {
   background: var(--n4d-neutral-800);
+}
+
+.opportunity-vo-information {
+  position: relative;
 }
 
 .opportunity-vo-information i[role="tooltip"] {
