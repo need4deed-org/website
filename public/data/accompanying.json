@@ -573,7 +573,7 @@
     "Date": "September 16, 2024 1:10 PM (GMT+2)",
     "District (Appointment)": "Mitte",
     "Languages": "Armenian, Russian, German",
-    "Status": "Matched"
+    "Status": "Matched but not needed (RAC is at fault)"
   },
   {
     "Name": "Begleitung zur Charite",
@@ -591,16 +591,16 @@
     "Date": "September 17, 2024 8:00 AM (GMT+2)",
     "District (Appointment)": "Mitte",
     "Languages": "Georgian, Russian, German",
-    "Status": "In progress"
+    "Status": "Cancelled by us"
   },
   {
     "Name": "wheelchair for bank account opening ",
     "Address": "Am  Berlin",
     "Appointment Type": "Bank account",
     "Date": "September 18, 2024 10:00 AM (GMT+2)",
-    "District (Appointment)": "",
+    "District (Appointment)": "Pankow",
     "Languages": "Arabic, no need",
-    "Status": "Matched"
+    "Status": "Matched but not needed (RAC is at fault)"
   },
   {
     "Name": "Begleitung zur Praxis für Neurologie",
@@ -612,15 +612,6 @@
     "Status": "Matched"
   },
   {
-    "Name": "Begleitung zum Brustzentrum (Charité)",
-    "Address": "Campus Charite Mitte , Luisenstr. 6410117 Berlin\nInterne Adresse : Hochschulambulanz mit Brustzentrum / 2.Ebene / Bettenhaus   ",
-    "Appointment Type": "Doctor's",
-    "Date": "September 19, 2024 12:30 AM (GMT+2)",
-    "District (Appointment)": "Mitte",
-    "Languages": "Dari, Farsi, English, German",
-    "Status": "In progress"
-  },
-  {
     "Name": "Begleitung zur HNO-Klinik der Charite",
     "Address": "Camous Charite HNO-Klinik in der Luisenstraße 13 Poli2 E1 2591",
     "Appointment Type": "Doctor's",
@@ -630,12 +621,30 @@
     "Status": "Matched"
   },
   {
+    "Name": "Begleitung zum Brustzentrum (Charité) ",
+    "Address": "Campus Charite Mitte , Luisenstr. 6410117 Berlin\nInterne Adresse : Hochschulambulanz mit Brustzentrum / 2.Ebene / Bettenhaus   ",
+    "Appointment Type": "Doctor's",
+    "Date": "September 19, 2024 12:30 PM (GMT+2)",
+    "District (Appointment)": "Mitte",
+    "Languages": "Dari, Farsi, English, German",
+    "Status": "Cancelled by RAC"
+  },
+  {
     "Name": "Accompany to counseling for men",
     "Address": "Leipziger Straße 31-33, 10117 Berlin",
     "Appointment Type": "Counceling",
     "Date": "September 19, 2024 2:00 PM (GMT+2)",
     "District (Appointment)": "Mitte",
     "Languages": "Italian, English, German",
+    "Status": "Cancelled by RAC"
+  },
+  {
+    "Name": "Begleitung zum Brustzentrum (Charité) ",
+    "Address": "Campus Charite Mitte , Luisenstr. 7 Berlin\nInterne Adresse : Hochschulambulanz mit Brustzentrum / 2.Ebene / Bettenhaus   ",
+    "Appointment Type": "Doctor's",
+    "Date": "September 20, 2024 8:30 AM (GMT+2)",
+    "District (Appointment)": "Mitte",
+    "Languages": "Dari, Farsi, English, German",
     "Status": "Matched"
   },
   {
@@ -645,7 +654,7 @@
     "Date": "September 23, 2024 11:30 AM (GMT+2)",
     "District (Appointment)": "Spandau",
     "Languages": "Rumanian, Russian, English, German",
-    "Status": "In progress"
+    "Status": "Cancelled by us"
   },
   {
     "Name": "Accompanying to a doctor’s appointment",
@@ -654,6 +663,15 @@
     "Date": "September 23, 2024 2:20 PM (GMT+2)",
     "District (Appointment)": "Pankow",
     "Languages": "Georgian, Russian, German",
+    "Status": "Cancelled by RAC"
+  },
+  {
+    "Name": "Kinderarzt",
+    "Address": " Richter Str. 12  12526 Berlin",
+    "Appointment Type": "Doctor's",
+    "Date": "September 24, 2024 1:15 PM (GMT+2)",
+    "District (Appointment)": "Treptow-Köpenick",
+    "Languages": "Farsi, German",
     "Status": "Cancelled by RAC"
   },
   {
@@ -666,13 +684,67 @@
     "Status": "Matched"
   },
   {
+    "Name": "Dari sprachiger Dolmetsche bei der Landesamt für Einwanderung",
+    "Address": "Friedrich-Kauser-Ufer 24,13353 Berlin",
+    "Appointment Type": "LEA",
+    "Date": "September 26, 2024 11:00 AM (GMT+2)",
+    "District (Appointment)": "Mitte",
+    "Languages": "Dari, Farsi, German",
+    "Status": "In progress"
+  },
+  {
     "Name": "Augenarzttermin: Englisch/Farsi - Deutsch",
     "Address": "Kaiser-Wilhelm-Str. 84, 12247 Berlin",
     "Appointment Type": "Doctor's",
     "Date": "September 26, 2024 11:30 AM (GMT+2)",
-    "District (Appointment)": "",
+    "District (Appointment)": "Steglitz-Zehlendorf",
     "Languages": "English, Farsi, German",
-    "Status": "Not started"
+    "Status": "In progress"
+  },
+  {
+    "Name": "Location: Marzahn-Hellersdorf",
+    "Address": "Blumberger Damm 163-165, 12679 um -Achillesstr. 69 B, 13125",
+    "Appointment Type": "Doctor's",
+    "Date": "September 27, 2024 9:30 AM (GMT+2)",
+    "District (Appointment)": "Marzahn-Hellersdorf",
+    "Languages": "Georgian, Russian, German",
+    "Status": "In progress"
+  },
+  {
+    "Name": "Begleitung zum Brustzentrum (Charité) ",
+    "Address": "Campus Charite Mitte , Luisenstr. 6410117 Berlin\nInterne Adresse : Hochschulambulanz mit Brustzentrum / 2.Ebene / Bettenhaus   ",
+    "Appointment Type": "Doctor's",
+    "Date": "September 27, 2024 10:00 AM (GMT+2)",
+    "District (Appointment)": "Mitte",
+    "Languages": "Dari, Farsi, English, German",
+    "Status": "Matched"
+  },
+  {
+    "Name": "Konto Farsi-Deutch",
+    "Address": "Berliner Sparkasse BeratungsCenter Schöneweide Schnellerstr. 128, 12439 Berlin\n",
+    "Appointment Type": "Bank account",
+    "Date": "September 27, 2024 1:30 PM (GMT+2)",
+    "District (Appointment)": "Treptow-Köpenick",
+    "Languages": "Farsi, German",
+    "Status": "In progress"
+  },
+  {
+    "Name": "Zentrum für Endokrine Chirurgie",
+    "Address": "Dieffenbach Straße 1,10967 Berlin",
+    "Appointment Type": "Doctor's",
+    "Date": "October 1, 2024 11:00 AM (GMT+2)",
+    "District (Appointment)": "Friedrichshain-Kreuzberg",
+    "Languages": "Turkish, German",
+    "Status": "In progress"
+  },
+  {
+    "Name": "Konto Farsi-Deutch",
+    "Address": "Berliner Sparkasse BeratungsCenter Bruno-Taut Straße 1\n",
+    "Appointment Type": "Bank account",
+    "Date": "October 1, 2024 3:00 PM (GMT+2)",
+    "District (Appointment)": "Treptow-Köpenick",
+    "Languages": "Farsi, German",
+    "Status": "Matched"
   },
   {
     "Name": "Doctors appointment ",
@@ -681,7 +753,7 @@
     "Date": "October 7, 2024 2:00 PM (GMT+2)",
     "District (Appointment)": "Pankow",
     "Languages": "Russian, German, Russian",
-    "Status": "Not started"
+    "Status": "In progress"
   },
   {
     "Name": "Begleitung zum Kinderzahnarzt",
@@ -693,12 +765,57 @@
     "Status": "Cancelled by RAC"
   },
   {
+    "Name": "Frauenarzt",
+    "Address": "Luise-Henriette-Str. 1-2 in 12103 Berlin",
+    "Appointment Type": "Doctor's",
+    "Date": "October 10, 2024 11:45 AM (GMT+2)",
+    "District (Appointment)": "Tempelhof-Schöneberg",
+    "Languages": "Dari, Farsi, German",
+    "Status": "Not started"
+  },
+  {
     "Name": "Kardiologie ",
     "Address": "Mehringdamm 50, 10961 Berlin",
-    "Appointment Type": "",
+    "Appointment Type": "Doctor's",
     "Date": "October 15, 2024 8:00 AM (GMT+2)",
     "District (Appointment)": "Friedrichshain-Kreuzberg",
     "Languages": "Russian, Ukrainian, German",
+    "Status": "In progress"
+  },
+  {
+    "Name": "MVZ Adiuvare Neurologen",
+    "Address": "Badstraße 32, 13357 Berlin",
+    "Appointment Type": "Doctor's",
+    "Date": "November 12, 2024 1:30 PM (GMT+1)",
+    "District (Appointment)": "Mitte",
+    "Languages": "Farsi, German",
+    "Status": "In progress"
+  },
+  {
+    "Name": "Neurologie",
+    "Address": " Bülowstr 17, 10783",
+    "Appointment Type": "Doctor's",
+    "Date": "December 17, 2024 10:20 AM (GMT+1)",
+    "District (Appointment)": "Tempelhof-Schöneberg",
+    "Languages": "Farsi, ",
+    "Status": "Not started"
+  },
+  {
+    "Name": "",
+    "Address": "",
+    "Appointment Type": "",
+    "Date": "",
+    "District (Appointment)": "",
+    "Languages": ", ",
+    "Status": "Not started"
+  },
+  {
+    "Name": "",
+    "Address": "",
+    "Appointment Type": "",
+    "Date": "",
+    "District (Appointment)": "",
+    "Languages": ", ",
     "Status": "Not started"
   }
 ]
