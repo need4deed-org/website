@@ -2,7 +2,7 @@ import { render } from "@testing-library/react";
 import { RefObject, createRef } from "react";
 import { act } from "react-dom/test-utils";
 
-import { Lang, OpportunityParams } from "../types";
+import { Lang, OpportunityParams } from "../config/types";
 import {
   getBaseUrl,
   getFilter,

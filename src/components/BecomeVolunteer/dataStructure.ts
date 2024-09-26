@@ -141,6 +141,11 @@ export enum Language {
   OTHER = "Other",
 }
 
+export enum LangUse {
+  MAIN = "main",
+  OCCASIONAL = "occasional",
+}
+
 export enum Lead {
   VOLUNTEERING_PLATFORM = "Volunteering platform",
   SOCIAL_MEDIA = "Social media",
@@ -182,7 +187,26 @@ export enum VolunteerDataKeysArrays {
 }
 export type VolunteerDataLists = `${VolunteerDataKeysArrays}`;
 
-export type VolunteerParsedData = Record<VolunteerDataKeys, unknown>;
+export interface VolunteerParsedData {
+  full_name: string;
+  phone: string;
+  email: string;
+  schedule_comments: string;
+  postal_code: number;
+  languages_comments: string;
+  if_good_conduct_certificate: boolean;
+  if_measles_vaccination: boolean;
+  activities_comments: string;
+  lead_from: string;
+  lead_from_comments: string;
+  origin_opportunity_id: number;
+  schedule: string[];
+  preffered_berlin_locations: string[];
+  languages: string[];
+  activities: string[];
+  skills: string[];
+  translate_languages: string[];
+}
 
 export type FieldApiCustom = FieldApi<
   VolunteerData,

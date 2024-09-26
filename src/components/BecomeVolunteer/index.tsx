@@ -4,8 +4,10 @@ import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 
+import { urlApi } from "../../config/constants";
+import { Subpages } from "../../config/types";
 import useList from "../../hooks/api/useList";
-import { Subpages } from "../../types";
+import { usePostRequest } from "../../hooks/api/usePostRequest";
 import UploadIcon from "../svg/Upload";
 import {
   Activity,
@@ -13,12 +15,14 @@ import {
   District,
   FieldApiCustom,
   Language,
+  LangUse,
   Lead,
   Selected,
   Skill,
   TimeSlot,
   VolunteerData,
   VolunteerDataKeysArrays,
+  VolunteerParsedData,
   Weekday,
 } from "./dataStructure";
 import FieldInfo from "./FieldInfo";
@@ -26,7 +30,7 @@ import HeaderWithHelp from "./HeaderWithHelp";
 import "./index.css";
 import MultipleInputsWithMore from "./MultipleInputsWithMore";
 import SimpleInputField from "./SimpleInputField";
-import { formData, isValidPLZ, parseFormStateDTO } from "./utils";
+import { isValidPLZ, parseFormStateDTO } from "./utils";
 
 const timeSlots: Selected<TimeSlot>[] = Object.values(TimeSlot).map(
   timeSlot => ({
@@ -56,6 +60,11 @@ export default function BecomeVolunteer() {
   const { lng } = useParams();
   const [opportunityParams] = useSearchParams();
 
+  const { postRequest } = usePostRequest<
+    VolunteerParsedData,
+    Record<string, string | string[]>
+  >({ url: `${urlApi}/volunteer/` });
+
   const opportunity = {
     id: opportunityParams.get("id"),
     title: opportunityParams.get("title"),
@@ -84,12 +93,15 @@ export default function BecomeVolunteer() {
     title,
     selected: false,
   }));
-  const languages = useList<Language>(
-    VolunteerDataKeysArrays.LANGUAGESFLUENT,
-  ).map(title => ({
-    title,
-    selected: false,
-  }));
+  const languages = useList<{
+    title: Language;
+    use: LangUse;
+  }>(VolunteerDataKeysArrays.LANGUAGESFLUENT)
+    .sort(a => (a.use === LangUse.MAIN ? -1 : 1))
+    .map(({ title }) => ({
+      title,
+      selected: false,
+    }));
   const leadFrom = useList<Lead>(VolunteerDataKeysArrays.LEADFROM).map(
     title => ({
       title,
@@ -119,11 +131,9 @@ export default function BecomeVolunteer() {
     validators: {},
     onSubmit: ({ value }) => {
       console.log("DEBUG:formVolunteer:onSubmit:check:", formVolunteer.state);
-      formData.data = parseFormStateDTO(value);
-      console.log(
-        "DEBUG:BecomeVolunteer:onSubmit:formData.data:",
-        formData.data,
-      );
+      const data = parseFormStateDTO(value);
+      postRequest(data);
+      console.log("DEBUG:BecomeVolunteer:onSubmit:data:", data);
     },
   });
 
@@ -336,7 +346,7 @@ export default function BecomeVolunteer() {
           <HeaderWithHelp
             textHelp={t("becomeVolunteer.fields.languages.helpText")}
             titleHelp={t("becomeVolunteer.fields.languages.helpTitle")}
-            classNamePopup="voluteer-help"
+            classNamePopup="volunteer-help"
           >
             {t("becomeVolunteer.fields.languages.header")}
           </HeaderWithHelp>

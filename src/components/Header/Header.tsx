@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 import { AppContainerContext } from "../../App";
-import { Lang, Subpages } from "../../types";
+import { Lang, Subpages } from "../../config/types";
 import { getBaseUrl, setLangDirection } from "../../utils";
 import "./Header.css";
 

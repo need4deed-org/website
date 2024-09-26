@@ -1,5 +1,5 @@
+import { KeyMap, OpportunityParams, OpportunityType } from "../../config/types";
 import useOpportunities from "../../hooks/api/useOpportunities";
-import { KeyMap, OpportunityParams, OpportunityType } from "../../types";
 import { mapOpportunity } from "../../utils";
 import Annoucement from "../Announcement";
 import OpportunityCard from "./OpportunityCard";

@@ -7,7 +7,7 @@ import {
   Opportunity,
   OpportunityParams,
   Subpages,
-} from "../types";
+} from "../config/types";
 
 export function isEnumValue<E>(enumObject: object, value: E) {
   return typeof enumObject === "object"

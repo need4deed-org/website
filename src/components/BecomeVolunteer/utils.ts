@@ -5,57 +5,59 @@ import {
   Weekday,
 } from "./dataStructure";
 
-export const formData: {
-  data: VolunteerParsedData;
-} = { data: {} as VolunteerParsedData };
-
 export function parseFormStateDTO(value: VolunteerData) {
   const data = {} as VolunteerParsedData;
-  data.name = value.name;
+  data.origin_opportunity_id = +value.opportunityId;
+  data.full_name = value.name;
   data.email = value.email;
   data.phone = value.phone;
-  data.postcode = value.postcode;
-  data.locations = value.locations
+  data.postal_code = +value.postcode;
+  data.preffered_berlin_locations = value.locations
     .filter(({ selected }) => selected)
     .map(({ title }) => title);
-  data.availability = value.availability.reduce(
-    (
-      result: {
-        weekday: Weekday | "onetime";
-        timeSlots: (TimeSlot | "Weekdays" | "Weekends")[];
-      }[],
-      day,
-    ) => {
-      const parsedDay = {
-        weekday: day.weekday,
-        timeSlots: day.timeSlots
-          .filter(({ selected }) => selected)
-          .map(({ title }) => title),
-      };
-      if (parsedDay.timeSlots.length) result.push(parsedDay);
-      return result;
-    },
-    [],
-  );
-  data.languagesIntermediate = value.languagesIntermediate
+  data.schedule = value.availability
+    .reduce(
+      (
+        result: {
+          weekday: Weekday | "onetime";
+          timeSlots: (TimeSlot | "Weekdays" | "Weekends")[];
+        }[],
+        day,
+      ) => {
+        const parsedDay = {
+          weekday: day.weekday,
+          timeSlots: day.timeSlots
+            .filter(({ selected }) => selected)
+            .map(({ title }) => title),
+        };
+        if (parsedDay.timeSlots.length) result.push(parsedDay);
+        return result;
+      },
+      [],
+    )
+    .map(({ weekday, timeSlots }) => `${weekday}:${timeSlots.join(",")}`);
+  data.translate_languages = value.languagesIntermediate
     .filter(({ selected }) => selected)
     .map(({ title }) => title);
-  data.languagesFluent = value.languagesFluent
+  data.languages = value.languagesFluent
     .filter(({ selected }) => selected)
     .map(({ title }) => title);
   data.activities = value.activities
     .filter(({ selected }) => selected)
     .map(({ title }) => title);
-  data.certOfGoodConduct = value.certOfGoodConduct;
-  data.certMeaslesVaccination = value.certMeaslesVaccination;
-  data.leadFrom = value.leadFrom
+  data.if_good_conduct_certificate = !!value.certOfGoodConduct;
+  data.if_measles_vaccination = !!value.certMeaslesVaccination;
+  data.lead_from = value.leadFrom
     .filter(({ selected }) => selected)
-    .map(({ title }) => title);
+    .map(({ title }) => title)
+    .join(",");
   data.skills = value.skills
     .filter(({ selected }) => selected)
     .map(({ title }) => title);
-  data.comments = value.comments;
-  data.consent = value.consent;
+  data.schedule_comments = value.comments;
+  data.languages_comments = value.comments;
+  data.activities_comments = value.comments;
+  data.lead_from_comments = String(value.consent);
 
   return data;
 }

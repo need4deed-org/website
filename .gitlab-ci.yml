@@ -7,15 +7,15 @@ lint_job:
   stage: lint
   image: node:20-alpine
   script:
-    - npm install
-    - npm run lint
+    - yarn install
+    - yarn lint
 
 test_job:
   stage: test
   image: node:20-alpine
   script:
-    - npm install
-    - npm run test
+    - yarn install
+    - yarn test
 
 validate_job:
   stage: test
@@ -29,8 +29,8 @@ build_job:
   stage: build
   image: node:20-alpine
   script:
-    - npm install
-    - npm run build
+    - yarn install
+    - yarn build
   artifacts:
     paths:
       - dist
@@ -39,4 +39,4 @@ clean_ci_for_amplify:
   stage: test
   image: node:20-alpine
   script:
-    - npm ci
+    - yarn install --frozen-lockfile

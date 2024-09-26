@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { OpportunityParams } from "../../types";
+import { OpportunityParams } from "../../config/types";
 import {
   getFilter,
   getUrlWithEncodedParams,

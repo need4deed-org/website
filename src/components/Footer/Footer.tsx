@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { HashLink } from "react-router-hash-link";
 
-import { Subpages } from "../../types";
+import { Subpages } from "../../config/types";
 import Sponsors from "../Sponsors/Sponsors";
 import "./Footer.css";
 

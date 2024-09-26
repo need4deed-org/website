@@ -1,11 +1,11 @@
 import { FC, MutableRefObject, createContext, useEffect, useRef } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
+import { Subpages } from "./config/types";
 import Home from "./pages/Home";
 import Land404 from "./pages/Land404";
 import PastEvents from "./pages/PastEvents";
 import Subpage from "./pages/Subpage";
-import { Subpages } from "./types";
 
 export const AppContainerContext = createContext<
   MutableRefObject<HTMLDivElement | null>

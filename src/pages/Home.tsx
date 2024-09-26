@@ -11,7 +11,7 @@ import IFrame from "../components/IFrame";
 import Main from "../components/Main/Main";
 import VolunteerOpportunity from "../components/VolunteerOpportunity/VolunteerOpportunity";
 import VolunteerWorkflow from "../components/VolunteerWorkflow/VolunteerWorkflow";
-import { Lang } from "../types";
+import { Lang } from "../config/types";
 import { isEnumValue, setLangDirection } from "../utils";
 
 function Home() {

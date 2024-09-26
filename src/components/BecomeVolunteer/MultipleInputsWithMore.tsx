@@ -1,8 +1,8 @@
 import { FieldApi, FieldComponent } from "@tanstack/react-form";
 import { MouseEvent, RefObject, useState } from "react";
 
+import { PrefixObjectAccessor } from "../../config/types";
 import useOutsideClick from "../../hooks/useOutsideClick";
-import { PrefixObjectAccessor } from "../../types";
 import { VolunteerData, VolunteerDataKeysArrays } from "./dataStructure";
 
 interface Props {

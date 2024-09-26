@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
+import { Lang } from "../../config/types";
 import useMatchMedia from "../../hooks/useMatchMedia";
-import { Lang } from "../../types";
 import { getMainCtaUrl } from "../../utils";
 import "./Main.css";
 

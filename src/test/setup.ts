@@ -12,4 +12,4 @@ Object.defineProperty(window, "matchMedia", {
 export { fireEventListenerCB, setMockSelector };
 
 // init i18next
-import "../i18next";
+import "../config/i18next";

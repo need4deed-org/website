@@ -11,11 +11,12 @@ import Agreement from "../components/Legal/Agreement";
 import DataPrivacy from "../components/Legal/DataPrivacy";
 import LegalNotice from "../components/Legal/Notice";
 import OpportunityCards from "../components/OpportunityCards";
-import { Lang, OpportunityType, Subpages } from "../types";
+import { urlApi } from "../config/constants";
+import { Lang, OpportunityType, Subpages } from "../config/types";
 import { isEnumValue, setLangDirection } from "../utils";
 
-const urlOpportunitiesAlfred =
-  import.meta.env.VITE_API_URL ?? "http://localhost:8000/api/opportunity/";
+const urlOpportunity = `${urlApi}/opportunity/`;
+
 interface Props {
   type: Subpages;
 }
@@ -27,7 +28,7 @@ function Subpage({ type }: Props) {
   const containerRef = useContext(AppContainerContext);
 
   useEffect(() => {
-    urlOpportunitiesAlfred;
+    urlOpportunity;
     if (isEnumValue(Lang, lng)) {
       i18n.changeLanguage(lng);
       setLangDirection(containerRef, lng as Lang);
@@ -85,7 +86,7 @@ function Subpage({ type }: Props) {
       case Subpages.OPPORTUNITIES_TEST:
         return (
           <OpportunityCards
-            dataFileUrl={urlOpportunitiesAlfred}
+            dataFileUrl={urlOpportunity}
             opportunityParams={{
               search: { status: ["Volunteers Needed", "Search in process"] },
               primaryKeys: ["title", "name"],
@@ -108,7 +109,7 @@ function Subpage({ type }: Props) {
         return (
           <OpportunityCards
             type={OpportunityType.ACCOMPANYING}
-            dataFileUrl={urlOpportunitiesAlfred}
+            dataFileUrl={urlOpportunity}
             opportunityParams={{
               search: { status: ["Not started"] },
               primaryKeys: ["title", "name"],
