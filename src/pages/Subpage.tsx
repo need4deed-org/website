@@ -95,8 +95,8 @@ function Subpage({ type }: Props) {
               type: "activities",
               name: "title",
               languages: "languages",
-              time: "timeslots",
-              location: "locations",
+              time: "schedule_str",
+              location: "berlin_locations",
               vo: "vo_information",
             }}
           />
