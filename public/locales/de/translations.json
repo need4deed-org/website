@@ -11,6 +11,16 @@
     "slogan": "Bedarfsorientierte ehrenamtliche Unterstützung für Geflüchtete in Berlin",
     "beVolunteerButton": "Mach mit ehrenamlich!"
   },
+  "announcement": {
+    "emptyList": {
+      "header": "Angebote werden aktualisiert...",
+      "para": "Wir aktualisieren gerade die Freiwilligenangebote. Dies kann einige Zeit dauern. Wir empfehlen, die Seite später am Tag erneut zu aktualisieren. Wenn Sie Fragen haben, wenden Sie sich bitte an volunteer@need4deed.org"
+    },
+    "spinner": {
+      "header": "Lade Möglichkeiten...",
+      "para": ""
+    }
+  },
   "iframeTitles": {
     "calendar": "Kalender",
     "howToVolunteer": "Mach mit! - Ehrenamtliches Engagement"

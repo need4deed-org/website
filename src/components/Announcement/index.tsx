@@ -4,12 +4,12 @@ interface Props {
   copies: string;
 }
 
-export default function Annoucement({ copies }: Props) {
+export default function Announcement({ copies }: Props) {
   const { t } = useTranslation();
   return (
     <div className="n4d-container">
-      <h1>{t(`${copies}.header`)}</h1>
-      <p>{t(`${copies}.para`)}</p>
+      <h1>{t(`announcement.${copies}.header`)}</h1>
+      <p>{t(`announcement.${copies}.para`)}</p>
     </div>
   );
 }

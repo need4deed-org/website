@@ -74,3 +74,12 @@ export type PrefixObjectAccessor<T extends object, TDepth extends any[]> = {
         | `${PrefixFromDepth<K, TDepth>}${DeepKeys<T[K], [TDepth]>}`
     : never;
 }[keyof T];
+
+export enum ListsOptions {
+  LOCATIONS = "locations",
+  LANGUAGES = "languages",
+  ACTIVITIES = "activities",
+  SKILLS = "skills",
+  LEADS = "leads",
+}
+export type ListsOptionsType = `${ListsOptions}`;

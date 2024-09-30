@@ -6,29 +6,22 @@ import {
   Skill,
   VolunteerDataKeysArrays,
 } from "../../components/BecomeVolunteer/dataStructure";
-import { urlApi } from "../../config/constants";
+import { ListsOptions } from "../../config/types";
+import useListsOptions from "./useListsOptions";
 
 export default function useList<T>(listType: VolunteerDataKeysArrays) {
   const [list, setList] = useState<T[]>([]);
-
-  async function fetchList(url: string) {
-    return fetch(url).then(response => {
-      if (response.ok) return response.json();
-      throw new Error(response.statusText);
-    });
-  }
+  const listsOptions = useListsOptions();
 
   useEffect(() => {
     async function getList(listType: VolunteerDataKeysArrays) {
-      let items: T[];
       switch (listType) {
         case VolunteerDataKeysArrays.ACTIVITIES:
           setList(Object.values(Activity) as T[]);
           break;
         case VolunteerDataKeysArrays.LANGUAGESFLUENT:
         case VolunteerDataKeysArrays.LANGUAGESINTERMEDIATE:
-          items = await fetchList(`${urlApi}language/`);
-          setList(items);
+          setList(listsOptions[ListsOptions.LANGUAGES] as T[]);
           break;
         case VolunteerDataKeysArrays.LOCATIONS:
           setList(Object.values(District) as T[]);
@@ -43,7 +36,7 @@ export default function useList<T>(listType: VolunteerDataKeysArrays) {
     }
 
     getList(listType);
-  }, [listType]);
+  }, [listType, listsOptions]);
 
   return list;
 }

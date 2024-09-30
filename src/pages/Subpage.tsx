@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useNavigate, useParams } from "react-router-dom";
 
 import { AppContainerContext } from "../App";
-import Annoucement from "../components/Announcement";
+import Announcement from "../components/Announcement";
 import BecomeVolunteer from "../components/BecomeVolunteer";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
@@ -11,11 +11,9 @@ import Agreement from "../components/Legal/Agreement";
 import DataPrivacy from "../components/Legal/DataPrivacy";
 import LegalNotice from "../components/Legal/Notice";
 import OpportunityCards from "../components/OpportunityCards";
-import { urlApi } from "../config/constants";
+import { urlApiOpportunity } from "../config/constants";
 import { Lang, OpportunityType, Subpages } from "../config/types";
 import { isEnumValue, setLangDirection } from "../utils";
-
-const urlOpportunity = `${urlApi}/opportunity/`;
 
 interface Props {
   type: Subpages;
@@ -28,7 +26,7 @@ function Subpage({ type }: Props) {
   const containerRef = useContext(AppContainerContext);
 
   useEffect(() => {
-    urlOpportunity;
+    urlApiOpportunity;
     if (isEnumValue(Lang, lng)) {
       i18n.changeLanguage(lng);
       setLangDirection(containerRef, lng as Lang);
@@ -63,7 +61,7 @@ function Subpage({ type }: Props) {
             }}
           />
         );
-      case Subpages.OPPORTUNITIES:
+      case Subpages.OPPORTUNITIES_TEST:
         return (
           <OpportunityCards
             dataFileUrl="/data/opportunities.json"
@@ -83,10 +81,10 @@ function Subpage({ type }: Props) {
             }}
           />
         );
-      case Subpages.OPPORTUNITIES_TEST:
+      case Subpages.OPPORTUNITIES:
         return (
           <OpportunityCards
-            dataFileUrl={urlOpportunity}
+            dataFileUrl={urlApiOpportunity}
             opportunityParams={{
               search: { status: ["Volunteers Needed", "Search in process"] },
               primaryKeys: ["title", "name"],
@@ -104,12 +102,12 @@ function Subpage({ type }: Props) {
       case Subpages.BECOME_VOLUNTEER:
         return <BecomeVolunteer />;
       case Subpages.THANK_YOU:
-        return <Annoucement copies="becomeVolunteer.thanksVolunteer" />;
+        return <Announcement copies="becomeVolunteer.thanksVolunteer" />;
       case Subpages.ACCOMPANYING_TEST:
         return (
           <OpportunityCards
             type={OpportunityType.ACCOMPANYING}
-            dataFileUrl={urlOpportunity}
+            dataFileUrl={urlApiOpportunity}
             opportunityParams={{
               search: { status: ["Not started"] },
               primaryKeys: ["title", "name"],

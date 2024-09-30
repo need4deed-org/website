@@ -1,7 +1,7 @@
 import { KeyMap, OpportunityParams, OpportunityType } from "../../config/types";
 import useOpportunities from "../../hooks/api/useOpportunities";
 import { mapOpportunity } from "../../utils";
-import Annoucement from "../Announcement";
+import Announcement from "../Announcement";
 import OpportunityCard from "./OpportunityCard";
 import "./index.css";
 
@@ -40,6 +40,6 @@ export default function OpportunityCards({
         ))}
     </div>
   ) : (
-    <Annoucement copies={loading ? "spinner" : "emptyList"} />
+    <Announcement copies={loading ? "spinner" : "emptyList"} />
   );
 }
