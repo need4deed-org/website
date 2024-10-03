@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Land404 from "./pages/Land404";
 import PastEvents from "./pages/PastEvents";
 import Subpage from "./pages/Subpage";
+import JsonLd from "./components/JsonLd";
 
 export const AppContainerContext = createContext<
   MutableRefObject<HTMLDivElement | null>
@@ -22,6 +23,7 @@ const App: FC = () => {
 
   return (
     <AppContainerContext.Provider value={containerRef}>
+      <JsonLd />
       <div ref={containerRef} className="app-container">
         <BrowserRouter>
           <Routes>
