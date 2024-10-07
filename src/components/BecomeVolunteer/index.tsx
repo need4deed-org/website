@@ -31,6 +31,7 @@ import "./index.css";
 import MultipleInputsWithMore from "./MultipleInputsWithMore";
 import SimpleInputField from "./SimpleInputField";
 import { isValidPLZ, parseFormStateDTO } from "./utils";
+import { getImageUrl } from "../../utils/index";
 
 const timeSlots: Selected<TimeSlot>[] = Object.values(TimeSlot).map(
   timeSlot => ({
@@ -146,7 +147,7 @@ export default function BecomeVolunteer() {
       <div className="volunteer-container-header">
         <h1>
           {t("becomeVolunteer.header").toLocaleUpperCase()}
-          <img src="/images/N4D-logo-purple-on-transparent-h.png" />
+          <img src={getImageUrl("N4D-logo-purple-on-transparent-h.webp")} />
         </h1>
         {opportunity.title ? (
           <h6>

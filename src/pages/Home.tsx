@@ -13,6 +13,7 @@ import VolunteerOpportunity from "../components/VolunteerOpportunity/VolunteerOp
 import VolunteerWorkflow from "../components/VolunteerWorkflow/VolunteerWorkflow";
 import { Lang } from "../config/types";
 import { isEnumValue, setLangDirection } from "../utils";
+import { getImageUrl } from "../utils/index"
 
 function Home() {
   const { i18n, t } = useTranslation();
@@ -29,9 +30,16 @@ function Home() {
     }
   }, [containerRef, lng, i18n, navigate]);
 
+  const navbarMainContainerStyle = {
+    backgroundImage: `url(${getImageUrl("need4deed.webp")})`,
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+  };
+
+
   return (
     <>
-      <div className="navbar-main-container">
+      <div className="navbar-main-container" style={navbarMainContainerStyle}>
         <Header />
         <Main />
       </div>

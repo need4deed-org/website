@@ -102,25 +102,25 @@ describe("utils", () => {
 
   describe("getOpportunityImg()", () => {
     it("should return the correct image for a valid type", () => {
-      expect(getOpportunityImg("Accompanying")).toBe(
-        "/images/type-accompanying.jpg",
+      expect(getOpportunityImg("Accompanying")).toContain(
+        "/images/type-accompanying.webp",
       );
-      expect(getOpportunityImg("Arts, Music")).toBe("/images/type-arts.jpg");
-      expect(getOpportunityImg("language")).toBe("/images/type-language.jpg"); // Case-insensitive
+      expect(getOpportunityImg("Arts, Music")).toContain("/images/type-arts.webp");
+      expect(getOpportunityImg("language")).toContain("/images/type-language.webp"); // Case-insensitive
     });
 
     it("should return the default image for an empty string", () => {
-      expect(getOpportunityImg("")).toBe("/images/type-assistance.jpg");
+      expect(getOpportunityImg("")).toContain("/images/type-assistance.webp");
     });
 
     it("should return the default image for a non-string input", () => {
-      expect(getOpportunityImg(123 as unknown as string)).toBe(
-        "/images/type-assistance.jpg",
+      expect(getOpportunityImg(123 as unknown as string)).toContain(
+        "/images/type-assistance.webp",
       );
     });
 
     it("should return the default image for an unknown type", () => {
-      expect(getOpportunityImg("foobar")).toBe("/images/type-assistance.jpg");
+      expect(getOpportunityImg("foobar")).toContain("/images/type-assistance.webp");
     });
   });
 

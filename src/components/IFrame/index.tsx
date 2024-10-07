@@ -15,7 +15,7 @@ export default function IFrame({
     <div className={wrappingClassName}>
       <div className="n4d-container iframe-container">
         {title && <h2>{title}</h2>}
-        <iframe src={src} />
+        <iframe src={src} loading="lazy" />
       </div>
     </div>
   );

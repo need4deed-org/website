@@ -14,6 +14,7 @@ import OpportunityCards from "../components/OpportunityCards";
 import { urlApiOpportunity } from "../config/constants";
 import { Lang, OpportunityType, Subpages } from "../config/types";
 import { isEnumValue, setLangDirection } from "../utils";
+import { getImageUrl } from "../utils/index";
 
 interface Props {
   type: Subpages;
@@ -127,9 +128,17 @@ function Subpage({ type }: Props) {
     }
   };
 
+  const navbarMainContainerStyle = {
+    backgroundImage: `url(${getImageUrl("need4deed.webp")})`,
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+  };
+
+
   return (
     <>
-      <div className="navbar-main-container">
+      <div className="navbar-main-container" style={navbarMainContainerStyle}>
+
         <Header />
       </div>
       {component(type)}

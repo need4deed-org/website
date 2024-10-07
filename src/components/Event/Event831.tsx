@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { getImageUrl } from "../../utils/index"
 import "./index.css";
 
 const registrationHref = "";
@@ -6,11 +7,19 @@ const registrationHref = "";
 
 export default function Event831() {
   const { t } = useTranslation();
+  const sommerFestPicStyle = {
+    backgroundImage: `url(${getImageUrl("event831.webp")})`,
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    width: 'clamp(35rem, 20vw, 45rem)',
+    height: 'unset',
+  };
+
   return (
     <div className="n4d-container event-container">
       <h1>{t("event.header")}</h1>
       <div className="pic-and-text">
-        <div className="sommer-fest-pic"></div>
+        <div className="sommer-fest-pic" style={sommerFestPicStyle}></div>
         <div>
           <p>{t("event.paras.para1")}</p>
           <p>{t("event.paras.para2")}</p>
@@ -47,7 +56,7 @@ export default function Event831() {
       </div>
       <p>{t("event.final.feelFree")} </p>
       <img
-        src="/images/N4D-logo-purple-on-transparent-h.png"
+        src={getImageUrl("N4D-logo-purple-on-transparent-h.webp")}
         height="16"
         alt=""
       />

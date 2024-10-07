@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import "./VolunteerOpportunity.css";
+import { getImageUrl } from "../../utils/index";
 
 const carouselInterval = "6000";
 
@@ -10,7 +11,6 @@ interface Props {
 function VolunteerOpportunity({ wrappingClassName }: Props) {
   const { i18n, t } = useTranslation();
   const opportuinitiesUrl = `/opportunities/${i18n.language}`;
-
   return (
     <div
       id="carouselExampleAutoplaying"
@@ -30,7 +30,10 @@ function VolunteerOpportunity({ wrappingClassName }: Props) {
           className="n4d-full-space carousel-item"
           data-bs-interval={carouselInterval}
         >
-          <div className="translation-img volunteer-opportunity-img">
+          <div 
+            className="translation-img volunteer-opportunity-img"
+            style={{ backgroundImage: `url(${getImageUrl("translation.webp")})` }}
+          >
             <div className="n4d-full-space volunteer-opportunity-text">
               <h5>{t("volunteeringProjects.translationHeading")}</h5>
               <p>{t("volunteeringProjects.translationSubheading")}</p>
@@ -44,7 +47,10 @@ function VolunteerOpportunity({ wrappingClassName }: Props) {
           className="n4d-full-space carousel-item active"
           data-bs-interval={carouselInterval}
         >
-          <div className="become-a-mentor-img volunteer-opportunity-img">
+          <div 
+            className="become-a-mentor-img volunteer-opportunity-img"
+            style={{ backgroundImage: `url(${getImageUrl("mentor.webp")})` }}
+          >
             <div className="n4d-full-space volunteer-opportunity-text">
               <h5>{t("volunteeringProjects.overComeObstaclesHeading")}</h5>
               <p>{t("volunteeringProjects.overComeObstaclesSubheading")}</p>
@@ -58,7 +64,10 @@ function VolunteerOpportunity({ wrappingClassName }: Props) {
           className="n4d-full-space carousel-item"
           data-bs-interval={carouselInterval}
         >
-          <div className="child-care-img volunteer-opportunity-img">
+          <div 
+            className="child-care-img volunteer-opportunity-img"
+            style={{ backgroundImage: `url(${getImageUrl("child-care.webp")})` }}
+          >
             <div className="n4d-full-space volunteer-opportunity-text">
               <h5>{t("volunteeringProjects.childCareHeading")}</h5>
               <p>{t("volunteeringProjects.childCareSubheading")}</p>
@@ -72,7 +81,10 @@ function VolunteerOpportunity({ wrappingClassName }: Props) {
           className="n4d-full-space carousel-item"
           data-bs-interval={carouselInterval}
         >
-          <div className="sport-programmes-img volunteer-opportunity-img">
+          <div 
+            className="sport-programmes-img volunteer-opportunity-img"
+            style={{ backgroundImage: `url(${getImageUrl("sport-offer.webp")})` }}
+          >
             <div className="n4d-full-space volunteer-opportunity-text">
               <h5>{t("volunteeringProjects.sportProgramHeading")}</h5>
               <p>{t("volunteeringProjects.sportProgramSubheading")}</p>
@@ -107,6 +119,7 @@ function VolunteerOpportunity({ wrappingClassName }: Props) {
       </div>
     </div>
   );
+
 }
 
 export default VolunteerOpportunity;

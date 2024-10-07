@@ -3,9 +3,10 @@ import { Lang } from "../../config/types";
 import useMatchMedia from "../../hooks/useMatchMedia";
 import { getMainCtaUrl } from "../../utils";
 import "./Main.css";
+import { getImageUrl } from "../../utils/index";
 
-const urlLogoHorizontal = "/images/N4D-logo-purple-on-transparent-h.png";
-const urlLogoStacked = "/images/N4D-logo-purple-on-transparent-s.png";
+const urlLogoHorizontal = getImageUrl("N4D-logo-purple-on-transparent-h.webp");
+const urlLogoStacked = getImageUrl("N4D-logo-purple-on-transparent-s.webp");
 
 function Main() {
   const { t, i18n } = useTranslation();

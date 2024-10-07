@@ -47,14 +47,6 @@
   width: 100%;
 }
 
-.sommer-fest-pic {
-  background-image: url("/images/event831.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: clamp(35rem, 20vw, 45rem);
-  height: unset;
-}
-
 @media (max-width: 576px) {
   .pic-and-text {
     flex-direction: column;

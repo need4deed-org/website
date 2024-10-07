@@ -8,6 +8,7 @@ import {
   OpportunityParams,
   Subpages,
 } from "../config/types";
+import { CLOUDFRONT_URL } from "../config/constants"
 
 export function isEnumValue<E>(enumObject: object, value: E) {
   return typeof enumObject === "object"
@@ -33,28 +34,6 @@ export function setLangDirection(
   }
 }
 
-const typeToImg = {
-  accompanying: "/images/type-accompanying.jpg",
-  arts: "/images/type-arts.jpg",
-  assistance: "/images/type-assistance.jpg",
-  "clean-up": "/images/type-cleanup.jpg",
-  clothing: "/images/type-cloths.jpg",
-  consulting: "/images/type-assistance.jpg",
-  culture: "/images/type-culture.jpg",
-  daycare: "/images/type-daycare.jpg",
-  gardening: "/images/type-gardening.jpg",
-  it: "/images/type-tutoring.jpg",
-  language: "/images/type-language.jpg",
-  mentorship: "/images/type-mentorship.jpg",
-  reading: "/images/type-assistance.jpg",
-  renovation: "/images/type-renovation.jpg",
-  translation: "/images/type-language.jpg",
-  sports: "/images/type-sports.jpg",
-  tandem: "/images/type-tandem.jpg",
-  tutoring: "/images/type-tutoring.jpg",
-
-  default: "/images/type-assistance.jpg",
-};
 
 export function getOpportunityImg(type: string) {
   if (!type || typeof type !== "string") return typeToImg.default;
@@ -200,3 +179,31 @@ export function getMainCtaUrl({ lng, id = "", title = "" }: MainCtaUrl) {
       ? "https://forms.gle/yU4mg6YXfmheKmio6"
       : "https://forms.gle/XWnU4znoAFaU9HfW9";
 }
+
+export const getImageUrl = (imageName: string): string => {
+  return `${CLOUDFRONT_URL}/${imageName}`;
+};
+
+
+const typeToImg = {
+  accompanying: getImageUrl("type-accompanying.webp"),
+  arts: getImageUrl("type-arts.webp"),
+  assistance: getImageUrl("type-assistance.webp"),
+  "clean-up": getImageUrl("type-cleanup.webp"),
+  clothing: getImageUrl("type-cloths.webp"),
+  consulting: getImageUrl("type-assistance.webp"),
+  culture: getImageUrl("type-culture.webp"),
+  daycare: getImageUrl("type-daycare.webp"),
+  gardening: getImageUrl("type-gardening.webp"),
+  it: getImageUrl("type-tutoring.webp"),
+  language: getImageUrl("type-language.webp"),
+  mentorship: getImageUrl("type-mentorship.webp"),
+  reading: getImageUrl("type-assistance.webp"),
+  renovation: getImageUrl("type-renovation.webp"),
+  translation: getImageUrl("type-language.webp"),
+  sports: getImageUrl("type-sports.webp"),
+  tandem: getImageUrl("type-tandem.webp"),
+  tutoring: getImageUrl("type-tutoring.webp"),
+ 
+  default: getImageUrl("type-assistance.webp"),
+};

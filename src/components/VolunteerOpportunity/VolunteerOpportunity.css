@@ -19,22 +19,6 @@
   height: 100%;
 }
 
-.become-a-mentor-img {
-  background-image: url("/images/mentor.jpg");
-}
-
-.child-care-img {
-  background-image: url("/images/child-care.jpg");
-}
-
-.sport-programmes-img {
-  background-image: url("/images/sport-offer.jpg");
-}
-
-.translation-img {
-  background-image: url("/images/translation.jpg");
-}
-
 .volunteer-opportunity-img {
   position: relative;
   background-position: center;
