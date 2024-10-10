@@ -35,8 +35,8 @@ export enum Events {
 }
 
 export enum OpportunityType {
-  GENERAL = "general",
-  ACCOMPANYING = "accompanying",
+  GENERAL = "Volunteering",
+  ACCOMPANYING = "Accompanying",
 }
 
 // conjunction between keys and disjunction between possible values are applied for seach
