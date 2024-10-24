@@ -1,43 +1,37 @@
-import { KeyMap, OpportunityParams, OpportunityType } from "../../config/types";
+import { KeyMap, OpportunityParams } from "../../config/types";
 import useOpportunities from "../../hooks/api/useOpportunities";
+import useOpportunitiesFromFile from "../../hooks/api/useOpportunitiesFromFile";
 import { mapOpportunity } from "../../utils";
 import Announcement from "../Announcement";
 import OpportunityCard from "./OpportunityCard";
 import "./index.css";
 
 interface Props {
-  dataFileUrl: string;
+  url: string;
   opportunityParams: OpportunityParams;
   keyMap: KeyMap;
-  type?: OpportunityType;
 }
 
+const regexHttpSchema = RegExp("^(http|https)://.*$");
+
 export default function OpportunityCards({
-  dataFileUrl,
+  url,
   opportunityParams,
   keyMap,
-  type = OpportunityType.GENERAL,
 }: Props) {
-  const { opportunities, loading } = useOpportunities(
-    dataFileUrl,
-    opportunityParams,
-  );
+  const isUrl = url.toLowerCase().match(regexHttpSchema);
+  const useOpp = isUrl ? useOpportunities : useOpportunitiesFromFile;
+  const { opportunities, loading } = useOpp(url, opportunityParams);
 
-  return opportunities.length ? (
+  return opportunities?.length ? (
     <div className="n4d-container opportunity-container">
-      {opportunities
-        .filter(opportunity =>
-          opportunity.opportunity_type
-            ? opportunity.opportunity_type === type
-            : true,
-        )
-        .map((opportunity, idx) => (
-          <OpportunityCard
-            key={"opp" + idx}
-            opportunity={mapOpportunity(opportunity, keyMap)}
-            pre={false}
-          />
-        ))}
+      {opportunities.map((opportunity, idx) => (
+        <OpportunityCard
+          key={"opp" + idx}
+          opportunity={mapOpportunity(opportunity, keyMap)}
+          pre={false}
+        />
+      ))}
     </div>
   ) : (
     <Announcement copies={loading ? "spinner" : "emptyList"} />

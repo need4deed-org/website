@@ -75,11 +75,24 @@ export type PrefixObjectAccessor<T extends object, TDepth extends any[]> = {
     : never;
 }[keyof T];
 
-export enum ListsOptions {
+export enum HttpMethod {
+  GET = "GET",
+  HEAD = "HEAD",
+  POST = "POST",
+  PUT = "PUT",
+  DELETE = "DELETE",
+  TRACE = "TRACE",
+  OPTIONS = "OPTIONS",
+  CONNECT = "CONNECT",
+  PATCH = "PATCH",
+}
+
+export enum ListsOfOptions {
   LOCATIONS = "locations",
   LANGUAGES = "languages",
   ACTIVITIES = "activities",
   SKILLS = "skills",
   LEADS = "leads",
 }
-export type ListsOptionsType = `${ListsOptions}`;
+
+export type ListsOfOptionsType = Record<`${ListsOfOptions}`, string[]>;

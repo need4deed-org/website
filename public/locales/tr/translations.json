@@ -15,15 +15,13 @@
     "calendar": "Takvim",
     "howToVolunteer": "Harekete Geçin! - Gönüllü Olun"
   },
-  "announcement": {
-    "emptyList": {
-      "header": "Fırsatlar güncelleniyor...",
-      "para": "Şu anda gönüllülük fırsatlarını güncelliyoruz. Bu biraz zaman alabilir. Sayfayı gün içinde daha sonra yenilemenizi öneririz. Herhangi sorunuz varsa lütfen volunteer@need4deed.org ile iletişime geçin"
-    },
-    "spinner": {
-      "header": "Fırsatlar yükleniyor...",
-      "para": ""
-    }
+  "emptyList": {
+    "header": "Fırsatlar güncelleniyor...",
+    "para": "Şu anda gönüllülük fırsatlarını güncelliyoruz. Bu biraz zaman alabilir. Sayfayı gün içinde daha sonra yenilemenizi öneririz. Herhangi sorunuz varsa lütfen volunteer@need4deed.org ile iletişime geçin"
+  },
+  "spinner": {
+    "header": "Fırsatlar yükleniyor...",
+    "para": ""
   },
   "linkToPrevProj": "Mültecilerle Gönüllü Olmak Hakkında",
   "contactForRAC": {

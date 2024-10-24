@@ -1,5 +1,6 @@
 import { MutableRefObject } from "react";
 
+import { CLOUDFRONT_URL } from "../config/constants";
 import {
   AlfredOpportunity,
   KeyMap,
@@ -8,7 +9,6 @@ import {
   OpportunityParams,
   Subpages,
 } from "../config/types";
-import { CLOUDFRONT_URL } from "../config/constants"
 
 export function isEnumValue<E>(enumObject: object, value: E) {
   return typeof enumObject === "object"
@@ -33,7 +33,6 @@ export function setLangDirection(
     );
   }
 }
-
 
 export function getOpportunityImg(type: string) {
   if (!type || typeof type !== "string") return typeToImg.default;
@@ -180,10 +179,20 @@ export function getMainCtaUrl({ lng, id = "", title = "" }: MainCtaUrl) {
       : "https://forms.gle/XWnU4znoAFaU9HfW9";
 }
 
+export function resolveEnumKey<K extends string>(
+  enumObject: Record<K, string>,
+  value: string,
+) {
+  for (const key in enumObject) {
+    if (enumObject[key] === value) {
+      return key;
+    }
+  }
+  return "" as K; // If no match is found
+}
 export const getImageUrl = (imageName: string): string => {
   return `${CLOUDFRONT_URL}/${imageName}`;
 };
-
 
 const typeToImg = {
   accompanying: getImageUrl("type-accompanying.webp"),
@@ -204,6 +213,6 @@ const typeToImg = {
   sports: getImageUrl("type-sports.webp"),
   tandem: getImageUrl("type-tandem.webp"),
   tutoring: getImageUrl("type-tutoring.webp"),
- 
+
   default: getImageUrl("type-assistance.webp"),
 };

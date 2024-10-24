@@ -1,12 +1,12 @@
 import { FC, MutableRefObject, createContext, useEffect, useRef } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
+import JsonLd from "./components/JsonLd";
 import { Subpages } from "./config/types";
 import Home from "./pages/Home";
 import Land404 from "./pages/Land404";
 import PastEvents from "./pages/PastEvents";
 import Subpage from "./pages/Subpage";
-import JsonLd from "./components/JsonLd";
 
 export const AppContainerContext = createContext<
   MutableRefObject<HTMLDivElement | null>
@@ -86,6 +86,10 @@ const App: FC = () => {
             />
             <Route
               path={`/${Subpages.BECOME_VOLUNTEER}/:lng`}
+              element={<Subpage type={Subpages.BECOME_VOLUNTEER} />}
+            />
+            <Route
+              path={`/${Subpages.BECOME_VOLUNTEER}`}
               element={<Subpage type={Subpages.BECOME_VOLUNTEER} />}
             />
             <Route

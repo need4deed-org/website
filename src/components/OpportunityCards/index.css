@@ -22,6 +22,7 @@
 .opportunity-container a {
   margin-top: auto;
   align-self: end;
+  padding: 0.5rem 1rem;
 }
 
 .opportunity-card {

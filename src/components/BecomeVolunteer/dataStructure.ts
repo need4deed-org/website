@@ -1,86 +1,130 @@
 import { FieldApi } from "@tanstack/react-form";
+import { ListsOfOptionsType } from "../../config/types";
 
-export interface Selected<T> {
-  title: T;
+export interface Selected {
+  title: string;
   selected: boolean;
 }
 
-export enum District {
-  MITTE = "Mitte",
-  MOABIT = "Moabit",
-  WEDDING = "Wedding",
-  FRIEDRICHSHAIN = "Friedrichshain",
-  KREUZBERG = "Kreuzberg",
-  PANKOW = "Pankow",
-  PRENZLAUER_BERG = "Prenzlauer Berg",
-  WEISSENSEE = "Weißensee",
-  CHARLOTTENBURG = "Charlottenburg",
-  WILMERSDORF = "Wilmersdorf",
-  SPANDAU = "Spandau",
-  STEGLITZ = "Steglitz",
-  ZEHLENDORF = "Zehlendorf",
-  TEMPELHOF = "Tempelhof",
-  SCHOENEBERG = "Schöneberg",
-  NEUKOELLN = "Neukölln",
-  TREPTOW = "Treptow",
-  KOEPENICK = "Köpenick",
-  MARZAHN = "Marzahn",
-  HELLERSDORF = "Hellersdorf",
-  LICHTENBERG = "Lichtenberg",
-  REINICKENDORF = "Reinickendorf",
-  TEGEL = "Tegel",
-  RUDOW = "Rudow",
-  REMOTELY = "Remotely",
-}
-
-export enum Activity {
-  DAYCARE = "Daycare",
-  PLAYING = "Playing sports with children",
-  TEACHING = "Teaching German",
-  TRANSLATION = "Translation at Accommodation Centers",
-  PHONE = "Phone Translation",
-  ACCOMPANYING = "Accompanying to doctors' or government",
-  SUPPORT = "Filling out forms",
-  ARTS_CRAFTS = "Arts & Crafts",
-  GARDENING = "Gardening",
-  ONE_DAY = "One-day Volunteering (e.g. Festivals, Cleanups)",
-}
-
-export enum Skill {
-  WOODWORKING = "Woodworking",
-  DRAWING = "Drawing",
-  PAINTING = "Painting",
-  SEWING = "Sewing",
-  KNITTING = "Knitting",
-  REPAIRS = "Repairs",
-  COOKING = "Cooking",
-  TEACHING = "Teaching",
-  PROGRAMMING = "Programming",
-  PUBLIC_SPEAKING = "Public speaking",
-  GARDENING = "Gardening",
-  LANDSCAPING = "Landscaping",
-  CARPENTRY = "Carpentry",
-  DECORATING = "Decorating",
-  BIKE_REPAIRS = "Bike repairs",
-  PHOTOGRAPHY = "Photography",
-  VIDEOGRAPHY = "Videography",
-  MAKEUP = "Makeup",
-  COPYWRITING = "Copywriting",
-  YOGA = "Yoga",
-  FITNESS = "Fitness",
-  FOOTBALL = "Football",
-  BASKETBALL = "Basketball",
-  DANCE = "Dance",
-  CHESS = "Chess",
-  MANAGEMENT = "Management",
-  SMM = "SMM",
-  MEDIATION = "Mediation",
-  EVENT_PLANNING = "Event planning",
-  COACHING = "Coaching",
-  GUITAR = "Guitar",
-  PIANO = "Piano",
-  SINGING = "Singing",
-}
+export const fallbackLists: ListsOfOptionsType = {
+  locations: [
+    "Mitte",
+    "Moabit",
+    "Wedding",
+    "Friedrichshain",
+    "Kreuzberg",
+    "Pankow",
+    "Prenzlauer Berg",
+    "Weißensee",
+    "Charlottenburg",
+    "Wilmersdorf",
+    "Spandau",
+    "Steglitz",
+    "Zehlendorf",
+    "Tempelhof",
+    "Schöneberg",
+    "Neukölln",
+    "Treptow",
+    "Köpenick",
+    "Marzahn",
+    "Hellersdorf",
+    "Lichtenberg",
+    "Reinickendorf",
+    "Tegel",
+    "Rudow",
+    "Remotely",
+  ],
+  activities: [
+    "Daycare",
+    "Playing sports with children",
+    "Teaching German",
+    "Translation at Accommodation Centers",
+    "Phone Translation",
+    "Accompanying to doctors' or government",
+    "Filling out forms",
+    "Arts & Crafts",
+    "Gardening",
+    "One-day Volunteering (e.g. Festivals, Cleanups)",
+  ],
+  skills: [
+    "Woodworking",
+    "Drawing",
+    "Painting",
+    "Sewing",
+    "Knitting",
+    "Repairs",
+    "Cooking",
+    "Teaching",
+    "Programming",
+    "Public speaking",
+    "Gardening",
+    "Landscaping",
+    "Carpentry",
+    "Decorating",
+    "Bike repairs",
+    "Photography",
+    "Videography",
+    "Makeup",
+    "Copywriting",
+    "Yoga",
+    "Fitness",
+    "Football",
+    "Basketball",
+    "Dance",
+    "Chess",
+    "Management",
+    "SMM",
+    "Mediation",
+    "Event planning",
+    "Coaching",
+    "Guitar",
+    "Piano",
+    "Singing",
+  ],
+  languages: [
+    "Arabic",
+    "English",
+    "German",
+    "Farsi",
+    "Turkish",
+    "Russian",
+    "Ukrainian",
+    "Kurdish",
+    "Armenian",
+    "Belarusian",
+    "Chechen",
+    "Chinese",
+    "Czech",
+    "Dari",
+    "Dutch",
+    "French",
+    "Georgian",
+    "Greek",
+    "Hebrew",
+    "Hindi",
+    "Italian",
+    "Pashto",
+    "Polish",
+    "Punjabi",
+    "Romanes",
+    "Serbian",
+    "Somali",
+    "Spanish",
+    "Swedish",
+    "Urdu",
+    "Vietnamese",
+    "Other",
+  ],
+  leads: [
+    "Volunteering platform",
+    "Social media",
+    "A newsletter",
+    "Web search",
+    "Friends",
+    "Volunteer fair",
+    "Flyer/Poster",
+  ],
+};
 
 export enum Weekday {
   MONDAY = "monday",
@@ -101,60 +145,8 @@ export enum TimeSlot {
 
 export type Availability = Array<{
   weekday: Weekday | "onetime";
-  timeSlots: Selected<TimeSlot | "Weekdays" | "Weekends">[];
+  timeSlots: Selected[];
 }>;
-
-export enum Language {
-  ARABIC = "Arabic",
-  ENGLISH = "English",
-  GERMAN = "German",
-  FARSI = "Farsi",
-  TURKISH = "Turkish",
-  RUSSIAN = "Russian",
-  UKRAINIAN = "Ukrainian",
-  KURDISH = "Kurdish",
-
-  ARMENIAN = "Armenian",
-  BELARUSIAN = "Belarusian",
-  CHECHEN = "Chechen",
-  CHINESE = "Chinese",
-  CZECH = "Czech",
-  DARI = "Dari",
-  DUTCH = "Dutch",
-  FRENCH = "French",
-  GEORGIAN = "Georgian",
-  GREEK = "Greek",
-  HEBREW = "Hebrew",
-  HINDI = "Hindi",
-  ITALIAN = "Italian",
-  PASHTO = "Pashto",
-  POLISH = "Polish",
-  PUNJABI = "Punjabi",
-  ROMANES = "Romanes",
-  SERBIAN = "Serbian",
-  SOMALI = "Somali",
-  SPANISH = "Spanish",
-  SWEDISH = "Swedish",
-  URDU = "Urdu",
-  VIETNAMESE = "Vietnamese",
-
-  OTHER = "Other",
-}
-
-export enum LangUse {
-  MAIN = "main",
-  OCCASIONAL = "occasional",
-}
-
-export enum Lead {
-  VOLUNTEERING_PLATFORM = "Volunteering platform",
-  SOCIAL_MEDIA = "Social media",
-  NEWSLETTER = "A newsletter",
-  WEB_SEARCH = "Web search",
-  FRIENDS = "Friends",
-  VOLUNTEER_FAIR = "Volunteer fair",
-  FLYER = "Flyer/Poster",
-}
 
 export interface VolunteerData {
   opportunityId: string;
@@ -162,15 +154,16 @@ export interface VolunteerData {
   email: string;
   phone: string;
   postcode: string;
-  locations: Selected<District>[];
+  locations: Selected[];
   availability: Availability;
-  languagesFluent: Selected<Language>[];
-  languagesIntermediate: Selected<Language>[];
-  activities: Selected<Activity>[];
-  skills: Selected<Skill>[];
+  languagesNative: Selected[];
+  languagesFluent: Selected[];
+  languagesIntermediate: Selected[];
+  activities: Selected[];
+  skills: Selected[];
   certOfGoodConduct: boolean | undefined;
   certMeaslesVaccination: boolean | undefined;
-  leadFrom: Selected<Lead>[];
+  leadFrom: Selected[];
   comments: string;
   consent: boolean | undefined;
 }
@@ -179,6 +172,7 @@ export type VolunteerDataKeys = keyof VolunteerData;
 export type VolunteerDataTypes = VolunteerData[VolunteerDataKeys];
 export enum VolunteerDataKeysArrays {
   LOCATIONS = "locations",
+  LANGUAGESNATIVE = "languagesNative",
   LANGUAGESFLUENT = "languagesFluent",
   LANGUAGESINTERMEDIATE = "languagesIntermediate",
   ACTIVITIES = "activities",
@@ -191,21 +185,19 @@ export interface VolunteerParsedData {
   full_name: string;
   phone: string;
   email: string;
-  schedule_comments: string;
   postal_code: number;
-  languages_comments: string;
   if_good_conduct_certificate: boolean;
   if_measles_vaccination: boolean;
-  activities_comments: string;
   lead_from: string;
-  lead_from_comments: string;
-  origin_opportunity_id: number;
-  schedule: string[];
-  preffered_berlin_locations: string[];
-  languages: string[];
+  origin_opportunity_id: number | undefined;
+  schedule: [number, string][];
+  preferred_berlin_locations: string[];
   activities: string[];
   skills: string[];
-  translate_languages: string[];
+  native_languages: string[];
+  fluent_languages: string[];
+  intermediate_languages: string[];
+  comments: string;
 }
 
 export type FieldApiCustom = FieldApi<

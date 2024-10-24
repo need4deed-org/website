@@ -5,20 +5,15 @@ import { useTranslation } from "react-i18next";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 
 import { urlApi } from "../../config/constants";
-import { Subpages } from "../../config/types";
+import { ListsOfOptions, Subpages } from "../../config/types";
 import useList from "../../hooks/api/useList";
 import { usePostRequest } from "../../hooks/api/usePostRequest";
+import { getImageUrl } from "../../utils/index";
 import UploadIcon from "../svg/Upload";
 import {
-  Activity,
   Availability,
-  District,
   FieldApiCustom,
-  Language,
-  LangUse,
-  Lead,
   Selected,
-  Skill,
   TimeSlot,
   VolunteerData,
   VolunteerDataKeysArrays,
@@ -31,14 +26,11 @@ import "./index.css";
 import MultipleInputsWithMore from "./MultipleInputsWithMore";
 import SimpleInputField from "./SimpleInputField";
 import { isValidPLZ, parseFormStateDTO } from "./utils";
-import { getImageUrl } from "../../utils/index";
 
-const timeSlots: Selected<TimeSlot>[] = Object.values(TimeSlot).map(
-  timeSlot => ({
-    title: timeSlot,
-    selected: false,
-  }),
-);
+const timeSlots: Selected[] = Object.values(TimeSlot).map(timeSlot => ({
+  title: timeSlot,
+  selected: false,
+}));
 const availability: Availability = Object.values(Weekday).map(weekday => ({
   weekday,
   timeSlots,
@@ -72,43 +64,33 @@ export default function BecomeVolunteer() {
   };
 
   const refLocations = useRef<HTMLDivElement>(null);
+  const refLanguagesNative = useRef<HTMLDivElement>(null);
   const refLanguagesFluent = useRef<HTMLDivElement>(null);
   const refLanguagesIntermediate = useRef<HTMLDivElement>(null);
   const refActivities = useRef<HTMLDivElement>(null);
   const refSkills = useRef<HTMLDivElement>(null);
   const refLeadFrom = useRef<HTMLDivElement>(null);
 
-  const locations = useList<District>(VolunteerDataKeysArrays.LOCATIONS).map(
-    title => ({
-      title,
-      selected: false,
-    }),
-  );
-  const activities = useList<Activity>(VolunteerDataKeysArrays.ACTIVITIES).map(
-    title => ({
-      title,
-      selected: false,
-    }),
-  );
-  const skills = useList<Skill>(VolunteerDataKeysArrays.SKILLS).map(title => ({
+  const locations = useList(ListsOfOptions.LOCATIONS).map(title => ({
     title,
     selected: false,
   }));
-  const languages = useList<{
-    title: Language;
-    use: LangUse;
-  }>(VolunteerDataKeysArrays.LANGUAGESFLUENT)
-    .sort(a => (a.use === LangUse.MAIN ? -1 : 1))
-    .map(({ title }) => ({
-      title,
-      selected: false,
-    }));
-  const leadFrom = useList<Lead>(VolunteerDataKeysArrays.LEADFROM).map(
-    title => ({
-      title,
-      selected: false,
-    }),
-  );
+  const activities = useList(ListsOfOptions.ACTIVITIES).map(title => ({
+    title,
+    selected: false,
+  }));
+  const skills = useList(ListsOfOptions.SKILLS).map(title => ({
+    title,
+    selected: false,
+  }));
+  const languages = useList(ListsOfOptions.LANGUAGES).map(title => ({
+    title,
+    selected: false,
+  }));
+  const leadFrom = useList(ListsOfOptions.LEADS).map(title => ({
+    title,
+    selected: false,
+  }));
 
   const formVolunteer = useForm<VolunteerData>({
     defaultValues: {
@@ -119,6 +101,7 @@ export default function BecomeVolunteer() {
       postcode: "",
       locations,
       availability,
+      languagesNative: languages,
       languagesFluent: languages,
       languagesIntermediate: languages,
       activities,
@@ -352,17 +335,50 @@ export default function BecomeVolunteer() {
             {t("becomeVolunteer.fields.languages.header")}
           </HeaderWithHelp>
           <formVolunteer.Field
-            name="languagesFluent"
+            name="languagesNative"
             validators={{
               onBlur: ({ value }) => {
                 const isSelected = !!value.filter(({ selected }) => selected)
                   .length;
                 return isSelected
                   ? undefined
-                  : t("becomeVolunteer.fields.languages.languagesFluent.error");
+                  : t("becomeVolunteer.fields.languages.languagesNative.error");
               },
             }}
           >
+            {fieldLanguagesNative => {
+              return (
+                <>
+                  <h6>
+                    {t(
+                      "becomeVolunteer.fields.languages.languagesNative.header",
+                    )}
+                  </h6>
+                  <div
+                    ref={refLanguagesNative}
+                    onClick={() => {
+                      setTimeout(fieldLanguagesNative.handleBlur, 0);
+                    }}
+                    className="volunteer-chip-list volunteer-pick"
+                  >
+                    <MultipleInputsWithMore
+                      refParent={refLanguagesNative}
+                      FieldTag={formVolunteer.Field}
+                      field={
+                        fieldLanguagesNative as FieldApi<
+                          VolunteerData,
+                          VolunteerDataKeysArrays
+                        >
+                      }
+                      name={VolunteerDataKeysArrays.LANGUAGESNATIVE}
+                    />
+                    <FieldInfo field={fieldLanguagesNative as FieldApiCustom} />
+                  </div>
+                </>
+              );
+            }}
+          </formVolunteer.Field>
+          <formVolunteer.Field name="languagesFluent">
             {fieldLanguagesFluent => {
               return (
                 <>

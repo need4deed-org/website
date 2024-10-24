@@ -53,7 +53,7 @@ export default function Translation({ opportunity, pre = false }: Props) {
       <p>{opportunity.time}</p>
       <h6>Location:</h6>
       <p>{opportunity.location}</p>
-      <a className="btn n4d-primary-btn" href={urlMainCTA} target="_blank">
+      <a className="btn n4d-cta" href={urlMainCTA} target="_blank">
         {titleBtn.at(-1) === "!" && isRtlLang(i18n.language as Lang)
           ? titleBtn.slice(0, -1)
           : titleBtn}

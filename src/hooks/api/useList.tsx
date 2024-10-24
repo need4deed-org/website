@@ -1,42 +1,46 @@
+import { useQuery } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
+import { fallbackLists } from "../../components/BecomeVolunteer/dataStructure";
+import { urlApiVolunteer } from "../../config/constants";
 import {
-  Activity,
-  District,
-  Lead,
-  Skill,
-  VolunteerDataKeysArrays,
-} from "../../components/BecomeVolunteer/dataStructure";
-import { ListsOptions } from "../../config/types";
-import useListsOptions from "./useListsOptions";
+  HttpMethod,
+  ListsOfOptions,
+  ListsOfOptionsType,
+} from "../../config/types";
+import { fetchFn } from "./utils";
 
-export default function useList<T>(listType: VolunteerDataKeysArrays) {
-  const [list, setList] = useState<T[]>([]);
-  const listsOptions = useListsOptions();
+export default function useList(listType: ListsOfOptions) {
+  const [list, setList] = useState<string[]>([]);
+  const [listsOptions] = useListQuery();
 
   useEffect(() => {
-    async function getList(listType: VolunteerDataKeysArrays) {
-      switch (listType) {
-        case VolunteerDataKeysArrays.ACTIVITIES:
-          setList(Object.values(Activity) as T[]);
-          break;
-        case VolunteerDataKeysArrays.LANGUAGESFLUENT:
-        case VolunteerDataKeysArrays.LANGUAGESINTERMEDIATE:
-          setList(listsOptions[ListsOptions.LANGUAGES] as T[]);
-          break;
-        case VolunteerDataKeysArrays.LOCATIONS:
-          setList(Object.values(District) as T[]);
-          break;
-        case VolunteerDataKeysArrays.SKILLS:
-          setList(Object.values(Skill) as T[]);
-          break;
-        case VolunteerDataKeysArrays.LEADFROM:
-          setList(Object.values(Lead) as T[]);
-          break;
-      }
-    }
+    const list = listsOptions
+      ? (listsOptions as ListsOfOptionsType)[listType]
+      : [];
 
-    getList(listType);
+    setList(list?.length ? list : fallbackLists[listType]);
   }, [listType, listsOptions]);
 
   return list;
+}
+
+export function useListQuery() {
+  const { data } = useQuery<
+    ListsOfOptionsType,
+    Error,
+    ListsOfOptionsType,
+    string[]
+  >({
+    queryKey: ["lists"],
+    queryFn: () =>
+      fetchFn<{ lists: ListsOfOptionsType }, ListsOfOptionsType>({
+        url: urlApiVolunteer,
+        options: {
+          method: HttpMethod.OPTIONS,
+        },
+        fnDTO: data => data.lists,
+      }),
+    staleTime: Infinity,
+  });
+  return [data];
 }

@@ -31,15 +31,13 @@
     "slogan": "Need based voluntary support for refugees in Berlin",
     "beVolunteerButton": "Become a Volunteer!"
   },
-  "announcement": {
-    "emptyList": {
-      "header": "Opportunities are being updated...",
-      "para": "We are currently updating the volunteering opportunities. This may take a while. We recommend refreshing the page later on today.  If you have any specific question please contact us at volunteer@need4deed.org"
-    },
-    "spinner": {
-      "header": "Loading opportunities...",
-      "para": ""
-    }
+  "emptyList": {
+    "header": "Opportunities are being updated...",
+    "para": "We are currently updating the volunteering opportunities. This may take a while. We recommend refreshing the page later on today.  If you have any specific question please contact us at volunteer@need4deed.org"
+  },
+  "spinner": {
+    "header": "Loading opportunities...",
+    "para": ""
   },
   "iframeTitles": {
     "calendar": "Calendar",
@@ -85,14 +83,18 @@
       },
       "languages": {
         "header": "Languages",
+        "languagesNative": {
+          "header": "Native",
+          "error": "Please pick at least one language"
+        },
         "languagesFluent": {
-          "header": "Native/Fluent",
+          "header": "Fluent",
           "error": "Please pick at least one language"
         },
         "languagesIntermediate": {
           "header": "Intermediate"
         },
-        "helpText": "Fluent means you think you can support it in case some translations between languages are needed",
+        "helpText": "Fluent means you think you can support it in case some translations between languages are needed\nThese languages are oriented by the needs of refugees, if the language you are native or fluent at is not here, please add it in the last comment section!",
         "helpTitle": ""
       },
       "activities": {
@@ -129,7 +131,7 @@
         "helpTitle": ""
       },
       "comments": {
-        "label": "Other comments (times, locations, activities skills etc.)",
+        "label": "Comments (other languages, times, locations, activities, etc.)",
         "helpText": "",
         "helpTitle": ""
       },

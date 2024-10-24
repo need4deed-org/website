@@ -115,7 +115,8 @@
 
 .n4d-cta {
   background-color: var(--n4d-secondary);
-  color: var(--n4d-neutral-200);
+  color: var(--n4d-neutral-100);
+  font-weight: bold;
   border-color: transparent;
   border-radius: 25px;
   padding: 15px 25px;
@@ -160,14 +161,14 @@
 }
 
 .n4d-secondary-btn {
-  --bs-btn-color: var(--n4d-neutral-200);
+  --bs-btn-color: var(--n4d-neutral-100);
   --bs-btn-bg: var(--n4d-secondary);
   --bs-btn-border-color: var(--n4d-secondary);
-  --bs-btn-hover-color: var(--n4d-neutral-200);
+  --bs-btn-hover-color: var(--n4d-neutral-100);
   --bs-btn-hover-bg: var(--n4d-primary-darker);
   --bs-btn-hover-border-color: var(--n4d-secondary-darker);
   --bs-btn-focus-shadow-rgb: 0, 212, 0;
-  --bs-btn-active-color: var(--n4d-neutral-200);
+  --bs-btn-active-color: var(--n4d-neutral-100);
   --bs-btn-active-bg: var(--n4d-secondary);
   --bs-btn-active-border-color: var(--n4d-secondary);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);

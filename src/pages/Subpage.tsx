@@ -44,10 +44,10 @@ function Subpage({ type }: Props) {
         return <LegalNotice />;
       case Subpages.AGREEMENT:
         return <Agreement />;
-      case Subpages.ACCOMPANYING:
+      case Subpages.ACCOMPANYING_TEST:
         return (
           <OpportunityCards
-            dataFileUrl="/data/accompanying.json"
+            url="/data/accompanying.json"
             opportunityParams={{
               search: {
                 Status: ["Not started"],
@@ -65,7 +65,7 @@ function Subpage({ type }: Props) {
       case Subpages.OPPORTUNITIES_TEST:
         return (
           <OpportunityCards
-            dataFileUrl="/data/opportunities.json"
+            url="/data/opportunities.json"
             opportunityParams={{
               search: {
                 Status: ["Volunteers Needed", "Search in process"],
@@ -85,9 +85,12 @@ function Subpage({ type }: Props) {
       case Subpages.OPPORTUNITIES:
         return (
           <OpportunityCards
-            dataFileUrl={urlApiOpportunity}
+            url={urlApiOpportunity}
             opportunityParams={{
-              search: { status: ["Volunteers Needed", "Search in process"] },
+              search: {
+                status: ["Volunteers Needed", "Search in process"],
+                opportunity_type: [OpportunityType.GENERAL],
+              },
               primaryKeys: ["title", "name"],
             }}
             keyMap={{
@@ -100,29 +103,31 @@ function Subpage({ type }: Props) {
             }}
           />
         );
-      case Subpages.BECOME_VOLUNTEER:
-        return <BecomeVolunteer />;
-      case Subpages.THANK_YOU:
-        return <Announcement copies="becomeVolunteer.thanksVolunteer" />;
-      case Subpages.ACCOMPANYING_TEST:
+      case Subpages.ACCOMPANYING:
         return (
           <OpportunityCards
-            type={OpportunityType.ACCOMPANYING}
-            dataFileUrl={urlApiOpportunity}
+            url={urlApiOpportunity}
             opportunityParams={{
-              search: { status: ["Not started"] },
+              search: {
+                status: ["Not started"],
+                opportunity_type: [OpportunityType.ACCOMPANYING],
+              },
               primaryKeys: ["title", "name"],
             }}
             keyMap={{
               type: "activities",
               name: "title",
               languages: "languages",
-              time: "timeslots",
-              location: "locations",
+              time: "datetime_str",
+              location: "berlin_locations",
               vo: "vo_information",
             }}
           />
         );
+      case Subpages.BECOME_VOLUNTEER:
+        return <BecomeVolunteer />;
+      case Subpages.THANK_YOU:
+        return <Announcement copies="becomeVolunteer.thanksVolunteer" />;
       case Subpages.EVENT:
         return <></>;
     }
@@ -130,15 +135,13 @@ function Subpage({ type }: Props) {
 
   const navbarMainContainerStyle = {
     backgroundImage: `url(${getImageUrl("need4deed.webp")})`,
-    backgroundPosition: 'center',
-    backgroundSize: 'cover',
+    backgroundPosition: "center",
+    backgroundSize: "cover",
   };
-
 
   return (
     <>
       <div className="navbar-main-container" style={navbarMainContainerStyle}>
-
         <Header />
       </div>
       {component(type)}

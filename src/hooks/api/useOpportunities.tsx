@@ -1,44 +1,32 @@
-import { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
+import { Opportunity, OpportunityParams } from "../../config/types";
+import { getUrlWithEncodedParams } from "../../utils";
+import { fetchFn } from "./utils";
 
-import { OpportunityParams } from "../../config/types";
-import {
-  getFilter,
-  getUrlWithEncodedParams,
-  mapToOpportunity,
-} from "../../utils";
-
-const regexHttpSchema = RegExp("^(http|https)://.*$");
+const staleTime = 1000 * 60 * 60; // 1h
 
 export default function useOpportunities(
-  filePath: string,
+  url: string,
   opportunityParams: OpportunityParams,
 ) {
-  const [opportunities, setOpportunities] = useState<
-    Array<Record<string, string>>
-  >([]);
-  const [loading, setLoading] = useState(false);
+  const { data: opportunities, isLoading } = useQuery<
+    Opportunity[],
+    Error,
+    Opportunity[],
+    string[]
+  >({
+    queryKey: [
+      "opportunities",
+      ...Object.keys(
+        opportunityParams?.search ? opportunityParams?.search : {},
+      ),
+    ],
+    queryFn: () =>
+      fetchFn<Opportunity[]>({
+        url: getUrlWithEncodedParams(url, opportunityParams),
+      }),
+    staleTime,
+  });
 
-  useEffect(() => {
-    const isUrl = filePath.toLowerCase().match(regexHttpSchema);
-    setLoading(true);
-    fetch(
-      isUrl ? getUrlWithEncodedParams(filePath, opportunityParams) : filePath,
-    )
-      .then(res => res.json())
-      .then(data =>
-        setOpportunities(
-          isUrl
-            ? data
-            : data
-                .filter(getFilter(opportunityParams?.search))
-                .map(mapToOpportunity),
-        ),
-      )
-      .catch(console.error)
-      .finally(() => {
-        setLoading(false);
-      });
-  }, [filePath, opportunityParams]);
-
-  return { opportunities, loading };
+  return { opportunities, loading: isLoading };
 }
