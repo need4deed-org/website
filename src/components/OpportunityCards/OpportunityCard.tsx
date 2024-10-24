@@ -4,6 +4,7 @@ import { Lang } from "../../config/types";
 import {
   getMainCtaUrl,
   getOpportunityImg,
+  getReadableTime,
   isoCodesToNames,
   isRtlLang,
 } from "../../utils";
@@ -14,7 +15,7 @@ interface Props {
   pre?: boolean;
 }
 
-export default function Translation({ opportunity, pre = false }: Props) {
+export default function OpportunityCard({ opportunity, pre = false }: Props) {
   const { t, i18n } = useTranslation();
   const titleBtn = t("projectIntro.beVolunteerButton");
   const srcImg = useMemo(
@@ -50,7 +51,7 @@ export default function Translation({ opportunity, pre = false }: Props) {
         <strong>{isoCodesToNames(opportunity.languages)}</strong>
       </p>
       <h6>Time:</h6>
-      <p>{opportunity.time}</p>
+      <p>{getReadableTime(opportunity.time, i18n.language)}</p>
       <h6>Location:</h6>
       <p>{opportunity.location}</p>
       <a className="btn n4d-cta" href={urlMainCTA} target="_blank">

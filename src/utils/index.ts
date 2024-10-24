@@ -216,3 +216,17 @@ const typeToImg = {
 
   default: getImageUrl("type-assistance.webp"),
 };
+
+export function getReadableTime(timestamp: string, locale = "en-US") {
+  const date = new Date(timestamp);
+
+  if (isNaN(date.getDate())) return timestamp;
+
+  const formattedDate = date.toLocaleDateString(locale, {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+
+  return formattedDate;
+}

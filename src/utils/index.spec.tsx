@@ -7,6 +7,7 @@ import {
   getBaseUrl,
   getFilter,
   getOpportunityImg,
+  getReadableTime,
   getUrlWithEncodedParams,
   isEnumValue,
   isoCodesToNames,
@@ -105,8 +106,12 @@ describe("utils", () => {
       expect(getOpportunityImg("Accompanying")).toContain(
         "/images/type-accompanying.webp",
       );
-      expect(getOpportunityImg("Arts, Music")).toContain("/images/type-arts.webp");
-      expect(getOpportunityImg("language")).toContain("/images/type-language.webp"); // Case-insensitive
+      expect(getOpportunityImg("Arts, Music")).toContain(
+        "/images/type-arts.webp",
+      );
+      expect(getOpportunityImg("language")).toContain(
+        "/images/type-language.webp",
+      ); // Case-insensitive
     });
 
     it("should return the default image for an empty string", () => {
@@ -120,7 +125,9 @@ describe("utils", () => {
     });
 
     it("should return the default image for an unknown type", () => {
-      expect(getOpportunityImg("foobar")).toContain("/images/type-assistance.webp");
+      expect(getOpportunityImg("foobar")).toContain(
+        "/images/type-assistance.webp",
+      );
     });
   });
 
@@ -283,6 +290,35 @@ describe("utils", () => {
           "not an object" as unknown as OpportunityParams,
         ),
       ).toBe(baseUrl);
+    });
+  });
+
+  describe("getReadableTime", () => {
+    it("should return the original timestamp for invalid dates", () => {
+      const invalidTimestamp = "Monday";
+      const result = getReadableTime(invalidTimestamp);
+      expect(result).toBe(invalidTimestamp);
+    });
+
+    it("should return a formatted date for valid timestamps", () => {
+      const validTimestamp = "2024-11-05T10:00:00.000+01:00";
+      const expectedResult = "November 5, 2024";
+      const result = getReadableTime(validTimestamp);
+      expect(result).toBe(expectedResult);
+    });
+
+    it("should handle different time zones", () => {
+      const timestampWithTimeZone = "2024-12-05T10:00:00.000+02:00";
+      const expectedResult = "December 5, 2024"; // Result should be the same regardless of time zone
+      const result = getReadableTime(timestampWithTimeZone);
+      expect(result).toBe(expectedResult);
+    });
+
+    it("should handle different locale", () => {
+      const timestampWithTimeZone = "2024-12-05T10:00:00.000+02:00";
+      const expectedResult = "5. Dezember 2024";
+      const result = getReadableTime(timestampWithTimeZone, "de-DE");
+      expect(result).toBe(expectedResult);
     });
   });
 });
