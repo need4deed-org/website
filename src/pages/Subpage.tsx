@@ -5,13 +5,14 @@ import { useNavigate, useParams } from "react-router-dom";
 import { AppContainerContext } from "../App";
 import Announcement from "../components/Announcement";
 import BecomeVolunteer from "../components/BecomeVolunteer";
+import EventHolidayGift from "../components/Event/EventHolidayGift";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import Agreement from "../components/Legal/Agreement";
 import DataPrivacy from "../components/Legal/DataPrivacy";
 import LegalNotice from "../components/Legal/Notice";
 import OpportunityCards from "../components/OpportunityCards";
-import { urlApiOpportunity } from "../config/constants";
+import { showEvent, urlApiOpportunity } from "../config/constants";
 import { Lang, OpportunityType, Subpages } from "../config/types";
 import { isEnumValue, setLangDirection } from "../utils";
 import { getImageUrl } from "../utils/index";
@@ -129,7 +130,7 @@ function Subpage({ type }: Props) {
       case Subpages.THANK_YOU:
         return <Announcement copies="becomeVolunteer.thanksVolunteer" />;
       case Subpages.EVENT:
-        return <></>;
+        return <EventHolidayGift />;
     }
   };
 
@@ -142,7 +143,7 @@ function Subpage({ type }: Props) {
   return (
     <>
       <div className="navbar-main-container" style={navbarMainContainerStyle}>
-        <Header />
+        <Header showEvent={showEvent} />
       </div>
       {component(type)}
       <Footer />

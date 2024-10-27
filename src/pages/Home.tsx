@@ -11,9 +11,10 @@ import IFrame from "../components/IFrame";
 import Main from "../components/Main/Main";
 import VolunteerOpportunity from "../components/VolunteerOpportunity/VolunteerOpportunity";
 import VolunteerWorkflow from "../components/VolunteerWorkflow/VolunteerWorkflow";
+import { showEvent } from "../config/constants";
 import { Lang } from "../config/types";
 import { isEnumValue, setLangDirection } from "../utils";
-import { getImageUrl } from "../utils/index"
+import { getImageUrl } from "../utils/index";
 
 function Home() {
   const { i18n, t } = useTranslation();
@@ -32,15 +33,14 @@ function Home() {
 
   const navbarMainContainerStyle = {
     backgroundImage: `url(${getImageUrl("need4deed.webp")})`,
-    backgroundPosition: 'center',
-    backgroundSize: 'cover',
+    backgroundPosition: "center",
+    backgroundSize: "cover",
   };
-
 
   return (
     <>
       <div className="navbar-main-container" style={navbarMainContainerStyle}>
-        <Header />
+        <Header showEvent={showEvent} />
         <Main />
       </div>
       <VolunteerOpportunity wrappingClassName="wrapper second" />

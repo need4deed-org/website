@@ -28,7 +28,33 @@
     "heading": "Bist Du Ehrenamtskoordinator*in in einer Gemeinschaftsunterkunft?",
     "emailUs": "Schreib uns an"
   },
-  "event": {
+  "event": { "menuItem": "Weihnachtsgeschenke" },
+  "eventHolidayGift": {
+    "header": "Weihnachtsgeschenke für Flüchtlingskinder",
+    "paras": {
+      "para1": "Mit dem Jahresende naht, bitten wir Sie, uns bei der Sammlung von Weihnachtsgeschenken und der Unterstützung für vertriebene Kinder in Flüchtlingsunterkünften in ganz Berlin und anderen Konfliktgebieten zu helfen.",
+      "para2": "Anlässlich von Weihnachten und dem Jahresende bitten wir Sie, uns bei der Sammlung von Geschenken und der Unterstützung für vertriebene Kinder zu helfen. Diese jungen Flüchtlinge leben in Flüchtlingsunterkünften in ganz Berlin und stammen aus verschiedenen Konfliktgebieten. Sie leben oft monate- oder jahrelang dort und sprechen Ukrainisch, Arabisch, Dari, Persisch, Russisch, Türkisch und viele andere Sprachen. Die Geschenke für die Kinder werden vom Need4Deed-Team und Freiwilligen in der ersten Dezemberwoche gekauft und verteilt. Wir werden sie in Berliner Unterkünften verteilen, in denen derzeit mehr als 30.000 Flüchtlinge leben. Zusätzlich wird ein Viertel der Geschenke an lokale Organisationen gespendet, die vertriebene Kinder im Libanon und im Südsudan unterstützen."
+    },
+    "donate": {
+      "money": {
+        "invite": "Bitte spenden Sie Geld:",
+        "where": "betterplace.org"
+      },
+      "things": {
+        "invite": "Spenden Sie Geschenke:",
+        "where": "\nElsenstr 87\nBerlin 12435\nDienstag-Donnerstag\n9:30-17:00"
+      },
+      "wrapping": {
+        "invite": "Machen Sie mit beim Geschenkverpacken:",
+        "registration": "Registrieren"
+      }
+    },
+    "final": {
+      "feelFree": "Bei Fragen zögern Sie bitte nicht, uns zu kontaktieren!",
+      "team": "Team"
+    }
+  },
+  "event831": {
     "header": "Need4Deed Sommerfest",
     "menuItem": "Sommerfest",
     "paras": {

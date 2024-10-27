@@ -28,7 +28,33 @@
     "heading": "Mülteci konaklama merkezinde gönüllü koordinatörü müsünüz?",
     "emailUs": "bize yazın"
   },
-  "event": {
+  "event": { "menuItem": "Bayram Hediyeleri" },
+  "eventHolidayGift": {
+    "header": "Mülteci Çocuklar İçin Bayram Hediyeleri",
+    "paras": {
+      "para1": "Yıl sonuna yaklaşırken, sizden Berlin genelinde ve diğer çatışma bölgelerindeki mülteci barınaklarında yaşayan yerinden edilmiş çocuklara bayram hediyeleri toplamamıza ve destek sağlamamıza yardımcı olmanızı istiyoruz.",
+      "para2": "Noel ve yıl sonu fırsatını kullanarak, yerinden edilmiş çocuklara hediye toplamamıza ve destek sağlamamıza yardımcı olmanızı istiyoruz. Bu genç mülteciler, Berlin genelindeki mülteci barınaklarında yaşıyorlar ve çeşitli çatışma bölgelerinden geliyorlar. Genellikle aylarca veya yıllarca orada kalıyorlar, Ukraynaca, Arapça, Dari, Farsça, Rusça, Türkçe ve birçok başka dil konuşuyorlar. Çocuklar için hediyeler, Need4Deed ekibi ve gönüllüler tarafından Aralık ayının ilk haftası boyunca satın alınacak ve dağıtılacak. Hediyeleri, şu anda 30 binden fazla mültecinin yaşadığı Berlin'deki barınaklarda dağıtacağız. Ayrıca, hediyelerin dörtte biri, Lübnan ve Güney Sudan'daki yerinden edilmiş çocukları destekleyen yerel organizasyonlara bağışlanacaktır."
+    },
+    "donate": {
+      "money": {
+        "invite": "Lütfen bağış yapın:",
+        "where": "betterplace.org"
+      },
+      "things": {
+        "invite": "Hediye bağışlayın:",
+        "where": "\nElsenstr 87\nBerlin 12435\nSalı-Perşembe\n9:30-17:00"
+      },
+      "wrapping": {
+        "invite": "Hediye paketlemeye katılın:",
+        "registration": "Kayıt Ol"
+      }
+    },
+    "final": {
+      "feelFree": "Herhangi bir sorunuz varsa, lütfen bizimle iletişime geçmekten çekinmeyin!",
+      "team": "Ekip"
+    }
+  },
+  "event831": {
     "header": "Need4Deed Yaz Şenliği",
     "menuItem": "Yaz Şenliği",
     "paras": {

@@ -144,9 +144,34 @@
       }
     }
   },
-  "event": {
+  "event": { "menuItem": "Holiday Gifts" },
+  "eventHolidayGift": {
+    "header": "Holiday Gifts For Refugee Children",
+    "paras": {
+      "para1": "As the year comes to an end we ask you to help us collect holiday gifts and support to displaced children living in Refugee Accommodation Centers all around Berlin and in other conflict zones.",
+      "para2": "Using the opportunity of Christmas and the end of the year time, we ask you to help us collect gifts and support to displaced  children. These young refugees are living in Refugee Accommodation Centers all around Berlin and come from various conflict zones. They are usually there for months to years, they speak Ukrainian, Arabic, Dari, Persian, Russian, Turkish and many other languages. The gifts for children are to be bought and distributed by the Need4Deed team and volunteers during the first week of December. We will distribute them in Berlins accommodation centers where more than 30 thousand refugees currently live. Additionally a quarter of the gifts will be then dedicated to local organizations supporting displaced children in Lebanon and South-Sudan."
+    },
+    "donate": {
+      "money": {
+        "invite": "Please donate money:",
+        "where": "betterplace.org"
+      },
+      "things": {
+        "invite": "Donate gifts:",
+        "where": "\nElsenstr 87\nBerlin 12435\nTuesday-Thursdays\n9:30-17:00"
+      },
+      "wrapping": {
+        "invite": "Join gift wrapping:",
+        "registration": "Register"
+      }
+    },
+    "final": {
+      "feelFree": "If you have any questions, please do not hesitate to contact us!",
+      "team": "Team"
+    }
+  },
+  "event831": {
     "header": "Need4Deed Sommerfest",
-    "menuItem": "Sommerfest",
     "paras": {
       "para1": "Dear volunteers, we are pleased to invite you to our Sommerfest organized in collaboration with Du für Berlin on Saturday August 31st from 13.00 till 18.00.",
       "para2": "Whether you’re already a volunteer or interested in volunteering with refugees, come join us, bring a friend or more!",
