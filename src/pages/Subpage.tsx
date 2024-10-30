@@ -110,7 +110,7 @@ function Subpage({ type }: Props) {
             url={urlApiOpportunity}
             opportunityParams={{
               search: {
-                status: ["Not started"],
+                status: ["Search in process", "Not started"],
                 opportunity_type: [OpportunityType.ACCOMPANYING],
               },
               primaryKeys: ["title", "name"],

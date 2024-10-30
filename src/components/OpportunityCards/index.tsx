@@ -25,13 +25,16 @@ export default function OpportunityCards({
 
   return opportunities?.length ? (
     <div className="n4d-container opportunity-container">
-      {opportunities.map((opportunity, idx) => (
-        <OpportunityCard
-          key={"opp" + idx}
-          opportunity={mapOpportunity(opportunity, keyMap)}
-          pre={false}
-        />
-      ))}
+      {opportunities.map((opportunity, idx) => {
+        console.log("DEBUG:OpportunityCards:opportunity:", opportunity);
+        return (
+          <OpportunityCard
+            key={"opp" + idx}
+            opportunity={mapOpportunity(opportunity, keyMap)}
+            pre={false}
+          />
+        );
+      })}
     </div>
   ) : (
     <Announcement copies={loading ? "spinner" : "emptyList"} />
