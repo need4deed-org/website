@@ -30,10 +30,10 @@
   },
   "event": { "menuItem": "Weihnachtsgeschenke" },
   "eventHolidayGift": {
-    "header": "Weihnachtsgeschenke für Flüchtlingskinder",
+    "header": "Weihnachtsgeschenke für Geflüchtete Kinder",
     "paras": {
-      "para1": "Mit dem Jahresende naht, bitten wir Sie, uns bei der Sammlung von Weihnachtsgeschenken und der Unterstützung für vertriebene Kinder in Flüchtlingsunterkünften in ganz Berlin und anderen Konfliktgebieten zu helfen.",
-      "para2": "Anlässlich von Weihnachten und dem Jahresende bitten wir Sie, uns bei der Sammlung von Geschenken und der Unterstützung für vertriebene Kinder zu helfen. Diese jungen Flüchtlinge leben in Flüchtlingsunterkünften in ganz Berlin und stammen aus verschiedenen Konfliktgebieten. Sie leben oft monate- oder jahrelang dort und sprechen Ukrainisch, Arabisch, Dari, Persisch, Russisch, Türkisch und viele andere Sprachen. Die Geschenke für die Kinder werden vom Need4Deed-Team und Freiwilligen in der ersten Dezemberwoche gekauft und verteilt. Wir werden sie in Berliner Unterkünften verteilen, in denen derzeit mehr als 30.000 Flüchtlinge leben. Zusätzlich wird ein Viertel der Geschenke an lokale Organisationen gespendet, die vertriebene Kinder im Libanon und im Südsudan unterstützen."
+      "para1": "Mit dem Jahresende naht, bitten wir Sie, uns bei der Sammlung von Weihnachtsgeschenken und der Unterstützung für vertriebene Kinder in Unterkünften für Geflüchtete in ganz Berlin und anderen Konfliktgebieten zu helfen.",
+      "para2": "Anlässlich von Weihnachten und dem Jahresende bitten wir Sie, uns bei der Sammlung von Geschenken und der Unterstützung für vertriebene Kinder zu helfen. Diese jungen Geflüchteten leben in Unterkünften für Geflüchtete in ganz Berlin und stammen aus verschiedenen Konfliktgebieten. Sie leben oft monate- oder jahrelang dort und sprechen Ukrainisch, Arabisch, Dari, Persisch, Russisch, Türkisch und viele andere Sprachen. Die Geschenke für die Kinder werden vom Need4Deed-Team und Freiwilligen in der ersten Dezemberwoche gekauft und verteilt. Wir werden sie in Berliner Unterkünften verteilen, in denen derzeit mehr als 30.000 Geflüchtete leben. Zusätzlich wird ein Viertel der Geschenke an lokale Organisationen gespendet, die vertriebene Kinder im Libanon und im Südsudan unterstützen."
     },
     "donate": {
       "money": {
@@ -59,7 +59,7 @@
     "menuItem": "Sommerfest",
     "paras": {
       "para1": "Liebe Freiwillige, wir freuen uns, euch zu unserem Sommerfest einladen zu dürfen, das in Zusammenarbeit mit Du für Berlin am Samstag, den 31. August von 13.00 bis 18.00 Uhr organisiert wird.",
-      "para2": "Egal, ob Sie bereits freiwillig helfen oder sich für die Freiwilligenarbeit mit Flüchtlingen interessieren, kommen Sie vorbei, bringen Sie einen Freund oder mehrere mit!",
+      "para2": "Egal, ob Sie bereits freiwillig helfen oder sich für die Freiwilligenarbeit mit geflüchteten Menschen interessieren, kommen Sie vorbei, bringen Sie einen Freund oder mehrere mit!",
       "para3": {
         "morning": { "timeslot": "13:00-13:30", "title1": "Begrüßung" },
         "day": {
