@@ -1,6 +1,7 @@
 import { useContext, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useParams } from "react-router-dom";
+import ReactGA from "react-ga4";
 
 import { AppContainerContext } from "../App";
 import AboutProject from "../components/AboutProject/AboutProject";
@@ -26,9 +27,18 @@ function Home() {
     if (isEnumValue(Lang, lng)) {
       i18n.changeLanguage(lng);
       setLangDirection(containerRef, lng as Lang);
+       ReactGA.event({
+       category: 'Language',
+       action: `Language changed to ${lng}`
+     });
     } else {
       navigate(`/${Lang.EN}`, { replace: true });
     }
+    ReactGA.send({
+      hitType: "pageview",
+      page: "/",
+      title: "Homepage view",
+    });
   }, [containerRef, lng, i18n, navigate]);
 
   const navbarMainContainerStyle = {

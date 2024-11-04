@@ -1,5 +1,6 @@
 import { FC, MutableRefObject, createContext, useEffect, useRef } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ReactGA from 'react-ga4';
 import "./App.css";
 import JsonLd from "./components/JsonLd";
 import { Subpages } from "./config/types";
@@ -7,6 +8,7 @@ import Home from "./pages/Home";
 import Land404 from "./pages/Land404";
 import PastEvents from "./pages/PastEvents";
 import Subpage from "./pages/Subpage";
+import { googleAnalyticsId } from "./config/constants";
 
 export const AppContainerContext = createContext<
   MutableRefObject<HTMLDivElement | null>
@@ -20,6 +22,8 @@ const App: FC = () => {
       .then(data => console.log("Current version:", data.commitHash))
       .catch(error => console.error("Failed to load version info:", error));
   }, []);
+
+  ReactGA.initialize(googleAnalyticsId);
 
   return (
     <AppContainerContext.Provider value={containerRef}>

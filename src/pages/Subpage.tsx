@@ -1,6 +1,7 @@
 import { useContext, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useParams } from "react-router-dom";
+import ReactGA from "react-ga4";
 
 import { AppContainerContext } from "../App";
 import Announcement from "../components/Announcement";
@@ -35,6 +36,12 @@ function Subpage({ type }: Props) {
     } else {
       navigate(`/${type}/${Lang.EN}`, { replace: true });
     }
+    ReactGA.send({
+      hitType: "pageview",
+      page: `/${type}/`,
+      title: `Visited ${type}`,
+    });
+
   }, [containerRef, i18n, lng, navigate, type]);
 
   const component = (type: Subpages) => {
