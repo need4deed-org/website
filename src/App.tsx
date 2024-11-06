@@ -1,6 +1,8 @@
 import { FC, MutableRefObject, createContext, useEffect, useRef } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ReactGA from 'react-ga4';
+import { getCookieConsentValue } from 'react-cookie-consent';
+
 import "./App.css";
 import JsonLd from "./components/JsonLd";
 import { Subpages } from "./config/types";
@@ -16,14 +18,17 @@ export const AppContainerContext = createContext<
 
 const App: FC = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const cookieConsent = getCookieConsentValue();
   useEffect(() => {
     fetch("/version.json")
       .then(response => response.json())
       .then(data => console.log("Current version:", data.commitHash))
       .catch(error => console.error("Failed to load version info:", error));
-  }, []);
 
-  ReactGA.initialize(googleAnalyticsId);
+  if (cookieConsent === 'true') {
+    ReactGA.initialize(googleAnalyticsId)}
+
+  }, [cookieConsent]);
 
   return (
     <AppContainerContext.Provider value={containerRef}>

@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { HashLink } from "react-router-hash-link";
 
+import CookieConsentBanner from "../CookieConsentBanner"
 import { Subpages } from "../../config/types";
 import Sponsors from "../Sponsors/Sponsors";
 import "./Footer.css";
@@ -35,6 +36,7 @@ function Footer({ showSponsors = true }: Props) {
   return (
     <>
       {showSponsors && <Sponsors wrappingClassName="wrapper" />}
+      <CookieConsentBanner />
       <footer>
         <div className="footer-container">
           <div className="footer-column">
