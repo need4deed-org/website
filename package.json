@@ -1,6 +1,7 @@
 {
   "name": "need4deed",
   "private": true,
+  "license": "MIT AND Commons Clause",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
