@@ -16,6 +16,11 @@ export enum Env {
   PRODUCTION = "production",
 }
 
+export enum YesNo {
+  YES = "Yes",
+  NO = "No",
+}
+
 export enum Subpages {
   NOTICE = "impressum",
   DATA_PROTECTION = "datenschutzerklaerung",

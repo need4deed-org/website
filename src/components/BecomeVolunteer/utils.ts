@@ -1,3 +1,4 @@
+import { YesNo } from "../../config/types";
 import { resolveEnumKey } from "../../utils";
 import {
   TimeSlot,
@@ -66,7 +67,9 @@ export function parseFormStateDTO(value: VolunteerData) {
   data.activities = value.activities
     .filter(({ selected }) => selected)
     .map(({ title }) => title);
-  data.if_good_conduct_certificate = !!value.certOfGoodConduct;
+  data.good_conduct_certificate = value.certOfGoodConduct
+    ? YesNo.YES
+    : YesNo.NO;
   data.if_measles_vaccination = !!value.certMeaslesVaccination;
   data.lead_from = value.leadFrom
     .filter(({ selected }) => selected)

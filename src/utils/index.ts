@@ -171,7 +171,7 @@ interface MainCtaUrl {
   title?: string;
 }
 export function getMainCtaUrl({ lng, id = "", title = "" }: MainCtaUrl) {
-  const goFormLive = false;
+  const goFormLive = true;
   return goFormLive
     ? `/${Subpages.BECOME_VOLUNTEER}/${lng}/?id=${id}&title=${title}`
     : lng === "de"

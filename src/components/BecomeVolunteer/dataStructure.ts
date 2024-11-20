@@ -1,5 +1,5 @@
 import { FieldApi } from "@tanstack/react-form";
-import { ListsOfOptionsType } from "../../config/types";
+import { ListsOfOptionsType, YesNo } from "../../config/types";
 
 export interface Selected {
   title: string;
@@ -186,7 +186,7 @@ export interface VolunteerParsedData {
   phone: string;
   email: string;
   postal_code: number;
-  if_good_conduct_certificate: boolean;
+  good_conduct_certificate: YesNo;
   if_measles_vaccination: boolean;
   lead_from: string;
   origin_opportunity_id: number | undefined;
