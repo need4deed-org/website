@@ -28,6 +28,110 @@
     "heading": "Bist Du Ehrenamtskoordinator*in in einer Gemeinschaftsunterkunft?",
     "emailUs": "Schreib uns an"
   },
+  "becomeVolunteer": {
+    "header": "Werde Freiwilliger bei",
+    "thanksVolunteer": {
+      "header": "Danke!",
+      "para": ""
+    },
+    "thanks": "Danke, dass du dich entschieden hast",
+    "submit": "Senden",
+    "errors": "Fehler",
+    "reset": "Zurücksetzen",
+    "fields": {
+      "required": "Dieses Feld ist erforderlich",
+      "name": {
+        "label": "Name"
+      },
+      "email": {
+        "label": "E-Mail",
+        "error": "Muss eine gültige E-Mail-Adresse sein"
+      },
+      "phone": {
+        "label": "Telefonnummer oder Telegram-Handle",
+        "error": "Muss eine Telefonnummer sein"
+      },
+      "postcode": {
+        "label": "PLZ (Berlin) deines Standorts",
+        "error": "Muss eine gültige Postleitzahl von Berlin sein"
+      },
+      "locations": {
+        "header": "Bevorzugte Bezirke* (Berlin)",
+        "para": "*Denke daran, dass die meisten Unterkünfte außerhalb des Rings liegen!",
+        "error": "Bitte wähle mindestens einen Standort aus",
+        "helpText": "Falls wir keine perfekte Übereinstimmung finden, können wir dir Angebote senden, die auch auf deinem Standort basieren!",
+        "helpTitle": ""
+      },
+      "availability": {
+        "header": "Bevorzugte Zeiträume*",
+        "para": "*Denke daran, dass die meisten Möglichkeiten auf die Arbeitszeiten von 9-17 Uhr begrenzt sind, zumindest am Anfang!",
+        "error": "Bitte wähle mindestens einen Zeitraum aus",
+        "helpText": "Die Verfügbarkeiten von Mo-So beziehen sich auf regelmäßig wiederkehrende Freiwilligenarbeit. Wenn die Zeiträume auf bestimmte Zeiträume begrenzt sind oder erklärt werden müssen, schreibe bitte im letzten Abschnitt in die Kommentare.",
+        "helpTitle": ""
+      },
+      "languages": {
+        "header": "Sprachen",
+        "languagesNative": {
+          "header": "Muttersprache",
+          "error": "Bitte wähle mindestens eine Sprache aus"
+        },
+        "languagesFluent": {
+          "header": "Fließend",
+          "error": "Bitte wähle mindestens eine Sprache aus"
+        },
+        "languagesIntermediate": {
+          "header": "Mittelstufe"
+        },
+        "helpText": "Fließend bedeutet, dass du denkst, dass du es unterstützen kannst, falls einige Übersetzungen zwischen Sprachen benötigt werden. Diese Sprachen sind an den Bedürfnissen von Geflüchteten orientiert. Wenn die Sprache, die du als Muttersprache oder fließend sprichst, nicht hier aufgeführt ist, füge sie bitte im letzten Kommentarfeld hinzu!",
+        "helpTitle": ""
+      },
+      "activities": {
+        "header": "Bevorzugte Aktivitäten",
+        "error": "Bitte wähle mindestens eine Aktivität aus",
+        "helpText": "Dies sind die häufigsten Bedürfnisse, die freiwillige Unterstützung erfordern. Manchmal können sie sich ändern, sobald du mit dem Freiwilligendienst beginnst.",
+        "helpTitle": ""
+      },
+      "skills": {
+        "header": "Zusätzliche Fähigkeiten oder Erfahrungen",
+        "helpText": "Alles, was du denkst, dass du aus deiner Erfahrung, deinen Fähigkeiten oder deinem Fachwissen teilen kannst, kann nützlich sein, aber keine Sorge, es ist keine Voraussetzung für Freiwilligenarbeit!",
+        "helpTitle": ""
+      },
+      "certOfGoodConduct": {
+        "header": "Führungszeugnis",
+        "error": "Bitte wähle mindestens eine Aktivität aus",
+        "why": "Warum brauche ich das?",
+        "yes": "Ich habe eines",
+        "no": "Muss beantragt werden",
+        "helpText": "",
+        "helpTitle": ""
+      },
+      "certMeaslesVaccination": {
+        "header": "Masernimpfnachweis",
+        "error": "Bitte wähle mindestens eine Aktivität aus",
+        "yes": "Ich habe einen",
+        "no": "Muss nachgewiesen werden",
+        "helpText": "",
+        "helpTitle": ""
+      },
+      "leadFrom": {
+        "header": "Woher hast du von uns erfahren?",
+        "helpText": "",
+        "helpTitle": ""
+      },
+      "comments": {
+        "label": "Kommentare (andere Sprachen, Zeiten, Orte, Aktivitäten usw.)",
+        "helpText": "",
+        "helpTitle": ""
+      },
+      "consent": {
+        "header": "Hiermit stimme ich zu:",
+        "and": "und",
+        "label": "",
+        "helpText": "",
+        "helpTitle": ""
+      }
+    }
+  },
   "event": { "menuItem": "Weihnachtsgeschenke" },
   "eventHolidayGift": {
     "header": "Weihnachtsgeschenke für Geflüchtete Kinder",

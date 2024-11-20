@@ -28,6 +28,110 @@
     "heading": "Mülteci konaklama merkezinde gönüllü koordinatörü müsünüz?",
     "emailUs": "bize yazın"
   },
+  "becomeVolunteer": {
+    "header": "ile Gönüllü Olun",
+    "thanksVolunteer": {
+      "header": "Teşekkür Ederiz!",
+      "para": ""
+    },
+    "thanks": "Seçtiğiniz için teşekkür ederiz",
+    "submit": "Gönder",
+    "errors": "Hatalar",
+    "reset": "Sıfırla",
+    "fields": {
+      "required": "Bu alan zorunludur",
+      "name": {
+        "label": "Ad Soyad"
+      },
+      "email": {
+        "label": "E-posta",
+        "error": "Geçerli bir e-posta adresi olmalıdır"
+      },
+      "phone": {
+        "label": "Telefon Numarası veya Telegram Kullanıcı Adı",
+        "error": "Telefon numarası olmalıdır"
+      },
+      "postcode": {
+        "label": "Posta Kodu (Berlin) konumunuz",
+        "error": "Geçerli bir Berlin posta kodu olmalıdır"
+      },
+      "locations": {
+        "header": "Tercih Edilen Bölgeler* (Berlin)",
+        "para": "*Çoğu konaklama merkezinin halkanın dışında olduğunu unutmayın!",
+        "error": "Lütfen en az bir konum seçin",
+        "helpText": "Mükemmel bir eşleşme bulamazsak, size konumunuza da dayalı teklifler gönderebiliriz!",
+        "helpTitle": ""
+      },
+      "availability": {
+        "header": "Tercih Edilen Zaman Dilimleri*",
+        "para": "*Çoğu fırsatın en azından başlangıçta 9-17 çalışma saatleriyle sınırlı olduğunu unutmayın!",
+        "error": "Lütfen en az bir zaman dilimini seçin",
+        "helpText": "Pzt-Pazar kullanılabilirlikleri düzenli olarak tekrarlanan gönüllülüğü ifade eder. Zaman dilimleri belirli dönemlerle sınırlıysa veya açıklamalar gerektiriyorsa, lütfen son bölümdeki yorumlara yazın.",
+        "helpTitle": ""
+      },
+      "languages": {
+        "header": "Diller",
+        "languagesNative": {
+          "header": "Ana Dil",
+          "error": "Lütfen en az bir dil seçin"
+        },
+        "languagesFluent": {
+          "header": "Akıcı",
+          "error": "Lütfen en az bir dil seçin"
+        },
+        "languagesIntermediate": {
+          "header": "Orta Seviye"
+        },
+        "helpText": "Akıcı, bazı dil çevirilerine ihtiyaç duyulduğunda destekleyebileceğinizi düşündüğünüz anlamına gelir. Bu diller, mültecilerin ihtiyaçlarına yöneliktir. Ana diliniz veya akıcı olduğunuz dil burada yoksa, lütfen son yorum bölümüne ekleyin!",
+        "helpTitle": ""
+      },
+      "activities": {
+        "header": "Tercih Edilen Aktiviteler",
+        "error": "Lütfen en az bir aktivite seçin",
+        "helpText": "Bunlar, gönüllü desteğe ihtiyaç duyan en yaygın ihtiyaçlardır. Bazen gönüllülüğe başladıktan sonra değişebilirler.",
+        "helpTitle": ""
+      },
+      "skills": {
+        "header": "Ek Beceriler veya Deneyimler",
+        "helpText": "Deneyiminizden, yeteneklerinizden veya uzmanlığınızdan paylaşabileceğinizi düşündüğünüz her şey bilmek faydalı olabilir, ancak endişelenmeyin, gönüllülük için gerekli değildir!",
+        "helpTitle": ""
+      },
+      "certOfGoodConduct": {
+        "header": "Adli Sicil Kaydı",
+        "error": "Lütfen en az bir aktivite seçin",
+        "why": "Neden buna ihtiyacım var?",
+        "yes": "Var",
+        "no": "Başvurmam gerekiyor",
+        "helpText": "",
+        "helpTitle": ""
+      },
+      "certMeaslesVaccination": {
+        "header": "Kızamık Aşı Kaydı",
+        "error": "Lütfen en az bir aktivite seçin",
+        "yes": "Var",
+        "no": "Kanıtlamam gerekiyor",
+        "helpText": "",
+        "helpTitle": ""
+      },
+      "leadFrom": {
+        "header": "Bizi nereden duydunuz?",
+        "helpText": "",
+        "helpTitle": ""
+      },
+      "comments": {
+        "label": "Yorumlar (diğer diller, zamanlar, yerler, etkinlikler vb.)",
+        "helpText": "",
+        "helpTitle": ""
+      },
+      "consent": {
+        "header": "Bunu kabul ediyorum:",
+        "and": "ve",
+        "label": "",
+        "helpText": "",
+        "helpTitle": ""
+      }
+    }
+  },
   "event": { "menuItem": "Bayram Hediyeleri" },
   "eventHolidayGift": {
     "header": "Mülteci Çocuklar İçin Bayram Hediyeleri",
