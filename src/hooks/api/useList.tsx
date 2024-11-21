@@ -9,6 +9,8 @@ import {
 } from "../../config/types";
 import { fetchFn } from "./utils";
 
+const FF_USE_OPTIONS_LISTS = false;
+
 export default function useList(listType: ListsOfOptions) {
   const [list, setList] = useState<string[]>([]);
   const [listsOptions] = useListQuery();
@@ -32,14 +34,17 @@ export function useListQuery() {
     string[]
   >({
     queryKey: ["lists"],
-    queryFn: () =>
-      fetchFn<{ lists: ListsOfOptionsType }, ListsOfOptionsType>({
-        url: urlApiVolunteer,
-        options: {
-          method: HttpMethod.OPTIONS,
-        },
-        fnDTO: data => data.lists,
-      }),
+    queryFn: () => {
+      return FF_USE_OPTIONS_LISTS
+        ? fetchFn<{ lists: ListsOfOptionsType }, ListsOfOptionsType>({
+            url: urlApiVolunteer,
+            options: {
+              method: HttpMethod.OPTIONS,
+            },
+            fnDTO: data => data.lists,
+          })
+        : fallbackLists;
+    },
     staleTime: Infinity,
   });
   return [data];
