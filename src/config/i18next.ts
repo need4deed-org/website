@@ -8,7 +8,7 @@ import enTranslation from "../../public/locales/en/translations.json";
 import faTranslation from "../../public/locales/fa/translations.json";
 import ruTranslation from "../../public/locales/ru/translations.json";
 import trTranslation from "../../public/locales/tr/translations.json";
-import { Env, Lang } from "./types.ts";
+import { Env, Lang } from "./types";
 
 i18next.use(initReactI18next).init({
   lng: Lang.EN,

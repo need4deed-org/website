@@ -1,7 +1,7 @@
 import CookieConsent from "react-cookie-consent";
 import { useTranslation } from "react-i18next";
 
-const CookieConsentBanner = () => {
+function CookieConsentBanner() {
   const { t } = useTranslation();
 
   return (
@@ -9,7 +9,7 @@ const CookieConsentBanner = () => {
       location="bottom"
       buttonText={t("CookieConsentBanner.accept")}
       declineButtonText={t("CookieConsentBanner.decline")}
-      enableDeclineButton={true}
+      enableDeclineButton
       style={{ background: "#2B373B" }}
       buttonStyle={{
         background: "#4e9815",
@@ -33,6 +33,6 @@ const CookieConsentBanner = () => {
       </a>
     </CookieConsent>
   );
-};
+}
 
 export default CookieConsentBanner;

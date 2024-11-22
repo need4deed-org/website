@@ -163,6 +163,10 @@
   background: var(--n4d-neutral-700);
 }
 
+.volunteer-availability-weekday {
+  text-align: start !important;
+}
+
 .volunteer-availability {
   display: flex;
   flex-direction: column;

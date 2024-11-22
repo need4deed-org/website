@@ -20,7 +20,7 @@ export default function EventHolidayGift() {
     <div className="n4d-container event-container">
       <h1>{t("eventHolidayGift.header")}</h1>
       <div className="pic-and-text">
-        <div style={holidayGiftPicStyle}></div>
+        <div style={holidayGiftPicStyle} />
         <div>
           <p>{t("eventHolidayGift.paras.para1")}</p>
           <p>{t("eventHolidayGift.paras.para2")}</p>
@@ -29,7 +29,7 @@ export default function EventHolidayGift() {
       <div className="event-donate">
         <p>
           {t("eventHolidayGift.donate.money.invite")}{" "}
-          <a href={donationHref} target="_blank">
+          <a href={donationHref} target="_blank" rel="noreferrer">
             {t("eventHolidayGift.donate.money.where")}
           </a>
         </p>
@@ -39,7 +39,7 @@ export default function EventHolidayGift() {
         </p>
         <p>
           {t("eventHolidayGift.donate.wrapping.invite")}{" "}
-          <a href={registrationHref} target="_blank">
+          <a href={registrationHref} target="_blank" rel="noreferrer">
             {t("eventHolidayGift.donate.wrapping.registration")}
           </a>
         </p>

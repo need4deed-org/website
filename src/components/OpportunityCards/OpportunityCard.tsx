@@ -33,7 +33,7 @@ export default function OpportunityCard({ opportunity, pre = false }: Props) {
     </pre>
   ) : (
     <div className="opportunity-card">
-      <img src={srcImg} alt="image" />
+      <img src={srcImg} alt="Opportunity example" />
       <h5>{opportunity.name}</h5>
       {opportunity.vo ? (
         <>
@@ -54,7 +54,12 @@ export default function OpportunityCard({ opportunity, pre = false }: Props) {
       <p>{getReadableTime(opportunity.time, i18n.language)}</p>
       <h6>Location:</h6>
       <p>{opportunity.location}</p>
-      <a className="btn n4d-cta" href={urlMainCTA} target="_blank">
+      <a
+        className="btn n4d-cta"
+        href={urlMainCTA}
+        target="_blank"
+        rel="noreferrer"
+      >
         {titleBtn.at(-1) === "!" && isRtlLang(i18n.language as Lang)
           ? titleBtn.slice(0, -1)
           : titleBtn}

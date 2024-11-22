@@ -8,16 +8,24 @@ The number of people fleeing conflict zones, persecution and human rights violat
 Our values
 
 ## Equal opportunities
-People living under destitute life conditions should be given equal opportunities. The latter includes underserved individuals and groups affected by forced migration.
-## Responsibility
-Both countries (the state) and civil society, have responsibility towards its underserved communities including those affected by forced migration.
-## Migrant-to-migrant support
-In particular, groups and individuals who have undergone forced migration could be best understood and supported by others with migration background in the course of their integration process, so that they receive equal opportunities and eventually benefit society themselves.
-## Active participation
-A migrant-to-migrant support alongside non-migrant support, can both play a key social role by facilitating a more rapid integration process and active participation of the supported communities.
-## Technology
-Applying technology in the effort to support underserved communities is a key value to make support giving and receiving more inclusive, accessible and scalable.
 
+People living under destitute life conditions should be given equal opportunities. The latter includes underserved individuals and groups affected by forced migration.
+
+## Responsibility
+
+Both countries (the state) and civil society, have responsibility towards its underserved communities including those affected by forced migration.
+
+## Migrant-to-migrant support
+
+In particular, groups and individuals who have undergone forced migration could be best understood and supported by others with migration background in the course of their integration process, so that they receive equal opportunities and eventually benefit society themselves.
+
+## Active participation
+
+A migrant-to-migrant support alongside non-migrant support, can both play a key social role by facilitating a more rapid integration process and active participation of the supported communities.
+
+## Technology
+
+Applying technology in the effort to support underserved communities is a key value to make support giving and receiving more inclusive, accessible and scalable.
 
 ## Tech Stack 🛠️
 
@@ -33,29 +41,33 @@ Applying technology in the effort to support underserved communities is a key va
 ### Installation
 
 1. Clone the repository
+
 ```bash
 git clone git@gitlab.com:need4deed/website.git
 ```
 
 2. Install dependencies
+
 ```bash
 cd website
 yarn install
 ```
 
 3. Create environment file
+
 ```bash
 cp .env.example .env
 ```
 
 4. start the development server
+
 ```bash
 yarn dev
 ```
 
 5. Optional dependencies to install
-- aws 
 
+- aws
 
 ## Contributing 🤝
 

@@ -1,6 +1,6 @@
 import useMatchMedia from "../../hooks/useMatchMedia";
 import "./Sponsors.css";
-import { getImageUrl } from "../../utils/index"
+import { getImageUrl } from "../../utils/index";
 
 interface Props {
   wrappingClassName: string;
@@ -11,7 +11,6 @@ const clubDialog = getImageUrl("club-dialog.webp");
 const schoenebergHilft = getImageUrl("schoeneberg-hilft.webp");
 const allSponsors = getImageUrl("sponsors-partners.webp");
 
-
 function Sponsors({ wrappingClassName }: Props) {
   const isMobile = useMatchMedia("(max-width: 768px)");
 
@@ -19,9 +18,19 @@ function Sponsors({ wrappingClassName }: Props) {
     <div className={wrappingClassName}>
       {isMobile ? (
         <div className="sponsor-img-container flex-column">
-          <img className="img-width" src={euAndBer} alt="European Union and Berlin logo" loading="lazy" />
+          <img
+            className="img-width"
+            src={euAndBer}
+            alt="European Union and Berlin logo"
+            loading="lazy"
+          />
           <span />
-          <img className="img-width" src={clubDialog} alt="Club Dialog logo" loading="lazy"/>
+          <img
+            className="img-width"
+            src={clubDialog}
+            alt="Club Dialog logo"
+            loading="lazy"
+          />
           <span />
           <img
             className="img-width"
@@ -34,7 +43,12 @@ function Sponsors({ wrappingClassName }: Props) {
         </div>
       ) : (
         <div className="sponsor-img-container">
-          <img className="img-width" src={allSponsors} alt="All project sponsors together" loading="lazy"/>
+          <img
+            className="img-width"
+            src={allSponsors}
+            alt="All project sponsors together"
+            loading="lazy"
+          />
         </div>
       )}
     </div>

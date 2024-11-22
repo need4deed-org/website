@@ -12,7 +12,7 @@ interface Props {
   keyMap: KeyMap;
 }
 
-const regexHttpSchema = RegExp("^(http|https)://.*$");
+const regexHttpSchema = /^(http|https):\/\/.*/;
 
 export default function OpportunityCards({
   url,
@@ -25,16 +25,14 @@ export default function OpportunityCards({
 
   return opportunities?.length ? (
     <div className="n4d-container opportunity-container">
-      {opportunities.map((opportunity, idx) => {
-        console.log("DEBUG:OpportunityCards:opportunity:", opportunity);
-        return (
-          <OpportunityCard
-            key={"opp" + idx}
-            opportunity={mapOpportunity(opportunity, keyMap)}
-            pre={false}
-          />
-        );
-      })}
+      {opportunities.map((opportunity) => (
+        <OpportunityCard
+          // eslint-disable-next-line no-underscore-dangle
+          key={opportunity.id || opportunity._id || crypto.randomUUID()}
+          opportunity={mapOpportunity(opportunity, keyMap)}
+          pre={false}
+        />
+      ))}
     </div>
   ) : (
     <Announcement copies={loading ? "spinner" : "emptyList"} />

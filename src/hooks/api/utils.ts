@@ -1,4 +1,4 @@
-export function fetchFn<R, D = R>({
+export default function fetchFn<R, D = R>({
   url,
   options,
   fnDTO,
@@ -8,11 +8,11 @@ export function fetchFn<R, D = R>({
   fnDTO?: (data: R) => D;
 }): Promise<D> {
   return fetch(url, options)
-    .then(response => {
+    .then((response) => {
       if (response.ok) return response.json();
       throw new Error(response.statusText);
     })
-    .then(data => {
+    .then((data) => {
       return fnDTO ? fnDTO(data) : data;
     });
 }

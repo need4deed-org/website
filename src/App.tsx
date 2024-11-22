@@ -1,9 +1,10 @@
-import { FC, MutableRefObject, createContext, useEffect, useRef } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import ReactGA from 'react-ga4';
-import { getCookieConsentValue } from 'react-cookie-consent';
+import ReactGA from "react-ga4";
+import { getCookieConsentValue } from "react-cookie-consent";
+import { useEffect, useRef } from "react";
 
 import "./App.css";
+import AppContainerContext from "./contexts/AppContainerContext";
 import JsonLd from "./components/JsonLd";
 import { Subpages } from "./config/types";
 import Home from "./pages/Home";
@@ -12,22 +13,21 @@ import PastEvents from "./pages/PastEvents";
 import Subpage from "./pages/Subpage";
 import { googleAnalyticsId } from "./config/constants";
 
-export const AppContainerContext = createContext<
-  MutableRefObject<HTMLDivElement | null>
->(undefined as unknown as MutableRefObject<HTMLDivElement | null>);
-
-const App: FC = () => {
+function App() {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const cookieConsent = getCookieConsentValue();
+
   useEffect(() => {
     fetch("/version.json")
-      .then(response => response.json())
-      .then(data => console.log("Current version:", data.commitHash))
-      .catch(error => console.error("Failed to load version info:", error));
+      /* eslint-disable no-console */
+      .then((response) => response.json())
+      .then((data) => console.log("Current version:", data.commitHash))
+      .catch((error) => console.error("Failed to load version info:", error));
+    /* eslint-enable no-console */
 
-  if (cookieConsent === 'true') {
-    ReactGA.initialize(googleAnalyticsId)}
-
+    if (cookieConsent === "true") {
+      ReactGA.initialize(googleAnalyticsId);
+    }
   }, [cookieConsent]);
 
   return (
@@ -124,6 +124,6 @@ const App: FC = () => {
       </div>
     </AppContainerContext.Provider>
   );
-};
+}
 
 export default App;

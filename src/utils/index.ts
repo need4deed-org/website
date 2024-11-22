@@ -10,6 +10,27 @@ import {
   Subpages,
 } from "../config/types";
 
+export function pivotArrayToObj(arr: Array<Record<string, unknown>>) {
+  const [first] = arr;
+  if (typeof first !== "object") return arr;
+
+  const init = Object.keys(first).reduce(
+    (obj: Record<string, unknown[]>, key) => ({
+      ...obj,
+      [key]: [],
+    }),
+    {},
+  );
+
+  return arr.reduce((obj: typeof init, item) => {
+    const newObj = { ...obj };
+    Object.entries(item).forEach(([key, value]) => {
+      newObj[key] = [...(newObj[key] || []), value];
+    });
+    return newObj;
+  }, init);
+}
+
 export function isEnumValue<E>(enumObject: object, value: E) {
   return typeof enumObject === "object"
     ? Object.values(enumObject).includes(value)
@@ -18,7 +39,7 @@ export function isEnumValue<E>(enumObject: object, value: E) {
 
 export function getBaseUrl(url: string) {
   const [baseUrl] = url.split("/").slice(3, -1);
-  return baseUrl ? "/" + baseUrl : "";
+  return baseUrl ? `/${baseUrl}` : "";
 }
 
 export const isRtlLang = (lang: Lang) => [Lang.AR, Lang.FA].includes(lang);
@@ -33,6 +54,32 @@ export function setLangDirection(
     );
   }
 }
+
+export const getImageUrl = (imageName: string): string => {
+  return `${CLOUDFRONT_URL}/${imageName}`;
+};
+
+const typeToImg = {
+  accompanying: getImageUrl("type-accompanying.webp"),
+  arts: getImageUrl("type-arts.webp"),
+  assistance: getImageUrl("type-assistance.webp"),
+  "clean-up": getImageUrl("type-cleanup.webp"),
+  clothing: getImageUrl("type-cloths.webp"),
+  consulting: getImageUrl("type-assistance.webp"),
+  culture: getImageUrl("type-culture.webp"),
+  daycare: getImageUrl("type-daycare.webp"),
+  gardening: getImageUrl("type-gardening.webp"),
+  it: getImageUrl("type-tutoring.webp"),
+  language: getImageUrl("type-language.webp"),
+  mentorship: getImageUrl("type-mentorship.webp"),
+  reading: getImageUrl("type-assistance.webp"),
+  renovation: getImageUrl("type-renovation.webp"),
+  translation: getImageUrl("type-language.webp"),
+  sports: getImageUrl("type-sports.webp"),
+  tandem: getImageUrl("type-tandem.webp"),
+  tutoring: getImageUrl("type-tutoring.webp"),
+  default: getImageUrl("type-assistance.webp"),
+};
 
 export function getOpportunityImg(type: string) {
   if (!type || typeof type !== "string") return typeToImg.default;
@@ -67,10 +114,11 @@ export function isoCodesToNames(isoCodes: string) {
   try {
     return isoCodes
       .split(",")
-      .map(code => code.trim())
+      .map((code) => code.trim())
       .map(getLanguageName)
       .join(", ");
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.error(error);
     return "";
   }
@@ -78,32 +126,25 @@ export function isoCodesToNames(isoCodes: string) {
 
 export function getFilter(search: OpportunityParams["search"]) {
   return search
-    ? function (item: Record<string, string>) {
-        return Object.entries(search).reduce(
-          (target, [searchKey, searchValues]) => {
-            return (
-              target &&
-              searchValues.reduce(
-                (trg, value) => trg || item[searchKey] === value,
-                false,
-              )
-            );
-          },
+    ? (item: Record<string, string>) =>
+        Object.entries(search).reduce(
+          (target, [searchKey, searchValues]) =>
+            target &&
+            searchValues.reduce(
+              (trg, value) => trg || item[searchKey] === value,
+              false,
+            ),
           true,
-        );
-      }
-    : function () {
-        return true;
-      };
+        )
+    : () => true;
 }
 
 export function mapToOpportunity(opportunity: Record<string, string>) {
   return Object.entries(opportunity).reduce(
-    (result: Record<string, string>, [key, value]) => {
-      const newKey = key.split(" ")[0].toLowerCase();
-      result[newKey] = value;
-      return result;
-    },
+    (result: Record<string, string>, [key, value]) => ({
+      ...result,
+      [key.split(" ")[0].toLowerCase()]: value,
+    }),
     {},
   );
 }
@@ -112,37 +153,19 @@ export function mapOpportunity(opportunity: AlfredOpportunity, keyMap: KeyMap) {
   return Object.entries(keyMap).reduce((mapped: Opportunity, [key, value]) => {
     const path = value.split(".");
     let mappedValue = opportunity;
-    path.forEach(opportunityKey => {
+    path.forEach((opportunityKey) => {
       const nextValue = mappedValue[opportunityKey];
       mappedValue = Array.isArray(nextValue)
         ? pivotArrayToObj(nextValue)
         : nextValue;
     });
-    mapped[key] = Array.isArray(mappedValue)
-      ? mappedValue.join(", ")
-      : (mappedValue as unknown as string);
-    return mapped;
+    return {
+      ...mapped,
+      [key]: Array.isArray(mappedValue)
+        ? mappedValue.join(", ")
+        : (mappedValue as unknown as string),
+    };
   }, {});
-}
-
-export function pivotArrayToObj(arr: Array<Record<string, unknown>>) {
-  const [first] = arr;
-  if (typeof first !== "object") return arr;
-
-  const init = Object.keys(first).reduce(
-    (obj: Record<string, unknown[]>, key) => {
-      obj[key] = [];
-      return obj;
-    },
-    {},
-  );
-
-  return arr.reduce((obj: typeof init, item) => {
-    Object.entries(item).forEach(([key, value]) => {
-      obj[key].push(value);
-    });
-    return obj;
-  }, init);
 }
 
 export function getUrlWithEncodedParams(
@@ -152,6 +175,7 @@ export function getUrlWithEncodedParams(
   try {
     if (!("search" in params) && !("primaryKeys" in params)) return url;
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.error(error);
     return url;
   }
@@ -171,56 +195,23 @@ interface MainCtaUrl {
   title?: string;
 }
 export function getMainCtaUrl({ lng, id = "", title = "" }: MainCtaUrl) {
-  const goFormLive = true;
-  return goFormLive
-    ? `/${Subpages.BECOME_VOLUNTEER}/${lng}/?id=${id}&title=${title}`
-    : lng === "de"
-      ? "https://forms.gle/yU4mg6YXfmheKmio6"
-      : "https://forms.gle/XWnU4znoAFaU9HfW9";
+  return `/${Subpages.BECOME_VOLUNTEER}/${lng}/?id=${id}&title=${title}`;
 }
 
 export function resolveEnumKey<K extends string>(
   enumObject: Record<K, string>,
   value: string,
 ) {
-  for (const key in enumObject) {
-    if (enumObject[key] === value) {
-      return key;
-    }
-  }
-  return "" as K; // If no match is found
+  return (
+    (Object.entries(enumObject).find(([, val]) => val === value)?.[0] as K) ||
+    ("" as K)
+  );
 }
-export const getImageUrl = (imageName: string): string => {
-  return `${CLOUDFRONT_URL}/${imageName}`;
-};
-
-const typeToImg = {
-  accompanying: getImageUrl("type-accompanying.webp"),
-  arts: getImageUrl("type-arts.webp"),
-  assistance: getImageUrl("type-assistance.webp"),
-  "clean-up": getImageUrl("type-cleanup.webp"),
-  clothing: getImageUrl("type-cloths.webp"),
-  consulting: getImageUrl("type-assistance.webp"),
-  culture: getImageUrl("type-culture.webp"),
-  daycare: getImageUrl("type-daycare.webp"),
-  gardening: getImageUrl("type-gardening.webp"),
-  it: getImageUrl("type-tutoring.webp"),
-  language: getImageUrl("type-language.webp"),
-  mentorship: getImageUrl("type-mentorship.webp"),
-  reading: getImageUrl("type-assistance.webp"),
-  renovation: getImageUrl("type-renovation.webp"),
-  translation: getImageUrl("type-language.webp"),
-  sports: getImageUrl("type-sports.webp"),
-  tandem: getImageUrl("type-tandem.webp"),
-  tutoring: getImageUrl("type-tutoring.webp"),
-
-  default: getImageUrl("type-assistance.webp"),
-};
 
 export function getReadableTime(timestamp: string, locale = "en-US") {
   const date = new Date(timestamp);
 
-  if (isNaN(date.getDate())) return timestamp;
+  if (Number.isNaN(date.getDate())) return timestamp;
 
   const formattedDate = date.toLocaleDateString(locale, {
     year: "numeric",

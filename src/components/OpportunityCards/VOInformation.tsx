@@ -24,22 +24,20 @@ export default function VOInformation({ title, maxLength = 100 }: Props) {
   });
 
   return (
-    <>
-      <span ref={ref} className="opportunity-vo-information">
-        <span className="opportunity-vo-information-hover">
-          <i>{truncated} </i>
-          {isTruncated ? <i role="tooltip">{title}</i> : ""}
-        </span>
-        {isTruncated ? <Epsilon onClick={() => setShow(prev => !prev)} /> : ""}
-        {show ? (
-          <Popup
-            className="opportunity-vo-information-tooltip"
-            close={() => setShow(false)}
-          >
-            <p>{title}</p>
-          </Popup>
-        ) : null}
+    <span ref={ref} className="opportunity-vo-information">
+      <span className="opportunity-vo-information-hover">
+        <i>{truncated} </i>
+        {isTruncated ? <i role="tooltip">{title}</i> : ""}
       </span>
-    </>
+      {isTruncated ? <Epsilon onClick={() => setShow((prev) => !prev)} /> : ""}
+      {show ? (
+        <Popup
+          className="opportunity-vo-information-tooltip"
+          close={() => setShow(false)}
+        >
+          <p>{title}</p>
+        </Popup>
+      ) : null}
+    </span>
   );
 }

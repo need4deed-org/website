@@ -1,9 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { Lang } from "../../config/types";
 import useMatchMedia from "../../hooks/useMatchMedia";
-import { getMainCtaUrl } from "../../utils";
+import { getMainCtaUrl, getImageUrl } from "../../utils";
 import "./Main.css";
-import { getImageUrl } from "../../utils/index";
 
 const urlLogoHorizontal = getImageUrl("N4D-logo-purple-on-transparent-h.webp");
 const urlLogoStacked = getImageUrl("N4D-logo-purple-on-transparent-s.webp");
@@ -23,7 +22,7 @@ function Main() {
         <h5>{t("projectIntro.slogan")}</h5>
       </div>
 
-      <button className="n4d-cta main-cta">
+      <button type="button" className="n4d-cta main-cta">
         <a href={urlMainCTA}>{t("projectIntro.beVolunteerButton")}</a>
       </button>
     </div>

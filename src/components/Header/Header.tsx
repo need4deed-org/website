@@ -1,8 +1,7 @@
 import { useContext, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-
-import { AppContainerContext } from "../../App";
+import AppContainerContext from "../../contexts/AppContainerContext";
 import { Lang, Subpages } from "../../config/types";
 import { getBaseUrl, setLangDirection } from "../../utils";
 import "./Header.css";
@@ -18,7 +17,7 @@ function Header({ showEvent = false }: Props) {
   const containerRef = useContext(AppContainerContext);
 
   const toggleMenu = () => {
-    setIsOpen(prev => !prev);
+    setIsOpen((prev) => !prev);
   };
 
   const handleLanguageChange = (lng: Lang) => {
@@ -29,8 +28,8 @@ function Header({ showEvent = false }: Props) {
   return (
     <nav className="navbar navbar-expand-md">
       <div className="container-fluid">
-        <a href={`/${i18n.language}`}>
-          <span className="home-icon"></span>
+        <a href={`/${i18n.language}`} aria-label="Home">
+          <span className="home-icon" />
         </a>
         <button
           className={`navbar-toggler ${isOpen ? "collapsed" : ""}`}
@@ -42,12 +41,8 @@ function Header({ showEvent = false }: Props) {
           aria-label="Toggle navigation"
           onClick={toggleMenu}
         >
-          <span
-            className={`navbar-toggler-icon ${isOpen ? "d-none" : ""}`}
-          ></span>
-          <span
-            className={`fa-solid fa-xmark ${isOpen ? "" : "d-none"}`}
-          ></span>
+          <span className={`navbar-toggler-icon ${isOpen ? "d-none" : ""}`} />
+          <span className={`fa-solid fa-xmark ${isOpen ? "" : "d-none"}`} />
         </button>
         <div
           className={`collapse navbar-collapse ${isOpen ? "show droped" : ""}`}
@@ -57,7 +52,7 @@ function Header({ showEvent = false }: Props) {
               <button
                 className="btn nav-link dropdown-toggle"
                 id="navbarDropdown"
-                role="button"
+                type="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
@@ -70,6 +65,7 @@ function Header({ showEvent = false }: Props) {
                 <li>
                   <button
                     className="dropdown-item"
+                    type="button"
                     onClick={() => handleLanguageChange(Lang.DE)}
                   >
                     Deutsch
@@ -78,6 +74,7 @@ function Header({ showEvent = false }: Props) {
                 <li>
                   <button
                     className="dropdown-item"
+                    type="button"
                     onClick={() => handleLanguageChange(Lang.EN)}
                   >
                     English
@@ -86,6 +83,7 @@ function Header({ showEvent = false }: Props) {
                 <li>
                   <button
                     className="dropdown-item"
+                    type="button"
                     onClick={() => handleLanguageChange(Lang.AR)}
                   >
                     العربية
@@ -94,6 +92,7 @@ function Header({ showEvent = false }: Props) {
                 <li>
                   <button
                     className="dropdown-item"
+                    type="button"
                     onClick={() => handleLanguageChange(Lang.RU)}
                   >
                     Русский
@@ -102,6 +101,7 @@ function Header({ showEvent = false }: Props) {
                 <li>
                   <button
                     className="dropdown-item"
+                    type="button"
                     onClick={() => handleLanguageChange(Lang.TR)}
                   >
                     Türkçe
@@ -118,7 +118,12 @@ function Header({ showEvent = false }: Props) {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href={t("basLink")} target="_blank">
+              <a
+                className="nav-link"
+                href={t("basLink")}
+                target="_blank"
+                rel="noreferrer"
+              >
                 {t("bas2022")}
               </a>
             </li>

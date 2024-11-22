@@ -50,10 +50,7 @@ function DataPrivacy() {
         </p>
       </a>
       <h6>{t("legal:dataPrivacy.generalInfo.officer.header")}</h6>
-      <p>
-        {t("legal:dataPrivacy.generalInfo.officer.title")}
-        {":"}
-      </p>
+      <p>{t("legal:dataPrivacy.generalInfo.officer.title")}:</p>
       <p>
         Kemal Webersohn{" "}
         <span>{t("legal:dataPrivacy.generalInfo.officer.from")}</span> WS

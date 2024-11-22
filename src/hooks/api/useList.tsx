@@ -7,27 +7,12 @@ import {
   ListsOfOptions,
   ListsOfOptionsType,
 } from "../../config/types";
-import { fetchFn } from "./utils";
+import fetchFn from "./utils";
 
 const FF_USE_OPTIONS_LISTS = false;
 
-export default function useList(listType: ListsOfOptions) {
-  const [list, setList] = useState<string[]>([]);
-  const [listsOptions] = useListQuery();
-
-  useEffect(() => {
-    const list = listsOptions
-      ? (listsOptions as ListsOfOptionsType)[listType]
-      : [];
-
-    setList(list?.length ? list : fallbackLists[listType]);
-  }, [listType, listsOptions]);
-
-  return list;
-}
-
 export function useListQuery() {
-  const { data } = useQuery<
+  const { data: listData } = useQuery<
     ListsOfOptionsType,
     Error,
     ListsOfOptionsType,
@@ -41,11 +26,26 @@ export function useListQuery() {
             options: {
               method: HttpMethod.OPTIONS,
             },
-            fnDTO: data => data.lists,
+            fnDTO: ({ lists }: { lists: ListsOfOptionsType }) => lists,
           })
         : fallbackLists;
     },
     staleTime: Infinity,
   });
-  return [data];
+  return [listData];
+}
+
+export default function useList(listType: ListsOfOptions) {
+  const [list, setList] = useState<string[]>([]);
+  const [listsOptions] = useListQuery();
+
+  useEffect(() => {
+    const listTmp = listsOptions
+      ? (listsOptions as ListsOfOptionsType)[listType]
+      : [];
+
+    setList(listTmp?.length ? listTmp : fallbackLists[listType]);
+  }, [listType, listsOptions]);
+
+  return list;
 }

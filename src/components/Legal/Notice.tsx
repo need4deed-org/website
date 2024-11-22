@@ -38,7 +38,7 @@ function LegalNotice() {
         <li>Adobe Stock</li>
       </ul>
       <p>{t("legal:notice.photoCredit.clubDialog")}</p>
-      <a href="#">{t("legal:notice.dataProtectionLink")}</a>
+      <a href="/data-protection">{t("legal:notice.dataProtectionLink")}</a>
       <h6>{t("legal:notice.dataProtectionOfficer")}</h6>
       <p>WS Datenschutz GmbH</p>
       <p>Dircksenstraße 51</p>

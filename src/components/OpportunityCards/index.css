@@ -58,6 +58,8 @@
   padding-inline: 3px;
   border: solid 1px black;
   border-radius: 3px;
+  background: unset;
+  line-height: normal;
 }
 
 .opportunity-epsilon:hover {

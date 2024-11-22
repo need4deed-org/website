@@ -32,28 +32,27 @@ export default function SimpleInputField({
             }
           : {}),
       }}
-      children={field => {
-        return (
-          <label className="volunteer-form-field">
-            <span>{label}</span>
-            <input
-              id={field.name}
-              name={field.name}
-              type="text"
-              value={
-                field.state.value as
-                  | string
-                  | number
-                  | readonly string[]
-                  | undefined
-              }
-              onBlur={field.handleBlur}
-              onChange={e => field.handleChange(e.target.value)}
-            />
-            <FieldInfo className="simple-input-volunteer-error" field={field} />
-          </label>
-        );
-      }}
-    />
+    >
+      {(field) => (
+        <label htmlFor={field.name} className="volunteer-form-field">
+          <span>{label}</span>
+          <input
+            id={field.name}
+            name={field.name}
+            type="text"
+            value={
+              field.state.value as
+                | string
+                | number
+                | readonly string[]
+                | undefined
+            }
+            onBlur={field.handleBlur}
+            onChange={(e) => field.handleChange(e.target.value)}
+          />
+          <FieldInfo className="simple-input-volunteer-error" field={field} />
+        </label>
+      )}
+    </FieldTag>
   );
 }

@@ -28,7 +28,7 @@ export default function MultipleInputsWithMore({
   });
 
   function handleClick(e: MouseEvent) {
-    setNumItems(prev => (prev ? 0 : showFirst));
+    setNumItems((prev) => (prev ? 0 : showFirst));
 
     if (e.screenX === 0 && e.screenY === 0) {
       const firstHiddenInput = document.getElementById(
@@ -42,6 +42,7 @@ export default function MultipleInputsWithMore({
     <>
       {field.state.value.map((item, idx) => (
         <FieldTag
+          // eslint-disable-next-line react/no-array-index-key
           key={idx}
           name={
             `${name}[${idx}].selected` as PrefixObjectAccessor<
@@ -50,7 +51,7 @@ export default function MultipleInputsWithMore({
             >
           }
         >
-          {innerField => (
+          {(innerField) => (
             <div
               data-main-item={numItems === 0 || idx < numItems || item.selected}
             >
@@ -58,7 +59,7 @@ export default function MultipleInputsWithMore({
                 tabIndex={0}
                 id={`${name}${idx}`}
                 type="checkbox"
-                onChange={e => {
+                onChange={(e) => {
                   innerField.handleChange(e.target.checked);
                 }}
               />
@@ -68,7 +69,7 @@ export default function MultipleInputsWithMore({
         </FieldTag>
       ))}
       {field.state.value.length > showFirst && (numItems || !refParent) ? (
-        <button tabIndex={0} onClick={handleClick}>
+        <button type="button" tabIndex={0} onClick={handleClick}>
           {numItems ? "more..." : "...less"}
         </button>
       ) : null}

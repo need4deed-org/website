@@ -30,9 +30,11 @@ function VolunteerOpportunity({ wrappingClassName }: Props) {
           className="n4d-full-space carousel-item"
           data-bs-interval={carouselInterval}
         >
-          <div 
+          <div
             className="translation-img volunteer-opportunity-img"
-            style={{ backgroundImage: `url(${getImageUrl("translation.webp")})` }}
+            style={{
+              backgroundImage: `url(${getImageUrl("translation.webp")})`,
+            }}
           >
             <div className="n4d-full-space volunteer-opportunity-text">
               <h5>{t("volunteeringProjects.translationHeading")}</h5>
@@ -47,7 +49,7 @@ function VolunteerOpportunity({ wrappingClassName }: Props) {
           className="n4d-full-space carousel-item active"
           data-bs-interval={carouselInterval}
         >
-          <div 
+          <div
             className="become-a-mentor-img volunteer-opportunity-img"
             style={{ backgroundImage: `url(${getImageUrl("mentor.webp")})` }}
           >
@@ -64,9 +66,11 @@ function VolunteerOpportunity({ wrappingClassName }: Props) {
           className="n4d-full-space carousel-item"
           data-bs-interval={carouselInterval}
         >
-          <div 
+          <div
             className="child-care-img volunteer-opportunity-img"
-            style={{ backgroundImage: `url(${getImageUrl("child-care.webp")})` }}
+            style={{
+              backgroundImage: `url(${getImageUrl("child-care.webp")})`,
+            }}
           >
             <div className="n4d-full-space volunteer-opportunity-text">
               <h5>{t("volunteeringProjects.childCareHeading")}</h5>
@@ -81,9 +85,11 @@ function VolunteerOpportunity({ wrappingClassName }: Props) {
           className="n4d-full-space carousel-item"
           data-bs-interval={carouselInterval}
         >
-          <div 
+          <div
             className="sport-programmes-img volunteer-opportunity-img"
-            style={{ backgroundImage: `url(${getImageUrl("sport-offer.webp")})` }}
+            style={{
+              backgroundImage: `url(${getImageUrl("sport-offer.webp")})`,
+            }}
           >
             <div className="n4d-full-space volunteer-opportunity-text">
               <h5>{t("volunteeringProjects.sportProgramHeading")}</h5>
@@ -99,27 +105,22 @@ function VolunteerOpportunity({ wrappingClassName }: Props) {
           type="button"
           data-bs-target="#carouselExampleAutoplaying"
           data-bs-slide="prev"
+          aria-label="Previous slide"
         >
-          <span
-            className="carousel-control-prev-icon"
-            aria-hidden="true"
-          ></span>
+          <span className="carousel-control-prev-icon" aria-hidden="true" />
         </button>
         <button
           className="carousel-control-next"
           type="button"
           data-bs-target="#carouselExampleAutoplaying"
           data-bs-slide="next"
+          aria-label="Next slide"
         >
-          <span
-            className="carousel-control-next-icon"
-            aria-hidden="true"
-          ></span>
+          <span className="carousel-control-next-icon" aria-hidden="true" />
         </button>
       </div>
     </div>
   );
-
 }
 
 export default VolunteerOpportunity;

@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useNavigate, useParams } from "react-router-dom";
 import ReactGA from "react-ga4";
 
-import { AppContainerContext } from "../App";
+import AppContainerContext from "../contexts/AppContainerContext";
 import Announcement from "../components/Announcement";
 import BecomeVolunteer from "../components/BecomeVolunteer";
 import EventHolidayGift from "../components/Event/EventHolidayGift";
@@ -15,8 +15,7 @@ import LegalNotice from "../components/Legal/Notice";
 import OpportunityCards from "../components/OpportunityCards";
 import { showEvent, urlApiOpportunity } from "../config/constants";
 import { Lang, OpportunityType, Subpages } from "../config/types";
-import { isEnumValue, setLangDirection } from "../utils";
-import { getImageUrl } from "../utils/index";
+import { isEnumValue, setLangDirection, getImageUrl } from "../utils";
 
 interface Props {
   type: Subpages;
@@ -29,7 +28,6 @@ function Subpage({ type }: Props) {
   const containerRef = useContext(AppContainerContext);
 
   useEffect(() => {
-    urlApiOpportunity;
     if (isEnumValue(Lang, lng)) {
       i18n.changeLanguage(lng);
       setLangDirection(containerRef, lng as Lang);
@@ -41,11 +39,10 @@ function Subpage({ type }: Props) {
       page: `/${type}/`,
       title: `Visited ${type}`,
     });
-
   }, [containerRef, i18n, lng, navigate, type]);
 
-  const component = (type: Subpages) => {
-    switch (type) {
+  const component = (pageType: Subpages) => {
+    switch (pageType) {
       case Subpages.DATA_PROTECTION:
         return <DataPrivacy />;
       case Subpages.NOTICE:
@@ -138,6 +135,8 @@ function Subpage({ type }: Props) {
         return <Announcement copies="becomeVolunteer.thanksVolunteer" />;
       case Subpages.EVENT:
         return <EventHolidayGift />;
+      default:
+        return null;
     }
   };
 

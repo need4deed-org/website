@@ -29,16 +29,15 @@ Before creating bug reports, please check [this list](#before-submitting-a-bug-r
 
 #### Before Submitting A Bug Report
 
-* Please check [check](https://gitlab.com/need4deed/website/-/issues/?sort=created_date&state=opened&label_name%5B%5D=Any&first_page_size=20) if the problem has already been reported.
+- Please check [check](https://gitlab.com/need4deed/website/-/issues/?sort=created_date&state=opened&label_name%5B%5D=Any&first_page_size=20) if the problem has already been reported.
 
 #### How Do I Submit A Bug Report?
 
 Bugs are tracked as [GitHub issues](https://gitlab.com/need4deed/website/-/issues). Create a bug issue. All the necesary info should be in the bug template.
 
-
 ### Suggesting features
 
-Feature suggestions are also tracked as [GitHub issues](https://gitlab.com/need4deed/website/-/issues). Please refer to the feature template. 
+Feature suggestions are also tracked as [GitHub issues](https://gitlab.com/need4deed/website/-/issues). Please refer to the feature template.
 
 ### Your First Code Contribution
 
@@ -48,22 +47,22 @@ Unsure where to begin contributing? You can start by looking through `good-first
 
 1. Fork the repo and create your branch from `main`
 2. The branch should titled be your_nick-feature-title
-2. If you've added code that should be tested, please add tests
+3. If you've added code that should be tested, please add tests
 
 ## Styleguides
 
 ### Git Commit Messages
 
-* Use the present tense ("Add feature" not "Added feature")
-* Use the imperative mood ("Move cursor to..." not "Moves cursor to...")
-* Limit the first line to 72 characters or less
-* Reference issues and pull requests liberally after the first line
-* Consider starting the commit message with an applicable emoji:
-    * 🎨 `:art:` when improving the format/structure of the code
-    * 🐎 `:racehorse:` when improving performance
-    * 📝 `:memo:` when writing docs
-    * 🐛 `:bug:` when fixing a bug
-    * 🔥 `:fire:` when removing code or files
+- Use the present tense ("Add feature" not "Added feature")
+- Use the imperative mood ("Move cursor to..." not "Moves cursor to...")
+- Limit the first line to 72 characters or less
+- Reference issues and pull requests liberally after the first line
+- Consider starting the commit message with an applicable emoji:
+  - 🎨 `:art:` when improving the format/structure of the code
+  - 🐎 `:racehorse:` when improving performance
+  - 📝 `:memo:` when writing docs
+  - 🐛 `:bug:` when fixing a bug
+  - 🔥 `:fire:` when removing code or files
 
 ### JavaScript Styleguide
 
@@ -76,6 +75,7 @@ By contributing, you agree that your contributions will be licensed under its [C
 ## Questions?
 
 Don't hesitate to reach out if you have any questions! You can:
+
 - Open an issue
 - Reach out to [@maintainer](https://github.com/[https://gitlab.com/szymon.skorupinski.need4deed])
 - Join our Slack (please request an access)

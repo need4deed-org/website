@@ -65,10 +65,10 @@ describe("utils", () => {
 
     beforeEach(() => {
       containerRef = createRef<HTMLDivElement>();
-      render(<div ref={containerRef}></div>);
+      render(<div ref={containerRef} />);
     });
 
-    rtlLangs.forEach(rtlLang => {
+    rtlLangs.forEach((rtlLang) => {
       test(`should set the value prop direction to rtl if "${rtlLang}" is provided`, () => {
         act(() => {
           setLangDirection(containerRef, rtlLang);

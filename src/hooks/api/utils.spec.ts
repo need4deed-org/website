@@ -1,4 +1,4 @@
-import { fetchFn } from "./utils";
+import fetchFn from "./utils";
 
 describe("API utils", () => {
   describe("fetchFn", () => {

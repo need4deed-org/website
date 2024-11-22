@@ -1,14 +1,15 @@
 stages:
-  - lint
+  - pre-commit
   - test
   - build
 
-lint_job:
-  stage: lint
+pre_commit_job:
+  stage: pre-commit
   image: node:20-alpine
   script:
+    - apk add git
     - yarn install
-    - yarn lint
+    - yarn pre-commit
 
 test_job:
   stage: test

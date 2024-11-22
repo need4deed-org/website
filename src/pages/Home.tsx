@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useNavigate, useParams } from "react-router-dom";
 import ReactGA from "react-ga4";
 
-import { AppContainerContext } from "../App";
+import AppContainerContext from "../contexts/AppContainerContext";
 import AboutProject from "../components/AboutProject/AboutProject";
 import ContactForRAC from "../components/ContactForRAC";
 import Footer from "../components/Footer/Footer";
@@ -14,8 +14,7 @@ import VolunteerOpportunity from "../components/VolunteerOpportunity/VolunteerOp
 import VolunteerWorkflow from "../components/VolunteerWorkflow/VolunteerWorkflow";
 import { showEvent } from "../config/constants";
 import { Lang } from "../config/types";
-import { isEnumValue, setLangDirection } from "../utils";
-import { getImageUrl } from "../utils/index";
+import { isEnumValue, setLangDirection, getImageUrl } from "../utils";
 
 function Home() {
   const { i18n, t } = useTranslation();
@@ -27,10 +26,10 @@ function Home() {
     if (isEnumValue(Lang, lng)) {
       i18n.changeLanguage(lng);
       setLangDirection(containerRef, lng as Lang);
-       ReactGA.event({
-       category: 'Language',
-       action: `Language changed to ${lng}`
-     });
+      ReactGA.event({
+        category: "Language",
+        action: `Language changed to ${lng}`,
+      });
     } else {
       navigate(`/${Lang.EN}`, { replace: true });
     }

@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { HashLink } from "react-router-hash-link";
 
-import CookieConsentBanner from "../CookieConsentBanner"
+import CookieConsentBanner from "../CookieConsentBanner";
 import { Subpages } from "../../config/types";
 import Sponsors from "../Sponsors/Sponsors";
 import "./Footer.css";
@@ -12,25 +12,6 @@ interface Props {
 
 function Footer({ showSponsors = true }: Props) {
   const { t, i18n } = useTranslation();
-  const aboutUsLinkProps = {
-    smooth: true,
-    to: `/${i18n.language}#about-project`,
-  };
-  const legalNoticeLinkProps = {
-    href: `/${Subpages.NOTICE}/${i18n.language}`,
-  };
-  const privacyLinkProps = {
-    href: `/${Subpages.DATA_PROTECTION}/${i18n.language}`,
-  };
-  const agreementLinkProps = {
-    href: `/${Subpages.AGREEMENT}/${i18n.language}`,
-  };
-  const mailToLinkProps = {
-    href: "mailto:info@need4deed.org",
-    target: "_blank",
-    rel: "noopener noreferrer",
-  };
-
   const email = "info@need4deed.org";
 
   return (
@@ -43,7 +24,7 @@ function Footer({ showSponsors = true }: Props) {
             <h6>{t("footer.aboutUs.aboutUsHeading")}</h6>
             <ul>
               <li>
-                <HashLink {...aboutUsLinkProps}>
+                <HashLink smooth to={`/${i18n.language}#about-project`}>
                   {t("footer.aboutUs.project")}
                 </HashLink>
               </li>
@@ -53,13 +34,19 @@ function Footer({ showSponsors = true }: Props) {
             <h6>{t("footer.legal.legalHeading")}</h6>
             <ul>
               <li>
-                <a {...legalNoticeLinkProps}>{t("footer.legal.impressum")}</a>
+                <a href={`/${Subpages.NOTICE}/${i18n.language}`}>
+                  {t("footer.legal.impressum")}
+                </a>
               </li>
               <li>
-                <a {...privacyLinkProps}>{t("footer.legal.dataPrivacy")}</a>
+                <a href={`/${Subpages.DATA_PROTECTION}/${i18n.language}`}>
+                  {t("footer.legal.dataPrivacy")}
+                </a>
               </li>
               <li>
-                <a {...agreementLinkProps}>{t("footer.legal.agreement")}</a>
+                <a href={`/${Subpages.AGREEMENT}/${i18n.language}`}>
+                  {t("footer.legal.agreement")}
+                </a>
               </li>
             </ul>
           </div>
@@ -67,7 +54,11 @@ function Footer({ showSponsors = true }: Props) {
             <h6>{t("footer.contact.contactHeading")}</h6>
             <ul>
               <li>
-                <a {...mailToLinkProps}>
+                <a
+                  href="mailto:info@need4deed.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {`${t("footer.contact.email")}: ${email}`}
                 </a>
               </li>

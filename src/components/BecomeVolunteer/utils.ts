@@ -84,13 +84,15 @@ export function parseFormStateDTO(value: VolunteerData) {
 }
 
 export function isValidPLZ(code: string, scope: string = "Berlin") {
-  const codeNum = parseInt(code);
+  const codeNum = parseInt(code, 10);
 
-  if (isNaN(codeNum)) return false;
+  if (Number.isNaN(codeNum)) return false;
 
-  return scope === "Germany"
-    ? codeNum >= 1001 && codeNum <= 95999
-    : scope === "Berlin"
-      ? codeNum >= 10115 && codeNum <= 14199
-      : false;
+  if (scope === "Germany") {
+    return codeNum >= 1001 && codeNum <= 95999;
+  }
+  if (scope === "Berlin") {
+    return codeNum >= 10115 && codeNum <= 14199;
+  }
+  return false;
 }

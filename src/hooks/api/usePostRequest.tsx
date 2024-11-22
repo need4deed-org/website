@@ -4,7 +4,7 @@ interface Props {
   url: string;
 }
 
-export function usePostRequest<D, R>({ url }: Props) {
+export default function usePostRequest<D, R>({ url }: Props) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<Error | null>(null);
   const [success, setSuccess] = useState(false);
@@ -20,13 +20,14 @@ export function usePostRequest<D, R>({ url }: Props) {
       },
       body: JSON.stringify(data),
     })
-      .then(response => {
+      .then((response) => {
         if (response.ok) {
           setSuccess(true);
           return response.json();
-        } else throw new Error(response.statusText);
+        }
+        throw new Error(response.statusText);
       })
-      .catch(error => setError(error.message))
+      .catch((functionError) => setError(functionError.message))
       .finally(() => {
         setLoading(false);
       });

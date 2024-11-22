@@ -13,14 +13,15 @@ export default function useOpportunitiesFromFile(
   useEffect(() => {
     setLoading(true);
     fetch(filePath)
-      .then(res => res.json())
-      .then(data =>
+      .then((res) => res.json())
+      .then((data) =>
         setOpportunities(
           data
             .filter(getFilter(opportunityParams?.search))
             .map(mapToOpportunity),
         ),
       )
+      // eslint-disable-next-line no-console
       .catch(console.error)
       .finally(() => {
         setLoading(false);

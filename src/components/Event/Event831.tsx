@@ -2,8 +2,8 @@ import { useTranslation } from "react-i18next";
 import { getImageUrl } from "../../utils/index";
 import "./index.css";
 
-const registrationHref = "";
-("https://docs.google.com/forms/d/e/1FAIpQLSe5wRZ0U0wEb_QvRbfuGzM196jRIVflUBC_273wSk2Dl3Gcnw/viewform");
+const registrationHref =
+  "https://docs.google.com/forms/d/e/1FAIpQLSe5wRZ0U0wEb_QvRbfuGzM196jRIVflUBC_273wSk2Dl3Gcnw/viewform";
 
 export default function Event831() {
   const { t } = useTranslation();
@@ -19,7 +19,7 @@ export default function Event831() {
     <div className="n4d-container event-container">
       <h1>{t("event831.header")}</h1>
       <div className="pic-and-text">
-        <div className="sommer-fest-pic" style={sommerFestPicStyle}></div>
+        <div className="sommer-fest-pic" style={sommerFestPicStyle} />
         <div>
           <p>{t("event831.paras.para1")}</p>
           <p>{t("event831.paras.para2")}</p>
