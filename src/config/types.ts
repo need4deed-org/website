@@ -1,5 +1,9 @@
 import { DeepKeys } from "@tanstack/react-form";
 
+export interface IncludeClassName {
+  className?: string;
+}
+
 export enum Lang {
   EN = "en",
   DE = "de",
@@ -26,13 +30,14 @@ export enum Subpages {
   DATA_PROTECTION = "datenschutzerklaerung",
   AGREEMENT = "vereinbarung",
   BECOME_VOLUNTEER = "become-volunteer",
-  THANK_YOU = "thank-you",
+  ANNOUNCEMENT = "announcement",
   OPPORTUNITIES = "opportunities",
   ACCOMPANYING = "accompanying",
   OPPORTUNITIES_TEST = "0pp4-test",
   ACCOMPANYING_TEST = "4cc0-test",
   EVENT = "event",
   PAST_EVENTS = "past-events",
+  ADD_OPPORTUNITY = "add-opportunity",
 }
 
 export enum Events {
@@ -40,8 +45,8 @@ export enum Events {
 }
 
 export enum OpportunityType {
-  GENERAL = "Volunteering",
-  ACCOMPANYING = "Accompanying",
+  GENERAL = "volunteering",
+  ACCOMPANYING = "accompanying",
 }
 
 // conjunction between keys and disjunction between possible values are applied for seach
@@ -56,6 +61,7 @@ export type Opportunity = Record<string, string>;
 export type AlfredOpportunity = Record<string, any>;
 
 export type KeyMap = {
+  id: string;
   type: string;
   name: string;
   languages: string;
@@ -98,6 +104,17 @@ export enum ListsOfOptions {
   ACTIVITIES = "activities",
   SKILLS = "skills",
   LEADS = "leads",
+  RAC_NAMES = "racNames",
 }
 
 export type ListsOfOptionsType = Record<`${ListsOfOptions}`, string[]>;
+
+export enum FormType {
+  VOLUNTEER = "volunteer",
+  OPPORTUNITY = "opportunity",
+}
+
+export enum TypePLZ {
+  BERLIN = "Berlin",
+  GERMANY = "Germany",
+}

@@ -1,24 +1,27 @@
-import { FieldApi, FieldComponent } from "@tanstack/react-form";
+import {
+  DeepKeys,
+  DeepValue,
+  FieldApi,
+  FieldComponent,
+} from "@tanstack/react-form";
 import { MouseEvent, RefObject, useState } from "react";
+import { useTranslation } from "react-i18next";
 
-import { PrefixObjectAccessor } from "../../config/types";
 import useOutsideClick from "../../hooks/useOutsideClick";
-import { VolunteerData, VolunteerDataKeysArrays } from "./dataStructure";
+import { Selected } from "./types";
 
-interface Props {
+interface Props<T, K extends DeepKeys<T>> {
   showFirst?: number;
   refParent?: RefObject<HTMLElement>;
-  FieldTag: FieldComponent<VolunteerData, undefined>;
-  field: FieldApi<VolunteerData, VolunteerDataKeysArrays>;
-  name: VolunteerDataKeysArrays;
+  FieldTag: FieldComponent<T, undefined>;
+  field: FieldApi<T, K>;
 }
-export default function MultipleInputsWithMore({
-  showFirst = 8,
-  refParent,
-  FieldTag,
-  field,
-  name,
-}: Props) {
+
+export default function MultipleCheckBoxInputsWithMore<
+  T,
+  K extends DeepKeys<T>,
+>({ showFirst = 8, refParent, FieldTag, field }: Props<T, K>) {
+  const { t } = useTranslation();
   const [numItems, setNumItems] = useState(showFirst);
   useOutsideClick({
     ref: refParent,
@@ -32,24 +35,17 @@ export default function MultipleInputsWithMore({
 
     if (e.screenX === 0 && e.screenY === 0) {
       const firstHiddenInput = document.getElementById(
-        `${name}${showFirst - 1}`,
+        `${field.name}${showFirst - 1}`,
       );
       firstHiddenInput?.focus();
     }
   }
-
   return (
     <>
-      {field.state.value.map((item, idx) => (
+      {(field.state.value as []).map((item: Selected, idx) => (
         <FieldTag
-          // eslint-disable-next-line react/no-array-index-key
-          key={idx}
-          name={
-            `${name}[${idx}].selected` as PrefixObjectAccessor<
-              VolunteerData,
-              []
-            >
-          }
+          key={`${item.title}`}
+          name={`${field.name}[${idx}].selected` as DeepKeys<T>}
         >
           {(innerField) => (
             <div
@@ -57,20 +53,23 @@ export default function MultipleInputsWithMore({
             >
               <input
                 tabIndex={0}
-                id={`${name}${idx}`}
+                id={`${field.name}${idx}`}
                 type="checkbox"
                 onChange={(e) => {
-                  innerField.handleChange(e.target.checked);
+                  innerField.handleChange(
+                    e.target.checked as DeepValue<T, DeepKeys<T>>,
+                  );
                 }}
               />
-              <label htmlFor={`${name}${idx}`}>{item.title}</label>
+              <label htmlFor={`${field.name}${idx}`}>{item.title}</label>
             </div>
           )}
         </FieldTag>
       ))}
-      {field.state.value.length > showFirst && (numItems || !refParent) ? (
+      {(field.state.value as []).length > showFirst &&
+      (numItems || !refParent) ? (
         <button type="button" tabIndex={0} onClick={handleClick}>
-          {numItems ? "more..." : "...less"}
+          {numItems ? t("form.button.more") : t("form.button.less")}
         </button>
       ) : null}
     </>

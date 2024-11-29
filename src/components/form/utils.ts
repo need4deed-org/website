@@ -1,13 +1,21 @@
-import { YesNo } from "../../config/types";
-import { resolveEnumKey } from "../../utils";
 import {
-  TimeSlot,
+  maxPLZBerlin,
+  maxPLZGermany,
+  minPLZBerlin,
+  minPLZGermany,
+} from "../../config/constants";
+import { TypePLZ } from "../../config/types";
+import {
+  OpportunityData,
+  OpportunityParsedData,
+} from "./AddOpportunity/dataStructure";
+import {
   VolunteerData,
   VolunteerParsedData,
-  Weekday,
-} from "./dataStructure";
+} from "./BecomeVolunteer/dataStructure";
+import { TimeSlot, Weekday } from "./types";
 
-export function parseFormStateDTO(value: VolunteerData) {
+export function parseFormStateDTOVolunteer(value: VolunteerData) {
   const mapWeekdaysToNumbers: Record<Weekday | "onetime", number> = {
     onetime: 0,
     monday: 1,
@@ -20,7 +28,7 @@ export function parseFormStateDTO(value: VolunteerData) {
   };
 
   const data = {} as VolunteerParsedData;
-  data.origin_opportunity_id = value.opportunityId
+  data.origin_opportunity = value.opportunityId
     ? +value.opportunityId
     : undefined;
   data.full_name = value.name;
@@ -31,25 +39,12 @@ export function parseFormStateDTO(value: VolunteerData) {
     .filter(({ selected }) => selected)
     .map(({ title }) => title);
   data.schedule = value.availability.reduce(
-    (
-      result: [
-        number,
-        Lowercase<keyof typeof TimeSlot> | "weekdays" | "weekends",
-      ][],
-      day,
-    ) => {
+    (result: [number, TimeSlot | "weekdays" | "weekends"][], day) => {
       day.timeSlots
         .filter(({ selected }) => selected)
         .forEach(({ title }) => {
           const numDay = mapWeekdaysToNumbers[day.weekday];
-          const timeSlot = numDay
-            ? (resolveEnumKey<keyof typeof TimeSlot>(
-                TimeSlot,
-                title,
-              ).toLocaleLowerCase() as Lowercase<keyof typeof TimeSlot>)
-            : (title.toLowerCase() as "weekdays" | "weekends");
-
-          result.push([numDay, timeSlot]);
+          result.push([numDay, title as TimeSlot | "weekdays" | "weekends"]);
         });
       return result;
     },
@@ -67,9 +62,7 @@ export function parseFormStateDTO(value: VolunteerData) {
   data.activities = value.activities
     .filter(({ selected }) => selected)
     .map(({ title }) => title);
-  data.good_conduct_certificate = value.certOfGoodConduct
-    ? YesNo.YES
-    : YesNo.NO;
+  data.if_good_conduct_certificate = !!value.certOfGoodConduct;
   data.if_measles_vaccination = !!value.certMeaslesVaccination;
   data.lead_from = value.leadFrom
     .filter(({ selected }) => selected)
@@ -83,16 +76,28 @@ export function parseFormStateDTO(value: VolunteerData) {
   return data;
 }
 
-export function isValidPLZ(code: string, scope: string = "Berlin") {
+export function parseFormStateDTOOpportunity(value: OpportunityData) {
+  return value as unknown as OpportunityParsedData;
+}
+
+export function isValidPLZ(code: string, scope: TypePLZ = TypePLZ.BERLIN) {
   const codeNum = parseInt(code, 10);
 
   if (Number.isNaN(codeNum)) return false;
 
-  if (scope === "Germany") {
-    return codeNum >= 1001 && codeNum <= 95999;
+  if (scope === TypePLZ.GERMANY) {
+    return codeNum >= minPLZGermany && codeNum <= maxPLZGermany;
   }
-  if (scope === "Berlin") {
-    return codeNum >= 10115 && codeNum <= 14199;
+  if (scope === TypePLZ.BERLIN) {
+    return codeNum >= minPLZBerlin && codeNum <= maxPLZBerlin;
   }
   return false;
+}
+
+export function getTickMark(isTicked: boolean) {
+  return isTicked ? "☑" : "◻️";
+}
+
+export function getDate(datetime: string) {
+  return new Date(datetime);
 }

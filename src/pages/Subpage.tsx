@@ -1,21 +1,21 @@
 import { useContext, useEffect } from "react";
+import ReactGA from "react-ga4";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useParams } from "react-router-dom";
-import ReactGA from "react-ga4";
 
-import AppContainerContext from "../contexts/AppContainerContext";
 import Announcement from "../components/Announcement";
-import BecomeVolunteer from "../components/BecomeVolunteer";
 import EventHolidayGift from "../components/Event/EventHolidayGift";
 import Footer from "../components/Footer/Footer";
+import Form from "../components/form";
 import Header from "../components/Header/Header";
 import Agreement from "../components/Legal/Agreement";
 import DataPrivacy from "../components/Legal/DataPrivacy";
 import LegalNotice from "../components/Legal/Notice";
 import OpportunityCards from "../components/OpportunityCards";
 import { showEvent, urlApiOpportunity } from "../config/constants";
-import { Lang, OpportunityType, Subpages } from "../config/types";
-import { isEnumValue, setLangDirection, getImageUrl } from "../utils";
+import { FormType, Lang, OpportunityType, Subpages } from "../config/types";
+import AppContainerContext from "../contexts/AppContainerContext";
+import { getImageUrl, isEnumValue, setLangDirection } from "../utils";
 
 interface Props {
   type: Subpages;
@@ -59,6 +59,7 @@ function Subpage({ type }: Props) {
               },
             }}
             keyMap={{
+              id: "id",
               type: "appointment",
               name: "name",
               languages: "languages", // need to combine refugee lang and lang translation lang
@@ -78,6 +79,7 @@ function Subpage({ type }: Props) {
               primaryKeys: ["title", "name"],
             }}
             keyMap={{
+              id: "id",
               type: "type",
               name: "name",
               languages: "languages",
@@ -99,6 +101,7 @@ function Subpage({ type }: Props) {
               primaryKeys: ["title", "name"],
             }}
             keyMap={{
+              id: "id",
               type: "activities",
               name: "title",
               languages: "languages",
@@ -120,6 +123,7 @@ function Subpage({ type }: Props) {
               primaryKeys: ["title", "name"],
             }}
             keyMap={{
+              id: "id",
               type: "activities",
               name: "title",
               languages: "languages",
@@ -130,9 +134,11 @@ function Subpage({ type }: Props) {
           />
         );
       case Subpages.BECOME_VOLUNTEER:
-        return <BecomeVolunteer />;
-      case Subpages.THANK_YOU:
-        return <Announcement copies="becomeVolunteer.thanksVolunteer" />;
+        return <Form form={FormType.VOLUNTEER} />;
+      case Subpages.ADD_OPPORTUNITY:
+        return <Form form={FormType.OPPORTUNITY} />;
+      case Subpages.ANNOUNCEMENT:
+        return <Announcement />;
       case Subpages.EVENT:
         return <EventHolidayGift />;
       default:

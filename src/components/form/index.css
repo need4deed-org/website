@@ -1,4 +1,4 @@
-.volunteer-container {
+.form-container {
   width: clamp(35ch, 80vw, 65ch);
   display: flex;
   flex-direction: column;
@@ -6,36 +6,36 @@
   direction: ltr;
 }
 
-.volunteer-form-container {
+.form-form-container {
   display: flex;
   flex-direction: column;
   gap: 3rem;
   width: 100%;
 }
 
-.volunteer-error {
+.form-error {
   width: 100%;
   height: 1rem;
 }
 
-.simple-input-volunteer-error {
+.simple-input-form-error {
   position: absolute;
   bottom: 0;
 }
 
-.volunteer-error em,
-.volunteer-submit em {
+.form-error em,
+.form-submit em {
   color: var(--n4d-clr-error, red);
   background: var(--n4d-neutral-900);
   padding-inline: 0.3rem;
   margin-inline-start: 1rem;
 }
 
-.volunteer-form-field {
+.form-form-field {
   position: relative;
 }
 
-.volunteer-form-field input {
+.form-form-field input {
   min-width: 100%;
 
   padding: 1rem;
@@ -43,11 +43,11 @@
   border-radius: 0.3rem;
 }
 
-.volunteer-form-field :focus-within {
+.form-form-field :focus-within {
   outline: solid 1px var(--n4d-secondary-lighter);
 }
 
-.volunteer-form-field span {
+.form-form-field span {
   background: var(--n4d-neutral-900);
   padding-inline: 0.3rem;
   position: absolute;
@@ -55,134 +55,134 @@
   left: 1rem;
 }
 
-.volunteer-container p {
+.form-container p {
   margin: 0;
   padding: 0;
   line-height: 2;
 }
 
-.volunteer-container-header {
+.form-container-header {
   border-bottom: solid 1px var(--n4d-neutral-200);
   margin-block-end: 3rem;
   width: 100%;
 }
 
-.volunteer-container-header h1 {
+.form-container-header h1 {
   font-size: clamp(1.4rem, 3vw, 1.7rem);
   display: flex;
 }
 
-.volunteer-container-header img {
+.form-container-header img {
   margin-block-start: 3px;
   height: 1.5rem;
   margin-inline-start: auto;
 }
 
-.volunteer-container h1,
-.volunteer-container h2,
-.volunteer-container h6 {
+.form-container h1,
+.form-container h2,
+.form-container h6 {
   margin-block: 1rem 0.5rem;
 }
 
-.volunteer-container h2 {
+.form-container h2 {
   font-size: 1.5rem;
   padding-block-end: 0.5rem;
   border-bottom: solid 1px var(--n4d-neutral-500);
 }
 
-.volunteer-container a {
+.form-container a {
   color: var(--n4d-primary);
   margin-top: auto;
   align-self: end;
 }
 
-.volunteer-chip-list {
+.form-chip-list {
   display: flex;
   flex-wrap: wrap;
   gap: 0.3rem;
 }
 
-.volunteer-table {
+.form-table {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.volunteer-table-row {
+.form-table-row {
   display: grid;
   grid-template-columns: 30% repeat(4, 17.5%);
   border-nbottom: solid 1px var(--n4d-neutral-800);
 }
 
-.volunteer-table div:nth-last-child(2) > span:nth-child(2) {
+.form-table div:nth-last-child(2) > span:nth-child(2) {
   grid-column: 2 / 4;
 }
 
-.volunteer-table div:nth-last-child(2) > span:nth-child(3) {
+.form-table div:nth-last-child(2) > span:nth-child(3) {
   grid-column: 4 / 6;
 }
 
-.volunteer-table-row span {
+.form-table-row span {
   text-align: end;
 }
 
-.volunteer-pick input {
+.form-pick input {
   width: 0;
   height: 0;
   opacity: 0;
 }
 
-.volunteer-pick button,
-.volunteer-pick label {
+.form-pick button,
+.form-pick label {
   padding: 0 0.3rem;
   border-radius: 0.3rem;
   border: solid 1px var(--n4d-neutral-700);
 }
 
-.volunteer-pick div[data-main-item="false"] {
+.form-pick div[data-main-item="false"] {
   display: none;
 }
 
-.volunteer-pick input:checked + label {
+.form-pick input:checked + label {
   color: var(--n4d-neutral-900);
   background: var(--n4d-primary);
 }
 
-.volunteer-pick input:checked + label:hover {
+.form-pick input:checked + label:hover {
   color: var(--n4d-neutral-900);
   background: var(--n4d-primary-darker);
 }
 
-.volunteer-pick input:focus + label {
+.form-pick input:focus + label {
   outline: solid 1px var(--n4d-secondary-lighter);
 }
 
-.volunteer-pick button:hover,
-.volunteer-pick label:hover {
+.form-pick button:hover,
+.form-pick label:hover {
   color: var(--n4d-neutral-100);
   background: var(--n4d-neutral-700);
 }
 
-.volunteer-availability-weekday {
-  text-align: start !important;
-}
-
-.volunteer-availability {
+.form-availability {
   display: flex;
   flex-direction: column;
 }
 
-.volunteer-section-header h2 {
+.form-availability-weekday {
+  text-align: start !important;
+}
+
+.form-section-header h2 {
   display: flex;
 }
 
-.volunteer-section-header svg {
+.form-section-header svg {
   width: 2rem;
   height: 2rem;
   fill: var(--n4d-neutral-500);
 }
 
-.volunteer-section-header button {
+.form-section-header button {
   padding: 0;
   color: var(--n4d-neutral-500);
   background: unset;
@@ -191,11 +191,15 @@
   margin-inline-start: auto;
 }
 
-.volunteer-section-header button:hover {
+.form-section-header button:hover {
   background: var(--n4d-neutral-800);
 }
 
-.volunteer-help {
+.form-radio-chips label:nth-child(2) {
+  margin-inline-end: 0.3rem;
+}
+
+.form-help {
   top: unset;
   left: unset;
   max-width: 50ch;
@@ -203,18 +207,39 @@
   z-index: 1;
 }
 
-.volunteer-help p {
+.form-help p {
   white-space: pre-line;
 }
 
-.volunteer-submit {
+.form-field-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 1rem 1rem;
+  border: solid 1px var(--n4d-neutral-700);
+}
+
+.form-field-group b:first-child {
+  position: absolute;
+  top: -0.9rem;
+  background: var(--n4d-neutral-900);
+  padding-inline: 0.3rem;
+}
+
+.form-chiplist-header-within-group h2 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.form-submit {
   display: flex;
   flex-direction: column;
   allign-items: center;
   gap: 1rem;
 }
 
-.volunteer-submit button {
+.form-submit button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -223,21 +248,21 @@
   margin-inline-start: auto;
 }
 
-.volunteer-submit svg {
+.form-submit svg {
   width: 1.2rem;
   height: 1.2rem;
   fill: var(--n4d-neutral-200);
 }
 
 @media (max-width: 768px) {
-  .volunteer-container-header h1 {
+  .form-container-header h1 {
     display: block;
   }
-  .volunteer-container-header img {
+  .form-container-header img {
     display: block;
     margin-inline-start: 0;
   }
-  .volunteer-container-header img {
+  .form-container-header img {
     height: 1.3rem;
   }
 }

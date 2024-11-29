@@ -1,12 +1,13 @@
-import { ReactNode, useRef, useState } from "react";
+import { PropsWithChildren, useRef, useState } from "react";
+import { IncludeClassName } from "../../config/types";
 import useOutsideClick from "../../hooks/useOutsideClick";
 import Popup from "../Popup";
 import Help from "../svg/Help";
 
-interface Props {
-  children: ReactNode;
+interface Props extends IncludeClassName {
   titleHelp?: string;
   textHelp?: string;
+  className?: string;
   classNamePopup?: string;
 }
 
@@ -14,15 +15,18 @@ export default function HeaderWithHelp({
   children,
   textHelp,
   titleHelp,
+  className,
   classNamePopup,
-}: Props) {
+}: PropsWithChildren<Props>) {
   const [show, setShow] = useState(false);
   const ref = useRef<HTMLButtonElement>(null);
 
   useOutsideClick({ ref, handler: () => setShow(false) });
 
   return (
-    <div className="n4d-information-tooltip-parent volunteer-section-header">
+    <div
+      className={`n4d-information-tooltip-parent form-section-header ${className}`}
+    >
       <h2>
         {children}
         {textHelp ? (

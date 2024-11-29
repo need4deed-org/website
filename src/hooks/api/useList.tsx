@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
-import { fallbackLists } from "../../components/BecomeVolunteer/dataStructure";
+import fallbackLists from "../../components/form/fallbackLists";
 import { urlApiVolunteer } from "../../config/constants";
 import {
   HttpMethod,

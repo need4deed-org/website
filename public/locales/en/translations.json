@@ -54,99 +54,162 @@
     "heading": "Are you a volunteer coordinator in a refugee accommodation center?",
     "emailUs": "write us to"
   },
-  "becomeVolunteer": {
-    "header": "Become a Volunteer with",
-    "thanksVolunteer": { "header": "Thank You!", "para": "" },
-    "thanks": "Thank you for choosing",
-    "submit": "Submit",
-    "errors": "Errors",
-    "reset": "Reset",
-    "fields": {
+  "thankYou": { "header": "Thank You!", "para": "" },
+  "form": {
+    "error": {
       "required": "This field is required",
-      "name": { "label": "Name" },
-      "email": { "label": "E-mail", "error": "Must be a valid email" },
-      "phone": {
-        "label": "Phone Number or Telegram Handle",
-        "error": "Must be a phone number"
+      "postcode": "Must be a valid postcode of Berlin",
+      "email": "Must be a valid email",
+      "location": "Please pick at least one location",
+      "availability": "Please pick at least one timeframe",
+      "labelErrors": "Errors",
+      "language": "Please pick at least one language"
+    },
+    "button": { "more": "more...", "submit": "Submit" },
+    "becomeVolunteer": {
+      "header": "Become a Volunteer with",
+      "thankYou": {
+        "header": "Thanks for your interest in volunteering with refugees :-)",
+        "para": "We will get back to you in the coming days with the next steps!"
       },
-      "postcode": {
-        "label": "PLZ (Berlin) of your location",
-        "error": "Must be a valid postcode of Berlin"
-      },
-      "locations": {
-        "header": "Preferred districts* (Berlin)",
-        "para": "*keep in mind that most accommodation centers are outside the ring!",
-        "error": "Please pick at least one location",
-        "helpText": "In case we cant find a perfect match we might send you offers that are also based on your location!",
-        "helpTitle": ""
-      },
-      "availability": {
-        "header": "Preferred timeframes*",
-        "para": "*keep in mind that most opportunities are limited to the 9-17 working hours, at least for the beginning!",
-        "error": "Please pick at least one timeframe",
-        "helpText": "The Mon-Sun availabilities refer to regularly repeating volunteering. If the time frames are limited to some periods or need explaining, please write in the comments at the last section",
-        "helpTitle": ""
-      },
-      "languages": {
-        "header": "Languages",
-        "languagesNative": {
-          "header": "Native",
-          "error": "Please pick at least one language"
+      "thanks": "Thank you for choosing",
+      "reset": "Reset",
+      "fields": {
+        "name": { "label": "Name" },
+        "email": { "label": "E-mail" },
+        "phone": {
+          "label": "Phone Number or Telegram Handle"
         },
-        "languagesFluent": {
-          "header": "Fluent",
-          "error": "Please pick at least one language"
+        "postcode": {
+          "label": "PLZ (Berlin) of your location"
         },
-        "languagesIntermediate": {
-          "header": "Intermediate"
+        "locations": {
+          "header": "Preferred districts* (Berlin)",
+          "para": "*keep in mind that most accommodation centers are outside the ring!",
+          "helpText": "In case we cant find a perfect match we might send you offers that are also based on your location!",
+          "helpTitle": ""
         },
-        "helpText": "Fluent means you think you can support it in case some translations between languages are needed\nThese languages are oriented by the needs of refugees, if the language you are native or fluent at is not here, please add it in the last comment section!",
-        "helpTitle": ""
-      },
-      "activities": {
-        "header": "Preferred Activities",
-        "error": "Please pick at least one activity",
-        "helpText": "These are the most common needs that require voluntary support. Sometimes they can change once you started volunteering.",
-        "helpTitle": ""
-      },
-      "skills": {
-        "header": "Additional skills or experience",
-        "helpText": "Anything you feel that you can share from your experience, abilities or expertise can  be useful to know, but don't worry, its not a must for volunteering!",
-        "helpTitle": ""
-      },
-      "certOfGoodConduct": {
-        "header": "Certificate of Good Conduct (Erweitertes Führungszeungnis)",
-        "error": "Please pick at least one activity",
-        "why": "Why do I need this?",
-        "yes": "I have one",
-        "no": " Need to apply",
-        "helpText": "",
-        "helpTitle": ""
-      },
-      "certMeaslesVaccination": {
-        "header": "Certificate of Measles Vaccination",
-        "error": "Please pick at least one activity",
-        "yes": "I have one",
-        "no": "Need to prove it",
-        "helpText": "",
-        "helpTitle": ""
-      },
-      "leadFrom": {
-        "header": "Where did you hear about us?",
-        "helpText": "",
-        "helpTitle": ""
-      },
-      "comments": {
-        "label": "Comments (other languages, times, locations, activities, etc.)",
-        "helpText": "",
-        "helpTitle": ""
-      },
-      "consent": {
-        "header": "I hereby agree to the:",
-        "and": "and",
-        "label": "",
-        "helpText": "",
-        "helpTitle": ""
+        "availability": {
+          "header": "Preferred timeframes*",
+          "para": "*keep in mind that most opportunities are limited to the 9-17 working hours, at least for the beginning!",
+          "helpText": "The Mon-Sun availabilities refer to regularly repeating volunteering. If the time frames are limited to some periods or need explaining, please write in the comments at the last section",
+          "helpTitle": ""
+        },
+        "languages": {
+          "header": "Languages*",
+          "para": "*if you can't find your language, please select \"Other\" and indicate your preferable language in comments section bellow",
+          "languagesNative": {
+            "header": "Native"
+          },
+          "languagesFluent": {
+            "header": "Fluent",
+            "error": "Please pick at least one language"
+          },
+          "languagesIntermediate": {
+            "header": "Intermediate"
+          },
+          "helpText": "Fluent means you think you can support it in case some translations between languages are needed\nThese languages are oriented by the needs of refugees, if the language you are native or fluent at is not here, please add it in the last comment section!",
+          "helpTitle": ""
+        },
+        "activities": {
+          "header": "Preferred Activities",
+          "error": "Please pick at least one activity",
+          "helpText": "These are the most common needs that require voluntary support. Sometimes they can change once you started volunteering.",
+          "helpTitle": ""
+        },
+        "skills": {
+          "header": "Additional skills or experience",
+          "helpText": "Anything you feel that you can share from your experience, abilities or expertise can  be useful to know, but don't worry, its not a must for volunteering!",
+          "helpTitle": ""
+        },
+        "certOfGoodConduct": {
+          "header": "Certificate of Good Conduct (Erweitertes Führungszeungnis)",
+          "why": "Why do I need this?",
+          "true": "I have one",
+          "false": " Need to apply",
+          "helpText": "",
+          "helpTitle": ""
+        },
+        "certMeaslesVaccination": {
+          "header": "Certificate of Measles Vaccination",
+          "true": "I have one",
+          "false": "Need to prove it",
+          "helpText": "",
+          "helpTitle": ""
+        },
+        "leadFrom": {
+          "header": "Where did you hear about us?",
+          "helpText": "",
+          "helpTitle": ""
+        },
+        "comments": {
+          "label": "Comments (other languages, times, locations, activities, etc.)",
+          "helpText": "",
+          "helpTitle": ""
+        },
+        "consent": {
+          "header": "I hereby agree to the:",
+          "and": "and",
+          "label": "",
+          "helpText": "",
+          "helpTitle": ""
+        }
+      }
+    },
+    "addOpportunity": {
+      "header": "Add an Opportunity to",
+      "fields": {
+        "title": { "label": "What help is needed in short" },
+        "contactGroup": { "label": "Contact information" },
+        "aaGroup": { "label": "Accompanying Appointment" },
+        "voGroup": { "label": "Volunteering Opportunity" },
+        "email": { "label": "E-mail" },
+        "fullName": { "label": "Name" },
+        "postcode": { "label": "PLZ" },
+        "phone": { "label": "Phone number" },
+        "opportunityType": {
+          "header": "Type Of Opportunity",
+          "volunteering": "Volunteering Opportunity",
+          "accompanying": "Accompanying Appointment",
+          "helpText": "There are two ways of helping: Volunteering doing various activities and Accompanying to appointments essentially providing translation",
+          "helpTitle": ""
+        },
+        "activities": {
+          "header": "Activities"
+        },
+        "schedule": {
+          "header": "Schedule",
+          "helpText": "Please pick time slots for volunteering."
+        },
+        "skills": {
+          "header": "Skills",
+          "helpText": "Please pick skills that are needed for volunteering."
+        },
+        "languagesRefugee": {
+          "header": "Languages that refugees speak",
+          "helpText": "Please pick languages needed during volunteering."
+        },
+        "languagesTranslation": {
+          "header": "Languages for translation",
+          "helpText": "Please pick languages needed during appointment."
+        },
+        "dateTime": {
+          "label": "Appointment date and time (YYYY-MM-DD HH:MM)",
+          "error": "Wrong date or time format.",
+          "tooClose": "Appointment date must be no closer than in 7 days"
+        },
+        "ifTranslationToEnOkay": {
+          "label": "It's okay to translate to English"
+        },
+        "address": { "label": "Appointment Address" },
+        "refugeeName": { "label": "Name Of Refugee" },
+        "refugeeNumber": { "label": "Phone Number Of Refugee" },
+        "aaInformation": { "label": "Information" },
+        "voInformation": { "label": "Information" },
+        "numberVolunteers": {
+          "label": "How many volunteers are needed",
+          "error": "Please enter a number"
+        }
       }
     }
   },

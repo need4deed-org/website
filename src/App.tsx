@@ -1,17 +1,17 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import ReactGA from "react-ga4";
-import { getCookieConsentValue } from "react-cookie-consent";
 import { useEffect, useRef } from "react";
+import { getCookieConsentValue } from "react-cookie-consent";
+import ReactGA from "react-ga4";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import "./App.css";
-import AppContainerContext from "./contexts/AppContainerContext";
 import JsonLd from "./components/JsonLd";
+import { googleAnalyticsId } from "./config/constants";
 import { Subpages } from "./config/types";
+import AppContainerContext from "./contexts/AppContainerContext";
 import Home from "./pages/Home";
 import Land404 from "./pages/Land404";
 import PastEvents from "./pages/PastEvents";
 import Subpage from "./pages/Subpage";
-import { googleAnalyticsId } from "./config/constants";
 
 function App() {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -102,8 +102,16 @@ function App() {
               element={<Subpage type={Subpages.BECOME_VOLUNTEER} />}
             />
             <Route
-              path={`/${Subpages.THANK_YOU}/:lng`}
-              element={<Subpage type={Subpages.THANK_YOU} />}
+              path={`/${Subpages.ANNOUNCEMENT}/:lng`}
+              element={<Subpage type={Subpages.ANNOUNCEMENT} />}
+            />
+            <Route
+              path={`/${Subpages.ADD_OPPORTUNITY}`}
+              element={<Subpage type={Subpages.ADD_OPPORTUNITY} />}
+            />
+            <Route
+              path={`/${Subpages.ADD_OPPORTUNITY}/:lng`}
+              element={<Subpage type={Subpages.ADD_OPPORTUNITY} />}
             />
             <Route
               path={`/${Subpages.EVENT}/:lng`}

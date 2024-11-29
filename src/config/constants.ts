@@ -8,3 +8,14 @@ export const urlApiOpportunity = `${urlApi}/opportunity/`;
 export const CLOUDFRONT_URL = "https://d2nwrdddg8skub.cloudfront.net/images";
 
 export const showEvent = true;
+
+export const sevenDays = 1000 * 60 * 60 * 24 * 7;
+
+export const minPLZGermany = 1067;
+export const maxPLZGermany = 99998;
+
+export const minPLZBerlin = 10115;
+export const maxPLZBerlin = 14199;
+
+export const phoneRegEx =
+  /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/;

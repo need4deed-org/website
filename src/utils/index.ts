@@ -198,16 +198,6 @@ export function getMainCtaUrl({ lng, id = "", title = "" }: MainCtaUrl) {
   return `/${Subpages.BECOME_VOLUNTEER}/${lng}/?id=${id}&title=${title}`;
 }
 
-export function resolveEnumKey<K extends string>(
-  enumObject: Record<K, string>,
-  value: string,
-) {
-  return (
-    (Object.entries(enumObject).find(([, val]) => val === value)?.[0] as K) ||
-    ("" as K)
-  );
-}
-
 export function getReadableTime(timestamp: string, locale = "en-US") {
   const date = new Date(timestamp);
 
