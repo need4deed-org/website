@@ -62,6 +62,14 @@ function App() {
               element={<Subpage type={Subpages.AGREEMENT} />}
             />
             <Route
+              path={`/${Subpages.GUIDELINES}/:lng`}
+              element={<Subpage type={Subpages.GUIDELINES} />}
+            />
+            <Route
+              path={`/${Subpages.GUIDELINES}`}
+              element={<Subpage type={Subpages.GUIDELINES} />}
+            />
+            <Route
               path={`/${Subpages.OPPORTUNITIES}/:lng`}
               element={<Subpage type={Subpages.OPPORTUNITIES} />}
             />

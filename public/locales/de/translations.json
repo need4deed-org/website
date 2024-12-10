@@ -36,14 +36,27 @@
       "location": "Bitte wähle mindestens einen Standort aus",
       "availability": "Bitte wähle mindestens einen Zeitraum aus",
       "labelErrors": "Fehler",
-      "language": "Bitte wähle mindestens eine Sprache aus"
+      "language": "Bitte wähle mindestens eine Sprache aus",
+      "number": "Bitte geben Sie eine Nummer ein"
     },
     "button": { "more": "mehr...", "submit": "Senden" },
+    "schedule": {
+      "monday": "Montag",
+      "tuesday": "Dienstag",
+      "wednesday": "Mittwoch",
+      "thursday": "Donnerstag",
+      "friday": "Freitag",
+      "saturday": "Samstag",
+      "sunday": "Sonntag",
+      "onetime": "Gelegentlich verfügbar",
+      "weekdays": "Wochentags",
+      "weekends": "Wochenenden"
+    },
     "becomeVolunteer": {
       "header": "Werde Freiwilliger bei",
       "thankYou": {
-        "header": "Danke!",
-        "para": ""
+        "header": "Danke für Ihr Interesse an der Freiwilligenarbeit mit Flüchtlingen :-)",
+        "para": "Wir melden uns in den nächsten Tagen mit den nächsten Schritten bei Ihnen!"
       },
       "thanks": "Danke, dass du dich entschieden hast",
       "reset": "Zurücksetzen",
@@ -142,58 +155,85 @@
       }
     },
     "addOpportunity": {
-      "header": "Eine Gelegenheit hinzufügen zu",
+      "header": "Bedarf an Freiwilligenarbeit",
+      "thankYou": {
+        "header": "Danke für Ihr Interesse an der Freiwilligenarbeit mit Flüchtlingen :-)",
+        "para": "Wir melden uns in den nächsten Tagen mit den nächsten Schritten bei Ihnen!"
+      },
       "fields": {
-        "title": { "label": "Was wird kurz benötigt?" },
-        "contactGroup": { "label": "Kontaktinformationen" },
-        "aaGroup": { "label": "Begleitender Termin" },
-        "voGroup": { "label": "Freiwilligengelegenheit" },
-        "email": { "label": "E-Mail" },
-        "fullName": { "label": "Name" },
-        "postcode": { "label": "PLZ" },
-        "phone": { "label": "Telefonnummer" },
+        "title": { "label": "Was wird gebraucht?" },
+        "consent": {
+          "header": "",
+          "agree": "Hiermit stimme ich zu:",
+          "and": "und"
+        },
+        "contactGroup": {
+          "label": "GU Kontaktinformationen",
+          "email": { "label": "E-Mail" },
+          "fullName": { "label": "Name" },
+          "address": { "label": "Anschrift" },
+          "postcode": { "label": "PLZ" },
+          "phone": { "label": "Telefonnummer" }
+        },
         "opportunityType": {
-          "header": "Art der Gelegenheit",
-          "volunteering": "Freiwilligengelegenheit",
-          "accompanying": "Begleitender Termin",
-          "helpText": "Es gibt zwei Arten zu helfen: Freiwilligenarbeit bei verschiedenen Aktivitäten und Begleitung zu Terminen, hauptsächlich durch Übersetzung",
+          "header": "Art des Bedarfs",
+          "volunteering": "Freizeit",
+          "accompanying": "Begleitung",
+          "helpText": "Es gibt zwei Arten von Unterstützung: Freiwilliges Engagement bei verschiedenen Aktivitäten (meist Freizeitaktivitäten) und Begleitung zu Terminen.",
           "helpTitle": ""
         },
-        "activities": {
-          "header": "Aktivitäten"
+        "aaGroup": {
+          "label": "",
+          "activities": {
+            "header": "Aktivitäten"
+          },
+          "translatedInto": {
+            "header": "Sprache, in die übersetzt werden soll:",
+            "noTranslation": "Keine Sprachmittlung (Wegebegleitung)",
+            "englishOk": "Deutsch oder Englisch",
+            "deutsche": "Nur Deutsch",
+            "helpText": "Bitte wählen Sie die Sprache aus, in die übersetzt werden soll (wenn Englisch in Ordnung ist, wählen Sie bitte Englisch und Deutsch aus - das kann bei der Suche nach einem Freiwilligen helfen!). Falls keine Übersetzung benötigt wird, wählen Sie bitte die Option wegebegleitung."
+          },
+          "languagesTranslation": {
+            "header": "Sprachen, die Geflüchtete sprechen",
+            "helpText": "Bitte wählen Sie die während des Termins benötigten Sprachen aus."
+          },
+          "dateTime": {
+            "label": "Termin Datum und Uhrzeit",
+            "error": "Falsches Datums- oder Zeitformat.",
+            "tooClose": "Der Termin muss frühestens nach 7 Werktagen stattfinden."
+          },
+          "address": { "label": "Terminanschrift" },
+          "postcode": { "label": "Termin PLZ" },
+          "refugeeName": { "label": "Name des Geflüchteten" },
+          "refugeeNumber": { "label": "Telefonnummer des Geflüchteten" },
+          "information": { "label": "Mehr Informationen" }
         },
-        "schedule": {
-          "header": "Zeitplan",
-          "helpText": "Bitte wählen Sie Zeitfenster für die Freiwilligenarbeit aus."
-        },
-        "skills": {
-          "header": "Fähigkeiten",
-          "helpText": "Bitte wählen Sie die für die Freiwilligenarbeit benötigten Fähigkeiten aus."
-        },
-        "languagesRefugee": {
-          "header": "Sprachen, die Geflüchtete sprechen",
-          "helpText": "Bitte wählen Sie die während der Freiwilligenarbeit benötigten Sprachen aus."
-        },
-        "languagesTranslation": {
-          "header": "Sprachen für die Übersetzung",
-          "helpText": "Bitte wählen Sie die während des Termins benötigten Sprachen aus."
-        },
-        "dateTime": {
-          "label": "Termin",
-          "error": "Falsches Datums- oder Zeitformat.",
-          "tooClose": "Der Termin darf nicht näher als 7 Tage liegen"
-        },
-        "ifTranslationToEnOkay": {
-          "label": "Übersetzung ins Englische ist in Ordnung"
-        },
-        "address": { "label": "Terminadresse" },
-        "refugeeName": { "label": "Name des Geflüchteten" },
-        "refugeeNumber": { "label": "Telefonnummer des Geflüchteten" },
-        "aaInformation": { "label": "Informationen" },
-        "voInformation": { "label": "Informationen" },
-        "numberVolunteers": {
-          "label": "Wie viele Freiwillige werden benötigt",
-          "error": "Bitte geben Sie eine Zahl ein"
+        "voGroup": {
+          "label": "",
+          "locations": {
+            "header": "Bezirke"
+          },
+          "activities": {
+            "header": "Aktivitäten"
+          },
+          "schedule": {
+            "header": "Zeitplan",
+            "helpText": "Bitte wählen Sie Zeitfenster für die Freiwilligenarbeit aus."
+          },
+          "skills": {
+            "header": "Fähigkeiten",
+            "helpText": "Bitte wählen Sie die für die Freiwilligenarbeit benötigten Fähigkeiten aus."
+          },
+          "languagesRefugee": {
+            "header": "Kommunikation ist möglich mit",
+            "helpText": "Bitte wählen Sie die während der Freiwilligenarbeit benötigten Sprachen aus."
+          },
+          "numberVolunteers": {
+            "label": "Wie viele Freiwillige werden benötigt",
+            "error": "Bitte geben Sie eine Zahl ein"
+          },
+          "information": { "label": "Mehr Informationen" }
         }
       }
     }
@@ -299,7 +339,8 @@
       "legalHeading": "Legal",
       "impressum": "Impressum",
       "dataPrivacy": "Datenschutzerklärung",
-      "agreement": "Vereinbarung zur Ehrenamtlichen Teilnahme"
+      "agreement": "Vereinbarung zur Ehrenamtlichen Teilnahme",
+      "guidelines": "Need4Deed Leitlinien"
     },
     "contact": {
       "contactHeading": "Kontakt",

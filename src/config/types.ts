@@ -4,6 +4,26 @@ export interface IncludeClassName {
   className?: string;
 }
 
+export type InputType =
+  | "text"
+  | "password"
+  | "email"
+  | "number"
+  | "date"
+  | "datetime-local"
+  | "month"
+  | "time"
+  | "week"
+  | "search"
+  | "tel"
+  | "url"
+  | "color"
+  | "checkbox"
+  | "radio"
+  | "file"
+  | "range"
+  | "hidden";
+
 export enum Lang {
   EN = "en",
   DE = "de",
@@ -29,6 +49,7 @@ export enum Subpages {
   NOTICE = "impressum",
   DATA_PROTECTION = "datenschutzerklaerung",
   AGREEMENT = "vereinbarung",
+  GUIDELINES = "guidelines",
   BECOME_VOLUNTEER = "become-volunteer",
   ANNOUNCEMENT = "announcement",
   OPPORTUNITIES = "opportunities",
@@ -47,6 +68,12 @@ export enum Events {
 export enum OpportunityType {
   GENERAL = "volunteering",
   ACCOMPANYING = "accompanying",
+}
+
+export enum TranslatedIntoType {
+  DEUTSCHE = "deutsche",
+  ENGLISH_OK = "englishOk",
+  NO_TRANSLATION = "noTranslation",
 }
 
 // conjunction between keys and disjunction between possible values are applied for seach
@@ -102,6 +129,7 @@ export enum ListsOfOptions {
   LOCATIONS = "locations",
   LANGUAGES = "languages",
   ACTIVITIES = "activities",
+  ACTIVITIES_ACCOMPANYING = "activitiesAccompanying",
   SKILLS = "skills",
   LEADS = "leads",
   RAC_NAMES = "racNames",

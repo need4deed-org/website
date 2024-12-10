@@ -5,12 +5,14 @@ import {
   FieldValidateFn,
 } from "@tanstack/react-form";
 
+import { InputType } from "../../config/types";
 import FieldInfo from "./FieldInfo";
 
 interface Props<T> {
   FieldTag: FieldComponent<T, undefined>;
   name: DeepKeys<T>;
   label: string;
+  inputType?: InputType;
   onChangeValidator?: FieldValidateFn<T, DeepKeys<T>>;
   onBlurValidator?: FieldValidateFn<T, DeepKeys<T>>;
 }
@@ -19,6 +21,7 @@ export default function SimpleInputField<T>({
   FieldTag,
   name,
   label,
+  inputType = "text",
   onChangeValidator,
   onBlurValidator,
 }: Props<T>) {
@@ -45,14 +48,7 @@ export default function SimpleInputField<T>({
             <input
               id={`${field.name}`}
               name={`${field.name}`}
-              type="text"
-              value={
-                field.state.value as
-                  | string
-                  | number
-                  | readonly string[]
-                  | undefined
-              }
+              type={inputType}
               onBlur={field.handleBlur}
               onChange={(e) =>
                 field.handleChange(e.target.value as DeepValue<T, DeepKeys<T>>)

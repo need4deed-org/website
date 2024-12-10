@@ -9,7 +9,7 @@ export const CLOUDFRONT_URL = "https://d2nwrdddg8skub.cloudfront.net/images";
 
 export const showEvent = true;
 
-export const sevenDays = 1000 * 60 * 60 * 24 * 7;
+export const eightDays = 1000 * 60 * 60 * 24 * 8;
 
 export const minPLZGermany = 1067;
 export const maxPLZGermany = 99998;

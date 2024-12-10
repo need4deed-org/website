@@ -11,10 +11,10 @@ export default function FieldInfo<T, K extends DeepKeys<T>>({
   className,
 }: Props<T, K>) {
   return (
-    <p className={`form-error ${className}`}>
+    <div className={`form-error ${className}`}>
       {field.state.meta.isTouched && field.state.meta.errors.length ? (
         <em>{field.state.meta.errors.join(", ")}</em>
       ) : null}
-    </p>
+    </div>
   );
 }

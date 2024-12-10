@@ -45,6 +45,13 @@ const fallbackLists: ListsOfOptionsType = {
     "Sorting clothing",
     "Organizing excursions",
   ],
+  activitiesAccompanying: [
+    "Arzttermine",
+    "Termine bei Behörden*",
+    "Wohnungsbesichtigungen",
+    "Termine in Schulen und Kitas",
+    "Wegbegleitung",
+  ],
   skills: [
     "Woodworking",
     "Drawing",

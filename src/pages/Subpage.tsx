@@ -10,6 +10,7 @@ import Form from "../components/form";
 import Header from "../components/Header/Header";
 import Agreement from "../components/Legal/Agreement";
 import DataPrivacy from "../components/Legal/DataPrivacy";
+import Guidelines from "../components/Legal/Guidelines";
 import LegalNotice from "../components/Legal/Notice";
 import OpportunityCards from "../components/OpportunityCards";
 import { showEvent, urlApiOpportunity } from "../config/constants";
@@ -49,6 +50,8 @@ function Subpage({ type }: Props) {
         return <LegalNotice />;
       case Subpages.AGREEMENT:
         return <Agreement />;
+      case Subpages.GUIDELINES:
+        return <Guidelines />;
       case Subpages.ACCOMPANYING_TEST:
         return (
           <OpportunityCards

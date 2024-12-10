@@ -17,27 +17,15 @@ import "../index.css";
 import MultipleCheckBoxInputsWithMore from "../MultipleCheckBoxInputsWithMore";
 import MultipleRadioInputsWithMore from "../MultipleRadioInputsWithMore";
 import SimpleInputField from "../SimpleInputField";
-import { Availability, Selected, TimeSlot, Weekday } from "../types";
-import { getTickMark, isValidPLZ, parseFormStateDTOVolunteer } from "../utils";
+import {
+  getAllSelectedFalse,
+  getSchedule,
+  getTickMark,
+  getTimeslotTitle,
+  isValidPLZ,
+  parseFormStateDTOVolunteer,
+} from "../utils";
 import { VolunteerData, VolunteerParsedData } from "./dataStructure";
-
-const initialTimeSlots: Selected[] = Object.values(TimeSlot).map(
-  (timeSlot) => ({
-    title: timeSlot,
-    selected: false,
-  }),
-);
-const availability: Availability = Object.values(Weekday).map((weekday) => ({
-  weekday,
-  timeSlots: initialTimeSlots,
-}));
-availability.push({
-  weekday: "onetime",
-  timeSlots: [
-    { title: "Weekdays", selected: false },
-    { title: "Weekends", selected: false },
-  ],
-});
 
 const thankYou = "?pointer=form.becomeVolunteer.thankYou";
 
@@ -57,26 +45,7 @@ export default function BecomeVolunteer() {
     title: opportunityParams.get("title"),
   };
 
-  const locations = useList(ListsOfOptions.LOCATIONS).map((title) => ({
-    title,
-    selected: false,
-  }));
-  const activities = useList(ListsOfOptions.ACTIVITIES).map((title) => ({
-    title,
-    selected: false,
-  }));
-  const skills = useList(ListsOfOptions.SKILLS).map((title) => ({
-    title,
-    selected: false,
-  }));
-  const languages = useList(ListsOfOptions.LANGUAGES).map((title) => ({
-    title,
-    selected: false,
-  }));
-  const leadFrom = useList(ListsOfOptions.LEADS).map((title) => ({
-    title,
-    selected: false,
-  }));
+  const languages = getAllSelectedFalse(useList(ListsOfOptions.LANGUAGES));
 
   const formVolunteer = useForm<VolunteerData>({
     defaultValues: {
@@ -85,16 +54,16 @@ export default function BecomeVolunteer() {
       email: "",
       phone: "",
       postcode: "",
-      locations,
-      availability,
+      locations: getAllSelectedFalse(useList(ListsOfOptions.LOCATIONS)),
+      availability: getSchedule(),
       languagesNative: languages,
       languagesFluent: languages,
       languagesIntermediate: languages,
-      activities,
-      skills,
+      activities: getAllSelectedFalse(useList(ListsOfOptions.ACTIVITIES)),
+      skills: getAllSelectedFalse(useList(ListsOfOptions.SKILLS)),
       certOfGoodConduct: undefined,
       certMeaslesVaccination: undefined,
-      leadFrom,
+      leadFrom: getAllSelectedFalse(useList(ListsOfOptions.LEADS)),
       comments: "",
       consent: undefined,
     },
@@ -258,7 +227,7 @@ export default function BecomeVolunteer() {
                           >
                             <span className="form-availability-weekday">
                               {t(
-                                `weekdays.${availabilityObj.weekday}`,
+                                `form.schedule.${availabilityObj.weekday}`,
                               ).toLocaleUpperCase()}
                             </span>
                             <formVolunteer.Field
@@ -295,7 +264,7 @@ export default function BecomeVolunteer() {
                                             <label
                                               htmlFor={`${availabilityObj.weekday}${title}`}
                                             >
-                                              {title}
+                                              {getTimeslotTitle(t, title)}
                                             </label>
                                           </span>
                                         )}

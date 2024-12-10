@@ -360,5 +360,70 @@
     "bullet71": "Sie haben Anspruch auf Erstattung von notwendigen Auslagen, die im Rahmen Ihrer Tätigkeit entstehen, sofern dies vorher mit dem Projektvermittler vereinbart wurde.",
     "numbered8": "Sonstiges:",
     "bullet81": "Sollte eine Bestimmung dieser Vereinbarung unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt."
+  },
+  "guidlaines": {
+    "header": "Need4Deed Leitlinien",
+    "intro": "Wir unterstützen euch gerne bei der Vermittlung von Freiwilligen für die Begleitung und Unterstützung von Geflüchteten. Da wir freiwillige Helfer*innen vermitteln, bitten wir um euer Verständnis und Geduld in diesem Prozess.",
+    "volunteering": {
+      "header": "Freizeitaktivitäten und regelmäßige Ehrenamtsmöglichkeiten",
+      "collection": {
+        "header": "Erfassung und Aktualisierung der Einsatzmöglichkeiten",
+        "para1": "Ehrenamtliche Tätigkeiten werden in einem <b>Erstgespräch</b> oder durch die <b>erste Kommunikation</b> erfasst.",
+        "para2": "Diese Informationen sollten ca. <b>einmal im Monat aktualisiert</b> werden. In der Regel versenden wir eine Update-Anfrage per E-Mail, auf die wir um Rückmeldung und Feedback bitten."
+      },
+      "agency": {
+        "header": "Vermittlung und Erstkontakt",
+        "para1": "Nach der Vermittlung eines*r Freiwilligen senden wir eine E-Mail an die Ehrenamtskoordinator*nnen und den*die <b>neuen Freiwilligen</b>.",
+        "para2": "Vor der Vermittlung bemühen wir uns sicherzustellen, dass die Freiwilligen über einen <b>Masernschutz</b> verfügen und die <b>Beantragung eines erweiterten Führungszeugnisses eingeleitet</b> wurde."
+      },
+      "introduction": {
+        "header": "Erste Einführung oder Probetermin",
+        "para": "Wir bitten die <b>Ehrenamtskoordinator*innen</b>, innerhalb von <b>2-4 Tagen nach der Matching-E-Mail</b> den*die Freiwillige*n per E-Mail einzuladen, um einen <b>ersten Einführungstermin oder einen Probetag</b> zu vereinbaren. Wir bitten auch darum, uns CC auf diese E-Mail zu setzen."
+      },
+      "feedback": {
+        "header": "Feedback und Rückmeldungen",
+        "para1": "In der Regel fragen wir die Freiwilligen <b>einen bis zwei Monate nach Beginn des Einsatzes</b>, wie es läuft.",
+        "para2": "Wir freuen uns sehr, wenn auch die <b>Ehrenamtskoordinator*innen</b> uns ein kurzes <b>Feedback</b> über die Zusammenarbeit geben können."
+      },
+      "visits": {
+        "header": "Besuche und Fotoaufnahmen",
+        "para": "Gelegentlich möchten wir die Einrichtungen besuchen, um Fotos von den freiwilligen Aktivitäten zu machen. Diese Fotos dienen dazu, Inhalte zu erstellen, um neue Freiwillige zu gewinnen. Wir stellen sicher, dass keine Gesichter von Kindern oder Geflüchteten zu sehen sind, es sei denn, es liegt eine <b>Vorerlaubnis aller Beteiligten</b> vor."
+      }
+    },
+    "application": {
+      "header": "Einsatzbereiche der Freiwilligen für Begleitung",
+      "para1": "Freiwillige können in folgenden Fällen begleiten:",
+      "para2": "Arzttermine",
+      "para3": "Termine bei Behörden (außer Standesamt und Gericht)",
+      "para4": "Wohnungsbesichtigungen",
+      "para5": "Termine in Schulen und Kitas",
+      "para6": "Wegbegleitung",
+      "support": {
+        "header": "Sprachliche Unterstützung",
+        "para": "Die Freiwilligen können in Deutsch oder Englisch dolmetschen. Bitte gebt an, ob am Terminort auch Englisch gesprochen wird, da dies die Organisation der Sprachmittlung erleichtert. Die Freiwilligen, die bei Übersetzungen helfen, sind <b>keine professionellen Dolmetscher*innen</b>, sondern Freiwillige, die nach bestem Wissen und Gewissen zwischen zwei Sprachen vermitteln. Wir bieten ihnen eine kurze Einführung und veranstalten alle paar Monate Workshops. Es ist wichtig, den Geflüchteten zu vermitteln, dass die Freiwilligen <b>keine Beratungsfunktion</b> übernehmen."
+      },
+      "usage": {
+        "header": "Nutzung des Antragsformulars",
+        "para": "Ab dem <b>01.01.2025</b> müssen dann <b>alle Anfragen</b>, sowohl für Begleitung als auch für Freizeitaktivitäten, ausschließlich über dieses Formular gestellt werden. Anfragen können nur mit E-Mail-Adressen der anerkannten Träger, einschließlich LfG-B, eingereicht werden."
+      },
+      "requirements": {
+        "header": "Voraussetzungen für die Anfrage",
+        "para1": "Um uns die Arbeit zu erleichtern, benötigen wir immer folgende Informationen:",
+        "para2": "Datum und Uhrzeit des Termins",
+        "para3": "Adresse mit Postleitzahl",
+        "para4": "Sprachen (bitte angeben, ob eine Übersetzung ins Englische und nicht nur ins Deutsche möglich ist)",
+        "para5": "Kurze Beschreibung des Termins",
+        "para6": "Name und Telefonnummer der Person oder Familie (auch WhatsApp/Viber o.ä.)"
+      },
+      "procedure": {
+        "header": "Anfrageablauf",
+        "para1": "Anfragen müssen mindestens <b>7 Werktage vor dem Termin</b> gestellt werden.",
+        "para2": "Termine sollen nicht länger als <b>3 Stunden</b> dauern.",
+        "para3": "Wir geben spätestens <b>4 Werktage vor dem Termin</b> Bescheid, ob wir eine freiwillige Person gefunden haben. Falls dies nicht gelingt, bleibt ausreichend Zeit für die Suche nach alternativen Hilfsangeboten.",
+        "para4": "Anfragen sollen ausschließlich an <b>contact@need4deed.org</b> geschickt werden."
+      }
+    },
+    "outro": "Wir danken euch für die Zusammenarbeit und freuen uns auf eine erfolgreiche gemeinsame Unterstützung Geflüchteter.",
+    "greetings": "Mit freundlichen Grüßen"
   }
 }

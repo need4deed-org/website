@@ -13,16 +13,6 @@
     "accept": "Accept",
     "linkPrivacyPolicy": "Privacy Policy"
   },
-  "weekdays": {
-    "monday": "Monday",
-    "tuesday": "Tuesday",
-    "wednesday": "Wednesday",
-    "thursday": "Thursday",
-    "friday": "Friday",
-    "saturday": "Saturday",
-    "sunday": "Sunday",
-    "onetime": "Occasionally available"
-  },
   "languages": {
     "arabic": "Arabic",
     "farsi": "Farsi/Dari",
@@ -63,9 +53,22 @@
       "location": "Please pick at least one location",
       "availability": "Please pick at least one timeframe",
       "labelErrors": "Errors",
+      "number": "Please enter a number",
       "language": "Please pick at least one language"
     },
     "button": { "more": "more...", "submit": "Submit" },
+    "schedule": {
+      "monday": "Monday",
+      "tuesday": "Tuesday",
+      "wednesday": "Wednesday",
+      "thursday": "Thursday",
+      "friday": "Friday",
+      "saturday": "Saturday",
+      "sunday": "Sunday",
+      "onetime": "Occasionally available",
+      "weekdays": "Weekdays",
+      "weekends": "Weekends"
+    },
     "becomeVolunteer": {
       "header": "Become a Volunteer with",
       "thankYou": {
@@ -157,16 +160,26 @@
       }
     },
     "addOpportunity": {
-      "header": "Add an Opportunity to",
+      "header": "Need For Volunteer Work",
+      "thankYou": {
+        "header": "Thanks for your interest in volunteering with refugees :-)",
+        "para": "We will get back to you in the coming days with the next steps!"
+      },
       "fields": {
         "title": { "label": "What help is needed in short" },
-        "contactGroup": { "label": "Contact information" },
-        "aaGroup": { "label": "Accompanying Appointment" },
-        "voGroup": { "label": "Volunteering Opportunity" },
-        "email": { "label": "E-mail" },
-        "fullName": { "label": "Name" },
-        "postcode": { "label": "PLZ" },
-        "phone": { "label": "Phone number" },
+        "consent": {
+          "header": "",
+          "agree": "I hereby agree to the:",
+          "and": "and"
+        },
+        "contactGroup": {
+          "label": "Contact information",
+          "email": { "label": "E-mail" },
+          "fullName": { "label": "Name" },
+          "address": { "label": "Street address" },
+          "postcode": { "label": "PLZ" },
+          "phone": { "label": "Phone number" }
+        },
         "opportunityType": {
           "header": "Type Of Opportunity",
           "volunteering": "Volunteering Opportunity",
@@ -174,41 +187,58 @@
           "helpText": "There are two ways of helping: Volunteering doing various activities and Accompanying to appointments essentially providing translation",
           "helpTitle": ""
         },
-        "activities": {
-          "header": "Activities"
+        "aaGroup": {
+          "label": "",
+          "activities": {
+            "header": "Activities"
+          },
+          "translatedInto": {
+            "header": "Language to be translated into:",
+            "noTranslation": "No translation",
+            "englishOk": "English is OK",
+            "deutsche": "German",
+            "helpText": "Please pick to what language translation is needed."
+          },
+          "languagesTranslation": {
+            "header": "Languages for translation",
+            "helpText": "Please pick languages needed during appointment."
+          },
+          "dateTime": {
+            "label": "Appointment date and time (YYYY-MM-DD HH:MM)",
+            "error": "Wrong date or time format.",
+            "tooClose": "The appointment must take place after 7 working days at the earliest."
+          },
+          "address": { "label": "Appointment Address" },
+          "postcode": { "label": "PLZ" },
+          "refugeeName": { "label": "Name Of Refugee" },
+          "refugeeNumber": { "label": "Phone Number Of Refugee" },
+          "information": { "label": "More information" }
         },
-        "schedule": {
-          "header": "Schedule",
-          "helpText": "Please pick time slots for volunteering."
-        },
-        "skills": {
-          "header": "Skills",
-          "helpText": "Please pick skills that are needed for volunteering."
-        },
-        "languagesRefugee": {
-          "header": "Languages that refugees speak",
-          "helpText": "Please pick languages needed during volunteering."
-        },
-        "languagesTranslation": {
-          "header": "Languages for translation",
-          "helpText": "Please pick languages needed during appointment."
-        },
-        "dateTime": {
-          "label": "Appointment date and time (YYYY-MM-DD HH:MM)",
-          "error": "Wrong date or time format.",
-          "tooClose": "Appointment date must be no closer than in 7 days"
-        },
-        "ifTranslationToEnOkay": {
-          "label": "It's okay to translate to English"
-        },
-        "address": { "label": "Appointment Address" },
-        "refugeeName": { "label": "Name Of Refugee" },
-        "refugeeNumber": { "label": "Phone Number Of Refugee" },
-        "aaInformation": { "label": "Information" },
-        "voInformation": { "label": "Information" },
-        "numberVolunteers": {
-          "label": "How many volunteers are needed",
-          "error": "Please enter a number"
+        "voGroup": {
+          "label": "",
+          "activities": {
+            "header": "Activities"
+          },
+          "locations": {
+            "header": "Locations"
+          },
+          "schedule": {
+            "header": "Schedule",
+            "helpText": "Please pick time slots for volunteering."
+          },
+          "skills": {
+            "header": "Skills",
+            "helpText": "Please pick skills that are needed for volunteering."
+          },
+          "languagesRefugee": {
+            "header": "Languages that refugees speak",
+            "helpText": "Please pick languages needed during volunteering."
+          },
+          "numberVolunteers": {
+            "label": "How many volunteers are needed",
+            "error": "Please enter a number"
+          },
+          "information": { "label": "More information" }
         }
       }
     }
@@ -313,7 +343,8 @@
       "legalHeading": "Legal",
       "impressum": "Legal notice",
       "dataPrivacy": "Privacy",
-      "agreement": "Voluntary Participation Agreement"
+      "agreement": "Voluntary Participation Agreement",
+      "guidelines": "Need4Deed Guidelines"
     },
     "contact": {
       "contactHeading": "Contact",

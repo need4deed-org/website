@@ -8,6 +8,7 @@ import {
   Opportunity,
   OpportunityParams,
   Subpages,
+  YesNo,
 } from "../config/types";
 
 export function pivotArrayToObj(arr: Array<Record<string, unknown>>) {
@@ -210,4 +211,9 @@ export function getReadableTime(timestamp: string, locale = "en-US") {
   });
 
   return formattedDate;
+}
+
+export function parseYesNo(value: boolean | undefined): YesNo {
+  if (value) return YesNo.YES;
+  return YesNo.NO;
 }

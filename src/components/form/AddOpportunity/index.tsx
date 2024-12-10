@@ -1,12 +1,16 @@
-import { FormState, useForm } from "@tanstack/react-form";
+import { useForm } from "@tanstack/react-form";
 import { validate as validateEmail } from "email-validator";
-import { t } from "i18next";
 
-import { useState } from "react";
-import { sevenDays, urlApi } from "../../../config/constants";
+import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import { useNavigate, useParams } from "react-router-dom";
+import { eightDays, phoneRegEx, urlApi } from "../../../config/constants";
 import {
+  Lang,
   ListsOfOptions,
   OpportunityType,
+  Subpages,
+  TranslatedIntoType,
   TypePLZ,
 } from "../../../config/types";
 import useList from "../../../hooks/api/useList";
@@ -19,55 +23,28 @@ import HeaderWithHelp from "../HeaderWithHelp";
 import MultipleCheckBoxInputsWithMore from "../MultipleCheckBoxInputsWithMore";
 import MultipleRadioInputsWithMore from "../MultipleRadioInputsWithMore";
 import SimpleInputField from "../SimpleInputField";
-import { Availability, Selected, TimeSlot, Weekday } from "../types";
 import {
+  getAllSelectedFalse,
   getDate,
+  getSchedule,
   getTickMark,
+  getTimeslotTitle,
   isValidPLZ,
   parseFormStateDTOOpportunity,
 } from "../utils";
 import { OpportunityData, OpportunityParsedData } from "./dataStructure";
 
-const timeSlots: Selected[] = Object.values(TimeSlot).map((timeSlot) => ({
-  title: timeSlot,
-  selected: false,
-}));
-const schedule: Availability = Object.values(Weekday).map((weekday) => ({
-  weekday,
-  timeSlots,
-}));
-schedule.push({
-  weekday: "onetime",
-  timeSlots: [
-    { title: "Weekdays", selected: false },
-    { title: "Weekends", selected: false },
-  ],
-});
+const thankYou = "?pointer=form.addOpportunity.thankYou";
 
 export default function AddOpportunity() {
+  const navigate = useNavigate();
+  const { lng } = useParams();
+  const { i18n, t } = useTranslation();
+
   const { postRequest } = usePostRequest<
     OpportunityParsedData,
     Record<string, string | string[]>
   >({ url: `${urlApi}/opportunity/` });
-
-  const [opportunityType, setOpportunityType] = useState<OpportunityType>();
-
-  const locations = useList(ListsOfOptions.LOCATIONS).map((title) => ({
-    title,
-    selected: false,
-  }));
-  const activities = useList(ListsOfOptions.ACTIVITIES).map((title) => ({
-    title,
-    selected: false,
-  }));
-  const skills = useList(ListsOfOptions.SKILLS).map((title) => ({
-    title,
-    selected: false,
-  }));
-  const languages = useList(ListsOfOptions.LANGUAGES).map((title) => ({
-    title,
-    selected: false,
-  }));
 
   const formOpportunity = useForm<OpportunityData>({
     defaultValues: {
@@ -75,37 +52,55 @@ export default function AddOpportunity() {
       fullName: "",
       racName: [],
       title: "",
-      phone: "",
-      postcode: "",
+      racPhone: "",
+      racAddress: "",
+      racPostcode: "",
       opportunityType: undefined,
-      locations,
-      activities,
-      appointmentType: [],
-      languagesRefugee: languages,
-      languagesTranslation: languages,
-      skills,
-      address: "",
-      schedule,
+      locations: getAllSelectedFalse(useList(ListsOfOptions.LOCATIONS)),
+      activities: getAllSelectedFalse(
+        useList(ListsOfOptions.ACTIVITIES, Lang.DE),
+      ),
+      activitiesAccompanying: getAllSelectedFalse(
+        useList(ListsOfOptions.ACTIVITIES_ACCOMPANYING),
+      ),
+      languages: getAllSelectedFalse(
+        useList(ListsOfOptions.LANGUAGES, Lang.DE),
+      ),
+      skills: getAllSelectedFalse(useList(ListsOfOptions.SKILLS, Lang.DE)),
+      aaAddress: "",
+      aaPostcode: "",
+      schedule: getSchedule(),
       dateTime: undefined,
       numberVolunteers: 1,
-      ifTranslationToEnOkay: undefined,
+      translatedInto: undefined,
       voInformation: "",
       refugeeName: "",
       refugeeNumber: "",
       aaInformation: "",
+      consent: undefined,
     },
     onSubmit: ({ value }) => {
-      // eslint-disable-next-line no-console
-      console.log("DEBUG:formVolunteer:onSubmit:check:", formOpportunity.state);
       const data = parseFormStateDTOOpportunity(value);
-      postRequest(data);
       // eslint-disable-next-line no-console
-      console.log("DEBUG:BecomeVolunteer:onSubmit:data:", data);
+      console.log(
+        "DEBUG:BecomeVolunteer:onSubmit:data:",
+        data,
+        "\nstate:",
+        value,
+      );
+      const result = postRequest(data);
+      // eslint-disable-next-line no-console
+      console.log("DEBUG:BecomeVolunteer:onSubmit:result:", result);
     },
   });
 
+  useEffect(() => {
+    if (formOpportunity.state.isSubmitted)
+      navigate(`/${Subpages.ANNOUNCEMENT}/${lng}${thankYou}`);
+  }, [formOpportunity.state.isSubmitted, lng, navigate]);
+
   return (
-    <div className="n4d-container form-container">
+    <div key={i18n.language} className="n4d-container form-container">
       <div className="form-container-header">
         <h1>
           {t("form.addOpportunity.header").toLocaleUpperCase()}
@@ -136,7 +131,7 @@ export default function AddOpportunity() {
           <SimpleInputField<OpportunityData>
             name="email"
             FieldTag={formOpportunity.Field}
-            label={t("form.addOpportunity.fields.email.label")}
+            label={t("form.addOpportunity.fields.contactGroup.email.label")}
             onChangeValidator={({ value }) => {
               if (!value) {
                 return t("form.error.required");
@@ -150,15 +145,23 @@ export default function AddOpportunity() {
           <SimpleInputField<OpportunityData>
             name="fullName"
             FieldTag={formOpportunity.Field}
-            label={t("form.addOpportunity.fields.fullName.label")}
+            label={t("form.addOpportunity.fields.contactGroup.fullName.label")}
             onChangeValidator={({ value }) =>
               !value ? t("form.error.required") : undefined
             }
           />
           <SimpleInputField<OpportunityData>
-            name="postcode"
+            name="racAddress"
             FieldTag={formOpportunity.Field}
-            label={t("form.addOpportunity.fields.postcode.label")}
+            label={t("form.addOpportunity.fields.contactGroup.address.label")}
+            onChangeValidator={({ value }) =>
+              !value ? t("form.error.required") : undefined
+            }
+          />
+          <SimpleInputField<OpportunityData>
+            name="racPostcode"
+            FieldTag={formOpportunity.Field}
+            label={t("form.addOpportunity.fields.contactGroup.postcode.label")}
             onChangeValidator={({ value }) => {
               if (!value) {
                 return t("form.error.required");
@@ -172,12 +175,17 @@ export default function AddOpportunity() {
             }}
           />
           <SimpleInputField<OpportunityData>
-            name="phone"
+            name="racPhone"
             FieldTag={formOpportunity.Field}
-            label={t("form.addOpportunity.fields.phone.label")}
-            onChangeValidator={({ value }) =>
-              !value ? t("form.error.required") : undefined
-            }
+            label={t("form.addOpportunity.fields.contactGroup.phone.label")}
+            onChangeValidator={({ value }) => {
+              if (!value) return t("form.error.required");
+
+              if (!(value as string).match(phoneRegEx))
+                return t("form.error.number");
+
+              return undefined;
+            }}
           />
         </fieldset>
         <formOpportunity.Field
@@ -207,10 +215,7 @@ export default function AddOpportunity() {
               </HeaderWithHelp>
               <div className="form-chip-list">
                 <MultipleRadioInputsWithMore
-                  items={[
-                    OpportunityType.GENERAL,
-                    OpportunityType.ACCOMPANYING,
-                  ]}
+                  items={Object.values(OpportunityType)}
                   copyPath="form.addOpportunity.fields.opportunityType."
                   field={field}
                 />
@@ -220,343 +225,502 @@ export default function AddOpportunity() {
           )}
         </formOpportunity.Field>
         <formOpportunity.Subscribe selector={(state) => state}>
-          {(state: FormState<OpportunityData>) => {
-            setOpportunityType(state.values.opportunityType);
+          {(state) => {
+            if (state.values.opportunityType === OpportunityType.ACCOMPANYING)
+              return (
+                <fieldset className="form-field-group">
+                  <b>{t("form.addOpportunity.fields.aaGroup.label")}</b>
+                  <formOpportunity.Field name="activitiesAccompanying">
+                    {(field) => {
+                      return (
+                        <fieldset>
+                          <HeaderWithHelp
+                            className="form-chiplist-header-within-group"
+                            classNamePopup="form-help"
+                          >
+                            {t(
+                              "form.addOpportunity.fields.aaGroup.activities.header",
+                            )}
+                          </HeaderWithHelp>
+                          <WithParentRef className="form-chip-list form-pick">
+                            <MultipleCheckBoxInputsWithMore<
+                              OpportunityData,
+                              "activitiesAccompanying"
+                            >
+                              FieldTag={formOpportunity.Field}
+                              field={field}
+                            />
+                            <FieldInfo field={field} />
+                          </WithParentRef>
+                        </fieldset>
+                      );
+                    }}
+                  </formOpportunity.Field>
+                  <formOpportunity.Field
+                    name="translatedInto"
+                    validators={{
+                      onBlur: ({ value }) =>
+                        value === undefined
+                          ? t("form.error.required")
+                          : undefined,
+                    }}
+                  >
+                    {(field) => (
+                      <fieldset
+                        className="form-pick"
+                        onFocus={() => {
+                          setTimeout(field.handleBlur, 0);
+                        }}
+                      >
+                        <HeaderWithHelp
+                          textHelp={t(
+                            "form.addOpportunity.fields.aaGroup.translatedInto.helpText",
+                          )}
+                          className="form-chiplist-header-within-group"
+                          classNamePopup="form-help"
+                        >
+                          {t(
+                            "form.addOpportunity.fields.aaGroup.translatedInto.header",
+                          )}
+                        </HeaderWithHelp>
+                        <div className="form-chip-list">
+                          <MultipleRadioInputsWithMore
+                            items={Object.values(TranslatedIntoType)}
+                            copyPath="form.addOpportunity.fields.aaGroup.translatedInto."
+                            field={field}
+                          />
+                        </div>
+                        <FieldInfo field={field} />
+                      </fieldset>
+                    )}
+                  </formOpportunity.Field>
+                  {state.values.translatedInto &&
+                    state.values.translatedInto !==
+                      TranslatedIntoType.NO_TRANSLATION && (
+                      <formOpportunity.Field
+                        name="languages"
+                        validators={{
+                          onBlur: ({ value }) => {
+                            const isSelected = !!value.filter(
+                              ({ selected }) => selected,
+                            ).length;
+                            return isSelected
+                              ? undefined
+                              : t("form.error.language");
+                          },
+                        }}
+                      >
+                        {(field) => {
+                          return (
+                            <fieldset>
+                              <HeaderWithHelp
+                                textHelp={t(
+                                  "form.addOpportunity.fields.aaGroup.languagesTranslation.helpText",
+                                )}
+                                className="form-chiplist-header-within-group"
+                                classNamePopup="form-help"
+                              >
+                                {t(
+                                  "form.addOpportunity.fields.aaGroup.languagesTranslation.header",
+                                )}
+                              </HeaderWithHelp>
+                              <WithParentRef className="form-chip-list form-pick">
+                                <MultipleCheckBoxInputsWithMore<
+                                  OpportunityData,
+                                  "languages"
+                                >
+                                  FieldTag={formOpportunity.Field}
+                                  field={field}
+                                  hiddenChips={
+                                    state.values.translatedInto ===
+                                    TranslatedIntoType.ENGLISH_OK
+                                      ? [
+                                          "German",
+                                          "Deutsch",
+                                          "English",
+                                          "Englisch",
+                                        ]
+                                      : ["German", "Deutsch"]
+                                  }
+                                />
+                                <FieldInfo field={field} />
+                              </WithParentRef>
+                            </fieldset>
+                          );
+                        }}
+                      </formOpportunity.Field>
+                    )}
+                  <SimpleInputField<OpportunityData>
+                    name="aaAddress"
+                    FieldTag={formOpportunity.Field}
+                    label={t(
+                      "form.addOpportunity.fields.aaGroup.address.label",
+                    )}
+                    onChangeValidator={({ value }) =>
+                      !value ? t("form.error.required") : undefined
+                    }
+                  />
+                  <SimpleInputField<OpportunityData>
+                    name="aaPostcode"
+                    FieldTag={formOpportunity.Field}
+                    label={t(
+                      "form.addOpportunity.fields.aaGroup.postcode.label",
+                    )}
+                    onChangeValidator={({ value }) => {
+                      if (!value) {
+                        return t("form.error.required");
+                      }
+
+                      if (!isValidPLZ(value as string, TypePLZ.GERMANY)) {
+                        return t("form.error.postcode");
+                      }
+
+                      return undefined;
+                    }}
+                  />
+                  <SimpleInputField<OpportunityData>
+                    name="dateTime"
+                    FieldTag={formOpportunity.Field}
+                    label={t(
+                      "form.addOpportunity.fields.aaGroup.dateTime.label",
+                    )}
+                    inputType="datetime-local"
+                    onChangeValidator={({ value }) => {
+                      if (!value) {
+                        return t("form.error.required");
+                      }
+                      if (Number.isNaN(getDate(value as string).getTime())) {
+                        return t(
+                          "form.addOpportunity.fields.aaGroup.dateTime.error",
+                        );
+                      }
+                      const difference =
+                        getDate(value as string).valueOf() - Date.now();
+                      if (difference < eightDays) {
+                        return t(
+                          "form.addOpportunity.fields.aaGroup.dateTime.tooClose",
+                        );
+                      }
+                      return undefined;
+                    }}
+                  />
+                  <SimpleInputField<OpportunityData>
+                    name="refugeeName"
+                    FieldTag={formOpportunity.Field}
+                    label={t(
+                      "form.addOpportunity.fields.aaGroup.refugeeName.label",
+                    )}
+                    onChangeValidator={({ value }) =>
+                      !value ? t("form.error.required") : undefined
+                    }
+                  />
+                  <SimpleInputField<OpportunityData>
+                    name="refugeeNumber"
+                    FieldTag={formOpportunity.Field}
+                    label={t(
+                      "form.addOpportunity.fields.aaGroup.refugeeNumber.label",
+                    )}
+                    onChangeValidator={({ value }) =>
+                      !value ? t("form.error.required") : undefined
+                    }
+                  />
+                  <SimpleInputField<OpportunityData>
+                    name="aaInformation"
+                    FieldTag={formOpportunity.Field}
+                    label={t(
+                      "form.addOpportunity.fields.aaGroup.information.label",
+                    )}
+                  />
+                </fieldset>
+              );
             return null;
           }}
         </formOpportunity.Subscribe>
-        {opportunityType === OpportunityType.ACCOMPANYING && (
-          <fieldset className="form-field-group">
-            <b>{t("form.addOpportunity.fields.aaGroup.label")}</b>
-            <formOpportunity.Field name="activities">
-              {(field) => {
-                return (
-                  <fieldset>
-                    <HeaderWithHelp
-                      className="form-chiplist-header-within-group"
-                      classNamePopup="form-help"
-                    >
-                      {t("form.addOpportunity.fields.activities.header")}
-                    </HeaderWithHelp>
-                    <WithParentRef className="form-chip-list form-pick">
-                      <MultipleCheckBoxInputsWithMore<
-                        OpportunityData,
-                        "activities"
-                      >
-                        FieldTag={formOpportunity.Field}
-                        field={field}
-                      />
-                      <FieldInfo field={field} />
-                    </WithParentRef>
-                  </fieldset>
-                );
-              }}
-            </formOpportunity.Field>
-            <formOpportunity.Field
-              name="languagesTranslation"
-              validators={{
-                onBlur: ({ value }) => {
-                  const isSelected = !!value.filter(({ selected }) => selected)
-                    .length;
-                  return isSelected ? undefined : t("form.error.language");
-                },
-              }}
-            >
-              {(field) => {
-                return (
-                  <fieldset>
-                    <HeaderWithHelp
-                      textHelp={t(
-                        "form.addOpportunity.fields.languagesTranslation.helpText",
-                      )}
-                      className="form-chiplist-header-within-group"
-                      classNamePopup="form-help"
-                    >
-                      {t(
-                        "form.addOpportunity.fields.languagesTranslation.header",
-                      )}
-                    </HeaderWithHelp>
-                    <WithParentRef className="form-chip-list form-pick">
-                      <MultipleCheckBoxInputsWithMore<
-                        OpportunityData,
-                        "languagesTranslation"
-                      >
-                        FieldTag={formOpportunity.Field}
-                        field={field}
-                      />
-                      <FieldInfo field={field} />
-                    </WithParentRef>
-                  </fieldset>
-                );
-              }}
-            </formOpportunity.Field>
-            <formOpportunity.Field name="ifTranslationToEnOkay">
-              {(field) => {
-                return (
-                  <div>
-                    <div className="form-chip-list form-pick">
-                      <p>
-                        {t(
-                          "form.addOpportunity.fields.ifTranslationToEnOkay.label",
-                        )}
-                      </p>
-                      <input
-                        id="consent"
-                        type="checkbox"
-                        name="ifTranslationToEnOkay"
-                        onChange={(e) => {
-                          field.handleChange(e.target.checked);
-                          field.validate("change");
-                        }}
-                      />
-                      <label htmlFor="consent">
-                        {getTickMark(!!field.state.value)}
-                      </label>
-                    </div>
-                    <FieldInfo field={field} />
-                  </div>
-                );
-              }}
-            </formOpportunity.Field>
-            <SimpleInputField<OpportunityData>
-              name="address"
-              FieldTag={formOpportunity.Field}
-              label={t("form.addOpportunity.fields.address.label")}
-              onChangeValidator={({ value }) =>
-                !value ? t("form.error.required") : undefined
-              }
-            />
-            <SimpleInputField<OpportunityData>
-              name="dateTime"
-              FieldTag={formOpportunity.Field}
-              label={t("form.addOpportunity.fields.dateTime.label")}
-              onChangeValidator={({ value }) => {
-                if (!value) {
-                  return t("form.error.required");
-                }
-                if (Number.isNaN(getDate(value as string).getTime())) {
-                  return t("form.addOpportunity.fields.dateTime.error");
-                }
-                if (
-                  getDate(value as string).valueOf() - Date.now() <
-                  sevenDays
-                ) {
-                  return t("form.addOpportunity.fields.dateTime.tooClose");
-                }
-                return undefined;
-              }}
-            />
-            <SimpleInputField<OpportunityData>
-              name="refugeeName"
-              FieldTag={formOpportunity.Field}
-              label={t("form.addOpportunity.fields.refugeeName.label")}
-              onChangeValidator={({ value }) =>
-                !value ? t("form.error.required") : undefined
-              }
-            />
-            <SimpleInputField<OpportunityData>
-              name="refugeeNumber"
-              FieldTag={formOpportunity.Field}
-              label={t("form.addOpportunity.fields.refugeeNumber.label")}
-              onChangeValidator={({ value }) =>
-                !value ? t("form.error.required") : undefined
-              }
-            />
-            <SimpleInputField<OpportunityData>
-              name="aaInformation"
-              FieldTag={formOpportunity.Field}
-              label={t("form.addOpportunity.fields.aaInformation.label")}
-            />
-          </fieldset>
-        )}
-        {opportunityType === OpportunityType.GENERAL && (
-          <fieldset className="form-field-group">
-            <b>{t("form.addOpportunity.fields.voGroup.label")}</b>
-            <formOpportunity.Field name="activities">
-              {(field) => {
-                return (
-                  <fieldset>
-                    <HeaderWithHelp
-                      className="form-chiplist-header-within-group"
-                      classNamePopup="form-help"
-                    >
-                      {t("form.addOpportunity.fields.activities.header")}
-                    </HeaderWithHelp>
-                    <WithParentRef className="form-chip-list form-pick">
-                      <MultipleCheckBoxInputsWithMore<
-                        OpportunityData,
-                        "activities"
-                      >
-                        FieldTag={formOpportunity.Field}
-                        field={field}
-                      />
-                      <FieldInfo field={field} />
-                    </WithParentRef>
-                  </fieldset>
-                );
-              }}
-            </formOpportunity.Field>
-            <formOpportunity.Field name="languagesRefugee">
-              {(field) => {
-                return (
-                  <fieldset>
-                    <HeaderWithHelp
-                      textHelp={t(
-                        "form.addOpportunity.fields.languagesRefugee.helpText",
-                      )}
-                      className="form-chiplist-header-within-group"
-                      classNamePopup="form-help"
-                    >
-                      {t("form.addOpportunity.fields.languagesRefugee.header")}
-                    </HeaderWithHelp>
-                    <WithParentRef className="form-chip-list form-pick">
-                      <MultipleCheckBoxInputsWithMore<
-                        OpportunityData,
-                        "languagesRefugee"
-                      >
-                        FieldTag={formOpportunity.Field}
-                        field={field}
-                      />
-                      <FieldInfo field={field} />
-                    </WithParentRef>
-                  </fieldset>
-                );
-              }}
-            </formOpportunity.Field>
-            <formOpportunity.Field name="skills">
-              {(field) => {
-                return (
-                  <fieldset>
-                    <HeaderWithHelp
-                      textHelp={t("form.addOpportunity.fields.skills.helpText")}
-                      className="form-chiplist-header-within-group"
-                      classNamePopup="form-help"
-                    >
-                      {t("form.addOpportunity.fields.skills.header")}
-                    </HeaderWithHelp>
-                    <WithParentRef className="form-chip-list form-pick">
-                      <MultipleCheckBoxInputsWithMore<OpportunityData, "skills">
-                        FieldTag={formOpportunity.Field}
-                        field={field}
-                      />
-                      <FieldInfo field={field} />
-                    </WithParentRef>
-                  </fieldset>
-                );
-              }}
-            </formOpportunity.Field>
-            <formOpportunity.Field
-              name="schedule"
-              validators={{
-                onBlur: ({ value }) => {
-                  const isSelected = !!value.filter(
-                    ({ timeSlots: timeFrames }) =>
-                      !!timeFrames.filter(({ selected }) => selected).length,
-                  ).length;
-                  return isSelected ? undefined : t("form.error.availability");
-                },
-              }}
-            >
-              {(field) => {
-                return (
-                  <fieldset>
-                    <HeaderWithHelp
-                      textHelp={t(
-                        "form.addOpportunity.fields.schedule.helpText",
-                      )}
-                      className="form-chiplist-header-within-group"
-                      classNamePopup="form-help"
-                    >
-                      {t("form.addOpportunity.fields.schedule.header")}
-                    </HeaderWithHelp>
-                    <div
-                      className="form-table"
-                      onFocus={() => {
-                        setTimeout(field.handleBlur, 0);
-                      }}
-                    >
-                      {field.state.value &&
-                        field.state.value.map((scheduleActivity, idx) => {
-                          return (
-                            <div
-                              className="form-table-row"
-                              key={`schedule${scheduleActivity}`}
+        <formOpportunity.Subscribe selector={(state) => state}>
+          {(state) => {
+            if (state.values.opportunityType === OpportunityType.GENERAL)
+              return (
+                <fieldset className="form-field-group">
+                  <b>{t("form.addOpportunity.fields.voGroup.label")}</b>
+                  <formOpportunity.Field name="locations">
+                    {(field) => {
+                      return (
+                        <fieldset>
+                          <HeaderWithHelp
+                            className="form-chiplist-header-within-group"
+                            classNamePopup="form-help"
+                          >
+                            {t(
+                              "form.addOpportunity.fields.voGroup.locations.header",
+                            )}
+                          </HeaderWithHelp>
+                          <WithParentRef className="form-chip-list form-pick">
+                            <MultipleCheckBoxInputsWithMore<
+                              OpportunityData,
+                              "locations"
                             >
-                              <span className="form-availability-weekday">
-                                {t(
-                                  `weekdays.${scheduleActivity.weekday}`,
-                                ).toLocaleUpperCase()}
-                              </span>
+                              FieldTag={formOpportunity.Field}
+                              field={field}
+                            />
+                            <FieldInfo field={field} />
+                          </WithParentRef>
+                        </fieldset>
+                      );
+                    }}
+                  </formOpportunity.Field>
+                  <formOpportunity.Field name="activities">
+                    {(field) => {
+                      return (
+                        <fieldset>
+                          <HeaderWithHelp
+                            className="form-chiplist-header-within-group"
+                            classNamePopup="form-help"
+                          >
+                            {t(
+                              "form.addOpportunity.fields.voGroup.activities.header",
+                            )}
+                          </HeaderWithHelp>
+                          <WithParentRef className="form-chip-list form-pick">
+                            <MultipleCheckBoxInputsWithMore<
+                              OpportunityData,
+                              "activities"
+                            >
+                              FieldTag={formOpportunity.Field}
+                              field={field}
+                            />
+                            <FieldInfo field={field} />
+                          </WithParentRef>
+                        </fieldset>
+                      );
+                    }}
+                  </formOpportunity.Field>
+                  <formOpportunity.Field name="languages">
+                    {(field) => {
+                      return (
+                        <fieldset>
+                          <HeaderWithHelp
+                            textHelp={t(
+                              "form.addOpportunity.fields.voGroup.languagesRefugee.helpText",
+                            )}
+                            className="form-chiplist-header-within-group"
+                            classNamePopup="form-help"
+                          >
+                            {t(
+                              "form.addOpportunity.fields.voGroup.languagesRefugee.header",
+                            )}
+                          </HeaderWithHelp>
+                          <WithParentRef className="form-chip-list form-pick">
+                            <MultipleCheckBoxInputsWithMore<
+                              OpportunityData,
+                              "languages"
+                            >
+                              FieldTag={formOpportunity.Field}
+                              field={field}
+                            />
+                            <FieldInfo field={field} />
+                          </WithParentRef>
+                        </fieldset>
+                      );
+                    }}
+                  </formOpportunity.Field>
+                  <formOpportunity.Field name="skills">
+                    {(field) => {
+                      return (
+                        <fieldset>
+                          <HeaderWithHelp
+                            textHelp={t(
+                              "form.addOpportunity.fields.voGroup.skills.helpText",
+                            )}
+                            className="form-chiplist-header-within-group"
+                            classNamePopup="form-help"
+                          >
+                            {t(
+                              "form.addOpportunity.fields.voGroup.skills.header",
+                            )}
+                          </HeaderWithHelp>
+                          <WithParentRef className="form-chip-list form-pick">
+                            <MultipleCheckBoxInputsWithMore<
+                              OpportunityData,
+                              "skills"
+                            >
+                              FieldTag={formOpportunity.Field}
+                              field={field}
+                            />
+                            <FieldInfo field={field} />
+                          </WithParentRef>
+                        </fieldset>
+                      );
+                    }}
+                  </formOpportunity.Field>
+                  <formOpportunity.Field
+                    name="schedule"
+                    validators={{
+                      onBlur: ({ value }) => {
+                        const isSelected = !!value.filter(
+                          ({ timeSlots: timeFrames }) =>
+                            !!timeFrames.filter(({ selected }) => selected)
+                              .length,
+                        ).length;
+                        return isSelected
+                          ? undefined
+                          : t("form.error.availability");
+                      },
+                    }}
+                  >
+                    {(field) => {
+                      return (
+                        <fieldset>
+                          <HeaderWithHelp
+                            textHelp={t(
+                              "form.addOpportunity.fields.voGroup.schedule.helpText",
+                            )}
+                            className="form-chiplist-header-within-group"
+                            classNamePopup="form-help"
+                          >
+                            {t(
+                              "form.addOpportunity.fields.voGroup.schedule.header",
+                            )}
+                          </HeaderWithHelp>
+                          <div
+                            className="form-table"
+                            onFocus={() => {
+                              setTimeout(field.handleBlur, 0);
+                            }}
+                          >
+                            {field.state.value &&
+                              field.state.value.map((scheduleActivity, idx) => {
+                                return (
+                                  <div
+                                    className="form-table-row"
+                                    key={`${scheduleActivity.weekday}`}
+                                  >
+                                    <span className="form-availability-weekday">
+                                      {t(
+                                        `form.schedule.${scheduleActivity.weekday}`,
+                                      ).toLocaleUpperCase()}
+                                    </span>
 
-                              <formOpportunity.Field
-                                name={`schedule[${idx}].timeSlots`}
-                              >
-                                {(weekday) => {
-                                  return (
-                                    weekday.state.value &&
-                                    weekday.state.value.map(
-                                      ({ title }, idxInner) => (
-                                        <formOpportunity.Field
-                                          key={`${title}`}
-                                          name={`schedule[${idx}].timeSlots[${idxInner}].selected`}
-                                        >
-                                          {(fieldTimeslot) => (
-                                            <span className="form-pick">
-                                              <input
-                                                tabIndex={0}
-                                                id={`${scheduleActivity.weekday}${weekday.state.value[idxInner].title}`}
-                                                type="checkbox"
-                                                onChange={(e) =>
-                                                  fieldTimeslot.handleChange(
-                                                    e.target.checked,
-                                                  )
-                                                }
-                                              />
-                                              <label
-                                                htmlFor={`${scheduleActivity.weekday}${weekday.state.value[idxInner].title}`}
+                                    <formOpportunity.Field
+                                      name={`schedule[${idx}].timeSlots`}
+                                    >
+                                      {(weekday) => {
+                                        return (
+                                          weekday.state.value &&
+                                          weekday.state.value.map(
+                                            ({ title }, idxInner) => (
+                                              <formOpportunity.Field
+                                                key={`${title}${scheduleActivity.weekday}`}
+                                                name={`schedule[${idx}].timeSlots[${idxInner}].selected`}
                                               >
-                                                <span key={`${title}`}>
-                                                  {title}
-                                                </span>
-                                              </label>
-                                            </span>
-                                          )}
-                                        </formOpportunity.Field>
-                                      ),
-                                    )
-                                  );
-                                }}
-                              </formOpportunity.Field>
-                            </div>
-                          );
-                        })}
-                      <FieldInfo field={field} />
-                    </div>
-                  </fieldset>
-                );
-              }}
-            </formOpportunity.Field>
-            <SimpleInputField<OpportunityData>
-              name="numberVolunteers"
-              FieldTag={formOpportunity.Field}
-              label={t("form.addOpportunity.fields.numberVolunteers.label")}
-              onChangeValidator={({ value }) => {
-                if (!value) {
-                  return t("form.error.required");
-                }
-                if (Number.isNaN(value as number)) {
-                  return t("form.addOpportunity.fields.numberVolunteers.error");
-                }
-                return undefined;
-              }}
-            />
-            <SimpleInputField<OpportunityData>
-              name="voInformation"
-              FieldTag={formOpportunity.Field}
-              label={t("form.addOpportunity.fields.voInformation.label")}
-            />
-          </fieldset>
-        )}
+                                                {(fieldTimeslot) => (
+                                                  <span className="form-pick">
+                                                    <input
+                                                      tabIndex={0}
+                                                      id={`${scheduleActivity.weekday}${weekday.state.value[idxInner].title}`}
+                                                      type="checkbox"
+                                                      onChange={(e) =>
+                                                        fieldTimeslot.handleChange(
+                                                          e.target.checked,
+                                                        )
+                                                      }
+                                                    />
+                                                    <label
+                                                      htmlFor={`${scheduleActivity.weekday}${weekday.state.value[idxInner].title}`}
+                                                    >
+                                                      <span key={`${title}`}>
+                                                        {getTimeslotTitle(
+                                                          t,
+                                                          title,
+                                                        )}
+                                                      </span>
+                                                    </label>
+                                                  </span>
+                                                )}
+                                              </formOpportunity.Field>
+                                            ),
+                                          )
+                                        );
+                                      }}
+                                    </formOpportunity.Field>
+                                  </div>
+                                );
+                              })}
+                            <FieldInfo field={field} />
+                          </div>
+                        </fieldset>
+                      );
+                    }}
+                  </formOpportunity.Field>
+                  <SimpleInputField<OpportunityData>
+                    name="numberVolunteers"
+                    FieldTag={formOpportunity.Field}
+                    label={t(
+                      "form.addOpportunity.fields.voGroup.numberVolunteers.label",
+                    )}
+                    onChangeValidator={({ value }) => {
+                      if (!value) {
+                        return t("form.error.required");
+                      }
+                      if (Number.isNaN(value as number)) {
+                        return t(
+                          "form.addOpportunity.fields.voGroup.numberVolunteers.error",
+                        );
+                      }
+                      return undefined;
+                    }}
+                  />
+                  <SimpleInputField<OpportunityData>
+                    name="voInformation"
+                    FieldTag={formOpportunity.Field}
+                    label={t(
+                      "form.addOpportunity.fields.voGroup.information.label",
+                    )}
+                  />
+                </fieldset>
+              );
+            return null;
+          }}
+        </formOpportunity.Subscribe>
+        <formOpportunity.Field
+          name="consent"
+          validators={{
+            onChange: ({ value }) =>
+              value ? undefined : t("form.error.required"),
+          }}
+        >
+          {(field) => {
+            return (
+              <div>
+                <div className="form-chip-list form-pick">
+                  <input
+                    id="consent"
+                    type="checkbox"
+                    name="consent"
+                    onChange={(e) => {
+                      field.handleChange(e.target.checked);
+                      field.validate("change");
+                    }}
+                  />
+                  <label htmlFor="consent">
+                    {getTickMark(!!field.state.value)}
+                  </label>
+                  <span>
+                    {t("form.addOpportunity.fields.consent.header")}{" "}
+                    {t("form.addOpportunity.fields.consent.agree")}{" "}
+                    <a href={`/${Subpages.GUIDELINES}/${lng}`}>
+                      {t("footer.legal.guidelines")}
+                    </a>{" "}
+                    {t("form.addOpportunity.fields.consent.and")}{" "}
+                    <a href={`/${Subpages.DATA_PROTECTION}/${lng}`}>
+                      {t("footer.legal.dataPrivacy")}
+                    </a>
+                  </span>
+                </div>
+                <FieldInfo field={field} />
+              </div>
+            );
+          }}
+        </formOpportunity.Field>
         <formOpportunity.Subscribe selector={(state) => state}>
           {(state) => {
             const errors = Array.from(

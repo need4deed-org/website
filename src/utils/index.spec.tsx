@@ -12,6 +12,7 @@ import {
   isEnumValue,
   isoCodesToNames,
   mapToOpportunity,
+  parseYesNo,
   pivotArrayToObj,
   setLangDirection,
 } from "./index";
@@ -319,6 +320,19 @@ describe("utils", () => {
       const expectedResult = "5. Dezember 2024";
       const result = getReadableTime(timestampWithTimeZone, "de-DE");
       expect(result).toBe(expectedResult);
+    });
+  });
+
+  describe("parseYesNo", () => {
+    it('should return "Yes" given truthy value', () => {
+      expect(parseYesNo(true)).toBe("Yes");
+      expect(parseYesNo("1" as unknown as boolean)).toBe("Yes");
+    });
+
+    it('should return "No" given falsy value', () => {
+      expect(parseYesNo(false)).toBe("No");
+      expect(parseYesNo(undefined)).toBe("No");
+      expect(parseYesNo(0 as unknown as boolean)).toBe("No");
     });
   });
 });

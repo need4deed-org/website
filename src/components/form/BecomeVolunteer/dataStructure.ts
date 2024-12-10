@@ -1,3 +1,4 @@
+import { YesNo } from "../../../config/types";
 import { Availability, Selected } from "../types";
 
 export interface VolunteerData {
@@ -37,7 +38,7 @@ export interface VolunteerParsedData {
   phone: string;
   email: string;
   postal_code: number;
-  if_good_conduct_certificate: boolean;
+  good_conduct_certificate: YesNo;
   if_measles_vaccination: boolean;
   lead_from: string;
   schedule: [number, string][];

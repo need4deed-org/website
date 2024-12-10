@@ -15,12 +15,19 @@ interface Props<T, K extends DeepKeys<T>> {
   refParent?: RefObject<HTMLElement>;
   FieldTag: FieldComponent<T, undefined>;
   field: FieldApi<T, K>;
+  hiddenChips?: string[];
 }
 
 export default function MultipleCheckBoxInputsWithMore<
   T,
   K extends DeepKeys<T>,
->({ showFirst = 8, refParent, FieldTag, field }: Props<T, K>) {
+>({
+  showFirst = 8,
+  refParent,
+  FieldTag,
+  field,
+  hiddenChips = [],
+}: Props<T, K>) {
   const { t } = useTranslation();
   const [numItems, setNumItems] = useState(showFirst);
   useOutsideClick({
@@ -42,31 +49,40 @@ export default function MultipleCheckBoxInputsWithMore<
   }
   return (
     <>
-      {(field.state.value as []).map((item: Selected, idx) => (
-        <FieldTag
-          key={`${item.title}`}
-          name={`${field.name}[${idx}].selected` as DeepKeys<T>}
-        >
-          {(innerField) => (
-            <div
-              data-main-item={numItems === 0 || idx < numItems || item.selected}
+      {field.state.value &&
+        (field.state.value as []).map((item: Selected, idx) => {
+          return (
+            <FieldTag
+              key={`${item.title}`}
+              name={`${field.name}[${idx}].selected` as DeepKeys<T>}
             >
-              <input
-                tabIndex={0}
-                id={`${field.name}${idx}`}
-                type="checkbox"
-                onChange={(e) => {
-                  innerField.handleChange(
-                    e.target.checked as DeepValue<T, DeepKeys<T>>,
-                  );
-                }}
-              />
-              <label htmlFor={`${field.name}${idx}`}>{item.title}</label>
-            </div>
-          )}
-        </FieldTag>
-      ))}
-      {(field.state.value as []).length > showFirst &&
+              {(innerField) => (
+                <div
+                  data-main-item={
+                    numItems === 0 || idx < numItems || item.selected
+                  }
+                  data-chip-hidden={hiddenChips.some(
+                    (chip) => chip === item.title,
+                  )}
+                >
+                  <input
+                    tabIndex={0}
+                    id={`${field.name}${idx}`}
+                    type="checkbox"
+                    onChange={(e) => {
+                      innerField.handleChange(
+                        e.target.checked as DeepValue<T, DeepKeys<T>>,
+                      );
+                    }}
+                  />
+                  <label htmlFor={`${field.name}${idx}`}>{item.title}</label>
+                </div>
+              )}
+            </FieldTag>
+          );
+        })}
+      {field.state.value &&
+      (field.state.value as []).length > showFirst &&
       (numItems || !refParent) ? (
         <button type="button" tabIndex={0} onClick={handleClick}>
           {numItems ? t("form.button.more") : t("form.button.less")}
