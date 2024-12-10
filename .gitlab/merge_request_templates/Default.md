@@ -16,15 +16,13 @@ e.g.
 
 ### Documentation Updates
 
-- [] My code needs changes in the documentation
+- [ ] My code needs changes in the documentation
 
 ### Code Quality
 
-- [x] My code follows the project's style guidelines
+- [ ] My code follows the project's style guidelines
 
 ### Testing
 
-- [] I have added unit tests for the fixed scenario
-- [] The change needs end to end test coverage
-
-/assign me
+- [ ] I have added unit tests for the fixed scenario
+- [ ] The change needs end to end test coverage

@@ -1,8 +1,7 @@
+<!-- Text which is in between <!-- and -- > is a comment in a Markdown files.
+you can ignore them, comments are not rendered in Gitlab -->
+
 ## Feature Request
-
-<!-- Pick the any which are fitting -->
-
-/label ~feature
 
 ### Feature Description
 
@@ -24,15 +23,4 @@
 
 <!-- e.g. The new subpage has to be visible on the website !-->
 
-<!-- Remove this section after applying labels -->
-
-### Labels
-
-- ~feature
-- ~documentation
-- ~security
-- ~performance
-- ~tech-debt
-- ~dependencies
-- ~good-first-issue
-- ~needs-discussion
+<!-- Please remove all the empty sections, please add necesarry lables after filling out the issue -->

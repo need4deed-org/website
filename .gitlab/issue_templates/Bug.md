@@ -1,3 +1,6 @@
+<!-- Text which is in between <!-- and -- > is a comment in a Markdown files.
+you can ignore them, comments are not rendered in Gitlab -->
+
 ## Bug Report
 
 ### Describe the Bug
@@ -7,7 +10,6 @@
 ### Steps to Reproduce
 
 1.
-2.
 
 ### Expected Behavior
 
@@ -31,3 +33,5 @@
 ### The impact of the bug
 
 <!-- Please assess what's the impact of the bug on the whole project -->
+
+<!-- Please remove all the empty sections, please add necesarry lables after filling out the issue -->
