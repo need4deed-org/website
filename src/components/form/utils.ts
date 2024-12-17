@@ -120,18 +120,22 @@ export function parseFormStateDTOOpportunity(value: OpportunityData) {
   data.accomp_name = value.refugeeName;
   data.accomp_phone = value.refugeeNumber;
   data.accomp_information = value.aaInformation;
-  data.accomp_translatedInto = value.translatedInto;
+  data.accomp_translation = value.translatedInto;
   data.rac_email = value.email;
   data.rac_full_name = value.fullName;
   data.rac_phone = value.racPhone;
   data.rac_address = value.racAddress;
   data.rac_plz = value.racPostcode;
+  data.volunteers_number = parseInt(value.numberVolunteers, 10);
   data.berlin_locations = getSelectedTitles(value.locations);
   data.languages =
     value.translatedInto !== TranslatedIntoType.NO_TRANSLATION
       ? getConditionedLanguages(getSelectedTitles(value.languages), true)
       : [];
-  data.activities = getSelectedTitles(value.activities);
+  data.activities = getSelectedTitles([
+    ...value.activities,
+    ...value.activitiesAccompanying,
+  ]);
   data.skills = getSelectedTitles(value.skills);
   data.timeslots = getSelectedTimeslots(value.schedule);
   return data;

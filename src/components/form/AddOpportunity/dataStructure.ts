@@ -23,7 +23,7 @@ export interface OpportunityData {
   schedule: Availability;
   activities: Selected[];
   skills: Selected[];
-  numberVolunteers: number;
+  numberVolunteers: string;
   voInformation: string;
   consent: boolean | undefined;
 }
@@ -52,11 +52,12 @@ export interface OpportunityParsedData {
   accomp_name?: string;
   accomp_phone?: string;
   accomp_information?: string;
-  accomp_translatedInto?: TranslatedIntoType;
+  accomp_translation?: TranslatedIntoType;
   berlin_locations?: string[];
   languages: string[];
   activities: string[];
   skills: string[];
   timeslots?: [number, TimeSlot | "weekdays" | "weekends"][];
+  volunteers_number: number;
   vo_information?: string;
 }

@@ -71,7 +71,7 @@ export default function AddOpportunity() {
       aaPostcode: "",
       schedule: getSchedule(),
       dateTime: undefined,
-      numberVolunteers: 1,
+      numberVolunteers: "1",
       translatedInto: undefined,
       voInformation: "",
       refugeeName: "",
@@ -661,7 +661,7 @@ export default function AddOpportunity() {
                       if (!value) {
                         return t("form.error.required");
                       }
-                      if (Number.isNaN(value as number)) {
+                      if (Number.isNaN(parseInt(value as string, 10))) {
                         return t(
                           "form.addOpportunity.fields.voGroup.numberVolunteers.error",
                         );
