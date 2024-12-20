@@ -130,7 +130,7 @@ function Subpage({ type }: Props) {
               type: "activities",
               name: "title",
               languages: "languages",
-              time: "datetime_str",
+              time: "accomp_datetime",
               location: "berlin_locations",
               vo: "vo_information",
             }}
