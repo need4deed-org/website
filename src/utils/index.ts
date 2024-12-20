@@ -200,6 +200,8 @@ export function getMainCtaUrl({ lng, id = "", title = "" }: MainCtaUrl) {
 }
 
 export function getReadableTime(timestamp: string, locale = "en-US") {
+  if (timestamp === null) return null;
+
   const date = new Date(timestamp);
 
   if (Number.isNaN(date.getDate())) return timestamp;

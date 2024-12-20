@@ -321,6 +321,15 @@ describe("utils", () => {
       const result = getReadableTime(timestampWithTimeZone, "de-DE");
       expect(result).toBe(expectedResult);
     });
+
+    it("should handle null", () => {
+      const timestampWithTimeZone = null;
+      const expectedResult = null;
+      const result = getReadableTime(
+        timestampWithTimeZone as unknown as string,
+      );
+      expect(result).toBe(expectedResult);
+    });
   });
 
   describe("parseYesNo", () => {
