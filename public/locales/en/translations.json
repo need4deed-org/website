@@ -162,8 +162,12 @@
     "addOpportunity": {
       "header": "Need For Volunteer Work",
       "thankYou": {
-        "header": "Thanks for your interest in volunteering with refugees :-)",
+        "header": "Thanks for filling in an opportunity helping refugees",
         "para": "We will get back to you in the coming days with the next steps!"
+      },
+      "wentWrong": {
+        "header": "Sorry something went wrong on our side :-(",
+        "para": "Please check if your email and other data is correct and try once more."
       },
       "fields": {
         "title": { "label": "What help is needed in short" },

@@ -157,8 +157,12 @@
     "addOpportunity": {
       "header": "Bedarf an Freiwilligenarbeit",
       "thankYou": {
-        "header": "Danke für Ihr Interesse an der Freiwilligenarbeit mit Flüchtlingen :-)",
-        "para": "Wir melden uns in den nächsten Tagen mit den nächsten Schritten bei Ihnen!"
+        "header": "Danke, dass Sie sich für eine Gelegenheit zur Unterstützung von Flüchtlingen interessiert haben.",
+        "para": "Wir werden uns in den kommenden Tagen mit den nächsten Schritten bei Ihnen melden!"
+      },
+      "wentWrong": {
+        "header": "Entschuldigung, auf unserer Seite ist etwas schiefgelaufen :-(",
+        "para": "Bitte überprüfen Sie, ob Ihre E-Mail-Adresse und andere Daten korrekt sind, und versuchen Sie es noch einmal."
       },
       "fields": {
         "title": { "label": "Was wird gebraucht?" },
