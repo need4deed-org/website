@@ -35,13 +35,14 @@ import {
 import { OpportunityData, OpportunityParsedData } from "./dataStructure";
 
 const thankYou = "?pointer=form.addOpportunity.thankYou";
+const wentWrong = "?pointer=form.addOpportunity.wentWrong";
 
 export default function AddOpportunity() {
   const navigate = useNavigate();
   const { lng } = useParams();
   const { i18n, t } = useTranslation();
 
-  const { postRequest } = usePostRequest<
+  const { postRequest, success } = usePostRequest<
     OpportunityParsedData,
     Record<string, string | string[]>
   >({ url: `${urlApi}/opportunity/` });
@@ -81,23 +82,16 @@ export default function AddOpportunity() {
     },
     onSubmit: ({ value }) => {
       const data = parseFormStateDTOOpportunity(value);
-      // eslint-disable-next-line no-console
-      console.log(
-        "DEBUG:BecomeVolunteer:onSubmit:data:",
-        data,
-        "\nstate:",
-        value,
-      );
-      const result = postRequest(data);
-      // eslint-disable-next-line no-console
-      console.log("DEBUG:BecomeVolunteer:onSubmit:result:", result);
+      postRequest(data);
     },
   });
 
   useEffect(() => {
-    if (formOpportunity.state.isSubmitted)
-      navigate(`/${Subpages.ANNOUNCEMENT}/${lng}${thankYou}`);
-  }, [formOpportunity.state.isSubmitted, lng, navigate]);
+    if (formOpportunity.state.isSubmitted) {
+      const pointer = success ? thankYou : wentWrong;
+      navigate(`/${Subpages.ANNOUNCEMENT}/${lng}${pointer}`);
+    }
+  }, [formOpportunity.state.isSubmitted, lng, navigate, success]);
 
   return (
     <div key={i18n.language} className="n4d-container form-container">
