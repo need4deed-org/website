@@ -2,6 +2,7 @@ import {
   DeepKeys,
   DeepValue,
   FieldComponent,
+  FieldValidateAsyncFn,
   FieldValidateFn,
 } from "@tanstack/react-form";
 
@@ -15,6 +16,8 @@ interface Props<T> {
   inputType?: InputType;
   onChangeValidator?: FieldValidateFn<T, DeepKeys<T>>;
   onBlurValidator?: FieldValidateFn<T, DeepKeys<T>>;
+  onChangeAsyncValidator?: FieldValidateAsyncFn<T, DeepKeys<T>>;
+  onAsyncDebounceMs?: number;
 }
 
 export default function SimpleInputField<T>({
@@ -24,6 +27,8 @@ export default function SimpleInputField<T>({
   inputType = "text",
   onChangeValidator,
   onBlurValidator,
+  onChangeAsyncValidator,
+  onAsyncDebounceMs = 500,
 }: Props<T>) {
   return (
     <FieldTag
@@ -37,6 +42,12 @@ export default function SimpleInputField<T>({
         ...(onBlurValidator
           ? {
               onBlur: onBlurValidator,
+            }
+          : {}),
+        ...(onChangeAsyncValidator
+          ? {
+              onChangeAsync: onChangeAsyncValidator,
+              onChangeAsyncDebounceMs: onAsyncDebounceMs,
             }
           : {}),
       }}
