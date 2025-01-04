@@ -1,6 +1,6 @@
-import { useForm } from "@tanstack/react-form";
 import { validate as validateEmail } from "email-validator";
 
+import { useForm } from "@tanstack/react-form";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useParams } from "react-router-dom";
@@ -32,6 +32,7 @@ import {
   isValidPLZ,
   parseFormStateDTOOpportunity,
 } from "../utils";
+import { validateRACEmail } from "../validators";
 import { OpportunityData, OpportunityParsedData } from "./dataStructure";
 
 const thankYou = "?pointer=form.addOpportunity.thankYou";
@@ -80,9 +81,9 @@ export default function AddOpportunity() {
       aaInformation: "",
       consent: undefined,
     },
-    onSubmit: ({ value }) => {
+    onSubmit: async ({ value }) => {
       const data = parseFormStateDTOOpportunity(value);
-      postRequest(data);
+      await postRequest(data);
     },
   });
 
@@ -135,6 +136,9 @@ export default function AddOpportunity() {
               }
               return undefined;
             }}
+            onChangeAsyncValidator={({ value }) =>
+              validateRACEmail(value as string, t("form.error.badEmail"))
+            }
           />
           <SimpleInputField<OpportunityData>
             name="fullName"
@@ -757,6 +761,7 @@ export default function AddOpportunity() {
           }}
         </formOpportunity.Subscribe>
       </form>
+      <p>{t("form.addOpportunity.bottomMsg")}</p>
     </div>
   );
 }
