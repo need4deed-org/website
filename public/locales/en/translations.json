@@ -50,6 +50,7 @@
       "required": "This field is required",
       "postcode": "Must be a valid postcode of Berlin",
       "email": "Must be a valid email",
+      "badEmail": "Bad email",
       "location": "Please pick at least one location",
       "availability": "Please pick at least one timeframe",
       "labelErrors": "Errors",
@@ -169,6 +170,7 @@
         "header": "Sorry something went wrong on our side :-(",
         "para": "Please check if your email and other data is correct and try once more."
       },
+      "bottomMsg": "For assistance with any problems or queries, please reach out to: contact@need4deed.org",
       "fields": {
         "title": { "label": "What help is needed in short" },
         "consent": {

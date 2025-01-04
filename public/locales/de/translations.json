@@ -33,6 +33,7 @@
       "required": "Dieses Feld ist erforderlich",
       "postcode": "Muss eine gültige Postleitzahl von Berlin sein",
       "email": "Muss eine gültige E-Mail-Adresse sein",
+      "badEmail": "Keine gültige E-Mai",
       "location": "Bitte wähle mindestens einen Standort aus",
       "availability": "Bitte wähle mindestens einen Zeitraum aus",
       "labelErrors": "Fehler",
@@ -157,13 +158,14 @@
     "addOpportunity": {
       "header": "Bedarf an Freiwilligenarbeit",
       "thankYou": {
-        "header": "Danke, dass Sie sich für eine Gelegenheit zur Unterstützung von Flüchtlingen interessiert haben.",
-        "para": "Wir werden uns in den kommenden Tagen mit den nächsten Schritten bei Ihnen melden!"
+        "header": "Vielen Dank für das Ausfüllen des Antragsformulars zur freiwilligen Unterstützung Ihrer Unterkunft!",
+        "para": "Wir sollten uns in den nächsten 3 Arbeitstagen bei Ihnen melden. Sollte dies nicht der Fall sein, wenden Sie sich bitte an contact@need4deed.org"
       },
       "wentWrong": {
-        "header": "Entschuldigung, auf unserer Seite ist etwas schiefgelaufen :-(",
-        "para": "Bitte überprüfen Sie, ob Ihre E-Mail-Adresse und andere Daten korrekt sind, und versuchen Sie es noch einmal."
+        "header": "Entschuldigung, auf unserer Seite ist etwas schief gelaufen :-(",
+        "para": "Bitte überprüfen Sie, ob alle anderen Angaben (z.B. Betreiber, Kontakt) korrekt sind und versuchen Sie es erneut oder wenden Sie sich an contact@need4deed.org."
       },
+      "bottomMsg": "Bei Problemen oder Fragen wenden Sie sich bitte an: contact@need4deed.org",
       "fields": {
         "title": { "label": "Was wird gebraucht?" },
         "consent": {
