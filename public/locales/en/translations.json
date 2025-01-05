@@ -170,6 +170,10 @@
         "header": "Sorry something went wrong on our side :-(",
         "para": "Please check if your email and other data is correct and try once more."
       },
+      "temporaryDown": {
+        "header": "We apologize, but something went wrong on our site. Please contact contact@need4deed.org.",
+        "para": ""
+      },
       "bottomMsg": "For assistance with any problems or queries, please reach out to: contact@need4deed.org",
       "fields": {
         "title": { "label": "What help is needed in short" },

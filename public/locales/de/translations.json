@@ -165,6 +165,10 @@
         "header": "Entschuldigung, auf unserer Seite ist etwas schief gelaufen :-(",
         "para": "Bitte überprüfen Sie, ob alle anderen Angaben (z.B. Betreiber, Kontakt) korrekt sind und versuchen Sie es erneut oder wenden Sie sich an contact@need4deed.org."
       },
+      "temporaryDown": {
+        "header": "Entschuldigung, auf unserer Seite ist etwas schiefgelaufen. Bitte wenden Sie an contact@need4deed.org.",
+        "para": ""
+      },
       "bottomMsg": "Bei Problemen oder Fragen wenden Sie sich bitte an: contact@need4deed.org",
       "fields": {
         "title": { "label": "Was wird gebraucht?" },
