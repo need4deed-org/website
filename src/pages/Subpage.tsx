@@ -139,7 +139,8 @@ function Subpage({ type }: Props) {
       case Subpages.BECOME_VOLUNTEER:
         return <Form form={FormType.VOLUNTEER} />;
       case Subpages.ADD_OPPORTUNITY:
-        return <Form form={FormType.OPPORTUNITY} />;
+        // return <Form form={FormType.OPPORTUNITY} />;
+        return <Announcement copies="form.addOpportunity.temporaryDown" />;
       case Subpages.ANNOUNCEMENT:
         return <Announcement />;
       case Subpages.EVENT:
