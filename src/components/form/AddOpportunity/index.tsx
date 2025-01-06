@@ -123,10 +123,14 @@ export default function AddOpportunity() {
         />
         <fieldset className="form-field-group">
           <b>{t("form.addOpportunity.fields.contactGroup.label")}</b>
+          <span>
+            <i>{t("form.addOpportunity.fields.contactGroup.info")}</i>
+          </span>
           <SimpleInputField<OpportunityData>
             name="email"
             FieldTag={formOpportunity.Field}
             label={t("form.addOpportunity.fields.contactGroup.email.label")}
+            infoMsg={t("form.addOpportunity.fields.contactGroup.email.info")}
             onChangeValidator={({ value }) => {
               if (!value) {
                 return t("form.error.required");
@@ -144,6 +148,7 @@ export default function AddOpportunity() {
             name="fullName"
             FieldTag={formOpportunity.Field}
             label={t("form.addOpportunity.fields.contactGroup.fullName.label")}
+            infoMsg={t("form.addOpportunity.fields.contactGroup.fullName.info")}
             onChangeValidator={({ value }) =>
               !value ? t("form.error.required") : undefined
             }
@@ -152,6 +157,7 @@ export default function AddOpportunity() {
             name="racAddress"
             FieldTag={formOpportunity.Field}
             label={t("form.addOpportunity.fields.contactGroup.address.label")}
+            infoMsg={t("form.addOpportunity.fields.contactGroup.address.info")}
             onChangeValidator={({ value }) =>
               !value ? t("form.error.required") : undefined
             }
@@ -160,6 +166,7 @@ export default function AddOpportunity() {
             name="racPostcode"
             FieldTag={formOpportunity.Field}
             label={t("form.addOpportunity.fields.contactGroup.postcode.label")}
+            infoMsg={t("form.addOpportunity.fields.contactGroup.postcode.info")}
             onChangeValidator={({ value }) => {
               if (!value) {
                 return t("form.error.required");
