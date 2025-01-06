@@ -157,7 +157,7 @@ export default function AddOpportunity() {
             name="racAddress"
             FieldTag={formOpportunity.Field}
             label={t("form.addOpportunity.fields.contactGroup.address.label")}
-            infoMsg={t("form.addOpportunity.fields.contactGroup.address.info")}
+            // infoMsg={t("form.addOpportunity.fields.contactGroup.address.info")}
             onChangeValidator={({ value }) =>
               !value ? t("form.error.required") : undefined
             }
@@ -166,7 +166,7 @@ export default function AddOpportunity() {
             name="racPostcode"
             FieldTag={formOpportunity.Field}
             label={t("form.addOpportunity.fields.contactGroup.postcode.label")}
-            infoMsg={t("form.addOpportunity.fields.contactGroup.postcode.info")}
+            // infoMsg={t("form.addOpportunity.fields.contactGroup.postcode.info")}
             onChangeValidator={({ value }) => {
               if (!value) {
                 return t("form.error.required");
