@@ -27,9 +27,8 @@ export default function usePostRequest<D, R>({ url }: Props) {
         const responseData: R = await response.json();
         setSuccess(true);
         return { success: true, data: responseData };
-      } else {
-        throw new Error(response.statusText);
       }
+      throw new Error(response.statusText);
     } catch (functionError: unknown) {
       if (functionError instanceof Error) {
         setError(functionError);
