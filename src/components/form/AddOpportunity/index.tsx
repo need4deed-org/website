@@ -1,7 +1,6 @@
 import { validate as validateEmail } from "email-validator";
 
 import { useForm } from "@tanstack/react-form";
-import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useParams } from "react-router-dom";
 import { eightDays, phoneRegEx, urlApi } from "../../../config/constants";
@@ -43,7 +42,7 @@ export default function AddOpportunity() {
   const { lng } = useParams();
   const { i18n, t } = useTranslation();
 
-  const { postRequest, success } = usePostRequest<
+  const { postRequest } = usePostRequest<
     OpportunityParsedData,
     Record<string, string | string[]>
   >({ url: `${urlApi}/opportunity/` });
@@ -83,16 +82,11 @@ export default function AddOpportunity() {
     },
     onSubmit: async ({ value }) => {
       const data = parseFormStateDTOOpportunity(value);
-      await postRequest(data);
-    },
-  });
-
-  useEffect(() => {
-    if (formOpportunity.state.isSubmitted) {
+      const { success } = await postRequest(data);
       const pointer = success ? thankYou : wentWrong;
       navigate(`/${Subpages.ANNOUNCEMENT}/${lng}${pointer}`);
-    }
-  }, [formOpportunity.state.isSubmitted, lng, navigate, success]);
+    },
+  });
 
   return (
     <div key={i18n.language} className="n4d-container form-container">
