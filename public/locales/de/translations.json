@@ -182,18 +182,18 @@
           "info": "Nur das Sozialteam oder die Ehrenamtskoordinator*innen dürfen dieses Formular ausfüllen.",
           "email": {
             "label": "E-Mail",
-            "info": "kann nur eine offizielle E-Mail-Adresse der Einrichtung sein"
+            "info": "Nur E-Mail-Adresse des folgenden Betreibers: lfg-b, berliner-stadtmission, awo-mitte, prisod-wohnen, albatrosggmbh, gu-oberhafen, heroeurope, tamaja-gu, volkssolidaritaet, unionhilfswerk, cjd, centro-hotels, stephanus, city54, milaa-berlin, drk-mueggelspree, ejf, diakonie-stadtmitte, tamaja, pgssoziales, caritas-berlin, stk118."
           },
           "fullName": {
             "label": "Name",
-            "info": "des Ehrenamtskoordinator*in oder Sozialarbeiter*in"
+            "info": "Name des Ehrenamtskoordinator*in oder Sozialarbeiter*in"
           },
           "address": {
-            "label": "Anschrift",
+            "label": "Anschrift der Unterkunft",
             "info": "der Unterkunft"
           },
           "postcode": {
-            "label": "PLZ",
+            "label": "PLZ der Unterkunft",
             "info": "der Unterkunft"
           },
           "phone": { "label": "Telefonnummer" }
