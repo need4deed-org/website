@@ -9,28 +9,36 @@ export default function usePostRequest<D, R>({ url }: Props) {
   const [error, setError] = useState<Error | null>(null);
   const [success, setSuccess] = useState(false);
 
-  function postRequest(data: D): Promise<R> {
+  async function postRequest(data: D): Promise<{ success: boolean; data?: R }> {
     setLoading(true);
     setSuccess(false);
     setError(null);
-    return fetch(url, {
-      method: "post",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then((response) => {
-        if (response.ok) {
-          setSuccess(true);
-          return response.json();
-        }
-        throw new Error(response.statusText);
-      })
-      .catch((functionError) => setError(functionError.message))
-      .finally(() => {
-        setLoading(false);
+
+    try {
+      const response = await fetch(url, {
+        method: "post",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
       });
+
+      if (response.ok) {
+        const responseData: R = await response.json();
+        setSuccess(true);
+        return { success: true, data: responseData };
+      }
+      throw new Error(response.statusText);
+    } catch (functionError: unknown) {
+      if (functionError instanceof Error) {
+        setError(functionError);
+      } else {
+        setError(new Error(String(functionError)));
+      }
+      return { success: false };
+    } finally {
+      setLoading(false);
+    }
   }
 
   return { postRequest, loading, error, success };

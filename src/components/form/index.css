@@ -23,6 +23,11 @@
   bottom: 0;
 }
 
+.simple-input-form-info {
+  margin-block-end: -1.5rem;
+  margin-inline-start: 1.3rem;
+}
+
 .form-error em,
 .form-submit em {
   display: inline-block;
