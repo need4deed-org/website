@@ -179,10 +179,23 @@
         },
         "contactGroup": {
           "label": "GU Kontaktinformationen",
-          "email": { "label": "E-Mail" },
-          "fullName": { "label": "Name" },
-          "address": { "label": "Anschrift" },
-          "postcode": { "label": "PLZ" },
+          "info": "Nur das Sozialteam oder die Ehrenamtskoordinator*innen dürfen dieses Formular ausfüllen.",
+          "email": {
+            "label": "E-Mail",
+            "info": "kann nur eine offizielle E-Mail-Adresse der Einrichtung sein"
+          },
+          "fullName": {
+            "label": "Name",
+            "info": "des Ehrenamtskoordinator*in oder Sozialarbeiter*in"
+          },
+          "address": {
+            "label": "Anschrift",
+            "info": "der Unterkunft"
+          },
+          "postcode": {
+            "label": "PLZ",
+            "info": "der Unterkunft"
+          },
           "phone": { "label": "Telefonnummer" }
         },
         "opportunityType": {

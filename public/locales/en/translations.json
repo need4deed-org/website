@@ -184,10 +184,23 @@
         },
         "contactGroup": {
           "label": "Contact information",
-          "email": { "label": "E-mail" },
-          "fullName": { "label": "Name" },
-          "address": { "label": "Street address" },
-          "postcode": { "label": "PLZ" },
+          "info": "Only the social team or volunteer coordinators may fill out this form.",
+          "email": {
+            "label": "E-mail",
+            "info": "only an official email address of the institution can be used"
+          },
+          "fullName": {
+            "label": "Name",
+            "info": "of the volunteer coordinator or social worker"
+          },
+          "address": {
+            "label": "Street address",
+            "info": "of the accommodation centre"
+          },
+          "postcode": {
+            "label": "PLZ",
+            "info": "of the accommodation centre"
+          },
           "phone": { "label": "Phone number" }
         },
         "opportunityType": {
