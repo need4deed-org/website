@@ -1,7 +1,6 @@
-import { useForm } from "@tanstack/react-form";
 import { validate as validateEmail } from "email-validator";
 
-import { useEffect } from "react";
+import { useForm } from "@tanstack/react-form";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useParams } from "react-router-dom";
 import { eightDays, phoneRegEx, urlApi } from "../../../config/constants";
@@ -32,9 +31,11 @@ import {
   isValidPLZ,
   parseFormStateDTOOpportunity,
 } from "../utils";
+import { validateRACEmail } from "../validators";
 import { OpportunityData, OpportunityParsedData } from "./dataStructure";
 
 const thankYou = "?pointer=form.addOpportunity.thankYou";
+const wentWrong = "?pointer=form.addOpportunity.wentWrong";
 
 export default function AddOpportunity() {
   const navigate = useNavigate();
@@ -79,25 +80,13 @@ export default function AddOpportunity() {
       aaInformation: "",
       consent: undefined,
     },
-    onSubmit: ({ value }) => {
+    onSubmit: async ({ value }) => {
       const data = parseFormStateDTOOpportunity(value);
-      // eslint-disable-next-line no-console
-      console.log(
-        "DEBUG:BecomeVolunteer:onSubmit:data:",
-        data,
-        "\nstate:",
-        value,
-      );
-      const result = postRequest(data);
-      // eslint-disable-next-line no-console
-      console.log("DEBUG:BecomeVolunteer:onSubmit:result:", result);
+      const { success } = await postRequest(data);
+      const pointer = success ? thankYou : wentWrong;
+      navigate(`/${Subpages.ANNOUNCEMENT}/${lng}${pointer}`);
     },
   });
-
-  useEffect(() => {
-    if (formOpportunity.state.isSubmitted)
-      navigate(`/${Subpages.ANNOUNCEMENT}/${lng}${thankYou}`);
-  }, [formOpportunity.state.isSubmitted, lng, navigate]);
 
   return (
     <div key={i18n.language} className="n4d-container form-container">
@@ -128,6 +117,9 @@ export default function AddOpportunity() {
         />
         <fieldset className="form-field-group">
           <b>{t("form.addOpportunity.fields.contactGroup.label")}</b>
+          <span>
+            <i>{t("form.addOpportunity.fields.contactGroup.info")}</i>
+          </span>
           <SimpleInputField<OpportunityData>
             name="email"
             FieldTag={formOpportunity.Field}
@@ -141,6 +133,9 @@ export default function AddOpportunity() {
               }
               return undefined;
             }}
+            onChangeAsyncValidator={({ value }) =>
+              validateRACEmail(value as string, t("form.error.badEmail"))
+            }
           />
           <SimpleInputField<OpportunityData>
             name="fullName"
@@ -763,6 +758,7 @@ export default function AddOpportunity() {
           }}
         </formOpportunity.Subscribe>
       </form>
+      <p>{t("form.addOpportunity.bottomMsg")}</p>
     </div>
   );
 }

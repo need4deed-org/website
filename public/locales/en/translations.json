@@ -50,6 +50,7 @@
       "required": "This field is required",
       "postcode": "Must be a valid postcode of Berlin",
       "email": "Must be a valid email",
+      "badEmail": "Bad email",
       "location": "Please pick at least one location",
       "availability": "Please pick at least one timeframe",
       "labelErrors": "Errors",
@@ -162,9 +163,18 @@
     "addOpportunity": {
       "header": "Need For Volunteer Work",
       "thankYou": {
-        "header": "Thanks for your interest in volunteering with refugees :-)",
+        "header": "Thanks for filling in an opportunity helping refugees",
         "para": "We will get back to you in the coming days with the next steps!"
       },
+      "wentWrong": {
+        "header": "Sorry something went wrong on our side :-(",
+        "para": "Please check if your email and other data is correct and try once more."
+      },
+      "temporaryDown": {
+        "header": "We apologize, but something went wrong on our site. Please contact contact@need4deed.org.",
+        "para": ""
+      },
+      "bottomMsg": "For assistance with any problems or queries, please reach out to: contact@need4deed.org",
       "fields": {
         "title": { "label": "What help is needed in short" },
         "consent": {
@@ -174,10 +184,23 @@
         },
         "contactGroup": {
           "label": "Contact information",
-          "email": { "label": "E-mail" },
-          "fullName": { "label": "Name" },
-          "address": { "label": "Street address" },
-          "postcode": { "label": "PLZ" },
+          "info": "Only the social team or volunteer coordinators may fill out this form.",
+          "email": {
+            "label": "E-mail",
+            "info": "only an official email address of the institution can be used"
+          },
+          "fullName": {
+            "label": "Name",
+            "info": "of the volunteer coordinator or social worker"
+          },
+          "address": {
+            "label": "Street address",
+            "info": "of the accommodation centre"
+          },
+          "postcode": {
+            "label": "PLZ",
+            "info": "of the accommodation centre"
+          },
           "phone": { "label": "Phone number" }
         },
         "opportunityType": {
