@@ -189,11 +189,11 @@
             "info": "Name des Ehrenamtskoordinator*in oder Sozialarbeiter*in"
           },
           "address": {
-            "label": "Anschrift der Unterkunft",
+            "label": "Anschrift",
             "info": "der Unterkunft"
           },
           "postcode": {
-            "label": "PLZ der Unterkunft",
+            "label": "PLZ",
             "info": "der Unterkunft"
           },
           "phone": { "label": "Telefonnummer" }
