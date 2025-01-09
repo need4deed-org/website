@@ -27,6 +27,15 @@ export function checkDomain(domain: string) {
     "Y2FyaXRhcy1iZXJsaW4uZGU=",
     "bmVlZDRkZWVkLm9yZw==",
     "ZXUtaG9tZWNhcmUuY29t",
+    "aWIuZGU=",
+    "c2luLWV2LmRl",
+    "am9oYW5uaXRlci5kZQ==",
+    "ZXUtaG9tZWNhcmUuY29t",
+    "Z3UtZnJldWRzdHIuZGU=",
+    "Y2l0eWVsZXZlbi5kZQ==",
+    "Z3UtcmF1Y2hzdHIuZGU=",
+    "bmJocy5kZQ==",
+    "c296aWFsZXMtYmVybGluLmNvbQ==",
   ];
 
   return AUTHORIZED_DOMAINS.includes(btoa(domain));
