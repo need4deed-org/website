@@ -1,6 +1,6 @@
 import { FormApi, FormValidators, useForm } from "@tanstack/react-form";
-import InputField from "./InputField";
 import Submit from "./Submit";
+import { ReactFormApiLike } from "./types";
 
 interface Props<T extends object> {
   defaultValues: T;
@@ -24,10 +24,10 @@ export default function Form<T extends object>({
           form.handleSubmit();
         }}
       >
-        <h3>Become Volunteer!</h3>
-        <InputField<T> form={form} name="name" label="Name" />
-        <br />
-        <Submit<T> form={form} label="Submit" />
+        <Submit<T>
+          form={form as FormApi<T, undefined> & ReactFormApiLike<T>}
+          label="Submit"
+        />
       </form>
     </div>
   );
