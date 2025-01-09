@@ -21,6 +21,10 @@ export const phoneRegEx =
   /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/;
 
 export const FF = {
-  NEW_FORMS_VOLUNTEER: !!import.meta.env.VITE_FF_NEW_FORMS_VOLUNTEER,
-  NEW_FORMS_OPPORTUNITY: !!import.meta.env.VITE_FF_NEW_FORMS_OPPORTUNITY,
+  NEW_FORMS_VOLUNTEER: ["1", "Yes", "true"].includes(
+    import.meta.env.VITE_FF_NEW_FORMS_VOLUNTEER,
+  ),
+  NEW_FORMS_OPPORTUNITY: ["1", "Yes", "true"].includes(
+    import.meta.env.VITE_FF_NEW_FORMS_OPPORTUNITY,
+  ),
 };

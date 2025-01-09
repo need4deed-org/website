@@ -6,14 +6,17 @@ import { useNavigate, useParams } from "react-router-dom";
 import Announcement from "../components/Announcement";
 import EventHolidayGift from "../components/Event/EventHolidayGift";
 import Footer from "../components/Footer/Footer";
-import Form from "../components/form";
+import NewForm from "../components/Form";
+import opportunity from "../components/Form/opportunity";
+import volunteer from "../components/Form/volunteer";
+import Form from "../components/forms";
 import Header from "../components/Header/Header";
 import Agreement from "../components/Legal/Agreement";
 import DataPrivacy from "../components/Legal/DataPrivacy";
 import Guidelines from "../components/Legal/Guidelines";
 import LegalNotice from "../components/Legal/Notice";
 import OpportunityCards from "../components/OpportunityCards";
-import { showEvent, urlApiOpportunity } from "../config/constants";
+import { FF, showEvent, urlApiOpportunity } from "../config/constants";
 import { FormType, Lang, OpportunityType, Subpages } from "../config/types";
 import AppContainerContext from "../contexts/AppContainerContext";
 import { getImageUrl, isEnumValue, setLangDirection } from "../utils";
@@ -137,9 +140,19 @@ function Subpage({ type }: Props) {
           />
         );
       case Subpages.BECOME_VOLUNTEER:
-        return <Form form={FormType.VOLUNTEER} />;
+        return FF.NEW_FORMS_VOLUNTEER ? (
+          // eslint-disable-next-line react/jsx-props-no-spreading
+          <NewForm<typeof volunteer.defaultValues> {...volunteer} />
+        ) : (
+          <Form form={FormType.VOLUNTEER} />
+        );
       case Subpages.ADD_OPPORTUNITY:
-        return <Form form={FormType.OPPORTUNITY} />;
+        return FF.NEW_FORMS_OPPORTUNITY ? (
+          // eslint-disable-next-line react/jsx-props-no-spreading
+          <NewForm<typeof opportunity.defaultValues> {...opportunity} />
+        ) : (
+          <Form form={FormType.OPPORTUNITY} />
+        );
       case Subpages.ANNOUNCEMENT:
         return <Announcement />;
       case Subpages.EVENT:
