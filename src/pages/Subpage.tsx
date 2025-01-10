@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react";
 import ReactGA from "react-ga4";
 import { useTranslation } from "react-i18next";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 
 import Announcement from "../components/Announcement";
 import EventHolidayGift from "../components/Event/EventHolidayGift";
@@ -28,8 +28,12 @@ interface Props {
 function Subpage({ type }: Props) {
   const { i18n } = useTranslation();
   const { lng } = useParams();
+  const [ffNewForm] = useSearchParams();
   const navigate = useNavigate();
   const containerRef = useContext(AppContainerContext);
+
+  const ffOpp = ffNewForm.get("opp");
+  const ffVol = ffNewForm.get("vol");
 
   useEffect(() => {
     if (isEnumValue(Lang, lng)) {
@@ -140,14 +144,14 @@ function Subpage({ type }: Props) {
           />
         );
       case Subpages.BECOME_VOLUNTEER:
-        return FF.NEW_FORMS_VOLUNTEER ? (
+        return FF.NEW_FORMS_VOLUNTEER || ffVol ? (
           // eslint-disable-next-line react/jsx-props-no-spreading
           <NewForm<typeof volunteer.defaultValues> {...volunteer} />
         ) : (
           <Form form={FormType.VOLUNTEER} />
         );
       case Subpages.ADD_OPPORTUNITY:
-        return FF.NEW_FORMS_OPPORTUNITY ? (
+        return FF.NEW_FORMS_OPPORTUNITY || ffOpp ? (
           // eslint-disable-next-line react/jsx-props-no-spreading
           <NewForm<typeof opportunity.defaultValues> {...opportunity} />
         ) : (
