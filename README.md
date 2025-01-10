@@ -51,6 +51,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the next steps and detailed contribut
 - yarn
 
 ### Installation
+
 #### Please note, that's the instruction for members of the project, if you are not one please check [CONTRIBUTING.md](CONTRIBUTING.md).
 
 1. Clone the repository

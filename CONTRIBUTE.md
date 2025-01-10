@@ -36,7 +36,6 @@ Step 1: Fork the Repository
 1. Click the **Fork** button in the top-right corner.
 1. Choose where to fork the repository (usually your own GitLab account).
 
-
 Step 2: Clone Your Forked Repository
 
 1. Go to your forked repository (e.g., `https://gitlab.com/your-username/website`).
@@ -45,23 +44,27 @@ Step 2: Clone Your Forked Repository
    git clone https://gitlab.com/your-username/website.git
    ```
 1. Navigate into the cloned repository:
+
    ```bash
    cd website
    ```
-Step 3: Add the Original Repository as a Remote
+
+   Step 3: Add the Original Repository as a Remote
 
 1. Add the original repository as a remote called `upstream`:
    ```bash
    git remote add upstream https://gitlab.com/need4deed/website.git
    ```
 1. Verify the remotes:
+
    ```bash
    git remote -v
    ```
+
    You should see:
+
    - `origin` → Your forked repository.
    - `upstream` → The original repository.
-
 
 1. Create a new branch for your changes:
    ```bash
