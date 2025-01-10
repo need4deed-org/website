@@ -26,16 +26,18 @@ This project and everyone participating in it is governed by our [Code of Conduc
 
 ### Your First Code Contribution
 
-Unsure where to begin contributing? You can start by looking through `good-first-issue` labeled issues.
+Unsure where to begin contributing? You can start by looking through `good-first-issue` labeled [issues](https://gitlab.com/need4deed/website/-/issues/?label_name%5B%5D=good-first-issue)
 
 ### First Merge Request
 
 Step 1: Fork the Repository
+
 1. Go to the our repository: [https://gitlab.com/need4deed/website](https://gitlab.com/need4deed/website).
 1. Click the **Fork** button in the top-right corner.
 1. Choose where to fork the repository (usually your own GitLab account).
 
 Step 2: Clone Your Forked Repository
+
 1. Go to your forked repository (e.g., `https://gitlab.com/your-username/website`).
 1. Click the **Clone** button and copy it e.g. with HTTPS URL.
    ```bash
@@ -48,6 +50,7 @@ Step 2: Clone Your Forked Repository
    ```
 
 Step 3: Add the Original Repository as a Remote
+
 1. Add the original repository as a remote called `upstream`:
    ```bash
    git remote add upstream https://gitlab.com/need4deed/website.git
@@ -70,6 +73,7 @@ Step 3: Add the Original Repository as a Remote
    The branch should titled be your_nick-feature-title
 
 Step 4: Commit and Push Your Changes
+
 1. Stage your changes:
    ```bash
    git add .
@@ -84,6 +88,7 @@ Step 4: Commit and Push Your Changes
    ```
 
 Step 5: Create a merge request
+
 1. Go to your forked repository on GitLab: `https://gitlab.com/your-username/website`.
 1. Click on **Merge Requests** in the left sidebar.
 1. Click **New Merge Request**.
