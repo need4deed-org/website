@@ -5,7 +5,8 @@
 ## About the project
 
 The number of people fleeing conflict zones, persecution and human rights violations worldwide has never been as high as it is today. Need4Deed is set to promote the inclusion and integration of refugees in Berlin through the actions of civil society by making volunteering more accessible. We aim to build a sustainable and scalable mechanism for this purpose by connecting volunteers with refugees that are living in accommodation centers in Berlin based on their specific needs.
-Our values
+
+# Our values
 
 ## Equal opportunities
 

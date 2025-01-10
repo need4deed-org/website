@@ -9,7 +9,7 @@ The following is a set of guidelines for contributing to this project. These are
 - [Code of Conduct](#code-of-conduct)
 - [How Can I Contribute?](#how-can-i-contribute)
   - [Your First Code Contribution](#your-first-code-contribution)
-  - [Merge Request](#merge-request)
+  - [First Merge Request](#first-merge-request)
   - [Reporting Bugs](#reporting-bugs)
   - [Suggesting features](#suggesting-features)
   - [Pull Requests](#pull-requests)
@@ -28,16 +28,14 @@ This project and everyone participating in it is governed by our [Code of Conduc
 
 Unsure where to begin contributing? You can start by looking through `good-first-issue` labeled issues.
 
-### Merge request
+### First Merge Request
 
 Step 1: Fork the Repository
-
 1. Go to the our repository: [https://gitlab.com/need4deed/website](https://gitlab.com/need4deed/website).
 1. Click the **Fork** button in the top-right corner.
 1. Choose where to fork the repository (usually your own GitLab account).
 
 Step 2: Clone Your Forked Repository
-
 1. Go to your forked repository (e.g., `https://gitlab.com/your-username/website`).
 1. Click the **Clone** button and copy it e.g. with HTTPS URL.
    ```bash
@@ -49,8 +47,7 @@ Step 2: Clone Your Forked Repository
    cd website
    ```
 
-   Step 3: Add the Original Repository as a Remote
-
+Step 3: Add the Original Repository as a Remote
 1. Add the original repository as a remote called `upstream`:
    ```bash
    git remote add upstream https://gitlab.com/need4deed/website.git
@@ -72,13 +69,12 @@ Step 2: Clone Your Forked Repository
    ```
    The branch should titled be your_nick-feature-title
 
-Step 6: Commit and Push Your Changes
-
+Step 4: Commit and Push Your Changes
 1. Stage your changes:
    ```bash
    git add .
    ```
-1. Commit your changes - as in the #git-commit-message section
+1. Commit your changes - as in the [git commit message](#git-commit-message) section
    ```bash
    git commit -m "Your commit message"
    ```
@@ -87,8 +83,7 @@ Step 6: Commit and Push Your Changes
    git push origin your-branch-name
    ```
 
-Step 7: Create a Merge Request (MR)
-
+Step 5: Create a merge request
 1. Go to your forked repository on GitLab: `https://gitlab.com/your-username/website`.
 1. Click on **Merge Requests** in the left sidebar.
 1. Click **New Merge Request**.
@@ -107,11 +102,11 @@ Before creating bug reports, please check [this list](#before-submitting-a-bug-r
 
 #### How Do I Submit A Bug Report?
 
-Bugs are tracked as [GitHub issues](https://gitlab.com/need4deed/website/-/issues). Create a bug issue. All the necesary info should be in the bug template.
+Bugs are tracked as [GitLab issues](https://gitlab.com/need4deed/website/-/issues). Create a bug issue. All the necesary info should be in the bug template.
 
 ### Suggesting features
 
-Feature suggestions are also tracked as [GitHub issues](https://gitlab.com/need4deed/website/-/issues). Please refer to the feature template.
+Feature suggestions are also tracked as [GitLab issues](https://gitlab.com/need4deed/website/-/issues). Please refer to the feature template.
 
 ## Styleguides
 
@@ -120,7 +115,7 @@ Feature suggestions are also tracked as [GitHub issues](https://gitlab.com/need4
 - Use the present tense ("Add feature" not "Added feature")
 - Use the imperative mood ("Move cursor to..." not "Moves cursor to...")
 - Limit the first line to 72 characters or less
-- Reference issues and pull requests liberally after the first line
+- Reference issues and pull requests can be placed after the first line
 - Consider starting the commit message with an applicable emoji:
   - 🎨 `:art:` when improving the format/structure of the code
   - 🐎 `:racehorse:` when improving performance
@@ -141,7 +136,7 @@ By contributing, you agree that your contributions will be licensed under its [C
 Don't hesitate to reach out if you have any questions! You can:
 
 - Open an issue
-- Reach out to [@maintainer](https://github.com/[https://gitlab.com/szymon.skorupinski.need4deed])
-- Join our Slack (please request an access)
+- Reach out to [@maintainer](https://gitlab.com/szymon.skorupinski.need4deed])
+- Join our Slack (please request an access h4ck@need4deed.org)
 
 Any contributions are welcome! 🙏
