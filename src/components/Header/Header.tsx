@@ -129,8 +129,11 @@ function Header({ showEvent = false }: Props) {
             </li>
 
             <li className="nav-item">
-              <a className="nav-link" href={`/faqs_test_page/${i18n.language}`}>
-                {t("faqs")}
+              <a
+                className="nav-link"
+                href={`/${Subpages.FAQS}/${i18n.language}`}
+              >
+                {t("faqs.faqs")}
               </a>
             </li>
 

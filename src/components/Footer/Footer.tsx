@@ -29,11 +29,8 @@ function Footer({ showSponsors = true }: Props) {
                 </HashLink>
               </li>
               <li>
-                <HashLink
-                  smooth
-                  to={`/${i18n.language}#wiil_be_faqs_page_route`}
-                >
-                  {t("faqs")}
+                <HashLink smooth to={`/${Subpages.FAQS}/${i18n.language}`}>
+                  {t("faqs.faqs")}
                 </HashLink>
               </li>
             </ul>
