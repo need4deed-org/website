@@ -48,12 +48,12 @@ function FAQs() {
   ];
 
   return (
-    <div className="faqs-container">
+    <div className="n4d-container">
       <h1 className="faqs-title">{t("faqs.title")}</h1>
       {faqs.map((faq) => (
         <div key={faq.question} className="faq-item">
-          <div className="faq-question">{faq.question}</div>
-          <div className="faq-answer">{faq.answer}</div>
+          <h6 className="faq-question">{faq.question}</h6>
+          <p className="faq-answer">{faq.answer}</p>
         </div>
       ))}
     </div>
