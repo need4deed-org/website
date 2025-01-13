@@ -19,3 +19,13 @@ export const maxPLZBerlin = 14199;
 
 export const phoneRegEx =
   /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/;
+
+const positives = ["1", "YES", "Yes", "yes", "TRUE", "True", "true"];
+export const FF = {
+  NEW_FORMS_VOLUNTEER: positives.includes(
+    import.meta.env.VITE_FF_NEW_FORMS_VOLUNTEER,
+  ),
+  NEW_FORMS_OPPORTUNITY: positives.includes(
+    import.meta.env.VITE_FF_NEW_FORMS_OPPORTUNITY,
+  ),
+};
