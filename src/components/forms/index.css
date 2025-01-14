@@ -68,7 +68,7 @@
   background: var(--n4d-neutral-900);
   padding-inline: 0.3rem;
   position: absolute;
-  top: -0.8rem;
+  bottom: 3rem;
   left: 1rem;
 }
 
@@ -287,5 +287,7 @@
 }
 
 @media (max-width: 576px) {
-  .form
+  .form-form-field span {
+
+  }
 }
