@@ -285,9 +285,3 @@
     height: 1.3rem;
   }
 }
-
-@media (max-width: 576px) {
-  .form-form-field span {
-
-  }
-}
