@@ -6,9 +6,7 @@ import {
   FormApi,
 } from "@tanstack/react-form";
 
-import { IncludeClassName } from "../../config/types";
-
-interface Props<T> extends IncludeClassName {
+interface Props<T> {
   form: FormApi<T>;
   label: string;
   name: DeepKeys<T>;
@@ -25,7 +23,6 @@ export default function InputField<T>({
   label,
   name,
   validators,
-  className,
   classLabel,
   classInput,
   classError,
@@ -35,7 +32,7 @@ export default function InputField<T>({
   return (
     <Field form={form} name={name} validators={validators}>
       {(field) => (
-        <div className={className}>
+        <>
           <label className={classLabel} htmlFor={`${name}`}>
             <span>{label}</span>
             <input
@@ -56,7 +53,7 @@ export default function InputField<T>({
               )}
             </span>
           )}
-        </div>
+        </>
       )}
     </Field>
   );
