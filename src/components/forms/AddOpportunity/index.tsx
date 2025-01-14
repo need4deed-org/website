@@ -107,14 +107,17 @@ export default function AddOpportunity() {
           formOpportunity.handleSubmit();
         }}
       >
-        <SimpleInputField<OpportunityData>
-          name="title"
-          FieldTag={formOpportunity.Field}
-          label={t("form.addOpportunity.fields.title.label")}
-          onChangeValidator={({ value }) =>
-            !value ? t("form.error.required") : undefined
-          }
-        />
+        <div className="d-flex flex-column">
+          <SimpleInputField<OpportunityData>
+            name="title"
+            FieldTag={formOpportunity.Field}
+            label={t("form.addOpportunity.fields.title.label")}
+            onChangeValidator={({ value }) =>
+              !value ? t("form.error.required") : undefined
+            }
+          />
+          <i className="m-1">{t("form.addOpportunity.fields.title.example")}</i>
+        </div>
         <fieldset className="form-field-group">
           <b>{t("form.addOpportunity.fields.contactGroup.label")}</b>
           <span>
