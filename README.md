@@ -5,7 +5,8 @@
 ## About the project
 
 The number of people fleeing conflict zones, persecution and human rights violations worldwide has never been as high as it is today. Need4Deed is set to promote the inclusion and integration of refugees in Berlin through the actions of civil society by making volunteering more accessible. We aim to build a sustainable and scalable mechanism for this purpose by connecting volunteers with refugees that are living in accommodation centers in Berlin based on their specific needs.
-Our values
+
+# Our values
 
 ## Equal opportunities
 
@@ -27,6 +28,18 @@ A migrant-to-migrant support alongside non-migrant support, can both play a key 
 
 Applying technology in the effort to support underserved communities is a key value to make support giving and receiving more inclusive, accessible and scalable.
 
+## Contributing 🤝
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+## Step 1: Fork the Repository
+
+1. Go to the our repository: [https://gitlab.com/need4deed/website](https://gitlab.com/need4deed/website).
+1. Click the **Fork** button in the top-right corner.
+1. Choose where to fork the repository (usually your own GitLab account).
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the next steps and detailed contribution guidelines.
+
 ## Tech Stack 🛠️
 
 - React.js
@@ -39,6 +52,8 @@ Applying technology in the effort to support underserved communities is a key va
 - yarn
 
 ### Installation
+
+#### Please note, that's the instruction for members of the project, if you are not one please check [CONTRIBUTING.md](CONTRIBUTING.md).
 
 1. Clone the repository
 
@@ -69,18 +84,6 @@ yarn dev
 
 - aws
 
-## Contributing 🤝
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed contribution guidelines.
-
 ## Unit tests 🧪
 
 ```bash
@@ -108,4 +111,3 @@ This project is licensed under the Common Clause and the MIT License - see the [
 - Create an [Issue](https://gitlab.com/need4deed/website/-/issues)
 - Join our Slack - ask as for an inivatation
 - Email: h4ck@need4deed.org
-
