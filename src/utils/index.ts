@@ -219,3 +219,35 @@ export function parseYesNo(value: boolean | undefined): YesNo {
   if (value) return YesNo.YES;
   return YesNo.NO;
 }
+
+export function getFirstThursdayOfMonth(today: Date = new Date()): Date {
+  const currentYear = today.getFullYear();
+  const currentMonth = today.getMonth();
+
+  const firstDayOfMonth = new Date(Date.UTC(currentYear, currentMonth, 1));
+
+  const firstDayDayOfWeek = firstDayOfMonth.getDay();
+
+  let firstThursdayDayOfMonth = 5 - firstDayDayOfWeek;
+  if (firstThursdayDayOfMonth <= 0) {
+    firstThursdayDayOfMonth += 7;
+  }
+
+  // const secondThursdayDayOfMonth = firstThursdayDayOfMonth + 7;
+
+  const firstThursday = new Date(
+    Date.UTC(
+      currentYear,
+      currentMonth,
+      firstThursdayDayOfMonth, // secondThursdayDayOfMonth,
+    ),
+  );
+
+  if (firstThursday < today) {
+    return getFirstThursdayOfMonth(
+      new Date(Date.UTC(today.getFullYear(), today.getMonth() + 1, 1)),
+    );
+  }
+
+  return firstThursday;
+}

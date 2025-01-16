@@ -6,6 +6,7 @@ import { Lang, OpportunityParams } from "../config/types";
 import {
   getBaseUrl,
   getFilter,
+  getFirstThursdayOfMonth,
   getOpportunityImg,
   getReadableTime,
   getUrlWithEncodedParams,
@@ -333,15 +334,55 @@ describe("utils", () => {
   });
 
   describe("parseYesNo", () => {
-    it('should return "Yes" given truthy value', () => {
+    it("should return 'Yes' given truthy value", () => {
       expect(parseYesNo(true)).toBe("Yes");
       expect(parseYesNo("1" as unknown as boolean)).toBe("Yes");
     });
 
-    it('should return "No" given falsy value', () => {
+    it("should return 'No' given falsy value", () => {
       expect(parseYesNo(false)).toBe("No");
       expect(parseYesNo(undefined)).toBe("No");
       expect(parseYesNo(0 as unknown as boolean)).toBe("No");
+    });
+  });
+
+  describe("getFirstThursdayOfMonth", () => {
+    const dateOptions: Intl.DateTimeFormatOptions = {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+    };
+
+    it("should return 01/02 given today is 12/15", () => {
+      const today = new Date("2024-12-15");
+      const firstThursday = new Date("2025-01-02");
+      expect(
+        getFirstThursdayOfMonth(today).toLocaleDateString("en", dateOptions),
+      ).toEqual(firstThursday.toLocaleDateString("en", dateOptions));
+    });
+
+    it("should return 02/06 given today is 01/16", () => {
+      const today = new Date("2025-01-16");
+      const firstThursday = new Date("2025-02-06");
+      expect(
+        getFirstThursdayOfMonth(today).toLocaleDateString("en", dateOptions),
+      ).toEqual(firstThursday.toLocaleDateString("en", dateOptions));
+    });
+
+    it("should return 02/06 given today is 02/01", () => {
+      const today = new Date("2025-02-01");
+      const firstThursday = new Date("2025-02-06");
+      expect(
+        getFirstThursdayOfMonth(today).toLocaleDateString("en", dateOptions),
+      ).toEqual(firstThursday.toLocaleDateString("en", dateOptions));
+    });
+
+    it("should return 02/06 given today is 02/06", () => {
+      const today = new Date("2025-02-06");
+      const firstThursday = new Date("2025-02-06");
+      expect(
+        getFirstThursdayOfMonth(today).toLocaleDateString("en", dateOptions),
+      ).toEqual(firstThursday.toLocaleDateString("en", dateOptions));
     });
   });
 });
