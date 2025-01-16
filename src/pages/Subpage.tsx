@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 
 import Announcement from "../components/Announcement";
-import EventHolidayGift from "../components/Event/EventHolidayGift";
+import EventVolunTeeMeet from "../components/Event/EventVolunTeeMeet";
 import Footer from "../components/Footer/Footer";
 import NewForm from "../components/Form";
 import opportunity from "../components/Form/opportunity";
@@ -160,7 +160,7 @@ function Subpage({ type }: Props) {
       case Subpages.ANNOUNCEMENT:
         return <Announcement />;
       case Subpages.EVENT:
-        return <EventHolidayGift />;
+        return <EventVolunTeeMeet />;
       default:
         return null;
     }
