@@ -162,8 +162,11 @@ function Subpage({ type }: Props) {
         return <Announcement />;
       case Subpages.EVENT:
         return <EventVolunTeeMeet />;
+<<<<<<< HEAD
       case Subpages.FAQS:
         return <FAQs />;
+=======
+>>>>>>> 1b7ff3c (update component for page)
       default:
         return null;
     }
