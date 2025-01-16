@@ -20,7 +20,11 @@
     "4": "Thursday",
     "5": "Friday",
     "6": "Saturday",
+<<<<<<< HEAD
     "0": "Sunday"
+=======
+    "7": "Sunday"
+>>>>>>> 64970cb (add: copies)
   },
   "languages": {
     "arabic": "Arabic",
