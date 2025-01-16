@@ -17,3 +17,7 @@
 .faq-answer {
   margin-left: var(--n4d-volunteer-p-f-sz);
 }
+
+.dummy {
+  display: none;
+}
