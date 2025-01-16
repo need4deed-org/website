@@ -309,5 +309,30 @@
       "email": "Email",
       "emailAddress": "info@need4deed.org"
     }
+  },
+
+  "faqs": {
+    "faqs": "SSS",
+    "title": "Sıkça Sorulan Sorular",
+    "first_steps_question": "Gönüllü olmak için ilk adımlar nelerdir?",
+    "first_steps_answer": "Need4Deed web sitesinde gönüllü başvuru formunu doldurarak başlayın.",
+    "after_form_question": "Formu doldurduktan sonra ne olur?",
+    "after_form_answer": "Tercihleriniz ve konumlarınızı aldıktan sonra sizin için uygun bir fırsat aramaya başlıyoruz ve önümüzdeki günlerde sizinle iletişime geçiyoruz.",
+    "find_opportunities_question": "Mevcut gönüllü fırsatlarını nasıl bulabilirim?",
+    "find_opportunities_answer": "Need4Deed web sitesindeki 'Fırsatlar' sayfasını kontrol ederek mevcut gönüllü rollerini görebilirsiniz.",
+    "volunteer_roles_question": "Hangi tür gönüllü rolleri sunuluyor?",
+    "volunteer_roles_answer": "Roller arasında çocuk bakımı, dil kafeleri, çeviri hizmetleri ve resmi randevular ile spor aktivitelerinde destek bulunuyor.",
+    "special_skills_question": "Gönüllü olmak için özel becerilere ihtiyacım var mı?",
+    "special_skills_answer": "Birçok rol tüm gönüllülere açıktır, ancak bazı pozisyonlar için özel beceriler gerekebilir.",
+    "volunteering_time_question": "Gönüllülük ne kadar zaman alır?",
+    "volunteering_time_answer": "Düzenli gönüllülük genellikle haftada yaklaşık 2 saat veya ayda iki kez bir taahhüt gerektirir. Düzensiz gönüllülük, özellikle etkinlikler veya doktor randevularındaki çeviriler gibi görevlerde, zamanınız olduğunda gerçekleşebilir.",
+    "age_requirements_question": "Gönüllüler için yaş sınırı var mı?",
+    "age_requirements_answer": "Yaş gereksinimleri değişiklik gösterebilir ancak çoğu yerde gönüllülerin 18 yaşından büyük olması gereklidir. Lütfen fırsat açıklamalarını kontrol edin.",
+    "voluntea_gatherings_question": "VolunTea toplantılarında ne beklemeliyim?",
+    "voluntea_gatherings_answer": "VolunTea orientasyonu, Need4Deed'in misyonunu, gönüllü rollerini ve uygun mülteci barınma merkezlerinin bulunmasına yardım etmeyi kapsar.",
+    "training_question": "Özel bir eğitim var mı?",
+    "training_answer": "Her birkaç ayda bir, özellikle çeviri desteği sağlayanlar için eğitimler sunulmaktadır.",
+    "group_volunteering_question": "Bir grup veya organizasyonla gönüllü olabilir miyim?",
+    "group_volunteering_answer": "Evet, grup gönüllülüğü teşvik edilmektedir, özellikle mülteci barınma merkezlerini destekleyenler için."
   }
 }

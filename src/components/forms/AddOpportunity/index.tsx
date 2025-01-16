@@ -107,14 +107,17 @@ export default function AddOpportunity() {
           formOpportunity.handleSubmit();
         }}
       >
-        <SimpleInputField<OpportunityData>
-          name="title"
-          FieldTag={formOpportunity.Field}
-          label={t("form.addOpportunity.fields.title.label")}
-          onChangeValidator={({ value }) =>
-            !value ? t("form.error.required") : undefined
-          }
-        />
+        <div className="d-flex flex-column">
+          <SimpleInputField<OpportunityData>
+            name="title"
+            FieldTag={formOpportunity.Field}
+            label={t("form.addOpportunity.fields.title.label")}
+            onChangeValidator={({ value }) =>
+              !value ? t("form.error.required") : undefined
+            }
+          />
+          <i className="m-1">{t("form.addOpportunity.fields.title.example")}</i>
+        </div>
         <fieldset className="form-field-group">
           <b>{t("form.addOpportunity.fields.contactGroup.label")}</b>
           <span>
@@ -225,7 +228,15 @@ export default function AddOpportunity() {
               return (
                 <fieldset className="form-field-group">
                   <b>{t("form.addOpportunity.fields.aaGroup.label")}</b>
-                  <formOpportunity.Field name="activitiesAccompanying">
+                  <formOpportunity.Field
+                    name="activitiesAccompanying"
+                    validators={{
+                      onBlur: ({ value }) =>
+                        value.some(({ selected }) => selected)
+                          ? undefined
+                          : t("form.error.required"),
+                    }}
+                  >
                     {(field) => {
                       return (
                         <fieldset>
@@ -237,7 +248,10 @@ export default function AddOpportunity() {
                               "form.addOpportunity.fields.aaGroup.activities.header",
                             )}
                           </HeaderWithHelp>
-                          <WithParentRef className="form-chip-list form-pick">
+                          <WithParentRef
+                            className="form-chip-list form-pick"
+                            onFocus={() => setTimeout(field.handleBlur, 0)}
+                          >
                             <MultipleCheckBoxInputsWithMore<
                               OpportunityData,
                               "activitiesAccompanying"
@@ -258,6 +272,13 @@ export default function AddOpportunity() {
                         value === undefined
                           ? t("form.error.required")
                           : undefined,
+                      onChange: ({ value }) => {
+                        formOpportunity.setFieldMeta("languages", (meta) => ({
+                          ...meta,
+                          isDirty: value !== TranslatedIntoType.NO_TRANSLATION,
+                        }));
+                        return undefined;
+                      },
                     }}
                   >
                     {(field) => (
@@ -296,10 +317,7 @@ export default function AddOpportunity() {
                         name="languages"
                         validators={{
                           onBlur: ({ value }) => {
-                            const isSelected = !!value.filter(
-                              ({ selected }) => selected,
-                            ).length;
-                            return isSelected
+                            return value.some(({ selected }) => selected)
                               ? undefined
                               : t("form.error.language");
                           },
@@ -307,7 +325,11 @@ export default function AddOpportunity() {
                       >
                         {(field) => {
                           return (
-                            <fieldset>
+                            <fieldset
+                              onFocus={() => {
+                                setTimeout(field.handleBlur, 0);
+                              }}
+                            >
                               <HeaderWithHelp
                                 textHelp={t(
                                   "form.addOpportunity.fields.aaGroup.languagesTranslation.helpText",
@@ -415,9 +437,14 @@ export default function AddOpportunity() {
                     label={t(
                       "form.addOpportunity.fields.aaGroup.refugeeNumber.label",
                     )}
-                    onChangeValidator={({ value }) =>
-                      !value ? t("form.error.required") : undefined
-                    }
+                    onChangeValidator={({ value }) => {
+                      if (!value) return t("form.error.required");
+
+                      if (!(value as string).match(phoneRegEx))
+                        return t("form.error.number");
+
+                      return undefined;
+                    }}
                   />
                   <SimpleInputField<OpportunityData>
                     name="aaInformation"
@@ -425,6 +452,9 @@ export default function AddOpportunity() {
                     label={t(
                       "form.addOpportunity.fields.aaGroup.information.label",
                     )}
+                    onChangeValidator={({ value }) =>
+                      !value ? t("form.error.required") : undefined
+                    }
                   />
                 </fieldset>
               );
@@ -437,7 +467,15 @@ export default function AddOpportunity() {
               return (
                 <fieldset className="form-field-group">
                   <b>{t("form.addOpportunity.fields.voGroup.label")}</b>
-                  <formOpportunity.Field name="locations">
+                  <formOpportunity.Field
+                    name="locations"
+                    validators={{
+                      onBlur: ({ value }) =>
+                        value.some(({ selected }) => selected)
+                          ? undefined
+                          : t("form.error.location"),
+                    }}
+                  >
                     {(field) => {
                       return (
                         <fieldset>
@@ -449,7 +487,10 @@ export default function AddOpportunity() {
                               "form.addOpportunity.fields.voGroup.locations.header",
                             )}
                           </HeaderWithHelp>
-                          <WithParentRef className="form-chip-list form-pick">
+                          <WithParentRef
+                            className="form-chip-list form-pick"
+                            onFocus={() => setTimeout(field.handleBlur, 0)}
+                          >
                             <MultipleCheckBoxInputsWithMore<
                               OpportunityData,
                               "locations"
@@ -463,7 +504,15 @@ export default function AddOpportunity() {
                       );
                     }}
                   </formOpportunity.Field>
-                  <formOpportunity.Field name="activities">
+                  <formOpportunity.Field
+                    name="activities"
+                    validators={{
+                      onBlur: ({ value }) =>
+                        value.some(({ selected }) => selected)
+                          ? undefined
+                          : t("form.error.required"),
+                    }}
+                  >
                     {(field) => {
                       return (
                         <fieldset>
@@ -475,7 +524,10 @@ export default function AddOpportunity() {
                               "form.addOpportunity.fields.voGroup.activities.header",
                             )}
                           </HeaderWithHelp>
-                          <WithParentRef className="form-chip-list form-pick">
+                          <WithParentRef
+                            className="form-chip-list form-pick"
+                            onFocus={() => setTimeout(field.handleBlur, 0)}
+                          >
                             <MultipleCheckBoxInputsWithMore<
                               OpportunityData,
                               "activities"
@@ -489,7 +541,15 @@ export default function AddOpportunity() {
                       );
                     }}
                   </formOpportunity.Field>
-                  <formOpportunity.Field name="languages">
+                  <formOpportunity.Field
+                    name="languages"
+                    validators={{
+                      onBlur: ({ value }) =>
+                        value.some(({ selected }) => selected)
+                          ? undefined
+                          : t("form.error.language"),
+                    }}
+                  >
                     {(field) => {
                       return (
                         <fieldset>
@@ -504,7 +564,10 @@ export default function AddOpportunity() {
                               "form.addOpportunity.fields.voGroup.languagesRefugee.header",
                             )}
                           </HeaderWithHelp>
-                          <WithParentRef className="form-chip-list form-pick">
+                          <WithParentRef
+                            className="form-chip-list form-pick"
+                            onFocus={() => setTimeout(field.handleBlur, 0)}
+                          >
                             <MultipleCheckBoxInputsWithMore<
                               OpportunityData,
                               "languages"
@@ -725,7 +788,7 @@ export default function AddOpportunity() {
                     const errorsMsgs =
                       formOpportunity.state.fieldMeta[
                         key as keyof typeof formOpportunity.state.fieldMeta
-                      ].errors.join(", ");
+                      ].errors?.join(", ");
                     errorList.push(errorsMsgs);
                     return errorList;
                   }, [])

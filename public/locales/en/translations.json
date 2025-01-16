@@ -185,7 +185,10 @@
       },
       "bottomMsg": "For assistance with any problems or queries, please reach out to: contact@need4deed.org",
       "fields": {
-        "title": { "label": "What help is needed in short" },
+        "title": {
+          "label": "What help is needed in short",
+          "example": "E.g. \"Accompanying to the eye clinic\" or \"Crafts & painting\""
+        },
         "consent": {
           "header": "",
           "agree": "I hereby agree to the:",
@@ -408,5 +411,29 @@
       "email": "Email",
       "emailAddress": "info@need4deed.org"
     }
+  },
+  "faqs": {
+    "faqs": "FAQ's",
+    "title": "Frequently Asked Questions",
+    "first_steps_question": "What are the first steps to become a volunteer?",
+    "first_steps_answer": "Begin by completing the volunteer application form on the Need4Deed website.",
+    "after_form_question": "What happens after I fill out the form?",
+    "after_form_answer": "After we have your preferences and locations we start searching for a suitable opportunity for you and contact you in the next days.",
+    "find_opportunities_question": "How do I find available volunteer opportunities?",
+    "find_opportunities_answer": "Check the 'Opportunities' page on the Need4Deed website for current volunteer roles.",
+    "volunteer_roles_question": "What types of volunteer roles are offered?",
+    "volunteer_roles_answer": "Roles include child care, language cafés, translation services, and support with official appointments and sports activities.",
+    "special_skills_question": "Do I need any special skills to volunteer?",
+    "special_skills_answer": "Many roles are open to all volunteers, although specific skills may be required for certain positions.",
+    "volunteering_time_question": "How long does volunteering take?",
+    "volunteering_time_answer": "Regular volunteering usually requires a commitment of about 2 hours a week or twice a month. Irregular volunteering can happen whenever you have time, especially for events or tasks like translations at doctors' appointments.",
+    "age_requirements_question": "Are there age requirements for volunteers?",
+    "age_requirements_answer": "Age requirements may vary but most places require the person to be over 18; please check the opportunity listings for specifics.",
+    "voluntea_gatherings_question": "What can I expect during the VolunTea gatherings?",
+    "voluntea_gatherings_answer": "VolunTea orientation covers Need4Deed's mission, volunteer roles, and assisting in finding the suitable refugee accommodation centers.",
+    "training_question": "Is there a special training?",
+    "training_answer": "Every few months training are offered, especially for those supporting with translations.",
+    "group_volunteering_question": "Can I volunteer with a group or organisation?",
+    "group_volunteering_answer": "Yes, group volunteering is encouraged, especially for those supporting refugee accommodation centers."
   }
 }

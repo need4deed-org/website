@@ -20,6 +20,7 @@ import { FF, showEvent, urlApiOpportunity } from "../config/constants";
 import { FormType, Lang, OpportunityType, Subpages } from "../config/types";
 import AppContainerContext from "../contexts/AppContainerContext";
 import { getImageUrl, isEnumValue, setLangDirection } from "../utils";
+import FAQs from "../components/FAQs/FAQs";
 
 interface Props {
   type: Subpages;
