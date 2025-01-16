@@ -275,7 +275,7 @@
       }
     }
   },
-  "event": { "menuItem": "Holiday Gifts" },
+  "event": { "menuItem": "VolunTea" },
   "eventVolunTee": {
     "greeting": {
       "invite": "You are more than invited to our next VolunTea.",
