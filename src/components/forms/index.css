@@ -68,7 +68,7 @@
   background: var(--n4d-neutral-900);
   padding-inline: 0.3rem;
   position: absolute;
-  top: -0.8rem;
+  bottom: 3rem;
   left: 1rem;
 }
 
@@ -284,8 +284,4 @@
   .form-container-header img {
     height: 1.3rem;
   }
-}
-
-@media (max-width: 576px) {
-  .form
 }

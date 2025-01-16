@@ -171,7 +171,10 @@
       },
       "bottomMsg": "Bei Problemen oder Fragen wenden Sie sich bitte an: contact@need4deed.org",
       "fields": {
-        "title": { "label": "Was wird gebraucht?" },
+        "title": {
+          "label": "Was wird gebraucht?",
+          "example": "z.B. \"Begleitung zur Augenklinik\", \"Basteln & Malen\""
+        },
         "consent": {
           "header": "",
           "agree": "Hiermit stimme ich zu:",
