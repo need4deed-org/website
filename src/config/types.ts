@@ -59,6 +59,7 @@ export enum Subpages {
   EVENT = "event",
   PAST_EVENTS = "past-events",
   ADD_OPPORTUNITY = "add-opportunity",
+  FAQS = "faqs",
 }
 
 export enum Events {
