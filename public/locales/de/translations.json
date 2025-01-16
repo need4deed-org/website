@@ -370,5 +370,29 @@
       "email": "E-Mail",
       "emailAddress": "info@need4deed.org"
     }
+  },
+  "faqs": {
+    "faqs": "HGFs",
+    "title": "Häufig gestellte Fragen",
+    "first_steps_question": "Was sind die ersten Schritte, um Freiwilliger zu werden?",
+    "first_steps_answer": "Beginnen Sie mit dem Ausfüllen des Freiwilligenantragsformulars auf der Need4Deed-Website.",
+    "after_form_question": "Was passiert, nachdem ich das Formular ausgefüllt habe?",
+    "after_form_answer": "Nachdem wir Ihre Präferenzen und Standorte haben, suchen wir nach einer passenden Gelegenheit für Sie und kontaktieren Sie in den nächsten Tagen.",
+    "find_opportunities_question": "Wie finde ich verfügbare Freiwilligenmöglichkeiten?",
+    "find_opportunities_answer": "Sehen Sie auf der Seite 'Möglichkeiten' auf der Need4Deed-Website nach aktuellen Freiwilligenrollen.",
+    "volunteer_roles_question": "Welche Arten von Freiwilligenrollen werden angeboten?",
+    "volunteer_roles_answer": "Die Rollen umfassen Kinderbetreuung, Sprachcafés, Übersetzungsdienste und Unterstützung bei offiziellen Terminen und sportlichen Aktivitäten.",
+    "special_skills_question": "Brauche ich spezielle Fähigkeiten, um Freiwilliger zu werden?",
+    "special_skills_answer": "Viele Rollen stehen allen Freiwilligen offen, obwohl für bestimmte Positionen spezielle Fähigkeiten erforderlich sein können.",
+    "volunteering_time_question": "Wie viel Zeit nimmt das Freiwilligenengagement in Anspruch?",
+    "volunteering_time_answer": "Regelmäßiges Freiwilligenengagement erfordert normalerweise etwa 2 Stunden pro Woche oder zweimal im Monat. Unregelmäßiges Freiwilligenengagement kann stattfinden, wann immer Sie Zeit haben, insbesondere bei Veranstaltungen oder Aufgaben wie Übersetzungen bei Arztterminen.",
+    "age_requirements_question": "Gibt es Altersanforderungen für Freiwillige?",
+    "age_requirements_answer": "Die Altersanforderungen können variieren, aber die meisten Orte verlangen, dass die Person über 18 Jahre alt ist. Bitte überprüfen Sie die spezifischen Anforderungen in den Angeboten.",
+    "voluntea_gatherings_question": "Was kann ich bei den VolunTea-Treffen erwarten?",
+    "voluntea_gatherings_answer": "Die VolunTea-Orientierung umfasst die Mission von Need4Deed, Freiwilligenrollen und Unterstützung bei der Suche nach geeigneten Unterkünften für Flüchtlinge.",
+    "training_question": "Gibt es eine spezielle Schulung?",
+    "training_answer": "Alle paar Monate werden Schulungen angeboten, insbesondere für diejenigen, die Übersetzungsunterstützung leisten.",
+    "group_volunteering_question": "Kann ich mit einer Gruppe oder Organisation freiwillig arbeiten?",
+    "group_volunteering_answer": "Ja, Gruppenfreiwilligenarbeit wird gefördert, insbesondere für diejenigen, die Flüchtlingsunterkünfte unterstützen."
   }
 }

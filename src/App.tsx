@@ -133,6 +133,14 @@ function App() {
               path={`/${Subpages.PAST_EVENTS}/:event`}
               element={<PastEvents />}
             />
+            <Route
+              path={`/${Subpages.FAQS}/:lng`}
+              element={<Subpage type={Subpages.FAQS} />}
+            />
+            <Route
+              path={`/${Subpages.FAQS}`}
+              element={<Subpage type={Subpages.FAQS} />}
+            />
             <Route path="/:lng" element={<Home />} />
             <Route path="*" element={<Land404 />} />
           </Routes>
