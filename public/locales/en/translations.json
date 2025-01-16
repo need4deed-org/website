@@ -176,7 +176,10 @@
       },
       "bottomMsg": "For assistance with any problems or queries, please reach out to: contact@need4deed.org",
       "fields": {
-        "title": { "label": "What help is needed in short" },
+        "title": {
+          "label": "What help is needed in short",
+          "example": "E.g. \"Accompanying to the eye clinic\" or \"Crafts & painting\""
+        },
         "consent": {
           "header": "",
           "agree": "I hereby agree to the:",
