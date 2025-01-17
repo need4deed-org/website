@@ -11,6 +11,15 @@
     "slogan": "Bedarfsorientierte ehrenamtliche Unterstützung für Geflüchtete in Berlin",
     "beVolunteerButton": "Mach mit ehrenamlich!"
   },
+  "weekdays": {
+    "1": "Montag",
+    "2": "Dienstag",
+    "3": "Mittwoch",
+    "4": "Donnerstag",
+    "5": "Freitag",
+    "6": "Samstag",
+    "0": "Sonntag"
+  },
   "emptyList": {
     "header": "Angebote werden aktualisiert...",
     "para": "Wir aktualisieren gerade die Freiwilligenangebote. Dies kann einige Zeit dauern. Wir empfehlen, die Seite später am Tag erneut zu aktualisieren. Wenn Sie Fragen haben, wenden Sie sich bitte an volunteer@need4deed.org"
@@ -264,7 +273,32 @@
       }
     }
   },
-  "event": { "menuItem": "Weihnachtsgeschenke" },
+  "event": { "menuItem": "VolunTea" },
+  "eventVolunTee": {
+    "greeting": {
+      "invite": "Ihr seid herzlich zu unserem nächsten VolunTea eingeladen.",
+      "when": "Wie immer findet es am ersten Donnerstag des Monats statt!"
+    },
+    "main": {
+      "title": "Was ist ein VolunTea?",
+      "para1": "Ein kleines Treffen von Freiwilligen, bei dem man voneinander und vom Team hören kann, wie es ist, Geflüchtete zu unterstützen, und gemeinsam über neue Möglichkeiten nachdenken kann, um mit Menschen in Not in Berlin in Kontakt zu treten.",
+      "para2": "- Wenn du bereits mit dem Freiwilligendienst begonnen hast, bieten diese Treffen Raum, um deine Erfahrungen zu teilen und von anderen zu hören.",
+      "para3": "- Falls du gemeinsam mit anderen etwas planen möchtest, um Geflüchtete in Berlin zu unterstützen, wird ein Teil des Treffens darauf verwendet, neue Ideen zu hören und herauszufinden, ob andere Freiwillige und unser Team daran interessiert sind, sie zu unterstützen.",
+      "para4": "- Wenn du noch nicht mit dem Freiwilligendienst begonnen hast oder dir unsicher bist, was dich erwartet, hast du hier die Möglichkeit, unser Team kennenzulernen und von aktiven Freiwilligen mehr darüber zu erfahren.",
+      "para5": "- Bürokratie :) Falls du noch kein Führungszeugnis hast, können wir es für dich beantragen, solange du deinen Reisepass oder Personalausweis mitbringst."
+    },
+    "outro": {
+      "benefits": "Getränke und Snacks gehen auf uns!",
+      "rsvp": {
+        "text": "Bitte lass uns wissen, ob du kommst, ",
+        "link": "indem du dieses Formular ausfüllst."
+      },
+      "address": {
+        "floor": "Erster Stock",
+        "lead": "Betreten Sie durch die kleine Tür, direkt neben (links von) dem Haupteingang zum Parken"
+      }
+    }
+  },
   "eventHolidayGift": {
     "header": "Weihnachtsgeschenke für Geflüchtete Kinder",
     "paras": {
