@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
 
+import { Lang } from "../../config/types";
 import { getFirstThursdayOfMonth, getImageUrl } from "../../utils/index";
 import "./index.css";
 
@@ -56,7 +57,12 @@ export default function EventVolunTeeMeet() {
       <br />
       <div className="event-lines-together">
         <p>{t("weekdays.4")}</p>
-        <h6>{eventDate.toLocaleDateString(lng, dateOptions)}</h6>
+        <h6>
+          {eventDate.toLocaleDateString(
+            lng === Lang.EN ? "en-GB" : lng,
+            dateOptions,
+          )}
+        </h6>
         <p>17:00-18:00</p>
       </div>
       <br />
