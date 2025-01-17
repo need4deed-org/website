@@ -233,14 +233,8 @@ export function getFirstThursdayOfMonth(today: Date = new Date()): Date {
     firstThursdayDayOfMonth += 7;
   }
 
-  // const secondThursdayDayOfMonth = firstThursdayDayOfMonth + 7;
-
   const firstThursday = new Date(
-    Date.UTC(
-      currentYear,
-      currentMonth,
-      firstThursdayDayOfMonth, // secondThursdayDayOfMonth,
-    ),
+    Date.UTC(currentYear, currentMonth, firstThursdayDayOfMonth),
   );
 
   if (firstThursday < today) {
