@@ -303,12 +303,17 @@
       "legalHeading": "قوانین",
       "impressum": "اطلاعات حقوقی",
       "dataPrivacy": "حریم خصوصی",
-      "agreement": "توافقنامه مشارکت داوطلبانه"
+      "agreement": "توافقنامه مشارکت داوطلبانه",
+      "cookies": "کوکی‌ها"
     },
     "contact": {
       "contactHeading": "ارتباط",
       "email": "ایمیل",
       "emailAddress": "info@need4deed.org"
     }
+  },
+  "cookieSettings": {
+    "title": "مدیریت تنظیمات کوکی‌ها",
+    "saveButton": "ذخیره و رفتن به صفحه اصلی"
   }
 }

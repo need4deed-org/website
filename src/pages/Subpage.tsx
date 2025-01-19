@@ -20,6 +20,7 @@ import { FF, showEvent, urlApiOpportunity } from "../config/constants";
 import { FormType, Lang, OpportunityType, Subpages } from "../config/types";
 import AppContainerContext from "../contexts/AppContainerContext";
 import { getImageUrl, isEnumValue, setLangDirection } from "../utils";
+import Cookie from "../components/Legal/Cookies";
 
 interface Props {
   type: Subpages;
@@ -161,6 +162,8 @@ function Subpage({ type }: Props) {
         return <Announcement />;
       case Subpages.EVENT:
         return <EventHolidayGift />;
+      case Subpages.COOKIES:
+        return <Cookie />;
       default:
         return null;
     }

@@ -1,0 +1,29 @@
+/* Container for the switch */
+.switch-container {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+/* Base styles for the button */
+.switch-button {
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s;
+  background: var(--n4d-neutral-300);
+  border: none;
+  padding: 0;
+}
+
+/* Styles when the switch is checked */
+.switch-button.switch-checked {
+  background: var(--n4d-secondary-lighter);
+}
+
+/* Circle inside the switch */
+.switch-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: #fff;
+  transition: left 0.3s;
+}

@@ -48,6 +48,11 @@ function Footer({ showSponsors = true }: Props) {
                   {t("footer.legal.agreement")}
                 </a>
               </li>
+              <li>
+                <a href={`/${Subpages.COOKIES}/${i18n.language}`}>
+                  {t("footer.legal.cookies")}
+                </a>
+              </li>
             </ul>
           </div>
           <div className="footer-column">
