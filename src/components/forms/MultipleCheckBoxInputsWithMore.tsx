@@ -69,6 +69,7 @@ export default function MultipleCheckBoxInputsWithMore<
                     tabIndex={0}
                     id={`${field.name}${idx}`}
                     type="checkbox"
+                    onBlur={innerField.handleBlur}
                     onChange={(e) => {
                       innerField.handleChange(
                         e.target.checked as DeepValue<T, DeepKeys<T>>,

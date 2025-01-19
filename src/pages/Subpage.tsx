@@ -21,6 +21,7 @@ import { FormType, Lang, OpportunityType, Subpages } from "../config/types";
 import AppContainerContext from "../contexts/AppContainerContext";
 import { getImageUrl, isEnumValue, setLangDirection } from "../utils";
 import Cookie from "../components/Legal/Cookies";
+import FAQs from "../components/FAQs/FAQs";
 
 interface Props {
   type: Subpages;
@@ -164,6 +165,8 @@ function Subpage({ type }: Props) {
         return <EventHolidayGift />;
       case Subpages.COOKIES:
         return <Cookie />;
+      case Subpages.FAQS:
+        return <FAQs />;
       default:
         return null;
     }

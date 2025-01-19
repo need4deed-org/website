@@ -141,6 +141,14 @@ function App() {
               path={`/${Subpages.COOKIES}`}
               element={<Subpage type={Subpages.COOKIES} />}
             />
+            <Route
+              path={`/${Subpages.FAQS}/:lng`}
+              element={<Subpage type={Subpages.FAQS} />}
+            />
+            <Route
+              path={`/${Subpages.FAQS}`}
+              element={<Subpage type={Subpages.FAQS} />}
+            />
             <Route path="/:lng" element={<Home />} />
             <Route path="*" element={<Land404 />} />
           </Routes>
