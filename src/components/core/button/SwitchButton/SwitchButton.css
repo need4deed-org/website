@@ -24,6 +24,6 @@
 .switch-circle {
   position: absolute;
   border-radius: 50%;
-  background: #fff;
+  background: var(--n4d-neutral-900);
   transition: left 0.3s;
 }

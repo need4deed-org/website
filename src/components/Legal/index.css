@@ -50,8 +50,8 @@
 .centered-button {
   margin-top: 3rem;
   margin-bottom: 5rem;
-  background: #4e9815;
-  color: #ffffff;
+  background: var(--n4d-secondary-darker);
+  color: var(--n4d-neutral-900);
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   border: none;
