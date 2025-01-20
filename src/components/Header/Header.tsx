@@ -127,6 +127,16 @@ function Header({ showEvent = false }: Props) {
                 {t("bas2022")}
               </a>
             </li>
+
+            <li className="nav-item">
+              <a
+                className="nav-link"
+                href={`/${Subpages.FAQS}/${i18n.language}`}
+              >
+                {t("faqs.faqs")}
+              </a>
+            </li>
+
             {showEvent ? (
               <li className="nav-item">
                 <a

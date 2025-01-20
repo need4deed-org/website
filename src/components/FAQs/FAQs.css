@@ -1,0 +1,23 @@
+.faqs-title {
+  font-weight: bold;
+  margin-bottom: var(--n4d-volunteer-p-f-sz);
+  margin-top: var(--n4d-volunteer-p-f-sz);
+  text-align: center;
+}
+
+.faq-item {
+  margin-bottom: calc(var(--n4d-volunteer-p-f-sz) * 2);
+}
+
+.faq-question {
+  font-weight: bold;
+  margin-bottom: 0.3125rem;
+}
+
+.faq-answer {
+  margin-left: var(--n4d-volunteer-p-f-sz);
+}
+
+.dummy {
+  display: none;
+}
