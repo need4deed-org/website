@@ -279,7 +279,7 @@
     }
   },
   "event": { "menuItem": "VolunTea" },
-  "eventVolunTee": {
+  "VolunTea": {
     "greeting": {
       "invite": "You are more than invited to our next VolunTea.",
       "when": "As usual, it's on the first Thursday of the month!"

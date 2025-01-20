@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 
 import Announcement from "../components/Announcement";
-import EventVolunTeeMeet from "../components/Event/EventVolunTeeMeet";
+import EventVolunTeeMeet from "../components/Event/EventVolunTeaMeet";
 import FAQs from "../components/FAQs/FAQs";
 import Footer from "../components/Footer/Footer";
 import NewForm from "../components/Form";

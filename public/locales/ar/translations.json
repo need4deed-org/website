@@ -208,7 +208,7 @@
     }
   },
   "event": { "menuItem": "VolunTea" },
-  "eventVolunTee": {
+  "VolunTea": {
     "greeting": {
       "invite": "أنت مدعو بشدة لحضور فعالية VolunTea القادمة.",
       "when": "كما هو معتاد، ستعقد في أول خميس من الشهر!"

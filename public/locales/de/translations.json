@@ -274,7 +274,7 @@
     }
   },
   "event": { "menuItem": "VolunTea" },
-  "eventVolunTee": {
+  "VolunTea": {
     "greeting": {
       "invite": "Ihr seid herzlich zu unserem nächsten VolunTea eingeladen.",
       "when": "Wie immer findet es am ersten Donnerstag des Monats statt!"

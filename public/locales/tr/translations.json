@@ -208,7 +208,7 @@
     }
   },
   "event": { "menuItem": "VolunTea" },
-  "eventVolunTee": {
+  "VolunTea": {
     "greeting": {
       "invite": "Bir sonraki VolunTea etkinliğimize davetlisiniz.",
       "when": "Her zamanki gibi, ayın ilk Perşembe günü!"
