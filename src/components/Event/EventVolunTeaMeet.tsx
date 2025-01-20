@@ -6,16 +6,18 @@ import { getFirstThursdayOfMonth, getImageUrl } from "../../utils/index";
 import "./index.css";
 
 const registrationHref = "https://forms.gle/hFJTszu4tCoeDRy4A";
-const dateOptions: Intl.DateTimeFormatOptions = {
-  year: "numeric",
-  month: "2-digit",
-  day: "2-digit",
-};
 
 export default function EventVolunTeeMeet() {
   const { t } = useTranslation();
   const { lng } = useParams();
   const eventDate = getFirstThursdayOfMonth();
+  const eventDateStr = eventDate
+    ? eventDate.toLocaleDateString(lng === Lang.EN ? "en-GB" : lng, {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+      })
+    : t("VolunTea.expired");
   const sonyaVolunteePicStyle = {
     backgroundImage: `url(${getImageUrl("sonya-voluntee.webp")})`,
     backgroundSize: "cover",
@@ -57,12 +59,7 @@ export default function EventVolunTeeMeet() {
       <br />
       <div className="event-lines-together">
         <p>{t("weekdays.4")}</p>
-        <h6>
-          {eventDate.toLocaleDateString(
-            lng === Lang.EN ? "en-GB" : lng,
-            dateOptions,
-          )}
-        </h6>
+        <h6>{eventDateStr}</h6>
         <p>17:00-18:00</p>
       </div>
       <br />
