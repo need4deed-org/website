@@ -240,14 +240,14 @@ export function getFirstThursdayOfMonth(
     new Date(Date.UTC(2026, 1, 5)),
     new Date(Date.UTC(2026, 2, 5)),
     new Date(Date.UTC(2026, 3, 2)),
-    new Date(Date.UTC(2026, 4, 1)),
-    new Date(Date.UTC(2026, 5, 7)),
-    new Date(Date.UTC(2026, 6, 4)),
-    new Date(Date.UTC(2026, 7, 2)),
-    new Date(Date.UTC(2026, 8, 6)),
-    new Date(Date.UTC(2026, 9, 3)),
-    new Date(Date.UTC(2026, 10, 1)),
-    new Date(Date.UTC(2026, 11, 5)),
+    new Date(Date.UTC(2026, 4, 7)),
+    new Date(Date.UTC(2026, 5, 4)),
+    new Date(Date.UTC(2026, 6, 2)),
+    new Date(Date.UTC(2026, 7, 6)),
+    new Date(Date.UTC(2026, 8, 3)),
+    new Date(Date.UTC(2026, 9, 1)),
+    new Date(Date.UTC(2026, 10, 5)),
+    new Date(Date.UTC(2026, 11, 3)),
   ];
 
   const nextFirstThursday = firstThursdaysOf25And26.find(
