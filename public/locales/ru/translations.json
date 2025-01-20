@@ -206,7 +206,7 @@
     }
   },
   "event": { "menuItem": "VolunTea" },
-  "eventVolunTee": {
+  "VolunTea": {
     "greeting": {
       "invite": "Вы более чем приглашены на наш следующий VolunTea.",
       "when": "Как обычно, он проходит в первый четверг месяца!"

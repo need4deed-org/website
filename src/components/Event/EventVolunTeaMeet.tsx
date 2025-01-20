@@ -29,23 +29,23 @@ export default function EventVolunTeeMeet() {
       <h1>VolunTea</h1>
       <br />
       <br />
-      <h6>{t("eventVolunTee.greeting.invite")}</h6>
-      <h6>{t("eventVolunTee.greeting.when")}</h6>
+      <h6>{t("VolunTea.greeting.invite")}</h6>
+      <h6>{t("VolunTea.greeting.when")}</h6>
       <div className="pic-and-text">
         <div style={sonyaVolunteePicStyle} />
         <div>
-          <h6>{t("eventVolunTee.main.title")}</h6>
-          <p>{t("eventVolunTee.main.para1")}</p>
-          <p>{t("eventVolunTee.main.para2")}</p>
-          <p>{t("eventVolunTee.main.para3")}</p>
-          <p>{t("eventVolunTee.main.para4")}</p>
-          <p>{t("eventVolunTee.main.para5")}</p>
+          <h6>{t("VolunTea.main.title")}</h6>
+          <p>{t("VolunTea.main.para1")}</p>
+          <p>{t("VolunTea.main.para2")}</p>
+          <p>{t("VolunTea.main.para3")}</p>
+          <p>{t("VolunTea.main.para4")}</p>
+          <p>{t("VolunTea.main.para5")}</p>
         </div>
       </div>
       <p>
-        {t("eventVolunTee.outro.rsvp.text")}{" "}
+        {t("VolunTea.outro.rsvp.text")}{" "}
         <a href={registrationHref} target="_blank" rel="noreferrer">
-          {t("eventVolunTee.outro.rsvp.link")}
+          {t("VolunTea.outro.rsvp.link")}
         </a>
       </p>
       <img
@@ -71,9 +71,9 @@ export default function EventVolunTeeMeet() {
       <br />
       <span>12435 Berlin</span>
       <br />
-      <span>{t("eventVolunTee.outro.address.floor")}</span>
+      <span>{t("VolunTea.outro.address.floor")}</span>
       <br />
-      <span>{t("eventVolunTee.outro.address.lead")}</span>
+      <span>{t("VolunTea.outro.address.lead")}</span>
     </div>
   );
 }

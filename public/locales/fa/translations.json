@@ -209,7 +209,7 @@
     }
   },
   "event": { "menuItem": "VolunTea" },
-  "eventVolunTee": {
+  "VolunTea": {
     "greeting": {
       "invite": "شما بیش از حد به VolunTea بعدی ما دعوت شده‌اید.",
       "when": "همیشه، در اولین پنجشنبه ماه است!"
