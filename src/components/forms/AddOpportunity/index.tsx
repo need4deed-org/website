@@ -272,13 +272,6 @@ export default function AddOpportunity() {
                         value === undefined
                           ? t("form.error.required")
                           : undefined,
-                      onChange: ({ value }) => {
-                        formOpportunity.setFieldMeta("languages", (meta) => ({
-                          ...meta,
-                          isDirty: value !== TranslatedIntoType.NO_TRANSLATION,
-                        }));
-                        return undefined;
-                      },
                     }}
                   >
                     {(field) => (
