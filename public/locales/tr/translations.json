@@ -227,6 +227,7 @@
         "text": "Lütfen gelip gelmeyeceğinizi bize bildirin ",
         "link": "bu formu kullanarak"
       },
+      "expired": "Süresi Doldu!",
       "address": {
         "floor": "Birinci kat",
         "lead": "Ana park girişinin hemen yanında (solunda) bulunan küçük kapıdan giriniz"

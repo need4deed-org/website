@@ -293,6 +293,7 @@
         "text": "Bitte lass uns wissen, ob du kommst, ",
         "link": "indem du dieses Formular ausfüllst."
       },
+      "expired": "Abgelaufen!",
       "address": {
         "floor": "Erster Stock",
         "lead": "Betreten Sie durch die kleine Tür, direkt neben (links von) dem Haupteingang zum Parken"
