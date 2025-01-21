@@ -150,6 +150,14 @@
 <!--
 **Purpose:**
 *   Estimate the development effort required for the feature (e.g., small, medium, large, extra large).
+    *   Use T-shirt sizing: XS, S, MS, M, L, XL, XXL
+    *   S is a golden ratio meaning it's complexity and scale is within 2 and 4 hours of dev work.
+    *   XS is about 1 hour and less
+    *   MS is up to 1 day
+    *   M is up to 1 day also, but has substantial complexity to it
+    *   L is definitely more than a day, but doesn't exceed 3 days, i.e. 2 Ls per week
+    *   XL takes entire week
+    *   XXL just for indicating a huge one.
 *   This can be used for planning and prioritization.
 -->
 
