@@ -1,18 +1,20 @@
-<!-- Implementation of the new workflow -->
+<!-- Text which is in between <!-- and -- > is a comment in a Markdown files.
+you can ignore them, comments are not rendered in Gitlab -->
 
 ## Feature Request
 
 <!--
-**Description:** 
-*   A concise and clear summary of the feature being requested. 
+**Description:**
+*   A concise and clear summary of the feature being requested.
     *   Example: "Implement a user profile page with settings and activity history."
 -->
 
 ### User Story (Narrative)
 
 <!--
-**Purpose:** 
-*   Describe the feature from the user's perspective. 
+**Purpose:**
+*   Describe the feature from the user's perspective.
+*   This must be either the text itself or a link to the parent issue.
 *   Use the "As a... I want... so that..." format for clarity.
     *   Example: "As a registered user, I want to be able to view and edit my profile information, such as name, email, and password, so that I can maintain an accurate and up-to-date account."
 -->
@@ -23,7 +25,7 @@
 **Purpose:**
 *   Provide any relevant background information, dependencies, or constraints.
 *   Include links to related documents, such as design mockups (Figma files), API documentation, or relevant research.
-    *   Example: 
+    *   Example:
         *   "This feature requires integration with the existing user authentication system."
         *   "Design mockups can be found in the following Figma file: [link]"
 -->
@@ -38,6 +40,10 @@
         *   "Users must be able to successfully update their email address and password."
         *   "The profile page must load within 2 seconds on average."
 -->
+
+### What's the impact of the feature on the project
+
+<!-- e.g. The subpage will promote an event on which will help to connect the volunteers with Refugee Accomodation centers in Berlin -->
 
 ## Technical Articulation
 
@@ -54,7 +60,7 @@
 <!--
 **Purpose:**
 *   Outline the technical approach to implementing the feature.
-    *   Example: 
+    *   Example:
         *   "Create a new React component for the user profile page."
         *   "Utilize the existing user API to fetch and update user data."
         *   "Implement data validation and error handling."
@@ -79,7 +85,7 @@
 ## Summary
 
 <!--
-**Purpose:** 
+**Purpose:**
 *   Optional
 *   A brief summary of the feature request and its key aspects.
 -->
@@ -92,7 +98,7 @@
     *   Example: High, Medium, Low
 -->
 
-### Deadline (Optional)
+### Expected deadline (Optional)
 
 <!--
 **Purpose:**
