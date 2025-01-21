@@ -1,23 +1,20 @@
-<!-- Text which is in between <!-- and -- > is a comment in a Markdown files.
-you can ignore them, comments are not rendered in Gitlab -->
+<!-- Implementation of the new workflow -->
 
 ## Feature Request
 
 <!--
-**Description:**
-*   A concise and clear summary of the feature being requested.
+**Description:** 
+*   A concise and clear summary of the feature being requested. 
     *   Example: "Implement a user profile page with settings and activity history."
 -->
 
 ### User Story (Narrative)
 
 <!--
-**Purpose:**
-*   Describe the feature from the user's perspective.
-*   This must be either the text itself or a link to the parent issue.
+**Purpose:** 
+*   Describe the feature from the user's perspective. 
 *   Use the "As a... I want... so that..." format for clarity.
     *   Example: "As a registered user, I want to be able to view and edit my profile information, such as name, email, and password, so that I can maintain an accurate and up-to-date account."
-*   If this story is sized as L and on here may be a list of its child issues.
 -->
 
 ### Additional Context
@@ -26,7 +23,7 @@ you can ignore them, comments are not rendered in Gitlab -->
 **Purpose:**
 *   Provide any relevant background information, dependencies, or constraints.
 *   Include links to related documents, such as design mockups (Figma files), API documentation, or relevant research.
-    *   Example:
+    *   Example: 
         *   "This feature requires integration with the existing user authentication system."
         *   "Design mockups can be found in the following Figma file: [link]"
 -->
@@ -42,18 +39,11 @@ you can ignore them, comments are not rendered in Gitlab -->
         *   "The profile page must load within 2 seconds on average."
 -->
 
-### What's the impact of the feature on the project
-
-<!-- e.g. The subpage will promote an event on which will help to connect the volunteers with Refugee Accomodation centers in Berlin -->
-
 ## Technical Articulation
 
 <!--
 **Purpose:**
-*   Optional
 *   Describe the technical aspects of the feature implementation.
-    * SW design, i.e. functions, data structures, API interfaces, etc.
-    * Testing, performance, maintenance, etc.
 -->
 
 ### Proposed Solution
@@ -61,7 +51,7 @@ you can ignore them, comments are not rendered in Gitlab -->
 <!--
 **Purpose:**
 *   Outline the technical approach to implementing the feature.
-    *   Example:
+    *   Example: 
         *   "Create a new React component for the user profile page."
         *   "Utilize the existing user API to fetch and update user data."
         *   "Implement data validation and error handling."
@@ -72,21 +62,13 @@ you can ignore them, comments are not rendered in Gitlab -->
 <!--
 **Purpose:**
 *   Estimate the development effort required for the feature (e.g., small, medium, large, extra large).
-    *   Use T-shirt sizing: XS, S, MS, M, L, XL, XXL
-    *   S is a golden ratio meaning it's complexity and scale is within 2 and 4 hours of dev work.
-    *   XS is about 1 hour and less
-    *   MS is up to 1 day
-    *   M is up to 1 day also, but has substantial complexity to it
-    *   L is definitely more than a day, but doesn't exceed 3 days, i.e. 2 Ls per week
-    *   XL takes entire week
-    *   XXL just for indicating a huge one.
 *   This can be used for planning and prioritization.
 -->
 
 ## Summary
 
 <!--
-**Purpose:**
+**Purpose:** 
 *   Optional
 *   A brief summary of the feature request and its key aspects.
 -->
@@ -99,7 +81,7 @@ you can ignore them, comments are not rendered in Gitlab -->
     *   Example: High, Medium, Low
 -->
 
-### Expected deadline (Optional)
+### Deadline (Optional)
 
 <!--
 **Purpose:**
