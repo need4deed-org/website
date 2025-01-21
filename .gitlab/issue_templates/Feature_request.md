@@ -17,6 +17,7 @@ you can ignore them, comments are not rendered in Gitlab -->
 *   This must be either the text itself or a link to the parent issue.
 *   Use the "As a... I want... so that..." format for clarity.
     *   Example: "As a registered user, I want to be able to view and edit my profile information, such as name, email, and password, so that I can maintain an accurate and up-to-date account."
+*   If this story is sized as L and on here may be a list of its child issues.
 -->
 
 ### Additional Context
