@@ -4,7 +4,8 @@ import { useTranslation } from "react-i18next";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 
 import Announcement from "../components/Announcement";
-import EventHolidayGift from "../components/Event/EventHolidayGift";
+import EventVolunTeeMeet from "../components/Event/EventVolunTeaMeet";
+import FAQs from "../components/FAQs/FAQs";
 import Footer from "../components/Footer/Footer";
 import NewForm from "../components/Form";
 import opportunity from "../components/Form/opportunity";
@@ -20,7 +21,6 @@ import { FF, showEvent, urlApiOpportunity } from "../config/constants";
 import { FormType, Lang, OpportunityType, Subpages } from "../config/types";
 import AppContainerContext from "../contexts/AppContainerContext";
 import { getImageUrl, isEnumValue, setLangDirection } from "../utils";
-import FAQs from "../components/FAQs/FAQs";
 
 interface Props {
   type: Subpages;
@@ -161,7 +161,7 @@ function Subpage({ type }: Props) {
       case Subpages.ANNOUNCEMENT:
         return <Announcement />;
       case Subpages.EVENT:
-        return <EventHolidayGift />;
+        return <EventVolunTeeMeet />;
       case Subpages.FAQS:
         return <FAQs />;
       default:
