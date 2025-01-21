@@ -43,7 +43,10 @@
 
 <!--
 **Purpose:**
+*   Optional
 *   Describe the technical aspects of the feature implementation.
+    * SW design, i.e. functions, data structures, API interfaces, etc.
+    * Testing, performance, maintenance, etc.
 -->
 
 ### Proposed Solution
