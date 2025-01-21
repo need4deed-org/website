@@ -2,6 +2,10 @@
   margin-block: 1rem 0;
 }
 
+.event-container h6 {
+  font-weight: 550;
+}
+
 .event-timeslot {
   font-weight: bold;
 }
@@ -52,6 +56,17 @@
 
 .event-donate a {
   color: var(--n4d-primary);
+}
+
+.event-lines-together {
+  display: flex;
+  flex-direction: column;
+  gap: .15rem;
+}
+
+.event-lines-together * {
+  margin-block: 0;
+  padding-block: 0;
 }
 
 @media (max-width: 576px) {
