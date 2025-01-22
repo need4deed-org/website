@@ -7,6 +7,10 @@ you can ignore them, comments are not rendered in Gitlab -->
 **Description:**
 *   A concise and clear summary of the feature being requested.
     *   Example: "Implement a user profile page with settings and activity history."
+
+
+**Role:**
+*   _owner_
 -->
 
 ### User Story (Narrative)
@@ -22,6 +26,9 @@ you can ignore them, comments are not rendered in Gitlab -->
 *   Use the "As a... I want... so that..." format for clarity.
     *   Example: "As a registered user, I want to be able to view and edit my profile information, such as name, email, and password, so that I can maintain an accurate and up-to-date account."
 *   If this story is sized as L and on here may be a list of its child issues.
+
+**Role:**
+*   _owner_
 -->
 
 ### Additional Context
@@ -33,6 +40,11 @@ you can ignore them, comments are not rendered in Gitlab -->
     *   Example:
         *   "This feature requires integration with the existing user authentication system."
         *   "Design mockups can be found in the following Figma file: [link]"
+
+**Role:**
+*   _owner_
+*   _dev_
+*   _ux-ui_
 -->
 
 ### Acceptance Criteria
@@ -44,11 +56,20 @@ you can ignore them, comments are not rendered in Gitlab -->
         *   "The user profile page must display the user's name, email address, and registration date."
         *   "Users must be able to successfully update their email address and password."
         *   "The profile page must load within 2 seconds on average."
+
+**Role:**
+*   _owner_
+*   _ux-ui_
 -->
 
 ### What's the impact of the feature on the project
 
-<!-- e.g. The subpage will promote an event on which will help to connect the volunteers with Refugee Accomodation centers in Berlin -->
+<!--
+e.g. The subpage will promote an event on which will help to connect the volunteers with Refugee Accomodation centers in Berlin
+
+**Role:**
+*   _owner_
+-->
 
 ## Technical Articulation
 
@@ -58,6 +79,10 @@ you can ignore them, comments are not rendered in Gitlab -->
 *   Describe the technical aspects of the feature implementation.
     * SW design, i.e. functions, data structures, API interfaces, etc.
     * Testing, performance, maintenance, etc.
+
+**Role:**
+*   _dev_
+*   _sw-arch_
 -->
 
 ### Proposed Solution
@@ -69,6 +94,10 @@ you can ignore them, comments are not rendered in Gitlab -->
         *   "Create a new React component for the user profile page."
         *   "Utilize the existing user API to fetch and update user data."
         *   "Implement data validation and error handling."
+
+**Role:**
+*   _dev_
+*   _sw-arch_
 -->
 
 ### Size
@@ -85,14 +114,21 @@ you can ignore them, comments are not rendered in Gitlab -->
     *   XL takes entire week
     *   XXL just for indicating a huge one.
 *   This can be used for planning and prioritization.
+
+**Role:**
+*   _dev_
+*   _sw-arch_
 -->
 
-## Summary
+## Summary (Optional)
 
 <!--
 **Purpose:**
 *   Optional
 *   A brief summary of the feature request and its key aspects.
+
+**Role:**
+*   _any_
 -->
 
 >>>>>>> 99a96de (rename)
@@ -102,6 +138,9 @@ you can ignore them, comments are not rendered in Gitlab -->
 **Purpose:**
 *   Indicate the relative importance of the feature compared to other requests.
     *   Example: High, Medium, Low
+
+**Role:**
+*   _owner_
 -->
 
 ### Expected deadline (Optional)
@@ -109,4 +148,32 @@ you can ignore them, comments are not rendered in Gitlab -->
 <!--
 **Purpose:**
 *   Set a target date for completing the feature development.
+
+**Role:**
+*   _owner_
+-->
+
+<!--
+**Roles:**
+*   _owner_
+        * Defines the product vision and strategy.
+        * Creates and maintains the product backlog (prioritized list of user stories).
+        * Acts as the voice of the customer.
+        * Collaborates with the development team to ensure the product meets business goals.
+        * Makes decisions regarding product scope and trade-offs.
+*   _dev_
+        * Writes, tests, and maintains the code for the software.
+        * Collaborates with other developers and team members.
+        * Ensures code quality and adherence to coding standards.
+        * Troubleshoots and debugs code.
+*   _ux-ui_
+        * Designs the user interface (UI) and user experience (UX) of the software.
+        * Conducts user research and creates user personas.
+        * Designs wireframes, mockups, and prototypes.
+        * Collaborates with developers to ensure the final product meets design specifications.
+        * Provides feedback on usability and user satisfaction.
+*   _sw-arch_
+        * Defines the overall technical architecture of the software system.
+        * Makes high-level design decisions regarding technology choices, data structures, and system components.
+        * Ensures the system is scalable, maintainable, and secure.
 -->
