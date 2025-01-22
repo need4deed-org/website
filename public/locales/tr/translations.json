@@ -11,6 +11,15 @@
     "slogan": "Berlin’de mülteciler için gönüllü desteği",
     "beVolunteerButton": "Gönüllü Olun!"
   },
+  "weekdays": {
+    "1": "Pazartesi",
+    "2": "Salı",
+    "3": "Çarşamba",
+    "4": "Perşembe",
+    "5": "Cuma",
+    "6": "Cumartesi",
+    "0": "Pazar"
+  },
   "iframeTitles": {
     "calendar": "Takvim",
     "howToVolunteer": "Harekete Geçin! - Gönüllü Olun"
@@ -198,7 +207,33 @@
       }
     }
   },
-  "event": { "menuItem": "Bayram Hediyeleri" },
+  "event": { "menuItem": "VolunTea" },
+  "VolunTea": {
+    "greeting": {
+      "invite": "Bir sonraki VolunTea etkinliğimize davetlisiniz.",
+      "when": "Her zamanki gibi, ayın ilk Perşembe günü!"
+    },
+    "main": {
+      "title": "VolunTea nedir?",
+      "para1": "Mültecilere nasıl destek olunacağı ve Berlin'deki ihtiyaç sahibi insanlarla etkileşime girmenin yeni yolları hakkında birbirlerinden ve ekipten haber almak için gönüllülerin bir araya geldiği küçük bir toplantı.",
+      "para2": "- Eğer zaten gönüllü olarak çalışmaya başladıysanız, bu buluşmalar gönüllülük deneyimlerinizi paylaşmak ve diğerlerinden haber almak için bir alan sağlar.",
+      "para3": "- Berlin'deki mültecileri desteklemek için birlikte bir şeyler planlamak istiyorsanız, toplantının bir kısmı yeni fikirleri dinlemek ve diğer gönüllüler ile ekibimizin desteklemek isteyip istemediğini görmek için ayrılacaktır.",
+      "para4": "- Eğer henüz gönüllü olarak çalışmaya başlamadıysanız veya ne bekleyeceğinizden hala emin değilseniz, bu ekibimizi tanımak ve aktif gönüllülerden neler olduğunu öğrenmek için bir fırsattır.",
+      "para5": "- Bürokrasi :) Eğer hala sabıka kaydı yoksa, pasaportunuzu veya kimliğinizi getirdiğiniz sürece sizin için başvuru yapabiliriz."
+    },
+    "outro": {
+      "benefits": "İçecekler ve atıştırmalıklar ikramımızdır!",
+      "rsvp": {
+        "text": "Lütfen gelip gelmeyeceğinizi bize bildirin ",
+        "link": "bu formu kullanarak"
+      },
+      "expired": "Süresi Doldu!",
+      "address": {
+        "floor": "Birinci kat",
+        "lead": "Ana park girişinin hemen yanında (solunda) bulunan küçük kapıdan giriniz"
+      }
+    }
+  },
   "eventHolidayGift": {
     "header": "Mülteci Çocuklar İçin Bayram Hediyeleri",
     "paras": {
