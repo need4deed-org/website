@@ -42,7 +42,7 @@
       "required": "Dieses Feld ist erforderlich",
       "postcode": "Muss eine gültige Postleitzahl von Berlin sein",
       "email": "Muss eine gültige E-Mail-Adresse sein",
-      "badEmail": "Keine gültige E-Mai",
+      "badEmail": "Keine gültige Betreiber E-Mail",
       "location": "Bitte wähle mindestens einen Standort aus",
       "availability": "Bitte wähle mindestens einen Zeitraum aus",
       "labelErrors": "Fehler",
