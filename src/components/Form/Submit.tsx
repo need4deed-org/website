@@ -4,6 +4,7 @@ import { ReactFormApiLike } from "./types";
 interface Props<T> {
   form: FormApi<T, undefined> & ReactFormApiLike<T>;
   label?: string;
+  showErrors?: boolean;
   classDiv?: string;
   classButton?: string;
 }
@@ -11,6 +12,7 @@ interface Props<T> {
 export default function Submit<T>({
   form,
   label,
+  showErrors = true,
   classDiv,
   classButton,
 }: Props<T>) {
@@ -25,6 +27,21 @@ export default function Submit<T>({
           >
             {label}
           </button>
+          <span>
+            {showErrors && (
+              <em>
+                {Array.from(
+                  new Set(
+                    Object.values(
+                      form.state.fieldMeta as { errors: string[] }[],
+                    )
+                      .map(({ errors }) => errors)
+                      .flat(),
+                  ),
+                ).join(", ")}
+              </em>
+            )}
+          </span>
         </div>
       )}
     </form.Subscribe>
