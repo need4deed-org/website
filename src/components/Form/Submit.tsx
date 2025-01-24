@@ -1,4 +1,5 @@
 import { FormApi, FormState } from "@tanstack/react-form";
+import { getFlatListOfKey } from "../../utils";
 import { ReactFormApiLike } from "./types";
 
 interface Props<T> {
@@ -7,6 +8,7 @@ interface Props<T> {
   showErrors?: boolean;
   classDiv?: string;
   classButton?: string;
+  classErrors?: string;
 }
 
 export default function Submit<T>({
@@ -15,6 +17,7 @@ export default function Submit<T>({
   showErrors = true,
   classDiv,
   classButton,
+  classErrors,
 }: Props<T>) {
   return (
     <form.Subscribe selector={(state: FormState<T>) => state}>
@@ -27,19 +30,9 @@ export default function Submit<T>({
           >
             {label}
           </button>
-          <span>
+          <span className={classErrors}>
             {showErrors && (
-              <em>
-                {Array.from(
-                  new Set(
-                    Object.values(
-                      form.state.fieldMeta as { errors: string[] }[],
-                    )
-                      .map(({ errors }) => errors)
-                      .flat(),
-                  ),
-                ).join(", ")}
-              </em>
+              <em>{getFlatListOfKey(form.state.fieldMeta, "errors")}</em>
             )}
           </span>
         </div>
