@@ -14,6 +14,10 @@ interface Props<T> extends IncludeClassName {
   name: DeepKeys<T>;
   validators?: FieldValidators<T, DeepKeys<T>>;
   inputType?: string;
+  beforeLabel?: string;
+  classBefore?: string;
+  afterErrors?: string;
+  classAfter?: string;
   classLabel?: string;
   classError?: string;
   classInput?: string;
@@ -29,6 +33,10 @@ export default function InputField<T>({
   classLabel,
   classInput,
   classError,
+  beforeLabel,
+  classBefore,
+  afterErrors,
+  classAfter,
   inputType = "text",
   showErrors = true,
 }: Props<T>) {
@@ -36,6 +44,7 @@ export default function InputField<T>({
     <Field form={form} name={name} validators={validators}>
       {(field) => (
         <div className={className}>
+          <div className={classBefore}>{beforeLabel && `${beforeLabel}`}</div>
           <label className={classLabel} htmlFor={`${name}`}>
             <span>{label}</span>
             <input
@@ -51,11 +60,12 @@ export default function InputField<T>({
           </label>
           {showErrors && (
             <span className={classError}>
-              {field.state.meta.isDirty && (
+              {field.state.meta.errors.length > 0 && (
                 <em>{field.state.meta.errors.join(", ")}</em>
               )}
             </span>
           )}
+          <div className={classAfter}>{afterErrors && `${afterErrors}`}</div>
         </div>
       )}
     </Field>
