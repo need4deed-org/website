@@ -43,7 +43,7 @@
       "required": "Dieses Feld ist erforderlich",
       "postcode": "Muss eine gültige Postleitzahl von Berlin sein",
       "email": "Muss eine gültige E-Mail-Adresse sein",
-      "badEmail": "Keine gültige E-Mai",
+      "badEmail": "Keine gültige Betreiber E-Mail",
       "location": "Bitte wähle mindestens einen Standort aus",
       "availability": "Bitte wähle mindestens einen Zeitraum aus",
       "labelErrors": "Fehler",
@@ -402,13 +402,18 @@
       "impressum": "Impressum",
       "dataPrivacy": "Datenschutzerklärung",
       "agreement": "Vereinbarung zur Ehrenamtlichen Teilnahme",
-      "guidelines": "Need4Deed Leitlinien"
+      "guidelines": "Need4Deed Leitlinien",
+      "cookies": "Cookies"
     },
     "contact": {
       "contactHeading": "Kontakt",
       "email": "E-Mail",
       "emailAddress": "info@need4deed.org"
     }
+  },
+  "cookieSettings": {
+    "title": "Cookie-Einstellungen verwalten",
+    "saveButton": "Speichern & zur Startseite gehen"
   },
   "faqs": {
     "faqs": "HGFs",
@@ -435,3 +440,4 @@
     "group_volunteering_answer": "Ja, Gruppenfreiwilligenarbeit wird gefördert, insbesondere für diejenigen, die Flüchtlingsunterkünfte unterstützen."
   }
 }
+
