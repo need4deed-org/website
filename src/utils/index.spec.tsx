@@ -7,6 +7,7 @@ import {
   getBaseUrl,
   getFilter,
   getFirstThursdayOfMonth,
+  getFlatListOfKey,
   getOpportunityImg,
   getReadableTime,
   getUrlWithEncodedParams,
@@ -334,12 +335,12 @@ describe("utils", () => {
   });
 
   describe("parseYesNo", () => {
-    it("should return 'Yes' given truthy value", () => {
+    it('should return "Yes" given truthy value', () => {
       expect(parseYesNo(true)).toBe("Yes");
       expect(parseYesNo("1" as unknown as boolean)).toBe("Yes");
     });
 
-    it("should return 'No' given falsy value", () => {
+    it('should return "No" given falsy value', () => {
       expect(parseYesNo(false)).toBe("No");
       expect(parseYesNo(undefined)).toBe("No");
       expect(parseYesNo(0 as unknown as boolean)).toBe("No");
@@ -390,6 +391,79 @@ describe("utils", () => {
       const result = getFirstThursdayOfMonth(today);
 
       expect(result).toEqual(firstThursday);
+    });
+  });
+
+  describe("getFlatListOfKey", () => {
+    it("should return a string of unique values for the given key", () => {
+      const obj = {
+        a: { key: ["value1", "value2"] },
+        b: { key: ["value2", "value3"] },
+        c: { key: ["value1"] },
+      };
+
+      const result = getFlatListOfKey(obj, "key");
+      expect(result).toBe("value1, value2, value3");
+    });
+
+    it("should skip nested objects correctly", () => {
+      const obj = {
+        a: { key: ["value1"] },
+        b: {
+          nested: {
+            key: ["value2", "value3"],
+          },
+        },
+        c: { key: ["value1"] },
+      };
+
+      const result = getFlatListOfKey(obj, "key");
+      expect(result).toBe("value1");
+    });
+
+    it("should handle empty arrays", () => {
+      const obj = {
+        a: { key: [] },
+        b: { key: ["value1"] },
+      };
+
+      const result = getFlatListOfKey(obj, "key");
+      expect(result).toBe("value1");
+    });
+
+    it("should handle non-array values", () => {
+      const obj = {
+        a: { key: "value1" },
+        b: { key: ["value2"] },
+      };
+
+      const result = getFlatListOfKey(obj, "key");
+      expect(result).toBe("value1, value2");
+    });
+
+    it("should handle undefined values", () => {
+      const obj = {
+        a: { key: ["value1"] },
+        b: { key: undefined },
+      };
+
+      const result = getFlatListOfKey(obj, "key");
+      expect(result).toBe("value1");
+    });
+
+    it("should handle non-existent key", () => {
+      const obj = {
+        a: { otherKey: ["value1"] },
+      };
+
+      const result = getFlatListOfKey(obj, "key");
+      expect(result).toBe("");
+    });
+
+    it("should handle empty object", () => {
+      const obj: Record<string, Record<string, unknown>> = {};
+      const result = getFlatListOfKey(obj, "key");
+      expect(result).toBe("");
     });
   });
 });

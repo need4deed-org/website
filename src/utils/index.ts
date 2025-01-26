@@ -274,3 +274,16 @@ export function consoleLogDeveloperContributionMessage() {
     `color: ${tertiaryColor}; font-size: 1rem; text-decoration: underline;`,
   );
 }
+
+export function getFlatListOfKey<
+  T extends Record<string, Record<string, string[] | unknown>>,
+>(obj: T, key: string): string {
+  return Array.from(
+    new Set(
+      Object.values(obj)
+        .map((value) => value[key])
+        .flat()
+        .filter(Boolean),
+    ),
+  ).join(", ");
+}
