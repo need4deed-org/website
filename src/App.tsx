@@ -12,6 +12,7 @@ import Home from "./pages/Home";
 import Land404 from "./pages/Land404";
 import PastEvents from "./pages/PastEvents";
 import Subpage from "./pages/Subpage";
+import { consoleLogDeveloperContribuionMessage } from "./utils";
 
 function App() {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -29,6 +30,8 @@ function App() {
       ReactGA.initialize(googleAnalyticsId);
     }
   }, [cookieConsent]);
+
+  consoleLogDeveloperContribuionMessage();
 
   return (
     <AppContainerContext.Provider value={containerRef}>
