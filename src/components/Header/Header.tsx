@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
+import ReactGA from "react-ga4";
 import AppContainerContext from "../../contexts/AppContainerContext";
 import { Lang, Subpages } from "../../config/types";
 import { getBaseUrl, setLangDirection } from "../../utils";
@@ -23,6 +24,13 @@ function Header({ showEvent = false }: Props) {
   const handleLanguageChange = (lng: Lang) => {
     setLangDirection(containerRef, lng as Lang);
     navigate(`${getBaseUrl(window.location.href)}/${lng}`);
+  };
+
+  const handleAccompanyingButtonClick = () => {
+    ReactGA.send({
+      hitType: "buttonClick",
+      title: "Accompanying Volunteering Header Button",
+    });
   };
 
   return (
@@ -122,6 +130,7 @@ function Header({ showEvent = false }: Props) {
               <a
                 className="nav-link"
                 href={`/${Subpages.ACCOMPANYING}/${i18n.language}`}
+                onClick={handleAccompanyingButtonClick}
               >
                 {t("accompanyingVolunteering")}
               </a>
