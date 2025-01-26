@@ -15,7 +15,7 @@
   padding: 0;
 }
 
-/* Styles when the switch is checked */
+/* Styles when the switch is checked  */
 .switch-button.switch-checked {
   background: var(--n4d-secondary-lighter);
 }
