@@ -34,8 +34,7 @@ function Subpage({ type }: Props) {
   const navigate = useNavigate();
   const containerRef = useContext(AppContainerContext);
 
-  const ffOpp = ffNewForm.get("opp");
-  const ffVol = ffNewForm.get("vol");
+  const ffDev = ffNewForm.get("dev");
 
   useEffect(() => {
     if (isEnumValue(Lang, lng)) {
@@ -146,14 +145,14 @@ function Subpage({ type }: Props) {
           />
         );
       case Subpages.BECOME_VOLUNTEER:
-        return FF.NEW_FORMS_VOLUNTEER || ffVol ? (
+        return FF.NEW_FORMS_VOLUNTEER || ffDev ? (
           // eslint-disable-next-line react/jsx-props-no-spreading
           <NewForm<typeof volunteer.defaultValues> {...volunteer} />
         ) : (
           <Form form={FormType.VOLUNTEER} />
         );
       case Subpages.ADD_OPPORTUNITY:
-        return FF.NEW_FORMS_OPPORTUNITY || ffOpp ? (
+        return FF.NEW_FORMS_OPPORTUNITY || ffDev ? (
           // eslint-disable-next-line react/jsx-props-no-spreading
           <NewForm<typeof opportunity.defaultValues> {...opportunity} />
         ) : (
