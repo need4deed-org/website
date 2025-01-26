@@ -3,6 +3,7 @@ import { MutableRefObject } from "react";
 import { CLOUDFRONT_URL } from "../config/constants";
 import {
   AlfredOpportunity,
+  Env,
   KeyMap,
   Lang,
   Opportunity,
@@ -255,4 +256,21 @@ export function getFirstThursdayOfMonth(
   );
 
   return nextFirstThursday;
+}
+
+export function consoleLogDeveloperContributionMessage() {
+  if (process.env.NODE_ENV === Env.DEVELOP) return;
+
+  const rootStyles = getComputedStyle(document.documentElement);
+  const primaryColor = rootStyles.getPropertyValue("--n4d-primary").trim();
+  const secondaryColor = rootStyles.getPropertyValue("--n4d-secondary").trim();
+  const tertiaryColor = rootStyles.getPropertyValue("--n4d-tertiary").trim();
+
+  /* eslint-disable-next-line no-console  */
+  console.log(
+    `%cWould you like to help developing our website? %cPlease visit our Gitlab repo! %chttps://gitlab.com/need4deed/website/`,
+    `color: ${primaryColor}; font-size: 1rem; font-weight: bold;`,
+    `color: ${secondaryColor}; font-size: 1rem;`,
+    `color: ${tertiaryColor}; font-size: 1rem; text-decoration: underline;`,
+  );
 }
