@@ -266,7 +266,7 @@ export function consoleLogDeveloperContributionMessage() {
   const secondaryColor = rootStyles.getPropertyValue("--n4d-secondary").trim();
   const tertiaryColor = rootStyles.getPropertyValue("--n4d-tertiary").trim();
 
-  /* eslint-disable-next-line no-console */
+  /* eslint-disable-next-line no-console  */
   console.log(
     `%cWould you like to help developing our website? %cPlease visit our Gitlab repo! %chttps://gitlab.com/need4deed/website/`,
     `color: ${primaryColor}; font-size: 1rem; font-weight: bold;`,
