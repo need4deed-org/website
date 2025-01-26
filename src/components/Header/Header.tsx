@@ -117,6 +117,16 @@ function Header({ showEvent = false }: Props) {
                 {t("workingWithRefugees")}
               </a>
             </li>
+
+            <li className="nav-item">
+              <a
+                className="nav-link"
+                href={`/${Subpages.ACCOMPANYING}/${i18n.language}`}
+              >
+                {t("accompanyingVolunteering")}
+              </a>
+            </li>
+
             <li className="nav-item">
               <a
                 className="nav-link"
