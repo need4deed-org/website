@@ -134,6 +134,14 @@ function App() {
               element={<PastEvents />}
             />
             <Route
+              path={`/${Subpages.COOKIES}/:lng`}
+              element={<Subpage type={Subpages.COOKIES} />}
+            />
+            <Route
+              path={`/${Subpages.COOKIES}`}
+              element={<Subpage type={Subpages.COOKIES} />}
+            />
+            <Route
               path={`/${Subpages.FAQS}/:lng`}
               element={<Subpage type={Subpages.FAQS} />}
             />

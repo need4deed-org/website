@@ -334,7 +334,8 @@
       "legalHeading": "شؤون قانونية",
       "impressum": "إشعار قانوني",
       "dataPrivacy": "حماية البيانات",
-      "agreement": "اتفاقية المشاركة الطوعية"
+      "agreement": "اتفاقية المشاركة الطوعية",
+      "cookies": "الكوكيز"
     },
     "contact": {
       "contactHeading": "اتصل بنا",
@@ -342,7 +343,10 @@
       "emailAddress": "info@need4deed.org"
     }
   },
-
+  "cookieSettings": {
+    "title": " إدارة إعدادات الكوكيز",
+    "saveButton": "حفظ والانتقال إلى الصفحة الرئيسية"
+  },
   "faqs": {
     "faqs": "الأسئلة الشائعة",
     "title": "الأسئلة الشائعة",

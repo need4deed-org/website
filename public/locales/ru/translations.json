@@ -335,13 +335,18 @@
       "legalHeading": "Юридическая информация",
       "impressum": "Правовая информация",
       "dataPrivacy": "Политика конфиденциальности",
-      "agreement": "Соглашение о добровольном участии"
+      "agreement": "Соглашение о добровольном участии",
+      "cookies": "Куки"
     },
     "contact": {
       "contactHeading": "Контакты",
       "email": "E-mail: ",
       "emailAddress": "info@need4deed.org"
     }
+  },
+  "cookieSettings": {
+    "title": "Настроить параметры куки",
+    "saveButton": "Сохранить и перейти на главную страницу"
   },
   "faqs": {
     "faqs": "ЧЗВ",

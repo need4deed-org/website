@@ -31,3 +31,33 @@
 .legal-container h6 {
   margin-block: 24px 18px;
 }
+
+.cookie-manage-title {
+  font-weight: bold;
+  margin-bottom: var(--n4d-volunteer-p-f-sz);
+  margin-top: var(--n4d-volunteer-p-f-sz);
+  text-align: center;
+}
+
+.cookie-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  border-bottom: 1px solid var(--n4d-neutral-600);
+}
+
+.centered-button {
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+  background: var(--n4d-secondary-darker);
+  color: var(--n4d-neutral-900);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

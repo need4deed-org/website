@@ -7,6 +7,12 @@
   "bas2022": "BAS (2022)",
   "basLink": "https://bevos.org/bas-documentation/?lang=en",
   "formLink": "https://forms.gle/XWnU4znoAFaU9HfW9",
+  "CookieConsentBanner": {
+    "message": "Bu web sitesi Google Analytics kullanır. Kabul ederek, ziyaretçilerin web sitemizle nasıl etkileşim kurduğunu anlamamıza yardımcı olursunuz.",
+    "decline": "Reddet",
+    "accept": "Kabul et",
+    "linkPrivacyPolicy": "Gizlilik Politikası"
+  },
   "projectIntro": {
     "slogan": "Berlin’de mülteciler için gönüllü desteği",
     "beVolunteerButton": "Gönüllü Olun!"
@@ -337,7 +343,8 @@
       "legalHeading": "Yasal",
       "impressum": "Yasal Bildirim",
       "dataPrivacy": "Gizlilik",
-      "agreement": "Gönüllü Katılım Sözleşmesi"
+      "agreement": "Gönüllü Katılım Sözleşmesi",
+      "cookies": "Çerezler"
     },
     "contact": {
       "contactHeading": "İletişim",
@@ -345,7 +352,10 @@
       "emailAddress": "info@need4deed.org"
     }
   },
-
+  "cookieSettings": {
+    "title": "Çerez Ayarlarını Yönet",
+    "saveButton": "Kaydet & Ana Sayfaya Git"
+  },
   "faqs": {
     "faqs": "SSS",
     "title": "Sıkça Sorulan Sorular",

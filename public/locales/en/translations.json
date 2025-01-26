@@ -405,13 +405,18 @@
       "impressum": "Legal notice",
       "dataPrivacy": "Privacy",
       "agreement": "Voluntary Participation Agreement",
-      "guidelines": "Need4Deed Guidelines"
+      "guidelines": "Need4Deed Guidelines",
+      "cookies": "Cookies"
     },
     "contact": {
       "contactHeading": "Contact",
       "email": "Email",
       "emailAddress": "info@need4deed.org"
     }
+  },
+  "cookieSettings": {
+    "title": "Manage Cookie Settings",
+    "saveButton": "Save & Go to Home Page"
   },
   "faqs": {
     "faqs": "FAQ's",
