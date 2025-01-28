@@ -206,13 +206,17 @@ export function getLocale(lang: Lang) {
   return lang;
 }
 
+export function getTZ() {
+  return import.meta.env.VITE_TZ || "Europe/Berlin";
+}
+
 export function getReadableLocalTime(
   timestamp: string,
   locale = getLocale(Lang.EN),
 ) {
   if (timestamp === null) return null;
 
-  const tz = import.meta.env.VITE_TZ || "Europe/Berlin";
+  const tz = getTZ();
 
   try {
     const dateUTC = new Date(timestamp.replace("+00", "Z"));
