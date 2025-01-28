@@ -26,8 +26,10 @@ export default function OpportunityCards({
   // Hard coded sorting for 'ACCOMPANYING' page
   if (
     opportunities?.length &&
-    opportunityParams.search?.opportunity_type[0] ===
+    opportunityParams.search?.opportunity_type.includes(
       OpportunityType.ACCOMPANYING
+    )
+
   ) {
     opportunities.sort(
       (a, b) =>
