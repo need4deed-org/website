@@ -29,7 +29,6 @@ export default function OpportunityCards({
     opportunityParams.search?.opportunity_type.includes(
       OpportunityType.ACCOMPANYING,
     )
-
   ) {
     opportunities.sort(
       (a, b) =>
