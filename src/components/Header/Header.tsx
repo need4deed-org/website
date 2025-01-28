@@ -8,10 +8,10 @@ import { getBaseUrl, setLangDirection } from "../../utils";
 import "./Header.css";
 
 interface Props {
-  showEvent?: boolean;
+  showEvent: boolean;
 }
 
-function Header({ showEvent = false }: Props) {
+function Header({ showEvent }: Props) {
   const { i18n, t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
