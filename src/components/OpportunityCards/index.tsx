@@ -1,4 +1,4 @@
-import { KeyMap, OpportunityParams } from "../../config/types";
+import { KeyMap, OpportunityParams, OpportunityType } from "../../config/types";
 import useOpportunities from "../../hooks/api/useOpportunities";
 import useOpportunitiesFromFile from "../../hooks/api/useOpportunitiesFromFile";
 import { mapOpportunity } from "../../utils";
@@ -22,6 +22,20 @@ export default function OpportunityCards({
   const isUrl = url.toLowerCase().match(regexHttpSchema);
   const useOpp = isUrl ? useOpportunities : useOpportunitiesFromFile;
   const { opportunities, loading } = useOpp(url, opportunityParams);
+
+  // Hard coded sorting for 'ACCOMPANYING' page
+  if (
+    opportunities?.length &&
+    opportunityParams.search?.opportunity_type.includes(
+      OpportunityType.ACCOMPANYING,
+    )
+  ) {
+    opportunities.sort(
+      (a, b) =>
+        new Date(b.accomp_datetime).getTime() -
+        new Date(a.accomp_datetime).getTime(),
+    );
+  }
 
   return opportunities?.length ? (
     <div className="n4d-container opportunity-container">
