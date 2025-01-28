@@ -30,6 +30,10 @@ you can ignore them, comments are not rendered in Gitlab -->
 
 <!-- If applicable, add screenshots to help explain the problem,  please describe the viewport's size -->
 
+### Proposed Solution
+
+<!-- e.g. Copy the existing event subpage, change the content and the photo-->
+
 ### The impact of the bug
 
 <!-- Please assess what's the impact of the bug on the whole project -->
