@@ -1,6 +1,6 @@
 import { MutableRefObject } from "react";
 
-import { CLOUDFRONT_URL } from "../config/constants";
+import { CLOUDFRONT_URL, timeZone } from "../config/constants";
 import {
   AlfredOpportunity,
   Env,
@@ -206,17 +206,11 @@ export function getLocale(lang: Lang) {
   return lang;
 }
 
-export function getTZ() {
-  return import.meta.env.VITE_TZ || "Europe/Berlin";
-}
-
 export function getReadableLocalTime(
   timestamp: string,
   locale = getLocale(Lang.EN),
 ) {
   if (timestamp === null) return null;
-
-  const tz = getTZ();
 
   try {
     const dateUTC = new Date(timestamp.replace("+00", "Z"));
@@ -224,7 +218,7 @@ export function getReadableLocalTime(
     if (Number.isNaN(dateUTC.getDate())) return timestamp;
 
     const dateFormatter = new Intl.DateTimeFormat(locale, {
-      timeZone: tz,
+      timeZone,
       year: "numeric",
       month: "long",
       day: "numeric",
