@@ -200,20 +200,38 @@ export function getMainCtaUrl({ lng, id = "", title = "" }: MainCtaUrl) {
   return `/${Subpages.BECOME_VOLUNTEER}/${lng}/?id=${id}&title=${title}`;
 }
 
-export function getReadableTime(timestamp: string, locale = "en-US") {
+export function getLocale(lang: Lang) {
+  if (lang === Lang.EN) return "en-UK";
+
+  return lang;
+}
+
+export function getReadableLocalTime(
+  timestamp: string,
+  locale = getLocale(Lang.EN),
+) {
   if (timestamp === null) return null;
 
-  const date = new Date(timestamp);
+  const tz = import.meta.env.VITE_TZ || "Europe/Berlin";
 
-  if (Number.isNaN(date.getDate())) return timestamp;
+  try {
+    const dateUTC = new Date(timestamp.replace("+00", "Z"));
 
-  const formattedDate = date.toLocaleDateString(locale, {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
+    if (Number.isNaN(dateUTC.getDate())) return timestamp;
 
-  return formattedDate;
+    const dateFormatter = new Intl.DateTimeFormat(locale, {
+      timeZone: tz,
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+    });
+
+    return dateFormatter.format(dateUTC);
+  } catch (error) {
+    return "Invalid date";
+  }
 }
 
 export function parseYesNo(value: boolean | undefined): YesNo {

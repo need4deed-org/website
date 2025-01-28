@@ -8,7 +8,7 @@ import {
   getFilter,
   getFirstThursdayOfMonth,
   getOpportunityImg,
-  getReadableTime,
+  getReadableLocalTime,
   getUrlWithEncodedParams,
   isEnumValue,
   isoCodesToNames,
@@ -295,38 +295,31 @@ describe("utils", () => {
     });
   });
 
-  describe("getReadableTime", () => {
+  describe("getReadableLocalTime", () => {
     it("should return the original timestamp for invalid dates", () => {
       const invalidTimestamp = "Monday";
-      const result = getReadableTime(invalidTimestamp);
+      const result = getReadableLocalTime(invalidTimestamp);
       expect(result).toBe(invalidTimestamp);
     });
 
     it("should return a formatted date for valid timestamps", () => {
-      const validTimestamp = "2024-11-05T10:00:00.000+01:00";
-      const expectedResult = "November 5, 2024";
-      const result = getReadableTime(validTimestamp);
-      expect(result).toBe(expectedResult);
-    });
-
-    it("should handle different time zones", () => {
-      const timestampWithTimeZone = "2024-12-05T10:00:00.000+02:00";
-      const expectedResult = "December 5, 2024"; // Result should be the same regardless of time zone
-      const result = getReadableTime(timestampWithTimeZone);
+      const validTimestamp = "2024-11-05T10:00:00.000+00";
+      const expectedResult = "5 November 2024 at 11:00";
+      const result = getReadableLocalTime(validTimestamp);
       expect(result).toBe(expectedResult);
     });
 
     it("should handle different locale", () => {
-      const timestampWithTimeZone = "2024-12-05T10:00:00.000+02:00";
-      const expectedResult = "5. Dezember 2024";
-      const result = getReadableTime(timestampWithTimeZone, "de-DE");
+      const timestampWithTimeZone = "2024-12-05T10:00:00.000+00";
+      const expectedResult = "5. Dezember 2024 um 11:00";
+      const result = getReadableLocalTime(timestampWithTimeZone, "de-DE");
       expect(result).toBe(expectedResult);
     });
 
     it("should handle null", () => {
       const timestampWithTimeZone = null;
       const expectedResult = null;
-      const result = getReadableTime(
+      const result = getReadableLocalTime(
         timestampWithTimeZone as unknown as string,
       );
       expect(result).toBe(expectedResult);
