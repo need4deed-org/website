@@ -34,4 +34,4 @@ you can ignore them, comments are not rendered in Gitlab -->
 
 <!-- Please assess what's the impact of the bug on the whole project -->
 
-<!-- Please remove all the empty sections, please add necesarry lables after filling out the issue -->
+<!-- Please remove all the empty sections, please add necessary labels after filling out the issue -->
