@@ -27,7 +27,7 @@ export default function OpportunityCards({
   if (
     opportunities?.length &&
     opportunityParams.search?.opportunity_type.includes(
-      OpportunityType.ACCOMPANYING
+      OpportunityType.ACCOMPANYING,
     )
 
   ) {
