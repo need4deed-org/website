@@ -1,6 +1,11 @@
 import { MutableRefObject } from "react";
 
-import { CLOUDFRONT_URL, timeZone } from "../config/constants";
+import {
+  CLOUDFRONT_URL,
+  offsetCET,
+  offsetLocal,
+  timeZone,
+} from "../config/constants";
 import {
   AlfredOpportunity,
   Env,
@@ -289,4 +294,18 @@ export function consoleLogDeveloperContributionMessage() {
     `color: ${secondaryColor}; font-size: 1rem;`,
     `color: ${tertiaryColor}; font-size: 1rem; text-decoration: underline;`,
   );
+}
+
+export function getDateCETtoUTC(dateStrCET: string | undefined) {
+  /*
+   * This function converts a date string in Central European Time (CET) to its equivalent
+   * in Coordinated Universal Time (UTC). It parses the CET string, constructs a UTC date
+   * object using the parsed values, and then adjusts for the time difference between the
+   * local timezone and CET before returning the UTC date as an ISO string.
+   */
+  if (!dateStrCET) return undefined;
+
+  return new Date(
+    new Date(dateStrCET).valueOf() + (offsetLocal - offsetCET),
+  ).toISOString();
 }
