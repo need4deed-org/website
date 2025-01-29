@@ -1,6 +1,6 @@
 import { MutableRefObject } from "react";
 
-import { CLOUDFRONT_URL } from "../config/constants";
+import { CLOUDFRONT_URL, timeZone } from "../config/constants";
 import {
   AlfredOpportunity,
   Env,
@@ -200,20 +200,36 @@ export function getMainCtaUrl({ lng, id = "", title = "" }: MainCtaUrl) {
   return `/${Subpages.BECOME_VOLUNTEER}/${lng}/?id=${id}&title=${title}`;
 }
 
-export function getReadableTime(timestamp: string, locale = "en-US") {
+export function getLocale(lang: Lang) {
+  if (lang === Lang.EN) return "en-UK";
+
+  return lang;
+}
+
+export function getReadableLocalTime(
+  timestamp: string,
+  locale = getLocale(Lang.EN),
+) {
   if (timestamp === null) return null;
 
-  const date = new Date(timestamp);
+  try {
+    const dateUTC = new Date(timestamp.replace("+00", "Z"));
 
-  if (Number.isNaN(date.getDate())) return timestamp;
+    if (Number.isNaN(dateUTC.getDate())) return timestamp;
 
-  const formattedDate = date.toLocaleDateString(locale, {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
+    const dateFormatter = new Intl.DateTimeFormat(locale, {
+      timeZone,
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+    });
 
-  return formattedDate;
+    return dateFormatter.format(dateUTC);
+  } catch (error) {
+    return "Invalid date";
+  }
 }
 
 export function parseYesNo(value: boolean | undefined): YesNo {

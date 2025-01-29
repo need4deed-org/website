@@ -4,7 +4,7 @@ import { Lang } from "../../config/types";
 import {
   getMainCtaUrl,
   getOpportunityImg,
-  getReadableTime,
+  getReadableLocalTime,
   isoCodesToNames,
   isRtlLang,
 } from "../../utils";
@@ -51,7 +51,7 @@ export default function OpportunityCard({ opportunity, pre = false }: Props) {
         <strong>{isoCodesToNames(opportunity.languages)}</strong>
       </p>
       <h6>Time:</h6>
-      <p>{getReadableTime(opportunity.time, i18n.language)}</p>
+      <p>{getReadableLocalTime(opportunity.time, i18n.language)}</p>
       <h6>Location:</h6>
       <p>{opportunity.location}</p>
       <a
