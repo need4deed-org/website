@@ -31,3 +31,6 @@ export const FF = {
 };
 
 export const timeZone = import.meta.env.VITE_TZ || "Europe/Berlin";
+
+export const offsetCET = -60 * 60 * 1000; // CET to UTC in ms
+export const offsetLocal = new Date().getTimezoneOffset() * 60 * 1000; // Local TZ to UTC in ms
