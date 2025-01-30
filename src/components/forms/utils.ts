@@ -10,7 +10,7 @@ import {
   TranslatedIntoType,
   TypePLZ,
 } from "../../config/types";
-import { parseYesNo } from "../../utils";
+import { getDateCETtoUTC, parseYesNo } from "../../utils";
 import {
   OpportunityData,
   OpportunityParsedData,
@@ -116,7 +116,7 @@ export function parseFormStateDTOOpportunity(value: OpportunityData) {
   data.vo_information = value.voInformation;
   data.accomp_address = value.aaAddress;
   data.accomp_postcode = value.aaPostcode;
-  data.accomp_datetime = value.dateTime;
+  data.accomp_datetime = getDateCETtoUTC(value.dateTime);
   data.accomp_name = value.refugeeName;
   data.accomp_phone = value.refugeeNumber;
   data.accomp_information = value.aaInformation;
