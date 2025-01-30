@@ -15,7 +15,7 @@ export interface OpportunityData {
   translatedInto?: TranslatedIntoType;
   aaAddress: string;
   aaPostcode: string;
-  dateTime?: Date;
+  dateTime?: string;
   refugeeName: string;
   refugeeNumber: string;
   aaInformation: string;
@@ -48,7 +48,7 @@ export interface OpportunityParsedData {
   opportunity_type: OpportunityType;
   accomp_address: string;
   accomp_postcode: string;
-  accomp_datetime?: Date;
+  accomp_datetime?: string;
   accomp_name?: string;
   accomp_phone?: string;
   accomp_information?: string;
