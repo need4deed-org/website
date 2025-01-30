@@ -31,3 +31,10 @@ export const FF = {
 };
 
 export const timeZone = import.meta.env.VITE_TZ || "Europe/Berlin";
+
+/* Date().getTimezoneOffset() takes into account daylight saving shifting.
+ * the same effect to offsetCET would be too hacky so it's temporary hardcoded
+ * and luxor dependency is needed to make it sensitive to daylight saving
+ */
+export const offsetCET = -60 * 60 * 1000; // CET to UTC in ms
+export const offsetLocal = new Date().getTimezoneOffset() * 60 * 1000; // Local TZ to UTC in ms

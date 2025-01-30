@@ -32,8 +32,8 @@ export default function OpportunityCards({
   ) {
     opportunities.sort(
       (a, b) =>
-        new Date(b.accomp_datetime).getTime() -
-        new Date(a.accomp_datetime).getTime(),
+        new Date(a.accomp_datetime).getTime() -
+        new Date(b.accomp_datetime).getTime(),
     );
   }
 
