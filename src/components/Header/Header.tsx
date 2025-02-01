@@ -88,33 +88,6 @@ function Header({ showEvent }: Props) {
                     English
                   </button>
                 </li>
-                <li>
-                  <button
-                    className="dropdown-item"
-                    type="button"
-                    onClick={() => handleLanguageChange(Lang.AR)}
-                  >
-                    العربية
-                  </button>
-                </li>
-                <li>
-                  <button
-                    className="dropdown-item"
-                    type="button"
-                    onClick={() => handleLanguageChange(Lang.RU)}
-                  >
-                    Русский
-                  </button>
-                </li>
-                <li>
-                  <button
-                    className="dropdown-item"
-                    type="button"
-                    onClick={() => handleLanguageChange(Lang.TR)}
-                  >
-                    Türkçe
-                  </button>
-                </li>
               </ul>
             </li>
             <li className="nav-item">
