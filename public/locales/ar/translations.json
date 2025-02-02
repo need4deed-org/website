@@ -207,7 +207,7 @@
       }
     }
   },
-  "event": { "menuItem": "VolunTea" },
+  "event": { "menuItem": "VolunTea Event" },
   "VolunTea": {
     "greeting": {
       "invite": "أنت مدعو بشدة لحضور فعالية VolunTea القادمة.",

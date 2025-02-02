@@ -273,7 +273,7 @@
       }
     }
   },
-  "event": { "menuItem": "VolunTea" },
+  "event": { "menuItem": "VolunTea Event" },
   "VolunTea": {
     "greeting": {
       "invite": "Ihr seid herzlich zu unserem nächsten VolunTea eingeladen.",
