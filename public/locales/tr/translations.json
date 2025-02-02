@@ -213,7 +213,7 @@
       }
     }
   },
-  "event": { "menuItem": "VolunTea" },
+  "event": { "menuItem": "VolunTea Event" },
   "VolunTea": {
     "greeting": {
       "invite": "Bir sonraki VolunTea etkinliğimize davetlisiniz.",

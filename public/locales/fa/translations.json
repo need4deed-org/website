@@ -208,7 +208,7 @@
       }
     }
   },
-  "event": { "menuItem": "VolunTea" },
+  "event": { "menuItem": "VolunTea Event" },
   "VolunTea": {
     "greeting": {
       "invite": "شما بیش از حد به VolunTea بعدی ما دعوت شده‌اید.",

@@ -1,7 +1,7 @@
 {
   "language": "English",
   "need4deed": "NEED 4 DEED",
-  "workingWithRefugees": "General volunteering opportunities",
+  "workingWithRefugees": "Volunteering Opportunities",
   "accompanyTranslate": "Accompany and translate",
   "learnMoreButton": "View opportunities",
   "bas2022": "BAS (2022)",
@@ -278,7 +278,7 @@
       }
     }
   },
-  "event": { "menuItem": "VolunTea" },
+  "event": { "menuItem": "VolunTea Event" },
   "VolunTea": {
     "greeting": {
       "invite": "You are more than invited to our next VolunTea.",
@@ -419,7 +419,7 @@
     "saveButton": "Save & Go to Home Page"
   },
   "faqs": {
-    "faqs": "FAQ's",
+    "faqs": "FAQs",
     "title": "Frequently Asked Questions",
     "first_steps_question": "What are the first steps to become a volunteer?",
     "first_steps_answer": "Begin by completing the volunteer application form on the Need4Deed website.",
