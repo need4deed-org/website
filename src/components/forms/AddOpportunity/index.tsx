@@ -2,7 +2,7 @@ import { validate as validateEmail } from "email-validator";
 
 import { useForm } from "@tanstack/react-form";
 import { useTranslation } from "react-i18next";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { eightDays, phoneRegEx, urlApi } from "../../../config/constants";
 import {
   Lang,
@@ -36,11 +36,29 @@ import { OpportunityData, OpportunityParsedData } from "./dataStructure";
 
 const thankYou = "?pointer=form.addOpportunity.thankYou";
 const wentWrong = "?pointer=form.addOpportunity.wentWrong";
+const queryParamsMap: Record<string, keyof ParsedOpportunity> = {
+  name: "fullName",
+  email: "email",
+  phone: "racPhone",
+  address: "racAddress",
+  postcode: "racPostcode",
+};
+
+type ParsedOpportunity = Pick<
+  OpportunityData,
+  "fullName" | "email" | "racPhone" | "racAddress" | "racPostcode"
+>;
 
 export default function AddOpportunity() {
   const navigate = useNavigate();
   const { lng } = useParams();
   const { i18n, t } = useTranslation();
+  const [queryParams] = useSearchParams();
+
+  const parsedOpportunity: Partial<ParsedOpportunity> = {};
+  Object.entries(queryParamsMap).forEach(([queryParam, mappedParam]) => {
+    parsedOpportunity[mappedParam] = queryParams.get(queryParam) || "";
+  });
 
   const { postRequest } = usePostRequest<
     OpportunityParsedData,
@@ -49,13 +67,9 @@ export default function AddOpportunity() {
 
   const formOpportunity = useForm<OpportunityData>({
     defaultValues: {
-      email: "",
-      fullName: "",
+      ...(parsedOpportunity as ParsedOpportunity),
       racName: [],
       title: "",
-      racPhone: "",
-      racAddress: "",
-      racPostcode: "",
       opportunityType: undefined,
       locations: getAllSelectedFalse(useList(ListsOfOptions.LOCATIONS)),
       activities: getAllSelectedFalse(
