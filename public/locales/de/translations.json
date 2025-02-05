@@ -114,6 +114,8 @@
           "languagesIntermediate": {
             "header": "Mittelstufe"
           },
+          "singleLevelError": "Bitte wählen Sie nur auf einer Ebene eine Sprache aus",
+
           "helpText": "Fließend bedeutet, dass du denkst, dass du es unterstützen kannst, falls einige Übersetzungen zwischen Sprachen benötigt werden. Diese Sprachen sind an den Bedürfnissen von Geflüchteten orientiert. Wenn die Sprache, die du als Muttersprache oder fließend sprichst, nicht hier aufgeführt ist, füge sie bitte im letzten Kommentarfeld hinzu!",
           "helpTitle": ""
         },
