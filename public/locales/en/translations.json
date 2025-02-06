@@ -121,6 +121,7 @@
           "languagesIntermediate": {
             "header": "Intermediate"
           },
+          "singleLevelError": "Please pick a language at one level only",
           "helpText": "Fluent means you think you can support it in case some translations between languages are needed\nThese languages are oriented by the needs of refugees, if the language you are native or fluent at is not here, please add it in the last comment section!",
           "helpTitle": ""
         },

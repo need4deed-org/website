@@ -10,6 +10,7 @@ import {
   getOpportunityImg,
   getReadableLocalTime,
   getUrlWithEncodedParams,
+  haveCommonElements,
   isEnumValue,
   isoCodesToNames,
   mapToOpportunity,
@@ -383,6 +384,39 @@ describe("utils", () => {
       const result = getFirstThursdayOfMonth(today);
 
       expect(result).toEqual(firstThursday);
+    });
+  });
+
+  describe("haveCommonElements", () => {
+    it("returns false when arrays have no common elements", () => {
+      expect(haveCommonElements([1, 2, 3], [4, 5, 6])).toBe(false);
+      expect(haveCommonElements(["a", "b"], ["c", "d"], ["e", "f"])).toBe(
+        false,
+      );
+    });
+
+    it("returns true when arrays share at least one common element", () => {
+      expect(haveCommonElements([1, 2, 3], [3, 4, 5])).toBe(true);
+      expect(
+        haveCommonElements(["apple", "banana"], ["banana", "cherry"]),
+      ).toBe(true);
+    });
+
+    it("returns false when given only one array", () => {
+      expect(haveCommonElements([1, 2, 3])).toBe(false);
+    });
+
+    it("returns false when all arrays are empty", () => {
+      expect(haveCommonElements([], [], [])).toBe(false);
+    });
+
+    it("returns true when arrays contain duplicate elements within themselves", () => {
+      expect(haveCommonElements([1, 1, 2], [2, 3, 4])).toBe(true);
+    });
+
+    it("works with mixed data types", () => {
+      expect(haveCommonElements([1, "hello"], ["hello", true])).toBe(true);
+      expect(haveCommonElements([null, undefined], [false, 0])).toBe(false);
     });
   });
 });
