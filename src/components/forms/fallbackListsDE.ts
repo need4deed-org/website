@@ -1,6 +1,8 @@
 import { ListsOfOptionsType } from "../../config/types";
+import { locations } from "./fallbackLists";
 
-const fallbackLists: Partial<ListsOfOptionsType> = {
+const fallbackLists: ListsOfOptionsType = {
+  locations,
   activities: [
     "Kinderbetreuung",
     "Sport",
@@ -94,6 +96,15 @@ const fallbackLists: Partial<ListsOfOptionsType> = {
     "Urdu",
     "Vietnamesisch",
     "Andere",
+  ],
+  leads: [
+    "Plattform für Freiwilligenarbeit",
+    "Soziale Medien",
+    "Ein Newsletter",
+    "Websuche",
+    "Freunde",
+    "Freiwilligenmesse",
+    "Flyer/Plakat",
   ],
 };
 

@@ -38,7 +38,7 @@ export function useListQuery() {
 }
 
 export function getFallbackLists(lang: Lang) {
-  if (lang === Lang.DE) return { ...fallBackListsEN, ...fallBackListsDE };
+  if (lang === Lang.DE) return fallBackListsDE;
 
   return fallBackListsEN;
 }
