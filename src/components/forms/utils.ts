@@ -202,9 +202,16 @@ export function getTimeslotTitle(
 }
 
 export function areLanguagesRepeated(values: VolunteerData) {
-  return haveCommonElements(
-    getSelectedTitles(values.languagesNative),
-    getSelectedTitles(values.languagesFluent),
-    getSelectedTitles(values.languagesIntermediate),
+  const languages = [
+    "languagesNative",
+    "languagesFluent",
+    "languagesIntermediate",
+  ].map((key: string) =>
+    getSelectedTitles(
+      values[
+        key as "languagesNative" | "languagesFluent" | "languagesIntermediate"
+      ],
+    ),
   );
+  return haveCommonElements(...languages);
 }
