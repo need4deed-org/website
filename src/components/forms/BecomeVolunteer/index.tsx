@@ -18,6 +18,7 @@ import MultipleCheckBoxInputsWithMore from "../MultipleCheckBoxInputsWithMore";
 import MultipleRadioInputsWithMore from "../MultipleRadioInputsWithMore";
 import SimpleInputField from "../SimpleInputField";
 import {
+  areLanguagesRepeated,
   getAllSelectedFalse,
   getSchedule,
   getTickMark,
@@ -67,7 +68,15 @@ export default function BecomeVolunteer() {
       comments: "",
       consent: undefined,
     },
-    validators: {},
+    validators: {
+      onSubmit: ({ value }) => {
+        if (areLanguagesRepeated(value)) {
+          return t("form.becomeVolunteer.fields.languages.singleLevelError");
+        }
+
+        return undefined;
+      },
+    },
     onSubmit: ({ value }) => {
       const data = parseFormStateDTOVolunteer(value);
       postRequest(data);
@@ -600,18 +609,20 @@ export default function BecomeVolunteer() {
           {(state) => {
             const errorMessages = Array.from(
               new Set(
-                Object.keys(formVolunteer.state.fieldMeta)
+                Object.keys(state.fieldMeta)
                   .reduce((errorList: string[], key) => {
                     const fieldErrors =
-                      formVolunteer.state.fieldMeta[
-                        key as keyof typeof formVolunteer.state.fieldMeta
+                      state.fieldMeta[
+                        key as keyof typeof state.fieldMeta
                       ].errors.join(", ");
                     errorList.push(fieldErrors);
                     return errorList;
                   }, [])
                   .filter(Boolean),
               ),
-            ).join(", ");
+            )
+              .concat(state.errors as string[])
+              .join(", ");
             return (
               <div className="form-submit">
                 <button

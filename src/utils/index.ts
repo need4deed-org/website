@@ -311,3 +311,19 @@ export function getDateCETtoUTC(dateStrCET: string | undefined) {
     new Date(dateStrCET).valueOf() + (offsetLocal - offsetCET),
   ).toISOString();
 }
+
+/**
+ * Checks if there is at least one common element among multiple arrays.
+ *
+ * @param {...Array<Array<unknown>>} arrays - A list of arrays to check for common elements.
+ * @returns {boolean} - Returns `true` if there is at least one common element, otherwise `false`.
+ *
+ * @example
+ * haveCommonElements([1, 2, 3], [4, 5, 6]) // false
+ * haveCommonElements([1, 2, 3], [3, 4, 5]) // true
+ */
+export function haveCommonElements(...arrays: Array<Array<unknown>>) {
+  const combined = new Set(arrays.flat()); // Flatten and put all in a Set
+  const totalLength = arrays.reduce((sum, arr) => sum + arr.length, 0);
+  return combined.size < totalLength;
+}

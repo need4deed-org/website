@@ -10,7 +10,7 @@ import {
   TranslatedIntoType,
   TypePLZ,
 } from "../../config/types";
-import { getDateCETtoUTC, parseYesNo } from "../../utils";
+import { getDateCETtoUTC, haveCommonElements, parseYesNo } from "../../utils";
 import {
   OpportunityData,
   OpportunityParsedData,
@@ -51,7 +51,7 @@ function getSelectedTimeslots(
   );
 }
 
-function getSelectedTitles(state: Selected[]): string[] {
+export function getSelectedTitles(state: Selected[]): string[] {
   return state.filter(({ selected }) => selected).map(({ title }) => title);
 }
 
@@ -91,7 +91,7 @@ export function parseFormStateDTOVolunteer(value: VolunteerData) {
   data.preferred_berlin_locations = getSelectedTitles(value.locations);
   data.schedule = getSelectedTimeslots(value.availability);
   data.intermediate_languages = getConditionedLanguages(
-    getSelectedTitles(value.languagesFluent),
+    getSelectedTitles(value.languagesIntermediate),
   );
   data.fluent_languages = getConditionedLanguages(
     getSelectedTitles(value.languagesFluent),
@@ -199,4 +199,19 @@ export function getTimeslotTitle(
   }
 
   return title;
+}
+
+export function areLanguagesRepeated(values: VolunteerData) {
+  const languages = [
+    "languagesNative",
+    "languagesFluent",
+    "languagesIntermediate",
+  ].map((key: string) =>
+    getSelectedTitles(
+      values[
+        key as "languagesNative" | "languagesFluent" | "languagesIntermediate"
+      ],
+    ),
+  );
+  return haveCommonElements(...languages);
 }
