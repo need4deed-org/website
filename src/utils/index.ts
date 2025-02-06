@@ -296,6 +296,19 @@ export function consoleLogDeveloperContributionMessage() {
   );
 }
 
+export function getFlatListOfKey<
+  T extends Record<string, Record<string, string[] | unknown>>,
+>(obj: T, key: string): string {
+  return Array.from(
+    new Set(
+      Object.values(obj)
+        .map((value) => value[key])
+        .flat()
+        .filter(Boolean),
+    ),
+  ).join(", ");
+}
+
 /**
  * Converts a date string in Central European Time (CET) to its equivalent
  * in Coordinated Universal Time (UTC). It parses the CET string, constructs a UTC date
