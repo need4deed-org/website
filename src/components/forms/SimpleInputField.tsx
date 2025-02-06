@@ -70,6 +70,7 @@ export default function SimpleInputField<T>({
                     e.target.value as DeepValue<T, DeepKeys<T>>,
                   )
                 }
+                value={field.state.value as string | number | undefined}
               />
               <FieldInfo className="simple-input-form-error" field={field} />
             </label>

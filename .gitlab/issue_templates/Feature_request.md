@@ -23,4 +23,4 @@ you can ignore them, comments are not rendered in Gitlab -->
 
 <!-- e.g. The new subpage has to be visible on the website !-->
 
-<!-- Please remove all the empty sections, please add necesarry lables after filling out the issue -->
+<!-- Please remove all the empty sections, please add necessary labels after filling out the issue -->

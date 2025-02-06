@@ -38,7 +38,7 @@ Contributions are what make the open source community such an amazing place to l
 1. Click the **Fork** button in the top-right corner.
 1. Choose where to fork the repository (usually your own GitLab account).
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for the next steps and detailed contribution guidelines.
+See [CONTRIBUTE.md](CONTRIBUTE.md) for the next steps and detailed contribution guidelines.
 
 ## Tech Stack 🛠️
 

@@ -1,12 +1,12 @@
 {
   "language": "English",
   "need4deed": "NEED 4 DEED",
-  "workingWithRefugees": "General volunteering opportunities",
+  "workingWithRefugees": "Volunteering Opportunities",
   "accompanyTranslate": "Accompany and translate",
   "learnMoreButton": "View opportunities",
   "bas2022": "BAS (2022)",
   "formLink": "https://forms.gle/XWnU4znoAFaU9HfW9",
-  "accompanyingVolunteering": "Accompanying Volunteering", 
+  "accompanyingVolunteering": "Accompanying Volunteering",
   "CookieConsentBanner": {
     "message": "This website uses Google Analytics. By accepting, you help us understand how visitors interact with our website.",
     "decline": "Decline",
@@ -121,6 +121,7 @@
           "languagesIntermediate": {
             "header": "Intermediate"
           },
+          "singleLevelError": "Please pick a language at one level only",
           "helpText": "Fluent means you think you can support it in case some translations between languages are needed\nThese languages are oriented by the needs of refugees, if the language you are native or fluent at is not here, please add it in the last comment section!",
           "helpTitle": ""
         },
@@ -278,7 +279,7 @@
       }
     }
   },
-  "event": { "menuItem": "VolunTea" },
+  "event": { "menuItem": "VolunTea Event" },
   "VolunTea": {
     "greeting": {
       "invite": "You are more than invited to our next VolunTea.",
@@ -419,7 +420,7 @@
     "saveButton": "Save & Go to Home Page"
   },
   "faqs": {
-    "faqs": "FAQ's",
+    "faqs": "FAQs",
     "title": "Frequently Asked Questions",
     "first_steps_question": "What are the first steps to become a volunteer?",
     "first_steps_answer": "Begin by completing the volunteer application form on the Need4Deed website.",

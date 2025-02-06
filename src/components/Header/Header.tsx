@@ -8,10 +8,10 @@ import { getBaseUrl, setLangDirection } from "../../utils";
 import "./Header.css";
 
 interface Props {
-  showEvent?: boolean;
+  showEvent: boolean;
 }
 
-function Header({ showEvent = false }: Props) {
+function Header({ showEvent }: Props) {
   const { i18n, t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
@@ -86,33 +86,6 @@ function Header({ showEvent = false }: Props) {
                     onClick={() => handleLanguageChange(Lang.EN)}
                   >
                     English
-                  </button>
-                </li>
-                <li>
-                  <button
-                    className="dropdown-item"
-                    type="button"
-                    onClick={() => handleLanguageChange(Lang.AR)}
-                  >
-                    العربية
-                  </button>
-                </li>
-                <li>
-                  <button
-                    className="dropdown-item"
-                    type="button"
-                    onClick={() => handleLanguageChange(Lang.RU)}
-                  >
-                    Русский
-                  </button>
-                </li>
-                <li>
-                  <button
-                    className="dropdown-item"
-                    type="button"
-                    onClick={() => handleLanguageChange(Lang.TR)}
-                  >
-                    Türkçe
                   </button>
                 </li>
               </ul>

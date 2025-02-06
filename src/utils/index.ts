@@ -1,6 +1,11 @@
 import { MutableRefObject } from "react";
 
-import { CLOUDFRONT_URL } from "../config/constants";
+import {
+  CLOUDFRONT_URL,
+  offsetCET,
+  offsetLocal,
+  timeZone,
+} from "../config/constants";
 import {
   AlfredOpportunity,
   Env,
@@ -200,20 +205,36 @@ export function getMainCtaUrl({ lng, id = "", title = "" }: MainCtaUrl) {
   return `/${Subpages.BECOME_VOLUNTEER}/${lng}/?id=${id}&title=${title}`;
 }
 
-export function getReadableTime(timestamp: string, locale = "en-US") {
+export function getLocale(lang: Lang) {
+  if (lang === Lang.EN) return "en-UK";
+
+  return lang;
+}
+
+export function getReadableLocalTime(
+  timestamp: string,
+  locale = getLocale(Lang.EN),
+) {
   if (timestamp === null) return null;
 
-  const date = new Date(timestamp);
+  try {
+    const dateUTC = new Date(timestamp.replace("+00", "Z"));
 
-  if (Number.isNaN(date.getDate())) return timestamp;
+    if (Number.isNaN(dateUTC.getDate())) return timestamp;
 
-  const formattedDate = date.toLocaleDateString(locale, {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
+    const dateFormatter = new Intl.DateTimeFormat(locale, {
+      timeZone,
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+    });
 
-  return formattedDate;
+    return dateFormatter.format(dateUTC);
+  } catch (error) {
+    return "Invalid date";
+  }
 }
 
 export function parseYesNo(value: boolean | undefined): YesNo {
@@ -286,4 +307,36 @@ export function getFlatListOfKey<
         .filter(Boolean),
     ),
   ).join(", ");
+}
+
+/**
+ * Converts a date string in Central European Time (CET) to its equivalent
+ * in Coordinated Universal Time (UTC). It parses the CET string, constructs a UTC date
+ * object using the parsed values, and then adjusts for the time difference between the
+ * local timezone and CET before returning the UTC date as an ISO string.
+ * @param {string} dateStrCET - The date string in CET format.
+ * @returns {string|undefined} The UTC date string in ISO format, or undefined if the input is undefined.
+ */
+export function getDateCETtoUTC(dateStrCET: string | undefined) {
+  if (!dateStrCET) return undefined;
+
+  return new Date(
+    new Date(dateStrCET).valueOf() + (offsetLocal - offsetCET),
+  ).toISOString();
+}
+
+/**
+ * Checks if there is at least one common element among multiple arrays.
+ *
+ * @param {...Array<Array<unknown>>} arrays - A list of arrays to check for common elements.
+ * @returns {boolean} - Returns `true` if there is at least one common element, otherwise `false`.
+ *
+ * @example
+ * haveCommonElements([1, 2, 3], [4, 5, 6]) // false
+ * haveCommonElements([1, 2, 3], [3, 4, 5]) // true
+ */
+export function haveCommonElements(...arrays: Array<Array<unknown>>) {
+  const combined = new Set(arrays.flat()); // Flatten and put all in a Set
+  const totalLength = arrays.reduce((sum, arr) => sum + arr.length, 0);
+  return combined.size < totalLength;
 }

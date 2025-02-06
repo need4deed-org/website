@@ -9,8 +9,9 @@ import {
   getFirstThursdayOfMonth,
   getFlatListOfKey,
   getOpportunityImg,
-  getReadableTime,
+  getReadableLocalTime,
   getUrlWithEncodedParams,
+  haveCommonElements,
   isEnumValue,
   isoCodesToNames,
   mapToOpportunity,
@@ -296,38 +297,31 @@ describe("utils", () => {
     });
   });
 
-  describe("getReadableTime", () => {
+  describe("getReadableLocalTime", () => {
     it("should return the original timestamp for invalid dates", () => {
       const invalidTimestamp = "Monday";
-      const result = getReadableTime(invalidTimestamp);
+      const result = getReadableLocalTime(invalidTimestamp);
       expect(result).toBe(invalidTimestamp);
     });
 
     it("should return a formatted date for valid timestamps", () => {
-      const validTimestamp = "2024-11-05T10:00:00.000+01:00";
-      const expectedResult = "November 5, 2024";
-      const result = getReadableTime(validTimestamp);
-      expect(result).toBe(expectedResult);
-    });
-
-    it("should handle different time zones", () => {
-      const timestampWithTimeZone = "2024-12-05T10:00:00.000+02:00";
-      const expectedResult = "December 5, 2024"; // Result should be the same regardless of time zone
-      const result = getReadableTime(timestampWithTimeZone);
+      const validTimestamp = "2024-11-05T10:00:00.000+00";
+      const expectedResult = "5 November 2024 at 11:00";
+      const result = getReadableLocalTime(validTimestamp);
       expect(result).toBe(expectedResult);
     });
 
     it("should handle different locale", () => {
-      const timestampWithTimeZone = "2024-12-05T10:00:00.000+02:00";
-      const expectedResult = "5. Dezember 2024";
-      const result = getReadableTime(timestampWithTimeZone, "de-DE");
+      const timestampWithTimeZone = "2024-12-05T10:00:00.000+00";
+      const expectedResult = "5. Dezember 2024 um 11:00";
+      const result = getReadableLocalTime(timestampWithTimeZone, "de-DE");
       expect(result).toBe(expectedResult);
     });
 
     it("should handle null", () => {
       const timestampWithTimeZone = null;
       const expectedResult = null;
-      const result = getReadableTime(
+      const result = getReadableLocalTime(
         timestampWithTimeZone as unknown as string,
       );
       expect(result).toBe(expectedResult);
@@ -464,6 +458,39 @@ describe("utils", () => {
       const obj: Record<string, Record<string, unknown>> = {};
       const result = getFlatListOfKey(obj, "key");
       expect(result).toBe("");
+    });
+  });
+
+  describe("haveCommonElements", () => {
+    it("returns false when arrays have no common elements", () => {
+      expect(haveCommonElements([1, 2, 3], [4, 5, 6])).toBe(false);
+      expect(haveCommonElements(["a", "b"], ["c", "d"], ["e", "f"])).toBe(
+        false,
+      );
+    });
+
+    it("returns true when arrays share at least one common element", () => {
+      expect(haveCommonElements([1, 2, 3], [3, 4, 5])).toBe(true);
+      expect(
+        haveCommonElements(["apple", "banana"], ["banana", "cherry"]),
+      ).toBe(true);
+    });
+
+    it("returns false when given only one array", () => {
+      expect(haveCommonElements([1, 2, 3])).toBe(false);
+    });
+
+    it("returns false when all arrays are empty", () => {
+      expect(haveCommonElements([], [], [])).toBe(false);
+    });
+
+    it("returns true when arrays contain duplicate elements within themselves", () => {
+      expect(haveCommonElements([1, 1, 2], [2, 3, 4])).toBe(true);
+    });
+
+    it("works with mixed data types", () => {
+      expect(haveCommonElements([1, "hello"], ["hello", true])).toBe(true);
+      expect(haveCommonElements([null, undefined], [false, 0])).toBe(false);
     });
   });
 });
