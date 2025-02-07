@@ -443,8 +443,8 @@
   "opportunityCard": {
     "titles": {
       "languages": "Sprachen",
-      "time": "Zeit",
-      "location": "Standort"
+      "time": "Termin",
+      "location": "Bezirk"
     }
   }
 }
