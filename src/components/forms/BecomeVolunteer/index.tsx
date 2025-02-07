@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 
 import { urlApi } from "../../../config/constants";
-import { ListsOfOptions, Subpages } from "../../../config/types";
+import { Lang, ListsOfOptions, Subpages } from "../../../config/types";
 import useList from "../../../hooks/api/useList";
 import usePostRequest from "../../../hooks/api/usePostRequest";
 import { getImageUrl } from "../../../utils/index";
@@ -32,9 +32,10 @@ const thankYou = "?pointer=form.becomeVolunteer.thankYou";
 
 export default function BecomeVolunteer() {
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { lng } = useParams();
   const [opportunityParams] = useSearchParams();
+  const { language } = i18n;
 
   const { postRequest } = usePostRequest<
     VolunteerParsedData,
@@ -46,7 +47,9 @@ export default function BecomeVolunteer() {
     title: opportunityParams.get("title"),
   };
 
-  const languages = getAllSelectedFalse(useList(ListsOfOptions.LANGUAGES));
+  const languages = getAllSelectedFalse(
+    useList(ListsOfOptions.LANGUAGES, language as Lang),
+  );
 
   const formVolunteer = useForm<VolunteerData>({
     defaultValues: {
@@ -55,16 +58,24 @@ export default function BecomeVolunteer() {
       email: "",
       phone: "",
       postcode: "",
-      locations: getAllSelectedFalse(useList(ListsOfOptions.LOCATIONS)),
+      locations: getAllSelectedFalse(
+        useList(ListsOfOptions.LOCATIONS, language as Lang),
+      ),
       availability: getSchedule(),
       languagesNative: languages,
       languagesFluent: languages,
       languagesIntermediate: languages,
-      activities: getAllSelectedFalse(useList(ListsOfOptions.ACTIVITIES)),
-      skills: getAllSelectedFalse(useList(ListsOfOptions.SKILLS)),
+      activities: getAllSelectedFalse(
+        useList(ListsOfOptions.ACTIVITIES, language as Lang),
+      ),
+      skills: getAllSelectedFalse(
+        useList(ListsOfOptions.SKILLS, language as Lang),
+      ),
       certOfGoodConduct: undefined,
       certMeaslesVaccination: undefined,
-      leadFrom: getAllSelectedFalse(useList(ListsOfOptions.LEADS)),
+      leadFrom: getAllSelectedFalse(
+        useList(ListsOfOptions.LEADS, language as Lang),
+      ),
       comments: "",
       consent: undefined,
     },
