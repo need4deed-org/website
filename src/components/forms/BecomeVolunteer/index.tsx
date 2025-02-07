@@ -35,7 +35,7 @@ export default function BecomeVolunteer() {
   const { t, i18n } = useTranslation();
   const { lng } = useParams();
   const [opportunityParams] = useSearchParams();
-  const { language } = i18n;
+  const language = i18n.language as Lang;
 
   const { postRequest } = usePostRequest<
     VolunteerParsedData,
@@ -48,7 +48,7 @@ export default function BecomeVolunteer() {
   };
 
   const languages = getAllSelectedFalse(
-    useList(ListsOfOptions.LANGUAGES, language as Lang),
+    useList(ListsOfOptions.LANGUAGES, language),
   );
 
   const formVolunteer = useForm<VolunteerData>({
@@ -59,25 +59,22 @@ export default function BecomeVolunteer() {
       phone: "",
       postcode: "",
       locations: getAllSelectedFalse(
-        useList(ListsOfOptions.LOCATIONS, language as Lang),
+        useList(ListsOfOptions.LOCATIONS, language),
       ),
       availability: getSchedule(),
       languagesNative: languages,
       languagesFluent: languages,
       languagesIntermediate: languages,
       activities: getAllSelectedFalse(
-        useList(ListsOfOptions.ACTIVITIES, language as Lang),
+        useList(ListsOfOptions.ACTIVITIES, language),
       ),
-      skills: getAllSelectedFalse(
-        useList(ListsOfOptions.SKILLS, language as Lang),
-      ),
+      skills: getAllSelectedFalse(useList(ListsOfOptions.SKILLS, language)),
       certOfGoodConduct: undefined,
       certMeaslesVaccination: undefined,
-      leadFrom: getAllSelectedFalse(
-        useList(ListsOfOptions.LEADS, language as Lang),
-      ),
+      leadFrom: getAllSelectedFalse(useList(ListsOfOptions.LEADS, language)),
       comments: "",
       consent: undefined,
+      language,
     },
     validators: {
       onSubmit: ({ value }) => {
