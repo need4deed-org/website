@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
+
 import fallBackListsEN from "../../components/forms/fallbackLists";
 import fallBackListsDE from "../../components/forms/fallbackListsDE";
 import { urlApiVolunteer } from "../../config/constants";
@@ -38,7 +39,7 @@ export function useListQuery() {
 }
 
 export function getFallbackLists(lang: Lang) {
-  if (lang === Lang.DE) return { ...fallBackListsEN, ...fallBackListsDE };
+  if (lang === Lang.DE) return fallBackListsDE;
 
   return fallBackListsEN;
 }
