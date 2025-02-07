@@ -442,5 +442,12 @@
     "training_answer": "Every few months training are offered, especially for those supporting with translations.",
     "group_volunteering_question": "Can I volunteer with a group or organisation?",
     "group_volunteering_answer": "Yes, group volunteering is encouraged, especially for those supporting refugee accommodation centers."
+  },
+  "opportunityCard": {
+    "titles": {
+      "languages": "Languages",
+      "time": "Time",
+      "location": "Location"
+    }
   }
 }
