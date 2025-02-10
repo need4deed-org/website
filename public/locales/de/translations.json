@@ -439,5 +439,12 @@
     "training_answer": "Alle paar Monate werden Schulungen angeboten, insbesondere für diejenigen, die Übersetzungsunterstützung leisten.",
     "group_volunteering_question": "Kann ich mit einer Gruppe oder Organisation freiwillig arbeiten?",
     "group_volunteering_answer": "Ja, Gruppenfreiwilligenarbeit wird gefördert, insbesondere für diejenigen, die Flüchtlingsunterkünfte unterstützen."
+  },
+  "opportunityCard": {
+    "titles": {
+      "languages": "Sprachen",
+      "time": "Termin",
+      "location": "Bezirk"
+    }
   }
 }
