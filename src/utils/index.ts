@@ -193,7 +193,9 @@ export function getUrlWithEncodedParams(
   const primaryKeys = params.primaryKeys
     ? `primary_keys=${encodeURIComponent(JSON.stringify(params.primaryKeys))}`
     : "";
-  return `${url}?${[...(primaryKeys ? [primaryKeys] : []), ...(search ? [search] : [])].join("&")}`;
+  const language = params.language ? `language=${params.language}` : "";
+
+  return `${url}?${[...(primaryKeys ? [primaryKeys] : []), ...(search ? [search] : []), ...(language ? [language] : [])].join("&")}`;
 }
 
 interface MainCtaUrl {
