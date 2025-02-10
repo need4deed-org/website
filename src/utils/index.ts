@@ -175,27 +175,30 @@ export function mapOpportunity(opportunity: AlfredOpportunity, keyMap: KeyMap) {
   }, {});
 }
 
+const paramEncoderFnMap = {
+  search: (value: unknown) =>
+    `search=${encodeURIComponent(JSON.stringify(value))}`,
+  primaryKeys: (value: unknown) =>
+    `primary_keys=${encodeURIComponent(JSON.stringify(value))}`,
+  language: (value: unknown) => `language=${value}`,
+};
+
 export function getUrlWithEncodedParams(
   url: string,
   params: OpportunityParams,
 ) {
-  try {
-    if (!("search" in params) && !("primaryKeys" in params)) return url;
-  } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error(error);
-    return url;
-  }
+  if (!Object.keys(params).length) return url;
 
-  const search = params.search
-    ? `search=${encodeURIComponent(JSON.stringify(params.search))}`
-    : "";
-  const primaryKeys = params.primaryKeys
-    ? `primary_keys=${encodeURIComponent(JSON.stringify(params.primaryKeys))}`
-    : "";
-  const language = params.language ? `language=${params.language}` : "";
+  const queryStringParams: string[] = [];
 
-  return `${url}?${[...(primaryKeys ? [primaryKeys] : []), ...(search ? [search] : []), ...(language ? [language] : [])].join("&")}`;
+  Object.entries(params).forEach(([key, value]) => {
+    const typedKey = key as keyof OpportunityParams;
+    const encoderFn = paramEncoderFnMap[typedKey];
+
+    if (value && encoderFn) queryStringParams.push(encoderFn(value));
+  });
+
+  return `${url}?${queryStringParams.join("&")}`;
 }
 
 interface MainCtaUrl {
