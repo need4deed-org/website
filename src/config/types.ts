@@ -134,7 +134,6 @@ export enum ListsOfOptions {
   ACTIVITIES_ACCOMPANYING = "activitiesAccompanying",
   SKILLS = "skills",
   LEADS = "leads",
-  RAC_NAMES = "racNames",
 }
 
 export type ListsOfOptionsType = Record<`${ListsOfOptions}`, string[]>;

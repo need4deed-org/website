@@ -134,16 +134,16 @@
           "header": "Führungszeugnis",
           "error": "Bitte wähle mindestens eine Aktivität aus",
           "why": "Warum brauche ich das?",
-          "yes": "Ich habe eines",
-          "no": "Muss beantragt werden",
+          "true": "Ich habe eines",
+          "false": "Muss beantragt werden",
           "helpText": "",
           "helpTitle": ""
         },
         "certMeaslesVaccination": {
           "header": "Masernimpfnachweis",
           "error": "Bitte wähle mindestens eine Aktivität aus",
-          "yes": "Ich habe einen",
-          "no": "Muss nachgewiesen werden",
+          "true": "Ich habe einen",
+          "false": "Muss nachgewiesen werden",
           "helpText": "",
           "helpTitle": ""
         },
@@ -439,5 +439,12 @@
     "training_answer": "Alle paar Monate werden Schulungen angeboten, insbesondere für diejenigen, die Übersetzungsunterstützung leisten.",
     "group_volunteering_question": "Kann ich mit einer Gruppe oder Organisation freiwillig arbeiten?",
     "group_volunteering_answer": "Ja, Gruppenfreiwilligenarbeit wird gefördert, insbesondere für diejenigen, die Flüchtlingsunterkünfte unterstützen."
+  },
+  "opportunityCard": {
+    "titles": {
+      "languages": "Sprachen",
+      "time": "Termin",
+      "location": "Bezirk"
+    }
   }
 }

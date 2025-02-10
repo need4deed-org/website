@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import ReactGA from "react-ga4";
 import AppContainerContext from "../../contexts/AppContainerContext";
 import { Lang, Subpages } from "../../config/types";
@@ -16,6 +16,7 @@ function Header({ showEvent }: Props) {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
   const containerRef = useContext(AppContainerContext);
+  const [queryParams] = useSearchParams();
 
   const toggleMenu = () => {
     setIsOpen((prev) => !prev);
@@ -23,7 +24,9 @@ function Header({ showEvent }: Props) {
 
   const handleLanguageChange = (lng: Lang) => {
     setLangDirection(containerRef, lng as Lang);
-    navigate(`${getBaseUrl(window.location.href)}/${lng}`);
+    navigate(
+      `${getBaseUrl(window.location.href)}/${lng}${queryParams.size ? `/?${queryParams}` : ""}`,
+    );
   };
 
   const handleAccompanyingButtonClick = () => {

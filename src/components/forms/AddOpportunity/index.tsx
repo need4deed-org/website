@@ -54,6 +54,7 @@ export default function AddOpportunity() {
   const { lng } = useParams();
   const { i18n, t } = useTranslation();
   const [queryParams] = useSearchParams();
+  const { language } = i18n;
 
   const parsedOpportunity: Partial<ParsedOpportunity> = {};
   Object.entries(queryParamsMap).forEach(([queryParam, mappedParam]) => {
@@ -71,17 +72,21 @@ export default function AddOpportunity() {
       racName: [],
       title: "",
       opportunityType: undefined,
-      locations: getAllSelectedFalse(useList(ListsOfOptions.LOCATIONS)),
+      locations: getAllSelectedFalse(
+        useList(ListsOfOptions.LOCATIONS, language as Lang),
+      ),
       activities: getAllSelectedFalse(
-        useList(ListsOfOptions.ACTIVITIES, Lang.DE),
+        useList(ListsOfOptions.ACTIVITIES, language as Lang),
       ),
       activitiesAccompanying: getAllSelectedFalse(
         useList(ListsOfOptions.ACTIVITIES_ACCOMPANYING),
       ),
       languages: getAllSelectedFalse(
-        useList(ListsOfOptions.LANGUAGES, Lang.DE),
+        useList(ListsOfOptions.LANGUAGES, language as Lang),
       ),
-      skills: getAllSelectedFalse(useList(ListsOfOptions.SKILLS, Lang.DE)),
+      skills: getAllSelectedFalse(
+        useList(ListsOfOptions.SKILLS, language as Lang),
+      ),
       aaAddress: "",
       aaPostcode: "",
       schedule: getSchedule(),
@@ -103,7 +108,7 @@ export default function AddOpportunity() {
   });
 
   return (
-    <div key={i18n.language} className="n4d-container form-container">
+    <div key={language} className="n4d-container form-container">
       <div className="form-container-header">
         <h1>
           {t("form.addOpportunity.header").toLocaleUpperCase()}
