@@ -178,7 +178,9 @@
       },
       "wentWrong": {
         "header": "Sorry something went wrong on our side :-(",
-        "para": "Please check if your email and other data is correct and try once more."
+        "para": "For now, please apply using these Google Forms:",
+        "volunteeringLink": "Regular volunteering",
+        "accompanyingLink": "Accompanying"
       },
       "temporaryDown": {
         "header": "We apologize, but something went wrong on our site. Please contact contact@need4deed.org.",

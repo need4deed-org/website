@@ -1,4 +1,5 @@
 import { validate as validateEmail } from "email-validator";
+import { useState } from "react";
 
 import { useForm } from "@tanstack/react-form";
 import { useTranslation } from "react-i18next";
@@ -33,9 +34,9 @@ import {
 } from "../utils";
 import { validateRACEmail } from "../validators";
 import { OpportunityData, OpportunityParsedData } from "./dataStructure";
+import ErrorAnnouncement from "./ErrorAnnouncement";
 
-const thankYou = "?pointer=form.addOpportunity.thankYou";
-const wentWrong = "?pointer=form.addOpportunity.wentWrong";
+const thankYou = "form.addOpportunity.thankYou";
 const queryParamsMap: Record<string, keyof ParsedOpportunity> = {
   name: "fullName",
   email: "email",
@@ -55,6 +56,7 @@ export default function AddOpportunity() {
   const { i18n, t } = useTranslation();
   const [queryParams] = useSearchParams();
   const { language } = i18n;
+  const [showErrorAnnouncement, setShowErrorAnnouncement] = useState(false);
 
   const parsedOpportunity: Partial<ParsedOpportunity> = {};
   Object.entries(queryParamsMap).forEach(([queryParam, mappedParam]) => {
@@ -102,10 +104,17 @@ export default function AddOpportunity() {
     onSubmit: async ({ value }) => {
       const data = parseFormStateDTOOpportunity(value);
       const { success } = await postRequest(data);
-      const pointer = success ? thankYou : wentWrong;
-      navigate(`/${Subpages.ANNOUNCEMENT}/${lng}${pointer}`);
+      if (success) {
+        navigate(`/${Subpages.ANNOUNCEMENT}/${lng}?pointer=${thankYou}`);
+      } else {
+        setShowErrorAnnouncement(true);
+      }
     },
   });
+
+  if (showErrorAnnouncement) {
+    return <ErrorAnnouncement />;
+  }
 
   return (
     <div key={language} className="n4d-container form-container">
