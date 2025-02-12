@@ -184,7 +184,8 @@
       "fields": {
         "title": {
           "label": "Was wird gebraucht?",
-          "example": "z.B. \"Begleitung zur Augenklinik\", \"Basteln & Malen\""
+          "example": "z.B. \"Begleitung zur Augenklinik\", \"Basteln & Malen\"",
+          "errorTooLong": "Bitte kürzen Sie den Titel auf 128 Zeichen"
         },
         "consent": {
           "header": "",
