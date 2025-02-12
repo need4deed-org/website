@@ -174,7 +174,9 @@
       },
       "wentWrong": {
         "header": "Entschuldigung, auf unserer Seite ist etwas schief gelaufen :-(",
-        "para": "Bitte überprüfen Sie, ob alle anderen Angaben (z.B. Betreiber, Kontakt) korrekt sind und versuchen Sie es erneut oder wenden Sie sich an contact@need4deed.org."
+        "para": "Bitte bewerbt euch zunächst über diese Google-Formulare:",
+        "volunteeringLink": "Freizeit",
+        "accompanyingLink": "Begleitung"
       },
       "temporaryDown": {
         "header": "Entschuldigung, auf unserer Seite ist etwas schiefgelaufen. Bitte wenden Sie an contact@need4deed.org.",
