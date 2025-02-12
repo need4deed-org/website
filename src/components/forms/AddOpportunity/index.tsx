@@ -140,9 +140,15 @@ export default function AddOpportunity() {
             name="title"
             FieldTag={formOpportunity.Field}
             label={t("form.addOpportunity.fields.title.label")}
-            onChangeValidator={({ value }) =>
-              !value ? t("form.error.required") : undefined
-            }
+            onChangeValidator={({ value }) => {
+              if (!value) return t("form.error.required");
+
+              if ((value as string).length > 128) {
+                return t("form.addOpportunity.fields.title.errorTooLong");
+              }
+
+              return undefined;
+            }}
           />
           <i className="m-1">{t("form.addOpportunity.fields.title.example")}</i>
         </div>

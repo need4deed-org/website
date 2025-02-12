@@ -190,7 +190,8 @@
       "fields": {
         "title": {
           "label": "What help is needed in short",
-          "example": "E.g. \"Accompanying to the eye clinic\" or \"Crafts & painting\""
+          "example": "E.g. \"Accompanying to the eye clinic\" or \"Crafts & painting\"",
+          "errorTooLong": "Please shorten the title to 128 chars"
         },
         "consent": {
           "header": "",
