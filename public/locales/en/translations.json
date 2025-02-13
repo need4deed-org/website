@@ -282,7 +282,7 @@
       }
     }
   },
-  "event": { "menuItem": "VolunTea Event" },
+  "event": { "menuItem": "Cooking Event" },
   "VolunTea": {
     "greeting": {
       "invite": "You are more than invited to our next VolunTea.",
@@ -306,6 +306,24 @@
       "address": {
         "floor": "First floor",
         "lead": "Enter through the small door, directly next to  (left of) the main paring entrance"
+      }
+    }
+  },
+  "eventCooking": {
+    "greeting": {
+      "invite": "Dear Volunteers (past, current and future",
+      "when": "You are more than invited to help us plan our next communal cooking event coming up around mid march."
+    },
+    "main": {
+      "title": "What to expect?",
+      "para1": "A gathering of volunteers to cook and eat together and hear from each other about different ways to support refugees living in accommodation centers around Berlin.",
+      "para2": "If you are into cooking and would like to be in the menus planning and shopping team, write us at",
+      "para3": "If you want to join the event, we will give an update and a registration link once we have all the details",
+      "para4": "Who is welcome to join? (everyone"
+    },
+    "outro": {
+      "rsvp": {
+        "email": "volunteer@need4deed.org"
       }
     }
   },

@@ -305,6 +305,24 @@
       }
     }
   },
+  "eventCooking": {
+    "greeting": {
+      "invite": "Liebe Freiwillige (ehemalige, aktuelle und zukünftige",
+      "when": "Ihr seid herzlich eingeladen, uns bei der Planung unseres nächsten gemeinsamen Kochevents zu unterstützen, das voraussichtlich Mitte März stattfinden wird."
+    },
+    "main": {
+      "title": "Was euch erwartet?",
+      "para1": "Ein Treffen von Freiwilligen, um gemeinsam zu kochen, zu essen und sich auszutauschen - sowohl untereinander als auch mit unserem Team. Wir sprechen darüber, wie es ist, Geflüchtete zu unterstützen, und überlegen gemeinsam neue Wege, um Menschen in Not in Berlin zu helfen.",
+      "para2": "Wenn du gerne kochst und Teil des Teams für Menüplanung und Einkauf sein möchtest, schreib uns an",
+      "para3": "Wenn du einfach am Event teilnehmen möchtest, keine Sorge - wir geben ein Update und schicken einen Anmeldelink, sobald alle Details feststehen.",
+      "para4": "Wer kann mitmachen? (Alle"
+    },
+    "outro": {
+      "rsvp": {
+        "email": "volunteer@need4deed.org"
+      }
+    }
+  },
   "eventHolidayGift": {
     "header": "Weihnachtsgeschenke für Geflüchtete Kinder",
     "paras": {
