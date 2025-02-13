@@ -308,7 +308,8 @@
   "eventCooking": {
     "greeting": {
       "invite": "Liebe Freiwillige (ehemalige, aktuelle und zukünftige",
-      "when": "Ihr seid herzlich eingeladen, uns bei der Planung unseres nächsten gemeinsamen Kochevents zu unterstützen, das voraussichtlich Mitte März stattfinden wird."
+      "when": "Ihr seid herzlich eingeladen, uns bei der Planung unseres nächsten gemeinsamen Kochevents zu unterstützen, das voraussichtlich Mitte März stattfinden wird.",
+      "registration": "Anmeldung"
     },
     "main": {
       "title": "Was euch erwartet?",

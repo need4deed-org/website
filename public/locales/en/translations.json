@@ -312,7 +312,8 @@
   "eventCooking": {
     "greeting": {
       "invite": "Dear Volunteers (past, current and future",
-      "when": "You are more than invited to help us plan our next communal cooking event coming up around mid march."
+      "when": "You are more than invited to help us plan our next communal cooking event coming up around mid march.",
+      "registration": "Registration"
     },
     "main": {
       "title": "What to expect?",

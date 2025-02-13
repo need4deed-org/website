@@ -6,6 +6,8 @@ import "./index.css";
 const smilingFace = "\u{1F60A}"; // modern Unicode code point
 const winkingFace = "\u{1F609}";
 
+const registrationHref = "https://forms.gle/eFmtwmLpw53P5A6M9 ";
+
 export default function EventCookingMeet() {
   const { t } = useTranslation();
   const sonyaVolunteePicStyle = {
@@ -22,8 +24,12 @@ export default function EventCookingMeet() {
       <br />
       <br />
       <h6>{`${t("eventCooking.greeting.invite")}${smilingFace})`}</h6>
-      <br />
       <h6>{t("eventCooking.greeting.when")}</h6>
+      <h6>
+        <a href={registrationHref} target="_blank" rel="noreferrer">
+          {t("eventCooking.greeting.registration")}
+        </a>
+      </h6>
       <br />
       <div className="pic-and-text">
         <div style={sonyaVolunteePicStyle} />
