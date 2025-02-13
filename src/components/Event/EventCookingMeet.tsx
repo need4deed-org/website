@@ -3,6 +3,9 @@ import { useTranslation } from "react-i18next";
 import { getImageUrl } from "../../utils/index";
 import "./index.css";
 
+const smilingFace = "\u{1F60A}"; // modern Unicode code point
+const winkingFace = "\u{1F609}";
+
 export default function EventCookingMeet() {
   const { t } = useTranslation();
   const sonyaVolunteePicStyle = {
@@ -18,7 +21,7 @@ export default function EventCookingMeet() {
       <h1>Cooking Event</h1>
       <br />
       <br />
-      <h6>{`${t("eventCooking.greeting.invite")} 😊)`}</h6>
+      <h6>{`${t("eventCooking.greeting.invite")}${smilingFace})`}</h6>
       <br />
       <h6>{t("eventCooking.greeting.when")}</h6>
       <br />
@@ -34,12 +37,11 @@ export default function EventCookingMeet() {
             </p>
           </p>
           <p className="event-timeslot">{t("eventCooking.main.para3")}</p>
-          <p>{`${t("eventCooking.main.para4")} 😉)`}</p>
-          <br />
-          <p>{t("VolunTea.main.para2")}</p>
-          <p>{t("VolunTea.main.para3")}</p>
-          <p>{t("VolunTea.main.para4")}</p>
-          <p>{t("VolunTea.main.para5")}</p>
+          <p>{`${t("eventCooking.main.para4")}${winkingFace})`}</p>
+          <p>{t("eventCooking.main.para5")}</p>
+          <p>{t("eventCooking.main.para6")}</p>
+          <p>{t("eventCooking.main.para7")}</p>
+          <p>{t("eventCooking.main.para8")}</p>
         </div>
       </div>
 
