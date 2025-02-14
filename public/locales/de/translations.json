@@ -278,7 +278,7 @@
       }
     }
   },
-  "event": { "menuItem": "VolunTea Event" },
+  "event": { "menuItem": "Cooking Event" },
   "VolunTea": {
     "greeting": {
       "invite": "Ihr seid herzlich zu unserem nächsten VolunTea eingeladen.",
