@@ -1,5 +1,5 @@
 import { YesNo } from "../../../config/types";
-import { Availability, Selected } from "../types";
+import { Availability, OptionId, Selected } from "../types";
 
 export interface VolunteerData {
   opportunityId: string;
@@ -41,12 +41,12 @@ export interface VolunteerParsedData {
   good_conduct_certificate: YesNo;
   if_measles_vaccination: boolean;
   lead_from: string;
-  schedule: [number, string][];
-  preferred_berlin_locations: string[];
-  activities: string[];
-  skills: string[];
-  native_languages: string[];
-  fluent_languages: string[];
-  intermediate_languages: string[];
+  schedule: [number, OptionId][];
+  preferred_berlin_locations: OptionId[];
+  activities: OptionId[];
+  skills: OptionId[];
+  native_languages: OptionId[];
+  fluent_languages: OptionId[];
+  intermediate_languages: OptionId[];
   comments: string;
 }
