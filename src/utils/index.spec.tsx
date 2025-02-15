@@ -16,6 +16,7 @@ import {
   mapToOpportunity,
   parseYesNo,
   pivotArrayToObj,
+  range,
   setLangDirection,
 } from "./index";
 
@@ -417,6 +418,56 @@ describe("utils", () => {
     it("works with mixed data types", () => {
       expect(haveCommonElements([1, "hello"], ["hello", true])).toBe(true);
       expect(haveCommonElements([null, undefined], [false, 0])).toBe(false);
+    });
+  });
+
+  describe("range", () => {
+    it("should generate numbers within the specified range with default step", () => {
+      const result = Array.from(range(0, 5));
+      expect(result).toEqual([0, 1, 2, 3, 4]);
+    });
+
+    it("should generate numbers within the specified range with a custom step", () => {
+      const result = Array.from(range(1, 10, 2));
+      expect(result).toEqual([1, 3, 5, 7, 9]);
+    });
+
+    it("should handle negative start and end values", () => {
+      const result = Array.from(range(-5, 0));
+      expect(result).toEqual([-5, -4, -3, -2, -1]);
+    });
+
+    it("should handle negative step", () => {
+      const result = Array.from(range(5, 0, -1));
+      expect(result).toEqual([5, 4, 3, 2, 1]);
+    });
+
+    it("should handle start equal to end", () => {
+      const result = Array.from(range(5, 5));
+      expect(result).toEqual([]);
+    });
+
+    it("should throw TypeError if start is not a number", () => {
+      expect(() => Array.from(range("a" as unknown as number, 5))).toThrow(
+        TypeError,
+      );
+    });
+
+    it("should throw TypeError if end is not a number", () => {
+      expect(() => Array.from(range(0, "b" as unknown as number))).toThrow(
+        TypeError,
+      );
+    });
+
+    it("should throw TypeError if step is not a number", () => {
+      expect(() => Array.from(range(0, 5, "c" as unknown as number))).toThrow(
+        TypeError,
+      );
+    });
+
+    it("should throw RangeError if step is zero", () => {
+      expect(() => Array.from(range(0, 5, 0.4))).toThrow(RangeError);
+      expect(() => Array.from(range(0, 5, 0))).toThrow(RangeError);
     });
   });
 });
