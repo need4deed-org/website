@@ -1,15 +1,14 @@
 import { useQuery } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 
-import fallBackListsEN from "../../components/forms/fallbackLists";
-import fallBackListsDE from "../../components/forms/fallbackListsDE";
-import { urlApiVolunteer } from "../../config/constants";
+import fallbackLists from "../../components/forms/fallbackLists";
 import {
-  HttpMethod,
-  Lang,
   ListsOfOptions,
   ListsOfOptionsType,
-} from "../../config/types";
+  Option,
+} from "../../components/forms/types";
+import { urlApiVolunteer } from "../../config/constants";
+import { HttpMethod } from "../../config/types";
 import fetchFn from "./utils";
 
 const FF_USE_OPTIONS_LISTS = false;
@@ -38,19 +37,9 @@ export function useListQuery() {
   return [listData];
 }
 
-export function getFallbackLists(lang: Lang) {
-  if (lang === Lang.DE) return fallBackListsDE;
-
-  return fallBackListsEN;
-}
-
-export default function useList(
-  listType: ListsOfOptions,
-  lang: Lang = Lang.EN,
-) {
-  const [list, setList] = useState<string[]>([]);
+export default function useList(listType: ListsOfOptions) {
+  const [list, setList] = useState<Option[]>([]);
   const [listsOptions] = useListQuery();
-  const fallbackLists = getFallbackLists(lang);
 
   useEffect(() => {
     const listTmp = listsOptions
@@ -58,7 +47,7 @@ export default function useList(
       : [];
 
     setList(listTmp?.length ? listTmp : fallbackLists[listType]);
-  }, [fallbackLists, listType, listsOptions]);
+  }, [listType, listsOptions]);
 
   return list;
 }
