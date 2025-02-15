@@ -5,12 +5,13 @@ import {
   minPLZBerlin,
   minPLZGermany,
 } from "../../config/constants";
+import { OpportunityType, TranslatedIntoType } from "../../config/types";
 import {
-  OpportunityType,
-  TranslatedIntoType,
-  TypePLZ,
-} from "../../config/types";
-import { getDateCETtoUTC, haveCommonElements, parseYesNo } from "../../utils";
+  getDateCETtoUTC,
+  haveCommonElements,
+  parseYesNo,
+  range,
+} from "../../utils";
 import {
   OpportunityData,
   OpportunityParsedData,
@@ -19,64 +20,29 @@ import {
   VolunteerData,
   VolunteerParsedData,
 } from "./BecomeVolunteer/dataStructure";
-import fallbackLists from "./fallbackLists";
-import fallbackListsDE from "./fallbackListsDE";
-import { Availability, Selected, TimeSlot, Weekday } from "./types";
+import {
+  Availability,
+  Option,
+  OptionId,
+  Selected,
+  TimeSlot,
+  TypePLZ,
+} from "./types";
 
-const mapWeekdaysToNumbers: Record<Weekday | "onetime", number> = {
-  onetime: 0,
-  monday: 1,
-  tuesday: 2,
-  wednesday: 3,
-  thursday: 4,
-  friday: 5,
-  saturday: 6,
-  sunday: 7,
-};
-
-function getSelectedTimeslots(
-  state: Availability,
-): [number, TimeSlot | "weekdays" | "weekends"][] {
-  return state.reduce(
-    (result: [number, TimeSlot | "weekdays" | "weekends"][], day) => {
-      day.timeSlots
-        .filter(({ selected }) => selected)
-        .forEach(({ title }) => {
-          const numDay = mapWeekdaysToNumbers[day.weekday];
-          result.push([numDay, title as TimeSlot | "weekdays" | "weekends"]);
-        });
-      return result;
-    },
-    [],
-  );
+function getSelectedTimeslots(state: Availability): [number, OptionId][] {
+  return state.reduce((result: [number, OptionId][], day) => {
+    day.timeSlots
+      .filter(({ selected }) => selected)
+      .forEach(({ id }) => {
+        const numDay = day.weekday;
+        result.push([numDay, id]);
+      });
+    return result;
+  }, []);
 }
 
-export function getSelectedTitles(state: Selected[]): string[] {
-  return state.filter(({ selected }) => selected).map(({ title }) => title);
-}
-
-function getConditionedLanguages(
-  languages: string[],
-  ifMapToEnglishTitles = false,
-) {
-  return languages.map((language) => {
-    let tmpLanguage = language;
-
-    if (ifMapToEnglishTitles) {
-      const idx = fallbackListsDE.languages?.findIndex(
-        (item) => item === language,
-      );
-      tmpLanguage =
-        (idx as number) >= 0
-          ? fallbackLists.languages[idx as number]
-          : tmpLanguage;
-    }
-
-    if (tmpLanguage === "Farsi" || tmpLanguage === "Farsi/Dari")
-      tmpLanguage = "Persian";
-
-    return tmpLanguage;
-  });
+export function getSelectedIds(state: Selected[]): OptionId[] {
+  return state.filter(({ selected }) => selected).map(({ id }) => id);
 }
 
 export function parseFormStateDTOVolunteer(value: VolunteerData) {
@@ -88,22 +54,16 @@ export function parseFormStateDTOVolunteer(value: VolunteerData) {
   data.email = value.email;
   data.phone = value.phone;
   data.postal_code = +value.postcode;
-  data.preferred_berlin_locations = getSelectedTitles(value.locations);
+  data.preferred_berlin_locations = getSelectedIds(value.locations);
   data.schedule = getSelectedTimeslots(value.availability);
-  data.intermediate_languages = getConditionedLanguages(
-    getSelectedTitles(value.languagesIntermediate),
-  );
-  data.fluent_languages = getConditionedLanguages(
-    getSelectedTitles(value.languagesFluent),
-  );
-  data.native_languages = getConditionedLanguages(
-    getSelectedTitles(value.languagesNative),
-  );
-  data.activities = getSelectedTitles(value.activities);
+  data.intermediate_languages = getSelectedIds(value.languagesIntermediate);
+  data.fluent_languages = getSelectedIds(value.languagesFluent);
+  data.native_languages = getSelectedIds(value.languagesNative);
+  data.activities = getSelectedIds(value.activities);
   data.good_conduct_certificate = parseYesNo(value.certOfGoodConduct);
   data.if_measles_vaccination = !!value.certMeaslesVaccination;
-  data.lead_from = getSelectedTitles(value.leadFrom).join(", ");
-  data.skills = getSelectedTitles(value.skills);
+  data.lead_from = getSelectedIds(value.leadFrom).join(", ");
+  data.skills = getSelectedIds(value.skills);
   data.comments = value.comments;
 
   return data;
@@ -127,16 +87,16 @@ export function parseFormStateDTOOpportunity(value: OpportunityData) {
   data.rac_address = value.racAddress;
   data.rac_plz = value.racPostcode;
   data.volunteers_number = parseInt(value.numberVolunteers, 10);
-  data.berlin_locations = getSelectedTitles(value.locations);
+  data.berlin_locations = getSelectedIds(value.locations);
   data.languages =
     value.translatedInto !== TranslatedIntoType.NO_TRANSLATION
-      ? getConditionedLanguages(getSelectedTitles(value.languages), true)
+      ? getSelectedIds(value.languages)
       : [];
-  data.activities = getSelectedTitles([
+  data.activities = getSelectedIds([
     ...value.activities,
     ...value.activitiesAccompanying,
   ]);
-  data.skills = getSelectedTitles(value.skills);
+  data.skills = getSelectedIds(value.skills);
   data.timeslots = getSelectedTimeslots(value.schedule);
   return data;
 }
@@ -163,28 +123,45 @@ export function getDate(datetime: string) {
   return new Date(datetime);
 }
 
-export function getSchedule() {
-  const timeSlots: Selected[] = Object.values(TimeSlot).map((timeSlot) => ({
-    title: timeSlot,
-    selected: false,
-  }));
-  const schedule: Availability = Object.values(Weekday).map((weekday) => ({
-    weekday,
-    timeSlots,
-  }));
+export function getScheduleState(): Availability {
+  const timeSlots: Selected[] = Object.values(TimeSlot)
+    .filter(
+      (timeSlot) =>
+        timeSlot !== TimeSlot.WEEKDAYS && timeSlot !== TimeSlot.WEEKENDS,
+    )
+    .map((timeSlot) => ({
+      id: timeSlot,
+      title: { en: timeSlot, de: timeSlot },
+      selected: false,
+    }));
+  const schedule: Availability = [];
+  // eslint-disable-next-line no-restricted-syntax
+  for (const weekday of range(1, 8)) {
+    schedule.push({ weekday, timeSlots });
+  }
+
   schedule.push({
-    weekday: "onetime",
+    weekday: 0,
     timeSlots: [
-      { title: "Weekdays", selected: false },
-      { title: "Weekends", selected: false },
+      {
+        id: "Weekdays",
+        title: { en: "Weekdays", de: "Wochentage" },
+        selected: false,
+      },
+      {
+        id: "Weekends",
+        title: { en: "Weekends", de: "Wocheenden" },
+        selected: false,
+      },
     ],
   });
 
   return schedule;
 }
 
-export function getAllSelectedFalse(list: string[]): Selected[] {
-  return list.map((title) => ({
+export function getAllSelectedFalse(list: Option[]): Selected[] {
+  return list.map(({ id, title }) => ({
+    id,
     title,
     selected: false,
   }));
@@ -207,11 +184,18 @@ export function areLanguagesRepeated(values: VolunteerData) {
     "languagesFluent",
     "languagesIntermediate",
   ].map((key: string) =>
-    getSelectedTitles(
+    getSelectedIds(
       values[
         key as "languagesNative" | "languagesFluent" | "languagesIntermediate"
       ],
     ),
   );
   return haveCommonElements(...languages);
+}
+
+export function isTimeSlotSelected(state: Availability) {
+  return state
+    .map(({ timeSlots }) => timeSlots)
+    .flat()
+    .some(({ selected }) => selected);
 }
