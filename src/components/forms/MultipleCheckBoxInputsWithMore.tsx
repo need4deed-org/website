@@ -7,6 +7,7 @@ import {
 import { MouseEvent, RefObject, useState } from "react";
 import { useTranslation } from "react-i18next";
 
+import { Lang } from "../../config/types";
 import useOutsideClick from "../../hooks/useOutsideClick";
 import { Selected } from "./types";
 
@@ -28,7 +29,7 @@ export default function MultipleCheckBoxInputsWithMore<
   field,
   hiddenChips = [],
 }: Props<T, K>) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [numItems, setNumItems] = useState(showFirst);
   useOutsideClick({
     ref: refParent,
@@ -53,7 +54,7 @@ export default function MultipleCheckBoxInputsWithMore<
         (field.state.value as []).map((item: Selected, idx) => {
           return (
             <FieldTag
-              key={`${item.title}`}
+              key={`${item.id}`}
               name={`${field.name}[${idx}].selected` as DeepKeys<T>}
             >
               {(innerField) => (
@@ -62,7 +63,7 @@ export default function MultipleCheckBoxInputsWithMore<
                     numItems === 0 || idx < numItems || item.selected
                   }
                   data-chip-hidden={hiddenChips.some(
-                    (chip) => chip === item.title,
+                    (chip) => chip === item.id,
                   )}
                 >
                   <input
@@ -76,7 +77,9 @@ export default function MultipleCheckBoxInputsWithMore<
                       );
                     }}
                   />
-                  <label htmlFor={`${field.name}${idx}`}>{item.title}</label>
+                  <label htmlFor={`${field.name}${idx}`}>
+                    {item.title[i18n.language as Lang]}
+                  </label>
                 </div>
               )}
             </FieldTag>
