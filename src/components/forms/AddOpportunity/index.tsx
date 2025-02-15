@@ -7,11 +7,9 @@ import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { eightDays, phoneRegEx, urlApi } from "../../../config/constants";
 import {
   Lang,
-  ListsOfOptions,
   OpportunityType,
   Subpages,
   TranslatedIntoType,
-  TypePLZ,
 } from "../../../config/types";
 import useList from "../../../hooks/api/useList";
 import usePostRequest from "../../../hooks/api/usePostRequest";
@@ -23,12 +21,14 @@ import HeaderWithHelp from "../HeaderWithHelp";
 import MultipleCheckBoxInputsWithMore from "../MultipleCheckBoxInputsWithMore";
 import MultipleRadioInputsWithMore from "../MultipleRadioInputsWithMore";
 import SimpleInputField from "../SimpleInputField";
+import { ListsOfOptions, TypePLZ } from "../types";
 import {
   getAllSelectedFalse,
   getDate,
-  getSchedule,
+  getScheduleState,
   getTickMark,
   getTimeslotTitle,
+  isTimeSlotSelected,
   isValidPLZ,
   parseFormStateDTOOpportunity,
 } from "../utils";
@@ -74,24 +74,16 @@ export default function AddOpportunity() {
       racName: [],
       title: "",
       opportunityType: undefined,
-      locations: getAllSelectedFalse(
-        useList(ListsOfOptions.LOCATIONS, language as Lang),
-      ),
-      activities: getAllSelectedFalse(
-        useList(ListsOfOptions.ACTIVITIES, language as Lang),
-      ),
+      locations: getAllSelectedFalse(useList(ListsOfOptions.LOCATIONS)),
+      activities: getAllSelectedFalse(useList(ListsOfOptions.ACTIVITIES)),
       activitiesAccompanying: getAllSelectedFalse(
         useList(ListsOfOptions.ACTIVITIES_ACCOMPANYING),
       ),
-      languages: getAllSelectedFalse(
-        useList(ListsOfOptions.LANGUAGES, language as Lang),
-      ),
-      skills: getAllSelectedFalse(
-        useList(ListsOfOptions.SKILLS, language as Lang),
-      ),
+      languages: getAllSelectedFalse(useList(ListsOfOptions.LANGUAGES)),
+      skills: getAllSelectedFalse(useList(ListsOfOptions.SKILLS)),
       aaAddress: "",
       aaPostcode: "",
-      schedule: getSchedule(),
+      schedule: getScheduleState(),
       dateTime: undefined,
       numberVolunteers: "1",
       translatedInto: undefined,
@@ -103,6 +95,10 @@ export default function AddOpportunity() {
     },
     onSubmit: async ({ value }) => {
       const data = parseFormStateDTOOpportunity(value);
+      /* eslint-disable no-console */
+      console.log("DEBUG:opportunity:onSubmit:value:", value);
+      return console.log("DEBUG:opportunity:onSubmit:data:", data);
+      /* eslint-enable no-console */
       const { success } = await postRequest(data);
       if (success) {
         navigate(`/${Subpages.ANNOUNCEMENT}/${lng}?pointer=${thankYou}`);
@@ -537,7 +533,7 @@ export default function AddOpportunity() {
                       onBlur: ({ value }) =>
                         value.some(({ selected }) => selected)
                           ? undefined
-                          : t("form.error.required"),
+                          : t("form.error.activity"),
                     }}
                   >
                     {(field) => {
@@ -641,12 +637,7 @@ export default function AddOpportunity() {
                     name="schedule"
                     validators={{
                       onBlur: ({ value }) => {
-                        const isSelected = !!value.filter(
-                          ({ timeSlots: timeFrames }) =>
-                            !!timeFrames.filter(({ selected }) => selected)
-                              .length,
-                        ).length;
-                        return isSelected
+                        return isTimeSlotSelected(value)
                           ? undefined
                           : t("form.error.availability");
                       },
@@ -673,56 +664,62 @@ export default function AddOpportunity() {
                             }}
                           >
                             {field.state.value &&
-                              field.state.value.map((scheduleActivity, idx) => {
+                              field.state.value.map(({ weekday }, idx) => {
                                 return (
                                   <div
                                     className="form-table-row"
-                                    key={`${scheduleActivity.weekday}`}
+                                    key={`weekday${weekday}`}
                                   >
                                     <span className="form-availability-weekday">
                                       {t(
-                                        `form.schedule.${scheduleActivity.weekday}`,
+                                        `form.schedule.${weekday}`,
                                       ).toLocaleUpperCase()}
                                     </span>
 
                                     <formOpportunity.Field
                                       name={`schedule[${idx}].timeSlots`}
                                     >
-                                      {(weekday) => {
+                                      {(fieldWeekday) => {
                                         return (
-                                          weekday.state.value &&
-                                          weekday.state.value.map(
-                                            ({ title }, idxInner) => (
-                                              <formOpportunity.Field
-                                                key={`${title}${scheduleActivity.weekday}`}
-                                                name={`schedule[${idx}].timeSlots[${idxInner}].selected`}
-                                              >
-                                                {(fieldTimeslot) => (
-                                                  <span className="form-pick">
-                                                    <input
-                                                      tabIndex={0}
-                                                      id={`${scheduleActivity.weekday}${weekday.state.value[idxInner].title}`}
-                                                      type="checkbox"
-                                                      onChange={(e) =>
-                                                        fieldTimeslot.handleChange(
-                                                          e.target.checked,
-                                                        )
-                                                      }
-                                                    />
-                                                    <label
-                                                      htmlFor={`${scheduleActivity.weekday}${weekday.state.value[idxInner].title}`}
-                                                    >
-                                                      <span key={`${title}`}>
-                                                        {getTimeslotTitle(
-                                                          t,
-                                                          title,
-                                                        )}
+                                          fieldWeekday.state.value &&
+                                          fieldWeekday.state.value.map(
+                                            ({ title, id }, idxInner) => {
+                                              return (
+                                                <formOpportunity.Field
+                                                  key={`${weekday}${id}`}
+                                                  name={`schedule[${idx}].timeSlots[${idxInner}].selected`}
+                                                >
+                                                  {(fieldTimeslot) => {
+                                                    return (
+                                                      <span className="form-pick">
+                                                        <input
+                                                          tabIndex={0}
+                                                          id={`${weekday}${idxInner}${fieldWeekday.state.value[idxInner].id}`}
+                                                          type="checkbox"
+                                                          onChange={(e) => {
+                                                            fieldTimeslot.handleChange(
+                                                              e.target.checked,
+                                                            );
+                                                          }}
+                                                        />
+                                                        <label
+                                                          htmlFor={`${weekday}${idxInner}${fieldWeekday.state.value[idxInner].id}`}
+                                                        >
+                                                          <span>
+                                                            {getTimeslotTitle(
+                                                              t,
+                                                              title[
+                                                                i18n.language as Lang
+                                                              ] as string,
+                                                            )}
+                                                          </span>
+                                                        </label>
                                                       </span>
-                                                    </label>
-                                                  </span>
-                                                )}
-                                              </formOpportunity.Field>
-                                            ),
+                                                    );
+                                                  }}
+                                                </formOpportunity.Field>
+                                              );
+                                            },
                                           )
                                         );
                                       }}

@@ -1,11 +1,11 @@
-import { DeepKeys, useForm } from "@tanstack/react-form";
+import { useForm } from "@tanstack/react-form";
 import { validate as validateEmail } from "email-validator";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 
 import { urlApi } from "../../../config/constants";
-import { Lang, ListsOfOptions, Subpages } from "../../../config/types";
+import { Lang, Subpages } from "../../../config/types";
 import useList from "../../../hooks/api/useList";
 import usePostRequest from "../../../hooks/api/usePostRequest";
 import { getImageUrl } from "../../../utils/index";
@@ -17,12 +17,14 @@ import "../index.css";
 import MultipleCheckBoxInputsWithMore from "../MultipleCheckBoxInputsWithMore";
 import MultipleRadioInputsWithMore from "../MultipleRadioInputsWithMore";
 import SimpleInputField from "../SimpleInputField";
+import { ListsOfOptions } from "../types";
 import {
   areLanguagesRepeated,
   getAllSelectedFalse,
-  getSchedule,
+  getScheduleState,
   getTickMark,
   getTimeslotTitle,
+  isTimeSlotSelected,
   isValidPLZ,
   parseFormStateDTOVolunteer,
 } from "../utils";
@@ -35,7 +37,6 @@ export default function BecomeVolunteer() {
   const { t, i18n } = useTranslation();
   const { lng } = useParams();
   const [opportunityParams] = useSearchParams();
-  const { language } = i18n;
 
   const { postRequest } = usePostRequest<
     VolunteerParsedData,
@@ -47,9 +48,7 @@ export default function BecomeVolunteer() {
     title: opportunityParams.get("title"),
   };
 
-  const languages = getAllSelectedFalse(
-    useList(ListsOfOptions.LANGUAGES, language as Lang),
-  );
+  const languages = getAllSelectedFalse(useList(ListsOfOptions.LANGUAGES));
 
   const formVolunteer = useForm<VolunteerData>({
     defaultValues: {
@@ -58,24 +57,16 @@ export default function BecomeVolunteer() {
       email: "",
       phone: "",
       postcode: "",
-      locations: getAllSelectedFalse(
-        useList(ListsOfOptions.LOCATIONS, language as Lang),
-      ),
-      availability: getSchedule(),
+      locations: getAllSelectedFalse(useList(ListsOfOptions.LOCATIONS)),
+      availability: getScheduleState(),
       languagesNative: languages,
       languagesFluent: languages,
       languagesIntermediate: languages,
-      activities: getAllSelectedFalse(
-        useList(ListsOfOptions.ACTIVITIES, language as Lang),
-      ),
-      skills: getAllSelectedFalse(
-        useList(ListsOfOptions.SKILLS, language as Lang),
-      ),
+      activities: getAllSelectedFalse(useList(ListsOfOptions.ACTIVITIES)),
+      skills: getAllSelectedFalse(useList(ListsOfOptions.SKILLS)),
       certOfGoodConduct: undefined,
       certMeaslesVaccination: undefined,
-      leadFrom: getAllSelectedFalse(
-        useList(ListsOfOptions.LEADS, language as Lang),
-      ),
+      leadFrom: getAllSelectedFalse(useList(ListsOfOptions.LEADS)),
       comments: "",
       consent: undefined,
     },
@@ -90,6 +81,10 @@ export default function BecomeVolunteer() {
     },
     onSubmit: ({ value }) => {
       const data = parseFormStateDTOVolunteer(value);
+      /* eslint-disable no-console */
+      console.log("DEBUG:volunteer:onSubmit:value:", value);
+      return console.log("DEBUG:volunteer:onSubmit:data:", data);
+      /* eslint-enable no-console */
       postRequest(data);
     },
   });
@@ -208,11 +203,9 @@ export default function BecomeVolunteer() {
           name="availability"
           validators={{
             onBlur: ({ value }) => {
-              const isSelected = !!value.filter(
-                ({ timeSlots }) =>
-                  !!timeSlots.filter(({ selected }) => selected).length,
-              ).length;
-              return isSelected ? undefined : t("form.error.availability");
+              return isTimeSlotSelected(value)
+                ? undefined
+                : t("form.error.availability");
             },
           }}
         >
@@ -251,29 +244,22 @@ export default function BecomeVolunteer() {
                               ).toLocaleUpperCase()}
                             </span>
                             <formVolunteer.Field
-                              name={
-                                `availability[${idx}].timeSlots` as DeepKeys<VolunteerData>
-                              }
+                              name={`availability[${idx}].timeSlots`}
                             >
-                              {(weekdayField) => {
+                              {(fieldWeekday) => {
                                 return (
-                                  weekdayField.state.value &&
-                                  (weekdayField.state.value as []).map(
-                                    (
-                                      { title }: Record<string, string>,
-                                      idxTimeframes,
-                                    ) => (
+                                  fieldWeekday.state.value &&
+                                  fieldWeekday.state.value.map(
+                                    ({ title, id }, idxTimeframes) => (
                                       <formVolunteer.Field
-                                        key={`timeSlot-${title}`}
-                                        name={
-                                          `availability[${idx}].timeSlots[${idxTimeframes}].selected` as DeepKeys<VolunteerData>
-                                        }
+                                        key={`${availabilityObj.weekday}-${id}`}
+                                        name={`availability[${idx}].timeSlots[${idxTimeframes}].selected`}
                                       >
                                         {(field) => (
                                           <span className="form-pick">
                                             <input
                                               tabIndex={0}
-                                              id={`${availabilityObj.weekday}${title}`}
+                                              id={`${availabilityObj.weekday}${id}`}
                                               type="checkbox"
                                               onChange={(e) =>
                                                 field.handleChange(
@@ -282,9 +268,14 @@ export default function BecomeVolunteer() {
                                               }
                                             />
                                             <label
-                                              htmlFor={`${availabilityObj.weekday}${title}`}
+                                              htmlFor={`${availabilityObj.weekday}${id}`}
                                             >
-                                              {getTimeslotTitle(t, title)}
+                                              {getTimeslotTitle(
+                                                t,
+                                                title[
+                                                  i18n.language as Lang
+                                                ] as string,
+                                              )}
                                             </label>
                                           </span>
                                         )}
