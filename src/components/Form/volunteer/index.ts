@@ -1,15 +1,15 @@
-import { Lang, ListsOfOptions } from "../../../config/types";
-import { getFallbackLists } from "../../../hooks/api/useList";
-import { getAllSelectedFalse, getSchedule } from "../../forms/utils";
+import fallbackLists from "../../forms/fallbackLists";
+import { ListsOfOptions } from "../../forms/types";
+import { getAllSelectedFalse, getScheduleState } from "../../forms/utils";
 
-const lists = getFallbackLists(Lang.DE);
+const lists = fallbackLists;
 const defaultValues = {
   name: "",
   email: "",
   phone: "",
   postcode: "",
   locations: getAllSelectedFalse(lists[ListsOfOptions.LOCATIONS]),
-  availability: getSchedule(),
+  availability: getScheduleState(),
   languagesNative: getAllSelectedFalse(lists[ListsOfOptions.LANGUAGES]),
   languagesFluent: getAllSelectedFalse(lists[ListsOfOptions.LANGUAGES]),
   languagesIntermediate: getAllSelectedFalse(lists[ListsOfOptions.LANGUAGES]),
