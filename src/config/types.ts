@@ -126,24 +126,3 @@ export enum HttpMethod {
   CONNECT = "CONNECT",
   PATCH = "PATCH",
 }
-
-export enum ListsOfOptions {
-  LOCATIONS = "locations",
-  LANGUAGES = "languages",
-  ACTIVITIES = "activities",
-  ACTIVITIES_ACCOMPANYING = "activitiesAccompanying",
-  SKILLS = "skills",
-  LEADS = "leads",
-}
-
-export type ListsOfOptionsType = Record<`${ListsOfOptions}`, string[]>;
-
-export enum FormType {
-  VOLUNTEER = "volunteer",
-  OPPORTUNITY = "opportunity",
-}
-
-export enum TypePLZ {
-  BERLIN = "Berlin",
-  GERMANY = "Germany",
-}
