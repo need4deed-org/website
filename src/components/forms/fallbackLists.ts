@@ -184,7 +184,7 @@ const fallbackLists: ListsOfOptionsType = {
     { id: "uk", title: { en: "Ukrainian", de: "Ukrainisch" } },
     { id: "fr", title: { en: "French", de: "Französisch" } },
     { id: "kmr", title: { en: "Kurmanji", de: "Kurmanci" } },
-    { id: "ckb", title: { en: "Sorani", de: "Sorani" } },
+    { id: "cdh", title: { en: "Sorani", de: "Sorani" } },
     { id: "hy", title: { en: "Armenian", de: "Armenisch" } },
     { id: "be", title: { en: "Belarusian", de: "Weißrussisch" } },
     { id: "ce", title: { en: "Chechen", de: "Tschetschenisch" } },
