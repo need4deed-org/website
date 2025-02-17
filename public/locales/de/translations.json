@@ -174,7 +174,9 @@
       },
       "wentWrong": {
         "header": "Entschuldigung, auf unserer Seite ist etwas schief gelaufen :-(",
-        "para": "Bitte überprüfen Sie, ob alle anderen Angaben (z.B. Betreiber, Kontakt) korrekt sind und versuchen Sie es erneut oder wenden Sie sich an contact@need4deed.org."
+        "para": "Bitte bewerbt euch zunächst über diese Google-Formulare:",
+        "volunteeringLink": "Freizeit",
+        "accompanyingLink": "Begleitung"
       },
       "temporaryDown": {
         "header": "Entschuldigung, auf unserer Seite ist etwas schiefgelaufen. Bitte wenden Sie an contact@need4deed.org.",
@@ -184,7 +186,8 @@
       "fields": {
         "title": {
           "label": "Was wird gebraucht?",
-          "example": "z.B. \"Begleitung zur Augenklinik\", \"Basteln & Malen\""
+          "example": "z.B. \"Begleitung zur Augenklinik\", \"Basteln & Malen\"",
+          "errorTooLong": "Bitte kürzen Sie den Titel auf 128 Zeichen"
         },
         "consent": {
           "header": "",
@@ -275,7 +278,7 @@
       }
     }
   },
-  "event": { "menuItem": "VolunTea Event" },
+  "event": { "menuItem": "Cooking Event" },
   "VolunTea": {
     "greeting": {
       "invite": "Ihr seid herzlich zu unserem nächsten VolunTea eingeladen.",
@@ -299,6 +302,29 @@
       "address": {
         "floor": "Erster Stock",
         "lead": "Betreten Sie durch die kleine Tür, direkt neben (links von) dem Haupteingang zum Parken"
+      }
+    }
+  },
+  "eventCooking": {
+    "greeting": {
+      "invite": "Liebe Freiwillige (ehemalige, aktuelle und zukünftige",
+      "when": "Ihr seid herzlich eingeladen, uns bei der Planung unseres nächsten gemeinsamen Kochevents zu unterstützen, das voraussichtlich Mitte März stattfinden wird.",
+      "registration": "Anmeldung"
+    },
+    "main": {
+      "title": "Was euch erwartet?",
+      "para1": "Ein Treffen von Freiwilligen, um gemeinsam zu kochen, zu essen und sich auszutauschen - sowohl untereinander als auch mit unserem Team. Wir sprechen darüber, wie es ist, Geflüchtete zu unterstützen, und überlegen gemeinsam neue Wege, um Menschen in Not in Berlin zu helfen.",
+      "para2": "Wenn du gerne kochst und Teil des Teams für Menüplanung und Einkauf sein möchtest, schreib uns an",
+      "para3": "Wenn du einfach am Event teilnehmen möchtest, keine Sorge - wir geben ein Update und schicken einen Anmeldelink, sobald alle Details feststehen.",
+      "para4": "Wer kann mitmachen? (Alle",
+      "para5": "- Wenn du bereits mit dem Freiwilligendienst begonnen hast, bieten diese Treffen Raum, um deine Erfahrungen zu teilen und von anderen zu hören.",
+      "para6": "- Falls du gemeinsam mit anderen etwas planen möchtest, um Geflüchtete in Berlin zu unterstützen, wird ein Teil des Treffens darauf verwendet, neue Ideen zu hören und herauszufinden, ob andere Freiwillige und unser Team daran interessiert sind, sie zu unterstützen.",
+      "para7": "- Wenn du noch nicht mit dem Freiwilligendienst begonnen hast oder dir unsicher bist, was dich erwartet, hast du hier die Möglichkeit, unser Team kennenzulernen und von aktiven Freiwilligen mehr darüber zu erfahren.",
+      "para8": "- Bürokratie :) Falls du noch kein Führungszeugnis hast, können wir es für dich beantragen, solange du deinen Reisepass oder Personalausweis mitbringst."
+    },
+    "outro": {
+      "rsvp": {
+        "email": "volunteer@need4deed.org"
       }
     }
   },
@@ -439,5 +465,12 @@
     "training_answer": "Alle paar Monate werden Schulungen angeboten, insbesondere für diejenigen, die Übersetzungsunterstützung leisten.",
     "group_volunteering_question": "Kann ich mit einer Gruppe oder Organisation freiwillig arbeiten?",
     "group_volunteering_answer": "Ja, Gruppenfreiwilligenarbeit wird gefördert, insbesondere für diejenigen, die Flüchtlingsunterkünfte unterstützen."
+  },
+  "opportunityCard": {
+    "titles": {
+      "languages": "Sprachen",
+      "time": "Termin",
+      "location": "Bezirk"
+    }
   }
 }

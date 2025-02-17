@@ -4,7 +4,6 @@ import { useTranslation } from "react-i18next";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 
 import Announcement from "../components/Announcement";
-import EventVolunTeeMeet from "../components/Event/EventVolunTeaMeet";
 import FAQs from "../components/FAQs/FAQs";
 import Footer from "../components/Footer/Footer";
 import NewForm from "../components/Form";
@@ -22,6 +21,7 @@ import { FormType, Lang, OpportunityType, Subpages } from "../config/types";
 import AppContainerContext from "../contexts/AppContainerContext";
 import { getImageUrl, isEnumValue, setLangDirection } from "../utils";
 import Cookie from "../components/Legal/Cookies";
+import EventCookingMeet from "../components/Event/EventCookingMeet";
 
 interface Props {
   type: Subpages;
@@ -164,7 +164,7 @@ function Subpage({ type }: Props) {
       case Subpages.ANNOUNCEMENT:
         return <Announcement />;
       case Subpages.EVENT:
-        return <EventVolunTeeMeet />;
+        return <EventCookingMeet />;
       case Subpages.COOKIES:
         return <Cookie />;
       case Subpages.FAQS:
