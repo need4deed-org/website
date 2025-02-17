@@ -79,3 +79,8 @@
     height: 15rem;
   }
 }
+
+.volunteerEmail {
+  color: var(--n4d-tertiary); 
+  text-decoration: underline;
+}
