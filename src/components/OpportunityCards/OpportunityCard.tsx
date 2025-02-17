@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
+
 import { Lang } from "../../config/types";
 import {
   getMainCtaUrl,
@@ -46,13 +47,13 @@ export default function OpportunityCard({ opportunity, pre = false }: Props) {
         <p>{opportunity.type}</p>
       )}
 
-      <h6>Languages:</h6>
+      <h6>{t("opportunityCard.titles.languages")}:</h6>
       <p>
         <strong>{isoCodesToNames(opportunity.languages)}</strong>
       </p>
-      <h6>Time:</h6>
+      <h6>{t("opportunityCard.titles.time")}:</h6>
       <p>{getReadableLocalTime(opportunity.time, i18n.language)}</p>
-      <h6>Location:</h6>
+      <h6>{t("opportunityCard.titles.location")}:</h6>
       <p>{opportunity.location}</p>
       <a
         className="btn n4d-cta"
