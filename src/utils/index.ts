@@ -187,7 +187,8 @@ export function getUrlWithEncodedParams(
   url: string,
   params: OpportunityParams,
 ) {
-  if (!Object.keys(params).length) return url;
+  if (!params || typeof params !== "object" || !Object.keys(params).length)
+    return url;
 
   const queryStringParams: string[] = [];
 
