@@ -1,6 +1,5 @@
 import { render } from "@testing-library/react";
-import { RefObject, createRef } from "react";
-import { act } from "react-dom/test-utils";
+import { RefObject, createRef, act } from "react";
 
 import { Lang, OpportunityParams } from "../config/types";
 import {
@@ -273,13 +272,19 @@ describe("utils", () => {
       );
     });
 
-    it("should combine and encode both search and primary keys", () => {
-      const searchParams = { key1: ["value1"] };
+    it("should combine and encode both search, primary keys and language", () => {
+      const search = { key1: ["value1"] };
       const primaryKeys = ["key2"];
-      const expectedUrl = `${baseUrl}?primary_keys=${encodeURIComponent(JSON.stringify(primaryKeys))}&search=${encodeURIComponent(JSON.stringify(searchParams))}`;
-      expect(
-        getUrlWithEncodedParams(baseUrl, { search: searchParams, primaryKeys }),
-      ).toBe(expectedUrl);
+      const language = Lang.DE;
+      const expectedUrl = `${baseUrl}?primary_keys=${encodeURIComponent(JSON.stringify(primaryKeys))}&search=${encodeURIComponent(JSON.stringify(search))}&language=${language}`;
+
+      const encodedURL = getUrlWithEncodedParams(baseUrl, {
+        primaryKeys,
+        search,
+        language,
+      });
+
+      expect(encodedURL).toBe(expectedUrl);
     });
 
     it("should return the original URL for a non-string URL", () => {
