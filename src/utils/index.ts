@@ -50,6 +50,7 @@ export function getBaseUrl(url: string) {
 }
 
 export const isRtlLang = (lang: Lang) => [Lang.AR, Lang.FA].includes(lang);
+
 export function setLangDirection(
   containerRef: MutableRefObject<HTMLDivElement | null>,
   lng: Lang,
@@ -100,7 +101,10 @@ export function getOpportunityImg(type: string) {
   );
 }
 
-export const mapCodeToLanguage = {
+/**
+ *  This map is used only in a util function. So no need to export currently.
+ */
+const mapCodeToLanguage = {
   en: "English",
   de: "German",
   ar: "Arabic",
@@ -207,6 +211,7 @@ interface MainCtaUrl {
   id?: string;
   title?: string;
 }
+
 export function getMainCtaUrl({ lng, id = "", title = "" }: MainCtaUrl) {
   return `/${Subpages.BECOME_VOLUNTEER}/${lng}/?id=${id}&title=${title}`;
 }
