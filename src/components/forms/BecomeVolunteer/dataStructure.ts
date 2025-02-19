@@ -1,4 +1,4 @@
-import { YesNo } from "../../../config/types";
+import { Lang, YesNo } from "../../../config/types";
 import { Availability, Selected } from "../types";
 
 export interface VolunteerData {
@@ -19,6 +19,7 @@ export interface VolunteerData {
   leadFrom: Selected[];
   comments: string;
   consent: boolean | undefined;
+  language: Lang;
 }
 
 export enum VolunteerArrayDataKeys {
@@ -49,4 +50,5 @@ export interface VolunteerParsedData {
   fluent_languages: string[];
   intermediate_languages: string[];
   comments: string;
+  language: Lang;
 }
