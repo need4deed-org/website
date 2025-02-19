@@ -1,5 +1,5 @@
 import { OpportunityType, TranslatedIntoType } from "../../../config/types";
-import { Availability, Selected, TimeSlot } from "../types";
+import { Availability, OptionId, Selected } from "../types";
 
 export interface OpportunityData {
   email: string;
@@ -53,11 +53,11 @@ export interface OpportunityParsedData {
   accomp_phone?: string;
   accomp_information?: string;
   accomp_translation?: TranslatedIntoType;
-  berlin_locations?: string[];
-  languages: string[];
-  activities: string[];
-  skills: string[];
-  timeslots?: [number, TimeSlot | "weekdays" | "weekends"][];
+  berlin_locations?: OptionId[];
+  languages: OptionId[];
+  activities: OptionId[];
+  skills: OptionId[];
+  timeslots?: [number, OptionId][];
   volunteers_number: number;
   vo_information?: string;
 }
