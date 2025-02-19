@@ -17,6 +17,7 @@ export default function useOpportunities(
   >({
     queryKey: [
       "opportunities",
+      ...(opportunityParams.language ? [opportunityParams.language] : []),
       ...Object.keys(
         opportunityParams?.search ? opportunityParams?.search : {},
       ),
