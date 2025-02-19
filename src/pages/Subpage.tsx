@@ -107,7 +107,7 @@ function Subpage({ type }: Props) {
             url={urlApiOpportunity}
             opportunityParams={{
               search: {
-                status: ["Volunteers Needed", "Search in process", "staging"],
+                status: ["Volunteers Needed", "Search in process"],
                 opportunity_type: [OpportunityType.GENERAL],
               },
               primaryKeys: ["title", "name"],
@@ -130,7 +130,7 @@ function Subpage({ type }: Props) {
             url={urlApiOpportunity}
             opportunityParams={{
               search: {
-                status: ["Search in process", "Not started", "staging"],
+                status: ["Search in process", "Not started"],
                 opportunity_type: [OpportunityType.ACCOMPANYING],
               },
               primaryKeys: ["title", "name"],
