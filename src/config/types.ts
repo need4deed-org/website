@@ -82,6 +82,7 @@ export enum TranslatedIntoType {
 export interface OpportunityParams {
   search?: Record<string, string[]>;
   primaryKeys?: string[];
+  language?: Lang;
 }
 
 export type Opportunity = Record<string, string>;
