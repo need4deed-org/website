@@ -65,6 +65,7 @@ export function parseFormStateDTOVolunteer(value: VolunteerData) {
   data.lead_from = getSelectedIds(value.leadFrom).join(", ");
   data.skills = getSelectedIds(value.skills);
   data.comments = value.comments;
+  data.language = value.language;
 
   return data;
 }
