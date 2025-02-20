@@ -1,6 +1,6 @@
-import { FormType } from "../../config/types";
 import AddOpportunity from "./AddOpportunity";
 import BecomeVolunteer from "./BecomeVolunteer";
+import { FormType } from "./types";
 
 interface Props {
   form: FormType;

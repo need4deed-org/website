@@ -338,3 +338,49 @@ export function haveCommonElements(...arrays: Array<Array<unknown>>) {
   const totalLength = arrays.reduce((sum, arr) => sum + arr.length, 0);
   return combined.size < totalLength;
 }
+
+/**
+ * Generates a sequence of numbers within a specified range.
+ *
+ * @generator
+ * @function range
+ * @param {number} start - The starting value of the range (inclusive).
+ * @param {number} end - The ending value of the range (exclusive).
+ * @param {number} [step=1] - The step value between numbers in the range.
+ * @yields {number} The next number in the sequence.
+ * @throws {TypeError} If start, end, or step are not numbers.
+ * @throws {RangeError} If step is zero.
+ * @example
+ * // Generates numbers from 0 to 5 (exclusive) with a step of 1.
+ * for (const num of range(0, 5)) {
+ *   console.log(num); // Output: 0, 1, 2, 3, 4
+ * }
+ *
+ * @example
+ * // Generates numbers from 1 to 10 (exclusive) with a step of 2.
+ * for (const num of range(1, 10, 2)) {
+ *   console.log(num); // Output: 1, 3, 5, 7, 9
+ * }
+ */
+export function* range(start: number, end: number, step = 1) {
+  if (
+    typeof start !== "number" ||
+    typeof end !== "number" ||
+    typeof step !== "number"
+  ) {
+    throw new TypeError("Start, end, and step must be numbers.");
+  }
+
+  if (step === 0 || !Number.isInteger(step)) {
+    throw new RangeError("Step has to be non zero integer.");
+  }
+
+  function isWithinRange(value: number) {
+    if (step > 0) return value < end;
+    return value > end;
+  }
+
+  for (let i = start; isWithinRange(i); i += step) {
+    yield i;
+  }
+}

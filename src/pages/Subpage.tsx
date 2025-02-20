@@ -4,24 +4,25 @@ import { useTranslation } from "react-i18next";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 
 import Announcement from "../components/Announcement";
+import EventCookingMeet from "../components/Event/EventCookingMeet";
 import FAQs from "../components/FAQs/FAQs";
 import Footer from "../components/Footer/Footer";
 import NewForm from "../components/Form";
 import opportunity from "../components/Form/opportunity";
 import volunteer from "../components/Form/volunteer";
 import Form from "../components/forms";
+import { FormType } from "../components/forms/types";
 import Header from "../components/Header/Header";
 import Agreement from "../components/Legal/Agreement";
+import Cookie from "../components/Legal/Cookies";
 import DataPrivacy from "../components/Legal/DataPrivacy";
 import Guidelines from "../components/Legal/Guidelines";
 import LegalNotice from "../components/Legal/Notice";
 import OpportunityCards from "../components/OpportunityCards";
 import { FF, showEvent, urlApiOpportunity } from "../config/constants";
-import { FormType, Lang, OpportunityType, Subpages } from "../config/types";
+import { Lang, OpportunityType, Subpages } from "../config/types";
 import AppContainerContext from "../contexts/AppContainerContext";
 import { getImageUrl, isEnumValue, setLangDirection } from "../utils";
-import Cookie from "../components/Legal/Cookies";
-import EventCookingMeet from "../components/Event/EventCookingMeet";
 
 interface Props {
   type: Subpages;
