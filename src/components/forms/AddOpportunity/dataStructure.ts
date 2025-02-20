@@ -1,4 +1,8 @@
-import { OpportunityType, TranslatedIntoType } from "../../../config/types";
+import {
+  Lang,
+  OpportunityType,
+  TranslatedIntoType,
+} from "../../../config/types";
 import { Availability, OptionId, Selected } from "../types";
 
 export interface OpportunityData {
@@ -26,6 +30,7 @@ export interface OpportunityData {
   numberVolunteers: string;
   voInformation: string;
   consent: boolean | undefined;
+  language: Lang;
 }
 
 export enum OpportunityArrayDataKeys {
@@ -60,4 +65,5 @@ export interface OpportunityParsedData {
   timeslots?: [number, OptionId][];
   volunteers_number: number;
   vo_information?: string;
+  language: Lang;
 }

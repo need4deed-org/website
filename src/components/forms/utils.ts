@@ -99,6 +99,8 @@ export function parseFormStateDTOOpportunity(value: OpportunityData) {
   ]);
   data.skills = getSelectedIds(value.skills);
   data.timeslots = getSelectedTimeslots(value.schedule);
+  data.language = value.language;
+
   return data;
 }
 
