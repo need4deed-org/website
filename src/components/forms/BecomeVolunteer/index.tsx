@@ -37,6 +37,7 @@ export default function BecomeVolunteer() {
   const { t, i18n } = useTranslation();
   const { lng } = useParams();
   const [opportunityParams] = useSearchParams();
+  const language = i18n.language as Lang;
 
   const { postRequest } = usePostRequest<
     VolunteerParsedData,
@@ -69,6 +70,7 @@ export default function BecomeVolunteer() {
       leadFrom: getAllSelectedFalse(useList(ListsOfOptions.LEADS)),
       comments: "",
       consent: undefined,
+      language,
     },
     validators: {
       onSubmit: ({ value }) => {
