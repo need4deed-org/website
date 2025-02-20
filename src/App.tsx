@@ -37,13 +37,13 @@ function App() {
   return (
     <AppContainerContext.Provider value={containerRef}>
       <JsonLd />
-      <div ref={containerRef} className="app-container">
-        <BrowserRouter>
-          {FF.NEW_DESIGN_WEBSITE ? (
-            <Routes>
-              <Route path="/" element={<Landing />} />
-            </Routes>
-          ) : (
+      <BrowserRouter>
+        {FF.NEW_DESIGN_WEBSITE ? (
+          <Routes>
+            <Route path="/" element={<Landing />} />
+          </Routes>
+        ) : (
+          <div ref={containerRef} className="app-container">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route
@@ -161,9 +161,9 @@ function App() {
               <Route path="/:lng" element={<Home />} />
               <Route path="*" element={<Land404 />} />
             </Routes>
-          )}
-        </BrowserRouter>
-      </div>
+          </div>
+        )}
+      </BrowserRouter>
     </AppContainerContext.Provider>
   );
 }
