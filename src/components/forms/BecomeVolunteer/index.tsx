@@ -83,10 +83,7 @@ export default function BecomeVolunteer() {
     },
     onSubmit: ({ value }) => {
       const data = parseFormStateDTOVolunteer(value);
-      /* eslint-disable no-console */
-      console.log("DEBUG:volunteer:onSubmit:value:", value);
-      return console.log("DEBUG:volunteer:onSubmit:data:", data);
-      /* eslint-enable no-console */
+
       postRequest(data);
     },
   });

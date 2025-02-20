@@ -95,10 +95,7 @@ export default function AddOpportunity() {
     },
     onSubmit: async ({ value }) => {
       const data = parseFormStateDTOOpportunity(value);
-      /* eslint-disable no-console */
-      console.log("DEBUG:opportunity:onSubmit:value:", value);
-      return console.log("DEBUG:opportunity:onSubmit:data:", data);
-      /* eslint-enable no-console */
+
       const { success } = await postRequest(data);
       if (success) {
         navigate(`/${Subpages.ANNOUNCEMENT}/${lng}?pointer=${thankYou}`);
