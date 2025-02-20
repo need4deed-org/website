@@ -7,7 +7,7 @@ export const AppContainer = styled.div`
 `;
 
 export const SectionContainer = styled.section`
-  padding: 0;
+  padding: 0 1rem;
   margin: 0 auto;
   max-width: var(--max-width-section, 1440px);
   width: 100%;
