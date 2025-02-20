@@ -32,7 +32,9 @@
   "dependencies": {
     "@tanstack/react-form": "^0.26.4",
     "@tanstack/react-query": "^5.52.2",
+    "@testing-library/jest-dom": "^6.4.2",
     "@types/react-bootstrap": "^0.32.36",
+    "@vitejs/plugin-react": "^4.2.1",
     "aws-amplify": "^6.0.28",
     "bootstrap": "^5.3.3",
     "email-validator": "^2.0.4",
@@ -45,8 +47,7 @@
     "react-i18next": "^14.1.0",
     "react-router-dom": "^6.22.3",
     "react-router-hash-link": "^2.4.3",
-    "@testing-library/jest-dom": "^6.4.2",
-    "@vitejs/plugin-react": "^4.2.1",
+    "styled-components": "^6.1.15",
     "vite": "^5.1.6"
   },
   "devDependencies": {
