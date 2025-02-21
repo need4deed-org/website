@@ -18,3 +18,36 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+:root {
+  --color-midnight: rgba(26, 38, 132, 1);
+  --color-midnight-light: rgba(58, 72, 178, 1);
+  --color-aubergine: rgba(95, 38, 77, 1);
+  --color-aubergine-light: rgba(133, 63, 110, 1);
+  --color-orchid: rgba(251, 226, 255, 1);
+  --color-orchid-light: rgba(251, 226, 255, 1);
+  --color-sand: rgba(242, 226, 211, 1);
+  --color-magnolia: rgba(246, 238, 231, 1);
+  --color-papaya: rgba(255, 125, 104, 1);
+
+  --max-width-section: 360px;
+}
+
+@media (min-width: 360px) {
+  :root {
+    --max-width-section: 360px;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --max-width-section: 768px;
+  }
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --max-width-section: 1440px;
+  }
+}
+
