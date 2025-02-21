@@ -31,5 +31,5 @@ amplifyconfiguration*
 .npm
 public/version.json
 
-# docker
+# dev
 dev.*

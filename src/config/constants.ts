@@ -28,6 +28,9 @@ export const FF = {
   NEW_FORMS_OPPORTUNITY: positives.includes(
     import.meta.env.VITE_FF_NEW_FORMS_OPPORTUNITY,
   ),
+  NEW_DESIGN_WEBSITE: positives.includes(
+    import.meta.env.VITE_FF_NEW_DESIGN_WEBSITE,
+  ),
 };
 
 export const timeZone = import.meta.env.VITE_TZ || "Europe/Berlin";
