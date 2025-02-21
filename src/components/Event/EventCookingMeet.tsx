@@ -25,6 +25,15 @@ export default function EventCookingMeet() {
       <br />
       <h6>{`${t("eventCooking.greeting.invite")}${smilingFace})`}</h6>
       <h6>{t("eventCooking.greeting.when")}</h6>
+      <h6>15.03.25</h6>
+      <h6>16:00-19:30</h6>
+      <img
+        src={getImageUrl("N4D-logo-purple-on-transparent-h.webp")}
+        height="16"
+        alt=""
+      />
+      <br />
+      <br />
       <h6>
         <a href={registrationHref} target="_blank" rel="noreferrer">
           {t("eventCooking.greeting.registration")}
@@ -36,13 +45,6 @@ export default function EventCookingMeet() {
         <div>
           <h6>{t("eventCooking.main.title")}</h6>
           <p>{t("eventCooking.main.para1")}</p>
-          <p>
-            {t("eventCooking.main.para2")}
-            <p className="volunteerEmail">
-              {t("eventCooking.outro.rsvp.email")}
-            </p>
-          </p>
-          <p className="event-timeslot">{t("eventCooking.main.para3")}</p>
           <p>{`${t("eventCooking.main.para4")}${winkingFace})`}</p>
           <p>{t("eventCooking.main.para5")}</p>
           <p>{t("eventCooking.main.para6")}</p>
@@ -50,6 +52,15 @@ export default function EventCookingMeet() {
           <p>{t("eventCooking.main.para8")}</p>
         </div>
       </div>
+
+      <p>{t("eventCooking.outro.rsvp.text")}</p>
+      <h6>
+        <a href={registrationHref} target="_blank" rel="noreferrer">
+          {t("eventCooking.greeting.registration")}
+        </a>
+      </h6>
+
+      <br />
 
       <img
         src={getImageUrl("N4D-logo-purple-on-transparent-h.webp")}
