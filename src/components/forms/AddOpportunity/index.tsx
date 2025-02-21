@@ -55,7 +55,7 @@ export default function AddOpportunity() {
   const { lng } = useParams();
   const { i18n, t } = useTranslation();
   const [queryParams] = useSearchParams();
-  const { language } = i18n;
+  const language = i18n.language as Lang;
   const [showErrorAnnouncement, setShowErrorAnnouncement] = useState(false);
 
   const parsedOpportunity: Partial<ParsedOpportunity> = {};
@@ -92,6 +92,7 @@ export default function AddOpportunity() {
       refugeeNumber: "",
       aaInformation: "",
       consent: undefined,
+      language,
     },
     onSubmit: async ({ value }) => {
       const data = parseFormStateDTOOpportunity(value);
