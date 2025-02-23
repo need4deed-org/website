@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Header from "./Header";
+import Categories from "./Categories";
 
 const Section = styled.section`
   display: flex;
@@ -16,8 +17,7 @@ export function VolunteeringCategoriesSection() {
   return (
     <Section>
       <Header />
-      <Header />
-      <Header />
+      <Categories />
     </Section>
   );
 }
