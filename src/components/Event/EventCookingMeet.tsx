@@ -45,11 +45,10 @@ export default function EventCookingMeet() {
         <div>
           <h6>{t("eventCooking.main.title")}</h6>
           <p>{t("eventCooking.main.para1")}</p>
-          <p>{`${t("eventCooking.main.para4")}${winkingFace})`}</p>
+          <p>{`${t("eventCooking.main.para2")}${winkingFace})`}</p>
+          <p>{t("eventCooking.main.para3")}</p>
+          <p>{t("eventCooking.main.para4")}</p>
           <p>{t("eventCooking.main.para5")}</p>
-          <p>{t("eventCooking.main.para6")}</p>
-          <p>{t("eventCooking.main.para7")}</p>
-          <p>{t("eventCooking.main.para8")}</p>
         </div>
       </div>
 

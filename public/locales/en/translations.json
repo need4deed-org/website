@@ -319,11 +319,10 @@
     "main": {
       "title": "What to expect?",
       "para1": "A gathering of volunteers and friends to cook and eat together!",
-      "para4": "Who is welcome to join? (everyone",
-      "para5": "- If you already started volunteering, these meetups are a space to share your volunteering experiences and hear from others.",
-      "para6": "- In case you want to plan something together to support refugees in Berlin, part of the meeting will be dedicated to hearing about new ideas and seeing if other volunteers and our team are interested in supporting.",
-      "para7": "- If you haven't started volunteering or are still not sure what to expect, this is an opportunity to get to know our team and know more from active volunteers what it is about.",
-      "para8": "- Bureaucracy :) If you still don't have a certificate of good conduct, we will be able to apply for you as long as you bring your passport or ID."
+      "para2": "Who is welcome to join? (everyone",
+      "para3": "- If you already started volunteering at refugee accommodation centers or in accompanying ",
+      "para4": "- Interested? If you haven't started volunteering or are still not sure what to expect",
+      "para5": "- Bureaucracy :) If you still don't have a certificate of good conduct, we will be able to apply for you as long as you bring your passport or ID."
     },
     "outro": {
       "rsvp": {
