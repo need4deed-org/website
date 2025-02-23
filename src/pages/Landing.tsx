@@ -3,6 +3,8 @@ import {
   SectionContainer,
 } from "../components/styled/containers";
 
+import { VolunteeringCategoriesSection } from "../components/VolunteeringCategories";
+
 export default function Landing() {
   return (
     <AppContainer>
@@ -125,6 +127,7 @@ export default function Landing() {
             }}
           />
         </div>
+        <VolunteeringCategoriesSection />
       </SectionContainer>
     </AppContainer>
   );
