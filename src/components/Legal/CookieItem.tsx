@@ -1,4 +1,4 @@
-import SwitchButton from "../core/button/SwitchButton/SwitchButton";
+import { SwitchButton } from "../core/button";
 import "../forms/index.css";
 
 interface CookieItemProps {

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Header from "./Header";
 import Categories from "./Categories";
+import Footer from "./Footer";
 
 const Section = styled.section`
   display: flex;
@@ -18,6 +19,7 @@ export function VolunteeringCategoriesSection() {
     <Section>
       <Header />
       <Categories />
+      <Footer />
     </Section>
   );
 }
