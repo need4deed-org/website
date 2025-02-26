@@ -12,8 +12,6 @@ import { IconName } from "../../config/types";
 const Card = styled.div`
   display: flex;
   flex-direction: column;
-  width: 378px;
-  height: 350px;
   border-radius: 24px;
   background-color: var(--color-sand);
   gap: 24px;
@@ -21,6 +19,21 @@ const Card = styled.div`
   padding-right: 32px;
   padding-bottom: 48px;
   padding-left: 32px;
+
+  @media (min-width: 360px) {
+    width: 320px;
+    height: 372px;
+  }
+
+  @media (min-width: 768px) {
+    width: 332px;
+    height: 410px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 378px;
+    height: 398px;
+  }
 `;
 
 const Title = styled.h3`

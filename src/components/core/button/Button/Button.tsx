@@ -13,12 +13,12 @@ const StyledButton = styled.button`
   background-color: var(--color-aubergine);
 `;
 
-const StyledButtonText = styled.text`
+const StyledButtonText = styled.span`
   font-weight: var(--text-button-font-weight);
   font-size: var(--text-button-font-size);
   line-height: var(--text-button-line-height);
   letter-spacing: var(--text-button-letter-spacing);
-  letter-spacing: var(--text-button-text-align);
+  text-align: var(--text-button-text-align);
   color: var(--color-magnolia);
 `;
 

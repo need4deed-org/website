@@ -2,8 +2,15 @@ import styled from "styled-components";
 import Header from "./Header";
 import Categories from "./Categories";
 import Footer from "./Footer";
+import { ContainerProps } from "../styled/containers";
 
-const Section = styled.section`
+// const Section = styled.section
+
+const VolunteeringCategoriesContainer = styled.div.attrs<ContainerProps>(
+  (props) => ({
+    id: props.id,
+  }),
+)<ContainerProps>`
   display: flex;
   flex-direction: column;
   padding-top: 100px;
@@ -16,11 +23,11 @@ const Section = styled.section`
 
 export function VolunteeringCategoriesSection() {
   return (
-    <Section>
+    <VolunteeringCategoriesContainer id="volunteering-categories-container">
       <Header />
       <Categories />
       <Footer />
-    </Section>
+    </VolunteeringCategoriesContainer>
   );
 }
 

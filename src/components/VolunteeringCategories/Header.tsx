@@ -1,6 +1,9 @@
 import styled from "styled-components";
+import { ContainerProps } from "../styled/containers";
 
-const HeadingSectionContainer = styled.div`
+const HeaderContainer = styled.div.attrs<ContainerProps>((props) => ({
+  id: props.id,
+}))<ContainerProps>`
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -25,13 +28,13 @@ const Paragraph = styled.p`
 
 function HeadingSection() {
   return (
-    <HeadingSectionContainer>
+    <HeaderContainer id="header-container">
       <Headline>Ways you can volunteer</Headline>
       <Paragraph>
         We offer various types of volunteer opportunities with refugee
         accommodation centers, either on a continuous or occasional basis.
       </Paragraph>
-    </HeadingSectionContainer>
+    </HeaderContainer>
   );
 }
 

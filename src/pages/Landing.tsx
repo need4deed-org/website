@@ -4,7 +4,7 @@ import { VolunteeringCategoriesSection } from "../components/VolunteeringCategor
 
 export default function Landing() {
   return (
-    <AppContainer>
+    <AppContainer id="app-container">
       <VolunteeringCategoriesSection />
     </AppContainer>
   );
