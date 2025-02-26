@@ -4,7 +4,11 @@ import Categories from "./Categories";
 import Footer from "./Footer";
 import { ContainerProps } from "../styled/containers";
 
-// const Section = styled.section
+const FullWidthWrapper = styled.div`
+  width: 100%;
+  background-color: var(--color-magnolia);
+  align-items: center;
+`;
 
 const VolunteeringCategoriesContainer = styled.div.attrs<ContainerProps>(
   (props) => ({
@@ -14,6 +18,7 @@ const VolunteeringCategoriesContainer = styled.div.attrs<ContainerProps>(
   display: flex;
   flex-direction: column;
   background-color: var(--color-magnolia);
+  margin: 0 auto; // Center it horizontally
 
   /* Responsive Grid (using the same breakpoints as index.css) */
   @media (min-width: 360px) {
@@ -35,11 +40,13 @@ const VolunteeringCategoriesContainer = styled.div.attrs<ContainerProps>(
 
 export function VolunteeringCategoriesSection() {
   return (
-    <VolunteeringCategoriesContainer id="volunteering-categories-container">
-      <Header />
-      <Categories />
-      <Footer />
-    </VolunteeringCategoriesContainer>
+    <FullWidthWrapper>
+      <VolunteeringCategoriesContainer id="volunteering-categories-container">
+        <Header />
+        <Categories />
+        <Footer />
+      </VolunteeringCategoriesContainer>
+    </FullWidthWrapper>
   );
 }
 

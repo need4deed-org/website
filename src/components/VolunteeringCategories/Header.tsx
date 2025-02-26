@@ -6,7 +6,6 @@ const HeaderContainer = styled.div.attrs<ContainerProps>((props) => ({
 }))<ContainerProps>`
   display: flex;
   flex-direction: column;
-  width: 100%;
   gap: 16px;
 `;
 
