@@ -1,10 +1,5 @@
 import styled from "styled-components";
 
-interface Props {
-  text: string;
-  onClick: () => void;
-}
-
 const StyledButton = styled.button`
   height: 72px;
   width: fit-content;
@@ -18,19 +13,24 @@ const StyledButton = styled.button`
   background-color: var(--color-aubergine);
 `;
 
-const StyledText = styled.text`
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 25px;
-  letter-spacing: 0.13px;
-  text-align: center;
+const StyledButtonText = styled.text`
+  font-weight: var(--text-button-font-weight);
+  font-size: var(--text-button-font-size);
+  line-height: var(--text-button-line-height);
+  letter-spacing: var(--text-button-letter-spacing);
+  letter-spacing: var(--text-button-text-align);
   color: var(--color-magnolia);
 `;
+
+interface Props {
+  text: string;
+  onClick: () => void;
+}
 
 export function Button({ text, onClick }: Props) {
   return (
     <StyledButton onClick={onClick}>
-      <StyledText>{text}</StyledText>
+      <StyledButtonText>{text}</StyledButtonText>
     </StyledButton>
   );
 }

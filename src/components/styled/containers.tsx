@@ -12,3 +12,5 @@ export const SectionContainer = styled.section`
   max-width: var(--max-width-section, 1440px);
   width: 100%;
 `;
+
+// TODO: add containers into here

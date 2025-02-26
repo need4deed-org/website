@@ -8,19 +8,18 @@ const HeadingSectionContainer = styled.div`
 `;
 
 const Headline = styled.h2`
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 38px;
+  font-weight: var(--text-h2-font-weight);
+  font-size: var(--text-h2-font-size);
+  line-height: var(--text-h2-line-height);
+  letter-spacing: var(--text-h2-letter-spacing);
   color: var(--color-midnight);
-  flex-grow: 1;
-  width: 100%;
 `;
 
 const Paragraph = styled.p`
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
-  width: 100%;
+  font-weight: var(--text-p-font-weight);
+  font-size: var(--text-p-font-size);
+  line-height: var(--text-p-line-height);
+  letter-spacing: var(--text-p-letter-spacing);
   color: var(--color-midnight);
 `;
 

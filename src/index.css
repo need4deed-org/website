@@ -31,6 +31,37 @@ html {
   --color-papaya: rgba(255, 125, 104, 1);
 
   --max-width-section: 360px;
+
+  /* text */
+  --text-h2-font-weight: 700;
+  --text-h2-font-size: 32px;
+  --text-h2-line-height: 38px;
+  --text-h3-letter-spacing: 0%;
+
+  --text-h3-font-weight: 600;
+  --text-h3-font-size: 24px;
+  --text-h3-line-height: 30px;
+  --text-h3-letter-spacing: 0.5%;
+
+  --text-p-font-weight: 400;
+  --text-p-font-size: 20px;
+  --text-p-line-height: 24px;
+  --text-p-letter-spacing: 0.5%;
+
+  /* text-button */
+  --text-button-font-weight: 500;
+  --text-button-font-size: 24px;
+  --text-button-line-height: 25px;
+  --text-button-letter-spacing: 0.55%;
+  --text-button-text-align: center;
+
+  /* icon */
+  --icon-size:48px;
+  --icon-div-height:48px;
+  --icon-div-width:48px;
+  --icon-color: var(--color-papaya);
+
+
 }
 
 @media (min-width: 360px) {

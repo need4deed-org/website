@@ -1,4 +1,13 @@
+import {
+  ChatsTeardrop,
+  Baby,
+  Bicycle,
+  CalendarStar,
+  PingPong,
+  Users,
+} from "@phosphor-icons/react";
 import styled from "styled-components";
+import { IconName } from "../../config/types";
 
 const Card = styled.div`
   display: flex;
@@ -15,37 +24,59 @@ const Card = styled.div`
 `;
 
 const Title = styled.h3`
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 30px;
-  letter-spacing: 0.5%;
+  font-weight: var(--text-h3-font-weight);
+  font-size: var(--text-h3-font-size);
+  line-height: var(--text-h3-line-height);
+  letter-spacing: var(--text-h3-letter-spacing);
   color: var(--color-midnight);
 `;
 
 const Description = styled.p`
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
-  width: 100%;
+  font-weight: var(--text-p-font-weight);
+  font-size: var(--text-p-font-size);
+  line-height: var(--text-p-line-height);
+  letter-spacing: var(--text-p-letter-spacing);
   color: var(--color-midnight);
-  letter-spacing: 0.5%;
 `;
 
 const IconDiv = styled.div`
-  height: 48px;
-  width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--icon-size);
+  height: var(--icon-size);
+
+  svg {
+    // Target the SVG inside IconDiv
+    width: 100%; // Make the SVG fill the IconDiv
+    height: 100%;
+    fill: var(--icon-color);
+  }
 `;
 
+type IconMap = {
+  [key in IconName]: JSX.Element;
+};
+
+const iconNameMap: IconMap = {
+  [IconName.ChatsTeardrop]: <ChatsTeardrop />,
+  [IconName.Baby]: <Baby />,
+  [IconName.Bicycle]: <Bicycle />,
+  [IconName.CalendarStar]: <CalendarStar />,
+  [IconName.PingPong]: <PingPong />,
+  [IconName.Users]: <Users />,
+};
+
 interface Props {
-  icon: React.ReactNode;
   title: string;
   description: string;
+  iconName: IconName;
 }
 
-export default function CategoryCard({ icon, title, description }: Props) {
+export default function CategoryCard({ title, description, iconName }: Props) {
   return (
     <Card>
-      <IconDiv>{icon}</IconDiv>
+      <IconDiv>{iconNameMap[iconName]}</IconDiv>
       <Title>{title}</Title>
       <Description>{description}</Description>
     </Card>
