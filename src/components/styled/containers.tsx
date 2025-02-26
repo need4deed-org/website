@@ -16,6 +16,7 @@ export const AppContainer = styled.div.attrs<ContainerProps>((props) => ({
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  align-items: center;
 `;
 
 export const SectionContainer = styled.section`

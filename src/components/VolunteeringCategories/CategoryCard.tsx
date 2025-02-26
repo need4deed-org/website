@@ -14,25 +14,32 @@ const Card = styled.div`
   flex-direction: column;
   border-radius: 24px;
   background-color: var(--color-sand);
-  gap: 24px;
-  padding-top: 32px;
-  padding-right: 32px;
-  padding-bottom: 48px;
-  padding-left: 32px;
 
   @media (min-width: 360px) {
     width: 320px;
     height: 372px;
+    padding-top: 24px;
+    padding-right: 24px;
+    padding-bottom: 48px;
+    padding-left: 24px;
   }
 
   @media (min-width: 768px) {
     width: 332px;
     height: 410px;
+    padding-top: 28px;
+    padding-right: 28px;
+    padding-bottom: 48px;
+    padding-left: 28px;
   }
 
   @media (min-width: 1440px) {
     width: 378px;
     height: 398px;
+    padding-top: 32px;
+    padding-right: 32px;
+    padding-bottom: 48px;
+    padding-left: 32px;
   }
 `;
 
