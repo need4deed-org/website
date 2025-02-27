@@ -25,6 +25,7 @@ html {
   --color-aubergine: rgba(95, 38, 77, 1);
   --color-aubergine-light: rgba(133, 63, 110, 1);
   --color-orchid: rgba(251, 226, 255, 1);
+  --color-orchid-dark: rgba(242, 177, 255, 1);
   --color-orchid-light: rgba(251, 226, 255, 1);
   --color-sand: rgba(242, 226, 211, 1);
   --color-magnolia: rgba(246, 238, 231, 1);
@@ -56,28 +57,36 @@ html {
 
   /* icon */
   --icon-size:48px;
-  --icon-div-height:48px;
-  --icon-div-width:48px;
   --icon-color: var(--color-papaya);
-
-
 }
 
 @media (min-width: 360px) {
   :root {
     --max-width-section: 360px;
+
+    --text-p-font-size: 18px; 
+    --text-p-line-height: 21px;
+    --text-p-letter-spacing: 0%;
+
+    --icon-size:40px;
+
+    --text-button-font-size: 18px;
   }
 }
 
 @media (min-width: 768px) {
   :root {
     --max-width-section: 768px;
+
+    --text-button-font-size: 24px;
   }
 }
 
 @media (min-width: 1440px) {
   :root {
     --max-width-section: 1440px;
+    
+    --text-button-font-size: 24px;
   }
 }
 

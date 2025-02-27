@@ -1,28 +1,12 @@
-import {
-  ChatsTeardrop,
-  Baby,
-  Bicycle,
-  CalendarStar,
-  PingPong,
-  Users,
-} from "@phosphor-icons/react";
 import styled from "styled-components";
-import { IconName } from "../../config/types";
+import { IconName } from "./types";
+import { iconNameMap } from "./icon";
 
 const Card = styled.div`
   display: flex;
   flex-direction: column;
   border-radius: 24px;
   background-color: var(--color-sand);
-
-  @media (min-width: 360px) {
-    width: 320px;
-    height: 372px;
-    padding-top: 24px;
-    padding-right: 24px;
-    padding-bottom: 48px;
-    padding-left: 24px;
-  }
 
   @media (min-width: 768px) {
     width: 332px;
@@ -43,7 +27,7 @@ const Card = styled.div`
   }
 `;
 
-const Title = styled.h3`
+export const Title = styled.h3`
   font-weight: var(--text-h3-font-weight);
   font-size: var(--text-h3-font-size);
   line-height: var(--text-h3-line-height);
@@ -51,7 +35,7 @@ const Title = styled.h3`
   color: var(--color-midnight);
 `;
 
-const Description = styled.p`
+export const Description = styled.p`
   font-weight: var(--text-p-font-weight);
   font-size: var(--text-p-font-size);
   line-height: var(--text-p-line-height);
@@ -59,7 +43,7 @@ const Description = styled.p`
   color: var(--color-midnight);
 `;
 
-const IconDiv = styled.div`
+export const IconDiv = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,19 +57,6 @@ const IconDiv = styled.div`
     fill: var(--icon-color);
   }
 `;
-
-type IconMap = {
-  [key in IconName]: JSX.Element;
-};
-
-const iconNameMap: IconMap = {
-  [IconName.ChatsTeardrop]: <ChatsTeardrop />,
-  [IconName.Baby]: <Baby />,
-  [IconName.Bicycle]: <Bicycle />,
-  [IconName.CalendarStar]: <CalendarStar />,
-  [IconName.PingPong]: <PingPong />,
-  [IconName.Users]: <Users />,
-};
 
 interface Props {
   title: string;

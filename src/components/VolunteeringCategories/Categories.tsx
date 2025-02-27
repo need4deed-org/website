@@ -1,13 +1,9 @@
 import styled from "styled-components";
 
+import { useEffect, useState } from "react";
 import CategoryCard from "./CategoryCard";
-import { IconName } from "../../config/types";
-
-interface Category {
-  iconName: IconName;
-  title: string;
-  description: string;
-}
+import CategoriesMobile from "./CategoriesMobile";
+import { Category, IconName } from "./types";
 
 const categories: Category[] = [
   {
@@ -53,12 +49,6 @@ const CategoriesContainer = styled.div`
   margin: 0 auto; // Center the grid
 
   /* Responsive Grid (using the same breakpoints as index.css) */
-  @media (min-width: 360px) {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(6, auto);
-    gap: 16px;
-  }
-
   @media (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);
@@ -74,12 +64,30 @@ const CategoriesContainer = styled.div`
 `;
 
 function Categories() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <CategoriesContainer>
-      {categories.map((category) => (
-        // eslint-disable-next-line react/jsx-props-no-spreading
-        <CategoryCard key={category.title} {...category} />
-      ))}
+      {isMobile ? (
+        <CategoriesMobile categories={categories} />
+      ) : (
+        categories.map((category) => (
+          // eslint-disable-next-line react/jsx-props-no-spreading
+          <CategoryCard key={category.title} {...category} />
+        ))
+      )}
     </CategoriesContainer>
   );
 }

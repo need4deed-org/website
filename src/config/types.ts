@@ -127,12 +127,3 @@ export enum HttpMethod {
   CONNECT = "CONNECT",
   PATCH = "PATCH",
 }
-
-export enum IconName {
-  ChatsTeardrop = "chatsTeardrop",
-  Baby = "baby",
-  Bicycle = "bicycle",
-  CalendarStar = "calendarStar",
-  PingPong = "pingPong",
-  Users = "users",
-}

@@ -1,14 +1,10 @@
 import styled from "styled-components";
 
 const StyledButton = styled.button`
-  height: 72px;
   width: fit-content;
   width: 405;
-  padding-top: 16px;
-  padding-right: 36px;
-  padding-bottom: 16px;
-  padding-left: 36px;
-  gap: 10px;
+  height: 72px;
+  padding: 16px 36px;
   border-radius: 125px;
   background-color: var(--color-aubergine);
 `;
