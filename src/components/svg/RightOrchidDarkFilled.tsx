@@ -1,7 +1,9 @@
 import React from "react";
 
 // eslint-disable-next-line react/function-component-definition
-const RightOrchidDarkFilled: React.FC<React.SVGProps<SVGSVGElement>> = () => {
+const RightOrchidDarkFilled: React.FC<React.SVGProps<SVGSVGElement>> = (
+  props,
+) => {
   return (
     <svg
       width="28"
@@ -9,6 +11,8 @@ const RightOrchidDarkFilled: React.FC<React.SVGProps<SVGSVGElement>> = () => {
       viewBox="0 0 28 28"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      {...props}
     >
       <circle
         cx="14"

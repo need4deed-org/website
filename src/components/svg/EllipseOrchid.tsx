@@ -1,7 +1,7 @@
 import React from "react";
 
 // eslint-disable-next-line react/function-component-definition
-const EllipseOrchid: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
+const EllipseOrchid: React.FC<React.SVGProps<SVGSVGElement>> = () => {
   return (
     <svg
       width="8"

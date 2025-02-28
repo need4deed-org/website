@@ -76,7 +76,9 @@ export default function CategoriesMobile({ categories }: Props) {
           <RightOrchid />
         ) : (
           <RightOrchidDarkFilled
-            onClick={() => setCurrentCardIndex(currentCardIndex + 1)}
+            onClick={() => {
+              setCurrentCardIndex(currentCardIndex + 1);
+            }}
           />
         )}
       </ArrowsButtonContainer>
