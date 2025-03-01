@@ -313,23 +313,20 @@
   "eventCooking": {
     "greeting": {
       "invite": "Dear Volunteers (past, current and future",
-      "when": "You are more than invited to help us plan our next communal cooking event coming up around mid march.",
+      "when": "Join an Iftar co-cooking with Need4Deed and Kiezkantine.",
       "registration": "Registration"
     },
     "main": {
       "title": "What to expect?",
-      "para1": "A gathering of volunteers to cook and eat together and hear from each other about different ways to support refugees living in accommodation centers around Berlin.",
-      "para2": "If you are into cooking and would like to be in the menus planning and shopping team, write us at",
-      "para3": "If you want to join the event, we will give an update and a registration link once we have all the details",
-      "para4": "Who is welcome to join? (everyone",
-      "para5": "- If you already started volunteering, these meetups are a space to share your volunteering experiences and hear from others.",
-      "para6": "- In case you want to plan something together to support refugees in Berlin, part of the meeting will be dedicated to hearing about new ideas and seeing if other volunteers and our team are interested in supporting.",
-      "para7": "- If you haven't started volunteering or are still not sure what to expect, this is an opportunity to get to know our team and know more from active volunteers what it is about.",
-      "para8": "- Bureaucracy :) If you still don't have a certificate of good conduct, we will be able to apply for you as long as you bring your passport or ID."
+      "para1": "A gathering of volunteers and friends to cook and eat together!",
+      "para2": "Who is welcome to join? (everyone",
+      "para3": "- If you already started volunteering at refugee accommodation centers or in accompanying ",
+      "para4": "- Interested? If you haven't started volunteering or are still not sure what to expect",
+      "para5": "- Bureaucracy :) If you still don't have a certificate of good conduct, we will be able to apply for you as long as you bring your passport or ID."
     },
     "outro": {
       "rsvp": {
-        "email": "volunteer@need4deed.org"
+        "text": "RSVP here"
       }
     }
   },
