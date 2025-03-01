@@ -1,9 +1,8 @@
-import styled from "styled-components";
-
 import { useEffect, useState } from "react";
 import CategoryCard from "./CategoryCard";
 import CategoriesMobile from "./CategoriesMobile";
 import { Category, IconName } from "./types";
+import { CategoriesContainer } from "../styled/containers";
 
 const categories: Category[] = [
   {
@@ -44,25 +43,6 @@ const categories: Category[] = [
   },
 ];
 
-const CategoriesContainer = styled.div`
-  display: grid;
-  margin: 0 auto; // Center the grid
-
-  /* Responsive Grid (using the same breakpoints as index.css) */
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, auto);
-    gap: 24px;
-  }
-
-  @media (min-width: 1440px) {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto);
-    gap: 32px;
-    max-width: var(--max-width-section);
-  }
-`;
-
 function Categories() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
@@ -79,7 +59,7 @@ function Categories() {
   }, []);
 
   return (
-    <CategoriesContainer>
+    <CategoriesContainer id="categories-container">
       {isMobile ? (
         <CategoriesMobile categories={categories} />
       ) : (

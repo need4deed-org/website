@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ButtonSpan } from "../../../styled/text";
 
 const StyledButton = styled.button`
   width: fit-content;
@@ -9,15 +10,6 @@ const StyledButton = styled.button`
   background-color: var(--color-aubergine);
 `;
 
-const StyledButtonText = styled.span`
-  font-weight: var(--text-button-font-weight);
-  font-size: var(--text-button-font-size);
-  line-height: var(--text-button-line-height);
-  letter-spacing: var(--text-button-letter-spacing);
-  text-align: var(--text-button-text-align);
-  color: var(--color-magnolia);
-`;
-
 interface Props {
   text: string;
   onClick: () => void;
@@ -26,7 +18,7 @@ interface Props {
 export function Button({ text, onClick }: Props) {
   return (
     <StyledButton onClick={onClick}>
-      <StyledButtonText>{text}</StyledButtonText>
+      <ButtonSpan>{text}</ButtonSpan>
     </StyledButton>
   );
 }

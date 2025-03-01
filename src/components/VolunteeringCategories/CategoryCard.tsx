@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { IconName } from "./types";
 import { iconNameMap } from "./icon";
+import { IconDiv } from "../styled/containers";
+import { Heading3, Paragraph } from "../styled/text";
 
 const Card = styled.div`
   display: flex;
@@ -27,37 +29,6 @@ const Card = styled.div`
   }
 `;
 
-export const Title = styled.h3`
-  font-weight: var(--text-h3-font-weight);
-  font-size: var(--text-h3-font-size);
-  line-height: var(--text-h3-line-height);
-  letter-spacing: var(--text-h3-letter-spacing);
-  color: var(--color-midnight);
-`;
-
-export const Description = styled.p`
-  font-weight: var(--text-p-font-weight);
-  font-size: var(--text-p-font-size);
-  line-height: var(--text-p-line-height);
-  letter-spacing: var(--text-p-letter-spacing);
-  color: var(--color-midnight);
-`;
-
-export const IconDiv = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: var(--icon-size);
-  height: var(--icon-size);
-
-  svg {
-    // Target the SVG inside IconDiv
-    width: 100%; // Make the SVG fill the IconDiv
-    height: 100%;
-    fill: var(--icon-color);
-  }
-`;
-
 interface Props {
   title: string;
   description: string;
@@ -68,8 +39,8 @@ export default function CategoryCard({ title, description, iconName }: Props) {
   return (
     <Card>
       <IconDiv>{iconNameMap[iconName]}</IconDiv>
-      <Title>{title}</Title>
-      <Description>{description}</Description>
+      <Heading3>{title}</Heading3>
+      <Paragraph>{description}</Paragraph>
     </Card>
   );
 }

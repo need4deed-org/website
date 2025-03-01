@@ -1,22 +1,20 @@
 import styled from "styled-components";
 import { useState } from "react";
-import { ContainerProps } from "../styled/containers";
+import {
+  ArrowsButtonContainer,
+  CategoriesContainerMobile,
+  IconDiv,
+  IndicatorsContainer,
+} from "../styled/containers";
 import RightOrchidDarkFilled from "../svg/RightOrchidDarkFilled";
 import LeftOrchidDarkFilled from "../svg/LeftOrchidDarkFilled";
 import LeftOrchid from "../svg/LeftOrchid";
 import RightOrchid from "../svg/RightOrchid";
 import EllipsePapaya from "../svg/EllipsePapaya";
 import EllipseOrchid from "../svg/EllipseOrchid";
-import { Description, IconDiv, Title } from "./CategoryCard";
 import { Category } from "./types";
 import { iconNameMap } from "./icon";
-
-const CategoriesContainerMobile = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  background-color: var(--color-magnolia);
-`;
+import { Heading3, Paragraph } from "../styled/text";
 
 const Card = styled.div`
   display: flex;
@@ -32,26 +30,6 @@ const Card = styled.div`
   padding-left: 24px;
 `;
 
-const ArrowsButtonContainer = styled.div.attrs<ContainerProps>((props) => ({
-  id: props.id,
-}))<ContainerProps>`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 8px;
-`;
-
-const IndicatorsContainer = styled.div.attrs<ContainerProps>((props) => ({
-  id: props.id,
-}))<ContainerProps>`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-`;
-
 interface Props {
   categories: Category[];
 }
@@ -63,7 +41,7 @@ export default function CategoriesMobile({ categories }: Props) {
   const { title, description, iconName } = categories[currentCardIndex];
 
   return (
-    <CategoriesContainerMobile>
+    <CategoriesContainerMobile id="categories-container-mobile">
       <ArrowsButtonContainer id="arrows-button-container">
         {currentCardIndex === firstIndex ? (
           <LeftOrchid />
@@ -85,13 +63,17 @@ export default function CategoriesMobile({ categories }: Props) {
 
       <Card>
         <IconDiv>{iconNameMap[iconName]}</IconDiv>
-        <Title>{title}</Title>
-        <Description>{description}</Description>
+        <Heading3>{title}</Heading3>
+        <Paragraph>{description}</Paragraph>
       </Card>
 
       <IndicatorsContainer id="indicators-container">
-        {categories.map((_, index) =>
-          index === currentCardIndex ? <EllipsePapaya /> : <EllipseOrchid />,
+        {categories.map((category, index) =>
+          index === currentCardIndex ? (
+            <EllipsePapaya key={category.title} />
+          ) : (
+            <EllipseOrchid key={category.title} />
+          ),
         )}
       </IndicatorsContainer>
     </CategoriesContainerMobile>
