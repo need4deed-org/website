@@ -1,25 +1,16 @@
 body {
-  font-family:
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    "Open Sans",
-    "Helvetica Neue",
-    sans-serif;
+  font-family: 'Figtree', sans-serif;
   width: 100%;
   margin: 0;
 }
+
 
 html {
   scroll-behavior: smooth;
 }
 
 :root {
+  /* color */
   --color-midnight: rgba(26, 38, 132, 1);
   --color-midnight-light: rgba(58, 72, 178, 1);
   --color-aubergine: rgba(95, 38, 77, 1);
@@ -31,46 +22,59 @@ html {
   --color-magnolia: rgba(246, 238, 231, 1);
   --color-papaya: rgba(255, 125, 104, 1);
 
-
   /* text */
   --text-h2-font-weight: 700;
   --text-h2-font-size: 32px;
   --text-h2-line-height: 38px;
-  --text-h3-letter-spacing: 0%;
 
   --text-h3-font-weight: 600;
   --text-h3-font-size: 24px;
   --text-h3-line-height: 30px;
-  --text-h3-letter-spacing: 0.5%;
-
-  --text-p-font-weight: 400;
-  --text-p-font-size: 20px;
-  --text-p-line-height: 24px;
-  --text-p-letter-spacing: 0.5%;
-
-  /* text-button */
-  --text-button-font-weight: 500;
-  --text-button-font-size: 24px;
-  --text-button-line-height: 25px;
-  --text-button-letter-spacing: 0.55%;
-  --text-button-text-align: center;
+  --text-h3-letter-spacing: 0.1px;
 
   /* icon */
-  --icon-size:48px;
   --icon-color: var(--color-papaya);
+
+  /* card */
+  --card-border-radius: 24px;
+
+
 }
 
 @media (min-width: 360px) {
   :root {
     --max-width-section: 360px;
 
+    --text-p-font-weight: 400;
     --text-p-font-size: 18px; 
     --text-p-line-height: 21px;
-    --text-p-letter-spacing: 0%;
-
+    --text-p-letter-spacing: 0;
+    
     --icon-size:40px;
-
+    
     --text-button-font-size: 18px;
+    
+    --homepage-section-container-padding: 48px 20px;
+    --homepage-section-container-gap: 16px;
+
+    --homepage-volunteering-categories-footer-justify-content: center;
+    --homepage-volunteering-categories-header-gap: 12px;
+    --homepage-volunteering-category-card-width: 320px;
+    --homepage-volunteering-category-card-height: 372px;
+    --homepage-volunteering-category-card-padding-top: 24px;
+    --homepage-volunteering-category-card-padding-right: 24px;
+    --homepage-volunteering-category-card-padding-bottom: 48px;
+    --homepage-volunteering-category-card-padding-left: 24px;
+    --homepage-volunteering-category-card-gap: 16px;
+
+    --button-height: 64px;
+    --button-padding: 12px 24px;
+    --button-border-radius: 125px;
+    --button-text-font-weight: 500;
+    --button-text-font-size: 18px;
+    --button-text-line-height: 25px;
+    --button-text-letter-spacing: 0.13px;
+    --button-text-text-align: center;
   }
 }
 
@@ -78,15 +82,180 @@ html {
   :root {
     --max-width-section: 768px;
 
+    --icon-size:48px;
+
+    --text-p-font-weight: 400;
+    --text-p-font-size: 20px;
+    --text-p-line-height: 24px;
+    --text-p-letter-spacing: 0.1px;
+    
     --text-button-font-size: 24px;
+    
+    --homepage-section-container-padding: 64px 40px;
+    --homepage-section-container-gap: 48px;
+
+    --homepage-volunteering-categories-grid-template-columns: repeat(2, 1fr);
+    --homepage-volunteering-categories-grid-template-rows: repeat(3, auto);
+    --homepage-volunteering-categories-grid-gap: 24px;
+    --homepage-volunteering-categories-footer-justify-content: flex-end;
+    --homepage-volunteering-categories-header-gap: 16px;
+    --homepage-volunteering-category-card-width: 332px;
+    --homepage-volunteering-category-card-height: 410px;
+    --homepage-volunteering-category-card-padding-top: 28px;
+    --homepage-volunteering-category-card-padding-right: 28px;
+    --homepage-volunteering-category-card-padding-bottom: 48px;
+    --homepage-volunteering-category-card-padding-left: 28px;
+    --homepage-volunteering-category-card-gap: 20px;
+
+
+    --button-height: 72px;
+    --button-padding: 16px 36px;
+    --button-border-radius: 125px;
+    --button-text-font-weight: 500;
+    --button-text-font-size: 24px;
+    --button-text-line-height: 25px;
+    --button-text-letter-spacing: 0.13px;
+    --button-text-text-align: center;
+    
   }
 }
 
 @media (min-width: 1440px) {
   :root {
     --max-width-section: 1440px;
-    
+
+    --icon-size:48px;
+
+    --text-p-font-weight: 400;
+    --text-p-font-size: 20px;
+    --text-p-line-height: 24px;
+    --text-p-letter-spacing: 0.1px;
+
     --text-button-font-size: 24px;
+    
+    --homepage-section-container-padding: 100px 120px;
+    --homepage-section-container-gap: 56px;
+
+    --homepage-volunteering-categories-grid-template-columns: repeat(3, 1fr);
+    --homepage-volunteering-categories-grid-template-rows: repeat(2, auto);
+    --homepage-volunteering-categories-grid-gap: 32px;
+    --homepage-volunteering-categories-footer-justify-content: flex-end;
+    --homepage-volunteering-categories-header-gap: 16px;
+    --homepage-volunteering-category-card-width: 378px;
+    --homepage-volunteering-category-card-height: 398px;
+    --homepage-volunteering-category-card-padding-top: 32px;
+    --homepage-volunteering-category-card-padding-right: 32px;
+    --homepage-volunteering-category-card-padding-bottom: 48px;
+    --homepage-volunteering-category-card-padding-left: 32px;
+    --homepage-volunteering-category-card-gap: 24px;
+
+    --button-height: 72px;
+    --button-padding: 16px 36px;
+    --button-border-radius: 125px;
+    --button-text-font-weight: 500;
+    --button-text-font-size: 24px;
+    --button-text-line-height: 25px;
+    --button-text-letter-spacing: 0.13px;
+    --button-text-text-align: center;
+  
   }
 }
 
+
+@font-face {
+  font-family: 'Figtree';
+  src: url('fonts/figtree/Figtree-Black.ttf') format('truetype');
+  font-weight: 900; /* Black is usually 900 */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Figtree';
+  src: url('fonts/figtree/Figtree-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Figtree';
+  src: url('fonts/figtree/Figtree-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Figtree';
+  src: url('fonts/figtree/Figtree-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Figtree';
+  src: url('fonts/figtree/Figtree-ExtraBold.ttf') format('truetype');
+  font-weight: 800; /* ExtraBold is usually 800 */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Figtree';
+  src: url('fonts/figtree/Figtree-ExtraBoldItalic.ttf') format('truetype');
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Figtree';
+  src: url('fonts/figtree/Figtree-Italic.ttf') format('truetype');
+  font-weight: 400; /* Regular Italic is usually 400 */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Figtree';
+  src: url('fonts/figtree/Figtree-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Figtree';
+  src: url('fonts/figtree/Figtree-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Figtree';
+  src: url('fonts/figtree/Figtree-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Figtree';
+  src: url('fonts/figtree/Figtree-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Figtree';
+  src: url('fonts/figtree/Figtree-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Figtree';
+  src: url('fonts/figtree/Figtree-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Figtree';
+  src: url('fonts/figtree/Figtree-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}

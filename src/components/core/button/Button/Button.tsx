@@ -3,10 +3,9 @@ import { ButtonSpan } from "../../../styled/text";
 
 const StyledButton = styled.button`
   width: fit-content;
-  width: 405;
-  height: 72px;
-  padding: 16px 36px;
-  border-radius: 125px;
+  height: var(--button-height);
+  padding: var(--button-padding);
+  border-radius: var(--button-border-radius);
   background-color: var(--color-aubergine);
 `;
 

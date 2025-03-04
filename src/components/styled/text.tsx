@@ -29,10 +29,10 @@ export const Paragraph = styled.p<TextProps>`
 `;
 
 export const ButtonSpan = styled.span<TextProps>`
-  font-weight: var(--text-button-font-weight);
-  font-size: var(--text-button-font-size);
-  line-height: var(--text-button-line-height);
-  letter-spacing: var(--text-button-letter-spacing);
-  text-align: var(--text-button-text-align);
+  font-weight: var(--button-text-font-weight);
+  font-size: var(--button-text-font-size);
+  line-height: var(--button-text-line-height);
+  letter-spacing: var(--button-text-letter-spacing);
+  text-align: var(--button-text-text-align);
   color: ${(props) => props.color || "var(--color-magnolia)"};
 `;

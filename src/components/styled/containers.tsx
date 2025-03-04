@@ -31,23 +31,9 @@ export const VolunteeringCategoriesContainer = styled.div.attrs<ContainerProps>(
   flex-direction: column;
   background-color: var(--color-magnolia);
   margin: 0 auto; // Center it horizontally
-
-  /* Responsive Grid (using the same breakpoints as index.css) */
-  @media (min-width: 360px) {
-    padding: 48px 20px;
-    gap: 16px;
-  }
-
-  @media (min-width: 768px) {
-    padding: 64px 40px;
-    gap: 48px;
-  }
-
-  @media (min-width: 1440px) {
-    padding: 100px 120px;
-    gap: 56px;
-    max-width: var(--max-width-section);
-  }
+  padding: var(--homepage-section-container-padding);
+  gap: var(--homepage-section-container-gap);
+  max-width: var(--max-width-section);
 `;
 
 export const CategoriesContainer = styled.div.attrs<ContainerProps>(
@@ -57,20 +43,13 @@ export const CategoriesContainer = styled.div.attrs<ContainerProps>(
 )<ContainerProps>`
   display: grid;
   margin: 0 auto; // Center the grid
-
-  /* Responsive Grid (using the same breakpoints as index.css) */
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, auto);
-    gap: 24px;
-  }
-
-  @media (min-width: 1440px) {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto);
-    gap: 32px;
-    max-width: var(--max-width-section);
-  }
+  grid-template-columns: var(
+    --homepage-volunteering-categories-grid-template-columns
+  );
+  grid-template-rows: var(
+    --homepage-volunteering-categories-grid-template-rows
+  );
+  gap: var(--homepage-volunteering-categories-grid-gap);
 `;
 
 export const CategoriesContainerMobile = styled.div.attrs<ContainerProps>(

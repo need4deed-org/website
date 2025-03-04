@@ -19,15 +19,15 @@ import { Heading3, Paragraph } from "../styled/text";
 const Card = styled.div`
   display: flex;
   flex-direction: column;
-  border-radius: 24px;
+  border-radius: var(--card-border-radius);
   background-color: var(--color-sand);
-
-  width: 320px;
-  height: 372px;
-  padding-top: 24px;
-  padding-right: 24px;
-  padding-bottom: 48px;
-  padding-left: 24px;
+  width: var(--homepage-volunteering-category-card-width);
+  height: var(--homepage-volunteering-category-card-height);
+  padding-top: var(--homepage-volunteering-category-card-padding-top);
+  padding-right: var(--homepage-volunteering-category-card-padding-right);
+  padding-bottom: var(--homepage-volunteering-category-card-padding-bottom);
+  padding-left: var(--homepage-volunteering-category-card-padding-left);
+  gap: var(--homepage-volunteering-category-card-gap);
 `;
 
 interface Props {

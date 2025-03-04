@@ -8,11 +8,9 @@ const FooterContainer = styled.div.attrs<ContainerProps>((props) => ({
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-end;
-
-  @media (max-width: 768px) {
-    justify-content: center;
-  }
+  justify-content: var(
+    --homepage-volunteering-categories-footer-justify-content
+  );
 `;
 
 export default function Footer() {

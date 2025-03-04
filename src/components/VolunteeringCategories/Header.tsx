@@ -7,7 +7,7 @@ const HeaderContainer = styled.div.attrs<ContainerProps>((props) => ({
 }))<ContainerProps>`
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: var(--homepage-volunteering-categories-header-gap);
 `;
 
 function HeadingSection() {
