@@ -23,7 +23,7 @@ html {
   --color-papaya: rgba(255, 125, 104, 1);
 
   /* text */
-  --text-h2-font-weight: 700;
+  --text-h2-font-weight: 600;
   --text-h2-font-size: 32px;
   --text-h2-line-height: 38px;
 
@@ -31,6 +31,8 @@ html {
   --text-h3-font-size: 24px;
   --text-h3-line-height: 30px;
   --text-h3-letter-spacing: 0.1px;
+
+  --text-p-font-weight: 300;
 
   /* icon */
   --icon-color: var(--color-papaya);
@@ -45,7 +47,6 @@ html {
   :root {
     --max-width-section: 360px;
 
-    --text-p-font-weight: 400;
     --text-p-font-size: 18px; 
     --text-p-line-height: 21px;
     --text-p-letter-spacing: 0;
@@ -84,7 +85,6 @@ html {
 
     --icon-size:48px;
 
-    --text-p-font-weight: 400;
     --text-p-font-size: 20px;
     --text-p-line-height: 24px;
     --text-p-letter-spacing: 0.1px;
@@ -126,7 +126,6 @@ html {
 
     --icon-size:48px;
 
-    --text-p-font-weight: 400;
     --text-p-font-size: 20px;
     --text-p-line-height: 24px;
     --text-p-letter-spacing: 0.1px;
