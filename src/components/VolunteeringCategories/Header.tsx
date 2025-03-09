@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useTranslation } from "react-i18next";
 import { ContainerProps } from "../styled/containers";
 import { Heading2, Paragraph } from "../styled/text";
 
@@ -11,12 +12,13 @@ const HeaderContainer = styled.div.attrs<ContainerProps>((props) => ({
 `;
 
 function HeadingSection() {
+  const { t } = useTranslation();
+
   return (
     <HeaderContainer id="header-container">
-      <Heading2>Ways you can volunteer</Heading2>
+      <Heading2>{t("homepage.volunteeringCategoires.header")}</Heading2>
       <Paragraph>
-        We offer various types of volunteer opportunities with refugee
-        accommodation centers, either on a continuous or occasional basis.
+        {t("homepage.volunteeringCategoires.headerParagraph")}
       </Paragraph>
     </HeaderContainer>
   );
