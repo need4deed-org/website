@@ -21,6 +21,7 @@ html {
   --color-sand: rgba(242, 226, 211, 1);
   --color-magnolia: rgba(246, 238, 231, 1);
   --color-papaya: rgba(255, 125, 104, 1);
+  --color-white:  rgba(255, 255, 255, 1);
 
   /* text */
   --text-h2-font-weight: 600;

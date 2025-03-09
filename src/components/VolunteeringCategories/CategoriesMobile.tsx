@@ -6,15 +6,11 @@ import {
   IconDiv,
   IndicatorsContainer,
 } from "../styled/containers";
-import RightOrchidDarkFilled from "../svg/RightOrchidDarkFilled";
-import LeftOrchidDarkFilled from "../svg/LeftOrchidDarkFilled";
-import LeftOrchid from "../svg/LeftOrchid";
-import RightOrchid from "../svg/RightOrchid";
-import EllipsePapaya from "../svg/EllipsePapaya";
-import EllipseOrchid from "../svg/EllipseOrchid";
 import { Category } from "./types";
 import { iconNameMap } from "./icon";
 import { Heading3, Paragraph } from "../styled/text";
+import Ellipse from "../svg/Ellipse";
+import CircleArrow from "../svg/CircleArrow";
 
 const Card = styled.div`
   display: flex;
@@ -43,22 +39,26 @@ export default function CategoriesMobile({ categories }: Props) {
   return (
     <CategoriesContainerMobile id="categories-container-mobile">
       <ArrowsButtonContainer id="arrows-button-container">
-        {currentCardIndex === firstIndex ? (
-          <LeftOrchid />
-        ) : (
-          <LeftOrchidDarkFilled
-            onClick={() => setCurrentCardIndex(currentCardIndex - 1)}
-          />
-        )}
-        {currentCardIndex === lastIndex ? (
-          <RightOrchid />
-        ) : (
-          <RightOrchidDarkFilled
-            onClick={() => {
-              setCurrentCardIndex(currentCardIndex + 1);
-            }}
-          />
-        )}
+        <CircleArrow
+          direction="left"
+          color="orchid-dark"
+          isFilled={currentCardIndex !== firstIndex}
+          onClick={
+            currentCardIndex !== firstIndex
+              ? () => setCurrentCardIndex(currentCardIndex - 1)
+              : undefined
+          }
+        />
+        <CircleArrow
+          direction="right"
+          color="orchid-dark"
+          isFilled={currentCardIndex !== lastIndex}
+          onClick={
+            currentCardIndex !== lastIndex
+              ? () => setCurrentCardIndex(currentCardIndex + 1)
+              : undefined
+          }
+        />
       </ArrowsButtonContainer>
 
       <Card>
@@ -68,13 +68,12 @@ export default function CategoriesMobile({ categories }: Props) {
       </Card>
 
       <IndicatorsContainer id="indicators-container">
-        {categories.map((category, index) =>
-          index === currentCardIndex ? (
-            <EllipsePapaya key={category.title} />
-          ) : (
-            <EllipseOrchid key={category.title} />
-          ),
-        )}
+        {categories.map((category, index) => (
+          <Ellipse
+            color={index === currentCardIndex ? "papaya" : "orchid-dark"}
+            key={category.title}
+          />
+        ))}
       </IndicatorsContainer>
     </CategoriesContainerMobile>
   );
