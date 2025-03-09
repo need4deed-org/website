@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useTranslation } from "react-i18next";
 import { Button } from "../core/button";
 import { ContainerProps } from "../styled/containers";
 
@@ -14,9 +15,14 @@ const FooterContainer = styled.div.attrs<ContainerProps>((props) => ({
 `;
 
 export default function Footer() {
+  const { t } = useTranslation();
+
   return (
     <FooterContainer id="footer-container">
-      <Button onClick={() => {}} text="See volunteering opportunites" />
+      <Button
+        onClick={() => {}}
+        text={t("homepage.volunteeringCategoires.footerButton")}
+      />
     </FooterContainer>
   );
 }

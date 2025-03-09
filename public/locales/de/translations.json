@@ -470,5 +470,26 @@
       "time": "Termin",
       "location": "Bezirk"
     }
+  },
+  "homepage": {
+    "volunteeringCategoires": {
+      "header": "Möglichkeiten, sich ehrenamtlich zu engagieren",
+      "headerParagraph": "Wir bieten verschiedene Arten von ehrenamtlichen Tätigkeiten in Flüchtlingsunterkünften an, entweder regelmäßig oder gelegentlich.",
+      "card": {
+        "germanLanguageSupport": "Unterstützung der deutschen Sprache",
+        "germanLanguageSupportInfo": "Sprechen Sie fließend Deutsch? Unterstützen Sie Flüchtlinge, indem Sie Deutsch in Sprachcafés unterrichten und privat oder in Gruppen Nachhilfe geben.",
+        "childcare": "Kinderbetreuung",
+        "childcareInfo": "Wir suchen Freiwillige, die Kinder in Flüchtlingsunterkünften unterstützen, indem sie bei der Tagesbetreuung helfen oder bei den Hausaufgaben helfen. Erfahrung mit Kindern ist ein Plus!",
+        "skillsBasedVolunteering": "Fertigkeitsbasiertes Ehrenamt",
+        "skillsBasedVolunteeringInfo": "Einige Möglichkeiten bieten die Chance, Ihre besonderen Fachkenntnisse einzusetzen, wie z.B. Fahrradreparatur, Gartenarbeit, musikalische Fähigkeiten oder organisatorisches Geschick.",
+        "events": "Veranstaltungen",
+        "eventsInfo": "Gelegentlich erfordern Veranstaltungen besondere Unterstützung durch Freiwillige. Dies können Festivals, Abendessen, Ausflüge, kulturelle Aktivitäten, ein Tag des Aufbaus einer Kleidersortierstation, Gartenarbeit oder ein Workshop sein.",
+        "sportsActivities": "Sportliche Aktivitäten",
+        "sportsActivitiesInfo": "Wir suchen immer Freiwillige, die uns bei der Organisation von sportlichen Aktivitäten für Kinder, Jugendliche oder Erwachsene in Unterkünften helfen.",
+        "accompanyARefugee": "Flüchtlinge begleiten",
+        "accompanyARefugeeInfo": "Sprechen Sie fließend Deutsch und eine zweite Sprache? Unterstützen Sie Einzelpersonen bei Behördengängen – begleiten Sie sie zum Arzt, zum Jobcenter oder anderswohin."
+      },
+      "footerButton": "Freiwilligenmöglichkeiten ansehen"
+    }
   }
 }
