@@ -1,53 +1,162 @@
 body {
-  font-family:
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    "Open Sans",
-    "Helvetica Neue",
-    sans-serif;
+  font-family: 'Figtree', sans-serif;
   width: 100%;
   margin: 0;
 }
+
 
 html {
   scroll-behavior: smooth;
 }
 
 :root {
+  /* color */
   --color-midnight: rgba(26, 38, 132, 1);
   --color-midnight-light: rgba(58, 72, 178, 1);
   --color-aubergine: rgba(95, 38, 77, 1);
   --color-aubergine-light: rgba(133, 63, 110, 1);
   --color-orchid: rgba(251, 226, 255, 1);
+  --color-orchid-dark: rgba(242, 177, 255, 1);
   --color-orchid-light: rgba(251, 226, 255, 1);
   --color-sand: rgba(242, 226, 211, 1);
   --color-magnolia: rgba(246, 238, 231, 1);
   --color-papaya: rgba(255, 125, 104, 1);
+  --color-white:  rgba(255, 255, 255, 1);
 
-  --max-width-section: 360px;
+  /* text */
+  --text-h2-font-weight: 600;
+  --text-h2-font-size: 32px;
+  --text-h2-line-height: 38px;
+
+  --text-h3-font-weight: 600;
+  --text-h3-font-size: 24px;
+  --text-h3-line-height: 30px;
+  --text-h3-letter-spacing: 0.1px;
+
+  --text-p-font-weight: 300;
+
+  /* icon */
+  --icon-color: var(--color-papaya);
+
+  /* card */
+  --card-border-radius: 24px;
+
+
 }
 
 @media (min-width: 360px) {
   :root {
     --max-width-section: 360px;
+
+    --text-p-font-size: 18px; 
+    --text-p-line-height: 21px;
+    --text-p-letter-spacing: 0;
+    
+    --icon-size:40px;
+    
+    --text-button-font-size: 18px;
+    
+    --homepage-section-container-padding: 48px 20px;
+    --homepage-section-container-gap: 16px;
+
+    --homepage-volunteering-categories-footer-justify-content: center;
+    --homepage-volunteering-categories-header-gap: 12px;
+    --homepage-volunteering-category-card-width: 320px;
+    --homepage-volunteering-category-card-height: 328px;
+    --homepage-volunteering-category-card-padding-top: 24px;
+    --homepage-volunteering-category-card-padding-right: 24px;
+    --homepage-volunteering-category-card-padding-bottom: 48px;
+    --homepage-volunteering-category-card-padding-left: 24px;
+    --homepage-volunteering-category-card-gap: 16px;
+
+    --button-height: 64px;
+    --button-padding: 12px 24px;
+    --button-border-radius: 125px;
+    --button-text-font-weight: 500;
+    --button-text-font-size: 18px;
+    --button-text-line-height: 25px;
+    --button-text-letter-spacing: 0.13px;
+    --button-text-text-align: center;
   }
 }
 
 @media (min-width: 768px) {
   :root {
     --max-width-section: 768px;
+
+    --icon-size:48px;
+
+    --text-p-font-size: 20px;
+    --text-p-line-height: 24px;
+    --text-p-letter-spacing: 0.1px;
+    
+    --text-button-font-size: 24px;
+    
+    --homepage-section-container-padding: 64px 40px;
+    --homepage-section-container-gap: 48px;
+
+    --homepage-volunteering-categories-grid-template-columns: repeat(2, 1fr);
+    --homepage-volunteering-categories-grid-template-rows: repeat(3, auto);
+    --homepage-volunteering-categories-grid-gap: 24px;
+    --homepage-volunteering-categories-footer-justify-content: flex-end;
+    --homepage-volunteering-categories-header-gap: 16px;
+    --homepage-volunteering-category-card-width: 332px;
+    --homepage-volunteering-category-card-height: 380px;
+    --homepage-volunteering-category-card-padding-top: 28px;
+    --homepage-volunteering-category-card-padding-right: 28px;
+    --homepage-volunteering-category-card-padding-bottom: 48px;
+    --homepage-volunteering-category-card-padding-left: 28px;
+    --homepage-volunteering-category-card-gap: 20px;
+
+
+    --button-height: 72px;
+    --button-padding: 16px 36px;
+    --button-border-radius: 125px;
+    --button-text-font-weight: 500;
+    --button-text-font-size: 24px;
+    --button-text-line-height: 25px;
+    --button-text-letter-spacing: 0.13px;
+    --button-text-text-align: center;
+    
   }
 }
 
 @media (min-width: 1440px) {
   :root {
     --max-width-section: 1440px;
+
+    --icon-size:48px;
+
+    --text-p-font-size: 20px;
+    --text-p-line-height: 24px;
+    --text-p-letter-spacing: 0.1px;
+
+    --text-button-font-size: 24px;
+    
+    --homepage-section-container-padding: 100px 120px;
+    --homepage-section-container-gap: 56px;
+
+    --homepage-volunteering-categories-grid-template-columns: repeat(3, 1fr);
+    --homepage-volunteering-categories-grid-template-rows: repeat(2, auto);
+    --homepage-volunteering-categories-grid-gap: 32px;
+    --homepage-volunteering-categories-footer-justify-content: flex-end;
+    --homepage-volunteering-categories-header-gap: 16px;
+    --homepage-volunteering-category-card-width: 378px;
+    --homepage-volunteering-category-card-height: 350px;
+    --homepage-volunteering-category-card-padding-top: 32px;
+    --homepage-volunteering-category-card-padding-right: 32px;
+    --homepage-volunteering-category-card-padding-bottom: 48px;
+    --homepage-volunteering-category-card-padding-left: 32px;
+    --homepage-volunteering-category-card-gap: 24px;
+
+    --button-height: 72px;
+    --button-padding: 16px 36px;
+    --button-border-radius: 125px;
+    --button-text-font-weight: 500;
+    --button-text-font-size: 24px;
+    --button-text-line-height: 25px;
+    --button-text-letter-spacing: 0.13px;
+    --button-text-text-align: center;
+  
   }
 }
-
