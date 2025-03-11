@@ -127,3 +127,10 @@ export enum HttpMethod {
   CONNECT = "CONNECT",
   PATCH = "PATCH",
 }
+
+export interface Testimonial {
+  name: string;
+  pic: string; // base64 encoded thumb most probably
+  text: string;
+  activities: string[];
+}
