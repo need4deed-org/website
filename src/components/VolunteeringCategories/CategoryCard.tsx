@@ -4,11 +4,13 @@ import { iconNameMap } from "./icon";
 import { IconDiv } from "../styled/containers";
 import { Heading3, Paragraph } from "../styled/text";
 
+// TODO: replace with this BaseCard
 const Card = styled.div`
   display: flex;
   flex-direction: column;
   border-radius: var(--card-border-radius);
   background-color: var(--color-sand);
+
   width: var(--homepage-volunteering-category-card-width);
   height: var(--homepage-volunteering-category-card-height);
   padding-top: var(--homepage-volunteering-category-card-padding-top);
