@@ -124,7 +124,11 @@ export const OpportunitiesContainer = styled.div.attrs<ContainerProps>(
 
 export const FullWidthContainer = styled.div.attrs<ContainerProps>((props) => ({
   id: props.id,
-}))<ContainerProps>``;
+}))<ContainerProps>`
+  width: 100%;
+  align-items: center;
+  background-color: ${(props) => props["background-color"]};
+`;
 
 export const BaseCard = styled.div`
   display: flex;
@@ -144,4 +148,37 @@ export const VolunteeringCategoriesContainer = styled.div.attrs<ContainerProps>(
   padding: var(--homepage-section-container-padding);
   gap: var(--homepage-section-container-gap);
   max-width: var(--max-width-section);
+`;
+
+export const BaseFooterContainer = styled.div.attrs<ContainerProps>(
+  (props) => ({
+    id: props.id,
+  }),
+)<ContainerProps>`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: var(--homepage-section-container-footer-justify-content);
+`;
+
+export const ActivitesContainer = styled.div.attrs<ContainerProps>((props) => ({
+  id: props.id,
+}))<ContainerProps>`
+  display: grid;
+  width: fit-content;
+  justify-content: left;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  gap: var(--homepage-volunteering-opportunity-activities-container-gap);
+`;
+
+export const OpportunityDetailsContainer = styled.div.attrs<ContainerProps>(
+  (props) => ({
+    id: props.id,
+  }),
+)<ContainerProps>`
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  gap: var(--homepage-volunteering-opportunity-details-gap);
 `;
