@@ -473,23 +473,24 @@
   },
   "homepage": {
     "volunteeringCategoires": {
-      "header": "Möglichkeiten, sich ehrenamtlich zu engagieren",
-      "headerParagraph": "Wir bieten verschiedene Arten von ehrenamtlichen Tätigkeiten in Flüchtlingsunterkünften an, entweder regelmäßig oder gelegentlich.",
+      "header": "Engagementmöglichkeiten",
+      "headerParagraph": "Wir bieten verschiedene Arten von ehrenamtlichen Tätigkeiten an, entweder regelmäßig oder gelegentlich.",
       "card": {
-        "germanLanguageSupport": "Unterstützung der deutschen Sprache",
-        "germanLanguageSupportInfo": "Sprechen Sie fließend Deutsch? Unterstützen Sie Flüchtlinge, indem Sie Deutsch in Sprachcafés unterrichten und privat oder in Gruppen Nachhilfe geben.",
+        "germanLanguageSupport": "Deutsche Unterstützung",
+        "germanLanguageSupportInfo": "Sprichst du fließend Deutsch? Unterstütze Geflüchtete, indem du in Sprachcafés unterrichtest oder Nachhilfe gibst – privat oder in Gruppen.",
         "childcare": "Kinderbetreuung",
-        "childcareInfo": "Wir suchen Freiwillige, die Kinder in Flüchtlingsunterkünften unterstützen, indem sie bei der Tagesbetreuung helfen oder bei den Hausaufgaben helfen. Erfahrung mit Kindern ist ein Plus!",
-        "skillsBasedVolunteering": "Fertigkeitsbasiertes Ehrenamt",
-        "skillsBasedVolunteeringInfo": "Einige Möglichkeiten bieten die Chance, Ihre besonderen Fachkenntnisse einzusetzen, wie z.B. Fahrradreparatur, Gartenarbeit, musikalische Fähigkeiten oder organisatorisches Geschick.",
+        "childcareInfo": "Hilf Kindern in Unterkünften – bei der Betreuung am Tag oder den Hausaufgaben. Erfahrung mit Kindern ist ein Plus!",
+        "skillsBasedVolunteering": "Ehrenamt mit Fachkenntnissen",
+        "skillsBasedVolunteeringInfo": "Nutze deine Fähigkeiten – z. B. Fahrradreparatur, Gartenarbeit oder Musik.",
         "events": "Veranstaltungen",
-        "eventsInfo": "Gelegentlich erfordern Veranstaltungen besondere Unterstützung durch Freiwillige. Dies können Festivals, Abendessen, Ausflüge, kulturelle Aktivitäten, ein Tag des Aufbaus einer Kleidersortierstation, Gartenarbeit oder ein Workshop sein.",
+        "eventsInfo": "Manche Events brauchen extra Hilfe – Festivals, Ausflüge, Gartenarbeit oder Kleiderkammer einrichten.",
         "sportsActivities": "Sportliche Aktivitäten",
-        "sportsActivitiesInfo": "Wir suchen immer Freiwillige, die uns bei der Organisation von sportlichen Aktivitäten für Kinder, Jugendliche oder Erwachsene in Unterkünften helfen.",
-        "accompanyARefugee": "Flüchtlinge begleiten",
-        "accompanyARefugeeInfo": "Sprechen Sie fließend Deutsch und eine zweite Sprache? Unterstützen Sie Einzelpersonen bei Behördengängen – begleiten Sie sie zum Arzt, zum Jobcenter oder anderswohin."
+        "sportsActivitiesInfo": "Hilf mit, Sportangebote für Kinder, Jugendliche oder Erwachsene in Unterkünften zu organisieren.",
+        "accompanyARefugee": "Geflüchtete begleiten",
+        "accompanyARefugeeInfo": "Sprichst du fließend Deutsch und eine weitere Sprache? Begleite Geflüchtete zu Ämtern, Ärzt:innen oder anderen Terminen."
       },
-      "footerButton": "Freiwilligenmöglichkeiten ansehen"
+      "footerButton": "Engagementmöglichkeiten ansehen"
     }
   }
 }
+
