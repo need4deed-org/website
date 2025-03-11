@@ -14,7 +14,7 @@ const opportunities: Opportunitiy[] = [
     languages: ["French", "German", "Georgian", "Turkish", "Arabic"],
     schedule: { type: "Flexible", dates: ["16-20:00"] },
     district: "Treptown",
-    activities: ["tutoring", "translate"],
+    activities: ["tutoring", "translate", "translate"],
   },
   {
     iconName: IconName.Users,

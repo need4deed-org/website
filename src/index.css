@@ -51,8 +51,8 @@ html {
   --homepage-volunteering-opportunity-activities-container-gap: 8px;
   --homepage-volunteering-opportunity-activity-tag-border-radius: 4px;
   --homepage-volunteering-opportunity-activity-tag-padding: 6px 8px;
-  --homepage-volunteering-opportunity-detail-section-gap: 16px;
-  --homepage-volunteering-opportunity-detail-header-gap: 16px;
+  --homepage-volunteering-opportunity-detail-section-gap: 4px;
+  --homepage-volunteering-opportunity-detail-header-gap: 8px;
 
 }
 

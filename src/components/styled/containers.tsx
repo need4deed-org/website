@@ -168,6 +168,7 @@ export const ActivitesContainer = styled.div.attrs<ContainerProps>((props) => ({
   width: fit-content;
   justify-content: left;
   grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: auto; */
   grid-template-rows: auto;
   gap: var(--homepage-volunteering-opportunity-activities-container-gap);
 `;
