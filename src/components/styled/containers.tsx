@@ -164,12 +164,10 @@ export const BaseFooterContainer = styled.div.attrs<ContainerProps>(
 export const ActivitesContainer = styled.div.attrs<ContainerProps>((props) => ({
   id: props.id,
 }))<ContainerProps>`
-  display: grid;
+  display: flex;
   width: fit-content;
   justify-content: left;
-  grid-template-columns: repeat(2, 1fr);
-  /* grid-template-columns: auto; */
-  grid-template-rows: auto;
+  flex-wrap: wrap;
   gap: var(--homepage-volunteering-opportunity-activities-container-gap);
 `;
 

@@ -1,7 +1,10 @@
+import { useTranslation } from "react-i18next";
 import { Heading2 } from "../styled/text";
 
 function Header() {
-  return <Heading2>Discover Volunteering Opportunities</Heading2>;
+  const { t } = useTranslation();
+
+  return <Heading2>{t(`homepage.volunteeringOpportunities.header`)}</Heading2>;
 }
 
 export default Header;

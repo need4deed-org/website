@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { CalendarDots, MapPin, Translate } from "@phosphor-icons/react";
+import { useTranslation } from "react-i18next";
 import { Opportunitiy } from "./types";
 import {
   ActivitesContainer,
@@ -11,7 +12,7 @@ import { ActivitySpan, Heading3, Paragraph } from "../styled/text";
 import { iconNameMap } from "../VolunteeringCategories/icon";
 
 interface ActivityTagProps {
-  backgroundColor: string;
+  "background-color": string;
 }
 
 const Card = styled(BaseCard)`
@@ -30,14 +31,25 @@ const ActivityTag = styled.div<ActivityTagProps>`
     --homepage-volunteering-opportunity-activity-tag-border-radius
   );
   padding: var(--homepage-volunteering-opportunity-activity-tag-padding);
-  background-color: ${(props) => props.backgroundColor};
+  background-color: ${(props) => props["background-color"]};
 `;
 
-const papayaColorActivities = ["tutoring", "translate", "unique skills"]; // ... we can add more activity from Figma file
+const aubergineColorActivities = [
+  "doctors appointment",
+  "government office",
+  "apartment viewing",
+  "school/kindergarten",
+  "way/path accompanying",
+  "arzttermin",
+  "behörde",
+  "wohnungsbesichtigung",
+  "schule/kindergarten",
+  "wegbegleitung",
+];
 const getActivityBackgroundColor = (activity: string) => {
-  return papayaColorActivities.includes(activity)
-    ? "var(--color-papaya)"
-    : "var(--color-aubergine-light)";
+  return aubergineColorActivities.includes(activity)
+    ? "var(--color-aubergine-light)"
+    : "var(--color-papaya)";
 };
 
 const DetailSection = styled.div`
@@ -64,6 +76,8 @@ export default function OpportunityCard({
   district,
   activities,
 }: Opportunitiy) {
+  const { t } = useTranslation();
+
   const languagesText = languages.join("; ");
   const datesText = schedule.dates?.join(", ");
 
@@ -75,7 +89,10 @@ export default function OpportunityCard({
 
       <ActivitesContainer id="activities-container">
         {activities.map((activity) => (
-          <ActivityTag backgroundColor={getActivityBackgroundColor(activity)}>
+          <ActivityTag
+            key={activity}
+            background-color={getActivityBackgroundColor(activity)}
+          >
             <ActivitySpan>{activity.toUpperCase()}</ActivitySpan>
           </ActivityTag>
         ))}
@@ -85,7 +102,9 @@ export default function OpportunityCard({
         <DetailSection>
           <DetailHeader>
             <Translate size={20} color="var(--icon-color)" />
-            <Paragraph fontWeight={550}>Languages:</Paragraph>
+            <Paragraph fontWeight={550}>
+              {t(`homepage.volunteeringOpportunities.languages`)}:
+            </Paragraph>
           </DetailHeader>
           <Paragraph>{languagesText}</Paragraph>
         </DetailSection>
@@ -93,7 +112,9 @@ export default function OpportunityCard({
         <DetailSection>
           <DetailHeader>
             <CalendarDots size={20} color="var(--icon-color)" />
-            <Paragraph fontWeight={550}>Schedule:</Paragraph>
+            <Paragraph fontWeight={550}>
+              {t(`homepage.volunteeringOpportunities.schedule`)}:
+            </Paragraph>
             <Paragraph>{schedule.type}</Paragraph>
           </DetailHeader>
           <Paragraph>{datesText}</Paragraph>
@@ -102,7 +123,9 @@ export default function OpportunityCard({
         <DetailSection>
           <DetailHeader>
             <MapPin size={20} weight="fill" color="var(--icon-color)" />
-            <Paragraph fontWeight={550}>District:</Paragraph>
+            <Paragraph fontWeight={550}>
+              {t(`homepage.volunteeringOpportunities.district`)}:
+            </Paragraph>
             <Paragraph>{district}</Paragraph>
           </DetailHeader>
         </DetailSection>
