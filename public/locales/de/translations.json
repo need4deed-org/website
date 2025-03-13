@@ -490,6 +490,43 @@
         "accompanyARefugeeInfo": "Sprichst du fließend Deutsch und eine weitere Sprache? Begleite Geflüchtete zu Ämtern, Ärzt:innen oder anderen Terminen."
       },
       "footerButton": "Engagementmöglichkeiten ansehen"
+    },
+    "volunteeringOpportunities": {
+      "header": "Freiwilligenmöglichkeiten entdecken",
+      "languages": "Sprachen",
+      "schedule": "Zeitplan",
+      "district": "Bezirk",
+      "card0": {
+        "title": "Kinder bei Hausaufgaben betreuen und unterstützen",
+        "description": "Unterstütze Kinder, die im Wohnzentrum leben, mit Nachhilfe!",
+        "languages": "Französisch, Deutsch, Georgisch, Türkisch, Arabisch",
+        "schedule": {
+          "type": "Flexibel",
+          "dates": "16:00-20:00"
+        },
+        "activities": "nachhilfe, Übersetzung, schule/kindergarten"
+      },
+      "card1": {
+        "title": "Queere Geflüchtete dabei unterstützen, Berlin kennenzulernen",
+        "description": "Du unterstützt eine Person in ihren ersten Wochen in Berlin, zeigst ihr die Stadt und gibst ihr Informationen über interessante queere Orte in Berlin.",
+        "languages": "Spanisch, Dari, Georgisch, Türkisch, Arabisch",
+        "schedule": {
+          "type": "Flexibel",
+          "dates": "Montags 17:00-20:00, Freitags 17:00-20:00"
+        },
+        "activities": "wegbegleitung, behörde, nachhilfe"
+      },
+      "card2": {
+        "title": "Nimm an unserer Fahrradwerkstatt teil",
+        "description": "Bringe deine Fähigkeiten in unsere Fahrradwerkstatt ein und repariere gemeinsam mit den Bewohnern Fahrräder.",
+        "languages": "Deutsch, Englisch, Türkisch",
+        "schedule": {
+          "type": "Flexibel",
+          "dates": ""
+        },
+        "activities": "besondere fähigkeiten"
+      },
+      "footerButton": "Alle Freiwilligenmöglichkeiten ansehen"
     }
   }
 }
