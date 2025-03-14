@@ -49,7 +49,26 @@ jobs:
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
       - name: Add GitLab remote
         run: |
-          git remote add gitlab "https://oauth2:${{ secrets.GITLAB_ACCESS_TOKEN }}@gitlab.com/${{ secrets.GITLAB_REPO_PATH }}.git"
-      - name: Push to GitLab
+          git remote add gitlab "https://oauth2:${{ secrets.GITLAB_ACCESS_TOKEN }}@gitlab.com/https://gitlab.com/need4deed/website.git"
+      - name: Push to GitLab (Temporary Branch)
         run: |
-          git push -f gitlab main
+          GITLAB_BRANCH="mirror-temp-${{ github.run_id }}" # create a unique branch name
+          git checkout -b "$GITLAB_BRANCH"
+          git push gitlab "$GITLAB_BRANCH"
+      - name: Create Merge Request
+        run: |
+          GITLAB_BRANCH="mirror-temp-${{ github.run_id }}"
+          curl --request POST \
+            --header "PRIVATE-TOKEN: ${{ secrets.GITLAB_ACCESS_TOKEN }}" \
+            --header "Content-Type: application/json" \
+            --data "{ \"source_branch\": \"$GITLAB_BRANCH\", \"target_branch\": \"main\", \"title\": \"Mirror from GitHub\" }" \
+            "https://gitlab.com/api/v4/projects/${{ secrets.GITLAB_REPO_PATH_ENCODED }}/merge_requests" #GITLAB_REPO_PATH_ENCODED needs to be url encoded.
+      - name: Delete temporary branch (optional)
+        run: |
+          GITLAB_BRANCH="mirror-temp-${{ github.run_id }}"
+          curl --request DELETE \
+            --header "PRIVATE-TOKEN: ${{ secrets.GITLAB_ACCESS_TOKEN }}" \
+            "https://gitlab.com/api/v4/projects/${{ secrets.GITLAB_REPO_PATH_ENCODED }}/repository/branches/$GITLAB_BRANCH"
+        continue-on-error: true # if deletion fails, continue.
+env:
+  GITLAB_REPO_PATH_ENCODED: ${{ github.repository_owner }}%2F${{ github.event.repository.name }}
