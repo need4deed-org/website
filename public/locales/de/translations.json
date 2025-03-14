@@ -470,5 +470,26 @@
       "time": "Termin",
       "location": "Bezirk"
     }
+  },
+  "homepage": {
+    "volunteeringCategoires": {
+      "header": "Engagementmöglichkeiten",
+      "headerParagraph": "Wir bieten verschiedene Arten von ehrenamtlichen Tätigkeiten an, entweder regelmäßig oder gelegentlich.",
+      "card": {
+        "germanLanguageSupport": "Deutsche Unterstützung",
+        "germanLanguageSupportInfo": "Sprichst du fließend Deutsch? Unterstütze Geflüchtete, indem du in Sprachcafés unterrichtest oder Nachhilfe gibst – privat oder in Gruppen.",
+        "childcare": "Kinderbetreuung",
+        "childcareInfo": "Hilf Kindern in Unterkünften – bei der Betreuung am Tag oder den Hausaufgaben. Erfahrung mit Kindern ist ein Plus!",
+        "skillsBasedVolunteering": "Ehrenamt mit Fachkenntnissen",
+        "skillsBasedVolunteeringInfo": "Nutze deine Fähigkeiten – z. B. Fahrradreparatur, Gartenarbeit oder Musik.",
+        "events": "Veranstaltungen",
+        "eventsInfo": "Manche Events brauchen extra Hilfe – Festivals, Ausflüge, Gartenarbeit oder Kleiderkammer einrichten.",
+        "sportsActivities": "Sportliche Aktivitäten",
+        "sportsActivitiesInfo": "Hilf mit, Sportangebote für Kinder, Jugendliche oder Erwachsene in Unterkünften zu organisieren.",
+        "accompanyARefugee": "Geflüchtete begleiten",
+        "accompanyARefugeeInfo": "Sprichst du fließend Deutsch und eine weitere Sprache? Begleite Geflüchtete zu Ämtern, Ärzt:innen oder anderen Terminen."
+      },
+      "footerButton": "Engagementmöglichkeiten ansehen"
+    }
   }
 }
