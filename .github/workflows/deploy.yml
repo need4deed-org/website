@@ -49,7 +49,7 @@ jobs:
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
       - name: Add GitLab remote
         run: |
-          git remote add gitlab "https://oauth2:${{ secrets.GITLAB_ACCESS_TOKEN }}@gitlab.com/https://gitlab.com/need4deed/website.git"
+          git remote add gitlab "https://oauth2:${{ secrets.GITLAB_ACCESS_TOKEN }}@gitlab.com/need4deed/website.git"
       - name: Push to GitLab (Temporary Branch)
         run: |
           GITLAB_BRANCH="mirror-temp-${{ github.run_id }}" # create a unique branch name
@@ -70,5 +70,5 @@ jobs:
             --header "PRIVATE-TOKEN: ${{ secrets.GITLAB_ACCESS_TOKEN }}" \
             "https://gitlab.com/api/v4/projects/${{ secrets.GITLAB_REPO_PATH_ENCODED }}/repository/branches/$GITLAB_BRANCH"
         continue-on-error: true # if deletion fails, continue.
-env:
-  GITLAB_REPO_PATH_ENCODED: ${{ github.repository_owner }}%2F${{ github.event.repository.name }}
+    env:
+      GITLAB_REPO_PATH_ENCODED: ${{ github.repository_owner }}%2F${{ github.event.repository.name }}
