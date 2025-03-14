@@ -159,6 +159,7 @@ function App() {
                 element={<Subpage type={Subpages.FAQS} />}
               />
               <Route path="/:lng" element={<Home />} />
+              <Route path="/new" element={<Landing />} />
               <Route path="*" element={<Land404 />} />
             </Routes>
           </div>
