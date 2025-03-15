@@ -283,7 +283,7 @@
       }
     }
   },
-  "event": { "menuItem": "Cooking Event" },
+  "event": { "menuItem": "Workshop" },
   "VolunTea": {
     "greeting": {
       "invite": "You are more than invited to our next VolunTea.",
@@ -327,6 +327,37 @@
     "outro": {
       "rsvp": {
         "text": "RSVP here"
+      }
+    }
+  },
+  "eventKids": {
+    "greeting": {
+      "title": "Volunteering with kids!!",
+      "invite1": "An interactive workshop",
+      "invite2": "with Need4Deed intern",
+      "host": "Jamie Durant",
+      "when": "Join an Iftar co-cooking with Need4Deed and Kiezkantine.",
+      "registration": "Registration"
+    },
+    "main": {
+      "title": "What will we learn about?",
+      "para1": "How should I conceptualize my relationship with kids?",
+      "para2": "What are boundaries I should enforce when working with kids?",
+      "para3": "How do I work across cultural differences?",
+      "para4": "How do I manage conflict?",
+      "para5": "What do I do if a kid gets upset?",
+      "para6": "How do I get a group of kids engaged?",
+      "para7": "How do I make sure we all have fun?"
+    },
+    "outro": {
+      "rsvp": {
+        "text": "RSVP here"
+      },
+      "para1": "Working with kids is one of the most rewarding volunteer opportunities at Need4Deed, but it becomes even more rewarding when you have some basic skills, principles and tricks up your sleeve.",
+      "para2": "This interactive workshop (in English) will set you up for success! It will be followed by a VolunTea at 19:00",
+      "address": {
+        "floor": "First floor",
+        "lead": "Enter through the small door, directly next to  (left of) the main paring entrance"
       }
     }
   },

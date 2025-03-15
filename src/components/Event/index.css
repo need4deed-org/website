@@ -6,12 +6,24 @@
   font-weight: 550;
 }
 
+.event-container strong {
+  font-weight: 700;
+}
+
 .event-timeslot {
   font-weight: bold;
 }
 
 .event-location {
   margin-block-start: 2rem;
+}
+
+.bullet-list {
+  margin-block-start: 1rem;
+}
+
+.bullet-list li {
+  margin-block-end: 0.2rem;
 }
 
 .event-rsvp {
@@ -61,7 +73,7 @@
 .event-lines-together {
   display: flex;
   flex-direction: column;
-  gap: .15rem;
+  gap: 0.15rem;
 }
 
 .event-lines-together * {
@@ -81,6 +93,6 @@
 }
 
 .volunteerEmail {
-  color: var(--n4d-tertiary); 
+  color: var(--n4d-tertiary);
   text-decoration: underline;
 }
