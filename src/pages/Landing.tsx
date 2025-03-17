@@ -3,6 +3,7 @@ import { AppContainer } from "../components/styled/containers";
 
 import { VolunteeringCategoriesSection } from "../components/VolunteeringCategories";
 import { Lang } from "../config/types";
+import { VolunteeringOpportunitiesSection } from "../components/VolunteeringOpportunities";
 
 // TODO: This is a temporary component, will be deleted.
 function LanguageSelector() {
@@ -26,6 +27,7 @@ export default function Landing() {
     <AppContainer id="app-container">
       <LanguageSelector />
       <VolunteeringCategoriesSection />
+      <VolunteeringOpportunitiesSection />
     </AppContainer>
   );
 }
