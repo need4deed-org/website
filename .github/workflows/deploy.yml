@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+      - develop
 
 jobs:
   pre-commit:
@@ -37,6 +38,7 @@ jobs:
 
   mirror:
     needs: test # Ensure tests pass before mirroring
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
