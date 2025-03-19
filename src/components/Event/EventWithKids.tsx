@@ -10,10 +10,6 @@ export default function EventWidthKids() {
   const { t } = useTranslation();
   const volunteerPicStyle = {
     backgroundImage: `url(${getImageUrl("v_w_kids.webp")})`,
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-    width: "100%",
-    height: "100%",
   };
 
   return (
@@ -44,7 +40,7 @@ export default function EventWidthKids() {
       </h6>
       <br />
       <div className="pic-and-text">
-        <div style={volunteerPicStyle} />
+        <div className="event-pic" style={volunteerPicStyle} />
         <div>
           <h6>
             <strong>{t("eventKids.main.title")}</strong>
