@@ -1,68 +1,52 @@
 import { useTranslation } from "react-i18next";
 import OpportunityCard from "./OpportunityCard";
-import { Opportunitiy } from "./types";
 import { OpportunitiesContainer } from "../styled/containers";
-import { IconName } from "../VolunteeringCategories/types";
 import useResponsive from "../../hooks/useResponsive";
-import { screenSizeThresholds } from "../../config/constants";
+import {
+  screenSizeThresholds,
+  urlApiOpportunity,
+} from "../../config/constants";
+import useOpportunities from "../../hooks/api/useOpportunities";
+import { Lang, OpportunityParams, OpportunityType } from "../../config/types";
+import { OpportunitiyApi } from "./types";
+import { getMappedOpportunities, getMostPopularOpportunities } from "./utils";
 
-interface OpportunityTranslationKeys {
-  title: string;
-  description: string;
-  languages: string;
-  scheduleType: string;
-  scheduleDates: string;
-  activities: string;
-}
-
-const initialOpportunities: Partial<Opportunitiy>[] = [
-  { iconName: IconName.Baby, district: "Treptown" },
-  { iconName: IconName.Users, district: "Berlin" },
-  { iconName: IconName.Bicycle, district: "Munih" },
-];
+const opportunityParams: OpportunityParams = {
+  search: {
+    status: ["Volunteers Needed", "Search in process", "Not started"],
+    opportunity_type: [OpportunityType.GENERAL, OpportunityType.ACCOMPANYING],
+  },
+  primaryKeys: ["title", "name"],
+};
 
 function Opportunities() {
-  const { t } = useTranslation();
+  const { i18n } = useTranslation();
   const isSmallScreen = useResponsive(screenSizeThresholds.desktop);
   const truncateNumber = isSmallScreen ? 2 : 3;
 
-  const translateOpportunity = (index: number): OpportunityTranslationKeys => ({
-    title: t(`homepage.volunteeringOpportunities.card${index}.title`),
-    description: t(
-      `homepage.volunteeringOpportunities.card${index}.description`,
-    ),
-    languages: t(`homepage.volunteeringOpportunities.card${index}.languages`),
-    scheduleType: t(
-      `homepage.volunteeringOpportunities.card${index}.schedule.type`,
-    ),
-    scheduleDates: t(
-      `homepage.volunteeringOpportunities.card${index}.schedule.dates`,
-    ),
-    activities: t(`homepage.volunteeringOpportunities.card${index}.activities`),
-  });
+  // Set language for API request
+  opportunityParams.language = i18n.language as Lang;
 
-  const opportunities: Opportunitiy[] = initialOpportunities.map(
-    (opp, index) => {
-      const translations = translateOpportunity(index);
-      return {
-        ...opp,
-        title: translations.title,
-        description: translations.description,
-        languages: translations.languages.split(",").map((e) => e.trim()),
-        schedule: {
-          type: translations.scheduleType,
-          dates: translations.scheduleDates.split(",").map((e) => e.trim()),
-        },
-        activities: translations.activities.split(",").map((e) => e.trim()),
-      } as Opportunitiy;
-    },
+  const { opportunities } = useOpportunities(
+    urlApiOpportunity,
+    opportunityParams,
   );
+
+  const opportunitiesRaw = (opportunities ||
+    []) as unknown as OpportunitiyApi[];
+
+  const popularOpportunities = getMostPopularOpportunities(
+    opportunitiesRaw,
+    truncateNumber,
+  );
+
+  const mappedOpportunities = getMappedOpportunities(popularOpportunities);
 
   return (
     <OpportunitiesContainer id="opportunities-container">
-      {opportunities.slice(0, truncateNumber).map((opp) => (
+      {mappedOpportunities.map((opp) => (
         // eslint-disable-next-line react/jsx-props-no-spreading
-        <OpportunityCard key={opp.title} {...opp} />
+        <OpportunityCard key={opp.id} {...opp} />
       ))}
     </OpportunitiesContainer>
   );

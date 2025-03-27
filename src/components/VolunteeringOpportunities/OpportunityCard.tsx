@@ -10,6 +10,7 @@ import {
 } from "../styled/containers";
 import { ActivitySpan, Heading3, Paragraph } from "../styled/text";
 import { iconNameMap } from "../VolunteeringCategories/icon";
+import { IconName } from "../VolunteeringCategories/types";
 
 interface ActivityTagProps {
   "background-color": string;
@@ -40,14 +41,15 @@ const aubergineColorActivities = [
   "apartment viewing",
   "school/kindergarten",
   "way/path accompanying",
-  "arzttermin",
+  "arzttermine",
   "behörde",
   "wohnungsbesichtigung",
   "schule/kindergarten",
   "wegbegleitung",
 ];
+
 const getActivityBackgroundColor = (activity: string) => {
-  return aubergineColorActivities.includes(activity)
+  return aubergineColorActivities.includes(activity.toLowerCase())
     ? "var(--color-aubergine-light)"
     : "var(--color-papaya)";
 };
@@ -67,25 +69,38 @@ const DetailHeader = styled.div`
   gap: var(--homepage-volunteering-opportunity-detail-header-gap);
 `;
 
+const charlimit = 160;
+
 export default function OpportunityCard({
   title,
-  description,
+  voInformation,
   iconName,
   languages,
   schedule,
-  district,
+  locations,
   activities,
-}: Opportunitiy) {
+  accompanyingDate,
+}: Opportunitiy & { iconName: IconName }) {
   const { t } = useTranslation();
 
   const languagesText = languages.join("; ");
-  const datesText = schedule.dates?.join(", ");
+  const district = locations.join(",");
+  const scheduleAsStr =
+    accompanyingDate?.toDateString().split(" ").slice(0, 3).join(" ") ||
+    schedule;
+
+  const titleLen = title?.length || 0;
+  const totalTitleInfoLen = titleLen + (voInformation?.length || 0);
+
+  let truncatedVoInformation = null;
+  if (totalTitleInfoLen > charlimit)
+    truncatedVoInformation = `${voInformation.slice(0, charlimit - titleLen)}...`;
 
   return (
     <Card>
       <IconDiv>{iconNameMap[iconName]}</IconDiv>
       <Heading3>{title}</Heading3>
-      <Paragraph>{description}</Paragraph>
+      <Paragraph>{truncatedVoInformation || voInformation}</Paragraph>
 
       <ActivitesContainer id="activities-container">
         {activities.map((activity) => (
@@ -115,9 +130,8 @@ export default function OpportunityCard({
             <Paragraph fontWeight={550}>
               {t(`homepage.volunteeringOpportunities.schedule`)}:
             </Paragraph>
-            <Paragraph>{schedule.type}</Paragraph>
           </DetailHeader>
-          <Paragraph>{datesText}</Paragraph>
+          <Paragraph>{scheduleAsStr}</Paragraph>
         </DetailSection>
 
         <DetailSection>

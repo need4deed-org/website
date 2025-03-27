@@ -92,7 +92,7 @@ export type AlfredOpportunity = Record<string, any>;
 
 export type KeyMap = {
   id: string;
-  type: string;
+  type?: string;
   name: string;
   languages: string;
   time: string;
