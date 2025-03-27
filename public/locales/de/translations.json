@@ -69,6 +69,10 @@
         "header": "Danke für Ihr Interesse an der Freiwilligenarbeit mit Flüchtlingen :-)",
         "para": "Wir melden uns in den nächsten Tagen mit den nächsten Schritten bei Ihnen!"
       },
+      "somethingWrong": {
+        "header": "Da ist etwas schiefgelaufen! ",
+        "para": "Bitte überprüfen Sie alle Pflichtfelder und versuchen Sie es erneut."
+      },
       "thanks": "Danke, dass du dich entschieden hast",
       "reset": "Zurücksetzen",
       "fields": {
