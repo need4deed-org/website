@@ -86,6 +86,10 @@
         "header": "Thanks for your interest in volunteering with refugees :-)",
         "para": "We will get back to you in the coming days with the next steps!"
       },
+      "somethingWrong": {
+        "header": "Something went wrong!",
+        "para": "Please check all mandatory fields and try to submit once more."
+      },
       "thanks": "Thank you for choosing",
       "reset": "Reset",
       "fields": {
