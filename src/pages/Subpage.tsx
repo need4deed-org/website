@@ -111,7 +111,7 @@ function Subpage({ type }: Props) {
                 status: ["Volunteers Needed", "Search in process"],
                 opportunity_type: [OpportunityType.GENERAL],
               },
-              primaryKeys: ["title", "name", "created_at"],
+              primaryKeys: ["title", "name"],
               language: i18n.language as Lang,
             }}
             keyMap={{
