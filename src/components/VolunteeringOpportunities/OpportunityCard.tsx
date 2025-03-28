@@ -11,6 +11,9 @@ import {
 import { ActivitySpan, Heading3, Paragraph } from "../styled/text";
 import { iconNameMap } from "../VolunteeringCategories/icon";
 import { IconName } from "../VolunteeringCategories/types";
+import { getActivityBackgroundColor } from "./utils";
+
+const charlimit = 160;
 
 interface ActivityTagProps {
   "background-color": string;
@@ -35,25 +38,6 @@ const ActivityTag = styled.div<ActivityTagProps>`
   background-color: ${(props) => props["background-color"]};
 `;
 
-const aubergineColorActivities = [
-  "doctors appointment",
-  "government office",
-  "apartment viewing",
-  "school/kindergarten",
-  "way/path accompanying",
-  "arzttermine",
-  "behörde",
-  "wohnungsbesichtigung",
-  "schule/kindergarten",
-  "wegbegleitung",
-];
-
-const getActivityBackgroundColor = (activity: string) => {
-  return aubergineColorActivities.includes(activity.toLowerCase())
-    ? "var(--color-aubergine-light)"
-    : "var(--color-papaya)";
-};
-
 const DetailSection = styled.div`
   display: flex;
   flex-direction: column;
@@ -68,8 +52,6 @@ const DetailHeader = styled.div`
   justify-content: left;
   gap: var(--homepage-volunteering-opportunity-detail-header-gap);
 `;
-
-const charlimit = 160;
 
 export default function OpportunityCard({
   title,

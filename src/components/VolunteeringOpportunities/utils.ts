@@ -114,4 +114,23 @@ export const getMappedOpportunities = (opps: OpportunitiyApi[]) => {
   }));
 };
 
+const aubergineColorActivities = [
+  "doctors appointment",
+  "government office",
+  "apartment viewing",
+  "school/kindergarten",
+  "way/path accompanying",
+  "arzttermine",
+  "behörde",
+  "wohnungsbesichtigung",
+  "schule/kindergarten",
+  "wegbegleitung",
+];
+
+export const getActivityBackgroundColor = (activity: string) => {
+  return aubergineColorActivities.includes(activity.toLowerCase())
+    ? "var(--color-aubergine-light)"
+    : "var(--color-papaya)";
+};
+
 export default {};
