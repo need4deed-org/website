@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 interface TextProps {
   color?: string;
+  fontWeight?: number;
 }
 
 export const Heading2 = styled.h2<TextProps>`
@@ -21,11 +22,12 @@ export const Heading3 = styled.h3<TextProps>`
 `;
 
 export const Paragraph = styled.p<TextProps>`
-  font-weight: var(--text-p-font-weight);
+  font-weight: ${(props) => props.fontWeight || "var(--text-p-font-weight)"};
   font-size: var(--text-p-font-size);
   line-height: var(--text-p-line-height);
   letter-spacing: var(--text-p-letter-spacing);
   color: ${(props) => props.color || "var(--color-midnight)"};
+  margin: 0;
 `;
 
 export const ButtonSpan = styled.span<TextProps>`
@@ -35,4 +37,13 @@ export const ButtonSpan = styled.span<TextProps>`
   letter-spacing: var(--button-text-letter-spacing);
   text-align: var(--button-text-text-align);
   color: ${(props) => props.color || "var(--color-magnolia)"};
+`;
+
+export const ActivitySpan = styled.span<TextProps>`
+  font-weight: var(--text-activity-tag-font-weight);
+  font-size: var(--text-activity-tag-font-size);
+  line-height: var(--text-activity-tag-line-height);
+  letter-spacing: var(--text-activity-tag-letter-spacing);
+  text-align: var(--text-activity-tag-text-align);
+  color: ${(props) => props.color || "white"};
 `;

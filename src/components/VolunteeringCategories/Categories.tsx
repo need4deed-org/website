@@ -1,12 +1,13 @@
-import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import CategoryCard from "./CategoryCard";
 import CategoriesMobile from "./CategoriesMobile";
 import { Category, IconName } from "./types";
 import { CategoriesContainer } from "../styled/containers";
+import useResponsive from "../../hooks/useResponsive";
+import { screenSizeThresholds } from "../../config/constants";
 
 function Categories() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const isMobile = useResponsive(screenSizeThresholds.tablet);
   const { t } = useTranslation();
 
   const categories: Category[] = [
@@ -49,18 +50,6 @@ function Categories() {
       ),
     },
   ];
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   return (
     <CategoriesContainer id="categories-container">

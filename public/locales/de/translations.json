@@ -494,6 +494,13 @@
         "accompanyARefugeeInfo": "Sprichst du fließend Deutsch und eine weitere Sprache? Begleite Geflüchtete zu Ämtern, Ärzt:innen oder anderen Terminen."
       },
       "footerButton": "Engagementmöglichkeiten ansehen"
+    },
+    "volunteeringOpportunities": {
+      "header": "Freiwilligenmöglichkeiten entdecken",
+      "languages": "Sprachen",
+      "schedule": "Zeitplan",
+      "district": "Bezirk",
+      "footerButton": "Alle Freiwilligenmöglichkeiten ansehen"
     }
   }
 }
