@@ -2,22 +2,14 @@ import styled from "styled-components";
 import { CalendarDots, MapPin, Translate } from "@phosphor-icons/react";
 import { useTranslation } from "react-i18next";
 import { Opportunitiy } from "./types";
-import {
-  ActivitesContainer,
-  BaseCard,
-  IconDiv,
-  OpportunityDetailsContainer,
-} from "../styled/containers";
+import { ActivitesContainer, BaseCard, IconDiv } from "../styled/containers";
 import { ActivitySpan, Heading3, Paragraph } from "../styled/text";
 import { iconNameMap } from "../VolunteeringCategories/icon";
 import { IconName } from "../VolunteeringCategories/types";
 import { getActivityBackgroundColor } from "./utils";
+import OpportunityCardDetails, { CardDetail } from "./OpportunityCardDetail";
 
 const charlimit = 160;
-
-interface ActivityTagProps {
-  "background-color": string;
-}
 
 const Card = styled(BaseCard)`
   background-color: var(--color-magnolia);
@@ -29,6 +21,9 @@ const Card = styled(BaseCard)`
   padding-left: var(--homepage-volunteering-opportunity-card-padding-left);
   gap: var(--homepage-volunteering-opportunity-card-gap);
 `;
+interface ActivityTagProps {
+  "background-color": string;
+}
 
 const ActivityTag = styled.div<ActivityTagProps>`
   border-radius: var(
@@ -36,21 +31,6 @@ const ActivityTag = styled.div<ActivityTagProps>`
   );
   padding: var(--homepage-volunteering-opportunity-activity-tag-padding);
   background-color: ${(props) => props["background-color"]};
-`;
-
-const DetailSection = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  gap: var(--homepage-volunteering-opportunity-detail-section-gap);
-`;
-
-const DetailHeader = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: left;
-  gap: var(--homepage-volunteering-opportunity-detail-header-gap);
 `;
 
 export default function OpportunityCard({
@@ -69,7 +49,8 @@ export default function OpportunityCard({
   const district = locations.join(",");
   const scheduleAsStr =
     accompanyingDate?.toDateString().split(" ").slice(0, 3).join(" ") ||
-    schedule;
+    schedule ||
+    "";
 
   const titleLen = title?.length || 0;
   const totalTitleInfoLen = titleLen + (voInformation?.length || 0);
@@ -78,12 +59,29 @@ export default function OpportunityCard({
   if (totalTitleInfoLen > charlimit)
     truncatedVoInformation = `${voInformation.slice(0, charlimit - titleLen)}...`;
 
+  const cardDetails: CardDetail[] = [
+    {
+      icon: <Translate size={20} color="var(--icon-color)" />,
+      headerText: t(`homepage.volunteeringOpportunities.languages`),
+      bodyText: languagesText,
+    },
+    {
+      icon: <CalendarDots size={20} color="var(--icon-color)" />,
+      headerText: t(`homepage.volunteeringOpportunities.schedule`),
+      bodyText: scheduleAsStr,
+    },
+    {
+      icon: <MapPin size={20} weight="fill" color="var(--icon-color)" />,
+      headerText: t(`homepage.volunteeringOpportunities.district`),
+      bodyText: district,
+    },
+  ];
+
   return (
     <Card>
       <IconDiv>{iconNameMap[iconName]}</IconDiv>
       <Heading3>{title}</Heading3>
       <Paragraph>{truncatedVoInformation || voInformation}</Paragraph>
-
       <ActivitesContainer id="activities-container">
         {activities.map((activity) => (
           <ActivityTag
@@ -95,37 +93,7 @@ export default function OpportunityCard({
         ))}
       </ActivitesContainer>
 
-      <OpportunityDetailsContainer id="opportunity-details-container">
-        <DetailSection>
-          <DetailHeader>
-            <Translate size={20} color="var(--icon-color)" />
-            <Paragraph fontWeight={550}>
-              {t(`homepage.volunteeringOpportunities.languages`)}:
-            </Paragraph>
-          </DetailHeader>
-          <Paragraph>{languagesText}</Paragraph>
-        </DetailSection>
-
-        <DetailSection>
-          <DetailHeader>
-            <CalendarDots size={20} color="var(--icon-color)" />
-            <Paragraph fontWeight={550}>
-              {t(`homepage.volunteeringOpportunities.schedule`)}:
-            </Paragraph>
-          </DetailHeader>
-          <Paragraph>{scheduleAsStr}</Paragraph>
-        </DetailSection>
-
-        <DetailSection>
-          <DetailHeader>
-            <MapPin size={20} weight="fill" color="var(--icon-color)" />
-            <Paragraph fontWeight={550}>
-              {t(`homepage.volunteeringOpportunities.district`)}:
-            </Paragraph>
-            <Paragraph>{district}</Paragraph>
-          </DetailHeader>
-        </DetailSection>
-      </OpportunityDetailsContainer>
+      <OpportunityCardDetails cardDetails={cardDetails} />
     </Card>
   );
 }
