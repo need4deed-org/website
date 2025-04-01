@@ -1,13 +1,13 @@
-import styled from "styled-components";
 import { CalendarDots, MapPin, Translate } from "@phosphor-icons/react";
 import { useTranslation } from "react-i18next";
-import { Opportunitiy } from "./types";
-import { ActivitesContainer, BaseCard, IconDiv } from "../styled/containers";
+import styled from "styled-components";
+import { ActivitiesContainer, BaseCard, IconDiv } from "../styled/containers";
 import { ActivitySpan, Heading3, Paragraph } from "../styled/text";
 import { iconNameMap } from "../VolunteeringCategories/icon";
 import { IconName } from "../VolunteeringCategories/types";
-import { getActivityBackgroundColor } from "./utils";
 import OpportunityCardDetails, { CardDetail } from "./OpportunityCardDetail";
+import { Opportunity } from "./types";
+import { getActivityBackgroundColor } from "./utils";
 
 const charlimit = 160;
 
@@ -42,7 +42,7 @@ export default function OpportunityCard({
   locations,
   activities,
   accompanyingDate,
-}: Opportunitiy & { iconName: IconName }) {
+}: Opportunity & { iconName: IconName }) {
   const { t } = useTranslation();
 
   const languagesText = languages.join("; ");
@@ -82,7 +82,7 @@ export default function OpportunityCard({
       <IconDiv>{iconNameMap[iconName]}</IconDiv>
       <Heading3>{title}</Heading3>
       <Paragraph>{truncatedVoInformation || voInformation}</Paragraph>
-      <ActivitesContainer id="activities-container">
+      <ActivitiesContainer id="activities-container">
         {activities.map((activity) => (
           <ActivityTag
             key={activity}
@@ -91,7 +91,7 @@ export default function OpportunityCard({
             <ActivitySpan>{activity.toUpperCase()}</ActivitySpan>
           </ActivityTag>
         ))}
-      </ActivitesContainer>
+      </ActivitiesContainer>
 
       <OpportunityCardDetails cardDetails={cardDetails} />
     </Card>

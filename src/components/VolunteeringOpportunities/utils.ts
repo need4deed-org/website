@@ -1,9 +1,9 @@
 import { OpportunityType } from "../../config/types";
 import { IconName } from "../VolunteeringCategories/types";
-import { Opportunitiy, OpportunitiyApi } from "./types";
+import { Opportunity, OpportunityApi } from "./types";
 
 export const getSortedAccompanyingOpps = (
-  opportunities: OpportunitiyApi[],
+  opportunities: OpportunityApi[],
   order: "ASC" | "DESC" = "ASC",
 ) => {
   const sortedOpportunities = [...opportunities]; // Create a copy to avoid mutating the original array
@@ -22,7 +22,7 @@ export const getSortedAccompanyingOpps = (
   return sortedOpportunities;
 };
 
-const getNearestAccompanyingOpp = (opportunities: OpportunitiyApi[]) => {
+const getNearestAccompanyingOpp = (opportunities: OpportunityApi[]) => {
   const accompanyingOpps = opportunities.filter(
     (opp) => opp.opportunity_type === OpportunityType.ACCOMPANYING,
   );
@@ -31,7 +31,7 @@ const getNearestAccompanyingOpp = (opportunities: OpportunitiyApi[]) => {
 };
 
 const getNearestVolunteeringOpps = (
-  opportunities: OpportunitiyApi[],
+  opportunities: OpportunityApi[],
   top: number,
 ) => {
   const volunteeringOpps = opportunities.filter(
@@ -69,7 +69,7 @@ const getNearestVolunteeringOpps = (
 };
 
 export const getMostPopularOpportunities = (
-  opportunities: OpportunitiyApi[] | undefined,
+  opportunities: OpportunityApi[] | undefined,
   top: number,
 ) => {
   if (!opportunities?.length) return [];
@@ -80,8 +80,8 @@ export const getMostPopularOpportunities = (
   ];
 };
 
-const mapOpportunity = (opp: OpportunitiyApi) => {
-  const newOpp: Opportunitiy = {
+const mapOpportunity = (opp: OpportunityApi) => {
+  const newOpp: Opportunity = {
     accompanyingDate: opp.accomp_datetime
       ? new Date(opp.accomp_datetime)
       : null,
@@ -107,7 +107,7 @@ const mapOpportunity = (opp: OpportunitiyApi) => {
 
 const iconNames = [IconName.Users, IconName.Baby, IconName.Bicycle];
 
-export const getMappedOpportunities = (opps: OpportunitiyApi[]) => {
+export const getMappedOpportunities = (opps: OpportunityApi[]) => {
   return opps.map((opp, index) => ({
     ...mapOpportunity(opp),
     iconName: iconNames[index],

@@ -1,14 +1,14 @@
 import { useTranslation } from "react-i18next";
-import OpportunityCard from "./OpportunityCard";
-import { OpportunitiesContainer } from "../styled/containers";
-import useResponsive from "../../hooks/useResponsive";
 import {
   screenSizeThresholds,
   urlApiOpportunity,
 } from "../../config/constants";
-import useOpportunities from "../../hooks/api/useOpportunities";
 import { Lang, OpportunityParams, OpportunityType } from "../../config/types";
-import { OpportunitiyApi } from "./types";
+import useOpportunities from "../../hooks/api/useOpportunities";
+import useResponsive from "../../hooks/useResponsive";
+import { OpportunitiesContainer } from "../styled/containers";
+import OpportunityCard from "./OpportunityCard";
+import { OpportunityApi } from "./types";
 import { getMappedOpportunities, getMostPopularOpportunities } from "./utils";
 
 const opportunityParams: OpportunityParams = {
@@ -32,8 +32,7 @@ function Opportunities() {
     opportunityParams,
   );
 
-  const opportunitiesRaw = (opportunities ||
-    []) as unknown as OpportunitiyApi[];
+  const opportunitiesRaw = (opportunities || []) as unknown as OpportunityApi[];
 
   const popularOpportunities = getMostPopularOpportunities(
     opportunitiesRaw,

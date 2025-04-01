@@ -1,4 +1,4 @@
-export interface Opportunitiy {
+export interface Opportunity {
   accompanyingDate: Date | null;
   accompanyingInfo: string | null;
   activities: string[];
@@ -17,7 +17,7 @@ export interface Opportunitiy {
   voInformation: string;
 }
 
-export interface OpportunitiyApi {
+export interface OpportunityApi {
   accomp_datetime: string | null;
   accomp_information: string | null;
   activities: string[];
