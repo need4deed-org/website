@@ -47,10 +47,13 @@ html {
   --text-activity-tag-line-height: 17px;
   --text-activity-tag-text-align: center;
 
+  /* activites */
+  --activities-container-gap: 8px;
+  --activity-tag-border-radius: 4px;
+  --activity-tag-padding: 6px 8px;
+
+
   /*homepage volunteering opportunity */
-  --homepage-volunteering-opportunity-activities-container-gap: 8px;
-  --homepage-volunteering-opportunity-activity-tag-border-radius: 4px;
-  --homepage-volunteering-opportunity-activity-tag-padding: 6px 8px;
   --homepage-volunteering-opportunity-detail-section-gap: 4px;
   --homepage-volunteering-opportunity-detail-header-gap: 8px;
 
@@ -93,6 +96,16 @@ html {
     --homepage-volunteering-opportunity-card-padding-left: 24px;
     --homepage-volunteering-opportunity-card-gap: 16px;
     --homepage-volunteering-opportunity-details-gap: 12px;
+    
+    --homepage-testimonial-card-width:320px;
+    --homepage-testimonial-card-height:443px;
+    --homepage-testimonial-card-padding-top: 24px;
+    --homepage-testimonial-card-padding-right: 24px;
+    --homepage-testimonial-card-padding-bottom: 32px;
+    --homepage-testimonial-card-padding-left: 24px;
+    --homepage-testimonial-card-gap: 14px;
+    --homepage-testimonial-card-text-p-font-size: 16px;
+    --homepage-testimonial-card-text-p-line-height: 16px;
 
     --button-height: 64px;
     --button-padding: 12px 24px;
@@ -146,6 +159,15 @@ html {
     --homepage-volunteering-opportunity-card-gap: 20px;
     --homepage-volunteering-opportunity-details-gap: 16px;
 
+    --homepage-testimonial-card-width:328px;
+    --homepage-testimonial-card-height:507px;
+    --homepage-testimonial-card-padding-top: 28px;
+    --homepage-testimonial-card-padding-right: 28px;
+    --homepage-testimonial-card-padding-bottom: 40px;
+    --homepage-testimonial-card-padding-left: 28px;
+    --homepage-testimonial-card-gap: 14px;
+    --homepage-testimonial-card-text-p-font-size: 18px;
+    --homepage-testimonial-card-text-p-line-height: 18px;
 
     --button-height: 72px;
     --button-padding: 16px 36px;
@@ -199,6 +221,16 @@ html {
     --homepage-volunteering-opportunity-card-padding-left: 32px;
     --homepage-volunteering-opportunity-card-gap: 24px;
     --homepage-volunteering-opportunity-details-gap: 16px;
+
+    --homepage-testimonial-card-width:384px;
+    --homepage-testimonial-card-height:493px;
+    --homepage-testimonial-card-padding-top: 32px;
+    --homepage-testimonial-card-padding-right: 32px;
+    --homepage-testimonial-card-padding-bottom: 48px;
+    --homepage-testimonial-card-padding-left: 32px;
+    --homepage-testimonial-card-gap: 16px;
+    --homepage-testimonial-card-text-p-font-size: 18px;
+    --homepage-testimonial-card-text-p-line-height: 18px;
 
     --button-height: 72px;
     --button-padding: 16px 36px;

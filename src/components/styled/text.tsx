@@ -3,6 +3,8 @@ import styled from "styled-components";
 interface TextProps {
   color?: string;
   fontWeight?: number;
+  fontSize?: string;
+  lineHeight?: string;
 }
 
 export const Heading2 = styled.h2<TextProps>`
@@ -23,8 +25,8 @@ export const Heading3 = styled.h3<TextProps>`
 
 export const Paragraph = styled.p<TextProps>`
   font-weight: ${(props) => props.fontWeight || "var(--text-p-font-weight)"};
-  font-size: var(--text-p-font-size);
-  line-height: var(--text-p-line-height);
+  font-size: ${(props) => props.fontSize || "var(--text-p-font-size)"};
+  line-height: ${(props) => props.lineHeight || "var(--text-p-line-height)"};
   letter-spacing: var(--text-p-letter-spacing);
   color: ${(props) => props.color || "var(--color-midnight)"};
   margin: 0;

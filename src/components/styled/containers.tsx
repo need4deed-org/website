@@ -170,7 +170,7 @@ export const ActivitiesContainer = styled.div.attrs<ContainerProps>(
   width: fit-content;
   justify-content: left;
   flex-wrap: wrap;
-  gap: var(--homepage-volunteering-opportunity-activities-container-gap);
+  gap: var(--activities-container-gap);
 `;
 
 export const OpportunityDetailsContainer = styled.div.attrs<ContainerProps>(
