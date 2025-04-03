@@ -50,7 +50,7 @@ function Opportunities() {
 
       if (heights.length > 0) setMaxHeight(Math.max(...heights));
     }
-  }, [mappedOpportunities, cardRefs.current.length]);
+  }, [mappedOpportunities]);
 
   return (
     <OpportunitiesContainer id="opportunities-container">
