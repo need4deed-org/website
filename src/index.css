@@ -85,7 +85,6 @@ html {
     --homepage-volunteering-opportunities-grid-template-rows: repeat(2, auto);
     --homepage-volunteering-opportunities-grid-gap: 16px;
     --homepage-volunteering-opportunity-card-width: 320px;
-    /* --homepage-volunteering-opportunity-card-height: 496px;  TODO: this height is not enough always for long schedule dates. discuss about it  */
     --homepage-volunteering-opportunity-card-height: fit-content;
     --homepage-volunteering-opportunity-card-padding-top: 24px;
     --homepage-volunteering-opportunity-card-padding-right: 24px;
@@ -137,8 +136,7 @@ html {
     --homepage-volunteering-opportunities-grid-template-rows: auto;
     --homepage-volunteering-opportunities-grid-gap: 24px;
     --homepage-volunteering-opportunity-card-width: 332px;
-    /* TODO: this height is not enough always for long schedule dates. discuss about it */
-    --homepage-volunteering-opportunity-card-height: 660px; 
+    --homepage-volunteering-opportunity-card-height: fit-content; 
     --homepage-volunteering-opportunity-card-padding-top: 28px;
     --homepage-volunteering-opportunity-card-padding-right: 28px;
     --homepage-volunteering-opportunity-card-padding-bottom: 48px;
@@ -191,8 +189,7 @@ html {
     --homepage-volunteering-opportunities-grid-template-rows: auto;
     --homepage-volunteering-opportunities-grid-gap: 40px;
     --homepage-volunteering-opportunity-card-width: 372px;
-    /* TODO: this height is not enough always for long schedule dates. discuss about it */
-    --homepage-volunteering-opportunity-card-height: 660px; 
+    --homepage-volunteering-opportunity-card-height: fit-content; 
     --homepage-volunteering-opportunity-card-padding-top: 32px;
     --homepage-volunteering-opportunity-card-padding-right: 32px;
     --homepage-volunteering-opportunity-card-padding-bottom: 48px;

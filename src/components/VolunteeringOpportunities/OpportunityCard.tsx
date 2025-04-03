@@ -10,11 +10,17 @@ import { Opportunity } from "./types";
 import { getActivityBackgroundColor } from "./utils";
 
 const charlimit = 160;
+interface CardProps {
+  height: number;
+}
 
-const Card = styled(BaseCard)`
+const Card = styled(BaseCard)<CardProps>`
   background-color: var(--color-magnolia);
   width: var(--homepage-volunteering-opportunity-card-width);
-  height: var(--homepage-volunteering-opportunity-card-height);
+  height: ${(props) =>
+    props.height > 0
+      ? props.height
+      : "var(--homepage-volunteering-opportunity-card-height))"};
   padding-top: var(--homepage-volunteering-opportunity-card-padding-top);
   padding-right: var(--homepage-volunteering-opportunity-card-padding-right);
   padding-bottom: var(--homepage-volunteering-opportunity-card-padding-bottom);
@@ -33,6 +39,12 @@ const ActivityTag = styled.div<ActivityTagProps>`
   background-color: ${(props) => props["background-color"]};
 `;
 
+interface OpportunityCardProps extends Opportunity {
+  iconName: IconName;
+  height: number;
+  setRef: (element: HTMLDivElement | null) => void;
+}
+
 export default function OpportunityCard({
   title,
   voInformation,
@@ -42,7 +54,9 @@ export default function OpportunityCard({
   locations,
   activities,
   accompanyingDate,
-}: Opportunity & { iconName: IconName }) {
+  setRef,
+  height,
+}: OpportunityCardProps) {
   const { t } = useTranslation();
 
   const languagesText = languages.join("; ");
@@ -78,7 +92,7 @@ export default function OpportunityCard({
   ];
 
   return (
-    <Card>
+    <Card ref={setRef} height={height}>
       <IconDiv>{iconNameMap[iconName]}</IconDiv>
       <Heading3>{title}</Heading3>
       <Paragraph>{truncatedVoInformation || voInformation}</Paragraph>
