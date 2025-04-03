@@ -1,13 +1,13 @@
 import { CalendarDots, MapPin, Translate } from "@phosphor-icons/react";
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
-import { ActivitiesContainer, BaseCard, IconDiv } from "../styled/containers";
-import { ActivitySpan, Heading3, Paragraph } from "../styled/text";
+import { BaseCard, IconDiv } from "../styled/containers";
+import { Heading3, Paragraph } from "../styled/text";
 import { iconNameMap } from "../VolunteeringCategories/icon";
 import { IconName } from "../VolunteeringCategories/types";
 import OpportunityCardDetails, { CardDetail } from "./OpportunityCardDetail";
 import { Opportunity } from "./types";
-import { getActivityBackgroundColor } from "./utils";
+import { Activities } from "../core/common";
 
 const charlimit = 160;
 
@@ -20,17 +20,6 @@ const Card = styled(BaseCard)`
   padding-bottom: var(--homepage-volunteering-opportunity-card-padding-bottom);
   padding-left: var(--homepage-volunteering-opportunity-card-padding-left);
   gap: var(--homepage-volunteering-opportunity-card-gap);
-`;
-interface ActivityTagProps {
-  "background-color": string;
-}
-
-const ActivityTag = styled.div<ActivityTagProps>`
-  border-radius: var(
-    --homepage-volunteering-opportunity-activity-tag-border-radius
-  );
-  padding: var(--homepage-volunteering-opportunity-activity-tag-padding);
-  background-color: ${(props) => props["background-color"]};
 `;
 
 export default function OpportunityCard({
@@ -82,17 +71,7 @@ export default function OpportunityCard({
       <IconDiv>{iconNameMap[iconName]}</IconDiv>
       <Heading3>{title}</Heading3>
       <Paragraph>{truncatedVoInformation || voInformation}</Paragraph>
-      <ActivitiesContainer id="activities-container">
-        {activities.map((activity) => (
-          <ActivityTag
-            key={activity}
-            background-color={getActivityBackgroundColor(activity)}
-          >
-            <ActivitySpan>{activity.toUpperCase()}</ActivitySpan>
-          </ActivityTag>
-        ))}
-      </ActivitiesContainer>
-
+      <Activities activities={activities} />
       <OpportunityCardDetails cardDetails={cardDetails} />
     </Card>
   );
