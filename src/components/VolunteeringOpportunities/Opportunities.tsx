@@ -44,11 +44,8 @@ function Opportunities() {
   return (
     <OpportunitiesContainer id="opportunities-container">
       {mappedOpportunities.map((opp) => (
-        <OpportunityCard
-          key={opp.id}
-          // eslint-disable-next-line react/jsx-props-no-spreading
-          {...opp}
-        />
+        // eslint-disable-next-line react/jsx-props-no-spreading
+        <OpportunityCard key={opp.id} {...opp} />
       ))}
     </OpportunitiesContainer>
   );
