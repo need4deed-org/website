@@ -6,6 +6,7 @@ export const googleAnalyticsId = "G-5RG5NQ12YS";
 export const urlApiVolunteer = `${urlApi}/volunteer/`;
 export const urlApiOpportunity = `${urlApi}/opportunity/`;
 export const urlApiAuthEmailDomain = `${urlApi}/auth-email-domain/`;
+export const urlApiTestimonial = `${urlApi}/testimonial/`;
 export const CLOUDFRONT_URL = "https://d2nwrdddg8skub.cloudfront.net/images";
 
 export const showEvent = import.meta.env.VITE_SHOW_EVENT === "true";

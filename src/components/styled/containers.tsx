@@ -92,6 +92,12 @@ export const IconDiv = styled.div`
   }
 `;
 
+export const IconAvatar = styled.span`
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+`;
+
 export const VolunteeringOpportunitiesContainer = styled.div.attrs<ContainerProps>(
   (props) => ({
     id: props.id,
