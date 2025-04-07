@@ -10,17 +10,10 @@ import { Opportunity } from "./types";
 import { getActivityBackgroundColor } from "./utils";
 
 const charlimit = 160;
-interface CardProps {
-  height: number;
-}
 
-const Card = styled(BaseCard)<CardProps>`
+const Card = styled(BaseCard)`
   background-color: var(--color-magnolia);
   width: var(--homepage-volunteering-opportunity-card-width);
-  height: ${(props) =>
-    props.height > 0
-      ? props.height
-      : "var(--homepage-volunteering-opportunity-card-height))"};
   padding-top: var(--homepage-volunteering-opportunity-card-padding-top);
   padding-right: var(--homepage-volunteering-opportunity-card-padding-right);
   padding-bottom: var(--homepage-volunteering-opportunity-card-padding-bottom);
@@ -41,8 +34,6 @@ const ActivityTag = styled.div<ActivityTagProps>`
 
 interface OpportunityCardProps extends Opportunity {
   iconName: IconName;
-  height: number;
-  setRef: (element: HTMLDivElement | null) => void;
 }
 
 export default function OpportunityCard({
@@ -54,8 +45,6 @@ export default function OpportunityCard({
   locations,
   activities,
   accompanyingDate,
-  setRef,
-  height,
 }: OpportunityCardProps) {
   const { t } = useTranslation();
 
@@ -92,7 +81,7 @@ export default function OpportunityCard({
   ];
 
   return (
-    <Card ref={setRef} height={height}>
+    <Card>
       <IconDiv>{iconNameMap[iconName]}</IconDiv>
       <Heading3>{title}</Heading3>
       <Paragraph>{truncatedVoInformation || voInformation}</Paragraph>

@@ -1,5 +1,4 @@
 import { useTranslation } from "react-i18next";
-import { useEffect, useRef, useState } from "react";
 import {
   screenSizeThresholds,
   urlApiOpportunity,
@@ -24,8 +23,6 @@ function Opportunities() {
   const { i18n } = useTranslation();
   const isSmallScreen = useResponsive(screenSizeThresholds.desktop);
   const truncateNumber = isSmallScreen ? 2 : 3;
-  const [maxHeight, setMaxHeight] = useState(0);
-  const cardRefs = useRef<HTMLDivElement[]>([]);
 
   // Set language for API request
   opportunityParams.language = i18n.language as Lang;
@@ -44,25 +41,13 @@ function Opportunities() {
 
   const mappedOpportunities = getMappedOpportunities(popularOpportunities);
 
-  useEffect(() => {
-    if (cardRefs.current.length > 0) {
-      const heights = cardRefs.current.map((ref) => ref.offsetHeight);
-
-      if (heights.length > 0) setMaxHeight(Math.max(...heights));
-    }
-  }, [mappedOpportunities]);
-
   return (
     <OpportunitiesContainer id="opportunities-container">
-      {mappedOpportunities.map((opp, index) => (
+      {mappedOpportunities.map((opp) => (
         <OpportunityCard
           key={opp.id}
           // eslint-disable-next-line react/jsx-props-no-spreading
           {...opp}
-          setRef={(el) => {
-            if (el) cardRefs.current[index] = el;
-          }}
-          height={maxHeight}
         />
       ))}
     </OpportunitiesContainer>
