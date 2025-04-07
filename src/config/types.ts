@@ -131,6 +131,6 @@ export enum HttpMethod {
 export interface Testimonial {
   name: string;
   pic: string; // base64 encoded thumb most probably
-  text: string;
+  translated_text: string;
   activities: string[];
 }
