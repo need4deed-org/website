@@ -14,7 +14,6 @@ const charlimit = 160;
 const Card = styled(BaseCard)`
   background-color: var(--color-magnolia);
   width: var(--homepage-volunteering-opportunity-card-width);
-  height: var(--homepage-volunteering-opportunity-card-height);
   padding-top: var(--homepage-volunteering-opportunity-card-padding-top);
   padding-right: var(--homepage-volunteering-opportunity-card-padding-right);
   padding-bottom: var(--homepage-volunteering-opportunity-card-padding-bottom);
@@ -33,6 +32,10 @@ const ActivityTag = styled.div<ActivityTagProps>`
   background-color: ${(props) => props["background-color"]};
 `;
 
+interface OpportunityCardProps extends Opportunity {
+  iconName: IconName;
+}
+
 export default function OpportunityCard({
   title,
   voInformation,
@@ -42,7 +45,7 @@ export default function OpportunityCard({
   locations,
   activities,
   accompanyingDate,
-}: Opportunity & { iconName: IconName }) {
+}: OpportunityCardProps) {
   const { t } = useTranslation();
 
   const languagesText = languages.join("; ");
