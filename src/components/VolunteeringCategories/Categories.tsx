@@ -1,10 +1,10 @@
 import { useTranslation } from "react-i18next";
 import CategoryCard from "./CategoryCard";
-import CategoriesMobile from "./CategoriesMobile";
 import { Category, IconName } from "./types";
 import { CategoriesContainer } from "../styled/containers";
 import useResponsive from "../../hooks/useResponsive";
 import { screenSizeThresholds } from "../../config/constants";
+import { PaginatedCards } from "../core/paginatedCards";
 
 function Categories() {
   const isMobile = useResponsive(screenSizeThresholds.tablet);
@@ -51,15 +51,22 @@ function Categories() {
     },
   ];
 
+  const cards = categories.map((category) => (
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    <CategoryCard key={category.title} {...category} />
+  ));
+
   return (
     <CategoriesContainer id="categories-container">
       {isMobile ? (
-        <CategoriesMobile categories={categories} />
+        <PaginatedCards
+          cards={cards}
+          arrowButtonColor="orchid-dark"
+          bottomIndicatorColor="orchid-dark"
+          bottomCurrentIndicatorColor="papaya"
+        />
       ) : (
-        categories.map((category) => (
-          // eslint-disable-next-line react/jsx-props-no-spreading
-          <CategoryCard key={category.title} {...category} />
-        ))
+        cards
       )}
     </CategoriesContainer>
   );

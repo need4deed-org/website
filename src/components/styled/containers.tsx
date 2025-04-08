@@ -42,6 +42,7 @@ export const CategoriesContainer = styled.div.attrs<ContainerProps>(
   gap: var(--homepage-volunteering-categories-grid-gap);
 `;
 
+// TODO: delete this container after paginated cards container
 export const CategoriesContainerMobile = styled.div.attrs<ContainerProps>(
   (props) => ({
     id: props.id,
@@ -182,4 +183,15 @@ export const OpportunityDetailsContainer = styled.div.attrs<ContainerProps>(
   flex-direction: column;
   justify-content: left;
   gap: var(--homepage-volunteering-opportunity-details-gap);
+`;
+
+export const PaginatedCardsContainer = styled.div.attrs<ContainerProps>(
+  (props) => ({
+    id: props.id,
+  }),
+)<ContainerProps>`
+  display: flex;
+  flex-direction: column;
+  gap: var(--paginated-cards-container-gap);
+  background-color: ${(props) => props["background-color"]};
 `;
