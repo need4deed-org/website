@@ -283,7 +283,38 @@
       }
     }
   },
-  "event": { "menuItem": "Cooking Event" },
+  "event": { "menuItem": "Workshop" },
+  "eventAccompanying": {
+    "greeting": {
+      "title": "Begleitung von Geflüchteten zu Terminen",
+      "invite1": "Ein interaktiver Workshop",
+      "host": "Mit Peyvand Darvish (DE)",
+      "registration1": "Anmeldung",
+      "registration2": "Jetz anmelden"
+    },
+    "main": {
+      "title1": "Worum geht es in dem Workshop?",
+      "para11": "Um einfühlsame und hilfreiche Unterstützung leisten zu können, ist es wichtig, über die Lebensrealitäten der Menschen, die wir begleiten, informiert zu sein.",
+      "para12": "In diesem Workshop bekommst du einen Einblick in die alltäglichen Herausforderungen von Menschen, die zur Flucht gezwungen wurden.",
+      "para13": "Er soll dir Ideen geben, wie wir Berlin ein kleines Stück weicher für die Menschen machen können, die wir begleiten.",
+      "para14": "Außerdem bekommst du Tipps, wie du dich während deines Engagements gut verhalten und auch auf dich selbst achten kannst.",
+      "title2": "Praxisteil – Was erwartet dich konkret?",
+      "para21": "Was wird konkret von mir als Begleitperson erwartet – und was nicht?",
+      "para22": "Welche Absprachen sollte ich im Vorfeld mit der geflüchteten Person treffen?",
+      "para23": "Wie kommuniziere ich respektvoll, klar und auf Augenhöhe?",
+      "para24": "Sollte ich meine Telefonnummer weitergeben – und wenn ja, wie mache ich das sinnvoll und sicher?",
+      "para25": "Was mache ich, wenn ich mich während der Begleitung unwohl fühle?",
+      "para26": "Welche Notfallkontakte oder Unterstützungsmöglichkeiten gibt es?"
+    },
+    "outro": {
+      "para1": "Dieser interaktive Workshop (auf Deutsch) bereitet dich optimal auf dein Engagement vor!",
+      "para2": "Im Anschluss laden wir um 18:45 Uhr zum VolunTea ein.",
+      "address": {
+        "floor": "1 OG",
+        "lead": "Eingang durch die kleine Tür direkt links neben der Haupteinfahrt."
+      }
+    }
+  },
   "VolunTea": {
     "greeting": {
       "invite": "Ihr seid herzlich zu unserem nächsten VolunTea eingeladen.",
