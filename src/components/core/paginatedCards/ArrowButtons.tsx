@@ -22,7 +22,6 @@ export function ArrowButtons({
       <CircleArrow
         direction="left"
         color={color}
-        // color={color}
         isFilled={currentIndex !== firstIndex}
         onClick={
           currentIndex !== firstIndex

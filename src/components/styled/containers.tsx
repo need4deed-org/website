@@ -195,3 +195,12 @@ export const PaginatedCardsContainer = styled.div.attrs<ContainerProps>(
   gap: var(--paginated-cards-container-gap);
   background-color: ${(props) => props["background-color"]};
 `;
+
+export const VisibleCardsContainer = styled.div.attrs<ContainerProps>(
+  (props) => ({
+    id: props.id,
+  }),
+)<ContainerProps>`
+  display: flex;
+  gap: var(--paginated-cards-visible-cards-container-gap);
+`;

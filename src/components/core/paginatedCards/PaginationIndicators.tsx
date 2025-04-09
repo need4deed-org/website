@@ -3,28 +3,29 @@ import Ellipse from "../../svg/Ellipse";
 import { colorMap } from "../../svg/utils";
 
 interface Props {
-  currentIndex: number;
-  lastIndex: number;
+  currentPage: number;
+  totalPages: number;
   indicatorColor: keyof typeof colorMap;
   currentIndicatorColor: keyof typeof colorMap;
+  goToPage: (pageNumber: number) => void;
 }
 
 export function PaginationIndicators({
-  currentIndex,
-  lastIndex,
+  currentPage,
+  totalPages,
   indicatorColor,
   currentIndicatorColor,
+  goToPage,
 }: Props) {
-  const indexArray = Array.from({ length: lastIndex + 1 }, (_, index) => index);
+  const pageArray = Array.from({ length: totalPages }, (_, index) => index);
 
   return (
     <IndicatorsContainer id="indicators-container">
-      {indexArray.map((index) => (
+      {pageArray.map((page) => (
         <Ellipse
-          color={
-            index === currentIndex ? currentIndicatorColor : indicatorColor
-          }
-          key={index}
+          color={page === currentPage ? currentIndicatorColor : indicatorColor}
+          key={page}
+          onClick={() => goToPage(page)}
         />
       ))}
     </IndicatorsContainer>

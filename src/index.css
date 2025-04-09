@@ -54,8 +54,8 @@ html {
   --homepage-volunteering-opportunity-detail-section-gap: 4px;
   --homepage-volunteering-opportunity-detail-header-gap: 8px;
 
-  /* paginated cads container */
-  --paginated-cards-container-gap: 20px
+  /* paginated cards container */
+  --paginated-cards-container-gap: 20px;
 }
 
 @media (min-width: 360px) {
@@ -153,6 +153,9 @@ html {
     --button-text-line-height: 25px;
     --button-text-letter-spacing: 0.13px;
     --button-text-text-align: center;
+
+    --paginated-cards-visible-cards-container-gap: 20px;
+
     
   }
 }
@@ -204,6 +207,9 @@ html {
     --button-text-line-height: 25px;
     --button-text-letter-spacing: 0.13px;
     --button-text-text-align: center;
+
+    --paginated-cards-visible-cards-container-gap: 24px;
+
   
   }
 }
