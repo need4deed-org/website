@@ -21,7 +21,7 @@ export default function EventAccompanying() {
       <h6>
         <strong>{t("eventAccompanying.greeting.host")}</strong>
       </h6>
-      <h6>08.05.2025</h6>
+      <h6>15.05.2025</h6>
       <h6>17:00</h6>
       <h6>Elsenstraße 87</h6>
       <h6>E12435 Berlin</h6>
