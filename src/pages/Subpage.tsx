@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 
 import Announcement from "../components/Announcement";
-import EventWidthKids from "../components/Event/EventWithKids";
+import EventAccompanying from "../components/Event/EventAccompanying";
 import FAQs from "../components/FAQs/FAQs";
 import Footer from "../components/Footer/Footer";
 import NewForm from "../components/Form";
@@ -165,7 +165,7 @@ function Subpage({ type }: Props) {
       case Subpages.ANNOUNCEMENT:
         return <Announcement />;
       case Subpages.EVENT:
-        return <EventWidthKids />;
+        return <EventAccompanying />;
       case Subpages.COOKIES:
         return <Cookie />;
       case Subpages.FAQS:
