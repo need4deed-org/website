@@ -314,6 +314,37 @@
       }
     }
   },
+  "eventAccompanying": {
+    "greeting": {
+      "title": "Accompanying Refugees to Appointments",
+      "invite1": "An interactive workshop",
+      "host": "With Peyvand Darvish (DE)",
+      "registration1": "Registration",
+      "registration2": "Register now"
+    },
+    "main": {
+      "title1": "What is the workshop about?",
+      "para11": "In order to provide empathetic and helpful support, it is important to be informed about the realities of life for the people we accompany.",
+      "para12": "In this workshop, you will gain insight into the everyday challenges faced by people who have been forced to flee.",
+      "para13": "It aims to give you ideas on how we can make Berlin a little softer for the people we accompany.",
+      "para14": "You will also receive tips on how to behave well during your commitment and how to take care of yourself.",
+      "title2": "Practical part – What can you concretely expect?",
+      "para21": "What is specifically expected of me as an accompanying person – and what is not?",
+      "para22": "What agreements should I make with the refugee person in advance?",
+      "para23": "How do I communicate respectfully, clearly, and on an equal footing?",
+      "para24": "Should I give out my phone number – and if so, how do I do it meaningfully and safely?",
+      "para25": "What do I do if I feel uncomfortable during the accompaniment?",
+      "para26": "What emergency contacts or support options are there?"
+    },
+    "outro": {
+      "para1": "This interactive workshop (in German) optimally prepares you for your commitment!",
+      "para2": "Afterwards, we invite you to VolunTea at 18:45.",
+      "address": {
+        "floor": "1st floor",
+        "lead": "Entrance through the small door directly to the left of the main entrance."
+      }
+    }
+  },
   "eventCooking": {
     "greeting": {
       "invite": "Dear Volunteers (past, current and future",
