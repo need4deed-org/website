@@ -7,7 +7,7 @@ interface Props extends React.SVGProps<SVGSVGElement> {
   isFilled?: boolean;
 }
 
-const arrowColorMap: Record<keyof typeof colorMap, string> = {
+const arrowColorMap: Partial<Record<keyof typeof colorMap, string>> = {
   orchid: "var(--color-aubergine-light)",
   "orchid-dark": "var(--color-aubergine-light)",
   papaya: "var(--color-white)",

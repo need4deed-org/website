@@ -1,6 +1,6 @@
 import { useForm } from "@tanstack/react-form";
 import { validate as validateEmail } from "email-validator";
-import { useEffect } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 
@@ -9,6 +9,7 @@ import { Lang, Subpages } from "../../../config/types";
 import useList from "../../../hooks/api/useList";
 import usePostRequest from "../../../hooks/api/usePostRequest";
 import { getImageUrl } from "../../../utils/index";
+import Announcement from "../../Announcement";
 import UploadIcon from "../../svg/Upload";
 import WithParentRef from "../../WithParentRef";
 import FieldInfo from "../FieldInfo";
@@ -31,8 +32,10 @@ import {
 import { VolunteerData, VolunteerParsedData } from "./dataStructure";
 
 const thankYou = "?pointer=form.becomeVolunteer.thankYou";
+const somethingWrong = "form.becomeVolunteer.somethingWrong";
 
 export default function BecomeVolunteer() {
+  const [showErrorAnnouncement, setShowErrorAnnouncement] = useState(false);
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
   const { lng } = useParams();
@@ -81,17 +84,21 @@ export default function BecomeVolunteer() {
         return undefined;
       },
     },
-    onSubmit: ({ value }) => {
+    onSubmit: async ({ value }) => {
       const data = parseFormStateDTOVolunteer(value);
 
-      postRequest(data);
+      const { success } = await postRequest(data);
+      if (success) {
+        navigate(`/${Subpages.ANNOUNCEMENT}/${lng}${thankYou}`);
+      } else {
+        setShowErrorAnnouncement(true);
+      }
     },
   });
 
-  useEffect(() => {
-    if (formVolunteer.state.isSubmitted)
-      navigate(`/${Subpages.ANNOUNCEMENT}/${lng}${thankYou}`);
-  }, [formVolunteer.state.isSubmitted, navigate, lng]);
+  if (showErrorAnnouncement) {
+    return <Announcement copies={somethingWrong} />;
+  }
 
   return (
     <div className="n4d-container form-container">

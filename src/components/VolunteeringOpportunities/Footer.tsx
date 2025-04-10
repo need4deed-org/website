@@ -9,7 +9,7 @@ export default function Footer() {
     <BaseFooterContainer id="footer-container">
       <Button
         onClick={() => {}}
-        text={t("homepage.volunteeringCategories.footerButton")}
+        text={t(`homepage.volunteeringOpportunities.footerButton`)}
       />
     </BaseFooterContainer>
   );

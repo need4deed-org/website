@@ -6,6 +6,7 @@ export const googleAnalyticsId = "G-5RG5NQ12YS";
 export const urlApiVolunteer = `${urlApi}/volunteer/`;
 export const urlApiOpportunity = `${urlApi}/opportunity/`;
 export const urlApiAuthEmailDomain = `${urlApi}/auth-email-domain/`;
+export const urlApiTestimonial = `${urlApi}/testimonial/`;
 export const CLOUDFRONT_URL = "https://d2nwrdddg8skub.cloudfront.net/images";
 
 export const showEvent = import.meta.env.VITE_SHOW_EVENT === "true";
@@ -42,3 +43,8 @@ export const timeZone = import.meta.env.VITE_TZ || "Europe/Berlin";
  */
 export const offsetCET = -60 * 60 * 1000; // CET to UTC in ms
 export const offsetLocal = new Date().getTimezoneOffset() * 60 * 1000; // Local TZ to UTC in ms
+
+export const screenSizeThresholds = {
+  tablet: 768,
+  desktop: 1440,
+};
