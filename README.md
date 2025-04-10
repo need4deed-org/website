@@ -53,7 +53,7 @@ See [CONTRIBUTE.md](CONTRIBUTE.md) for the next steps and detailed contribution 
 
 ### Installation
 
-#### Please note, that's the instruction for members of the project, if you are not one please check [CONTRIBUTING.md](CONTRIBUTING.md).
+#### Please note, that's the instruction for members of the project, if you are not one please check [CONTRIBUTE.md](CONTRIBUTE.md).
 
 1. Clone the repository
 
