@@ -4,7 +4,7 @@ import { AppContainer } from "../components/styled/containers";
 import { VolunteeringCategoriesSection } from "../components/VolunteeringCategories";
 import { Lang } from "../config/types";
 import { VolunteeringOpportunitiesSection } from "../components/VolunteeringOpportunities";
-import Testimonials from "../components/Testimonials/Testimonials_temporary";
+import { TestimonialsSection } from "../components/Testimonials";
 
 // TODO: This is a temporary component, will be deleted.
 function LanguageSelector() {
@@ -29,7 +29,7 @@ export default function Landing() {
       <LanguageSelector />
       <VolunteeringCategoriesSection />
       <VolunteeringOpportunitiesSection />
-      <Testimonials />
+      <TestimonialsSection />
     </AppContainer>
   );
 }

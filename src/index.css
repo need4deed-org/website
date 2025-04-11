@@ -47,11 +47,10 @@ html {
   --text-activity-tag-line-height: 17px;
   --text-activity-tag-text-align: center;
 
-  /* activites */
+  /* activities */
   --activities-container-gap: 8px;
   --activity-tag-border-radius: 4px;
   --activity-tag-padding: 6px 8px;
-
 
   /*homepage volunteering opportunity */
   --homepage-volunteering-opportunity-detail-section-gap: 4px;
@@ -59,6 +58,11 @@ html {
 
   /* paginated cards container */
   --paginated-cards-container-gap: 20px;
+
+  /* testimonials */
+  --homepage-testimonials-profile-width: 60px;
+  --homepage-testimonials-profile-height: 60px;
+  --homepage-testimonials-profile-gap: 16px;
 }
 
 @media (min-width: 360px) {
@@ -68,6 +72,15 @@ html {
     --text-p-font-size: 18px; 
     --text-p-line-height: 21px;
     --text-p-letter-spacing: 0;
+
+    --text-h1-font-weight: 700;
+    --text-h1-font-size: 28px;
+    --text-h1-line-height: 28px;
+
+    --text-h4-font-weight: 500;
+    --text-h4-font-size: 18px; 
+    --text-h4-line-height: 18px;
+    --text-h4-letter-spacing: 0.1;
     
     --icon-size:40px;
     
@@ -97,8 +110,8 @@ html {
     --homepage-volunteering-opportunity-card-gap: 16px;
     --homepage-volunteering-opportunity-details-gap: 12px;
     
+    --homepage-testimonials-header-gap:16px;
     --homepage-testimonial-card-width:320px;
-    --homepage-testimonial-card-height:443px;
     --homepage-testimonial-card-padding-top: 24px;
     --homepage-testimonial-card-padding-right: 24px;
     --homepage-testimonial-card-padding-bottom: 32px;
@@ -127,6 +140,16 @@ html {
     --text-p-font-size: 20px;
     --text-p-line-height: 24px;
     --text-p-letter-spacing: 0.1px;
+
+    --text-h1-font-weight: 700;
+    --text-h1-font-size: 32px;
+    --text-h1-line-height: 32px;
+    --text-h1-letter-spacing: 0.1px;
+
+    --text-h4-font-weight: 600;
+    --text-h4-font-size: 20px; 
+    --text-h4-line-height: 20px;
+    --text-h4-letter-spacing: 0.1;
     
     --text-button-font-size: 24px;
     
@@ -157,8 +180,8 @@ html {
     --homepage-volunteering-opportunity-card-gap: 20px;
     --homepage-volunteering-opportunity-details-gap: 16px;
 
+    --homepage-testimonials-header-gap:24px;
     --homepage-testimonial-card-width:328px;
-    --homepage-testimonial-card-height:507px;
     --homepage-testimonial-card-padding-top: 28px;
     --homepage-testimonial-card-padding-right: 28px;
     --homepage-testimonial-card-padding-bottom: 40px;
@@ -177,8 +200,6 @@ html {
     --button-text-text-align: center;
 
     --paginated-cards-visible-cards-container-gap: 20px;
-
-    
   }
 }
 
@@ -192,6 +213,16 @@ html {
     --text-p-line-height: 24px;
     --text-p-letter-spacing: 0.1px;
 
+    --text-h1-font-weight: 700;
+    --text-h1-font-size: 32px;
+    --text-h1-line-height: 32px;
+    --text-h1-letter-spacing: 0.1px;
+    
+    --text-h4-font-weight: 600;
+    --text-h4-font-size: 20px; 
+    --text-h4-line-height: 20px;
+    --text-h4-letter-spacing: 0.1;
+
     --text-button-font-size: 24px;
     
     --homepage-section-container-padding: 100px 120px;
@@ -201,7 +232,7 @@ html {
     --homepage-volunteering-categories-grid-template-columns: repeat(3, 1fr);
     --homepage-volunteering-categories-grid-template-rows: repeat(2, auto);
     --homepage-volunteering-categories-grid-gap: 32px;
-    --homepage-volunteering-categories-header-gap: 16px;
+    --homepage-volunteering-categories-header-gap: 36px;
     --homepage-volunteering-category-card-width: 378px;
     --homepage-volunteering-category-card-height: 350px;
     --homepage-volunteering-category-card-padding-top: 32px;
@@ -221,8 +252,8 @@ html {
     --homepage-volunteering-opportunity-card-gap: 24px;
     --homepage-volunteering-opportunity-details-gap: 16px;
 
+    --homepage-testimonials-header-gap:24px;
     --homepage-testimonial-card-width:384px;
-    --homepage-testimonial-card-height:493px;
     --homepage-testimonial-card-padding-top: 32px;
     --homepage-testimonial-card-padding-right: 32px;
     --homepage-testimonial-card-padding-bottom: 48px;
@@ -241,7 +272,5 @@ html {
     --button-text-text-align: center;
 
     --paginated-cards-visible-cards-container-gap: 24px;
-
-  
   }
 }

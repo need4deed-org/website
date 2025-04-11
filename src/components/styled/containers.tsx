@@ -3,6 +3,7 @@ import styled from "styled-components";
 export interface ContainerProps {
   id: string;
   "background-color"?: string;
+  gap?: string;
 }
 
 export const AppContainer = styled.div.attrs<ContainerProps>((props) => ({
@@ -203,4 +204,14 @@ export const VisibleCardsContainer = styled.div.attrs<ContainerProps>(
 )<ContainerProps>`
   display: flex;
   gap: var(--paginated-cards-visible-cards-container-gap);
+`;
+
+export const SectionHeaderContainer = styled.div.attrs<ContainerProps>(
+  (props) => ({
+    id: props.id,
+  }),
+)<ContainerProps>`
+  display: flex;
+  flex-direction: column;
+  gap: ${(props) => props.gap};
 `;

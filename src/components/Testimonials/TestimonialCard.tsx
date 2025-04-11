@@ -8,7 +8,6 @@ import { CirclePic } from "../styled/img";
 const Card = styled(BaseCard)`
   background-color: var(--color-orchid);
   width: var(--homepage-testimonial-card-width);
-  height: var(--homepage-testimonial-card-height);
   padding-top: var(--homepage-testimonial-card-padding-top);
   padding-right: var(--homepage-testimonial-card-padding-right);
   padding-bottom: var(--homepage-testimonial-card-padding-bottom);
@@ -20,16 +19,16 @@ const Profile = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 60px;
-  height: 60px;
-  gap: 20px;
+  width: var(--homepage-testimonials-profile-width);
+  height: var(--homepage-testimonials-profile-height);
+  gap: var(--homepage-testimonials-profile-gap);
 `;
 
 export default function TestimonialCard({
   activities,
   name,
   pic,
-  text,
+  translated_text,
 }: Testimonial) {
   return (
     <Card>
@@ -41,9 +40,9 @@ export default function TestimonialCard({
       <Paragraph
         fontSize="var(--homepage-testimonial-card-text-p-font-size)"
         fontWeight={400}
-        lineHeight="var(--homepage-testimonial-card-text-p-line-height)"
+        lineheight="var(--homepage-testimonial-card-text-p-line-height)"
       >
-        {text}
+        {translated_text}
       </Paragraph>
 
       <Activities activities={activities} />
