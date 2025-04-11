@@ -31,7 +31,7 @@ export default function OpportunityCardDetails({ cardDetails }: Props) {
   return (
     <OpportunityDetailsContainer id="opportunity-details-container">
       {cardDetails.map((d) => (
-        <DetailSection>
+        <DetailSection key={d.headerText}>
           <DetailHeader>
             {d.icon}
             <Paragraph fontWeight={550}>{d.headerText}:</Paragraph>

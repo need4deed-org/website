@@ -120,11 +120,13 @@ const aubergineColorActivities = [
   "apartment viewing",
   "school/kindergarten",
   "way/path accompanying",
+  "accompanying",
   "arzttermine",
   "behörde",
   "wohnungsbesichtigung",
   "schule/kindergarten",
   "wegbegleitung",
+  "begleitung",
 ];
 
 export const getActivityBackgroundColor = (activity: string) => {
