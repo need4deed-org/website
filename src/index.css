@@ -118,7 +118,7 @@ html {
     --homepage-testimonial-card-padding-left: 24px;
     --homepage-testimonial-card-gap: 14px;
     --homepage-testimonial-card-text-p-font-size: 16px;
-    --homepage-testimonial-card-text-p-line-height: 16px;
+    --homepage-testimonial-card-text-p-line-height: 22px;
 
     --button-height: 64px;
     --button-padding: 12px 24px;
@@ -188,7 +188,7 @@ html {
     --homepage-testimonial-card-padding-left: 28px;
     --homepage-testimonial-card-gap: 14px;
     --homepage-testimonial-card-text-p-font-size: 18px;
-    --homepage-testimonial-card-text-p-line-height: 18px;
+    --homepage-testimonial-card-text-p-line-height: 24px;
 
     --button-height: 72px;
     --button-padding: 16px 36px;
@@ -260,7 +260,7 @@ html {
     --homepage-testimonial-card-padding-left: 32px;
     --homepage-testimonial-card-gap: 16px;
     --homepage-testimonial-card-text-p-font-size: 18px;
-    --homepage-testimonial-card-text-p-line-height: 18px;
+    --homepage-testimonial-card-text-p-line-height: 24px;
 
     --button-height: 72px;
     --button-padding: 16px 36px;
