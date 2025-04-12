@@ -11,7 +11,7 @@ function LanguageSelector() {
   const { i18n } = useTranslation();
 
   return (
-    <div>
+    <div style={{ position: "fixed", top: 0 }}>
       <select
         value={i18n.language}
         onChange={(e) => i18n.changeLanguage(e.target.value)}

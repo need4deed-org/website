@@ -6,7 +6,7 @@ import { Activities } from "../core/common";
 import { CirclePic } from "../styled/img";
 
 const Card = styled(BaseCard)`
-  background-color: var(--color-orchid);
+  background-color: var(--color-orchid-dark);
   width: var(--homepage-testimonial-card-width);
   padding-top: var(--homepage-testimonial-card-padding-top);
   padding-right: var(--homepage-testimonial-card-padding-right);
@@ -42,7 +42,7 @@ export default function TestimonialCard({
         fontWeight={400}
         lineheight="var(--homepage-testimonial-card-text-p-line-height)"
       >
-        {translated_text}
+        {`“${translated_text}“`}
       </Paragraph>
 
       <Activities activities={activities} />

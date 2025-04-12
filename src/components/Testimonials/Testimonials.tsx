@@ -26,7 +26,7 @@ export default function Testimonials() {
       cards={cards}
       arrowButtonColor="orchid-dark"
       bottomIndicatorColor="orchid-dark"
-      bottomCurrentIndicatorColor="papaya"
+      bottomCurrentIndicatorColor="aubergine-light"
       cardsPerPage={cardsPerPage}
     />
   );
