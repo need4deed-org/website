@@ -558,14 +558,18 @@
         "accompanyARefugee": "Accompany a Refugee",
         "accompanyARefugeeInfo": "Fluent in German and a second language? Support individuals in dealing with bureaucracy at appointments - going with them to the doctor, Job Centre or otherwise."
       },
-      "footerButton": "See volunteering opportunites"
+      "footerButton": "See volunteering opportunities"
     },
     "volunteeringOpportunities": {
       "header": "Discover Volunteering Opportunities",
       "languages": "Languages",
       "schedule": "Schedule",
       "district": "District",
-      "footerButton": "See all volunteering opportunites"
+      "footerButton": "See all volunteering opportunities"
+    },
+    "testimonials": {
+      "header": "TESTIMONIALS",
+      "headerParagraph": "What Volunteers & Coordinators Say"
     }
   }
 }

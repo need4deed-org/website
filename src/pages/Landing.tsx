@@ -4,13 +4,14 @@ import { AppContainer } from "../components/styled/containers";
 import { VolunteeringCategoriesSection } from "../components/VolunteeringCategories";
 import { Lang } from "../config/types";
 import { VolunteeringOpportunitiesSection } from "../components/VolunteeringOpportunities";
+import { TestimonialsSection } from "../components/Testimonials";
 
 // TODO: This is a temporary component, will be deleted.
 function LanguageSelector() {
   const { i18n } = useTranslation();
 
   return (
-    <div>
+    <div style={{ position: "fixed", top: 0 }}>
       <select
         value={i18n.language}
         onChange={(e) => i18n.changeLanguage(e.target.value)}
@@ -28,6 +29,7 @@ export default function Landing() {
       <LanguageSelector />
       <VolunteeringCategoriesSection />
       <VolunteeringOpportunitiesSection />
+      <TestimonialsSection />
     </AppContainer>
   );
 }
