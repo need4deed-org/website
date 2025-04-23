@@ -5,7 +5,18 @@ interface TextProps {
   fontWeight?: number;
   fontSize?: string;
   lineheight?: string;
+  letterSpacing?: string;
+  margin?: number | string;
 }
+
+export const CustomHeading = styled.h1<TextProps>`
+  font-weight: ${(props) => props.fontWeight};
+  font-size: ${(props) => props.fontSize};
+  line-height: ${(props) => props.lineheight};
+  letter-spacing: ${(props) => props.letterSpacing};
+  color: ${(props) => props.color};
+  margin: ${(props) => props.margin};
+`;
 
 export const Heading1 = styled.h1<TextProps>`
   font-weight: var(--text-h1-font-weight);

@@ -2,6 +2,9 @@ import styled from "styled-components";
 import { ButtonSpan } from "../../../styled/text";
 
 const StyledButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: fit-content;
   height: var(--button-height);
   padding: var(--button-padding);

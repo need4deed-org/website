@@ -7,6 +7,21 @@ body {
 
 html {
   scroll-behavior: smooth;
+
+  
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.image-filter-gradient-blue {
+  background: linear-gradient(180deg, rgba(44, 47, 153, 0.6) 11.02%, rgba(73, 79, 255, 0.05) 89.66%);
 }
 
 :root {
@@ -120,6 +135,9 @@ html {
     --homepage-testimonial-card-text-p-font-size: 16px;
     --homepage-testimonial-card-text-p-line-height: 22px;
 
+    --homepage-hero-section-logo-height: 152px;
+    --homepage-hero-section-logo-width: 280px;
+
     --button-height: 64px;
     --button-padding: 12px 24px;
     --button-border-radius: 125px;
@@ -189,6 +207,9 @@ html {
     --homepage-testimonial-card-gap: 14px;
     --homepage-testimonial-card-text-p-font-size: 18px;
     --homepage-testimonial-card-text-p-line-height: 24px;
+
+    --homepage-hero-section-logo-height: 200px;
+    --homepage-hero-section-logo-width: 370px;
 
     --button-height: 72px;
     --button-padding: 16px 36px;
@@ -261,6 +282,9 @@ html {
     --homepage-testimonial-card-gap: 16px;
     --homepage-testimonial-card-text-p-font-size: 18px;
     --homepage-testimonial-card-text-p-line-height: 24px;
+
+    --homepage-hero-section-logo-height: 244;
+    --homepage-hero-section-logo-width: 450;
 
     --button-height: 72px;
     --button-padding: 16px 36px;

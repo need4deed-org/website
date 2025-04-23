@@ -130,6 +130,7 @@ export const FullWidthContainer = styled.div.attrs<ContainerProps>((props) => ({
   width: 100%;
   align-items: center;
   background-color: ${(props) => props["background-color"]};
+  position: relative;
 `;
 
 export const BaseCard = styled.div`

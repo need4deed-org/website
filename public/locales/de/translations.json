@@ -507,6 +507,19 @@
     }
   },
   "homepage": {
+    "heroSection":{
+      "menuItems":{
+        "about": "Über",
+        "volunteeringOpportunities":"Allgemeine Engagementmöglichkeiten mit Geflüchteten",
+        "events":"Veranstaltungen"
+      },
+      "content":{
+        "heroText": "Bedarfsorientierte, ehrenamtliche Unterstützung für Flüchtlinge in Berlin",
+        "heroSupportingText": "Wir verbinden Freiwillige mit Flüchtlingsunterkünften in Not",
+        "buttonJoinVolunteer": "Als Freiwilliger mitmachen",
+        "buttonJoinRefugeeCenter": "Als Flüchtlingsunterkunft mitmachen"
+      }
+    },
     "volunteeringCategories": {
       "header": "Engagementmöglichkeiten",
       "headerParagraph": "Wir bieten verschiedene Arten von ehrenamtlichen Tätigkeiten an, entweder regelmäßig oder gelegentlich.",
