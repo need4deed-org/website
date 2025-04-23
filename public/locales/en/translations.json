@@ -542,15 +542,15 @@
     }
   },
   "homepage": {
-    "heroSection":{
-      "menuItems":{
+    "heroSection": {
+      "menuItems": {
         "about": "About",
-        "volunteeringOpportunities":"Volunteering opportunities",
-        "events":"Events"
+        "volunteeringOpportunities": "Volunteering opportunities",
+        "events": "Events"
       },
-      "content":{
+      "content": {
         "heroText": "Need based voluntary support for refugees in Berlin",
-        "heroSupportingText" : "We connect volunteers to refugee accommodation centers in need",
+        "heroSupportingText": "We connect volunteers to refugee accommodation centers in need",
         "buttonJoinVolunteer": "Join as a volunteer",
         "buttonJoinRefugeeCenter": "Join as a refugee centre"
       }
