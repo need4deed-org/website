@@ -3,61 +3,61 @@ import { useTranslation } from "react-i18next";
 import { CustomHeading } from "../styled/text";
 import { Button } from "../core/button";
 
-const ContentContainer = styled.div`
+const ContentDiv = styled.div`
   display: flex;
   justify-content: end;
 `;
 
-const ContentDiv = styled.div`
+const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 680px;
-  height: 485px;
+  width: var(--homepage-hero-section-header-menu-items-width);
+  height: var(--homepage-hero-section-content-container-height);
 `;
 
-const HeroTextDiv = styled.div`
+const HeroTextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: var(--homepage-hero-section-content-hero-text-container-gap);
 `;
 
-const HeroButtonsDiv = styled.div`
+const HeroButtonsContainer = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 24px;
+  gap: var(--homepage-hero-section-content-hero-button-container-gap);
 `;
 
 export default function HeroContent() {
   const { t } = useTranslation();
 
   return (
-    <ContentContainer>
-      <ContentDiv>
-        <HeroTextDiv>
+    <ContentDiv>
+      <ContentContainer>
+        <HeroTextContainer>
           <CustomHeading
-            color="white"
-            fontSize="48px"
-            fontWeight={600}
-            letterSpacing="0.1px"
-            lineheight="48px"
+            color="var(--homepage-hero-section-content-hero-text-color)"
+            fontSize="var(--homepage-hero-section-content-hero-text-fontSize)"
+            fontWeight="var(--homepage-hero-section-content-hero-text-fontWeight)"
+            letterSpacing="var(--homepage-hero-section-content-hero-text-letterSpacing)"
+            lineheight="var(--homepage-hero-section-content-hero-text-lineheight)"
             onClick={() => {}}
           >
             {t("homepage.heroSection.content.heroText")}
           </CustomHeading>
           <CustomHeading
-            color="white"
-            fontSize="24px"
-            fontWeight={500}
-            letterSpacing="0.25px"
-            lineheight="24px"
+            color="var(--homepage-hero-section-content-hero-text-color)"
+            fontSize="var(--homepage-hero-section-content-hero-supporting-text-fontSize)"
+            fontWeight="var(--homepage-hero-section-content-hero-supporting-text-fontWeight)"
+            letterSpacing="var(--homepage-hero-section-content-hero-supporting-text-letterSpacing)"
+            lineheight="var(--homepage-hero-section-content-hero-supporting-text-lineheight)"
             onClick={() => {}}
           >
             {t("homepage.heroSection.content.heroSupportingText")}
           </CustomHeading>
-        </HeroTextDiv>
+        </HeroTextContainer>
 
-        <HeroButtonsDiv>
+        <HeroButtonsContainer>
           <Button
             onClick={() => {}}
             text={t("homepage.heroSection.content.buttonJoinVolunteer")}
@@ -66,8 +66,8 @@ export default function HeroContent() {
             onClick={() => {}}
             text={t("homepage.heroSection.content.buttonJoinRefugeeCenter")}
           />
-        </HeroButtonsDiv>
-      </ContentDiv>
-    </ContentContainer>
+        </HeroButtonsContainer>
+      </ContentContainer>
+    </ContentDiv>
   );
 }
