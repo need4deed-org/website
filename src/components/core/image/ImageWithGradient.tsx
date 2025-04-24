@@ -7,12 +7,11 @@ interface Props {
 
 export function ImageWithGradient({ imageUrl, gradientClass }: Props) {
   return (
-    // <div style={{ maxHeight: "387px" }}>
     <div>
       <img
         src={imageUrl}
         alt="background-image"
-        style={{ display: "block", width: "100%", height: "auto" }}
+        style={{ display: "block", width: "100%", height: "790px" }}
       />
       <div className={`gradient-overlay ${gradientClass}`} />
     </div>

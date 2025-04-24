@@ -5,14 +5,16 @@ import { FullWidthContainer, SectionContainer } from "../styled/containers";
 import Header from "./Header";
 import HeroContent from "./Content";
 
-const CustomDiv = styled(SectionContainer)`
+const HeroSectionContainer = styled(SectionContainer)`
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  /* display: flex;
-  align-items: center; */
+  height: "790px";
+  top: 0;
+  left: 50%;
+  left: 50%; /* Move the left edge to the horizontal center */
+  transform: translateX(-50%); /* Shift it back by half of its own width */
 `;
 
 export function HeroSection() {
@@ -26,10 +28,10 @@ export function HeroSection() {
         gradientClass={gradientClassName}
       />
 
-      <CustomDiv id="hero-section-container">
+      <HeroSectionContainer id="hero-section-container">
         <Header />
         <HeroContent />
-      </CustomDiv>
+      </HeroSectionContainer>
     </FullWidthContainer>
   );
 }
