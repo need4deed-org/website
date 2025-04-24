@@ -1,13 +1,10 @@
 import styled from "styled-components";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Lang } from "../../config/types";
 import { CustomHeading } from "../styled/text";
 import Arrow from "../svg/Arrow";
-
-interface Props {
-  selectedLang: Lang;
-  onChange: (lang: Lang) => void;
-}
+import MenuItem from "./MenuItem";
 
 const languageOptions = [
   { value: Lang.DE, label: "Deutsche" },
@@ -25,65 +22,57 @@ const languageLabelMap = languageOptions.reduce(
 const LanguageSwitcherDiv = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 5px;
   background: transparent;
+  gap: var(--homepage-hero-section-language-switcher-gap);
+`;
+
+const LanguageSelectionDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: var(--homepage-hero-section-language-selection-gap);
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  min-width: var(--homepage-hero-section-language-selection-min-width);
 `;
 
 const LanguageOptionsDiv = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: var(--homepage-hero-section-language-switcher-gap);
 `;
 
 const OptionButton = styled.button`
-  background: "var(--color-sand)";
+  background: var(
+    --homepage-hero-section-language-option-button-background-color
+  );
   border-color: transparent;
-  border-radius: 4px;
+  border-radius: var(--homepage-hero-section-language-option-button-radius);
 `;
 
-const SelectedLanguageDiv = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 4px;
-  align-items: center;
-  cursor: pointer;
-  justify-content: center;
-  min-width: 95px;
-`;
+export default function LanguageSwitcher() {
+  const { i18n } = useTranslation();
+  const [isOptionsVisible, setIsOptionsVisible] = useState<boolean>(false);
 
-export default function LanguageSwitcher({ selectedLang, onChange }: Props) {
+  const selectedLang = i18n.language as Lang;
+
   const visibleLangOptions = languageOptions.filter(
     (o) => o.value !== selectedLang,
   );
 
-  const [isOptionsVisible, setIsOptionsVisible] = useState<boolean>(false);
-
   const handleLangChange = (lang: Lang) => {
-    onChange(lang);
+    i18n.changeLanguage(lang);
     setIsOptionsVisible(false);
   };
 
   return (
     <LanguageSwitcherDiv>
-      <SelectedLanguageDiv
+      <LanguageSelectionDiv
         onClick={() => setIsOptionsVisible(!isOptionsVisible)}
       >
-        <CustomHeading
-          color="white"
-          fontSize="16px"
-          fontWeight={600}
-          letterSpacing="0px"
-          lineheight="16px"
-          margin={0}
-        >
-          {languageLabelMap[selectedLang]}
-        </CustomHeading>
-
-        <Arrow
-          direction={isOptionsVisible ? "up" : "down"}
-          onClick={() => setIsOptionsVisible(!isOptionsVisible)}
-        />
-      </SelectedLanguageDiv>
+        <MenuItem text={languageLabelMap[selectedLang]} />
+        <Arrow direction={isOptionsVisible ? "up" : "down"} />
+      </LanguageSelectionDiv>
 
       {isOptionsVisible && (
         <LanguageOptionsDiv>
@@ -93,11 +82,11 @@ export default function LanguageSwitcher({ selectedLang, onChange }: Props) {
               onClick={() => handleLangChange(o.value)}
             >
               <CustomHeading
-                color="var(--color-aubergine-light)"
-                fontSize="16px"
-                fontWeight={600}
-                letterSpacing="0px"
-                lineheight="16px"
+                color="var(--homepage-hero-section-language-option-button-text-color)"
+                fontSize="var(--homepage-hero-section-header-menu-item-fontSize)"
+                fontWeight="var(--homepage-hero-section-header-menu-item-fontWeight)"
+                letterSpacing="var(--homepage-hero-section-header-menu-item-letterSpacing)"
+                lineheight="var(--homepage-hero-section-header-menu-item-lineheight)"
                 margin={0}
               >
                 {languageLabelMap[o.value]}

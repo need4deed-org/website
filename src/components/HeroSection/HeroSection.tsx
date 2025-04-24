@@ -7,14 +7,11 @@ import HeroContent from "./Content";
 
 const HeroSectionContainer = styled(SectionContainer)`
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: "790px";
+  height: var(--homepage-hero-section-container-height);
   top: 0;
   left: 50%;
-  left: 50%; /* Move the left edge to the horizontal center */
-  transform: translateX(-50%); /* Shift it back by half of its own width */
+  transform: translateX(-50%);
 `;
 
 export function HeroSection() {
@@ -26,6 +23,7 @@ export function HeroSection() {
       <ImageWithGradient
         imageUrl={imageUrl}
         gradientClass={gradientClassName}
+        height="var(--homepage-hero-section-container-height)"
       />
 
       <HeroSectionContainer id="hero-section-container">

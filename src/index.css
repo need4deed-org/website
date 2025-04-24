@@ -283,8 +283,24 @@ html {
     --homepage-testimonial-card-text-p-font-size: 18px;
     --homepage-testimonial-card-text-p-line-height: 24px;
 
+    --homepage-hero-section-container-height: 790px;
     --homepage-hero-section-logo-height: 244;
     --homepage-hero-section-logo-width: 450;
+    --homepage-hero-section-header-height: 80px;
+    --homepage-hero-section-header-menu-items-width:680px;
+    --homepage-hero-section-header-menu-items-gap:20px;
+    --homepage-hero-section-header-menu-item-color:var(--color-white);
+    --homepage-hero-section-header-menu-item-fontSize:16px;
+    --homepage-hero-section-header-menu-item-fontWeight:600;
+    --homepage-hero-section-header-menu-item-letterSpacing:0px;
+    --homepage-hero-section-header-menu-item-lineheight:16px;
+    --homepage-hero-section-language-switcher-gap:5px;
+    --homepage-hero-section-language-selection-gap:4px;
+    --homepage-hero-section-language-selection-min-width:95px;
+    --homepage-hero-section-language-option-button-radius:4px;
+    --homepage-hero-section-language-option-button-background-color:var(--color-sand);
+    --homepage-hero-section-language-option-button-text-color:var(--color-aubergine-light);
+  
 
     --button-height: 72px;
     --button-padding: 16px 36px;

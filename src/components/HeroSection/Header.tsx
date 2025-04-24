@@ -1,39 +1,33 @@
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 
-import { CustomHeading } from "../styled/text";
 import N4DLogo from "../svg/N4DLogo";
-import { Lang } from "../../config/types";
 import LanguageSwitcher from "./LanguageSwitcher";
+import MenuItem from "./MenuItem";
 
 const HeaderContainer = styled.div`
   justify-content: space-between;
   display: flex;
   flex-direction: row;
-  height: 80px;
+  height: var(--homepage-hero-section-header-height);
 `;
 
 const MenuItemsDiv = styled.div`
   justify-content: space-between;
   display: flex;
   flex-direction: row;
-  width: 680px;
-  gap: 10px;
+  width: var(--homepage-hero-section-header-menu-items-width);
+  gap: var(--homepage-hero-section-header-menu-items-gap);
   height: fit-content;
 `;
 
-const MenuItem = styled.div`
-  cursor: pointer;
-  width: fit-content;
-`;
-
 function Header() {
-  const { t, i18n } = useTranslation();
-  const selectedLang = i18n.language as Lang;
+  const { t } = useTranslation();
 
   const logoHeight = getComputedStyle(
     document.documentElement,
   ).getPropertyValue("--homepage-hero-section-logo-height");
+
   const logoWidth = getComputedStyle(document.documentElement).getPropertyValue(
     "--homepage-hero-section-logo-width",
   );
@@ -50,25 +44,10 @@ function Header() {
 
       <MenuItemsDiv>
         {menuItems.map((text) => (
-          <MenuItem key={text}>
-            <CustomHeading
-              key={text}
-              color="white"
-              fontSize="16px"
-              fontWeight={600}
-              letterSpacing="0px"
-              lineheight="16px"
-              onClick={() => {}}
-            >
-              {text}
-            </CustomHeading>
-          </MenuItem>
+          <MenuItem text={text} key={text} />
         ))}
 
-        <LanguageSwitcher
-          selectedLang={selectedLang}
-          onChange={(lang) => i18n.changeLanguage(lang)}
-        />
+        <LanguageSwitcher />
       </MenuItemsDiv>
     </HeaderContainer>
   );
