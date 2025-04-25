@@ -7,8 +7,8 @@ import Arrow from "../svg/Arrow";
 import MenuItem from "./MenuItem";
 
 const languageOptions = [
-  { value: Lang.DE, label: "Deutsche" },
-  { value: Lang.EN, label: "English" },
+  { value: Lang.DE, label: "DEUTSCHE" },
+  { value: Lang.EN, label: "ENGLISH " },
 ];
 
 const languageLabelMap = languageOptions.reduce(
@@ -19,11 +19,12 @@ const languageLabelMap = languageOptions.reduce(
   {},
 ) as Record<Lang, string>;
 
-const LanguageSwitcherDiv = styled.div`
+const LanguageSwitcherContainer = styled.div`
   display: flex;
   flex-direction: column;
   background: transparent;
   gap: var(--homepage-hero-section-language-switcher-gap);
+  width: var(--homepage-hero-section-language-switcher-width);
 `;
 
 const LanguageSelectionDiv = styled.div`
@@ -66,7 +67,7 @@ export default function LanguageSwitcher() {
   };
 
   return (
-    <LanguageSwitcherDiv>
+    <LanguageSwitcherContainer>
       <LanguageSelectionDiv
         onClick={() => setIsOptionsVisible(!isOptionsVisible)}
       >
@@ -95,6 +96,6 @@ export default function LanguageSwitcher() {
           ))}
         </LanguageOptionsDiv>
       )}
-    </LanguageSwitcherDiv>
+    </LanguageSwitcherContainer>
   );
 }

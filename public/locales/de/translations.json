@@ -509,9 +509,9 @@
   "homepage": {
     "heroSection": {
       "menuItems": {
-        "about": "Über",
-        "volunteeringOpportunities": "Allgemeine Engagementmöglichkeiten mit Geflüchteten",
-        "events": "Veranstaltungen"
+        "about": "ÜBER",
+        "volunteeringOpportunities": "ALLGEMEINE ENGAGEMENTMÖGLICHKEITEN MIT GEFLÜCHTETEN",
+        "events": "VERANSTALTUNGEN"
       },
       "content": {
         "heroText": "Bedarfsorientierte, ehrenamtliche Unterstützung für Flüchtlinge in Berlin",

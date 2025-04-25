@@ -12,7 +12,7 @@ const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: var(--homepage-hero-section-header-menu-items-width);
+  width: var(--homepage-hero-section-content-container-width);
   height: var(--homepage-hero-section-content-container-height);
 `;
 

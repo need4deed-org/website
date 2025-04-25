@@ -544,9 +544,9 @@
   "homepage": {
     "heroSection": {
       "menuItems": {
-        "about": "About",
-        "volunteeringOpportunities": "Volunteering opportunities",
-        "events": "Events"
+        "about": "ABOUT",
+        "volunteeringOpportunities": "VOLUNTEERING OPPORTUNITIES",
+        "events": "EVENTS"
       },
       "content": {
         "heroText": "Need based voluntary support for refugees in Berlin",

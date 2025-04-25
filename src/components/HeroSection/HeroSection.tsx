@@ -12,6 +12,7 @@ const HeroSectionContainer = styled(SectionContainer)`
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+  gap: var(--homepage-hero-section-container-gap);
 `;
 
 export function HeroSection() {
