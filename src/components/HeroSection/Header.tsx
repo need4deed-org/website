@@ -15,7 +15,6 @@ const HeaderContainer = styled.div`
   flex-direction: row;
   height: var(--homepage-hero-section-header-height);
   position: relative; /* Needed for absolute positioning of MenuItemsDiv */
-  z-index: 10; /* Ensure header stays above the sliding menu in its default state */
 `;
 
 function Header() {
