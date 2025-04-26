@@ -24,7 +24,9 @@ const HeroTextContainer = styled.div`
 
 const HeroButtonsContainer = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: var(
+    --homepage-hero-section-content-hero-button-container-flex-direction
+  );
   gap: var(--homepage-hero-section-content-hero-button-container-gap);
 `;
 

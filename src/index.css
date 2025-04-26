@@ -80,7 +80,6 @@ html {
   --homepage-testimonials-profile-gap: 16px;
 
   /* hero section */
-  --homepage-hero-section-header-menu-item-color:var(--color-white);
   --homepage-hero-section-language-option-button-background-color:var(--color-sand);
   --homepage-hero-section-language-option-button-text-color:var(--color-aubergine-light);
 
@@ -141,10 +140,46 @@ html {
     --homepage-testimonial-card-text-p-font-size: 16px;
     --homepage-testimonial-card-text-p-line-height: 22px;
 
+    --homepage-hero-section-container-height: 760px;
+    --homepage-hero-section-container-gap:80px;
     --homepage-hero-section-logo-height: 152px;
     --homepage-hero-section-logo-width: 280px;
+    --homepage-hero-section-header-height: 202px;
+    --homepage-hero-section-header-menu-items-width: 100%;
+    --homepage-hero-section-header-menu-items-gap: 24px;
+    --homepage-hero-section-header-menu-items-flex-direction:column;
+    --homepage-hero-section-header-menu-items-padding-top:24px;
+    --homepage-hero-section-header-menu-items-padding-bottom:32px;
+    --homepage-hero-section-header-menu-items-padding-right:20px;
+    --homepage-hero-section-header-menu-items-padding-left:20px;
+    --homepage-hero-section-header-menu-items-border-bottom-right-radius:10px;
+    --homepage-hero-section-header-menu-items-border-bottom-left-radius:10px;
+    --homepage-hero-section-header-menu-item-fontSize:16px;
+    --homepage-hero-section-header-menu-item-fontWeight:600;
+    --homepage-hero-section-header-menu-item-letterSpacing:0px;
+    --homepage-hero-section-header-menu-item-lineheight:16px;
+    --homepage-hero-section-header-menu-item-color:var(--color-midnight);
+    --homepage-hero-section-language-switcher-gap:5px;
+    --homepage-hero-section-language-switcher-width:fit-content;
+    --homepage-hero-section-language-selection-gap:4px;
+    --homepage-hero-section-language-option-button-radius:4px;
+    --homepage-hero-section-content-container-width:100%;
+    --homepage-hero-section-content-container-height:440px;
+    --homepage-hero-section-content-hero-text-container-gap:20px;
+    --homepage-hero-section-content-hero-text-color:var(--color-white);
+    --homepage-hero-section-content-hero-text-fontSize:32px;
+    --homepage-hero-section-content-hero-text-fontWeight:600;
+    --homepage-hero-section-content-hero-text-letterSpacing:0.1px;
+    --homepage-hero-section-content-hero-text-lineheight:36px;
+    --homepage-hero-section-content-hero-supporting-text-fontSize:20px;
+    --homepage-hero-section-content-hero-supporting-text-fontWeight:400;
+    --homepage-hero-section-content-hero-supporting-text-letterSpacing:0.25px;
+    --homepage-hero-section-content-hero-supporting-text-lineheight:20px;
+    --homepage-hero-section-content-hero-button-container-gap:16px;
+    --homepage-hero-section-content-hero-button-container-flex-direction:column;
 
     --button-height: 64px;
+    --button-width: auto;
     --button-padding: 12px 24px;
     --button-border-radius: 125px;
     --button-text-font-weight: 500;
@@ -226,6 +261,7 @@ html {
     --homepage-hero-section-header-menu-item-fontWeight:600;
     --homepage-hero-section-header-menu-item-letterSpacing:0px;
     --homepage-hero-section-header-menu-item-lineheight:16px;
+    --homepage-hero-section-header-menu-item-color:var(--color-white);
     --homepage-hero-section-language-switcher-gap:5px;
     --homepage-hero-section-language-switcher-width:95px;
     --homepage-hero-section-language-selection-gap:4px;
@@ -243,8 +279,11 @@ html {
     --homepage-hero-section-content-hero-supporting-text-letterSpacing:0.25px;
     --homepage-hero-section-content-hero-supporting-text-lineheight:24px;
     --homepage-hero-section-content-hero-button-container-gap:24px;
+    --homepage-hero-section-content-hero-button-container-flex-direction:row;
+
 
     --button-height: 72px;
+    --button-width: fit-content;
     --button-padding: 16px 36px;
     --button-border-radius: 125px;
     --button-text-font-weight: 500;
@@ -328,6 +367,7 @@ html {
     --homepage-hero-section-header-menu-item-fontWeight:600;
     --homepage-hero-section-header-menu-item-letterSpacing:0px;
     --homepage-hero-section-header-menu-item-lineheight:16px;
+    --homepage-hero-section-header-menu-item-color:var(--color-white);
     --homepage-hero-section-language-switcher-gap:5px;
     --homepage-hero-section-language-switcher-width:95px;
     --homepage-hero-section-language-selection-gap:4px;
@@ -346,8 +386,10 @@ html {
     --homepage-hero-section-content-hero-supporting-text-letterSpacing:0.25px;
     --homepage-hero-section-content-hero-supporting-text-lineheight:24px;
     --homepage-hero-section-content-hero-button-container-gap:24px;
+    --homepage-hero-section-content-hero-button-container-flex-direction:row;
   
     --button-height: 72px;
+    --button-width: fit-content;
     --button-padding: 16px 36px;
     --button-border-radius: 125px;
     --button-text-font-weight: 500;

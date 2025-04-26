@@ -1,28 +1,27 @@
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 
+import { List } from "@phosphor-icons/react";
+import { useState } from "react";
 import N4DLogo from "../svg/N4DLogo";
-import LanguageSwitcher from "./LanguageSwitcher";
-import MenuItem from "./MenuItem";
+import useResponsive from "../../hooks/useResponsive";
+import { screenSizeThresholds } from "../../config/constants";
+import BurgerMenuItems from "./BurgerMenuItems";
+import MenuItems from "./MenuItems";
 
 const HeaderContainer = styled.div`
   justify-content: space-between;
   display: flex;
   flex-direction: row;
   height: var(--homepage-hero-section-header-height);
-`;
-
-const MenuItemsDiv = styled.div`
-  justify-content: space-between;
-  display: flex;
-  flex-direction: var(--homepage-hero-section-header-menu-items-flex-direction);
-  width: var(--homepage-hero-section-header-menu-items-width);
-  gap: var(--homepage-hero-section-header-menu-items-gap);
-  height: fit-content;
+  position: relative; /* Needed for absolute positioning of MenuItemsDiv */
+  z-index: 10; /* Ensure header stays above the sliding menu in its default state */
 `;
 
 function Header() {
   const { t } = useTranslation();
+  const isMobile = useResponsive(screenSizeThresholds.tablet);
+  const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState<boolean>(false);
 
   const logoHeight = getComputedStyle(
     document.documentElement,
@@ -42,13 +41,24 @@ function Header() {
     <HeaderContainer id="header-container">
       <N4DLogo height={logoHeight} width={logoWidth} />
 
-      <MenuItemsDiv>
-        {menuItems.map((text) => (
-          <MenuItem text={text} key={text} />
-        ))}
-
-        <LanguageSwitcher />
-      </MenuItemsDiv>
+      {isMobile ? (
+        <>
+          <List
+            size={32}
+            color="white"
+            onClick={() => setIsBurgerMenuOpen(true)}
+          />
+          {isBurgerMenuOpen && (
+            <BurgerMenuItems
+              isOpen={isBurgerMenuOpen}
+              setIsOpen={setIsBurgerMenuOpen}
+              items={menuItems}
+            />
+          )}
+        </>
+      ) : (
+        <MenuItems items={menuItems} />
+      )}
     </HeaderContainer>
   );
 }

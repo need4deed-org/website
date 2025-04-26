@@ -33,7 +33,7 @@ const LanguageSelectionDiv = styled.div`
   gap: var(--homepage-hero-section-language-selection-gap);
   align-items: center;
   cursor: pointer;
-  justify-content: center;
+  justify-content: left;
   min-width: var(--homepage-hero-section-language-selection-min-width);
 `;
 

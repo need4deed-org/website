@@ -5,7 +5,7 @@ const StyledButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: fit-content;
+  width: var(--button-width);
   height: var(--button-height);
   padding: var(--button-padding);
   border-radius: var(--button-border-radius);
