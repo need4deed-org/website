@@ -5,6 +5,7 @@ import { VolunteeringCategoriesSection } from "../components/VolunteeringCategor
 import { Lang } from "../config/types";
 import { VolunteeringOpportunitiesSection } from "../components/VolunteeringOpportunities";
 import { TestimonialsSection } from "../components/Testimonials";
+import RacSection from "../components/RacSection/RacSection";
 
 // TODO: This is a temporary component, will be deleted.
 function LanguageSelector() {
@@ -30,6 +31,7 @@ export default function Landing() {
       <VolunteeringCategoriesSection />
       <VolunteeringOpportunitiesSection />
       <TestimonialsSection />
+      <RacSection />
     </AppContainer>
   );
 }
