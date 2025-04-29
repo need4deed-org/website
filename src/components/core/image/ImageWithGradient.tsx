@@ -1,4 +1,5 @@
 import "../../../index.css";
+import { BackgroundImg } from "../../styled/img";
 
 interface Props {
   imageUrl: string;
@@ -9,15 +10,7 @@ interface Props {
 export function ImageWithGradient({ imageUrl, gradientClass, height }: Props) {
   return (
     <div>
-      <img
-        src={imageUrl}
-        alt="background-image"
-        style={{
-          display: "block",
-          width: "100%",
-          height: height || "100%",
-        }}
-      />
+      <BackgroundImg src={imageUrl} height={height} alt="background-image" />
       <div className={`gradient-overlay ${gradientClass}`} />
     </div>
   );

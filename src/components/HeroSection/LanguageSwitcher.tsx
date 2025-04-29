@@ -7,7 +7,7 @@ import Arrow from "../svg/Arrow";
 import MenuItem from "./MenuItem";
 
 const languageOptions = [
-  { value: Lang.DE, label: "DEUTSCHE" },
+  { value: Lang.DE, label: "DEUTSCH" },
   { value: Lang.EN, label: "ENGLISH " },
 ];
 

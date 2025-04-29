@@ -4,6 +4,8 @@ import { ImageWithGradient } from "../core/image";
 import { FullWidthContainer, SectionContainer } from "../styled/containers";
 import Header from "./Header";
 import HeroContent from "./Content";
+import useScreenType from "../../hooks/useScreenType";
+import { ScreenTypes } from "../../config/types";
 
 const HeroSectionContainer = styled(SectionContainer)`
   position: absolute;
@@ -15,8 +17,15 @@ const HeroSectionContainer = styled(SectionContainer)`
   gap: var(--homepage-hero-section-container-gap);
 `;
 
+const imageNames: Record<ScreenTypes, string> = {
+  mobile: "hero_mobile.webp",
+  tablet: "hero_tablet.webp",
+  desktop: "new-design-hero.webp",
+};
+
 export function HeroSection() {
-  const imageUrl = getImageUrl("new-design-hero.webp");
+  const screenType = useScreenType();
+  const imageUrl = getImageUrl(imageNames[screenType]);
   const gradientClassName = "image-filter-gradient-blue ";
 
   return (

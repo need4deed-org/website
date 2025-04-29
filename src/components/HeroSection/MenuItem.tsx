@@ -19,7 +19,7 @@ export default function MenuItem({ text }: Props) {
         fontWeight="var(--homepage-hero-section-header-menu-item-fontWeight)"
         letterSpacing="var(--homepage-hero-section-header-menu-item-letterSpacing)"
         lineheight="var(--homepage-hero-section-header-menu-item-lineheight)"
-        onClick={() => {}}
+        onClick={() => {}} // TODO: click handler will be implemented later
         margin={0}
       >
         {text}

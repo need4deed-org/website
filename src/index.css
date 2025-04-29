@@ -21,13 +21,15 @@ html {
 }
 
 .image-filter-gradient-blue {
-  background: linear-gradient(180deg, rgba(44, 47, 153, 0.6) 11.02%, rgba(73, 79, 255, 0.05) 89.66%);
+  background: linear-gradient(180deg, var(--color-midnight-misty) 11.02%, var(--color-barely-blue) 89.66%);
 }
 
 :root {
   /* color */
   --color-midnight: rgba(26, 38, 132, 1);
   --color-midnight-light: rgba(58, 72, 178, 1);
+  --color-midnight-misty: rgba(44, 47, 153, 0.6);
+  --color-barely-blue:  rgba(73, 79, 255, 0.05) ;
   --color-aubergine: rgba(95, 38, 77, 1);
   --color-aubergine-light: rgba(133, 63, 110, 1);
   --color-orchid: rgba(251, 226, 255, 1);
@@ -37,7 +39,6 @@ html {
   --color-magnolia: rgba(246, 238, 231, 1);
   --color-papaya: rgba(255, 125, 104, 1);
   --color-white:  rgba(255, 255, 255, 1);
-
   /* text */
   --text-h2-font-weight: 600;
   --text-h2-font-size: 32px;

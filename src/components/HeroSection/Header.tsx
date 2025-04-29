@@ -44,7 +44,7 @@ function Header() {
         <>
           <List
             size={32}
-            color="white"
+            color="var(--color-white)"
             onClick={() => setIsBurgerMenuOpen(true)}
           />
           {isBurgerMenuOpen && (

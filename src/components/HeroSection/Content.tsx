@@ -43,7 +43,7 @@ export default function HeroContent() {
             fontWeight="var(--homepage-hero-section-content-hero-text-fontWeight)"
             letterSpacing="var(--homepage-hero-section-content-hero-text-letterSpacing)"
             lineheight="var(--homepage-hero-section-content-hero-text-lineheight)"
-            onClick={() => {}}
+            onClick={() => {}} // TODO: click handler will be implemented later
           >
             {t("homepage.heroSection.content.heroText")}
           </CustomHeading>
@@ -53,7 +53,7 @@ export default function HeroContent() {
             fontWeight="var(--homepage-hero-section-content-hero-supporting-text-fontWeight)"
             letterSpacing="var(--homepage-hero-section-content-hero-supporting-text-letterSpacing)"
             lineheight="var(--homepage-hero-section-content-hero-supporting-text-lineheight)"
-            onClick={() => {}}
+            onClick={() => {}} // TODO: click handler will be implemented later
           >
             {t("homepage.heroSection.content.heroSupportingText")}
           </CustomHeading>
@@ -61,11 +61,11 @@ export default function HeroContent() {
 
         <HeroButtonsContainer>
           <Button
-            onClick={() => {}}
+            onClick={() => {}} // TODO: click handler will be implemented later
             text={t("homepage.heroSection.content.buttonJoinVolunteer")}
           />
           <Button
-            onClick={() => {}}
+            onClick={() => {}} // TODO: click handler will be implemented later
             text={t("homepage.heroSection.content.buttonJoinRefugeeCenter")}
           />
         </HeroButtonsContainer>
