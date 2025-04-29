@@ -5,6 +5,8 @@ import { Lang } from "../../config/types";
 import { CustomHeading } from "../styled/text";
 import Arrow from "../svg/Arrow";
 import MenuItem from "./MenuItem";
+import useResponsive from "../../hooks/useResponsive";
+import { screenSizeThresholds } from "../../config/constants";
 
 const languageOptions = [
   { value: Lang.DE, label: "DEUTSCH" },
@@ -54,6 +56,7 @@ const OptionButton = styled.button`
 export default function LanguageSwitcher() {
   const { i18n } = useTranslation();
   const [isOptionsVisible, setIsOptionsVisible] = useState<boolean>(false);
+  const isMobile = useResponsive(screenSizeThresholds.tablet);
 
   const selectedLang = i18n.language as Lang;
 
@@ -66,12 +69,18 @@ export default function LanguageSwitcher() {
     setIsOptionsVisible(false);
   };
 
+  const selectedLangTextColor =
+    !isMobile && isOptionsVisible ? "var(--color-orchid-dark)" : "";
+
   return (
     <LanguageSwitcherContainer>
       <LanguageSelectionDiv
         onClick={() => setIsOptionsVisible(!isOptionsVisible)}
       >
-        <MenuItem text={languageLabelMap[selectedLang]} />
+        <MenuItem
+          text={languageLabelMap[selectedLang]}
+          color={selectedLangTextColor}
+        />
         <Arrow direction={isOptionsVisible ? "up" : "down"} />
       </LanguageSelectionDiv>
 

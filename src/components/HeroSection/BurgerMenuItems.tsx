@@ -42,8 +42,12 @@ const BurgerMenuItemsContainer = styled(MenuItemsContainer)<BurgerMenuProps>`
   border-bottom-left-radius: var(
     --homepage-hero-section-header-menu-items-border-bottom-left-radius
   );
-  background: linear-gradient(180deg, #f6eee7 -5.53%, #f7cdff 100%);
-  box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 1);
+  background: linear-gradient(
+    180deg,
+    var(--color-magnolia)-5.53%,
+    var(--color-orchid-dark) 100%
+  );
+  box-shadow: 0px 4px 25px 0px var(--color-black);
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
 

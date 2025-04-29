@@ -39,6 +39,8 @@ html {
   --color-magnolia: rgba(246, 238, 231, 1);
   --color-papaya: rgba(255, 125, 104, 1);
   --color-white:  rgba(255, 255, 255, 1);
+  --color-black:  rgba(0, 0, 0, 1);
+  
   /* text */
   --text-h2-font-weight: 600;
   --text-h2-font-size: 32px;
@@ -82,7 +84,6 @@ html {
 
   /* hero section */
   --homepage-hero-section-language-option-button-background-color:var(--color-sand);
-  --homepage-hero-section-language-option-button-text-color:var(--color-aubergine-light);
 
 }
 
@@ -164,6 +165,7 @@ html {
     --homepage-hero-section-language-switcher-width:fit-content;
     --homepage-hero-section-language-selection-gap:4px;
     --homepage-hero-section-language-option-button-radius:4px;
+    --homepage-hero-section-language-option-button-text-color:var(--color-midnight-light);
     --homepage-hero-section-content-container-width:100%;
     --homepage-hero-section-content-container-height:440px;
     --homepage-hero-section-content-hero-text-container-gap:20px;
@@ -267,6 +269,7 @@ html {
     --homepage-hero-section-language-switcher-width:95px;
     --homepage-hero-section-language-selection-gap:4px;
     --homepage-hero-section-language-option-button-radius:4px;
+    --homepage-hero-section-language-option-button-text-color:var(--color-aubergine-light);
     --homepage-hero-section-content-container-width:100%;
     --homepage-hero-section-content-container-height:440px;
     --homepage-hero-section-content-hero-text-container-gap:20px;
@@ -374,6 +377,7 @@ html {
     --homepage-hero-section-language-selection-gap:4px;
     --homepage-hero-section-language-selection-min-width:95px;
     --homepage-hero-section-language-option-button-radius:4px;
+    --homepage-hero-section-language-option-button-text-color:var(--color-aubergine-light);
     --homepage-hero-section-content-container-width:680px;
     --homepage-hero-section-content-container-height:485px;
     --homepage-hero-section-content-hero-text-container-gap:20px;
