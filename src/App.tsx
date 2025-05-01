@@ -11,7 +11,6 @@ import AppContainerContext from "./contexts/AppContainerContext";
 import Home from "./pages/Home";
 import Land404 from "./pages/Land404";
 import Landing from "./pages/Landing";
-import PastEvents from "./pages/PastEvents";
 import Subpage from "./pages/Subpage";
 import { consoleLogDeveloperContributionMessage } from "./utils";
 
@@ -139,8 +138,12 @@ function App() {
                 element={<Subpage type={Subpages.EVENT} />}
               />
               <Route
-                path={`/${Subpages.PAST_EVENTS}/:event`}
-                element={<PastEvents />}
+                path={`/${Subpages.EVENTS}/:lng`}
+                element={<Subpage type={Subpages.EVENTS} />}
+              />
+              <Route
+                path={`/${Subpages.EVENTS}`}
+                element={<Subpage type={Subpages.EVENTS} />}
               />
               <Route
                 path={`/${Subpages.COOKIES}/:lng`}

@@ -5,6 +5,7 @@ import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 
 import Announcement from "../components/Announcement";
 import EventAccompanying from "../components/Event/EventAccompanying";
+import Events from "../components/Event/Events";
 import FAQs from "../components/FAQs/FAQs";
 import Footer from "../components/Footer/Footer";
 import NewForm from "../components/Form";
@@ -166,6 +167,8 @@ function Subpage({ type }: Props) {
         return <Announcement />;
       case Subpages.EVENT:
         return <EventAccompanying />;
+      case Subpages.EVENTS:
+        return <Events />;
       case Subpages.COOKIES:
         return <Cookie />;
       case Subpages.FAQS:
