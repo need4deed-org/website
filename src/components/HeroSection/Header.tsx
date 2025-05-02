@@ -4,10 +4,10 @@ import { useTranslation } from "react-i18next";
 import { List } from "@phosphor-icons/react";
 import { useState } from "react";
 import N4DLogo from "../svg/N4DLogo";
-import useResponsive from "../../hooks/useResponsive";
-import { screenSizeThresholds } from "../../config/constants";
 import BurgerMenuItems from "./BurgerMenuItems";
 import MenuItems from "./MenuItems";
+import { ScreenTypes } from "../../config/types";
+import useScreenType from "../../hooks/useScreenType";
 
 const HeaderContainer = styled.div`
   justify-content: space-between;
@@ -19,7 +19,7 @@ const HeaderContainer = styled.div`
 
 function Header() {
   const { t } = useTranslation();
-  const isMobile = useResponsive(screenSizeThresholds.tablet);
+  const screenType = useScreenType();
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState<boolean>(false);
 
   const logoHeight = getComputedStyle(
@@ -40,7 +40,7 @@ function Header() {
     <HeaderContainer id="header-container">
       <N4DLogo height={logoHeight} width={logoWidth} />
 
-      {isMobile ? (
+      {screenType === ScreenTypes.MOBILE ? (
         <>
           <List
             size={32}

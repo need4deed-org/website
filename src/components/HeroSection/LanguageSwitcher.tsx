@@ -1,12 +1,11 @@
 import styled from "styled-components";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Lang } from "../../config/types";
+import { Lang, ScreenTypes } from "../../config/types";
 import { CustomHeading } from "../styled/text";
 import Arrow from "../svg/Arrow";
 import MenuItem from "./MenuItem";
-import useResponsive from "../../hooks/useResponsive";
-import { screenSizeThresholds } from "../../config/constants";
+import useScreenType from "../../hooks/useScreenType";
 
 const languageOptions = [
   { value: Lang.DE, label: "DEUTSCH" },
@@ -56,7 +55,7 @@ const OptionButton = styled.button`
 export default function LanguageSwitcher() {
   const { i18n } = useTranslation();
   const [isOptionsVisible, setIsOptionsVisible] = useState<boolean>(false);
-  const isMobile = useResponsive(screenSizeThresholds.tablet);
+  const screenType = useScreenType();
 
   const selectedLang = i18n.language as Lang;
 
@@ -70,7 +69,9 @@ export default function LanguageSwitcher() {
   };
 
   const selectedLangTextColor =
-    !isMobile && isOptionsVisible ? "var(--color-orchid-dark)" : "";
+    screenType !== ScreenTypes.MOBILE && isOptionsVisible
+      ? "var(--color-orchid-dark)"
+      : "";
 
   return (
     <LanguageSwitcherContainer>
