@@ -287,7 +287,15 @@
       }
     }
   },
-  "event": { "menuItem": "Workshop" },
+  "event": {
+    "menuItem": "Workshop",
+    "registration": "Registration",
+    "missing": "No information",
+    "click": "Click on a list item to view an event.",
+    "locationLink": "Location on maps",
+    "past": "Past events",
+    "noEvents": "No events."
+  },
   "VolunTea": {
     "greeting": {
       "invite": "You are more than invited to our next VolunTea.",
