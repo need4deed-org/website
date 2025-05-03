@@ -1,7 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 
 import { urlApiTestimonial } from "../../config/constants";
-import { Lang, Testimonial } from "../../config/types";
+import { Lang } from "../../config/types";
+import { Testimonial } from "./types";
 import fetchFn from "./utils";
 
 const staleTime = 1000 * 60 * 60 * 24; // 1d

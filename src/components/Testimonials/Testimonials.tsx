@@ -2,12 +2,12 @@
 /* eslint-disable no-nested-ternary */
 
 import { useTranslation } from "react-i18next";
-import { Lang } from "../../config/types";
-import TestimonialCard from "./TestimonialCard";
-import { PaginatedCards } from "../core/paginatedCards";
 import { screenSizeThresholds } from "../../config/constants";
-import useResponsive from "../../hooks/useResponsive";
+import { Lang } from "../../config/types";
 import useTestimonials from "../../hooks/api/useTestimonials";
+import useResponsive from "../../hooks/useResponsive";
+import { PaginatedCards } from "../core/paginatedCards";
+import TestimonialCard from "./TestimonialCard";
 
 export default function Testimonials() {
   const { i18n } = useTranslation();

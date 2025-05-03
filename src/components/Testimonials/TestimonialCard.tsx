@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { BaseCard } from "../styled/containers";
-import { Testimonial } from "../../config/types";
-import { Heading3, Paragraph } from "../styled/text";
+import { Testimonial } from "../../hooks/api/types";
 import { Activities } from "../core/common";
+import { BaseCard } from "../styled/containers";
 import { CirclePic } from "../styled/img";
+import { Heading3, Paragraph } from "../styled/text";
 
 const Card = styled(BaseCard)`
   background-color: var(--color-orchid-dark);
