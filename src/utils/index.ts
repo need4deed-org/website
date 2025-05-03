@@ -384,3 +384,34 @@ export function* range(start: number, end: number, step = 1) {
     yield i;
   }
 }
+
+export function getTimeFrameString(lang: Lang, from: Date, to?: Date) {
+  const locale = lang === Lang.EN ? "en-UK" : lang;
+  const fromDate = new Date(from);
+  const toDate = to ? new Date(to) : null;
+
+  const options: Intl.DateTimeFormatOptions = {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+  };
+  const sameDayOptions: Intl.DateTimeFormatOptions = {
+    hour: "2-digit",
+    minute: "2-digit",
+  };
+
+  const fromString = fromDate.toLocaleString(locale, options);
+  const toOptions =
+    toDate &&
+    fromDate.getDate() === toDate.getDate() &&
+    fromDate.getMonth() === toDate.getMonth() &&
+    fromDate.getFullYear() === toDate.getFullYear()
+      ? sameDayOptions
+      : options;
+
+  const toString = to ? (toDate as Date).toLocaleString(locale, toOptions) : "";
+
+  return toString ? `${fromString} - ${toString}` : fromString;
+}
