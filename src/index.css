@@ -1,9 +1,8 @@
 body {
-  font-family: 'Figtree', sans-serif;
+  font-family: "Figtree", sans-serif;
   width: 100%;
   margin: 0;
 }
-
 
 html {
   scroll-behavior: smooth;
@@ -21,7 +20,7 @@ html {
   --color-sand: rgba(242, 226, 211, 1);
   --color-magnolia: rgba(246, 238, 231, 1);
   --color-papaya: rgba(255, 125, 104, 1);
-  --color-white:  rgba(255, 255, 255, 1);
+  --color-white: rgba(255, 255, 255, 1);
 
   /* text */
   --text-h2-font-weight: 600;
@@ -65,11 +64,15 @@ html {
   --homepage-testimonials-profile-gap: 16px;
 }
 
+.with-linebreaks {
+  white-space: pre-wrap;
+}
+
 @media (min-width: 360px) {
   :root {
     --max-width-section: 360px;
 
-    --text-p-font-size: 18px; 
+    --text-p-font-size: 18px;
     --text-p-line-height: 21px;
     --text-p-letter-spacing: 0;
 
@@ -78,14 +81,14 @@ html {
     --text-h1-line-height: 28px;
 
     --text-h4-font-weight: 500;
-    --text-h4-font-size: 18px; 
+    --text-h4-font-size: 18px;
     --text-h4-line-height: 18px;
     --text-h4-letter-spacing: 0.1;
-    
-    --icon-size:40px;
-    
+
+    --icon-size: 40px;
+
     --text-button-font-size: 18px;
-    
+
     --homepage-section-container-padding: 48px 20px;
     --homepage-section-container-gap: 16px;
     --homepage-section-container-footer-justify-content: center;
@@ -109,9 +112,9 @@ html {
     --homepage-volunteering-opportunity-card-padding-left: 24px;
     --homepage-volunteering-opportunity-card-gap: 16px;
     --homepage-volunteering-opportunity-details-gap: 12px;
-    
-    --homepage-testimonials-header-gap:16px;
-    --homepage-testimonial-card-width:320px;
+
+    --homepage-testimonials-header-gap: 16px;
+    --homepage-testimonial-card-width: 320px;
     --homepage-testimonial-card-padding-top: 24px;
     --homepage-testimonial-card-padding-right: 24px;
     --homepage-testimonial-card-padding-bottom: 32px;
@@ -135,7 +138,7 @@ html {
   :root {
     --max-width-section: 768px;
 
-    --icon-size:48px;
+    --icon-size: 48px;
 
     --text-p-font-size: 20px;
     --text-p-line-height: 24px;
@@ -147,12 +150,12 @@ html {
     --text-h1-letter-spacing: 0.1px;
 
     --text-h4-font-weight: 600;
-    --text-h4-font-size: 20px; 
+    --text-h4-font-size: 20px;
     --text-h4-line-height: 20px;
     --text-h4-letter-spacing: 0.1;
-    
+
     --text-button-font-size: 24px;
-    
+
     --homepage-section-container-padding: 64px 40px;
     --homepage-section-container-gap: 48px;
     --homepage-section-container-footer-justify-content: flex-end;
@@ -180,8 +183,8 @@ html {
     --homepage-volunteering-opportunity-card-gap: 20px;
     --homepage-volunteering-opportunity-details-gap: 16px;
 
-    --homepage-testimonials-header-gap:24px;
-    --homepage-testimonial-card-width:328px;
+    --homepage-testimonials-header-gap: 24px;
+    --homepage-testimonial-card-width: 328px;
     --homepage-testimonial-card-padding-top: 28px;
     --homepage-testimonial-card-padding-right: 28px;
     --homepage-testimonial-card-padding-bottom: 40px;
@@ -207,7 +210,7 @@ html {
   :root {
     --max-width-section: 1440px;
 
-    --icon-size:48px;
+    --icon-size: 48px;
 
     --text-p-font-size: 20px;
     --text-p-line-height: 24px;
@@ -217,14 +220,14 @@ html {
     --text-h1-font-size: 32px;
     --text-h1-line-height: 32px;
     --text-h1-letter-spacing: 0.1px;
-    
+
     --text-h4-font-weight: 600;
-    --text-h4-font-size: 20px; 
+    --text-h4-font-size: 20px;
     --text-h4-line-height: 20px;
     --text-h4-letter-spacing: 0.1;
 
     --text-button-font-size: 24px;
-    
+
     --homepage-section-container-padding: 100px 120px;
     --homepage-section-container-gap: 56px;
     --homepage-section-container-footer-justify-content: flex-end;
@@ -252,8 +255,8 @@ html {
     --homepage-volunteering-opportunity-card-gap: 24px;
     --homepage-volunteering-opportunity-details-gap: 16px;
 
-    --homepage-testimonials-header-gap:24px;
-    --homepage-testimonial-card-width:384px;
+    --homepage-testimonials-header-gap: 24px;
+    --homepage-testimonial-card-width: 384px;
     --homepage-testimonial-card-padding-top: 32px;
     --homepage-testimonial-card-padding-right: 32px;
     --homepage-testimonial-card-padding-bottom: 48px;
