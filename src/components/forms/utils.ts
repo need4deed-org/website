@@ -77,7 +77,11 @@ export function parseFormStateDTOOpportunity(value: OpportunityData) {
   data.vo_information = value.voInformation;
   data.accomp_address = value.aaAddress;
   data.accomp_postcode = value.aaPostcode;
-  data.accomp_datetime = getDateCETtoUTC(value.dateTime);
+  data.accomp_datetime = getDateCETtoUTC(
+    value.opportunityType === OpportunityType.ACCOMPANYING
+      ? value.dateTime
+      : value.onetimeDateTime,
+  );
   data.accomp_name = value.refugeeName;
   data.accomp_phone = value.refugeeNumber;
   data.accomp_information = value.aaInformation;
