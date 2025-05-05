@@ -1,15 +1,17 @@
 import { useTranslation } from "react-i18next";
+import { urlApiOpportunity } from "../../config/constants";
 import {
-  screenSizeThresholds,
-  urlApiOpportunity,
-} from "../../config/constants";
-import { Lang, OpportunityParams, OpportunityType } from "../../config/types";
+  Lang,
+  OpportunityParams,
+  OpportunityType,
+  ScreenTypes,
+} from "../../config/types";
 import useOpportunities from "../../hooks/api/useOpportunities";
-import useResponsive from "../../hooks/useResponsive";
 import { OpportunitiesContainer } from "../styled/containers";
 import OpportunityCard from "./OpportunityCard";
 import { OpportunityApi } from "./types";
 import { getMappedOpportunities, getMostPopularOpportunities } from "./utils";
+import useScreenType from "../../hooks/useScreenType";
 
 const opportunityParams: OpportunityParams = {
   search: {
@@ -21,8 +23,9 @@ const opportunityParams: OpportunityParams = {
 
 function Opportunities() {
   const { i18n } = useTranslation();
-  const isSmallScreen = useResponsive(screenSizeThresholds.desktop);
-  const truncateNumber = isSmallScreen ? 2 : 3;
+  const screenType = useScreenType();
+
+  const truncateNumber = screenType === ScreenTypes.DESKTOP ? 3 : 2;
 
   // Set language for API request
   opportunityParams.language = i18n.language as Lang;

@@ -11,4 +11,16 @@ export const CirclePic = styled.img<CircleImageProps>`
   src: ${(props) => props.src};
 `;
 
+interface BackgroundImgProps {
+  src: string;
+  height?: string;
+}
+
+export const BackgroundImg = styled.img<BackgroundImgProps>`
+  display: block;
+  width: 100%;
+  height: ${(props) => props.height || "100%"};
+  src: ${(props) => props.src};
+`;
+
 export default {};

@@ -2,12 +2,13 @@ import { useTranslation } from "react-i18next";
 import CategoryCard from "./CategoryCard";
 import { Category, IconName } from "./types";
 import { CategoriesContainer } from "../styled/containers";
-import useResponsive from "../../hooks/useResponsive";
-import { screenSizeThresholds } from "../../config/constants";
 import { PaginatedCards } from "../core/paginatedCards";
+import { ScreenTypes } from "../../config/types";
+import useScreenType from "../../hooks/useScreenType";
 
 function Categories() {
-  const isMobile = useResponsive(screenSizeThresholds.tablet);
+  const screenType = useScreenType();
+
   const { t } = useTranslation();
 
   const categories: Category[] = [
@@ -58,7 +59,7 @@ function Categories() {
 
   return (
     <CategoriesContainer id="categories-container">
-      {isMobile ? (
+      {screenType === ScreenTypes.MOBILE ? (
         <PaginatedCards
           cards={cards}
           arrowButtonColor="orchid-dark"
