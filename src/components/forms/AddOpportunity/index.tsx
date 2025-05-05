@@ -164,9 +164,13 @@ export default function AddOpportunity() {
               }
               return undefined;
             }}
-            onChangeAsyncValidator={({ value }) =>
-              validateRACEmail(value as string, t("form.error.badEmail"))
-            }
+            onChangeAsyncValidator={({ value }) => {
+              return Promise.resolve(undefined);
+              return validateRACEmail(
+                value as string,
+                t("form.error.badEmail"),
+              );
+            }}
           />
           <SimpleInputField<OpportunityData>
             name="fullName"
@@ -428,9 +432,7 @@ export default function AddOpportunity() {
                         return t("form.error.required");
                       }
                       if (Number.isNaN(getDate(value as string).getTime())) {
-                        return t(
-                          "form.addOpportunity.fields.aaGroup.dateTime.error",
-                        );
+                        return t("form.error.badTime");
                       }
                       const difference =
                         getDate(value as string).valueOf() - Date.now();
@@ -634,16 +636,29 @@ export default function AddOpportunity() {
                   <formOpportunity.Field
                     name="schedule"
                     validators={{
-                      onBlur: ({ value }) => {
-                        return isTimeSlotSelected(value)
+                      onBlur: ({ value, fieldApi }) => {
+                        setTimeout(
+                          () =>
+                            fieldApi.form.validateField(
+                              "onetimeDateTime",
+                              "change",
+                            ),
+                          0,
+                        );
+                        const isDateTime =
+                          !!fieldApi.form.getFieldValue("onetimeDateTime");
+                        return isTimeSlotSelected(value) || isDateTime
                           ? undefined
-                          : t("form.error.availability");
+                          : t(
+                              "form.addOpportunity.fields.voGroup.schedule.error",
+                            );
                       },
+                      onChangeListenTo: ["onetimeDateTime"],
                     }}
                   >
                     {(field) => {
                       return (
-                        <fieldset>
+                        <fieldset className="form-schedule">
                           <HeaderWithHelp
                             textHelp={t(
                               "form.addOpportunity.fields.voGroup.schedule.helpText",
@@ -725,8 +740,58 @@ export default function AddOpportunity() {
                                   </div>
                                 );
                               })}
-                            <FieldInfo field={field} />
                           </div>
+                          <h6>
+                            <i>
+                              {t(
+                                "form.addOpportunity.fields.voGroup.schedule.or",
+                              ).toUpperCase()}
+                            </i>
+                          </h6>
+                          <SimpleInputField<OpportunityData>
+                            name="onetimeDateTime"
+                            FieldTag={formOpportunity.Field}
+                            label={t(
+                              "form.addOpportunity.fields.voGroup.schedule.oneTimeLabel",
+                            )}
+                            inputType="datetime-local"
+                            validators={{
+                              onChange: ({ value, fieldApi }) => {
+                                setTimeout(
+                                  () =>
+                                    fieldApi.form.validateField(
+                                      "schedule",
+                                      "blur",
+                                    ),
+                                  0,
+                                );
+                                if (
+                                  !value &&
+                                  !isTimeSlotSelected(
+                                    fieldApi.form.getFieldValue("schedule"),
+                                  )
+                                ) {
+                                  return t(
+                                    "form.addOpportunity.fields.voGroup.schedule.error",
+                                  );
+                                }
+                                if (
+                                  value &&
+                                  Number.isNaN(
+                                    getDate(value as string).getTime(),
+                                  )
+                                ) {
+                                  return t("form.error.badTime");
+                                }
+                                return undefined;
+                              },
+                              onChangeListenTo: ["schedule"],
+                            }}
+                            onFocus={() => {
+                              setTimeout(field.handleBlur, 0);
+                            }}
+                          />
+                          <FieldInfo field={field} />
                         </fieldset>
                       );
                     }}
