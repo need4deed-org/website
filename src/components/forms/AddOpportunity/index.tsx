@@ -165,7 +165,6 @@ export default function AddOpportunity() {
               return undefined;
             }}
             onChangeAsyncValidator={({ value }) => {
-              return Promise.resolve(undefined);
               return validateRACEmail(
                 value as string,
                 t("form.error.badEmail"),
