@@ -296,7 +296,7 @@
     "greeting": {
       "title": "Begleitung von Geflüchteten zu Terminen",
       "invite1": "Ein interaktiver Workshop",
-      "host": "Mit Peyvand Darvish (DE)",
+      "host": "Mit Peyvand (DE)",
       "registration1": "Anmeldung",
       "registration2": "Jetz anmelden"
     },
@@ -515,6 +515,19 @@
     }
   },
   "homepage": {
+    "heroSection": {
+      "menuItems": {
+        "about": "ÜBER",
+        "volunteeringOpportunities": "ALLGEMEINE ENGAGEMENTMÖGLICHKEITEN MIT GEFLÜCHTETEN",
+        "events": "VERANSTALTUNGEN"
+      },
+      "content": {
+        "heroText": "Bedarfsorientierte, ehrenamtliche Unterstützung für Flüchtlinge in Berlin",
+        "heroSupportingText": "Wir verbinden Freiwillige mit Flüchtlingsunterkünften in Not",
+        "buttonJoinVolunteer": "Als Freiwilliger mitmachen",
+        "buttonJoinRefugeeCenter": "Als Flüchtlingsunterkunft mitmachen"
+      }
+    },
     "volunteeringCategories": {
       "header": "Engagementmöglichkeiten",
       "headerParagraph": "Wir bieten verschiedene Arten von ehrenamtlichen Tätigkeiten an, entweder regelmäßig oder gelegentlich.",

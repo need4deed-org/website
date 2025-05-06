@@ -143,3 +143,9 @@ export type EventDataType =
   | { events: EventComponentInfo[] };
 
 export type EventPropType = { eventData: EventDataType } | object;
+
+export enum ScreenTypes {
+  MOBILE = "mobile",
+  TABLET = "tablet",
+  DESKTOP = "desktop",
+}

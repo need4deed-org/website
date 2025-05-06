@@ -7,6 +7,7 @@
   "bas2022": "BAS (2022)",
   "formLink": "https://forms.gle/XWnU4znoAFaU9HfW9",
   "accompanyingVolunteering": "Accompanying Volunteering",
+
   "CookieConsentBanner": {
     "message": "This website uses Google Analytics. By accepting, you help us understand how visitors interact with our website.",
     "decline": "Decline",
@@ -326,7 +327,7 @@
     "greeting": {
       "title": "Accompanying Refugees to Appointments",
       "invite1": "An interactive workshop",
-      "host": "With Peyvand Darvish (DE)",
+      "host": "With Peyvand (DE)",
       "registration1": "Registration",
       "registration2": "Register now"
     },
@@ -549,6 +550,19 @@
     }
   },
   "homepage": {
+    "heroSection": {
+      "menuItems": {
+        "about": "ABOUT",
+        "volunteeringOpportunities": "VOLUNTEERING OPPORTUNITIES",
+        "events": "EVENTS"
+      },
+      "content": {
+        "heroText": "Need based voluntary support for refugees in Berlin",
+        "heroSupportingText": "We connect volunteers to refugee accommodation centers in need",
+        "buttonJoinVolunteer": "Join as a volunteer",
+        "buttonJoinRefugeeCenter": "Join as a refugee centre"
+      }
+    },
     "volunteeringCategories": {
       "header": "Ways you can volunteer",
       "headerParagraph": "We offer various types of volunteer opportunities with refugee accommodation centers, either on a continuous or occasional basis.",
