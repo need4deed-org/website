@@ -271,8 +271,8 @@
             "header": "Schedule",
             "helpText": "Please pick time slots or one-time event date for volunteering.",
             "or": "or",
-            "oneTimeLabel": "One-time event date (YYYY-MM-DD HH:MM)",
-            "error": "One-time event date or schedule is required.",
+            "oneTimeLabel": "Event date (YYYY-MM-DD HH:MM)",
+            "error": "Event date or schedule is required.",
             "errorBoth": "Please select either schedule or event date."
           },
           "skills": {

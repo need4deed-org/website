@@ -267,8 +267,8 @@
             "helpText": "Bitte wählen Sie Zeitfenster für die Freiwilligenarbeit aus.",
             "or": "oder",
             "oneTimeLabel": "Einmaliges Veranstaltungsdatum",
-            "error": "Einmaliges Veranstaltungsdatum oder Zeitplan erforderlich.",
-            "errorBoth": "Bitte wählen Sie entweder den Zeitplan oder das Veranstaltungsdatum aus."
+            "error": "Veranstaltungsdatum oder Zeitplan erforderlich",
+            "errorBoth": "Bitte wähle entweder den Zeitplan oder das Veranstaltungsdatum aus"
           },
           "skills": {
             "header": "Fähigkeiten",
