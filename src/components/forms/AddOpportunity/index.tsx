@@ -28,6 +28,7 @@ import {
   getScheduleState,
   getTickMark,
   getTimeslotTitle,
+  isSelected,
   isTimeSlotSelected,
   isValidPLZ,
   parseFormStateDTOOpportunity,
@@ -164,9 +165,12 @@ export default function AddOpportunity() {
               }
               return undefined;
             }}
-            onChangeAsyncValidator={({ value }) =>
-              validateRACEmail(value as string, t("form.error.badEmail"))
-            }
+            onChangeAsyncValidator={({ value }) => {
+              return validateRACEmail(
+                value as string,
+                t("form.error.badEmail"),
+              );
+            }}
           />
           <SimpleInputField<OpportunityData>
             name="fullName"
@@ -260,9 +264,7 @@ export default function AddOpportunity() {
                     name="activitiesAccompanying"
                     validators={{
                       onBlur: ({ value }) =>
-                        value.some(({ selected }) => selected)
-                          ? undefined
-                          : t("form.error.required"),
+                        isSelected(value, t("form.error.required")),
                     }}
                   >
                     {(field) => {
@@ -338,9 +340,7 @@ export default function AddOpportunity() {
                         name="languages"
                         validators={{
                           onBlur: ({ value }) => {
-                            return value.some(({ selected }) => selected)
-                              ? undefined
-                              : t("form.error.language");
+                            return isSelected(value, t("form.error.language"));
                           },
                         }}
                       >
@@ -428,9 +428,7 @@ export default function AddOpportunity() {
                         return t("form.error.required");
                       }
                       if (Number.isNaN(getDate(value as string).getTime())) {
-                        return t(
-                          "form.addOpportunity.fields.aaGroup.dateTime.error",
-                        );
+                        return t("form.error.badTime");
                       }
                       const difference =
                         getDate(value as string).valueOf() - Date.now();
@@ -492,9 +490,7 @@ export default function AddOpportunity() {
                     name="locations"
                     validators={{
                       onBlur: ({ value }) =>
-                        value.some(({ selected }) => selected)
-                          ? undefined
-                          : t("form.error.location"),
+                        isSelected(value, t("form.error.location")),
                     }}
                   >
                     {(field) => {
@@ -529,9 +525,7 @@ export default function AddOpportunity() {
                     name="activities"
                     validators={{
                       onBlur: ({ value }) =>
-                        value.some(({ selected }) => selected)
-                          ? undefined
-                          : t("form.error.activity"),
+                        isSelected(value, t("form.error.activity")),
                     }}
                   >
                     {(field) => {
@@ -566,9 +560,7 @@ export default function AddOpportunity() {
                     name="languages"
                     validators={{
                       onBlur: ({ value }) =>
-                        value.some(({ selected }) => selected)
-                          ? undefined
-                          : t("form.error.language"),
+                        isSelected(value, t("form.error.language")),
                     }}
                   >
                     {(field) => {
@@ -634,16 +626,35 @@ export default function AddOpportunity() {
                   <formOpportunity.Field
                     name="schedule"
                     validators={{
-                      onBlur: ({ value }) => {
-                        return isTimeSlotSelected(value)
-                          ? undefined
-                          : t("form.error.availability");
+                      onBlur: ({ value, fieldApi }) => {
+                        setTimeout(
+                          () =>
+                            fieldApi.form.validateField(
+                              "onetimeDateTime",
+                              "change",
+                            ),
+                          0,
+                        );
+                        const isDateTime =
+                          !!fieldApi.form.getFieldValue("onetimeDateTime");
+                        const isScheduleEmpty = !isTimeSlotSelected(value);
+                        if (!isScheduleEmpty && isDateTime)
+                          return t(
+                            "form.addOpportunity.fields.voGroup.schedule.errorBoth",
+                          );
+                        if (isScheduleEmpty && !isDateTime)
+                          return t(
+                            "form.addOpportunity.fields.voGroup.schedule.error",
+                          );
+
+                        return undefined;
                       },
+                      onChangeListenTo: ["onetimeDateTime"],
                     }}
                   >
                     {(field) => {
                       return (
-                        <fieldset>
+                        <fieldset className="form-schedule">
                           <HeaderWithHelp
                             textHelp={t(
                               "form.addOpportunity.fields.voGroup.schedule.helpText",
@@ -725,8 +736,58 @@ export default function AddOpportunity() {
                                   </div>
                                 );
                               })}
-                            <FieldInfo field={field} />
                           </div>
+                          <h6>
+                            <i>
+                              {t(
+                                "form.addOpportunity.fields.voGroup.schedule.or",
+                              ).toUpperCase()}
+                            </i>
+                          </h6>
+                          <SimpleInputField<OpportunityData>
+                            name="onetimeDateTime"
+                            FieldTag={formOpportunity.Field}
+                            label={t(
+                              "form.addOpportunity.fields.voGroup.schedule.oneTimeLabel",
+                            )}
+                            inputType="datetime-local"
+                            validators={{
+                              onChange: ({ value, fieldApi }) => {
+                                setTimeout(
+                                  () =>
+                                    fieldApi.form.validateField(
+                                      "schedule",
+                                      "blur",
+                                    ),
+                                  0,
+                                );
+                                if (
+                                  !value &&
+                                  !isTimeSlotSelected(
+                                    fieldApi.form.getFieldValue("schedule"),
+                                  )
+                                ) {
+                                  return t(
+                                    "form.addOpportunity.fields.voGroup.schedule.error",
+                                  );
+                                }
+                                if (
+                                  value &&
+                                  Number.isNaN(
+                                    getDate(value as string).getTime(),
+                                  )
+                                ) {
+                                  return t("form.error.badTime");
+                                }
+                                return undefined;
+                              },
+                              onChangeListenTo: ["schedule"],
+                            }}
+                            onFocus={() => {
+                              setTimeout(field.handleBlur, 0);
+                            }}
+                          />
+                          <FieldInfo field={field} />
                         </fieldset>
                       );
                     }}

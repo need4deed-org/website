@@ -50,7 +50,7 @@
 }
 
 .form-form-field input[type="datetime-local"] {
-  letter-spacing: .12rem;
+  letter-spacing: 0.12rem;
   text-transform: uppercase;
   background: var(--n4d-neutral-900);
   -webkit-appearance: none;
@@ -119,6 +119,12 @@
   gap: 0.3rem;
 }
 
+.form-schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
 .form-table {
   display: flex;
   flex-direction: column;
@@ -128,14 +134,13 @@
 .form-table-row {
   display: grid;
   grid-template-columns: 30% repeat(4, 17.5%);
-  border-nbottom: solid 1px var(--n4d-neutral-800);
 }
 
-.form-table div:nth-last-child(2) > span:nth-child(2) {
+.form-table div:nth-last-child(1) > span:nth-child(2) {
   grid-column: 2 / 4;
 }
 
-.form-table div:nth-last-child(2) > span:nth-child(3) {
+.form-table div:nth-last-child(1) > span:nth-child(3) {
   grid-column: 4 / 6;
 }
 
@@ -236,6 +241,10 @@
   gap: 2.5rem;
   padding: 2rem 1rem 1rem;
   border: solid 1px var(--n4d-neutral-700);
+}
+
+.form-field-group.nested-fieldset {
+  gap: 1rem;
 }
 
 .form-field-group b:first-child {

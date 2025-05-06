@@ -45,6 +45,7 @@
       "badEmail": "Keine gültige Betreiber E-Mail",
       "location": "Bitte wähle mindestens einen Standort aus",
       "availability": "Bitte wähle mindestens einen Zeitraum aus",
+      "badTime": "Falsches Datums- oder Zeitformat.",
       "labelErrors": "Fehler",
       "activity": "Bitte wähle mindestens eine Aktivität aus",
       "language": "Bitte wähle mindestens eine Sprache aus",
@@ -245,7 +246,6 @@
           },
           "dateTime": {
             "label": "Termin Datum und Uhrzeit",
-            "error": "Falsches Datums- oder Zeitformat.",
             "tooClose": "Der Termin muss frühestens nach 7 Werktagen stattfinden."
           },
           "address": { "label": "Terminanschrift" },
@@ -264,7 +264,11 @@
           },
           "schedule": {
             "header": "Zeitplan",
-            "helpText": "Bitte wählen Sie Zeitfenster für die Freiwilligenarbeit aus."
+            "helpText": "Bitte wählen Sie Zeitfenster für die Freiwilligenarbeit aus.",
+            "or": "oder",
+            "oneTimeLabel": "Einmaliges Veranstaltungsdatum",
+            "error": "Veranstaltungsdatum oder Zeitplan erforderlich",
+            "errorBoth": "Bitte wähle entweder den Zeitplan oder das Veranstaltungsdatum aus"
           },
           "skills": {
             "header": "Fähigkeiten",
