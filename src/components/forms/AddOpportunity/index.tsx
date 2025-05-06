@@ -28,6 +28,7 @@ import {
   getScheduleState,
   getTickMark,
   getTimeslotTitle,
+  isSelected,
   isTimeSlotSelected,
   isValidPLZ,
   parseFormStateDTOOpportunity,
@@ -263,9 +264,7 @@ export default function AddOpportunity() {
                     name="activitiesAccompanying"
                     validators={{
                       onBlur: ({ value }) =>
-                        value.some(({ selected }) => selected)
-                          ? undefined
-                          : t("form.error.required"),
+                        isSelected(value, t("form.error.required")),
                     }}
                   >
                     {(field) => {
@@ -341,9 +340,7 @@ export default function AddOpportunity() {
                         name="languages"
                         validators={{
                           onBlur: ({ value }) => {
-                            return value.some(({ selected }) => selected)
-                              ? undefined
-                              : t("form.error.language");
+                            return isSelected(value, t("form.error.language"));
                           },
                         }}
                       >
@@ -493,9 +490,7 @@ export default function AddOpportunity() {
                     name="locations"
                     validators={{
                       onBlur: ({ value }) =>
-                        value.some(({ selected }) => selected)
-                          ? undefined
-                          : t("form.error.location"),
+                        isSelected(value, t("form.error.location")),
                     }}
                   >
                     {(field) => {
@@ -530,9 +525,7 @@ export default function AddOpportunity() {
                     name="activities"
                     validators={{
                       onBlur: ({ value }) =>
-                        value.some(({ selected }) => selected)
-                          ? undefined
-                          : t("form.error.activity"),
+                        isSelected(value, t("form.error.activity")),
                     }}
                   >
                     {(field) => {
@@ -567,9 +560,7 @@ export default function AddOpportunity() {
                     name="languages"
                     validators={{
                       onBlur: ({ value }) =>
-                        value.some(({ selected }) => selected)
-                          ? undefined
-                          : t("form.error.language"),
+                        isSelected(value, t("form.error.language")),
                     }}
                   >
                     {(field) => {
@@ -646,11 +637,17 @@ export default function AddOpportunity() {
                         );
                         const isDateTime =
                           !!fieldApi.form.getFieldValue("onetimeDateTime");
-                        return isTimeSlotSelected(value) || isDateTime
-                          ? undefined
-                          : t(
-                              "form.addOpportunity.fields.voGroup.schedule.error",
-                            );
+                        const isScheduleEmpty = !isTimeSlotSelected(value);
+                        if (!isScheduleEmpty && isDateTime)
+                          return t(
+                            "form.addOpportunity.fields.voGroup.schedule.errorBoth",
+                          );
+                        if (isScheduleEmpty && !isDateTime)
+                          return t(
+                            "form.addOpportunity.fields.voGroup.schedule.error",
+                          );
+
+                        return undefined;
                       },
                       onChangeListenTo: ["onetimeDateTime"],
                     }}
