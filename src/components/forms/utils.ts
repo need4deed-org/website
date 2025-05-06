@@ -206,3 +206,10 @@ export function isTimeSlotSelected(state: Availability) {
     .flat()
     .some(({ selected }) => selected);
 }
+
+export function isSelected<T extends { selected: boolean }>(
+  items: T[],
+  errorMsg: string,
+) {
+  return items.some(({ selected }) => selected) ? undefined : errorMsg;
+}
