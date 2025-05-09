@@ -94,6 +94,13 @@
       },
       "thanks": "Thank you for choosing",
       "reset": "Reset",
+      "modal": {
+        "header": "Become a Volunteer",
+        "continue": "continue registering",
+        "notify": "notify coordinator about my intentions",
+        "already": "Already a volunteer?\nCopy this and send it to:",
+        "copied": "Copied"
+      },
       "fields": {
         "name": { "label": "Name" },
         "email": { "label": "E-mail" },
