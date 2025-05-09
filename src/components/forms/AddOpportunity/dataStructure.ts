@@ -25,6 +25,7 @@ export interface OpportunityData {
   aaInformation: string;
   locations: Selected[];
   schedule: Availability;
+  onetimeDateTime?: string;
   activities: Selected[];
   skills: Selected[];
   numberVolunteers: string;

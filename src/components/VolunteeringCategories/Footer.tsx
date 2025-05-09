@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <BaseFooterContainer id="footer-container">
       <Button
-        onClick={() => {}}
+        onClick={() => {}} // TODO: click handler will be implemented later
         text={t("homepage.volunteeringCategories.footerButton")}
       />
     </BaseFooterContainer>

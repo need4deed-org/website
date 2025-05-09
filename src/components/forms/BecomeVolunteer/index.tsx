@@ -10,6 +10,7 @@ import useList from "../../../hooks/api/useList";
 import usePostRequest from "../../../hooks/api/usePostRequest";
 import { getImageUrl } from "../../../utils/index";
 import Announcement from "../../Announcement";
+import ModalWindow from "../../core/Modal";
 import UploadIcon from "../../svg/Upload";
 import WithParentRef from "../../WithParentRef";
 import FieldInfo from "../FieldInfo";
@@ -18,7 +19,7 @@ import "../index.css";
 import MultipleCheckBoxInputsWithMore from "../MultipleCheckBoxInputsWithMore";
 import MultipleRadioInputsWithMore from "../MultipleRadioInputsWithMore";
 import SimpleInputField from "../SimpleInputField";
-import { ListsOfOptions } from "../types";
+import { ListsOfOptions, OpportunityInfo } from "../types";
 import {
   areLanguagesRepeated,
   getAllSelectedFalse,
@@ -30,6 +31,7 @@ import {
   parseFormStateDTOVolunteer,
 } from "../utils";
 import { VolunteerData, VolunteerParsedData } from "./dataStructure";
+import FillOrNotify from "./FillOrNotify";
 
 const thankYou = "?pointer=form.becomeVolunteer.thankYou";
 const somethingWrong = "form.becomeVolunteer.somethingWrong";
@@ -47,16 +49,18 @@ export default function BecomeVolunteer() {
     Record<string, string | string[]>
   >({ url: `${urlApi}/volunteer/` });
 
-  const opportunity = {
-    id: opportunityParams.get("id"),
-    title: opportunityParams.get("title"),
+  const opportunity: OpportunityInfo = {
+    id: opportunityParams.get("id") || "",
+    title: opportunityParams.get("title") || "",
   };
+
+  const [showModal, setShowModal] = useState(!!opportunity.id);
 
   const languages = getAllSelectedFalse(useList(ListsOfOptions.LANGUAGES));
 
   const formVolunteer = useForm<VolunteerData>({
     defaultValues: {
-      opportunityId: opportunity.id ?? "",
+      opportunityId: opportunity.id,
       name: "",
       email: "",
       phone: "",
@@ -95,6 +99,17 @@ export default function BecomeVolunteer() {
       }
     },
   });
+
+  if (showModal) {
+    return (
+      <ModalWindow>
+        <FillOrNotify
+          close={() => setShowModal(false)}
+          opportunity={opportunity}
+        />
+      </ModalWindow>
+    );
+  }
 
   if (showErrorAnnouncement) {
     return <Announcement copies={somethingWrong} />;

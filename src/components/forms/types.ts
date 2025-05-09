@@ -61,3 +61,8 @@ export type Availability = Array<{
   weekday: number;
   timeSlots: Selected[];
 }>;
+
+export interface OpportunityInfo {
+  id: string;
+  title: string;
+}
