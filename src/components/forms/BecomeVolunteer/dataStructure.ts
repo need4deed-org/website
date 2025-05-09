@@ -52,3 +52,8 @@ export interface VolunteerParsedData {
   comments: string;
   language: Lang;
 }
+
+export interface VolunteerContact {
+  email: string;
+  phone: string;
+}
