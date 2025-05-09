@@ -23,14 +23,14 @@ export default function FillOrNotify({ close, opportunity }: Props) {
         type="button"
         onClick={window.close}
       >
-        <Close width="2rem" fill="gray" />
+        <Close className="modal-close" />
       </button>
       <h1>{t("form.becomeVolunteer.modal.header")}</h1>
       <p>
-        {t("form.becomeVolunteer.modal.already")} <b>volunteer@need4deed.org</b>{" "}
+        {t("form.becomeVolunteer.modal.already")} <b>volunteer@need4deed.org</b>
       </p>
-      <p className="modal-copy-text">
-        {`${[opportunity.title, opportunity.title, opportunity.title, opportunity.title].join(", ")}`}{" "}
+      <div className="modal-copy-text">
+        <p>{`${opportunity.title}`} </p>
         <button
           className="btn upper-right-corner"
           type="button"
@@ -43,12 +43,15 @@ export default function FillOrNotify({ close, opportunity }: Props) {
           }}
         >
           {isCopied ? (
-            <span> {t("form.becomeVolunteer.modal.copied")}</span>
+            <span className="modal-copied">
+              {" "}
+              {t("form.becomeVolunteer.modal.copied")}
+            </span>
           ) : (
-            <Copy className="" width="1rem" fill="gray" />
+            <Copy className="modal-copy" />
           )}
         </button>
-      </p>
+      </div>
       <button className="btn n4d-cta" type="button" onClick={close}>
         {t("form.becomeVolunteer.modal.continue").toUpperCase()}
       </button>
