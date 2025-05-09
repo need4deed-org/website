@@ -10,6 +10,7 @@ const StyledButton = styled.button`
   padding: var(--button-padding);
   border-radius: var(--button-border-radius);
   background-color: var(--color-aubergine);
+  border: none;
 `;
 
 interface Props {
