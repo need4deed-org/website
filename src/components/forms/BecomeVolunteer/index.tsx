@@ -30,11 +30,7 @@ import {
   isValidPLZ,
   parseFormStateDTOVolunteer,
 } from "../utils";
-import {
-  VolunteerContact,
-  VolunteerData,
-  VolunteerParsedData,
-} from "./dataStructure";
+import { VolunteerData, VolunteerParsedData } from "./dataStructure";
 import FillOrNotify from "./FillOrNotify";
 
 const thankYou = "?pointer=form.becomeVolunteer.thankYou";
@@ -42,10 +38,6 @@ const somethingWrong = "form.becomeVolunteer.somethingWrong";
 
 export default function BecomeVolunteer() {
   const [showErrorAnnouncement, setShowErrorAnnouncement] = useState(false);
-  const [volunteerContact, setVolunteerContact] = useState<VolunteerContact>({
-    email: "",
-    phone: "",
-  });
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
   const { lng } = useParams();
@@ -70,8 +62,8 @@ export default function BecomeVolunteer() {
     defaultValues: {
       opportunityId: opportunity.id,
       name: "",
-      email: volunteerContact.email,
-      phone: volunteerContact.phone,
+      email: "",
+      phone: "",
       postcode: "",
       locations: getAllSelectedFalse(useList(ListsOfOptions.LOCATIONS)),
       availability: getScheduleState(),
@@ -114,7 +106,6 @@ export default function BecomeVolunteer() {
         <FillOrNotify
           close={() => setShowModal(false)}
           opportunity={opportunity}
-          setVolunteerContact={setVolunteerContact}
         />
       </ModalWindow>
     );
