@@ -16,11 +16,9 @@ interface BackgroundImgProps {
   height?: string;
 }
 
-export const BackgroundImg = styled.img<BackgroundImgProps>`
-  display: block;
+export const BackgroundImg = styled.div<BackgroundImgProps>`
   width: 100%;
   height: ${(props) => props.height || "100%"};
-  src: ${(props) => props.src};
+  background: ${(props) => `url(${props.src}) no-repeat center center`};
+  background-size: cover;
 `;
-
-export default {};
