@@ -282,7 +282,7 @@
   fill: var(--n4d-neutral-200);
 }
 
-.modal-form-container {
+.modal-container {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -293,7 +293,7 @@
   background: var(--n4d-neutral-900);
 }
 
-.modal-form-container p {
+.modal-container p {
   margin: 0;
   padding: 0;
 }
@@ -308,14 +308,14 @@
   font-size: 0.9rem;
   font-family: var(--n4d-font-mono);
   font-weight: 400;
-  line-height: 1.5;
   white-space: pre-wrap;
+  text-align: start;
 }
 
 .upper-right-corner {
   position: absolute;
   padding: 0;
-  margin: 1rem;
+  margin: 0.5rem;
   top: 0;
   right: 0;
 }
@@ -331,7 +331,7 @@
   .form-container-header img {
     height: 1.3rem;
   }
-  .modal-form-container {
+  .modal-container {
     width: 90vw;
     padding: 2rem 1rem;
   }
