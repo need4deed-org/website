@@ -76,6 +76,13 @@
       },
       "thanks": "Danke, dass du dich entschieden hast",
       "reset": "Zurücksetzen",
+      "modal": {
+        "header": "Werde Freiwilliger",
+        "continue": "weiter registrieren",
+        "notify": "Koordinator über meine Absichten informieren",
+        "already": "Sind Sie bereits Freiwilliger?\nKopieren Sie dies und senden Sie es an:",
+        "copied": "Kopiert"
+      },
       "fields": {
         "name": {
           "label": "Name"
