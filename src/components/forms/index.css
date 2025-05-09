@@ -282,6 +282,44 @@
   fill: var(--n4d-neutral-200);
 }
 
+.modal-form-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 60ch;
+  padding: 4rem;
+  border-radius: 0.5rem;
+  background: var(--n4d-neutral-900);
+}
+
+.modal-form-container p {
+  margin: 0;
+  padding: 0;
+}
+
+.modal-copy-text {
+  position: relative;
+  outline: solid 1px var(--n4d-neutral-500);
+  padding: 0.5rem !important;
+  border-radius: 0.3rem;
+  background: var(--n4d-neutral-800);
+  color: var(--n4d-neutral-200);
+  font-size: 0.9rem;
+  font-family: var(--n4d-font-mono);
+  font-weight: 400;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.upper-right-corner {
+  position: absolute;
+  padding: 0;
+  margin: 1rem;
+  top: 0;
+  right: 0;
+}
+
 @media (max-width: 768px) {
   .form-container-header h1 {
     display: block;
@@ -292,5 +330,9 @@
   }
   .form-container-header img {
     height: 1.3rem;
+  }
+  .modal-form-container {
+    width: 90vw;
+    padding: 2rem 1rem;
   }
 }
