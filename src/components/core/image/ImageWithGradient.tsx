@@ -10,7 +10,7 @@ interface Props {
 export function ImageWithGradient({ imageUrl, gradientClass, height }: Props) {
   return (
     <div>
-      <BackgroundImg src={imageUrl} height={height} alt="background-image" />
+      <BackgroundImg src={imageUrl} height={height} />
       <div className={`gradient-overlay ${gradientClass}`} />
     </div>
   );
