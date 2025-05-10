@@ -4,6 +4,7 @@ import {
   FieldComponent,
   FieldValidateAsyncFn,
   FieldValidateFn,
+  FieldValidators,
 } from "@tanstack/react-form";
 
 import { InputType } from "../../config/types";
@@ -19,6 +20,8 @@ interface Props<T> {
   onBlurValidator?: FieldValidateFn<T, DeepKeys<T>>;
   onChangeAsyncValidator?: FieldValidateAsyncFn<T, DeepKeys<T>>;
   onAsyncDebounceMs?: number;
+  validators?: FieldValidators<T, DeepKeys<T>>;
+  onFocus?: (e: React.FocusEvent<HTMLElement>) => void;
 }
 
 export default function SimpleInputField<T>({
@@ -31,34 +34,42 @@ export default function SimpleInputField<T>({
   onBlurValidator,
   onChangeAsyncValidator,
   onAsyncDebounceMs = 500,
+  validators,
+  onFocus,
 }: Props<T>) {
   return (
     <FieldTag
       name={name}
-      validators={{
-        ...(onChangeValidator
-          ? {
-              onChange: onChangeValidator,
-            }
-          : {}),
-        ...(onBlurValidator
-          ? {
-              onBlur: onBlurValidator,
-            }
-          : {}),
-        ...(onChangeAsyncValidator
-          ? {
-              onChangeAsync: onChangeAsyncValidator,
-              onChangeAsyncDebounceMs: onAsyncDebounceMs,
-            }
-          : {}),
-      }}
+      validators={
+        validators || {
+          ...(onChangeValidator
+            ? {
+                onChange: onChangeValidator,
+              }
+            : {}),
+          ...(onBlurValidator
+            ? {
+                onBlur: onBlurValidator,
+              }
+            : {}),
+          ...(onChangeAsyncValidator
+            ? {
+                onChangeAsync: onChangeAsyncValidator,
+                onChangeAsyncDebounceMs: onAsyncDebounceMs,
+              }
+            : {}),
+        }
+      }
     >
       {(field) => {
         return (
           <>
             {infoMsg && <i className="simple-input-form-info">{infoMsg}</i>}
-            <label htmlFor={`${field.name}`} className="form-form-field">
+            <label
+              htmlFor={`${field.name}`}
+              className="form-form-field"
+              onFocus={onFocus}
+            >
               <span>{label}</span>
               <input
                 id={`${field.name}`}

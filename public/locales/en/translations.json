@@ -63,6 +63,7 @@
       "badEmail": "Bad email",
       "location": "Please pick at least one location",
       "availability": "Please pick at least one time slot",
+      "badTime": "Bad date or time format",
       "labelErrors": "Errors",
       "number": "Please enter a number",
       "activity": "Please pick at least one activity",
@@ -93,6 +94,13 @@
       },
       "thanks": "Thank you for choosing",
       "reset": "Reset",
+      "modal": {
+        "header": "Become a Volunteer",
+        "continue": "continue registering",
+        "notify": "notify coordinator about my intentions",
+        "already": "Already a volunteer?\nCopy this and send it to:",
+        "copied": "Copied"
+      },
       "fields": {
         "name": { "label": "Name" },
         "email": { "label": "E-mail" },
@@ -250,7 +258,6 @@
           },
           "dateTime": {
             "label": "Appointment date and time (YYYY-MM-DD HH:MM)",
-            "error": "Wrong date or time format.",
             "tooClose": "The appointment must take place after 7 working days at the earliest."
           },
           "address": { "label": "Appointment Address" },
@@ -269,7 +276,11 @@
           },
           "schedule": {
             "header": "Schedule",
-            "helpText": "Please pick time slots for volunteering."
+            "helpText": "Please pick time slots or one-time event date for volunteering.",
+            "or": "or",
+            "oneTimeLabel": "Event date (YYYY-MM-DD HH:MM)",
+            "error": "Event date or schedule is required.",
+            "errorBoth": "Please select either schedule or event date."
           },
           "skills": {
             "header": "Skills",
