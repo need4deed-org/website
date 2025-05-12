@@ -181,6 +181,16 @@ html {
     --homepage-hero-section-content-hero-button-container-gap:16px;
     --homepage-hero-section-content-hero-button-container-flex-direction:column;
 
+    --homepage-rac-section-container-height: 720px;
+    --homepage-rac-section-content-container-gap: 80px;
+    --homepage-rac-section-content-headLine-container-gap:16px;
+    --homepage-rac-section-content-headLine2-fontWeight:700;
+    --homepage-rac-section-content-headLine2-fontSize:40px;
+    --homepage-rac-section-content-headLine2-lineheight:40px;
+    --homepage-rac-section-content-headLine2-letterSpacing:0.1px;
+    --homepage-rac-section-content-buttons-container-flex-direction:column;
+    --homepage-rac-section-content-buttons-container-gap:16px;
+
     --button-height: 64px;
     --button-width: auto;
     --button-padding: 12px 24px;
@@ -285,6 +295,15 @@ html {
     --homepage-hero-section-content-hero-button-container-gap:24px;
     --homepage-hero-section-content-hero-button-container-flex-direction:row;
 
+    --homepage-rac-section-container-height: 720px;
+    --homepage-rac-section-content-container-gap: 80px;
+    --homepage-rac-section-content-headLine-container-gap:24px;
+    --homepage-rac-section-content-headLine2-fontWeight:700;
+    --homepage-rac-section-content-headLine2-fontSize:48px;
+    --homepage-rac-section-content-headLine2-lineheight:48px;
+    --homepage-rac-section-content-headLine2-letterSpacing:0.1px;
+    --homepage-rac-section-content-buttons-container-flex-direction:row;
+    --homepage-rac-section-content-buttons-container-gap:16px;
 
     --button-height: 72px;
     --button-width: fit-content;
@@ -392,6 +411,16 @@ html {
     --homepage-hero-section-content-hero-supporting-text-lineheight:24px;
     --homepage-hero-section-content-hero-button-container-gap:24px;
     --homepage-hero-section-content-hero-button-container-flex-direction:row;
+
+    --homepage-rac-section-container-height: 720px;
+    --homepage-rac-section-content-container-gap: 80px;
+    --homepage-rac-section-content-headLine-container-gap:24px;
+    --homepage-rac-section-content-headLine2-fontWeight:700;
+    --homepage-rac-section-content-headLine2-fontSize:48px;
+    --homepage-rac-section-content-headLine2-lineheight:48px;
+    --homepage-rac-section-content-headLine2-letterSpacing:0.1px;
+    --homepage-rac-section-content-buttons-container-flex-direction:row;
+    --homepage-rac-section-content-buttons-container-gap:24px;
   
     --button-height: 72px;
     --button-width: fit-content;

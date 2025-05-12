@@ -595,6 +595,13 @@
     "testimonials": {
       "header": "TESTIMONIALS",
       "headerParagraph": "What Volunteers & Coordinators Say"
+    },
+    "racSection":{
+      "headLine1": "We support organizations",
+      "headLine2": "Do you work in a Refugee Accommodation Center?",
+      "buttonSupport": "Apply to receive voluntary support",
+      "buttonSupportMobile": "Apply to receive support",
+      "buttonHowItWorks": "How it works"
     }
   }
 }
