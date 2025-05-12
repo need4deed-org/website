@@ -50,7 +50,7 @@
 }
 
 .form-form-field input[type="datetime-local"] {
-  letter-spacing: .12rem;
+  letter-spacing: 0.12rem;
   text-transform: uppercase;
   background: var(--n4d-neutral-900);
   -webkit-appearance: none;
@@ -119,6 +119,12 @@
   gap: 0.3rem;
 }
 
+.form-schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
 .form-table {
   display: flex;
   flex-direction: column;
@@ -128,14 +134,13 @@
 .form-table-row {
   display: grid;
   grid-template-columns: 30% repeat(4, 17.5%);
-  border-nbottom: solid 1px var(--n4d-neutral-800);
 }
 
-.form-table div:nth-last-child(2) > span:nth-child(2) {
+.form-table div:nth-last-child(1) > span:nth-child(2) {
   grid-column: 2 / 4;
 }
 
-.form-table div:nth-last-child(2) > span:nth-child(3) {
+.form-table div:nth-last-child(1) > span:nth-child(3) {
   grid-column: 4 / 6;
 }
 
@@ -238,6 +243,10 @@
   border: solid 1px var(--n4d-neutral-700);
 }
 
+.form-field-group.nested-fieldset {
+  gap: 1rem;
+}
+
 .form-field-group b:first-child {
   position: absolute;
   top: -0.7rem;
@@ -273,6 +282,58 @@
   fill: var(--n4d-neutral-200);
 }
 
+.modal-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 60ch;
+  padding: 4rem;
+  border-radius: 0.5rem;
+  background: var(--n4d-neutral-900);
+}
+
+.modal-container p {
+  margin: 0;
+  padding: 0;
+}
+
+.modal-copy-text {
+  position: relative;
+  outline: solid 1px var(--n4d-neutral-500);
+  padding: 0.5rem 2rem 0.5rem 0.5rem !important;
+  border-radius: 0.3rem;
+  background: var(--n4d-neutral-800);
+  color: var(--n4d-neutral-200);
+  font-size: 0.9rem;
+  font-family: var(--n4d-font-mono);
+  font-weight: 400;
+  white-space: pre-wrap;
+  text-align: start;
+}
+
+.upper-right-corner {
+  position: absolute;
+  padding: 0;
+  margin: 0.5rem;
+  top: 0;
+  right: 0;
+}
+
+.modal-close {
+  width: 2rem;
+  fill: var(--n4d-neutral-500);
+}
+
+.modal-copy {
+  width: 1rem;
+  fill: var(--n4d-neutral-500);
+}
+
+.modal-copied {
+  color: var(--n4d-primary);
+}
+
 @media (max-width: 768px) {
   .form-container-header h1 {
     display: block;
@@ -283,5 +344,9 @@
   }
   .form-container-header img {
     height: 1.3rem;
+  }
+  .modal-container {
+    width: 90vw;
+    padding: 2rem 1rem;
   }
 }

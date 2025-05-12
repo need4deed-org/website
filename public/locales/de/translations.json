@@ -45,6 +45,7 @@
       "badEmail": "Keine gültige Betreiber E-Mail",
       "location": "Bitte wähle mindestens einen Standort aus",
       "availability": "Bitte wähle mindestens einen Zeitraum aus",
+      "badTime": "Falsches Datums- oder Zeitformat.",
       "labelErrors": "Fehler",
       "activity": "Bitte wähle mindestens eine Aktivität aus",
       "language": "Bitte wähle mindestens eine Sprache aus",
@@ -75,6 +76,13 @@
       },
       "thanks": "Danke, dass du dich entschieden hast",
       "reset": "Zurücksetzen",
+      "modal": {
+        "header": "Werde Freiwilliger",
+        "continue": "weiter registrieren",
+        "notify": "Koordinator über meine Absichten informieren",
+        "already": "Sind Sie bereits Freiwilliger?\nKopieren Sie dies und senden Sie es an:",
+        "copied": "Kopiert"
+      },
       "fields": {
         "name": {
           "label": "Name"
@@ -245,7 +253,6 @@
           },
           "dateTime": {
             "label": "Termin Datum und Uhrzeit",
-            "error": "Falsches Datums- oder Zeitformat.",
             "tooClose": "Der Termin muss frühestens nach 7 Werktagen stattfinden."
           },
           "address": { "label": "Terminanschrift" },
@@ -264,7 +271,11 @@
           },
           "schedule": {
             "header": "Zeitplan",
-            "helpText": "Bitte wählen Sie Zeitfenster für die Freiwilligenarbeit aus."
+            "helpText": "Bitte wählen Sie Zeitfenster für die Freiwilligenarbeit aus.",
+            "or": "oder",
+            "oneTimeLabel": "Einmaliges Veranstaltungsdatum",
+            "error": "Veranstaltungsdatum oder Zeitplan erforderlich",
+            "errorBoth": "Bitte wähle entweder den Zeitplan oder das Veranstaltungsdatum aus"
           },
           "skills": {
             "header": "Fähigkeiten",
@@ -288,7 +299,7 @@
     "greeting": {
       "title": "Begleitung von Geflüchteten zu Terminen",
       "invite1": "Ein interaktiver Workshop",
-      "host": "Mit Peyvand Darvish (DE)",
+      "host": "Mit Peyvand (DE)",
       "registration1": "Anmeldung",
       "registration2": "Jetz anmelden"
     },
@@ -507,6 +518,19 @@
     }
   },
   "homepage": {
+    "heroSection": {
+      "menuItems": {
+        "about": "ÜBER",
+        "volunteeringOpportunities": "ALLGEMEINE ENGAGEMENTMÖGLICHKEITEN MIT GEFLÜCHTETEN",
+        "events": "VERANSTALTUNGEN"
+      },
+      "content": {
+        "heroText": "Bedarfsorientierte, ehrenamtliche Unterstützung für Flüchtlinge in Berlin",
+        "heroSupportingText": "Wir verbinden Freiwillige mit Flüchtlingsunterkünften in Not",
+        "buttonJoinVolunteer": "Als Freiwilliger mitmachen",
+        "buttonJoinRefugeeCenter": "Als Flüchtlingsunterkunft mitmachen"
+      }
+    },
     "volunteeringCategories": {
       "header": "Engagementmöglichkeiten",
       "headerParagraph": "Wir bieten verschiedene Arten von ehrenamtlichen Tätigkeiten an, entweder regelmäßig oder gelegentlich.",

@@ -134,3 +134,9 @@ export interface Testimonial {
   translated_text: string;
   activities: string[];
 }
+
+export enum ScreenTypes {
+  MOBILE = "mobile",
+  TABLET = "tablet",
+  DESKTOP = "desktop",
+}
