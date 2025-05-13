@@ -296,6 +296,7 @@
 .modal-container p {
   margin: 0;
   padding: 0;
+  white-space: pre-wrap;
 }
 
 .modal-copy-text {
@@ -310,6 +311,10 @@
   font-weight: 400;
   white-space: pre-wrap;
   text-align: start;
+}
+
+.modal-copy-text svg {
+  margin-block-start: -0.4rem;
 }
 
 .upper-right-corner {
@@ -347,6 +352,7 @@
   }
   .modal-container {
     width: 90vw;
-    padding: 2rem 1rem;
+    padding: 3rem 1rem 2rem 1rem;
+    gap: 1rem;
   }
 }
