@@ -17,9 +17,9 @@ const RacSectionContainer = styled(OverlayingSectionContainer)`
 `;
 
 const imageNames: Record<ScreenTypes, string> = {
-  mobile: "hero_mobile.webp",
-  tablet: "hero_tablet.webp",
-  desktop: "new-design-hero.webp",
+  mobile: "rac-mobile.webp",
+  tablet: "rac-tablet.webp",
+  desktop: "new-design-rac.webp",
 };
 
 export function RacSection() {
