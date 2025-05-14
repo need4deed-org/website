@@ -1,7 +1,11 @@
 import styled from "styled-components";
 import { ButtonSpan } from "../../../styled/text";
 
-const StyledButton = styled.button`
+interface StyledButtonProps {
+  backgroundcolor?: string;
+}
+
+const StyledButton = styled.button<StyledButtonProps>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,19 +13,22 @@ const StyledButton = styled.button`
   height: var(--button-height);
   padding: var(--button-padding);
   border-radius: var(--button-border-radius);
-  background-color: var(--color-aubergine);
+  background-color: ${(props) =>
+    props.backgroundcolor || "var(--color-aubergine)"};
   border: none;
 `;
 
 interface Props {
   text: string;
   onClick: () => void;
+  backgroundcolor?: string;
+  textColor?: string;
 }
 
-export function Button({ text, onClick }: Props) {
+export function Button({ text, onClick, backgroundcolor, textColor }: Props) {
   return (
-    <StyledButton onClick={onClick}>
-      <ButtonSpan>{text}</ButtonSpan>
+    <StyledButton onClick={onClick} backgroundcolor={backgroundcolor}>
+      <ButtonSpan color={textColor}>{text}</ButtonSpan>
     </StyledButton>
   );
 }

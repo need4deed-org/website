@@ -1,19 +1,17 @@
 import styled from "styled-components";
 import { getImageUrl } from "../../utils";
 import { ImageWithGradient } from "../core/image";
-import { FullWidthContainer, SectionContainer } from "../styled/containers";
+import {
+  FullWidthContainer,
+  OverlayingSectionContainer,
+} from "../styled/containers";
 import Header from "./Header";
 import HeroContent from "./Content";
 import useScreenType from "../../hooks/useScreenType";
 import { ScreenTypes } from "../../config/types";
 
-const HeroSectionContainer = styled(SectionContainer)`
-  position: absolute;
-  width: 100%;
+const HeroSectionContainer = styled(OverlayingSectionContainer)`
   height: var(--homepage-hero-section-container-height);
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
   gap: var(--homepage-hero-section-container-gap);
 `;
 

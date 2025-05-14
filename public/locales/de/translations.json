@@ -556,6 +556,13 @@
       "schedule": "Zeitplan",
       "district": "Bezirk",
       "footerButton": "Alle Freiwilligenmöglichkeiten ansehen"
+    },
+    "racSection": {
+      "headLine1": "Wir unterstützen Organisationen",
+      "headLine2": "Arbeiten Sie in einer Unterkunft für Flüchtlinge?",
+      "buttonSupport": "Freiwillige Unterstützung beantragen",
+      "buttonSupportMobile": "Freiwillige Hilfe anfragen",
+      "buttonHowItWorks": "So funktioniert es"
     }
   }
 }
