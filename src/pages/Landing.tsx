@@ -3,6 +3,7 @@ import { VolunteeringCategoriesSection } from "../components/VolunteeringCategor
 import { VolunteeringOpportunitiesSection } from "../components/VolunteeringOpportunities";
 import { TestimonialsSection } from "../components/Testimonials";
 import { HeroSection } from "../components/HeroSection";
+import { FooterPartnersSection } from "../components/FooterPartners";
 
 export default function Landing() {
   return (
@@ -11,6 +12,7 @@ export default function Landing() {
       <VolunteeringCategoriesSection />
       <VolunteeringOpportunitiesSection />
       <TestimonialsSection />
+      <FooterPartnersSection />
     </AppContainer>
   );
 }
