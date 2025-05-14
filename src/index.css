@@ -198,6 +198,16 @@ html {
     --homepage-footer-partners-section-logo-eu-height: 120px;
     --homepage-footer-partners-section-logo-SchönebergHilft-width: 100px;
     --homepage-footer-partners-section-logo-SchönebergHilft-height: 100px;
+    
+    --homepage-rac-section-container-height: 720px;
+    --homepage-rac-section-content-container-gap: 80px;
+    --homepage-rac-section-content-headLine-container-gap:16px;
+    --homepage-rac-section-content-headLine2-fontWeight:700;
+    --homepage-rac-section-content-headLine2-fontSize:40px;
+    --homepage-rac-section-content-headLine2-lineheight:40px;
+    --homepage-rac-section-content-headLine2-letterSpacing:0.1px;
+    --homepage-rac-section-content-buttons-container-flex-direction:column;
+    --homepage-rac-section-content-buttons-container-gap:16px;
 
     --button-height: 64px;
     --button-width: auto;
@@ -323,6 +333,16 @@ html {
     --homepage-footer-partners-section-logo-eu-height: 180px;
     --homepage-footer-partners-section-logo-SchönebergHilft-width: 150px;
     --homepage-footer-partners-section-logo-SchönebergHilft-height: 150px;
+    
+    --homepage-rac-section-container-height: 720px;
+    --homepage-rac-section-content-container-gap: 80px;
+    --homepage-rac-section-content-headLine-container-gap:24px;
+    --homepage-rac-section-content-headLine2-fontWeight:700;
+    --homepage-rac-section-content-headLine2-fontSize:48px;
+    --homepage-rac-section-content-headLine2-lineheight:48px;
+    --homepage-rac-section-content-headLine2-letterSpacing:0.1px;
+    --homepage-rac-section-content-buttons-container-flex-direction:row;
+    --homepage-rac-section-content-buttons-container-gap:16px;
 
     --button-height: 72px;
     --button-width: fit-content;
@@ -447,6 +467,16 @@ html {
     --homepage-footer-partners-section-logo-SchönebergHilft-width: 150px;
     --homepage-footer-partners-section-logo-SchönebergHilft-height: 150px;
 
+    --homepage-rac-section-container-height: 720px;
+    --homepage-rac-section-content-container-gap: 80px;
+    --homepage-rac-section-content-headLine-container-gap:24px;
+    --homepage-rac-section-content-headLine2-fontWeight:700;
+    --homepage-rac-section-content-headLine2-fontSize:48px;
+    --homepage-rac-section-content-headLine2-lineheight:48px;
+    --homepage-rac-section-content-headLine2-letterSpacing:0.1px;
+    --homepage-rac-section-content-buttons-container-flex-direction:row;
+    --homepage-rac-section-content-buttons-container-gap:24px;
+  
     --button-height: 72px;
     --button-width: fit-content;
     --button-padding: 16px 36px;
