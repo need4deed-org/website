@@ -4,11 +4,15 @@ interface Props {
   height: string;
 }
 
-export default function N4DLogo({ fill = "#F7CDFF", height, width }: Props) {
+export default function N4DLogo({
+  fill = "var(--color-orchid)",
+  height,
+  width,
+}: Props) {
   return (
     <svg
-      width={width || "451"}
-      height={height || "244"}
+      width={width}
+      height={height}
       viewBox="0 0 451 244"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

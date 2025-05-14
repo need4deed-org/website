@@ -181,6 +181,24 @@ html {
     --homepage-hero-section-content-hero-button-container-gap:16px;
     --homepage-hero-section-content-hero-button-container-flex-direction:column;
 
+    --homepage-footer-partners-section-container-height: 870px;
+    --homepage-footer-partners-section-container-padding: 32px 20px;
+    --homepage-footer-partners-section-container-gap: 64px;
+    --homepage-footer-partners-section-partners-container-height: 443px;
+    --homepage-footer-partners-section-partners-container-flex-direction: column ;
+    --homepage-footer-partners-section-partners-container-justify-content: center;
+    --homepage-footer-partners-section-partners-container-gap: 48px;
+    --homepage-footer-partners-section-partners-frame-container-gap: 75px;
+    --homepage-footer-partners-section-partners-club-dialog-div-gap: 8px;
+    --homepage-footer-partners-section-logo-club-dialog-width: 200px;
+    --homepage-footer-partners-section-logo-club-dialog-height: 36px;
+    --homepage-footer-partners-section-logo-berlin-width: 112;
+    --homepage-footer-partners-section-logo-berlin-height: 120;
+    --homepage-footer-partners-section-logo-eu-width: 130px;
+    --homepage-footer-partners-section-logo-eu-height: 120px;
+    --homepage-footer-partners-section-logo-SchönebergHilft-width: 100px;
+    --homepage-footer-partners-section-logo-SchönebergHilft-height: 100px;
+    
     --homepage-rac-section-container-height: 720px;
     --homepage-rac-section-content-container-gap: 80px;
     --homepage-rac-section-content-headLine-container-gap:16px;
@@ -295,6 +313,27 @@ html {
     --homepage-hero-section-content-hero-button-container-gap:24px;
     --homepage-hero-section-content-hero-button-container-flex-direction:row;
 
+    --homepage-footer-partners-section-container-height: 800px;
+    --homepage-footer-partners-section-container-padding: 48px;
+    --homepage-footer-partners-section-container-gap: 96px;
+    --homepage-footer-partners-section-partners-container-height: 504px;
+    --homepage-footer-partners-section-partners-container-flex-direction: column ;
+    --homepage-footer-partners-section-partners-container-justify-content: center;
+    --homepage-footer-partners-section-partners-frame-container-height: 180px;
+    --homepage-footer-partners-section-partners-frame-container-gap-1: 160px;
+    --homepage-footer-partners-section-partners-frame-container-gap-2: 120px;
+    --homepage-footer-partners-section-partners-club-dialog-div-gap: 16px;
+    --homepage-footer-partners-section-logo-club-dialog-width: 16px;
+    --homepage-footer-partners-section-logo-club-dialog-height: 16px;
+    --homepage-footer-partners-section-logo-club-dialog-width: 316;
+    --homepage-footer-partners-section-logo-club-dialog-height: 58;
+    --homepage-footer-partners-section-logo-berlin-width: 170;
+    --homepage-footer-partners-section-logo-berlin-height: 180;
+    --homepage-footer-partners-section-logo-eu-width: 194px;
+    --homepage-footer-partners-section-logo-eu-height: 180px;
+    --homepage-footer-partners-section-logo-SchönebergHilft-width: 150px;
+    --homepage-footer-partners-section-logo-SchönebergHilft-height: 150px;
+    
     --homepage-rac-section-container-height: 720px;
     --homepage-rac-section-content-container-gap: 80px;
     --homepage-rac-section-content-headLine-container-gap:24px;
@@ -411,6 +450,22 @@ html {
     --homepage-hero-section-content-hero-supporting-text-lineheight:24px;
     --homepage-hero-section-content-hero-button-container-gap:24px;
     --homepage-hero-section-content-hero-button-container-flex-direction:row;
+
+    --homepage-footer-partners-section-container-height: 570px;
+    --homepage-footer-partners-section-container-padding: 64px 80px;
+    --homepage-footer-partners-section-container-gap: 128px;
+    --homepage-footer-partners-section-partners-container-height: 180px;
+    --homepage-footer-partners-section-partners-container-flex-direction: row ;
+    --homepage-footer-partners-section-partners-container-justify-content: space-between;
+    --homepage-footer-partners-section-partners-club-dialog-div-gap: 16px;
+    --homepage-footer-partners-section-logo-club-dialog-width: 316;
+    --homepage-footer-partners-section-logo-club-dialog-height: 58;
+    --homepage-footer-partners-section-logo-berlin-width: 170;
+    --homepage-footer-partners-section-logo-berlin-height: 180;
+    --homepage-footer-partners-section-logo-eu-width: 194px;
+    --homepage-footer-partners-section-logo-eu-height: 180px;
+    --homepage-footer-partners-section-logo-SchönebergHilft-width: 150px;
+    --homepage-footer-partners-section-logo-SchönebergHilft-height: 150px;
 
     --homepage-rac-section-container-height: 720px;
     --homepage-rac-section-content-container-gap: 80px;
