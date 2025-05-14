@@ -77,11 +77,11 @@
       "thanks": "Danke, dass du dich entschieden hast",
       "reset": "Zurücksetzen",
       "modal": {
-        "header": "Werde Freiwilliger",
-        "continue": "weiter registrieren",
-        "notify": "Koordinator über meine Absichten informieren",
-        "already": "Sind Sie bereits Freiwilliger?\nKopieren Sie dies und senden Sie es an:",
-        "copied": "Kopiert"
+        "continue": "Zur Registrierung",
+        "already": "Schon als Freiwilliger registriert?\nKopiere dies:",
+        "copied": "Kopiert",
+        "email": "Und sende es per E-Mail an:",
+        "number": "Oder via WhatsApp/Telegram an:"
       },
       "fields": {
         "name": {
@@ -556,6 +556,13 @@
       "schedule": "Zeitplan",
       "district": "Bezirk",
       "footerButton": "Alle Freiwilligenmöglichkeiten ansehen"
+    },
+    "racSection": {
+      "headLine1": "Wir unterstützen Organisationen",
+      "headLine2": "Arbeiten Sie in einer Unterkunft für Flüchtlinge?",
+      "buttonSupport": "Freiwillige Unterstützung beantragen",
+      "buttonSupportMobile": "Freiwillige Hilfe anfragen",
+      "buttonHowItWorks": "So funktioniert es"
     }
   }
 }

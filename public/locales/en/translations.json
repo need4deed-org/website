@@ -95,11 +95,11 @@
       "thanks": "Thank you for choosing",
       "reset": "Reset",
       "modal": {
-        "header": "Become a Volunteer",
-        "continue": "continue registering",
-        "notify": "notify coordinator about my intentions",
-        "already": "Already a volunteer?\nCopy this and send it to:",
-        "copied": "Copied"
+        "continue": "Click here to register",
+        "already": "Already registered as a volunteer?\nCopy this:",
+        "copied": "Copied",
+        "email": "And email it to:",
+        "number": "Or via WhatsApp/Telegram at"
       },
       "fields": {
         "name": { "label": "Name" },
@@ -595,6 +595,13 @@
     "testimonials": {
       "header": "TESTIMONIALS",
       "headerParagraph": "What Volunteers & Coordinators Say"
+    },
+    "racSection": {
+      "headLine1": "We support organizations",
+      "headLine2": "Do you work in a Refugee Accommodation Center?",
+      "buttonSupport": "Apply to receive voluntary support",
+      "buttonSupportMobile": "Apply to receive support",
+      "buttonHowItWorks": "How it works"
     }
   }
 }

@@ -27,6 +27,14 @@ export const SectionContainer = styled.div.attrs<ContainerProps>((props) => ({
   background-color: ${(props) => props["background-color"]};
 `;
 
+export const OverlayingSectionContainer = styled(SectionContainer)`
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+`;
+
 export const CategoriesContainer = styled.div.attrs<ContainerProps>(
   (props) => ({
     id: props.id,
