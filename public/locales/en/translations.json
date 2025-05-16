@@ -603,15 +603,14 @@
       "buttonSupportMobile": "Apply to receive support",
       "buttonHowItWorks": "How it works"
     },
-    "footer":{
-      "about":"ABOUT",
+    "footer": {
+      "about": "ABOUT",
       "resources": "RESOURCES",
       "faq": "FAQ",
-      "legalNotice":"Legal notice",
+      "legalNotice": "Legal notice",
       "privacy": "Privacy",
       "vpa": "Volunteer Participation Agreement",
-      "contact":"Contact"
+      "contact": "Contact"
     }
-
   }
 }
