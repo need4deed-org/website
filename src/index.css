@@ -198,6 +198,20 @@ html {
     --homepage-footer-partners-section-logo-eu-height: 120px;
     --homepage-footer-partners-section-logo-SchönebergHilft-width: 100px;
     --homepage-footer-partners-section-logo-SchönebergHilft-height: 100px;
+    --homepage-footer-partners-section-logo-n4d-width: 68px;
+    --homepage-footer-partners-section-logo-n4d-height: 90px;
+    --homepage-footer-partners-section-footer-container-height: 364px;
+    --homepage-footer-partners-section-footer-container-flex-direction: column ;
+    --homepage-footer-partners-section-footer-container-justify-content: space-between;
+    --homepage-footer-partners-section-contact-socials-container-flex-direction: column ;
+    --homepage-footer-partners-section-contact-socials-container-gap: 32px ;
+    --homepage-footer-partners-section-contact-container-gap: 10px ;
+    --homepage-footer-partners-section-socials-container-gap: 20px ;
+    --homepage-footer-partners-section-footer-links-container-width:310px ;
+    --homepage-footer-partners-section-footer-frame-container-gap: 16px ;
+    --homepage-footer-partners-section-p-fontWeight-large:500 ;
+    --homepage-footer-partners-section-p-fontWeight-small:400 ;
+    --homepage-footer-partners-section-p-fontSize:16px ;
     
     --homepage-rac-section-container-height: 720px;
     --homepage-rac-section-content-container-gap: 80px;
@@ -333,7 +347,22 @@ html {
     --homepage-footer-partners-section-logo-eu-height: 180px;
     --homepage-footer-partners-section-logo-SchönebergHilft-width: 150px;
     --homepage-footer-partners-section-logo-SchönebergHilft-height: 150px;
-    
+    --homepage-footer-partners-section-logo-n4d-width: 68px;
+    --homepage-footer-partners-section-logo-n4d-height: 90px;
+    --homepage-footer-partners-section-footer-container-height: 200px;
+    --homepage-footer-partners-section-footer-container-flex-direction: row ;
+    --homepage-footer-partners-section-footer-container-justify-content: space-between;
+    --homepage-footer-partners-section-contact-socials-container-flex-direction: row ;
+    --homepage-footer-partners-section-contact-socials-container-gap: 110px ;
+    --homepage-footer-partners-section-contact-container-gap: 10px ;
+    --homepage-footer-partners-section-socials-container-gap: 20px ;
+    --homepage-footer-partners-section-footer-links-container-gap:40px ;
+    --homepage-footer-partners-section-footer-links-container-width:500px ;
+    --homepage-footer-partners-section-footer-frame-container-gap:20px ;
+    --homepage-footer-partners-section-p-fontWeight-large:500 ;
+    --homepage-footer-partners-section-p-fontWeight-small:400 ;
+    --homepage-footer-partners-section-p-fontSize:18px ;
+
     --homepage-rac-section-container-height: 720px;
     --homepage-rac-section-content-container-gap: 80px;
     --homepage-rac-section-content-headLine-container-gap:24px;
@@ -466,6 +495,21 @@ html {
     --homepage-footer-partners-section-logo-eu-height: 180px;
     --homepage-footer-partners-section-logo-SchönebergHilft-width: 150px;
     --homepage-footer-partners-section-logo-SchönebergHilft-height: 150px;
+    --homepage-footer-partners-section-logo-n4d-width: 100px;
+    --homepage-footer-partners-section-logo-n4d-height: 132px;
+    --homepage-footer-partners-section-footer-container-height: 260px;
+    --homepage-footer-partners-section-footer-container-flex-direction: row ;
+    --homepage-footer-partners-section-footer-container-justify-content: space-between;
+    --homepage-footer-partners-section-contact-socials-container-flex-direction: column ;
+    --homepage-footer-partners-section-contact-socials-container-gap: 20px ;
+    --homepage-footer-partners-section-contact-container-gap: 10px ;
+    --homepage-footer-partners-section-socials-container-gap: 20px ;
+    --homepage-footer-partners-section-footer-links-container-gap:100px ;
+    --homepage-footer-partners-section-footer-links-container-width:770px ;
+    --homepage-footer-partners-section-footer-frame-container-gap:20px ;
+    --homepage-footer-partners-section-p-fontWeight-large:500 ;
+    --homepage-footer-partners-section-p-fontWeight-small:400 ;
+    --homepage-footer-partners-section-p-fontSize:18px ;
 
     --homepage-rac-section-container-height: 720px;
     --homepage-rac-section-content-container-gap: 80px;

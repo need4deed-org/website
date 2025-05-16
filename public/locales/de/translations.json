@@ -563,6 +563,17 @@
       "buttonSupport": "Freiwillige Unterstützung beantragen",
       "buttonSupportMobile": "Freiwillige Hilfe anfragen",
       "buttonHowItWorks": "So funktioniert es"
+    },
+    "footer":{
+      "about":"ÜBER",
+      "resources": "RESSOURCEN",
+      "faq": "HGF",
+      "legalNotice":"Rechtlicher Hinweis",
+      "privacy": "Datenschutz",
+      "vpa": "Freiwilligenvereinbarung",
+      "contact":"Kontakt"
+
     }
+    
   }
 }

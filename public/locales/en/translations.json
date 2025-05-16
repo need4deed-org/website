@@ -602,6 +602,16 @@
       "buttonSupport": "Apply to receive voluntary support",
       "buttonSupportMobile": "Apply to receive support",
       "buttonHowItWorks": "How it works"
+    },
+    "footer":{
+      "about":"ABOUT",
+      "resources": "RESOURCES",
+      "faq": "FAQ",
+      "legalNotice":"Legal notice",
+      "privacy": "Privacy",
+      "vpa": "Volunteer Participation Agreement",
+      "contact":"Contact"
     }
+
   }
 }

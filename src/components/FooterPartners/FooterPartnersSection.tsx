@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { FullWidthContainer, SectionContainer } from "../styled/containers";
 import { Partners } from "./Partners";
-// import FootersTemporary from "./FootersTEMPORARY";
+import { Footer } from "./footer/Footer";
 
 const FooterPartnersSectionContainer = styled(SectionContainer)`
   height: var(--homepage-footer-partners-section-container-height);
@@ -17,7 +17,7 @@ export function FooterPartnersSection() {
     >
       <FooterPartnersSectionContainer id="footerPartners-section-container">
         <Partners />
-        {/* <FootersTemporary /> */}
+        <Footer />
       </FooterPartnersSectionContainer>
     </FullWidthContainer>
   );
