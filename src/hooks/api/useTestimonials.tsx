@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
-
 import { Testimonial } from "need4deed-sdk";
+
 import { urlApiTestimonial } from "../../config/constants";
 import { Lang } from "../../config/types";
 import fetchFn from "./utils";

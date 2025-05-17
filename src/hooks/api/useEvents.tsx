@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
-
 import { N4DEvent } from "need4deed-sdk";
+
 import { urlApiEvent } from "../../config/constants";
 import { Lang } from "../../config/types";
 import fetchFn from "./utils";
