@@ -1,6 +1,6 @@
 import { DeepKeys } from "@tanstack/react-form";
+import { N4DEvent } from "need4deed-sdk";
 import React from "react";
-import { N4DEvent } from "../hooks/api/types";
 
 export interface IncludeClassName {
   className?: string;

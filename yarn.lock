@@ -8787,6 +8787,11 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
+need4deed-sdk@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/need4deed-sdk/-/need4deed-sdk-0.0.2.tgz#4301eb4dd7e1b2f4b3c662a4b35e4c9e45d09acf"
+  integrity sha512-9Po8n6wLkERwf+md8iUGr6v1IC0F49fnCzqsLw8NO1M5cqD1I1xJAdISbK69U1+3WBWzRE2qkbKs19YTIsQ5Ew==
+
 neo-async@^2.6.0:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"

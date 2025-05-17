@@ -1,8 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 
+import { N4DEvent } from "need4deed-sdk";
 import { urlApiEvent } from "../../config/constants";
 import { Lang } from "../../config/types";
-import { N4DEvent } from "./types";
 import fetchFn from "./utils";
 
 const staleTime = 1000 * 60 * 60 * 24; // 1d
