@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { N4DEvent } from "need4deed-sdk";
+import { EventN4D } from "need4deed-sdk";
 
 import { urlApiEvent } from "../../config/constants";
 import { Lang } from "../../config/types";
@@ -10,15 +10,15 @@ const staleTime = 1000 * 60 * 60 * 24; // 1d
 export default function useEvents(
   language: Lang,
   fromFile: string = "",
-): [N4DEvent[], boolean, boolean] {
+): [EventN4D[], boolean, boolean] {
   const {
     data: events,
     isLoading,
     isError,
-  } = useQuery<N4DEvent[], Error, N4DEvent[], string[]>({
+  } = useQuery<EventN4D[], Error, EventN4D[], string[]>({
     queryKey: ["testimonials", language],
     queryFn: () =>
-      fetchFn<N4DEvent[]>({
+      fetchFn<EventN4D[]>({
         url: fromFile
           ? `/data/${language}/${fromFile}`
           : `${urlApiEvent}?language=${language}`,

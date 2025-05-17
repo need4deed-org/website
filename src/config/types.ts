@@ -1,5 +1,5 @@
 import { DeepKeys } from "@tanstack/react-form";
-import { N4DEvent } from "need4deed-sdk";
+import { EventN4D } from "need4deed-sdk";
 import React from "react";
 
 export interface IncludeClassName {
@@ -139,7 +139,7 @@ export interface EventComponentInfo {
 }
 
 export type EventDataType =
-  | { event: N4DEvent }
+  | { event: EventN4D }
   | { events: EventComponentInfo[] };
 
 export type EventPropType = { eventData: EventDataType } | object;
