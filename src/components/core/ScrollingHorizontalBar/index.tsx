@@ -10,7 +10,7 @@ interface Props<T> {
 }
 
 export default function ScrollingHorizontalBar<
-  T extends { title: string; active?: boolean } & unknown,
+  T extends { title: string; active?: boolean },
 >({ items, handleListItemClick }: Props<T>) {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const ref = useRef<HTMLUListElement>(null);
@@ -27,10 +27,10 @@ export default function ScrollingHorizontalBar<
       <ul className="horizontal-list-container" ref={ref}>
         {items.map((item, idx) => (
           <AutoScrollTag
-            className="horizontal-list-item"
             // eslint-disable-next-line react/no-array-index-key
             key={`${item.title}${idx}`}
             data-active={selectedIndex === idx ? "true" : "false"}
+            data-current={item.active ? "true" : "false"}
             scrollLeftmost={item.active ? scrollLeftmost : undefined}
           >
             <button

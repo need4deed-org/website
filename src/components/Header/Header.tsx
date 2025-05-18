@@ -1,9 +1,10 @@
-import { useContext, useState } from "react";
+import { useContext, useMemo, useState } from "react";
+import ReactGA from "react-ga4";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import ReactGA from "react-ga4";
-import AppContainerContext from "../../contexts/AppContainerContext";
 import { Lang, Subpages } from "../../config/types";
+import AppContainerContext from "../../contexts/AppContainerContext";
+import useEvents from "../../hooks/api/useEvents";
 import { getBaseUrl, setLangDirection } from "../../utils";
 import "./Header.css";
 
@@ -17,6 +18,12 @@ function Header({ showEvent }: Props) {
   const navigate = useNavigate();
   const containerRef = useContext(AppContainerContext);
   const [queryParams] = useSearchParams();
+  const [events] = useEvents(i18n.language as Lang, "events.json");
+
+  const eventActive = useMemo(
+    () => events?.find((event) => event.active),
+    [events],
+  );
 
   const toggleMenu = () => {
     setIsOpen((prev) => !prev);
@@ -121,13 +128,13 @@ function Header({ showEvent }: Props) {
               </a>
             </li>
 
-            {showEvent ? (
+            {showEvent && eventActive ? (
               <li className="nav-item">
                 <a
                   className="nav-link nav-link-secondary"
                   href={`/${Subpages.EVENT}/${i18n.language}`}
                 >
-                  {t("event.menuItem")}
+                  {eventActive.menuTitle}
                 </a>
               </li>
             ) : null}

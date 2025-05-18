@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useMemo } from "react"; // Import useMemo
 import { useTranslation } from "react-i18next";
 
 import Event from "../components/Event/Event";
@@ -10,7 +10,7 @@ import EventHolidayGift from "../components/Event/EventHolidayGift";
 import EventVolunTeaMeet from "../components/Event/EventVolunTeaMeet";
 import EventWithKids from "../components/Event/EventWithKids";
 import { EventComponentInfo, EventPropType, Lang } from "../config/types";
-import useEvents from "./api/useEvents";
+import useEvents from "./api/useEvents"; // Correct import path if needed
 
 const legacyEvents: EventComponentInfo[] = [
   { component: EventAccompanying, title: "event6" },
@@ -23,18 +23,18 @@ const legacyEvents: EventComponentInfo[] = [
 
 export default function useEventComponents() {
   const { i18n } = useTranslation();
-  const [eventComponents, setEventComponents] = useState<EventComponentInfo[]>(
-    [],
+  const [events, isLoading, isError] = useEvents(
+    i18n.language as Lang,
+    "events.json",
   );
-  const [events] = useEvents(i18n.language as Lang, "events.json");
 
-  useEffect(() => {
+  const eventComponents = useMemo(() => {
     const today = new Date();
     const itemsCurrent: EventComponentInfo[] = [];
     const itemsPast: EventComponentInfo[] = [];
 
-    events.forEach((event) => {
-      const item = {
+    (events || []).forEach((event) => {
+      const item: EventComponentInfo = {
         title: event.menuTitle,
         component: Event as React.FC<EventPropType>,
         eventData: { event },
@@ -47,16 +47,16 @@ export default function useEventComponents() {
       }
     });
 
-    setEventComponents([
+    return [
       {
         title: "event.past",
         active: false,
         component: EventFeed as React.FC<EventPropType>,
         eventData: { events: [...itemsPast, ...legacyEvents], active: false },
-      },
+      } as EventComponentInfo,
       ...itemsCurrent,
-    ]);
-  }, [i18n.language, events]);
+    ];
+  }, [events]);
 
-  return eventComponents;
+  return { eventComponents, isLoading, isError };
 }

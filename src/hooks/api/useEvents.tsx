@@ -28,7 +28,7 @@ export default function useEvents(
 
   if (isError) {
     // eslint-disable-next-line no-console
-    console.error("Error fetching events");
+    console.error("Error fetching events", error);
   }
 
   return [events || [], isLoading, isError];
