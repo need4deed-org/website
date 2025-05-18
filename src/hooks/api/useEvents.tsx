@@ -15,6 +15,7 @@ export default function useEvents(
     data: events,
     isLoading,
     isError,
+    error,
   } = useQuery<EventN4D[], Error, EventN4D[], string[]>({
     queryKey: ["testimonials", language],
     queryFn: () =>
