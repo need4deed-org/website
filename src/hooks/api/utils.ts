@@ -40,14 +40,20 @@ export function snakeToCamelCase(snakeCaseObject: any): any {
   const camelCaseObject: any = {};
   Object.keys(snakeCaseObject).forEach((key) => {
     if (Object.prototype.hasOwnProperty.call(snakeCaseObject, key)) {
-      // Convert snake_case key to camelCase
-      const parts = key.split("_");
-      const camelCaseKey =
-        parts[0] +
-        parts
-          .slice(1)
-          .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
-          .join("");
+      let camelCaseKey: string;
+      // skip if all caps
+      if (key.match(/^[A-Z0-9_]+$/)) {
+        camelCaseKey = key;
+      } else {
+        // Convert snake_case key to camelCase
+        const parts = key.split("_");
+        camelCaseKey =
+          parts[0] +
+          parts
+            .slice(1)
+            .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+            .join("");
+      }
 
       // Recursively convert nested values
       camelCaseObject[camelCaseKey] = snakeToCamelCase(snakeCaseObject[key]);

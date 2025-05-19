@@ -58,7 +58,6 @@ describe("API utils", () => {
   });
 
   describe("snakeToCamelCase", () => {
-    // Test case 1: Basic object with snake_case keys
     it("should convert basic snake_case keys to camelCase", () => {
       const snakeCaseObject = {
         first_name: "John",
@@ -75,7 +74,6 @@ describe("API utils", () => {
       expect(snakeToCamelCase(snakeCaseObject)).toEqual(expectedCamelCase);
     });
 
-    // Test case 2: Nested objects with snake_case keys
     it("should handle nested objects and convert their keys", () => {
       const snakeCaseObject = {
         user_profile: {
@@ -102,7 +100,6 @@ describe("API utils", () => {
       expect(snakeToCamelCase(snakeCaseObject)).toEqual(expectedCamelCase);
     });
 
-    // Test case 3: Arrays containing objects with snake_case keys
     it("should handle arrays of objects and convert keys within objects", () => {
       const snakeCaseObject = [
         { item_id: 1, item_name: "Apple" },
@@ -115,14 +112,12 @@ describe("API utils", () => {
       expect(snakeToCamelCase(snakeCaseObject)).toEqual(expectedCamelCase);
     });
 
-    // Test case 4: Arrays containing primitive values
     it("should handle arrays of primitive values without modification", () => {
       const snakeCaseObject = [1, "two", true, null];
       const expectedCamelCase = [1, "two", true, null];
       expect(snakeToCamelCase(snakeCaseObject)).toEqual(expectedCamelCase);
     });
 
-    // Test case 5: Mixed object with nested arrays and objects
     it("should handle complex structures with nested arrays and objects", () => {
       const snakeCaseObject = {
         primary_info: {
@@ -171,7 +166,6 @@ describe("API utils", () => {
       expect(snakeToCamelCase(snakeCaseObject)).toEqual(expectedCamelCase);
     });
 
-    // Test case 6: Input that is not an object or array (primitives)
     it("should return non-object/array inputs as is", () => {
       expect(snakeToCamelCase("hello_world")).toBe("hello_world");
       expect(snakeToCamelCase(123)).toBe(123);
@@ -180,13 +174,11 @@ describe("API utils", () => {
       expect(snakeToCamelCase(undefined)).toBe(undefined); // Note: typeof undefined is 'undefined', which is handled.
     });
 
-    // Test case 7: Empty object and empty array inputs
     it("should handle empty objects and arrays", () => {
       expect(snakeToCamelCase({})).toEqual({});
       expect(snakeToCamelCase([])).toEqual([]);
     });
 
-    // Test case 8: Keys that already contain uppercase letters or are already in camelCase
     it("should handle keys that are already in camelCase or have uppercase letters", () => {
       const snakeCaseObject = {
         camelCaseKey: "value1",
@@ -197,16 +189,12 @@ describe("API utils", () => {
       const expectedCamelCase = {
         camelCaseKey: "value1",
         AlreadyCamelCase: "value2", // Current implementation preserves existing case
-        UPPERCASEKEY: "value3", // Converts based on underscores
+        UPPER_CASE_KEY: "value3", // skips all caps on underscores
         mixEDCaseKey: "value4", // Converts based on underscores
       };
-      // The behavior for keys not strictly snake_case is dependent on the implementation.
-      // The current implementation splits by '_' and capitalizes after.
-      // Adjust expected output if the desired behavior is different.
       expect(snakeToCamelCase(snakeCaseObject)).toEqual(expectedCamelCase);
     });
 
-    // Test case 9: Keys with multiple consecutive underscores or leading/trailing underscores
     it("should handle keys with multiple or leading/trailing underscores", () => {
       const snakeCaseObject = {
         key__with__multiple__underscores: "value1",
@@ -224,7 +212,6 @@ describe("API utils", () => {
         doubleTrailing: "value5", // Splits by _, last two parts empty
         KeyWithBoth: "value6", // Splits by _, handles leading/trailing empty parts
       };
-      // Again, the expected output here matches the current implementation's logic.
       expect(snakeToCamelCase(snakeCaseObject)).toEqual(expectedCamelCase);
     });
   });
