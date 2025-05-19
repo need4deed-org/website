@@ -16,12 +16,6 @@ export default function ScrollingHorizontalBar<
   const ref = useRef<HTMLUListElement>(null);
   const { t } = useTranslation();
 
-  function scrollLeftmost(element: HTMLElement) {
-    if (element && ref.current) {
-      // ref.current.scrollLeft = element.offsetLeft;
-    }
-  }
-
   return (
     <div>
       <ul className="horizontal-list-container" ref={ref}>
@@ -31,7 +25,6 @@ export default function ScrollingHorizontalBar<
             key={`${item.title}${idx}`}
             data-active={selectedIndex === idx ? "true" : "false"}
             data-current={item.active ? "true" : "false"}
-            scrollLeftmost={item.active ? scrollLeftmost : undefined}
           >
             <button
               type="button"

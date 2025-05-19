@@ -5,13 +5,13 @@ import { Lang } from "../../config/types";
 import { getImageUrl, getTimeFrameString } from "../../utils";
 
 interface Props {
-  eventData: { event: EventN4D };
+  eventData: { event?: EventN4D };
 }
 
 const fallbackPicUrl = "event.webp";
 
 export default function Event({ eventData }: Props) {
-  const { event } = eventData;
+  const { event } = eventData || { event: undefined };
   const {
     i18n: { language },
     t,
@@ -20,8 +20,6 @@ export default function Event({ eventData }: Props) {
   if (!event) {
     return <h4>{t("event.missing")}</h4>;
   }
-
-  // return <pre>{JSON.stringify(event, null, 4)}</pre>;
 
   return (
     <div className="n4d-container event-container">
