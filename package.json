@@ -36,7 +36,7 @@
     "@testing-library/jest-dom": "^6.4.2",
     "@types/react-bootstrap": "^0.32.36",
     "@vitejs/plugin-react": "^4.2.1",
-    "aws-amplify": "^6.0.28",
+    "aws-amplify": "^6.14.4",
     "bootstrap": "^5.3.3",
     "email-validator": "^2.0.4",
     "i18next": "^23.10.1",
@@ -53,8 +53,8 @@
     "vite": "^5.1.6"
   },
   "devDependencies": {
-    "@aws-amplify/backend": "^0.12.1",
-    "@aws-amplify/backend-cli": "^0.11.1",
+    "@aws-amplify/backend": "^1.16.1",
+    "@aws-amplify/backend-cli": "^1.7.2",
     "@testing-library/react": "^14.3.0",
     "@types/node": "^22.9.0",
     "@types/react": "^18.2.64",

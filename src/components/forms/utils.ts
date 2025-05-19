@@ -7,7 +7,7 @@ import {
 } from "../../config/constants";
 import { OpportunityType, TranslatedIntoType } from "../../config/types";
 import {
-  getDateCETtoUTC,
+  getDateLocalTooUTC,
   haveCommonElements,
   parseYesNo,
   range,
@@ -77,7 +77,7 @@ export function parseFormStateDTOOpportunity(value: OpportunityData) {
   data.vo_information = value.voInformation;
   data.accomp_address = value.aaAddress;
   data.accomp_postcode = value.aaPostcode;
-  data.accomp_datetime = getDateCETtoUTC(
+  data.accomp_datetime = getDateLocalTooUTC(
     value.opportunityType === OpportunityType.ACCOMPANYING
       ? value.dateTime
       : value.onetimeDateTime,
