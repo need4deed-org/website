@@ -23,10 +23,7 @@ const legacyEvents: EventComponentInfo[] = [
 
 export default function useEventComponents() {
   const { i18n } = useTranslation();
-  const [events, isLoading, isError] = useEvents(
-    i18n.language as Lang,
-    "events.json",
-  );
+  const [events, isLoading, isError] = useEvents(i18n.language as Lang);
 
   const eventComponents = useMemo(() => {
     const today = new Date();

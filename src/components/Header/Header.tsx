@@ -18,7 +18,7 @@ function Header({ showEvent }: Props) {
   const navigate = useNavigate();
   const containerRef = useContext(AppContainerContext);
   const [queryParams] = useSearchParams();
-  const [events] = useEvents(i18n.language as Lang, "events.json");
+  const [events] = useEvents(i18n.language as Lang);
 
   const eventActive = useMemo(
     () => events?.find((event) => event.active),
