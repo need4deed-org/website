@@ -1,3 +1,4 @@
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useEffect, useRef } from "react";
 import { getCookieConsentValue } from "react-cookie-consent";
 import ReactGA from "react-ga4";
@@ -13,6 +14,8 @@ import Land404 from "./pages/Land404";
 import Landing from "./pages/Landing";
 import Subpage from "./pages/Subpage";
 import { consoleLogDeveloperContributionMessage } from "./utils";
+
+const queryClient = new QueryClient();
 
 function App() {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -34,141 +37,143 @@ function App() {
   consoleLogDeveloperContributionMessage();
 
   return (
-    <AppContainerContext.Provider value={containerRef}>
-      <JsonLd />
-      <BrowserRouter>
-        {FF.NEW_DESIGN_WEBSITE ? (
-          <Routes>
-            <Route path="/" element={<Landing />} />
-          </Routes>
-        ) : (
-          <div ref={containerRef} className="app-container">
+    <QueryClientProvider client={queryClient}>
+      <AppContainerContext.Provider value={containerRef}>
+        <JsonLd />
+        <BrowserRouter>
+          {FF.NEW_DESIGN_WEBSITE ? (
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route
-                path={`/${Subpages.NOTICE}/:lng`}
-                element={<Subpage type={Subpages.NOTICE} />}
-              />
-              <Route
-                path={`/${Subpages.NOTICE}`}
-                element={<Subpage type={Subpages.NOTICE} />}
-              />
-              <Route
-                path={`/${Subpages.DATA_PROTECTION}/:lng`}
-                element={<Subpage type={Subpages.DATA_PROTECTION} />}
-              />
-              <Route
-                path={`/${Subpages.DATA_PROTECTION}`}
-                element={<Subpage type={Subpages.DATA_PROTECTION} />}
-              />
-              <Route
-                path={`/${Subpages.AGREEMENT}/:lng`}
-                element={<Subpage type={Subpages.AGREEMENT} />}
-              />
-              <Route
-                path={`/${Subpages.AGREEMENT}`}
-                element={<Subpage type={Subpages.AGREEMENT} />}
-              />
-              <Route
-                path={`/${Subpages.GUIDELINES}/:lng`}
-                element={<Subpage type={Subpages.GUIDELINES} />}
-              />
-              <Route
-                path={`/${Subpages.GUIDELINES}`}
-                element={<Subpage type={Subpages.GUIDELINES} />}
-              />
-              <Route
-                path={`/${Subpages.OPPORTUNITIES}/:lng`}
-                element={<Subpage type={Subpages.OPPORTUNITIES} />}
-              />
-              <Route
-                path={`/${Subpages.OPPORTUNITIES}`}
-                element={<Subpage type={Subpages.OPPORTUNITIES} />}
-              />
-              <Route
-                path={`/${Subpages.ACCOMPANYING}/:lng`}
-                element={<Subpage type={Subpages.ACCOMPANYING} />}
-              />
-              <Route
-                path={`/${Subpages.ACCOMPANYING}`}
-                element={<Subpage type={Subpages.ACCOMPANYING} />}
-              />
-              <Route
-                path={`/${Subpages.ACCOMPANYING_TEST}/:lng`}
-                element={<Subpage type={Subpages.ACCOMPANYING_TEST} />}
-              />
-              <Route
-                path={`/${Subpages.ACCOMPANYING_TEST}`}
-                element={<Subpage type={Subpages.ACCOMPANYING_TEST} />}
-              />
-              <Route
-                path={`/${Subpages.OPPORTUNITIES_TEST}/:lng`}
-                element={<Subpage type={Subpages.OPPORTUNITIES_TEST} />}
-              />
-              <Route
-                path={`/${Subpages.OPPORTUNITIES_TEST}`}
-                element={<Subpage type={Subpages.OPPORTUNITIES_TEST} />}
-              />
-              <Route
-                path={`/${Subpages.BECOME_VOLUNTEER}/:lng`}
-                element={<Subpage type={Subpages.BECOME_VOLUNTEER} />}
-              />
-              <Route
-                path={`/${Subpages.BECOME_VOLUNTEER}`}
-                element={<Subpage type={Subpages.BECOME_VOLUNTEER} />}
-              />
-              <Route
-                path={`/${Subpages.ANNOUNCEMENT}/:lng`}
-                element={<Subpage type={Subpages.ANNOUNCEMENT} />}
-              />
-              <Route
-                path={`/${Subpages.ADD_OPPORTUNITY}`}
-                element={<Subpage type={Subpages.ADD_OPPORTUNITY} />}
-              />
-              <Route
-                path={`/${Subpages.ADD_OPPORTUNITY}/:lng`}
-                element={<Subpage type={Subpages.ADD_OPPORTUNITY} />}
-              />
-              <Route
-                path={`/${Subpages.EVENT}/:lng`}
-                element={<Subpage type={Subpages.EVENT} />}
-              />
-              <Route
-                path={`/${Subpages.EVENT}`}
-                element={<Subpage type={Subpages.EVENT} />}
-              />
-              <Route
-                path={`/${Subpages.EVENTS}/:lng`}
-                element={<Subpage type={Subpages.EVENTS} />}
-              />
-              <Route
-                path={`/${Subpages.EVENTS}`}
-                element={<Subpage type={Subpages.EVENTS} />}
-              />
-              <Route
-                path={`/${Subpages.COOKIES}/:lng`}
-                element={<Subpage type={Subpages.COOKIES} />}
-              />
-              <Route
-                path={`/${Subpages.COOKIES}`}
-                element={<Subpage type={Subpages.COOKIES} />}
-              />
-              <Route
-                path={`/${Subpages.FAQS}/:lng`}
-                element={<Subpage type={Subpages.FAQS} />}
-              />
-              <Route
-                path={`/${Subpages.FAQS}`}
-                element={<Subpage type={Subpages.FAQS} />}
-              />
-              <Route path="/:lng" element={<Home />} />
-              <Route path="/new" element={<Landing />} />
-              <Route path="*" element={<Land404 />} />
+              <Route path="/" element={<Landing />} />
             </Routes>
-          </div>
-        )}
-      </BrowserRouter>
-    </AppContainerContext.Provider>
+          ) : (
+            <div ref={containerRef} className="app-container">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route
+                  path={`/${Subpages.NOTICE}/:lng`}
+                  element={<Subpage type={Subpages.NOTICE} />}
+                />
+                <Route
+                  path={`/${Subpages.NOTICE}`}
+                  element={<Subpage type={Subpages.NOTICE} />}
+                />
+                <Route
+                  path={`/${Subpages.DATA_PROTECTION}/:lng`}
+                  element={<Subpage type={Subpages.DATA_PROTECTION} />}
+                />
+                <Route
+                  path={`/${Subpages.DATA_PROTECTION}`}
+                  element={<Subpage type={Subpages.DATA_PROTECTION} />}
+                />
+                <Route
+                  path={`/${Subpages.AGREEMENT}/:lng`}
+                  element={<Subpage type={Subpages.AGREEMENT} />}
+                />
+                <Route
+                  path={`/${Subpages.AGREEMENT}`}
+                  element={<Subpage type={Subpages.AGREEMENT} />}
+                />
+                <Route
+                  path={`/${Subpages.GUIDELINES}/:lng`}
+                  element={<Subpage type={Subpages.GUIDELINES} />}
+                />
+                <Route
+                  path={`/${Subpages.GUIDELINES}`}
+                  element={<Subpage type={Subpages.GUIDELINES} />}
+                />
+                <Route
+                  path={`/${Subpages.OPPORTUNITIES}/:lng`}
+                  element={<Subpage type={Subpages.OPPORTUNITIES} />}
+                />
+                <Route
+                  path={`/${Subpages.OPPORTUNITIES}`}
+                  element={<Subpage type={Subpages.OPPORTUNITIES} />}
+                />
+                <Route
+                  path={`/${Subpages.ACCOMPANYING}/:lng`}
+                  element={<Subpage type={Subpages.ACCOMPANYING} />}
+                />
+                <Route
+                  path={`/${Subpages.ACCOMPANYING}`}
+                  element={<Subpage type={Subpages.ACCOMPANYING} />}
+                />
+                <Route
+                  path={`/${Subpages.ACCOMPANYING_TEST}/:lng`}
+                  element={<Subpage type={Subpages.ACCOMPANYING_TEST} />}
+                />
+                <Route
+                  path={`/${Subpages.ACCOMPANYING_TEST}`}
+                  element={<Subpage type={Subpages.ACCOMPANYING_TEST} />}
+                />
+                <Route
+                  path={`/${Subpages.OPPORTUNITIES_TEST}/:lng`}
+                  element={<Subpage type={Subpages.OPPORTUNITIES_TEST} />}
+                />
+                <Route
+                  path={`/${Subpages.OPPORTUNITIES_TEST}`}
+                  element={<Subpage type={Subpages.OPPORTUNITIES_TEST} />}
+                />
+                <Route
+                  path={`/${Subpages.BECOME_VOLUNTEER}/:lng`}
+                  element={<Subpage type={Subpages.BECOME_VOLUNTEER} />}
+                />
+                <Route
+                  path={`/${Subpages.BECOME_VOLUNTEER}`}
+                  element={<Subpage type={Subpages.BECOME_VOLUNTEER} />}
+                />
+                <Route
+                  path={`/${Subpages.ANNOUNCEMENT}/:lng`}
+                  element={<Subpage type={Subpages.ANNOUNCEMENT} />}
+                />
+                <Route
+                  path={`/${Subpages.ADD_OPPORTUNITY}`}
+                  element={<Subpage type={Subpages.ADD_OPPORTUNITY} />}
+                />
+                <Route
+                  path={`/${Subpages.ADD_OPPORTUNITY}/:lng`}
+                  element={<Subpage type={Subpages.ADD_OPPORTUNITY} />}
+                />
+                <Route
+                  path={`/${Subpages.EVENT}/:lng`}
+                  element={<Subpage type={Subpages.EVENT} />}
+                />
+                <Route
+                  path={`/${Subpages.EVENT}`}
+                  element={<Subpage type={Subpages.EVENT} />}
+                />
+                <Route
+                  path={`/${Subpages.EVENTS}/:lng`}
+                  element={<Subpage type={Subpages.EVENTS} />}
+                />
+                <Route
+                  path={`/${Subpages.EVENTS}`}
+                  element={<Subpage type={Subpages.EVENTS} />}
+                />
+                <Route
+                  path={`/${Subpages.COOKIES}/:lng`}
+                  element={<Subpage type={Subpages.COOKIES} />}
+                />
+                <Route
+                  path={`/${Subpages.COOKIES}`}
+                  element={<Subpage type={Subpages.COOKIES} />}
+                />
+                <Route
+                  path={`/${Subpages.FAQS}/:lng`}
+                  element={<Subpage type={Subpages.FAQS} />}
+                />
+                <Route
+                  path={`/${Subpages.FAQS}`}
+                  element={<Subpage type={Subpages.FAQS} />}
+                />
+                <Route path="/:lng" element={<Home />} />
+                <Route path="/new" element={<Landing />} />
+                <Route path="*" element={<Land404 />} />
+              </Routes>
+            </div>
+          )}
+        </BrowserRouter>
+      </AppContainerContext.Provider>{" "}
+    </QueryClientProvider>
   );
 }
 
