@@ -301,6 +301,7 @@
   },
   "event": {
     "menuItem": "Workshop",
+    "rsvp": "Please RSVP",
     "registration": "Registration",
     "missing": "No information",
     "click": "Click on a list item to view an event.",

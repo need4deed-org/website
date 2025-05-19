@@ -297,6 +297,7 @@
   "event": {
     "menuItem": "Workshop",
     "registration": "Anmeldung",
+    "rsvp": "RSVP bitte",
     "missing": "Keine Informationen",
     "click": "Hier klicken, um mehr zu erfahren.",
     "locationLink": "Position auf der Karte",
