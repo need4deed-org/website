@@ -17,7 +17,7 @@ export default function useEvents(
     isError,
     error,
   } = useQuery<EventN4D[], Error, EventN4D[], string[]>({
-    queryKey: ["testimonials", language],
+    queryKey: ["events", language],
     queryFn: () =>
       fetchFn<EventN4D[]>({
         url: fromFile
