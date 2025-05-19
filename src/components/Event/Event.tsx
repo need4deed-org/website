@@ -1,7 +1,8 @@
 import { EventN4D } from "need4deed-sdk";
 import { useTranslation } from "react-i18next";
 
-import { getImageUrl } from "../../utils";
+import { Lang } from "../../config/types";
+import { getImageUrl, getTimeFrameString } from "../../utils";
 
 interface Props {
   eventData: { event: EventN4D };
@@ -11,11 +12,16 @@ const fallbackPicUrl = "event.webp";
 
 export default function Event({ eventData }: Props) {
   const { event } = eventData;
-  const { t } = useTranslation();
+  const {
+    i18n: { language },
+    t,
+  } = useTranslation();
 
   if (!event) {
     return <h4>{t("event.missing")}</h4>;
   }
+
+  // return <pre>{JSON.stringify(event, null, 4)}</pre>;
 
   return (
     <div className="n4d-container event-container">
@@ -32,22 +38,24 @@ export default function Event({ eventData }: Props) {
 
       {event.date && (
         <h6>
-          getTimeFrameString(i18n.language as Lang, event.date, event.dateEnd)
+          {getTimeFrameString(language as Lang, event.date, event.dateEnd)}
         </h6>
       )}
 
-      <h6 className="with-linebreaks">{event.location}</h6>
-      <p>
-        <a href={event.locationLink} target="_blank" rel="noreferrer">
-          {t("event.locationLink")}
-        </a>
-      </p>
+      <h6 className="with-linebreaks">{event.locationComment}</h6>
       <img
         src={getImageUrl("N4D-logo-purple-on-transparent-h.webp")}
         height="16"
         alt=""
       />
+      <h6 className="with-linebreaks">{event.address.replace(/\\n/g, "\n")}</h6>
+      <p>
+        <a href={event.locationLink} target="_blank" rel="noreferrer">
+          {t("event.locationLink")}
+        </a>
+      </p>
       <h6>
+        {t("event.rsvp")}:{" "}
         <a href={event.linkRSVP} target="_blank" rel="noreferrer">
           {t("event.registration")}
         </a>
@@ -59,7 +67,20 @@ export default function Event({ eventData }: Props) {
             backgroundImage: `url(${getImageUrl(event.pic || fallbackPicUrl)})`,
           }}
         />
-        <h6 className="with-linebreaks">{event.description}</h6>
+        <div>
+          <h6 className="with-linebreaks">
+            {event.description.replace(/\\n/g, "\n")}
+          </h6>
+          <h6 className="with-linebreaks m-0">{event.additionalTitle}</h6>
+          <ul>
+            {event.additionalInfo &&
+              event.additionalInfo.map((info) => (
+                <li key={info}>
+                  <h6 className="with-linebreaks m-0">{info}</h6>
+                </li>
+              ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
