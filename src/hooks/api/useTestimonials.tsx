@@ -3,7 +3,7 @@ import { Testimonial } from "need4deed-sdk";
 
 import { urlApiTestimonial } from "../../config/constants";
 import { Lang } from "../../config/types";
-import fetchFn from "./utils";
+import { fetchFn } from "./utils";
 
 const staleTime = 1000 * 60 * 60 * 24; // 1d
 
