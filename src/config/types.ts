@@ -1,4 +1,6 @@
 import { DeepKeys } from "@tanstack/react-form";
+import { EventN4D } from "need4deed-sdk";
+import React from "react";
 
 export interface IncludeClassName {
   className?: string;
@@ -57,6 +59,7 @@ export enum Subpages {
   OPPORTUNITIES_TEST = "0pp4-test",
   ACCOMPANYING_TEST = "4cc0-test",
   EVENT = "event",
+  EVENTS = "events",
   PAST_EVENTS = "past-events",
   ADD_OPPORTUNITY = "add-opportunity",
   COOKIES = "cookies",
@@ -128,12 +131,18 @@ export enum HttpMethod {
   PATCH = "PATCH",
 }
 
-export interface Testimonial {
-  name: string;
-  pic: string; // base64 encoded thumb most probably
-  translated_text: string;
-  activities: string[];
+export interface EventComponentInfo {
+  title: string;
+  component: React.FC<EventPropType | object>;
+  eventData?: EventPropType;
+  active?: boolean;
 }
+
+export type EventDataType =
+  | { event: EventN4D }
+  | { events: EventComponentInfo[] };
+
+export type EventPropType = { eventData: EventDataType } | object;
 
 export enum ScreenTypes {
   MOBILE = "mobile",

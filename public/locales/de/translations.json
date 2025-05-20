@@ -294,7 +294,16 @@
       }
     }
   },
-  "event": { "menuItem": "Workshop" },
+  "event": {
+    "menuItem": "Workshop",
+    "registration": "Anmeldung",
+    "rsvp": "RSVP bitte",
+    "missing": "Keine Informationen",
+    "click": "Hier klicken, um mehr zu erfahren.",
+    "locationLink": "Position auf der Karte",
+    "past": "Vergangene Veranstaltungen",
+    "noEvents": "Keine Veranstaltungen"
+  },
   "eventAccompanying": {
     "greeting": {
       "title": "Begleitung von Geflüchteten zu Terminen",

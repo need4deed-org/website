@@ -2,10 +2,10 @@
 
 import { useTranslation } from "react-i18next";
 import { Lang, ScreenTypes } from "../../config/types";
-import TestimonialCard from "./TestimonialCard";
-import { PaginatedCards } from "../core/paginatedCards";
 import useTestimonials from "../../hooks/api/useTestimonials";
 import useScreenType from "../../hooks/useScreenType";
+import { PaginatedCards } from "../core/paginatedCards";
+import TestimonialCard from "./TestimonialCard";
 
 const cardsPerPageMap = {
   [ScreenTypes.MOBILE]: 1,
