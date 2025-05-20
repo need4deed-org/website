@@ -1,10 +1,11 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useMemo } from "react";
 import ReactGA from "react-ga4";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 
 import Announcement from "../components/Announcement";
-import EventAccompanying from "../components/Event/EventAccompanying";
+import Event from "../components/Event/Event";
+import Events from "../components/Event/Events";
 import FAQs from "../components/FAQs/FAQs";
 import Footer from "../components/Footer/Footer";
 import NewForm from "../components/Form";
@@ -22,6 +23,7 @@ import OpportunityCards from "../components/OpportunityCards";
 import { FF, showEvent, urlApiOpportunity } from "../config/constants";
 import { Lang, OpportunityType, Subpages } from "../config/types";
 import AppContainerContext from "../contexts/AppContainerContext";
+import useEvents from "../hooks/api/useEvents";
 import { getImageUrl, isEnumValue, setLangDirection } from "../utils";
 
 interface Props {
@@ -34,9 +36,15 @@ function Subpage({ type }: Props) {
   const [ffNewForm] = useSearchParams();
   const navigate = useNavigate();
   const containerRef = useContext(AppContainerContext);
+  const [events] = useEvents(i18n.language as Lang);
 
   const ffOpp = ffNewForm.get("opp");
   const ffVol = ffNewForm.get("vol");
+
+  const eventActive = useMemo(
+    () => events?.find((event) => event.active),
+    [events],
+  );
 
   useEffect(() => {
     if (isEnumValue(Lang, lng)) {
@@ -165,7 +173,9 @@ function Subpage({ type }: Props) {
       case Subpages.ANNOUNCEMENT:
         return <Announcement />;
       case Subpages.EVENT:
-        return <EventAccompanying />;
+        return <Event eventData={{ event: eventActive }} />;
+      case Subpages.EVENTS:
+        return <Events />;
       case Subpages.COOKIES:
         return <Cookie />;
       case Subpages.FAQS:
