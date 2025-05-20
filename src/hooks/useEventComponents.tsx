@@ -1,3 +1,4 @@
+import { Lang } from "need4deed-sdk";
 import { useMemo } from "react"; // Import useMemo
 import { useTranslation } from "react-i18next";
 
@@ -9,7 +10,7 @@ import EventFeed from "../components/Event/EventFeed";
 import EventHolidayGift from "../components/Event/EventHolidayGift";
 import EventVolunTeaMeet from "../components/Event/EventVolunTeaMeet";
 import EventWithKids from "../components/Event/EventWithKids";
-import { EventComponentInfo, EventPropType, Lang } from "../config/types";
+import { EventComponentInfo, EventPropType } from "../config/types";
 import useEvents from "./api/useEvents"; // Correct import path if needed
 
 const legacyEvents: EventComponentInfo[] = [

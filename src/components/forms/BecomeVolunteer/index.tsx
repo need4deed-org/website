@@ -1,11 +1,12 @@
 import { useForm } from "@tanstack/react-form";
 import { validate as validateEmail } from "email-validator";
+import { Lang } from "need4deed-sdk";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 
 import { urlApi } from "../../../config/constants";
-import { Lang, Subpages } from "../../../config/types";
+import { Subpages } from "../../../config/types";
 import useList from "../../../hooks/api/useList";
 import usePostRequest from "../../../hooks/api/usePostRequest";
 import { getImageUrl } from "../../../utils/index";

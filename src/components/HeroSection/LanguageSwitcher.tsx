@@ -1,11 +1,13 @@
-import styled from "styled-components";
+import { Lang } from "need4deed-sdk";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Lang, ScreenTypes } from "../../config/types";
+import styled from "styled-components";
+
+import { ScreenTypes } from "../../config/types";
+import useScreenType from "../../hooks/useScreenType";
 import { CustomHeading } from "../styled/text";
 import Arrow from "../svg/Arrow";
 import MenuItem from "./MenuItem";
-import useScreenType from "../../hooks/useScreenType";
 
 const languageOptions = [
   { value: Lang.DE, label: "DEUTSCH" },

@@ -1,7 +1,7 @@
+import { Lang } from "need4deed-sdk";
 import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
 
-import { Lang } from "../../config/types";
 import { getFirstThursdayOfMonth, getImageUrl } from "../../utils/index";
 import "./index.css";
 

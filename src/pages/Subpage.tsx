@@ -1,3 +1,4 @@
+import { Lang, OpportunityType } from "need4deed-sdk";
 import { useContext, useEffect, useMemo } from "react";
 import ReactGA from "react-ga4";
 import { useTranslation } from "react-i18next";
@@ -21,7 +22,7 @@ import Guidelines from "../components/Legal/Guidelines";
 import LegalNotice from "../components/Legal/Notice";
 import OpportunityCards from "../components/OpportunityCards";
 import { FF, showEvent, urlApiOpportunity } from "../config/constants";
-import { Lang, OpportunityType, Subpages } from "../config/types";
+import { Subpages } from "../config/types";
 import AppContainerContext from "../contexts/AppContainerContext";
 import useEvents from "../hooks/api/useEvents";
 import { getImageUrl, isEnumValue, setLangDirection } from "../utils";

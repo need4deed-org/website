@@ -1,7 +1,9 @@
 /* eslint-disable react/jsx-props-no-spreading */
 
+import { Lang } from "need4deed-sdk";
 import { useTranslation } from "react-i18next";
-import { Lang, ScreenTypes } from "../../config/types";
+
+import { ScreenTypes } from "../../config/types";
 import useTestimonials from "../../hooks/api/useTestimonials";
 import useScreenType from "../../hooks/useScreenType";
 import { PaginatedCards } from "../core/paginatedCards";

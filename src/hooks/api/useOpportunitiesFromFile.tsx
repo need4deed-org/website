@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 
-import { Opportunity, OpportunityParams } from "../../config/types";
+import { OpportunityParams } from "../../config/types";
 import { getFilter, mapToOpportunity } from "../../utils";
+
+type Opportunity = Record<string, string>;
 
 export default function useOpportunitiesFromFile(
   filePath: string,

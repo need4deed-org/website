@@ -1,11 +1,17 @@
 import { TFunction } from "i18next";
 import {
+  OpportunityType,
+  Option,
+  OptionId,
+  TranslatedIntoType,
+} from "need4deed-sdk";
+
+import {
   maxPLZBerlin,
   maxPLZGermany,
   minPLZBerlin,
   minPLZGermany,
 } from "../../config/constants";
-import { OpportunityType, TranslatedIntoType } from "../../config/types";
 import {
   getDateLocalTooUTC,
   haveCommonElements,
@@ -20,14 +26,7 @@ import {
   VolunteerData,
   VolunteerParsedData,
 } from "./BecomeVolunteer/dataStructure";
-import {
-  Availability,
-  Option,
-  OptionId,
-  Selected,
-  TimeSlot,
-  TypePLZ,
-} from "./types";
+import { Availability, Selected, TimeSlot, TypePLZ } from "./types";
 
 function getSelectedTimeslots(state: Availability): [number, OptionId][] {
   return state.reduce((result: [number, OptionId][], day) => {

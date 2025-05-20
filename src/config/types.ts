@@ -1,5 +1,5 @@
 import { DeepKeys } from "@tanstack/react-form";
-import { EventN4D } from "need4deed-sdk";
+import { EventN4D, Lang } from "need4deed-sdk";
 import React from "react";
 
 export interface IncludeClassName {
@@ -25,16 +25,6 @@ export type InputType =
   | "file"
   | "range"
   | "hidden";
-
-export enum Lang {
-  EN = "en",
-  DE = "de",
-  RU = "ru",
-  AR = "ar",
-  FA = "fa",
-  TR = "tr",
-  ES = "es",
-}
 
 export enum Env {
   DEVELOP = "develop",
@@ -70,25 +60,12 @@ export enum Events {
   EVENT_8_31_24 = "event-8-31-24",
 }
 
-export enum OpportunityType {
-  GENERAL = "volunteering",
-  ACCOMPANYING = "accompanying",
-}
-
-export enum TranslatedIntoType {
-  DEUTSCHE = "deutsche",
-  ENGLISH_OK = "englishOk",
-  NO_TRANSLATION = "noTranslation",
-}
-
 // conjunction between keys and disjunction between possible values are applied for seach
 export interface OpportunityParams {
   search?: Record<string, string[]>;
   primaryKeys?: string[];
   language?: Lang;
 }
-
-export type Opportunity = Record<string, string>;
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type AlfredOpportunity = Record<string, any>;
@@ -118,18 +95,6 @@ export type PrefixObjectAccessor<T extends object, TDepth extends any[]> = {
         | `${PrefixFromDepth<K, TDepth>}${DeepKeys<T[K], [TDepth]>}`
     : never;
 }[keyof T];
-
-export enum HttpMethod {
-  GET = "GET",
-  HEAD = "HEAD",
-  POST = "POST",
-  PUT = "PUT",
-  DELETE = "DELETE",
-  TRACE = "TRACE",
-  OPTIONS = "OPTIONS",
-  CONNECT = "CONNECT",
-  PATCH = "PATCH",
-}
 
 export interface EventComponentInfo {
   title: string;
