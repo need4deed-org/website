@@ -204,6 +204,7 @@ html {
     --homepage-footer-partners-section-footer-container-flex-direction: column ;
     --homepage-footer-partners-section-footer-container-justify-content: space-between;
     --homepage-footer-partners-section-contact-socials-container-flex-direction: column ;
+    --homepage-footer-partners-section-contact-socials-container-justify-content: unset;
     --homepage-footer-partners-section-contact-socials-container-gap: 32px ;
     --homepage-footer-partners-section-contact-container-gap: 10px ;
     --homepage-footer-partners-section-socials-container-gap: 20px ;
@@ -353,6 +354,7 @@ html {
     --homepage-footer-partners-section-footer-container-flex-direction: row ;
     --homepage-footer-partners-section-footer-container-justify-content: space-between;
     --homepage-footer-partners-section-contact-socials-container-flex-direction: row ;
+    --homepage-footer-partners-section-contact-socials-container-justify-content: space-between;
     --homepage-footer-partners-section-contact-socials-container-gap: 110px ;
     --homepage-footer-partners-section-contact-container-gap: 10px ;
     --homepage-footer-partners-section-socials-container-gap: 20px ;
@@ -501,6 +503,7 @@ html {
     --homepage-footer-partners-section-footer-container-flex-direction: row ;
     --homepage-footer-partners-section-footer-container-justify-content: space-between;
     --homepage-footer-partners-section-contact-socials-container-flex-direction: column ;
+    --homepage-footer-partners-section-contact-socials-container-justify-content: unset;
     --homepage-footer-partners-section-contact-socials-container-gap: 20px ;
     --homepage-footer-partners-section-contact-container-gap: 10px ;
     --homepage-footer-partners-section-socials-container-gap: 20px ;

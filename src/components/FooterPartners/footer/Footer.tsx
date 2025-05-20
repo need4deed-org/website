@@ -23,10 +23,14 @@ const FooterLinksN4DLogoContainer = styled.div`
   justify-content: space-between;
 `;
 
-const FooterLinksContainer = styled.div`
+interface FooterLinksContainerProps {
+  "flex-direction"?: string;
+}
+
+const FooterLinksContainer = styled.div<FooterLinksContainerProps>`
   display: flex;
-  flex-flow: wrap;
-  gap: var(--homepage-footer-partners-section-footer-links-container-gap);
+  justify-content: space-between;
+  flex-direction: ${(props) => props["flex-direction"] || "row"};
   width: var(--homepage-footer-partners-section-footer-links-container-width);
 `;
 
@@ -42,28 +46,50 @@ const links2 = [
   "homepage.footer.vpa",
 ];
 
-export function Footer() {
-  const screenType = useScreenType();
-  const isMobile = screenType === ScreenTypes.MOBILE;
-
-  return isMobile ? (
-    <FooterContainer>
-      <FooterLinksN4DLogoContainer>
-        <FooterLinks links={links1} />
-        <LogoN4D />
-      </FooterLinksN4DLogoContainer>
+const desktopFooter = (
+  <FooterContainer>
+    <LogoN4D />
+    <FooterLinksContainer>
+      <FooterLinks links={links1} />
       <FooterLinks links={links2} />
       <ContactSocials />
-    </FooterContainer>
-  ) : (
-    <FooterContainer>
-      <LogoN4D />
+    </FooterLinksContainer>
+  </FooterContainer>
+);
+
+const tabletFooter = (
+  <FooterContainer>
+    <LogoN4D />
+    <FooterLinksContainer flex-direction="column">
       <FooterLinksContainer>
         <FooterLinks links={links1} />
         <FooterLinks links={links2} />
-        <ContactSocials />
       </FooterLinksContainer>
-    </FooterContainer>
-  );
+      <ContactSocials />
+    </FooterLinksContainer>
+  </FooterContainer>
+);
+
+const mobileFooter = (
+  <FooterContainer>
+    <FooterLinksN4DLogoContainer>
+      <FooterLinks links={links1} />
+      <LogoN4D />
+    </FooterLinksN4DLogoContainer>
+    <FooterLinks links={links2} />
+    <ContactSocials />
+  </FooterContainer>
+);
+
+const footers = {
+  [ScreenTypes.DESKTOP]: desktopFooter,
+  [ScreenTypes.TABLET]: tabletFooter,
+  [ScreenTypes.MOBILE]: mobileFooter,
+};
+
+export function Footer() {
+  const screenType = useScreenType();
+
+  return footers[screenType];
 }
 export default Footer;
