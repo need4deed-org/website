@@ -40,13 +40,13 @@ export default function Event({ eventData }: Props) {
         </h6>
       )}
 
-      <h6 className="with-linebreaks">{event.locationComment}</h6>
       <img
         src={getImageUrl("N4D-logo-purple-on-transparent-h.webp")}
         height="16"
         alt=""
       />
       <h6 className="with-linebreaks">{event.address.replace(/\\n/g, "\n")}</h6>
+      <h6 className="with-linebreaks">{event.locationComment}</h6>
       <p>
         <a href={event.locationLink} target="_blank" rel="noreferrer">
           {t("event.locationLink")}
