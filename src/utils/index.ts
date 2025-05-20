@@ -1,3 +1,4 @@
+import { Lang } from "need4deed-sdk";
 import { MutableRefObject } from "react";
 
 import { CLOUDFRONT_URL, timeZone } from "../config/constants";
@@ -5,8 +6,6 @@ import {
   AlfredOpportunity,
   Env,
   KeyMap,
-  Lang,
-  Opportunity,
   OpportunityParams,
   Subpages,
   YesNo,
@@ -156,22 +155,25 @@ export function mapToOpportunity(opportunity: Record<string, string>) {
 }
 
 export function mapOpportunity(opportunity: AlfredOpportunity, keyMap: KeyMap) {
-  return Object.entries(keyMap).reduce((mapped: Opportunity, [key, value]) => {
-    const path = value.split(".");
-    let mappedValue = opportunity;
-    path.forEach((opportunityKey) => {
-      const nextValue = mappedValue[opportunityKey];
-      mappedValue = Array.isArray(nextValue)
-        ? pivotArrayToObj(nextValue)
-        : nextValue;
-    });
-    return {
-      ...mapped,
-      [key]: Array.isArray(mappedValue)
-        ? mappedValue.join(", ")
-        : (mappedValue as unknown as string),
-    };
-  }, {});
+  return Object.entries(keyMap).reduce(
+    (mapped: Record<string, string>, [key, value]) => {
+      const path = value.split(".");
+      let mappedValue = opportunity;
+      path.forEach((opportunityKey) => {
+        const nextValue = mappedValue[opportunityKey];
+        mappedValue = Array.isArray(nextValue)
+          ? pivotArrayToObj(nextValue)
+          : nextValue;
+      });
+      return {
+        ...mapped,
+        [key]: Array.isArray(mappedValue)
+          ? mappedValue.join(", ")
+          : (mappedValue as unknown as string),
+      };
+    },
+    {},
+  );
 }
 
 const paramEncoderFnMap = {

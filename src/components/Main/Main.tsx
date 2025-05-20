@@ -1,7 +1,8 @@
+import { Lang } from "need4deed-sdk";
 import { useTranslation } from "react-i18next";
-import { Lang } from "../../config/types";
+
 import useMatchMedia from "../../hooks/useMatchMedia";
-import { getMainCtaUrl, getImageUrl } from "../../utils";
+import { getImageUrl, getMainCtaUrl } from "../../utils";
 import "./Main.css";
 
 const urlLogoHorizontal = getImageUrl("N4D-logo-purple-on-transparent-h.webp");
