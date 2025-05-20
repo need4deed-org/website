@@ -295,7 +295,7 @@ export function consoleLogDeveloperContributionMessage() {
 
   /* eslint-disable-next-line no-console  */
   console.log(
-    `%cWould you like to help developing our website? %cPlease visit our Gitlab repo! %chttps://github.com/need4deed-org/website`,
+    `%cWould you like to help developing our website? %cPlease visit our GitHub repo! %chttps://github.com/need4deed-org/website`,
     `color: ${primaryColor}; font-size: 1rem; font-weight: bold;`,
     `color: ${secondaryColor}; font-size: 1rem;`,
     `color: ${tertiaryColor}; font-size: 1rem; text-decoration: underline;`,
