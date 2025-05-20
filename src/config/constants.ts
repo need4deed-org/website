@@ -10,7 +10,9 @@ export const urlApiTestimonial = `${urlApi}/testimonial/`;
 export const urlApiEvent = `${urlApi}/event/`;
 export const CLOUDFRONT_URL = "https://d2nwrdddg8skub.cloudfront.net/images";
 
-export const showEvent = import.meta.env.VITE_SHOW_EVENT === "true";
+const positives = ["1", "YES", "Yes", "yes", "TRUE", "True", "true"];
+
+export const showEvent = import.meta.env.VITE_SHOW_EVENT in positives;
 
 export const eightDays = 1000 * 60 * 60 * 24 * 8;
 
@@ -23,7 +25,6 @@ export const maxPLZBerlin = 14199;
 export const phoneRegEx =
   /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/;
 
-const positives = ["1", "YES", "Yes", "yes", "TRUE", "True", "true"];
 export const FF = {
   NEW_FORMS_VOLUNTEER: positives.includes(
     import.meta.env.VITE_FF_NEW_FORMS_VOLUNTEER,
