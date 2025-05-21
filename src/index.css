@@ -233,6 +233,12 @@ html {
     --homepage-rac-section-content-buttons-container-flex-direction: column;
     --homepage-rac-section-content-buttons-container-gap: 16px;
 
+    --homepage-process-section-header-gap: 24px ;
+    --homepage-process-section-video-height: 208px ;
+    --homepage-process-section-video-width: 360px ;
+    --homepage-process-section-video-border-radius: 8px ;
+    --homepage-process-section-video-margin-left: -20px ;
+
     --button-height: 64px;
     --button-width: auto;
     --button-padding: 12px 24px;
@@ -386,6 +392,12 @@ html {
     --homepage-rac-section-content-buttons-container-flex-direction: row;
     --homepage-rac-section-content-buttons-container-gap: 16px;
 
+    --homepage-process-section-header-gap: 40px ;
+    --homepage-process-section-video-height: 378px ;
+    --homepage-process-section-video-width: 672px ;
+    --homepage-process-section-video-border-radius: 8px ;
+    --homepage-process-section-video-margin-left: 0 ;
+
     --button-height: 72px;
     --button-width: fit-content;
     --button-padding: 16px 36px;
@@ -536,6 +548,13 @@ html {
     --homepage-rac-section-content-headLine2-letterSpacing: 0.1px;
     --homepage-rac-section-content-buttons-container-flex-direction: row;
     --homepage-rac-section-content-buttons-container-gap: 24px;
+
+
+    --homepage-process-section-header-gap: 56px ;
+    --homepage-process-section-video-height: 562px ;
+    --homepage-process-section-video-width: 1000px ;
+    --homepage-process-section-video-border-radius: 10px ;
+    --homepage-process-section-video-margin-left: 0 ;
 
     --button-height: 72px;
     --button-width: fit-content;
