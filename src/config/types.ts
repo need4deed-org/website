@@ -1,4 +1,6 @@
 import { DeepKeys } from "@tanstack/react-form";
+import { EventN4D, Lang } from "need4deed-sdk";
+import React from "react";
 
 export interface IncludeClassName {
   className?: string;
@@ -24,16 +26,6 @@ export type InputType =
   | "range"
   | "hidden";
 
-export enum Lang {
-  EN = "en",
-  DE = "de",
-  RU = "ru",
-  AR = "ar",
-  FA = "fa",
-  TR = "tr",
-  ES = "es",
-}
-
 export enum Env {
   DEVELOP = "develop",
   TEST = "test",
@@ -57,6 +49,7 @@ export enum Subpages {
   OPPORTUNITIES_TEST = "0pp4-test",
   ACCOMPANYING_TEST = "4cc0-test",
   EVENT = "event",
+  EVENTS = "events",
   PAST_EVENTS = "past-events",
   ADD_OPPORTUNITY = "add-opportunity",
   COOKIES = "cookies",
@@ -67,25 +60,12 @@ export enum Events {
   EVENT_8_31_24 = "event-8-31-24",
 }
 
-export enum OpportunityType {
-  GENERAL = "volunteering",
-  ACCOMPANYING = "accompanying",
-}
-
-export enum TranslatedIntoType {
-  DEUTSCHE = "deutsche",
-  ENGLISH_OK = "englishOk",
-  NO_TRANSLATION = "noTranslation",
-}
-
 // conjunction between keys and disjunction between possible values are applied for seach
 export interface OpportunityParams {
   search?: Record<string, string[]>;
   primaryKeys?: string[];
   language?: Lang;
 }
-
-export type Opportunity = Record<string, string>;
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type AlfredOpportunity = Record<string, any>;
@@ -116,24 +96,18 @@ export type PrefixObjectAccessor<T extends object, TDepth extends any[]> = {
     : never;
 }[keyof T];
 
-export enum HttpMethod {
-  GET = "GET",
-  HEAD = "HEAD",
-  POST = "POST",
-  PUT = "PUT",
-  DELETE = "DELETE",
-  TRACE = "TRACE",
-  OPTIONS = "OPTIONS",
-  CONNECT = "CONNECT",
-  PATCH = "PATCH",
+export interface EventComponentInfo {
+  title: string;
+  component: React.FC<EventPropType | object>;
+  eventData?: EventPropType;
+  active?: boolean;
 }
 
-export interface Testimonial {
-  name: string;
-  pic: string; // base64 encoded thumb most probably
-  translated_text: string;
-  activities: string[];
-}
+export type EventDataType =
+  | { event: EventN4D }
+  | { events: EventComponentInfo[] };
+
+export type EventPropType = { eventData: EventDataType } | object;
 
 export enum ScreenTypes {
   MOBILE = "mobile",

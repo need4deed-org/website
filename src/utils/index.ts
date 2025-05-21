@@ -1,3 +1,4 @@
+import { Lang } from "need4deed-sdk";
 import { MutableRefObject } from "react";
 
 import { CLOUDFRONT_URL, timeZone } from "../config/constants";
@@ -5,8 +6,6 @@ import {
   AlfredOpportunity,
   Env,
   KeyMap,
-  Lang,
-  Opportunity,
   OpportunityParams,
   Subpages,
   YesNo,
@@ -156,22 +155,25 @@ export function mapToOpportunity(opportunity: Record<string, string>) {
 }
 
 export function mapOpportunity(opportunity: AlfredOpportunity, keyMap: KeyMap) {
-  return Object.entries(keyMap).reduce((mapped: Opportunity, [key, value]) => {
-    const path = value.split(".");
-    let mappedValue = opportunity;
-    path.forEach((opportunityKey) => {
-      const nextValue = mappedValue[opportunityKey];
-      mappedValue = Array.isArray(nextValue)
-        ? pivotArrayToObj(nextValue)
-        : nextValue;
-    });
-    return {
-      ...mapped,
-      [key]: Array.isArray(mappedValue)
-        ? mappedValue.join(", ")
-        : (mappedValue as unknown as string),
-    };
-  }, {});
+  return Object.entries(keyMap).reduce(
+    (mapped: Record<string, string>, [key, value]) => {
+      const path = value.split(".");
+      let mappedValue = opportunity;
+      path.forEach((opportunityKey) => {
+        const nextValue = mappedValue[opportunityKey];
+        mappedValue = Array.isArray(nextValue)
+          ? pivotArrayToObj(nextValue)
+          : nextValue;
+      });
+      return {
+        ...mapped,
+        [key]: Array.isArray(mappedValue)
+          ? mappedValue.join(", ")
+          : (mappedValue as unknown as string),
+      };
+    },
+    {},
+  );
 }
 
 const paramEncoderFnMap = {
@@ -295,7 +297,7 @@ export function consoleLogDeveloperContributionMessage() {
 
   /* eslint-disable-next-line no-console  */
   console.log(
-    `%cWould you like to help developing our website? %cPlease visit our Gitlab repo! %chttps://github.com/need4deed-org/website`,
+    `%cWould you like to help developing our website? %cPlease visit our GitHub repo! %chttps://github.com/need4deed-org/website`,
     `color: ${primaryColor}; font-size: 1rem; font-weight: bold;`,
     `color: ${secondaryColor}; font-size: 1rem;`,
     `color: ${tertiaryColor}; font-size: 1rem; text-decoration: underline;`,
@@ -374,4 +376,35 @@ export function* range(start: number, end: number, step = 1) {
   for (let i = start; isWithinRange(i); i += step) {
     yield i;
   }
+}
+
+export function getTimeFrameString(lang: Lang, from: Date, to?: Date) {
+  const locale = lang === Lang.EN ? "en-UK" : lang;
+  const fromDate = new Date(from);
+  const toDate = to ? new Date(to) : null;
+
+  const options: Intl.DateTimeFormatOptions = {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+  };
+  const sameDayOptions: Intl.DateTimeFormatOptions = {
+    hour: "2-digit",
+    minute: "2-digit",
+  };
+
+  const fromString = fromDate.toLocaleString(locale, options);
+  const toOptions =
+    toDate &&
+    fromDate.getDate() === toDate.getDate() &&
+    fromDate.getMonth() === toDate.getMonth() &&
+    fromDate.getFullYear() === toDate.getFullYear()
+      ? sameDayOptions
+      : options;
+
+  const toString = to ? (toDate as Date).toLocaleString(locale, toOptions) : "";
+
+  return toString ? `${fromString} - ${toString}` : fromString;
 }

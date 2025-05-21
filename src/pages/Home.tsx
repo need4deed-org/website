@@ -1,9 +1,9 @@
+import { Lang } from "need4deed-sdk";
 import { useContext, useEffect } from "react";
+import ReactGA from "react-ga4";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useParams } from "react-router-dom";
-import ReactGA from "react-ga4";
 
-import AppContainerContext from "../contexts/AppContainerContext";
 import AboutProject from "../components/AboutProject/AboutProject";
 import ContactForRAC from "../components/ContactForRAC";
 import Footer from "../components/Footer/Footer";
@@ -13,8 +13,8 @@ import Main from "../components/Main/Main";
 import VolunteerOpportunity from "../components/VolunteerOpportunity/VolunteerOpportunity";
 import VolunteerWorkflow from "../components/VolunteerWorkflow/VolunteerWorkflow";
 import { showEvent } from "../config/constants";
-import { Lang } from "../config/types";
-import { isEnumValue, setLangDirection, getImageUrl } from "../utils";
+import AppContainerContext from "../contexts/AppContainerContext";
+import { getImageUrl, isEnumValue, setLangDirection } from "../utils";
 
 function Home() {
   const { i18n, t } = useTranslation();

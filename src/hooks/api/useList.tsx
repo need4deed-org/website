@@ -1,15 +1,14 @@
 import { useQuery } from "@tanstack/react-query";
+import { HttpMethod, Option } from "need4deed-sdk";
 import { useEffect, useState } from "react";
 
 import fallbackLists from "../../components/forms/fallbackLists";
 import {
   ListsOfOptions,
   ListsOfOptionsType,
-  Option,
 } from "../../components/forms/types";
 import { urlApiVolunteer } from "../../config/constants";
-import { HttpMethod } from "../../config/types";
-import fetchFn from "./utils";
+import { fetchFn } from "./utils";
 
 const FF_USE_OPTIONS_LISTS = false;
 

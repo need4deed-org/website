@@ -1,4 +1,5 @@
-import { OpportunityType } from "../../config/types";
+import { OpportunityType } from "need4deed-sdk";
+
 import { IconName } from "../VolunteeringCategories/types";
 import { Opportunity, OpportunityApi } from "./types";
 

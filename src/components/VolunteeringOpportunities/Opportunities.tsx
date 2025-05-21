@@ -1,17 +1,14 @@
+import { Lang, OpportunityType } from "need4deed-sdk";
 import { useTranslation } from "react-i18next";
+
 import { urlApiOpportunity } from "../../config/constants";
-import {
-  Lang,
-  OpportunityParams,
-  OpportunityType,
-  ScreenTypes,
-} from "../../config/types";
+import { OpportunityParams, ScreenTypes } from "../../config/types";
 import useOpportunities from "../../hooks/api/useOpportunities";
+import useScreenType from "../../hooks/useScreenType";
 import { OpportunitiesContainer } from "../styled/containers";
 import OpportunityCard from "./OpportunityCard";
 import { OpportunityApi } from "./types";
 import { getMappedOpportunities, getMostPopularOpportunities } from "./utils";
-import useScreenType from "../../hooks/useScreenType";
 
 const opportunityParams: OpportunityParams = {
   search: {
