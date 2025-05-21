@@ -4,10 +4,10 @@ import {
   FieldApi,
   FieldComponent,
 } from "@tanstack/react-form";
+import { Lang } from "need4deed-sdk";
 import { MouseEvent, RefObject, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { Lang } from "../../config/types";
 import useOutsideClick from "../../hooks/useOutsideClick";
 import { Selected } from "./types";
 

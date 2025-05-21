@@ -1,7 +1,6 @@
-import { EventN4D } from "need4deed-sdk";
+import { EventN4D, Lang } from "need4deed-sdk";
 import { useTranslation } from "react-i18next";
 
-import { Lang } from "../../config/types";
 import { getImageUrl, getTimeFrameString } from "../../utils";
 
 interface Props {

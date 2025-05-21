@@ -1,9 +1,11 @@
 import {
   Lang,
+  Opportunity,
   OpportunityType,
   TranslatedIntoType,
-} from "../../../config/types";
-import { Availability, OptionId, Selected } from "../types";
+} from "need4deed-sdk";
+
+import { Availability, Selected } from "../types";
 
 export interface OpportunityData {
   email: string;
@@ -44,27 +46,6 @@ export enum OpportunityArrayDataKeys {
 }
 export type OpportunityDataLists = `${OpportunityArrayDataKeys}`;
 
-export interface OpportunityParsedData {
-  title: string;
-  rac_email: string;
-  rac_full_name: string;
-  rac_phone: string;
-  rac_address: string;
-  rac_plz: string;
-  opportunity_type: OpportunityType;
-  accomp_address: string;
-  accomp_postcode: string;
-  accomp_datetime?: string;
-  accomp_name?: string;
-  accomp_phone?: string;
-  accomp_information?: string;
-  accomp_translation?: TranslatedIntoType;
-  berlin_locations?: OptionId[];
-  languages: OptionId[];
-  activities: OptionId[];
-  skills: OptionId[];
-  timeslots?: [number, OptionId][];
-  volunteers_number: number;
-  vo_information?: string;
+export interface OpportunityParsedData extends Opportunity {
   language: Lang;
 }

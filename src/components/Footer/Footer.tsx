@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { HashLink } from "react-router-hash-link";
 
-import CookieConsentBanner from "../CookieConsentBanner";
 import { Subpages } from "../../config/types";
+import CookieConsentBanner from "../CookieConsentBanner";
 import Sponsors from "../Sponsors/Sponsors";
 import "./Footer.css";
 
@@ -24,11 +24,13 @@ function Footer({ showSponsors = true }: Props) {
             <h6>{t("footer.aboutUs.aboutUsHeading")}</h6>
             <ul>
               <li>
+                {/* @ts-expect-error TS2786 */}
                 <HashLink smooth to={`/${i18n.language}#about-project`}>
                   {t("footer.aboutUs.project")}
                 </HashLink>
               </li>
               <li>
+                {/* @ts-expect-error TS2786 */}
                 <HashLink smooth to={`/${Subpages.FAQS}/${i18n.language}`}>
                   {t("faqs.faqs")}
                 </HashLink>

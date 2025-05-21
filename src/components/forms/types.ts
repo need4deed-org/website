@@ -1,4 +1,4 @@
-import { Lang } from "../../config/types";
+import { Option, OptionId, OptionTitle } from "need4deed-sdk";
 
 export enum ListsOfOptions {
   LOCATIONS = "locations",
@@ -19,16 +19,6 @@ export enum FormType {
 export enum TypePLZ {
   BERLIN = "Berlin",
   GERMANY = "Germany",
-}
-
-export type OptionTitle = Partial<{
-  [key in Lang]: string;
-}>;
-
-export type OptionId = string | number;
-export interface Option {
-  id: OptionId;
-  title: OptionTitle;
 }
 
 export interface Selected {

@@ -1,8 +1,10 @@
+import { Lang } from "need4deed-sdk";
 import { useContext, useMemo, useState } from "react";
 import ReactGA from "react-ga4";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { Lang, Subpages } from "../../config/types";
+
+import { Subpages } from "../../config/types";
 import AppContainerContext from "../../contexts/AppContainerContext";
 import useEvents from "../../hooks/api/useEvents";
 import { getBaseUrl, setLangDirection } from "../../utils";

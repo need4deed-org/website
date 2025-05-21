@@ -1,4 +1,6 @@
-import { KeyMap, OpportunityParams, OpportunityType } from "../../config/types";
+import { OpportunityType } from "need4deed-sdk";
+
+import { KeyMap, OpportunityParams } from "../../config/types";
 import useOpportunities from "../../hooks/api/useOpportunities";
 import useOpportunitiesFromFile from "../../hooks/api/useOpportunitiesFromFile";
 import { mapOpportunity } from "../../utils";

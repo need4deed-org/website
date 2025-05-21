@@ -1,7 +1,8 @@
 import { render } from "@testing-library/react";
-import { RefObject, createRef, act } from "react";
+import { Lang } from "need4deed-sdk";
+import { RefObject, act, createRef } from "react";
 
-import { Lang, OpportunityParams } from "../config/types";
+import { OpportunityParams } from "../config/types";
 import {
   getBaseUrl,
   getFilter,
