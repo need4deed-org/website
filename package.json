@@ -40,7 +40,7 @@
     "bootstrap": "^5.3.3",
     "email-validator": "^2.0.4",
     "i18next": "^23.10.1",
-    "need4deed-sdk": "github:need4deed-org/sdk#main",
+    "need4deed-sdk": "git+https://github.com/need4deed-org/sdk.git",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.1",
     "react-cookie-consent": "^9.0.0",
