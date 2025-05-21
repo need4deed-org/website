@@ -40,6 +40,15 @@ jobs:
         with:
           node-version: 20
           cache: "yarn"
+          
+      - name: Set up SSH for private dependencies
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY_SDK }}" | tr -d '\r' > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          chmod 400 ~/.ssh/known_hosts
+          
       - name: Install dependencies
         run: yarn install
       - name: Run tests
