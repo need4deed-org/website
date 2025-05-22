@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { videoGuideURL } from "../../config/constants";
 
 const StyledDiv = styled.div`
   height: var(--homepage-process-section-video-height);
@@ -15,11 +16,7 @@ const StyledDiv = styled.div`
 export default function Video() {
   return (
     <StyledDiv>
-      <iframe
-        src="https://www.youtube.com/embed/tk5akHPd9oo?si=k01Klx7SxIWwKHO_&rel=0&autoplay=0"
-        title="title"
-        loading="lazy"
-      />
+      <iframe src={videoGuideURL} title="title" loading="lazy" />
     </StyledDiv>
   );
 }
