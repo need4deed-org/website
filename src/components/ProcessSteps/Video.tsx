@@ -10,6 +10,7 @@ const StyledDiv = styled.div`
     width: 100%;
     height: 100%;
     border-radius: var(--homepage-process-section-video-border-radius);
+    border: none;
   }
 `;
 
