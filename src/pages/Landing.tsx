@@ -5,6 +5,7 @@ import { TestimonialsSection } from "../components/Testimonials";
 import { HeroSection } from "../components/HeroSection";
 import { RacSection } from "../components/RacSection";
 import { FooterPartnersSection } from "../components/FooterPartners";
+import { ProcessStepsSection } from "../components/ProcessSteps";
 
 export default function Landing() {
   return (
@@ -12,6 +13,7 @@ export default function Landing() {
       <HeroSection />
       <VolunteeringCategoriesSection />
       <VolunteeringOpportunitiesSection />
+      <ProcessStepsSection />
       <TestimonialsSection />
       <RacSection />
       <FooterPartnersSection />
