@@ -35,7 +35,7 @@ export default function TestimonialCard({
   return (
     <Card>
       <Profile>
-        <CirclePic src={getImageUrl(pic)} />
+        {pic && <CirclePic src={getImageUrl(pic)} />}
         <Heading3>{name}</Heading3>
       </Profile>
 
