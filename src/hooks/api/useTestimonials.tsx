@@ -5,6 +5,7 @@ import { urlApiTestimonial } from "../../config/constants";
 import { fetchFn } from "./utils";
 
 const staleTime = 1000 * 60 * 60 * 24; // 1d
+const headSilhouette = "head-silhouette.webp";
 
 export default function useTestimonials(
   language: Lang,
@@ -18,6 +19,11 @@ export default function useTestimonials(
     queryFn: () =>
       fetchFn<Testimonial[]>({
         url: `${urlApiTestimonial}?language=${language}`,
+        fnDTO: (data) =>
+          data.map((testimonial) => ({
+            ...testimonial,
+            pic: testimonial.pic || headSilhouette,
+          })),
       }),
     staleTime,
   });
