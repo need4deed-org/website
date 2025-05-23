@@ -1,3 +1,19 @@
+/**
+ * Asynchronously fetches data from a specified URL, optionally applying transformations.
+ *
+ * @template R The type of the raw response data (defaults to `any`).
+ * @template D The type of the transformed data (defaults to `R`).
+ *
+ * @param {object} params - An object containing the fetch parameters.
+ * @param {string} params.url - The URL to fetch data from.
+ * @param {RequestInit} [params.options] - Optional fetch API options to customize the request.
+ * @param {(data: R) => D} [params.fnDTO] - An optional function to transform the raw response data.
+ * If provided, this function will be applied to the JSON-parsed
+ * response before resolving the Promise.
+ *
+ * @returns {Promise<D>} A Promise that resolves to the fetched and potentially transformed data.
+ * If `fnDTO` is not provided, the Promise resolves to the raw JSON-parsed data.
+ */
 export function fetchFn<R, D = R>({
   url,
   options,
@@ -7,7 +23,11 @@ export function fetchFn<R, D = R>({
   options?: RequestInit;
   fnDTO?: (data: R) => D;
 }): Promise<D> {
-  return fetch(url, options)
+  const defaultOptions: RequestInit = {
+    headers: { "Content-Type": "application/json" },
+  };
+
+  return fetch(url, { ...defaultOptions, ...options })
     .then((response) => {
       if (response.ok) return response.json();
       throw new Error(response.statusText);
