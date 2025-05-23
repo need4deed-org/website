@@ -13,4 +13,7 @@ export default defineConfig({
     css: true,
     setupFiles: "./src/test/setup.ts",
   },
+  server: {
+    allowedHosts: import.meta.env.VITE_ALLOWED_HOSTS?.split(",") || [],
+  },
 });
