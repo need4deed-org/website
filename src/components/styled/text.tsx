@@ -24,6 +24,7 @@ export const Heading1 = styled.h1<TextProps>`
   line-height: var(--text-h1-line-height);
   letter-spacing: var(--text-h1-letter-spacing);
   color: ${(props) => props.color || "var(--color-midnight)"};
+  margin: ${(props) => props.margin};
 `;
 
 export const Heading2 = styled.h2<TextProps>`
@@ -32,6 +33,7 @@ export const Heading2 = styled.h2<TextProps>`
   line-height: var(--text-h2-line-height);
   letter-spacing: var(--text-h2-letter-spacing);
   color: ${(props) => props.color || "var(--color-midnight)"};
+  margin: ${(props) => props.margin};
 `;
 
 export const Heading3 = styled.h3<TextProps>`
@@ -39,7 +41,7 @@ export const Heading3 = styled.h3<TextProps>`
   font-size: var(--text-h3-font-size);
   line-height: var(--text-h3-line-height);
   letter-spacing: var(--text-h3-letter-spacing);
-  color: ${(props) => props.color || "var(--color-midnight)"};
+  margin: ${(props) => props.margin};
 `;
 
 export const Heading4 = styled.h4<TextProps>`
@@ -48,13 +50,15 @@ export const Heading4 = styled.h4<TextProps>`
   line-height: var(--text-h4-line-height);
   letter-spacing: var(--text-h4-letter-spacing);
   color: ${(props) => props.color || "var(--color-midnight)"};
+  margin: ${(props) => props.margin};
 `;
 
 export const Paragraph = styled.p<TextProps>`
   font-weight: ${(props) => props.fontWeight || "var(--text-p-font-weight)"};
   font-size: ${(props) => props.fontSize || "var(--text-p-font-size)"};
   line-height: ${(props) => props.lineheight || "var(--text-p-line-height)"};
-  letter-spacing: var(--text-p-letter-spacing);
+  letter-spacing: ${(props) =>
+    props.letterSpacing || "var(--text-p-letter-spacing)"};
   color: ${(props) => props.color || "var(--color-midnight)"};
   margin: 0;
 `;
