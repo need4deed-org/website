@@ -87,12 +87,17 @@ export const IndicatorsContainer = styled.div.attrs<ContainerProps>(
   gap: 8px;
 `;
 
-export const IconDiv = styled.div`
+interface IconDiVProps {
+  size?: string;
+}
+
+export const IconDiv = styled.div<IconDiVProps>`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: var(--icon-size);
-  height: var(--icon-size);
+
+  width: ${(props) => props.size || "var(--icon-size)"};
+  height: ${(props) => props.size || "var(--icon-size)"};
 
   svg {
     // Target the SVG inside IconDiv
@@ -223,4 +228,19 @@ export const SectionHeaderContainer = styled.div.attrs<ContainerProps>(
   display: flex;
   flex-direction: column;
   gap: ${(props) => props.gap};
+`;
+
+interface NumberingDivProps {
+  ["background-color"]?: string;
+}
+
+export const NumberingDiv = styled.div<NumberingDivProps>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--numbering-div-width);
+  height: var(--numbering-div-height);
+  border-radius: var(--numbering-div-border-radius);
+  background-color: ${(props) =>
+    props["background-color"] || "var(--color-orchid-dark)"};
 `;
