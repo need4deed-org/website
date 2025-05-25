@@ -1,10 +1,10 @@
 import {
-  ChatsTeardrop,
-  Baby,
-  Bicycle,
-  CalendarStar,
-  PingPong,
-  Users,
+  BabyIcon as Baby,
+  BicycleIcon as Bicycle,
+  CalendarStarIcon as CalendarStar,
+  ChatsTeardropIcon as ChatsTeardrop,
+  PingPongIcon as PingPong,
+  UsersIcon as Users,
 } from "@phosphor-icons/react";
 import { IconName } from "./types";
 
