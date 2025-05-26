@@ -233,6 +233,31 @@ html {
     --homepage-rac-section-content-buttons-container-flex-direction: column;
     --homepage-rac-section-content-buttons-container-gap: 16px;
 
+    --homepage-process-section-header-gap: 24px ;
+    --homepage-process-section-video-height: 208px ;
+    --homepage-process-section-video-width: 360px ;
+    --homepage-process-section-video-border-radius: 8px ;
+    --homepage-process-section-video-margin-left: -20px ;
+    --homepage-process-section-card-flex-direction: column ;
+    --homepage-process-section-card-width: 320px;
+    --homepage-process-section-card-height: 330px;
+    --homepage-process-section-card-border-radius: 24px;
+    --homepage-process-section-card-padding: 20px 28px 32px 20px; 
+    --homepage-process-section-card-gap: 24px;
+    --homepage-process-section-card-header-flex-direction: row;
+    --homepage-process-section-card-header-gap:20px;
+    --homepage-process-section-card-week-div-padding:8px 12px 6px 12px;
+    --homepage-process-section-card-week-div-radius: 4px;
+    --homepage-process-section-card-info-div-gap: 16px;
+    --homepage-process-section-card-info-headline-div-gap: 12px;
+    --homepage-process-section-card-info-bullet-div-padding-left: 8px;
+    --homepage-process-section-card-info-text-div-gap: 24px;
+    --homepage-process-section-card-info-text-fontWeight: 400;
+    --homepage-process-section-card-info-text-fontSize: 16px;
+    --homepage-process-section-card-info-text-lineheight: 20px;
+    --homepage-process-section-card-info-text-letterSpacing: 0px;
+    --homepage-process-section-card-icon-size: 40px;
+
     --button-height: 64px;
     --button-width: auto;
     --button-padding: 12px 24px;
@@ -242,6 +267,11 @@ html {
     --button-text-line-height: 25px;
     --button-text-letter-spacing: 0.13px;
     --button-text-text-align: center;
+
+    --numbering-div-width: 32px;
+    --numbering-div-height: 32px;
+    --numbering-div-border-radius: 16.57px;
+
   }
 }
 
@@ -386,6 +416,32 @@ html {
     --homepage-rac-section-content-buttons-container-flex-direction: row;
     --homepage-rac-section-content-buttons-container-gap: 16px;
 
+    --homepage-process-section-header-gap: 40px ;
+    --homepage-process-section-video-height: 378px ;
+    --homepage-process-section-video-width: 672px ;
+    --homepage-process-section-video-border-radius: 8px ;
+    --homepage-process-section-video-margin-left: 0 ;
+    --homepage-process-section-card-flex-direction: column ;
+    --homepage-process-section-card-width: 328px;
+    --homepage-process-section-card-height: 330px;
+    --homepage-process-section-card-border-radius: 24px;
+    --homepage-process-section-card-padding: 20px 28px 32px 20px; 
+    --homepage-process-section-card-gap: 24px;
+    --homepage-process-section-card-header-flex-direction: row;
+    --homepage-process-section-card-header-gap:20px;
+    --homepage-process-section-card-week-div-padding:8px 12px 6px 12px;
+    --homepage-process-section-card-week-div-radius: 4px;
+    --homepage-process-section-card-info-div-gap: 16px;
+    --homepage-process-section-card-info-headline-div-gap: 20px;
+    --homepage-process-section-card-info-bullet-div-padding-left: 8px;
+    --homepage-process-section-card-info-text-div-gap: 28px;
+    --homepage-process-section-card-info-text-fontWeight: 400;
+    --homepage-process-section-card-info-text-fontSize: 16px;
+    --homepage-process-section-card-info-text-lineheight: 20px;
+    --homepage-process-section-card-info-text-letterSpacing: 0px;
+    --homepage-process-section-card-icon-size: 40px;
+
+
     --button-height: 72px;
     --button-width: fit-content;
     --button-padding: 16px 36px;
@@ -397,6 +453,10 @@ html {
     --button-text-text-align: center;
 
     --paginated-cards-visible-cards-container-gap: 20px;
+
+    --numbering-div-width: 32px;
+    --numbering-div-height: 32px;
+    --numbering-div-border-radius: 16.57px;
   }
 }
 
@@ -537,6 +597,30 @@ html {
     --homepage-rac-section-content-buttons-container-flex-direction: row;
     --homepage-rac-section-content-buttons-container-gap: 24px;
 
+    --homepage-process-section-header-gap: 56px ;
+    --homepage-process-section-video-height: 562px ;
+    --homepage-process-section-video-width: 1000px ;
+    --homepage-process-section-video-border-radius: 10px ;
+    --homepage-process-section-video-margin-left: 0 ;
+    --homepage-process-section-card-flex-direction: row ;
+    --homepage-process-section-card-width: 880px;
+    --homepage-process-section-card-height: 274px;
+    --homepage-process-section-card-border-radius: 24px;
+    --homepage-process-section-card-padding: 32px 64px 48px 32px; 
+    --homepage-process-section-card-gap: 32px;
+    --homepage-process-section-card-header-flex-direction: column;
+    --homepage-process-section-card-header-gap:20px;
+    --homepage-process-section-card-week-div-padding:8px 12px 6px 12px;
+    --homepage-process-section-card-week-div-radius: 4px;
+    --homepage-process-section-card-info-div-gap: 20px;
+    --homepage-process-section-card-info-headline-div-gap: 16px;
+    --homepage-process-section-card-info-text-div-gap: 24px;
+    --homepage-process-section-card-info-text-fontWeight: 400;
+    --homepage-process-section-card-info-text-fontSize: 20px;
+    --homepage-process-section-card-info-text-lineheight: 20px;
+    --homepage-process-section-card-info-text-letterSpacing: 0px;
+    --homepage-process-section-card-icon-size: 40px;
+
     --button-height: 72px;
     --button-width: fit-content;
     --button-padding: 16px 36px;
@@ -548,5 +632,9 @@ html {
     --button-text-text-align: center;
 
     --paginated-cards-visible-cards-container-gap: 24px;
+    
+    --numbering-div-width: 36px;
+    --numbering-div-height: 36px;
+    --numbering-div-border-radius: 18.64px;
   }
 }

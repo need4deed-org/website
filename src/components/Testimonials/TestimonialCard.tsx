@@ -1,6 +1,7 @@
 import { Testimonial } from "need4deed-sdk";
 import styled from "styled-components";
 
+import { getImageUrl } from "../../utils";
 import { Activities } from "../core/common";
 import { BaseCard } from "../styled/containers";
 import { CirclePic } from "../styled/img";
@@ -34,7 +35,7 @@ export default function TestimonialCard({
   return (
     <Card>
       <Profile>
-        {pic && <CirclePic src={pic} />}
+        {pic && <CirclePic src={getImageUrl(pic)} />}
         <Heading3>{name}</Heading3>
       </Profile>
 
