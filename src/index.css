@@ -233,6 +233,8 @@ html {
     --homepage-rac-section-content-buttons-container-flex-direction: column;
     --homepage-rac-section-content-buttons-container-gap: 16px;
 
+
+    --homepage-process-section-gap: 40px ;
     --homepage-process-section-header-gap: 24px ;
     --homepage-process-section-video-height: 208px ;
     --homepage-process-section-video-width: 360px ;
@@ -257,6 +259,8 @@ html {
     --homepage-process-section-card-info-text-lineheight: 20px;
     --homepage-process-section-card-info-text-letterSpacing: 0px;
     --homepage-process-section-card-icon-size: 40px;
+    --homepage-process-section-card-last-step-width:320px;
+
 
     --button-height: 64px;
     --button-width: auto;
@@ -416,6 +420,7 @@ html {
     --homepage-rac-section-content-buttons-container-flex-direction: row;
     --homepage-rac-section-content-buttons-container-gap: 16px;
 
+    --homepage-process-section-gap: 80px ;
     --homepage-process-section-header-gap: 40px ;
     --homepage-process-section-video-height: 378px ;
     --homepage-process-section-video-width: 672px ;
@@ -440,7 +445,7 @@ html {
     --homepage-process-section-card-info-text-lineheight: 20px;
     --homepage-process-section-card-info-text-letterSpacing: 0px;
     --homepage-process-section-card-icon-size: 40px;
-
+    --homepage-process-section-card-last-step-width:328px;
 
     --button-height: 72px;
     --button-width: fit-content;
@@ -597,6 +602,7 @@ html {
     --homepage-rac-section-content-buttons-container-flex-direction: row;
     --homepage-rac-section-content-buttons-container-gap: 24px;
 
+    --homepage-process-section-gap: 80px ;
     --homepage-process-section-header-gap: 56px ;
     --homepage-process-section-video-height: 562px ;
     --homepage-process-section-video-width: 1000px ;
@@ -620,6 +626,7 @@ html {
     --homepage-process-section-card-info-text-lineheight: 20px;
     --homepage-process-section-card-info-text-letterSpacing: 0px;
     --homepage-process-section-card-icon-size: 40px;
+    --homepage-process-section-card-last-step-width:296px;
 
     --button-height: 72px;
     --button-width: fit-content;

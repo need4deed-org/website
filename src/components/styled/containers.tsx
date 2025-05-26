@@ -220,6 +220,41 @@ export const VisibleCardsContainer = styled.div.attrs<ContainerProps>(
   gap: var(--paginated-cards-visible-cards-container-gap);
 `;
 
+export const OverlayingVisibleCardsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: var(--paginated-cards-visible-cards-container-gap);
+
+  /* Add padding or margin to create the "border" effect that extends right */
+  padding-right: 9999px; /* A large value to simulate "infinity" */
+  margin-right: -9999px; /* Counteract the padding to avoid horizontal scrollbar */
+  overflow: hidden; /* Hide the excess content from the padding */
+`;
+
+export const NextVisibleCardContainer = styled.div`
+  display: flex;
+  gap: var(--paginated-cards-visible-cards-container-gap);
+  position: relative;
+
+  /* The overlay pseudo-element */
+  &::before {
+    content: ""; /* Essential for pseudo-elements */
+    position: absolute; /* Position the overlay over its parent */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      rgba(246, 238, 231, 0.2) 0%,
+      rgba(247, 220, 244, 0.8) 34.82%,
+      #f7cdff 100%
+    );
+    pointer-events: none; /* Allows clicks to pass through to the elements beneath */
+    z-index: 1;
+    border-radius: var(--card-border-radius);
+  }
+`;
 export const SectionHeaderContainer = styled.div.attrs<ContainerProps>(
   (props) => ({
     id: props.id,
@@ -240,6 +275,8 @@ export const NumberingDiv = styled.div<NumberingDivProps>`
   align-items: center;
   width: var(--numbering-div-width);
   height: var(--numbering-div-height);
+  min-width: var(--numbering-div-width);
+  min-height: var(--numbering-div-height);
   border-radius: var(--numbering-div-border-radius);
   background-color: ${(props) =>
     props["background-color"] || "var(--color-orchid-dark)"};
