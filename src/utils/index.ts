@@ -13,7 +13,7 @@ import {
 
 export function pivotArrayToObj(arr: Array<Record<string, unknown>>) {
   const [first] = arr;
-  if (typeof first !== "object") return arr;
+  if (!first || typeof first !== "object") return arr;
 
   const init = Object.keys(first).reduce(
     (obj: Record<string, unknown[]>, key) => ({
