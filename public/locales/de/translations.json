@@ -529,19 +529,19 @@
   "homepage": {
     "heroSection": {
       "menuItems": {
-        "about": "ÜBER",
-        "volunteeringOpportunities": "ALLGEMEINE ENGAGEMENTMÖGLICHKEITEN MIT GEFLÜCHTETEN",
+        "about": "ÜBER UNS",
+        "volunteeringOpportunities": "EHRENAMTSANGEBOTE",
         "events": "VERANSTALTUNGEN"
       },
       "content": {
-        "heroText": "Bedarfsorientierte, ehrenamtliche Unterstützung für Flüchtlinge in Berlin",
-        "heroSupportingText": "Wir verbinden Freiwillige mit Flüchtlingsunterkünften in Not",
-        "buttonJoinVolunteer": "Als Freiwilliger mitmachen",
-        "buttonJoinRefugeeCenter": "Als Flüchtlingsunterkunft mitmachen"
+        "heroText": "Ehrenamtliche Unterstützung für Geflüchtete",
+        "heroSupportingText": "Wir verbinden Freiwillige mit Gemeinschaftsunterkünften in Berlin",
+        "buttonJoinVolunteer": "Jetzt freiwillig engagieren",
+        "buttonJoinRefugeeCenter": "Unterstützung als Unterkunft beantragen"
       }
     },
     "volunteeringCategories": {
-      "header": "Engagementmöglichkeiten",
+      "header": "Wie kannst Du Dich engagieren?",
       "headerParagraph": "Wir bieten verschiedene Arten von ehrenamtlichen Tätigkeiten an, entweder regelmäßig oder gelegentlich.",
       "card": {
         "germanLanguageSupport": "Deutsche Unterstützung",
@@ -552,12 +552,12 @@
         "skillsBasedVolunteeringInfo": "Nutze deine Fähigkeiten – z. B. Fahrradreparatur, Gartenarbeit oder Musik.",
         "events": "Veranstaltungen",
         "eventsInfo": "Manche Events brauchen extra Hilfe – Festivals, Ausflüge, Gartenarbeit oder Kleiderkammer einrichten.",
-        "sportsActivities": "Sportliche Aktivitäten",
-        "sportsActivitiesInfo": "Hilf mit, Sportangebote für Kinder, Jugendliche oder Erwachsene in Unterkünften zu organisieren.",
-        "accompanyARefugee": "Geflüchtete begleiten",
+        "sportsActivities": "Allgemeines Engagement",
+        "sportsActivitiesInfo": "Hilf mit Kleiderkammer, Tandem oder Sportangebote für Kinder, Jugendliche oder Erwachsene in Unterkünften zu organisieren.",
+        "accompanyARefugee": "Begleitung",
         "accompanyARefugeeInfo": "Sprichst du fließend Deutsch und eine weitere Sprache? Begleite Geflüchtete zu Ämtern, Ärzt:innen oder anderen Terminen."
       },
-      "footerButton": "Engagementmöglichkeiten ansehen"
+      "footerButton": "Siehe Ehrenamtsangebote"
     },
     "volunteeringOpportunities": {
       "header": "Freiwilligenmöglichkeiten entdecken",
@@ -565,6 +565,10 @@
       "schedule": "Zeitplan",
       "district": "Bezirk",
       "footerButton": "Alle Freiwilligenmöglichkeiten ansehen"
+    },
+    "testimonials": {
+      "header": "ERFAHRUNGSBERICHTE",
+      "headerParagraph": "Was Freiwillige und Unterkünfte sagen"
     },
     "racSection": {
       "headLine1": "Wir unterstützen Organisationen",
@@ -583,7 +587,45 @@
       "contact": "Kontakt"
     },
     "processSteps": {
-      "headline": "Wie Sie Flüchtlinge in Ihrer Gemeinde unterstützen können"
+      "headline": "Wie Sie Geflüchtete in Ihrer Gemeinde unterstützen können",
+      "stepsHeadline": "So fangen Sie an",
+      "steps": {
+        "1": {
+          "title": "Anmelden",
+          "week": "WOCHE 1",
+          "infoText1": "Klicken Sie auf „Freiwillige:r werden“",
+          "infoText2": "Nutzen Sie unser Online-Formular, um grundlegende Informationen, Fähigkeiten und Präferenzen einzugeben"
+        },
+        "2": {
+          "title": "Zusätzliche Dokumente beantragen und einreichen",
+          "week": "WOCHE 1",
+          "infoText1": "Beantragen Sie ein erweitertes Führungszeugnis individuell oder mit Hilfe von Need4Deed",
+          "infoText2": "Holen Sie sich eine Masernimpfung"
+        },
+        "3": {
+          "title": "Wir suchen Ihren Einsatzort",
+          "week": "WOCHE 1",
+          "infoText1": "Währenddessen suchen wir nach der besten Übereinstimmung mit einem Koordinator einer Flüchtlingseinrichtung, die Unterstützung benötigt"
+        },
+        "4": {
+          "title": "Wir finden eine passende Stelle!",
+          "week": "WOCHE 1-2",
+          "infoText1": "Wir finden eine Flüchtlingseinrichtung, die Sie aufgrund Ihrer Fähigkeiten und Präferenzen am besten unterstützen können"
+        },
+        "5": {
+          "title": "Erster Kontakt und Kennenlerntreffen",
+          "week": "WOCHE 2-3",
+          "infoText1": "Sie werden per E-Mail mit einem Koordinator der Flüchtlingseinrichtung in Kontakt gebracht, der Sie zu einem Kennenlerntreffen einlädt, bei dem Sie mehr über Ihren ersten Einsatz erfahren"
+        },
+        "6": {
+          "title": "Sie können mit Ihrem ersten Freiwilligendienst beginnen!",
+          "week": "WOCHE 3-4",
+          "infoText1": "Sie sollten inzwischen Ihr erweitertes Führungszeugnis per Post erhalten haben – dieses legen Sie im Flüchtlingsheim vor"
+        },
+        "lastStep": {
+          "text": "Falls Sie mehrsprachig sind, werden Sie möglicherweise gebeten, bei Bedarf zu begleiten und zu übersetzen"
+        }
+      }
     }
   }
 }

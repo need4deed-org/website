@@ -4,6 +4,7 @@ import {
   ListChecksIcon,
   NotepadIcon,
   ShootingStarIcon,
+  SparkleIcon,
   StrategyIcon,
 } from "@phosphor-icons/react";
 
@@ -14,6 +15,7 @@ export enum IconName {
   ShootingStar = "shootingStar",
   AddressBook = "addressBook",
   HandHeart = "handHeart",
+  Sparkle = "sparkle",
 }
 
 type IconMap = {
@@ -27,4 +29,5 @@ export const iconNameMap: IconMap = {
   [IconName.ShootingStar]: <ShootingStarIcon />,
   [IconName.AddressBook]: <AddressBookIcon />,
   [IconName.HandHeart]: <HandHeartIcon />,
+  [IconName.Sparkle]: <SparkleIcon />,
 };
