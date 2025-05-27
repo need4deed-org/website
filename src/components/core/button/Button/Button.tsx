@@ -16,6 +16,7 @@ const StyledButton = styled.button<StyledButtonProps>`
   background-color: ${(props) =>
     props.backgroundcolor || "var(--color-aubergine)"};
   border: none;
+  white-space: pre-wrap;
 `;
 
 interface Props {

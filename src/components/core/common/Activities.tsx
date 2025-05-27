@@ -10,7 +10,7 @@ interface Props {
 export function Activities({ activities }: Props) {
   return (
     <ActivitiesContainer id="activities-container">
-      {activities.map((activity) => (
+      {activities.filter(Boolean).map((activity) => (
         <ActivityTag
           key={activity}
           background-color={getActivityBackgroundColor(activity)}
