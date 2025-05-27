@@ -622,7 +622,45 @@
       "contact": "Contact"
     },
     "processSteps": {
-      "headline": "How you can support refugees in your community"
+      "headline": "How you can support refugees in your community",
+      "stepsHeadline": "How to start",
+      "steps": {
+        "1": {
+          "title": "Sign Up",
+          "week": "WEEK 1",
+          "infoText1": "Click become a volunteer",
+          "infoText2": "Use our online form to fill out basic information, skills and preferences"
+        },
+        "2": {
+          "title": "Apply for and Supply Additional Documents",
+          "week": "WEEK 1",
+          "infoText1": "Apply for a Certificate of Good Conduct individually or with the help of Need4Deed",
+          "infoText2": "Obtain a measles vaccination"
+        },
+        "3": {
+          "title": "We look for your placement",
+          "week": "WEEK 1",
+          "infoText1": "Meanwhile, we start searching for your best match with a refugee centre coordinator in need"
+        },
+        "4": {
+          "title": "We find a match!",
+          "week": "WEEK 1-2",
+          "infoText1": "We find a refugee centre that you can best support based on your skills and preferences"
+        },
+        "5": {
+          "title": "First contact and intro meeting",
+          "week": "WEEK 2-3",
+          "infoText1": "You are put in contact with a refugee centre coordinator, via email, who will invite you to an intro meeting where you’ll learn more about your first placement"
+        },
+        "6": {
+          "title": "You can begin your first volunteering post!",
+          "week": "WEEK 3-4",
+          "infoText1": "You should receive your Certificate of Good Conduct by now, by post - which you bring to show at the Refugee Accommodation Centre"
+        },
+        "lastStep": {
+          "text": "Incase you are multilingual, you may be asked to accompany and translate when needed"
+        }
+      }
     }
   }
 }
