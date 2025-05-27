@@ -16,6 +16,7 @@ const Card = styled.div`
   display: flex;
   flex-direction: var(--homepage-process-section-card-flex-direction);
   width: var(--homepage-process-section-card-width);
+  min-width: var(--homepage-process-section-card-width);
   height: var(--homepage-process-section-card-height);
   border-radius: var(--card-border-radius);
   padding: var(--homepage-process-section-card-padding);
@@ -66,7 +67,7 @@ const CardInfoTextDiv = styled.div`
   gap: var(--homepage-process-section-card-info-text-div-gap);
 `;
 
-export default function CarouselCard({
+export default function StepCard({
   index,
   iconName,
   infoTexts,
@@ -99,7 +100,7 @@ export default function CarouselCard({
         </CardInfoHeadLineDiv>
 
         {infoTexts.map((text) => (
-          <CardInfoTextDiv>
+          <CardInfoTextDiv key={text}>
             <CardInfoBulletDiv>
               <BulletDash color={bulletDashColor} />
             </CardInfoBulletDiv>

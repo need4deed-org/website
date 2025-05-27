@@ -1,5 +1,7 @@
 import { ReactNode, useState } from "react";
 import {
+  NextVisibleCardContainer,
+  OverlayingVisibleCardsContainer,
   PaginatedCardsContainer,
   VisibleCardsContainer,
 } from "../../styled/containers";
@@ -13,6 +15,7 @@ interface Props {
   bottomIndicatorColor: keyof typeof colorMap;
   bottomCurrentIndicatorColor: keyof typeof colorMap;
   cardsPerPage?: number;
+  isOverlayingCards?: boolean;
 }
 
 export function PaginatedCards({
@@ -21,13 +24,17 @@ export function PaginatedCards({
   bottomIndicatorColor,
   bottomCurrentIndicatorColor,
   cardsPerPage = 1,
+  isOverlayingCards = false,
 }: Props) {
   const [currentPage, setCurrentPage] = useState(0);
 
-  const totalPages = Math.ceil(cards.length / cardsPerPage);
+  const totalPages =
+    Math.ceil(cards.length / cardsPerPage) - (isOverlayingCards ? 1 : 0);
   const startIndex = currentPage * cardsPerPage;
   const endIndex = startIndex + cardsPerPage;
   const visibleCards = cards.slice(startIndex, endIndex);
+
+  const nextCardElement = cards[endIndex];
 
   const goToPage = (pageNumber: number) => {
     setCurrentPage(pageNumber);
@@ -42,9 +49,22 @@ export function PaginatedCards({
         color={arrowButtonColor}
       />
 
-      <VisibleCardsContainer id="visible-cards-container">
-        {visibleCards}
-      </VisibleCardsContainer>
+      {isOverlayingCards ? (
+        <OverlayingVisibleCardsContainer id="overlaying-visible-cards-container">
+          {visibleCards}
+          {endIndex === totalPages ? (
+            nextCardElement
+          ) : (
+            <NextVisibleCardContainer>
+              {nextCardElement}
+            </NextVisibleCardContainer>
+          )}
+        </OverlayingVisibleCardsContainer>
+      ) : (
+        <VisibleCardsContainer id="visible-cards-container">
+          {visibleCards}
+        </VisibleCardsContainer>
+      )}
 
       <PaginationIndicators
         currentPage={currentPage}

@@ -583,7 +583,45 @@
       "contact": "Kontakt"
     },
     "processSteps": {
-      "headline": "Wie Sie Flüchtlinge in Ihrer Gemeinde unterstützen können"
+      "headline": "Wie Sie Geflüchtete in Ihrer Gemeinde unterstützen können",
+      "stepsHeadline": "So fangen Sie an",
+      "steps": {
+        "1": {
+          "title": "Anmelden",
+          "week": "WOCHE 1",
+          "infoText1": "Klicken Sie auf „Freiwillige:r werden“",
+          "infoText2": "Nutzen Sie unser Online-Formular, um grundlegende Informationen, Fähigkeiten und Präferenzen einzugeben"
+        },
+        "2": {
+          "title": "Zusätzliche Dokumente beantragen und einreichen",
+          "week": "WOCHE 1",
+          "infoText1": "Beantragen Sie ein erweitertes Führungszeugnis individuell oder mit Hilfe von Need4Deed",
+          "infoText2": "Holen Sie sich eine Masernimpfung"
+        },
+        "3": {
+          "title": "Wir suchen Ihren Einsatzort",
+          "week": "WOCHE 1",
+          "infoText1": "Währenddessen suchen wir nach der besten Übereinstimmung mit einem Koordinator einer Flüchtlingseinrichtung, die Unterstützung benötigt"
+        },
+        "4": {
+          "title": "Wir finden eine passende Stelle!",
+          "week": "WOCHE 1-2",
+          "infoText1": "Wir finden eine Flüchtlingseinrichtung, die Sie aufgrund Ihrer Fähigkeiten und Präferenzen am besten unterstützen können"
+        },
+        "5": {
+          "title": "Erster Kontakt und Kennenlerntreffen",
+          "week": "WOCHE 2-3",
+          "infoText1": "Sie werden per E-Mail mit einem Koordinator der Flüchtlingseinrichtung in Kontakt gebracht, der Sie zu einem Kennenlerntreffen einlädt, bei dem Sie mehr über Ihren ersten Einsatz erfahren"
+        },
+        "6": {
+          "title": "Sie können mit Ihrem ersten Freiwilligendienst beginnen!",
+          "week": "WOCHE 3-4",
+          "infoText1": "Sie sollten inzwischen Ihr erweitertes Führungszeugnis per Post erhalten haben – dieses legen Sie im Flüchtlingsheim vor"
+        },
+        "lastStep": {
+          "text": "Falls Sie mehrsprachig sind, werden Sie möglicherweise gebeten, bei Bedarf zu begleiten und zu übersetzen"
+        }
+      }
     }
   }
 }
