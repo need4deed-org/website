@@ -54,6 +54,11 @@ export enum Subpages {
   ADD_OPPORTUNITY = "add-opportunity",
   COOKIES = "cookies",
   FAQS = "faqs",
+  FAQ = "new/faq",
+  ABOUT = "new/about",
+  LEGAL_NOTICE = "new/legal-notice",
+  DATA_PRIVACY = "new/data-privacy",
+  VPA = "new/vpa",
 }
 
 export enum Events {
@@ -114,3 +119,5 @@ export enum ScreenTypes {
   TABLET = "tablet",
   DESKTOP = "desktop",
 }
+
+export type FooterLink = [string, string];

@@ -10,4 +10,6 @@ export const ActivityTag = styled.div<ActivityTagProps>`
   background-color: ${(props) => props["background-color"]};
 `;
 
-export default {};
+export const ATag = styled.a`
+  text-decoration: none;
+`;
