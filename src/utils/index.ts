@@ -408,3 +408,41 @@ export function getTimeFrameString(lang: Lang, from: Date, to?: Date) {
 
   return toString ? `${fromString} - ${toString}` : fromString;
 }
+
+const defaultDateOptions: Intl.DateTimeFormatOptions = {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+
+export const formatDateRange = (
+  fromDate: Date,
+  toDate?: Date | null,
+  separator: string = " | ",
+  locales: Intl.LocalesArgument = "en-US",
+  dateOptions: Intl.DateTimeFormatOptions = defaultDateOptions,
+): string => {
+  if (!(fromDate instanceof Date) || Number.isNaN(fromDate.getTime())) {
+    // eslint-disable-next-line no-console
+    console.error("Invalid 'fromDate' provided to formatDateRange.");
+    return "";
+  }
+
+  const timeOptions: Intl.DateTimeFormatOptions = {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false, // Use 24-hour format
+  };
+
+  const formattedDate = fromDate.toLocaleDateString(locales, dateOptions);
+  const formattedStartTime = fromDate.toLocaleTimeString(locales, timeOptions);
+
+  let timeRangeString = formattedStartTime;
+
+  if (toDate && toDate instanceof Date && !Number.isNaN(toDate.getTime())) {
+    const formattedEndTime = toDate.toLocaleTimeString("en-US", timeOptions);
+    timeRangeString += `-${formattedEndTime}`;
+  }
+
+  return `${formattedDate}${separator} ${timeRangeString}`;
+};

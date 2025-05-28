@@ -261,6 +261,15 @@ html {
     --homepage-process-section-card-icon-size: 40px;
     --homepage-process-section-card-last-step-width:320px;
 
+    --homepage-events-section-container-height: 455px;
+    --homepage-events-section-content-container-gap: 32px;
+    --homepage-events-section-event-container-flex-direction: column;
+    --homepage-events-section-event-container-gap: 32px;
+    --homepage-events-section-event-card-gap: 20px;
+    --homepage-events-section-event-card-headline-gap: 16px;
+    --homepage-events-section-event-card-event-title-tag-padding: 8px 12px;
+    --homepage-events-section-event-card-event-title-tag-border-radius: 8px;
+    --homepage-events-section-button-container-justify-content: center;
 
     --button-height: 64px;
     --button-width: auto;
@@ -447,6 +456,16 @@ html {
     --homepage-process-section-card-icon-size: 40px;
     --homepage-process-section-card-last-step-width:328px;
 
+    --homepage-events-section-container-height: 455px;
+    --homepage-events-section-content-container-gap: 48px;
+    --homepage-events-section-event-container-flex-direction: column;
+    --homepage-events-section-event-container-gap: 48px;
+    --homepage-events-section-event-card-gap: 20px;
+    --homepage-events-section-event-card-headline-gap: 16px;
+    --homepage-events-section-event-card-event-title-tag-padding: 8px 12px;
+    --homepage-events-section-event-card-event-title-tag-border-radius: 8px;
+    --homepage-events-section-button-container-justify-content: end;
+
     --button-height: 72px;
     --button-width: fit-content;
     --button-padding: 16px 36px;
@@ -627,6 +646,17 @@ html {
     --homepage-process-section-card-info-text-letterSpacing: 0px;
     --homepage-process-section-card-icon-size: 40px;
     --homepage-process-section-card-last-step-width:296px;
+
+    --homepage-events-section-container-height: 400px;
+    --homepage-events-section-content-container-gap: 48px;
+    --homepage-events-section-event-container-flex-direction: row;
+    --homepage-events-section-event-container-gap: 200px;
+    --homepage-events-section-event-card-width: 682px;
+    --homepage-events-section-event-card-gap: 20px;
+    --homepage-events-section-event-card-headline-gap: 16px;
+    --homepage-events-section-event-card-event-title-tag-padding: 8px 12px;
+    --homepage-events-section-event-card-event-title-tag-border-radius: 8px;
+    --homepage-events-section-button-container-justify-content: end;
 
     --button-height: 72px;
     --button-width: fit-content;
