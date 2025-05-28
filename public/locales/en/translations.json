@@ -662,9 +662,9 @@
         }
       }
     },
-    "events":{
-      "headLine":"Upcoming Events",
-      "button":"Learn More & Register"
+    "events": {
+      "headLine": "Upcoming Events",
+      "button": "Learn More & Register"
     }
   }
 }

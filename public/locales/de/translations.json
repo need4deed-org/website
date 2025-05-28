@@ -627,9 +627,9 @@
         }
       }
     },
-    "events":{
-      "headLine":"Bevorstehende Veranstaltungen",
-      "button":"Mehr erfahren & Anmelden"
+    "events": {
+      "headLine": "Bevorstehende Veranstaltungen",
+      "button": "Mehr erfahren & Anmelden"
     }
   }
 }
