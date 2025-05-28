@@ -73,7 +73,7 @@ export default function EventCard({ onEventDataFetch }: Props) {
 
   const { description } = upcomingEvent;
   const charLimit = charLimitMap[language];
-  let truncatedDescription = description;
+  let truncatedDescription = description.replace(/\\n/g, "\n"); // Remove '\n'
 
   if (isMobile && charLimit && description.length > charLimit)
     truncatedDescription = `${description.slice(0, charLimit)}...`;
