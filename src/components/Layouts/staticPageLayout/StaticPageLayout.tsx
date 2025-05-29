@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import styled from "styled-components";
 import { FooterPartnersSection } from "../../FooterPartners";
 import { Header } from "../../HeaderNew";
-import N4DLogo from "./logos/N4DLogo";
+import { N4DLogo } from "./logos/N4DLogo";
 import useScreenType from "../../../hooks/useScreenType";
 import { ScreenTypes } from "../../../config/types";
 

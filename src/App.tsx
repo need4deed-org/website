@@ -19,7 +19,7 @@ import Land404 from "./pages/Land404";
 import Landing from "./pages/Landing";
 import Subpage from "./pages/Subpage";
 import { consoleLogDeveloperContributionMessage } from "./utils";
-import TestLayout from "./components/Layouts/TestLayout";
+import { TestLayout } from "./components/Layouts/TestLayout";
 
 const queryClient = new QueryClient();
 

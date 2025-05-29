@@ -5,10 +5,10 @@ import {
   FullWidthContainer,
   OverlayingSectionContainer,
 } from "../styled/containers";
-import Header from "./Header";
 import HeroContent from "./Content";
 import useScreenType from "../../hooks/useScreenType";
 import { ScreenTypes } from "../../config/types";
+import { Header } from "./Header";
 
 const HeroSectionContainer = styled(OverlayingSectionContainer)`
   height: var(--homepage-hero-section-container-height);
