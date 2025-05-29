@@ -643,5 +643,8 @@ html {
     --numbering-div-width: 36px;
     --numbering-div-height: 36px;
     --numbering-div-border-radius: 18.64px;
+
+    --layout-static-page-n4d-logo-width:230; 
+    --layout-static-page-n4d-logo-height:32; 
   }
 }

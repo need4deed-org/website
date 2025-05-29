@@ -19,6 +19,7 @@ import Land404 from "./pages/Land404";
 import Landing from "./pages/Landing";
 import Subpage from "./pages/Subpage";
 import { consoleLogDeveloperContributionMessage } from "./utils";
+import TestLayout from "./components/Layouts/TestLayout";
 
 const queryClient = new QueryClient();
 
@@ -183,6 +184,10 @@ function App() {
                 <Route path={`/${Subpages.VPA}`} element={<Agreement />} />
                 <Route path="/:lng" element={<Home />} />
                 <Route path="/new" element={<Landing />} />
+                <Route
+                  path="/new/static-page-layout-test"
+                  element={<TestLayout />}
+                />
                 <Route path="*" element={<Land404 />} />
               </Routes>
             </div>

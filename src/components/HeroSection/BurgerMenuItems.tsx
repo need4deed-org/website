@@ -1,8 +1,8 @@
 import styled, { css, keyframes } from "styled-components";
-import { X } from "@phosphor-icons/react";
+import { XIcon } from "@phosphor-icons/react";
 
 import { MenuItemsContainer } from "./MenuItems";
-import N4DBurgerLogo from "../svg/N4DBurgerLogo";
+import N4DLogoFlat from "../svg/N4DLogoFlat";
 import MenuItem from "./MenuItem";
 import LanguageSwitcher from "./LanguageSwitcher";
 
@@ -81,8 +81,8 @@ export default function BurgerMenuItems({ isOpen, items, setIsOpen }: Props) {
   return (
     <BurgerMenuItemsContainer isOpen={isOpen}>
       <BurgerMenuHeader>
-        <N4DBurgerLogo />
-        <X size={32} onClick={() => setIsOpen(false)} />
+        <N4DLogoFlat width="146" height="38" />
+        <XIcon size={32} onClick={() => setIsOpen(false)} />
       </BurgerMenuHeader>
 
       {items.map((text) => (

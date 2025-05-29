@@ -17,7 +17,7 @@ const HeaderContainer = styled.div`
   position: relative; /* Needed for absolute positioning of MenuItemsDiv */
 `;
 
-export function Header() {
+export function HeaderWait() {
   const { t } = useTranslation();
   const screenType = useScreenType();
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState<boolean>(false);
@@ -38,7 +38,7 @@ export function Header() {
 
   return (
     <HeaderContainer id="header-container">
-      <N4DLogo height={logoHeight} width={logoWidth} />
+      <N4DBurgerLogo height={logoHeight} width={logoWidth} />
 
       {screenType === ScreenTypes.MOBILE ? (
         <>
@@ -62,4 +62,4 @@ export function Header() {
   );
 }
 
-export default Header;
+export default HeaderWait;
