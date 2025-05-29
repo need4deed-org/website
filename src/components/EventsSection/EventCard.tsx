@@ -5,13 +5,6 @@ import styled from "styled-components";
 import useEvents from "../../hooks/api/useEvents";
 import { CustomHeading, Heading4 } from "../styled/text";
 import { formatDateRange } from "../../utils";
-import useScreenType from "../../hooks/useScreenType";
-import { ScreenTypes } from "../../config/types";
-
-const charLimitMap: Partial<Record<Lang, number>> = {
-  [Lang.EN]: 230,
-  [Lang.DE]: 130,
-};
 
 const Card = styled.div`
   display: flex;
@@ -44,8 +37,6 @@ export default function EventCard({ onEventDataFetch }: Props) {
   const language = i18n.language as Lang;
 
   const [events, isLoading] = useEvents(language);
-  const screenType = useScreenType();
-  const isMobile = screenType === ScreenTypes.MOBILE;
 
   /* events[0]: corresponds to default 'VolunTea' event! */
   const upcomingEvent = useMemo(
@@ -71,12 +62,7 @@ export default function EventCard({ onEventDataFetch }: Props) {
     );
   }
 
-  const { description } = upcomingEvent;
-  const charLimit = charLimitMap[language];
-  let truncatedDescription = description.replace(/\\n/g, "\n"); // Remove '\n'
-
-  if (isMobile && charLimit && description.length > charLimit)
-    truncatedDescription = `${description.slice(0, charLimit)}...`;
+  const filteredDesc = upcomingEvent.shortDescription.replace(/\\n/g, "\n"); // Remove '\n'
 
   return (
     <Card>
@@ -101,7 +87,7 @@ export default function EventCard({ onEventDataFetch }: Props) {
         </Heading4>
       </EventHeadLine>
 
-      <Heading4 color="var(--color-white)">{truncatedDescription}</Heading4>
+      <Heading4 color="var(--color-white)">{filteredDesc}</Heading4>
     </Card>
   );
 }
