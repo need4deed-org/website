@@ -8,7 +8,12 @@ import useScreenType from "../../hooks/useScreenType";
 import { OpportunitiesContainer } from "../styled/containers";
 import OpportunityCard from "./OpportunityCard";
 import { OpportunityApi } from "./types";
-import { getMappedOpportunities, getMostPopularOpportunities } from "./utils";
+import {
+  CategoryTitle,
+  getIconName,
+  getMappedOpportunities,
+  getMostPopularOpportunities,
+} from "./utils";
 
 const opportunityParams: OpportunityParams = {
   search: {
@@ -18,7 +23,7 @@ const opportunityParams: OpportunityParams = {
   primaryKeys: ["title", "name"],
 };
 
-function Opportunities() {
+export default function OpportunitiesForSection() {
   const { i18n } = useTranslation();
   const screenType = useScreenType();
 
@@ -44,11 +49,12 @@ function Opportunities() {
   return (
     <OpportunitiesContainer id="opportunities-container">
       {mappedOpportunities.map((opp) => (
-        // eslint-disable-next-line react/jsx-props-no-spreading
-        <OpportunityCard key={opp.id} {...opp} />
+        <OpportunityCard
+          key={opp.id}
+          iconName={getIconName(opp.categoryId as CategoryTitle)}
+          opportunity={opp}
+        />
       ))}
     </OpportunitiesContainer>
   );
 }
-
-export default Opportunities;
