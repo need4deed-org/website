@@ -666,5 +666,8 @@
       "headLine": "Upcoming Events",
       "button": "Learn More & Register"
     }
+  },
+  "opportunityPage": {
+    "header": "Explore Volunteering Opportunities"
   }
 }

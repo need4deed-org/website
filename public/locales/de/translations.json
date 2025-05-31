@@ -631,5 +631,9 @@
       "headLine": "Bevorstehende Veranstaltungen",
       "button": "Mehr erfahren & Anmelden"
     }
+  },
+
+  "opportunityPage": {
+    "header": "DE:Explore Volunteering Opportunities"
   }
 }
