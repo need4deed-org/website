@@ -20,6 +20,7 @@ import Landing from "./pages/Landing";
 import Opportunities from "./pages/Opportunities";
 import Subpage from "./pages/Subpage";
 import { consoleLogDeveloperContributionMessage } from "./utils";
+import { TestLayout } from "./components/Layouts/TestLayout";
 
 const queryClient = new QueryClient();
 
@@ -188,6 +189,10 @@ function App() {
                 />
                 <Route path="/:lng" element={<Home />} />
                 <Route path="/new" element={<Landing />} />
+                <Route
+                  path="/new/static-page-layout-test"
+                  element={<TestLayout />}
+                />
                 <Route path="*" element={<Land404 />} />
               </Routes>
             </div>

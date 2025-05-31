@@ -2,12 +2,9 @@ import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 
 import { ListIcon } from "@phosphor-icons/react";
-import { useState } from "react";
-import N4DLogo from "../svg/N4DLogo";
-import BurgerMenuItems from "./BurgerMenuItems";
-import MenuItems from "./MenuItems";
-import { ScreenTypes } from "../../config/types";
-import useScreenType from "../../hooks/useScreenType";
+import { ReactNode, useState } from "react";
+import BurgerMenuItems from "../HeroSection/BurgerMenuItems";
+import MenuItems from "../HeroSection/MenuItems";
 
 const HeaderContainer = styled.div`
   justify-content: space-between;
@@ -17,18 +14,14 @@ const HeaderContainer = styled.div`
   position: relative; /* Needed for absolute positioning of MenuItemsDiv */
 `;
 
-export function Header() {
+interface Props {
+  logo: ReactNode;
+  isBurgerMenu: boolean;
+}
+
+export function Header({ logo, isBurgerMenu }: Props) {
   const { t } = useTranslation();
-  const screenType = useScreenType();
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState<boolean>(false);
-
-  const logoHeight = getComputedStyle(
-    document.documentElement,
-  ).getPropertyValue("--homepage-hero-section-logo-height");
-
-  const logoWidth = getComputedStyle(document.documentElement).getPropertyValue(
-    "--homepage-hero-section-logo-width",
-  );
 
   const menuItems = [
     t("homepage.heroSection.menuItems.about"),
@@ -38,9 +31,9 @@ export function Header() {
 
   return (
     <HeaderContainer id="header-container">
-      <N4DLogo height={logoHeight} width={logoWidth} />
+      {logo}
 
-      {screenType === ScreenTypes.MOBILE ? (
+      {isBurgerMenu ? (
         <>
           <ListIcon
             size={32}
