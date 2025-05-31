@@ -6,12 +6,18 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import "./App.css";
 import JsonLd from "./components/JsonLd";
+import Agreement from "./components/Legal/Agreement";
+import DataPrivacy from "./components/Legal/DataPrivacy";
+import LegalNotice from "./components/Legal/Notice";
 import { FF, googleAnalyticsId } from "./config/constants";
 import { Subpages } from "./config/types";
 import AppContainerContext from "./contexts/AppContainerContext";
+import About from "./pages/About";
+import FAQ from "./pages/FAQ";
 import Home from "./pages/Home";
 import Land404 from "./pages/Land404";
 import Landing from "./pages/Landing";
+import Opportunities from "./pages/Opportunities";
 import Subpage from "./pages/Subpage";
 import { consoleLogDeveloperContributionMessage } from "./utils";
 
@@ -164,6 +170,21 @@ function App() {
                 <Route
                   path={`/${Subpages.FAQS}`}
                   element={<Subpage type={Subpages.FAQS} />}
+                />
+                <Route path={`/${Subpages.FAQ}`} element={<FAQ />} />
+                <Route path={`/${Subpages.ABOUT}`} element={<About />} />
+                <Route
+                  path={`/${Subpages.LEGAL_NOTICE}`}
+                  element={<LegalNotice />}
+                />
+                <Route
+                  path={`/${Subpages.DATA_PRIVACY}`}
+                  element={<DataPrivacy />}
+                />
+                <Route path={`/${Subpages.VPA}`} element={<Agreement />} />
+                <Route
+                  path={`/${Subpages.OPPORTUNITY_CARDS}`}
+                  element={<Opportunities />}
                 />
                 <Route path="/:lng" element={<Home />} />
                 <Route path="/new" element={<Landing />} />

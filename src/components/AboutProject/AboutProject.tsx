@@ -2,14 +2,14 @@ import { useTranslation } from "react-i18next";
 import "./AboutProject.css";
 
 interface Prop {
-  wrappingClassName: string;
+  wrappingClassName?: string;
 }
 
 function AboutProject({ wrappingClassName }: Prop) {
   const { t } = useTranslation();
 
   return (
-    <div className={wrappingClassName}>
+    <div className={wrappingClassName || ""}>
       <div id="about-project" className="n4d-container about-project-container">
         <h2>{t("aboutProject.aboutProjectHeading")}</h2>
         <p>{t("aboutProject.aboutProjectSubheading")}</p>

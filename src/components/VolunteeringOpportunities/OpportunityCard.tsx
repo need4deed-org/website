@@ -1,19 +1,28 @@
-import { CalendarDots, MapPin, Translate } from "@phosphor-icons/react";
+import {
+  CalendarDotsIcon as CalendarDots,
+  MapPinIcon as MapPin,
+  TranslateIcon as Translate,
+} from "@phosphor-icons/react";
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
+
+import { Activities } from "../core/common";
 import { BaseCard, IconDiv } from "../styled/containers";
-import { Heading3, Paragraph } from "../styled/text";
+import { Heading3 } from "../styled/text";
 import { iconNameMap } from "../VolunteeringCategories/icon";
 import { IconName } from "../VolunteeringCategories/types";
 import OpportunityCardDetails, { CardDetail } from "./OpportunityCardDetail";
 import { Opportunity } from "./types";
-import { Activities } from "../core/common";
 
-const charlimit = 160;
+interface CardProps {
+  size?: { width: string; height: string };
+}
 
-const Card = styled(BaseCard)`
+const Card = styled(BaseCard)<CardProps>`
   background-color: var(--color-magnolia);
-  width: var(--homepage-volunteering-opportunity-card-width);
+  width: ${({ size }) =>
+    size?.width || "var(--homepage-volunteering-opportunity-card-width)"};
+  height: ${({ size }) => size?.height};
   padding-top: var(--homepage-volunteering-opportunity-card-padding-top);
   padding-right: var(--homepage-volunteering-opportunity-card-padding-right);
   padding-bottom: var(--homepage-volunteering-opportunity-card-padding-bottom);
@@ -21,35 +30,34 @@ const Card = styled(BaseCard)`
   gap: var(--homepage-volunteering-opportunity-card-gap);
 `;
 
-interface OpportunityCardProps extends Opportunity {
+interface OpportunityCardProps {
+  opportunity: Opportunity;
   iconName: IconName;
+  isPage?: boolean;
 }
 
 export default function OpportunityCard({
-  title,
-  voInformation,
+  opportunity,
   iconName,
-  languages,
-  schedule,
-  locations,
-  activities,
-  accompanyingDate,
+  isPage,
 }: OpportunityCardProps) {
   const { t } = useTranslation();
 
-  const languagesText = languages.join("; ");
-  const district = locations.join(",");
+  const {
+    title,
+    languages,
+    schedule,
+    locations,
+    activities,
+    accompanyingDate,
+  } = opportunity;
+
+  const languagesText = languages.join(", ");
+  const district = locations.join(", ");
   const scheduleAsStr =
     accompanyingDate?.toDateString().split(" ").slice(0, 3).join(" ") ||
     schedule ||
     "";
-
-  const titleLen = title?.length || 0;
-  const totalTitleInfoLen = titleLen + (voInformation?.length || 0);
-
-  let truncatedVoInformation = null;
-  if (totalTitleInfoLen > charlimit)
-    truncatedVoInformation = `${voInformation.slice(0, charlimit - titleLen)}...`;
 
   const cardDetails: CardDetail[] = [
     {
@@ -70,10 +78,18 @@ export default function OpportunityCard({
   ];
 
   return (
-    <Card>
+    <Card
+      size={
+        isPage
+          ? {
+              width: "var(--page-opportunity-card-width)",
+              height: "var(--page-opportunity-card-height)",
+            }
+          : undefined
+      }
+    >
       <IconDiv>{iconNameMap[iconName]}</IconDiv>
       <Heading3>{title}</Heading3>
-      <Paragraph>{truncatedVoInformation || voInformation}</Paragraph>
       <Activities activities={activities} />
       <OpportunityCardDetails cardDetails={cardDetails} />
     </Card>

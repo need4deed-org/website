@@ -54,13 +54,19 @@ export enum Subpages {
   ADD_OPPORTUNITY = "add-opportunity",
   COOKIES = "cookies",
   FAQS = "faqs",
+  FAQ = "new/faq",
+  ABOUT = "new/about",
+  LEGAL_NOTICE = "new/legal-notice",
+  DATA_PRIVACY = "new/data-privacy",
+  VPA = "new/vpa",
+  OPPORTUNITY_CARDS = "new/opportunity-cards",
 }
 
 export enum Events {
   EVENT_8_31_24 = "event-8-31-24",
 }
 
-// conjunction between keys and disjunction between possible values are applied for seach
+// conjunction between keys and disjunction between possible values are applied for search
 export interface OpportunityParams {
   search?: Record<string, string[]>;
   primaryKeys?: string[];
@@ -72,12 +78,18 @@ export type AlfredOpportunity = Record<string, any>;
 
 export type KeyMap = {
   id: string;
-  type: string;
-  name: string;
+  type?: string;
+  name?: string;
   languages: string;
   time: string;
   location: string;
   vo?: string;
+  categoryId?: string;
+  title?: string;
+  activities?: string;
+  createdAt?: string;
+  updatedAt?: string;
+  accompDate?: string;
 };
 
 // copied from tanstack internals
@@ -114,3 +126,5 @@ export enum ScreenTypes {
   TABLET = "tablet",
   DESKTOP = "desktop",
 }
+
+export type FooterLink = [string, string];
