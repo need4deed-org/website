@@ -41,6 +41,7 @@ html {
   --color-papaya: rgba(255, 125, 104, 1);
   --color-white: rgba(255, 255, 255, 1);
   --color-black: rgba(0, 0, 0, 1);
+  --color-dimmed-background: rgba(0, 0, 0, 0.4);
 
   /* text */
   --text-h2-font-weight: 600;
@@ -149,6 +150,8 @@ html {
     --page-opportunity-grid-template-columns: 1fr;
     --page-opportunity-card-width: 312px;
     --page-opportunity-card-height: auto; /*421px;*/
+    --page-opportunity-popup-card-width: 328px;
+    --page-opportunity-popup-card-height: auto;
 
     --homepage-testimonials-header-gap: 16px;
     --homepage-testimonial-card-width: 320px;
@@ -294,8 +297,8 @@ html {
     --numbering-div-height: 32px;
     --numbering-div-border-radius: 16.57px;
 
-    --layout-static-page-n4d-logo-width:144; 
-    --layout-static-page-n4d-logo-height:24;
+    --layout-static-page-n4d-logo-width: 144;
+    --layout-static-page-n4d-logo-height: 24;
     --layout-static-page-header-height: 64px;
     --layout-static-page-header-padding: 10px 18px;
   }
@@ -354,6 +357,8 @@ html {
     --page-opportunity-grid-template-columns: repeat(2, 1fr);
     --page-opportunity-card-width: 332px;
     --page-opportunity-card-height: auto; /*472px;*/
+    --page-opportunity-popup-card-width: 688px;
+    --page-opportunity-popup-card-height: auto;
 
     --homepage-testimonials-header-gap: 24px;
     --homepage-testimonial-card-width: 328px;
@@ -499,8 +504,8 @@ html {
     --numbering-div-height: 32px;
     --numbering-div-border-radius: 16.57px;
 
-    --layout-static-page-n4d-logo-width:230; 
-    --layout-static-page-n4d-logo-height:32;
+    --layout-static-page-n4d-logo-width: 230;
+    --layout-static-page-n4d-logo-height: 32;
     --layout-static-page-header-height: 76px;
     --layout-static-page-header-padding: 20px 36px;
   }
@@ -548,6 +553,8 @@ html {
     --page-opportunity-grid-template-columns: 1fr 1fr 1fr 1fr;
     --page-opportunity-card-width: 310px;
     --page-opportunity-card-height: auto; /*472px;*/
+    --page-opportunity-popup-card-width: 688px;
+    --page-opportunity-popup-card-height: auto;
 
     --homepage-volunteering-opportunities-grid-template-columns: repeat(3, 1fr);
     --homepage-volunteering-opportunities-grid-template-rows: auto;
@@ -700,8 +707,8 @@ html {
     --numbering-div-height: 36px;
     --numbering-div-border-radius: 18.64px;
 
-    --layout-static-page-n4d-logo-width:230; 
-    --layout-static-page-n4d-logo-height:32;
+    --layout-static-page-n4d-logo-width: 230;
+    --layout-static-page-n4d-logo-height: 32;
     --layout-static-page-header-height: 80px;
     --layout-static-page-header-padding: 20px 36px;
   }
@@ -711,6 +718,7 @@ html {
   width: fit-content;
   max-width: var(--page-opportunity-grid-max-width);
   margin-inline: auto;
+  margin-block: 0 40px;
   display: grid;
   grid-template-columns: var(--page-opportunity-grid-template-columns);
   gap: 24px;

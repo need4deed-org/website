@@ -6,16 +6,23 @@ interface Props {
   title?: string;
   children?: ReactNode;
   className?: string;
-  close: () => void;
+  closeComponent?: ReactNode;
+  close?: () => void;
 }
 
-export default function Popup({ className, children, title, close }: Props) {
+export default function Popup({
+  className,
+  children,
+  title,
+  close,
+  closeComponent = <Close />,
+}: Props) {
   return (
-    <div className={`popup-information-tooltip ${className}`}>
-      {title ? <h1>{title}</h1> : null}
-      <p>{children}</p>
-      <button tabIndex={0} type="button" onClick={() => close()}>
-        <Close />
+    <div className={className || "popup-information-tooltip"}>
+      {title && <h1>{title}</h1>}
+      {children}
+      <button tabIndex={0} type="button" onClick={() => close && close()}>
+        {closeComponent}
       </button>
     </div>
   );

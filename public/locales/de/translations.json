@@ -631,5 +631,18 @@
       "headLine": "Bevorstehende Veranstaltungen",
       "button": "Mehr erfahren & Anmelden"
     }
+  },
+  "opportunityPage": {
+    "header": "Entdecke Freiwilligenmöglichkeiten",
+    "popup": {
+      "register": {
+        "title": "Neu hier? Jetzt registrieren",
+        "button": "Registrieren und Bewerben"
+      },
+      "apply": {
+        "title": "Bereits registriert?",
+        "button": "Jetzt bewerben"
+      }
+    }
   }
 }

@@ -1,10 +1,10 @@
-import PageLayout from "../components/core/common/PageLayout";
+import { StaticPageLayout } from "../components/Layouts/staticPageLayout";
 import LegalNoticeComponent from "../components/Legal/Notice";
 
 export default function LegalNotice() {
   return (
-    <PageLayout>
+    <StaticPageLayout>
       <LegalNoticeComponent />
-    </PageLayout>
+    </StaticPageLayout>
   );
 }

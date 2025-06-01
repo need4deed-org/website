@@ -6,23 +6,25 @@ import {
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 
+import { ScreenTypes } from "../../config/types";
+import useScreenType from "../../hooks/useScreenType";
 import { Activities } from "../core/common";
 import { BaseCard, IconDiv } from "../styled/containers";
-import { Heading3 } from "../styled/text";
+import { Heading3, Paragraph } from "../styled/text";
 import { iconNameMap } from "../VolunteeringCategories/icon";
 import { IconName } from "../VolunteeringCategories/types";
 import OpportunityCardDetails, { CardDetail } from "./OpportunityCardDetail";
 import { Opportunity } from "./types";
 
-interface CardProps {
-  size?: { width: string; height: string };
-}
+interface CardProps extends React.CSSProperties {}
 
 const Card = styled(BaseCard)<CardProps>`
-  background-color: var(--color-magnolia);
-  width: ${({ size }) =>
-    size?.width || "var(--homepage-volunteering-opportunity-card-width)"};
-  height: ${({ size }) => size?.height};
+  background-color: ${({ backgroundColor }) =>
+    backgroundColor || "var(--color-magnolia)"};
+  width: ${({ width }) =>
+    width || "var(--homepage-volunteering-opportunity-card-width)"};
+  height: ${({ height }) =>
+    height || "var(--homepage-volunteering-opportunity-card-height)"};
   padding-top: var(--homepage-volunteering-opportunity-card-padding-top);
   padding-right: var(--homepage-volunteering-opportunity-card-padding-right);
   padding-bottom: var(--homepage-volunteering-opportunity-card-padding-bottom);
@@ -30,18 +32,29 @@ const Card = styled(BaseCard)<CardProps>`
   gap: var(--homepage-volunteering-opportunity-card-gap);
 `;
 
-interface OpportunityCardProps {
+interface Props extends React.CSSProperties {
   opportunity: Opportunity;
   iconName: IconName;
-  isPage?: boolean;
+  vo?: boolean;
+  onClickHandler?: (opportunity: Opportunity) => void;
+  CTAs?: ({
+    flexDirection,
+    opportunity,
+  }: React.CSSProperties & { opportunity: Opportunity }) => React.ReactNode;
 }
 
 export default function OpportunityCard({
   opportunity,
   iconName,
-  isPage,
-}: OpportunityCardProps) {
+  onClickHandler,
+  width,
+  height,
+  backgroundColor,
+  vo = false,
+  CTAs = undefined,
+}: Props) {
   const { t } = useTranslation();
+  const screenType = useScreenType();
 
   const {
     title,
@@ -50,6 +63,7 @@ export default function OpportunityCard({
     locations,
     activities,
     accompanyingDate,
+    voInformation,
   } = opportunity;
 
   const languagesText = languages.join(", ");
@@ -79,19 +93,22 @@ export default function OpportunityCard({
 
   return (
     <Card
-      size={
-        isPage
-          ? {
-              width: "var(--page-opportunity-card-width)",
-              height: "var(--page-opportunity-card-height)",
-            }
-          : undefined
-      }
+      width={width}
+      height={height}
+      backgroundColor={backgroundColor}
+      onClick={() => onClickHandler && onClickHandler(opportunity)}
     >
       <IconDiv>{iconNameMap[iconName]}</IconDiv>
       <Heading3>{title}</Heading3>
+      {vo && <Paragraph>{voInformation}</Paragraph>}
       <Activities activities={activities} />
       <OpportunityCardDetails cardDetails={cardDetails} />
+      {CTAs && (
+        <CTAs
+          flexDirection={screenType === ScreenTypes.MOBILE ? "column" : "row"}
+          opportunity={opportunity}
+        />
+      )}
     </Card>
   );
 }

@@ -1,10 +1,10 @@
-import FAQs from "../components/FAQs/FAQs";
 import { StaticPageLayout } from "../components/Layouts/staticPageLayout";
+import Agreement from "../components/Legal/Agreement";
 
-export default function FAQ() {
+export default function About() {
   return (
     <StaticPageLayout>
-      <FAQs />
+      <Agreement />
     </StaticPageLayout>
   );
 }
