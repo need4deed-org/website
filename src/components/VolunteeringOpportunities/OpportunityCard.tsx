@@ -6,6 +6,8 @@ import {
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 
+import { ScreenTypes } from "../../config/types";
+import useScreenType from "../../hooks/useScreenType";
 import { Activities } from "../core/common";
 import { BaseCard, IconDiv } from "../styled/containers";
 import { Heading3, Paragraph } from "../styled/text";
@@ -17,7 +19,8 @@ import { Opportunity } from "./types";
 interface CardProps extends React.CSSProperties {}
 
 const Card = styled(BaseCard)<CardProps>`
-  background-color: var(--color-magnolia);
+  background-color: ${({ backgroundColor }) =>
+    backgroundColor || "var(--color-magnolia)"};
   width: ${({ width }) =>
     width || "var(--homepage-volunteering-opportunity-card-width)"};
   height: ${({ height }) =>
@@ -34,6 +37,10 @@ interface Props extends React.CSSProperties {
   iconName: IconName;
   vo?: boolean;
   onClickHandler?: (opportunity: Opportunity) => void;
+  CTAs?: ({
+    flexDirection,
+    opportunity,
+  }: React.CSSProperties & { opportunity: Opportunity }) => React.ReactNode;
 }
 
 export default function OpportunityCard({
@@ -42,9 +49,12 @@ export default function OpportunityCard({
   onClickHandler,
   width,
   height,
+  backgroundColor,
   vo = false,
+  CTAs = undefined,
 }: Props) {
   const { t } = useTranslation();
+  const screenType = useScreenType();
 
   const {
     title,
@@ -85,6 +95,7 @@ export default function OpportunityCard({
     <Card
       width={width}
       height={height}
+      backgroundColor={backgroundColor}
       onClick={() => onClickHandler && onClickHandler(opportunity)}
     >
       <IconDiv>{iconNameMap[iconName]}</IconDiv>
@@ -92,6 +103,12 @@ export default function OpportunityCard({
       {vo && <Paragraph>{voInformation}</Paragraph>}
       <Activities activities={activities} />
       <OpportunityCardDetails cardDetails={cardDetails} />
+      {CTAs && (
+        <CTAs
+          flexDirection={screenType === ScreenTypes.MOBILE ? "column" : "row"}
+          opportunity={opportunity}
+        />
+      )}
     </Card>
   );
 }
