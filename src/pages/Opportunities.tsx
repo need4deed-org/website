@@ -1,7 +1,7 @@
 import { Lang, OpportunityType } from "need4deed-sdk";
 import { useTranslation } from "react-i18next";
 
-import PageLayout from "../components/core/common/PageLayout";
+import { StaticPageLayout } from "../components/Layouts/staticPageLayout";
 import OpportunityCards from "../components/OpportunityCards";
 import { Heading2 } from "../components/styled/text";
 import OpportunityCardForGrid from "../components/VolunteeringOpportunities/OpportunityCardForGrid";
@@ -11,7 +11,7 @@ export default function Opportunities() {
   const { i18n, t } = useTranslation();
 
   return (
-    <PageLayout>
+    <StaticPageLayout>
       <div
         // temporary styling for the opportunities page
         style={{
@@ -52,9 +52,8 @@ export default function Opportunities() {
             vo: "vo_information",
           }}
           CardComponent={OpportunityCardForGrid}
-          popup
         />
       </div>
-    </PageLayout>
+    </StaticPageLayout>
   );
 }
