@@ -4,7 +4,7 @@ import { useState } from "react";
 import { KeyMap, OpportunityParams } from "../../config/types";
 import useOpportunities from "../../hooks/api/useOpportunities";
 import useOpportunitiesFromFile from "../../hooks/api/useOpportunitiesFromFile";
-import { mapOpportunity } from "../../utils";
+import { getOpportunityForGrid, mapOpportunity } from "../../utils";
 import Announcement from "../Announcement";
 import OpportunityCardPopup from "../VolunteeringOpportunities/OpportunityCardPopup";
 import OpportunityCard from "./OpportunityCard";
@@ -60,7 +60,12 @@ export default function OpportunityCards({
       {popup && modalOpportunity && (
         <OpportunityCardPopup
           close={() => setModalOpportunity(undefined)}
-          opportunity={modalOpportunity}
+          opportunity={getOpportunityForGrid(
+            mapOpportunity(modalOpportunity, keyMap) as unknown as Record<
+              string,
+              string
+            >,
+          )}
         />
       )}
       {opportunities.map((opportunity) => {
