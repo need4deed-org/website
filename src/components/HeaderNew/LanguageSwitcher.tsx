@@ -54,7 +54,11 @@ const OptionButton = styled.button`
   border-radius: var(--homepage-hero-section-language-option-button-radius);
 `;
 
-export default function LanguageSwitcher() {
+interface Props {
+  textColor?: string;
+}
+
+export default function LanguageSwitcher({ textColor }: Props) {
   const { i18n } = useTranslation();
   const [isOptionsVisible, setIsOptionsVisible] = useState<boolean>(false);
   const screenType = useScreenType();
@@ -73,7 +77,7 @@ export default function LanguageSwitcher() {
   const selectedLangTextColor =
     screenType !== ScreenTypes.MOBILE && isOptionsVisible
       ? "var(--color-orchid-dark)"
-      : "";
+      : textColor;
 
   return (
     <LanguageSwitcherContainer>
@@ -84,7 +88,10 @@ export default function LanguageSwitcher() {
           text={languageLabelMap[selectedLang]}
           color={selectedLangTextColor}
         />
-        <Arrow direction={isOptionsVisible ? "up" : "down"} />
+        <Arrow
+          direction={isOptionsVisible ? "up" : "down"}
+          color={textColor || "var(--color-white)"}
+        />
       </LanguageSelectionDiv>
 
       {isOptionsVisible && (

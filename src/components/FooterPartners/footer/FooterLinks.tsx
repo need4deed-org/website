@@ -20,7 +20,7 @@ export default function FooterLinks({ links }: FooterLinkProps) {
     <FrameContainer>
       {links.map(([link, href]) => {
         return (
-          <ATag href={`/${href}`}>
+          <ATag key={link} href={`/${href}`}>
             <Paragraph
               key={link}
               color="var(--color-magnolia)"
