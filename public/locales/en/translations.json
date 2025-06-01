@@ -668,6 +668,16 @@
     }
   },
   "opportunityPage": {
-    "header": "Explore Volunteering Opportunities"
+    "header": "Explore Volunteering Opportunities",
+    "popup": {
+      "register": {
+        "title": "New here? Register now",
+        "button": "Register and Apply"
+      },
+      "apply": {
+        "title": "Already Registered?",
+        "button": "Apply Now"
+      }
+    }
   }
 }
