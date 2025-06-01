@@ -20,6 +20,7 @@ export default function Opportunities() {
           gap: "40px",
           width: "fit-content",
           marginInline: "auto",
+          paddingInline: "16px",
         }}
       >
         <Heading2>{t("opportunityPage.header")}</Heading2>
