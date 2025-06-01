@@ -8,21 +8,20 @@ import styled from "styled-components";
 
 import { Activities } from "../core/common";
 import { BaseCard, IconDiv } from "../styled/containers";
-import { Heading3 } from "../styled/text";
+import { Heading3, Paragraph } from "../styled/text";
 import { iconNameMap } from "../VolunteeringCategories/icon";
 import { IconName } from "../VolunteeringCategories/types";
 import OpportunityCardDetails, { CardDetail } from "./OpportunityCardDetail";
 import { Opportunity } from "./types";
 
-interface CardProps {
-  size?: { width: string; height: string };
-}
+interface CardProps extends React.CSSProperties {}
 
 const Card = styled(BaseCard)<CardProps>`
   background-color: var(--color-magnolia);
-  width: ${({ size }) =>
-    size?.width || "var(--homepage-volunteering-opportunity-card-width)"};
-  height: ${({ size }) => size?.height};
+  width: ${({ width }) =>
+    width || "var(--homepage-volunteering-opportunity-card-width)"};
+  height: ${({ height }) =>
+    height || "var(--homepage-volunteering-opportunity-card-height)"};
   padding-top: var(--homepage-volunteering-opportunity-card-padding-top);
   padding-right: var(--homepage-volunteering-opportunity-card-padding-right);
   padding-bottom: var(--homepage-volunteering-opportunity-card-padding-bottom);
@@ -30,18 +29,20 @@ const Card = styled(BaseCard)<CardProps>`
   gap: var(--homepage-volunteering-opportunity-card-gap);
 `;
 
-interface Props extends React.HTMLAttributes<HTMLDivElement> {
+interface Props extends React.CSSProperties {
   opportunity: Opportunity;
   iconName: IconName;
-  isPage?: boolean;
-  onClickHandler: (opportunity: Opportunity) => void;
+  vo?: boolean;
+  onClickHandler?: (opportunity: Opportunity) => void;
 }
 
 export default function OpportunityCard({
   opportunity,
   iconName,
-  isPage,
   onClickHandler,
+  width,
+  height,
+  vo = false,
 }: Props) {
   const { t } = useTranslation();
 
@@ -52,6 +53,7 @@ export default function OpportunityCard({
     locations,
     activities,
     accompanyingDate,
+    voInformation,
   } = opportunity;
 
   const languagesText = languages.join(", ");
@@ -81,18 +83,13 @@ export default function OpportunityCard({
 
   return (
     <Card
-      size={
-        isPage
-          ? {
-              width: "var(--page-opportunity-card-width)",
-              height: "var(--page-opportunity-card-height)",
-            }
-          : undefined
-      }
-      onClick={() => onClickHandler(opportunity)}
+      width={width}
+      height={height}
+      onClick={() => onClickHandler && onClickHandler(opportunity)}
     >
       <IconDiv>{iconNameMap[iconName]}</IconDiv>
       <Heading3>{title}</Heading3>
+      {vo && <Paragraph>{voInformation}</Paragraph>}
       <Activities activities={activities} />
       <OpportunityCardDetails cardDetails={cardDetails} />
     </Card>
