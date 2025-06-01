@@ -52,6 +52,7 @@ export default function Opportunities() {
             vo: "vo_information",
           }}
           CardComponent={OpportunityCardForGrid}
+          popup
         />
       </div>
     </PageLayout>
