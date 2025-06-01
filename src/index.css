@@ -41,6 +41,7 @@ html {
   --color-papaya: rgba(255, 125, 104, 1);
   --color-white: rgba(255, 255, 255, 1);
   --color-black: rgba(0, 0, 0, 1);
+  --color-dimmed-background: rgba(0, 0, 0, 0.4);
 
   /* text */
   --text-h2-font-weight: 600;
@@ -142,6 +143,8 @@ html {
     --page-opportunity-grid-template-columns: 1fr;
     --page-opportunity-card-width: 312px;
     --page-opportunity-card-height: auto; /*421px;*/
+    --page-opportunity-popup-card-width: 328px;
+    --page-opportunity-popup-card-height: auto;
 
     --homepage-testimonials-header-gap: 16px;
     --homepage-testimonial-card-width: 320px;
@@ -343,6 +346,8 @@ html {
     --page-opportunity-grid-template-columns: repeat(2, 1fr);
     --page-opportunity-card-width: 332px;
     --page-opportunity-card-height: auto; /*472px;*/
+    --page-opportunity-popup-card-width: 688px;
+    --page-opportunity-popup-card-height: auto;
 
     --homepage-testimonials-header-gap: 24px;
     --homepage-testimonial-card-width: 328px;
@@ -533,6 +538,8 @@ html {
     --page-opportunity-grid-template-columns: 1fr 1fr 1fr 1fr;
     --page-opportunity-card-width: 310px;
     --page-opportunity-card-height: auto; /*472px;*/
+    --page-opportunity-popup-card-width: 688px;
+    --page-opportunity-popup-card-height: auto;
 
     --homepage-volunteering-opportunities-grid-template-columns: repeat(3, 1fr);
     --homepage-volunteering-opportunities-grid-template-rows: auto;
