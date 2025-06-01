@@ -14,10 +14,10 @@ import About from "./pages/About";
 import DataPrivacy from "./pages/DataPrivacy";
 import FAQ from "./pages/FAQ";
 import Home from "./pages/Home";
-import Land404 from "./pages/Land404";
 import Landing from "./pages/Landing";
 import LegalNotice from "./pages/LegalNotice";
 import Opportunities from "./pages/Opportunities";
+import OpportunityForm from "./pages/OpportunityForm";
 import Subpage from "./pages/Subpage";
 import VolunteerForm from "./pages/VolunteerForm";
 import Agreement from "./pages/VPA";
@@ -56,7 +56,9 @@ function App() {
           ) : (
             <div ref={containerRef} className="app-container">
               <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/" element={<Landing />} />
+                <Route path={`/${Subpages.OLD}/:lng`} element={<Home />} />
+                <Route path={`/${Subpages.OLD}`} element={<Home />} />
                 <Route
                   path={`/${Subpages.NOTICE}/:lng`}
                   element={<Subpage type={Subpages.NOTICE} />}
@@ -189,16 +191,23 @@ function App() {
                   element={<Opportunities />}
                 />
                 <Route
+                  path={`/${Subpages.OPPORTUNITY_FORM}`}
+                  element={<OpportunityForm />}
+                />
+                <Route
+                  path={`/${Subpages.OPPORTUNITY_FORM_LEGACY}/:lng`}
+                  element={<OpportunityForm />}
+                />
+                <Route
                   path={`/${Subpages.VOLUNTEER_FORM}`}
                   element={<VolunteerForm />}
                 />
-                <Route path="/:lng" element={<Home />} />
-                <Route path="/new" element={<Landing />} />
+                <Route path="/:lng" element={<Landing />} />
                 <Route
                   path="/new/static-page-layout-test"
                   element={<TestLayout />}
                 />
-                <Route path="*" element={<Land404 />} />
+                <Route path="*" element={<Landing />} />
               </Routes>
             </div>
           )}
