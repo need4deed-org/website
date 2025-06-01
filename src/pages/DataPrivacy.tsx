@@ -1,10 +1,10 @@
-import FAQs from "../components/FAQs/FAQs";
 import { StaticPageLayout } from "../components/Layouts/staticPageLayout";
+import DataPrivacy from "../components/Legal/DataPrivacy";
 
-export default function FAQ() {
+export default function About() {
   return (
     <StaticPageLayout>
-      <FAQs />
+      <DataPrivacy />
     </StaticPageLayout>
   );
 }

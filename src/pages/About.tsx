@@ -1,10 +1,10 @@
 import AboutProject from "../components/AboutProject/AboutProject";
-import PageLayout from "../components/core/common/PageLayout";
+import { StaticPageLayout } from "../components/Layouts/staticPageLayout";
 
 export default function About() {
   return (
-    <PageLayout>
+    <StaticPageLayout>
       <AboutProject />
-    </PageLayout>
+    </StaticPageLayout>
   );
 }
