@@ -1,6 +1,5 @@
 export default function CloseIcon() {
   return (
-    // eslint-disable-next-line react/jsx-props-no-spreading
     <svg
       width="24"
       height="24"
