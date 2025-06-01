@@ -60,6 +60,7 @@ export enum Subpages {
   DATA_PRIVACY = "new/data-privacy",
   VPA = "new/vpa",
   OPPORTUNITY_CARDS = "new/opportunity-cards",
+  VOLUNTEER_FORM = "new/volunteer-form",
 }
 
 export enum Events {
