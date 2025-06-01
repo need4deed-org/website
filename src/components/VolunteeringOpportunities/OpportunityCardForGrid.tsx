@@ -20,6 +20,7 @@ export default function OpportunityCardForGrid({
     <OpportunityCard
       width="var(--page-opportunity-card-width)"
       height="var(--page-opportunity-card-height)"
+      backgroundColor="var(--color-white)"
       iconName={iconName}
       opportunity={opportunityProps}
       onClickHandler={() => onClickHandler && onClickHandler(opportunityProps)}
