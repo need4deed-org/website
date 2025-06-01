@@ -3,23 +3,41 @@ import { useTranslation } from "react-i18next";
 
 import { ListIcon } from "@phosphor-icons/react";
 import { ReactNode, useState } from "react";
-import BurgerMenuItems from "../HeroSection/BurgerMenuItems";
-import MenuItems from "../HeroSection/MenuItems";
+import MenuItems from "./MenuItems";
+import BurgerMenuItems from "./BurgerMenuItems";
 
-const HeaderContainer = styled.div`
-  justify-content: space-between;
+interface HeaderContainerProps {
+  height?: string;
+  padding?: string;
+}
+
+const HeaderContainer = styled.div<HeaderContainerProps>`
   display: flex;
   flex-direction: row;
-  height: var(--homepage-hero-section-header-height);
-  position: relative; /* Needed for absolute positioning of MenuItemsDiv */
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  height: ${(props) => props.height || "auto"};
+  padding: ${(props) => props.padding};
 `;
 
 interface Props {
   logo: ReactNode;
-  isBurgerMenu: boolean;
+  isBurgerMenu?: boolean;
+  height?: string;
+  padding?: string;
+  menuItemColor: string;
+  burgerMenuItemColor?: string;
 }
 
-export function Header({ logo, isBurgerMenu }: Props) {
+export function Header({
+  logo,
+  isBurgerMenu,
+  height,
+  padding,
+  menuItemColor,
+  burgerMenuItemColor = "var(--color-midnight)",
+}: Props) {
   const { t } = useTranslation();
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState<boolean>(false);
 
@@ -30,14 +48,14 @@ export function Header({ logo, isBurgerMenu }: Props) {
   ];
 
   return (
-    <HeaderContainer id="header-container">
+    <HeaderContainer id="header-container" height={height} padding={padding}>
       {logo}
 
       {isBurgerMenu ? (
         <>
           <ListIcon
             size={32}
-            color="var(--color-white)"
+            color={menuItemColor}
             onClick={() => setIsBurgerMenuOpen(true)}
           />
           {isBurgerMenuOpen && (
@@ -45,11 +63,12 @@ export function Header({ logo, isBurgerMenu }: Props) {
               isOpen={isBurgerMenuOpen}
               setIsOpen={setIsBurgerMenuOpen}
               items={menuItems}
+              menuItemColor={burgerMenuItemColor}
             />
           )}
         </>
       ) : (
-        <MenuItems items={menuItems} />
+        <MenuItems items={menuItems} menuItemColor={menuItemColor} />
       )}
     </HeaderContainer>
   );

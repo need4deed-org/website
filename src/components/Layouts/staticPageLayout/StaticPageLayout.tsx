@@ -8,6 +8,11 @@ import { ScreenTypes } from "../../../config/types";
 
 interface Props {
   children: ReactNode;
+  background?: string;
+}
+
+interface PageContentHeaderContainerProps {
+  background?: string;
 }
 
 const PageContainer = styled.div`
@@ -15,24 +20,27 @@ const PageContainer = styled.div`
   flex-direction: column;
 `;
 
-const PageContentHeaderContainer = styled.div`
+const PageContentHeaderContainer = styled.div<PageContentHeaderContainerProps>`
   display: flex;
   flex-direction: column;
-  background: linear-gradient(
-    180deg,
-    var(--color-magnolia)-5.53%,
-    var(--color-orchid-dark) 100%
-  );
+  background: ${(props) =>
+    props.background || "var(--layout-static-page-background-default)"};
 `;
 
-export function StaticPageLayout({ children }: Props) {
+export function StaticPageLayout({ children, background }: Props) {
   const screenType = useScreenType();
   const isBurgerMenu = screenType !== ScreenTypes.DESKTOP;
 
   return (
     <PageContainer>
-      <PageContentHeaderContainer>
-        <Header logo={<N4DLogo />} isBurgerMenu={isBurgerMenu} />
+      <PageContentHeaderContainer background={background}>
+        <Header
+          logo={<N4DLogo />}
+          isBurgerMenu={isBurgerMenu}
+          height="var(--layout-static-page-header-height)"
+          padding="var(--layout-static-page-header-padding)"
+          menuItemColor="var(--color-midnight)"
+        />
         {children}
       </PageContentHeaderContainer>
 

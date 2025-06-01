@@ -75,9 +75,15 @@ interface Props {
   isOpen: boolean;
   items: string[];
   setIsOpen: (isOpen: boolean) => void;
+  menuItemColor?: string;
 }
 
-export default function BurgerMenuItems({ isOpen, items, setIsOpen }: Props) {
+export default function BurgerMenuItems({
+  isOpen,
+  items,
+  setIsOpen,
+  menuItemColor,
+}: Props) {
   return (
     <BurgerMenuItemsContainer isOpen={isOpen}>
       <BurgerMenuHeader>
@@ -86,10 +92,10 @@ export default function BurgerMenuItems({ isOpen, items, setIsOpen }: Props) {
       </BurgerMenuHeader>
 
       {items.map((text) => (
-        <MenuItem text={text} key={text} />
+        <MenuItem text={text} key={text} color={menuItemColor} />
       ))}
 
-      <LanguageSwitcher />
+      <LanguageSwitcher textColor={menuItemColor} />
     </BurgerMenuItemsContainer>
   );
 }
