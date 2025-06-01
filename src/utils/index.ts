@@ -213,6 +213,15 @@ export function getMainCtaUrl({ lng, id = "", title = "" }: MainCtaUrl) {
   return `/${Subpages.BECOME_VOLUNTEER}/${lng}/?id=${id}&title=${title}`;
 }
 
+interface MainREgisterUrl {
+  id?: string;
+  title?: string;
+}
+
+export function getRegisterCtaUrl({ id = "", title = "" }: MainREgisterUrl) {
+  return `/${Subpages.VOLUNTEER_FORM}/?id=${id}&title=${title}`;
+}
+
 export function getLocale(lang: Lang) {
   if (lang === Lang.EN) return "en-UK";
 
