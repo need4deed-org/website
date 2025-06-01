@@ -13,16 +13,17 @@ export const MenuItemsContainer = styled.div`
 
 interface Props {
   items: string[];
+  menuItemColor: string;
 }
 
-export default function MenuItems({ items }: Props) {
+export default function MenuItems({ items, menuItemColor }: Props) {
   return (
     <MenuItemsContainer>
       {items.map((text) => (
-        <MenuItem text={text} key={text} />
+        <MenuItem text={text} key={text} color={menuItemColor} />
       ))}
 
-      <LanguageSwitcher />
+      <LanguageSwitcher textColor={menuItemColor} />
     </MenuItemsContainer>
   );
 }
