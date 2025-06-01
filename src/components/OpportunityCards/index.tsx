@@ -8,18 +8,25 @@ import Announcement from "../Announcement";
 import OpportunityCard from "./OpportunityCard";
 import "./index.css";
 
-interface Props {
+interface Props extends React.HTMLAttributes<HTMLDivElement> {
   url: string;
-  opportunityParams: OpportunityParams;
-  keyMap: KeyMap;
+  opportunityParams?: OpportunityParams;
+  keyMap?: KeyMap;
+  CardComponent?: ({
+    opportunity,
+  }: {
+    opportunity: Record<string, string>;
+  }) => JSX.Element;
 }
 
 const regexHttpSchema = /^(http|https):\/\/.*/;
 
 export default function OpportunityCards({
+  className,
   url,
-  opportunityParams,
-  keyMap,
+  opportunityParams = {},
+  keyMap = {} as KeyMap,
+  CardComponent = OpportunityCard,
 }: Props) {
   const isUrl = url.toLowerCase().match(regexHttpSchema);
   const useOpp = isUrl ? useOpportunities : useOpportunitiesFromFile;
@@ -40,13 +47,12 @@ export default function OpportunityCards({
   }
 
   return opportunities?.length ? (
-    <div className="n4d-container opportunity-container">
+    <div className={className || "n4d-container opportunity-container"}>
       {opportunities.map((opportunity) => (
-        <OpportunityCard
+        <CardComponent
           // eslint-disable-next-line no-underscore-dangle
           key={opportunity.id || opportunity._id || crypto.randomUUID()}
           opportunity={mapOpportunity(opportunity, keyMap)}
-          pre={false}
         />
       ))}
     </div>

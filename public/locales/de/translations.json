@@ -626,6 +626,10 @@
           "text": "Falls Sie mehrsprachig sind, werden Sie möglicherweise gebeten, bei Bedarf zu begleiten und zu übersetzen"
         }
       }
+    },
+    "events": {
+      "headLine": "Bevorstehende Veranstaltungen",
+      "button": "Mehr erfahren & Anmelden"
     }
   }
 }

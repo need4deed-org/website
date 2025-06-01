@@ -661,6 +661,10 @@
           "text": "Incase you are multilingual, you may be asked to accompany and translate when needed"
         }
       }
+    },
+    "events": {
+      "headLine": "Upcoming Events",
+      "button": "Learn More & Register"
     }
   }
 }

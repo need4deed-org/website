@@ -17,6 +17,7 @@ import FAQ from "./pages/FAQ";
 import Home from "./pages/Home";
 import Land404 from "./pages/Land404";
 import Landing from "./pages/Landing";
+import Opportunities from "./pages/Opportunities";
 import Subpage from "./pages/Subpage";
 import { consoleLogDeveloperContributionMessage } from "./utils";
 import { TestLayout } from "./components/Layouts/TestLayout";
@@ -182,6 +183,10 @@ function App() {
                   element={<DataPrivacy />}
                 />
                 <Route path={`/${Subpages.VPA}`} element={<Agreement />} />
+                <Route
+                  path={`/${Subpages.OPPORTUNITY_CARDS}`}
+                  element={<Opportunities />}
+                />
                 <Route path="/:lng" element={<Home />} />
                 <Route path="/new" element={<Landing />} />
                 <Route

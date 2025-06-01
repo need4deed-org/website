@@ -1,7 +1,7 @@
-import Opportunities from "./Opportunities";
-import Footer from "./Footer";
 import { FullWidthContainer, SectionContainer } from "../styled/containers";
+import Footer from "./Footer";
 import Header from "./Header";
+import OpportunitiesForSection from "./OpportunitiesForSection";
 
 export function VolunteeringOpportunitiesSection() {
   return (
@@ -11,7 +11,7 @@ export function VolunteeringOpportunitiesSection() {
     >
       <SectionContainer id="volunteering-opportunities-container">
         <Header />
-        <Opportunities />
+        <OpportunitiesForSection />
         <Footer />
       </SectionContainer>
     </FullWidthContainer>

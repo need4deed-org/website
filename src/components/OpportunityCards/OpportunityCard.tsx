@@ -13,10 +13,9 @@ import VOInformation from "./VOInformation";
 
 interface Props {
   opportunity: Record<string, string>;
-  pre?: boolean;
 }
 
-export default function OpportunityCard({ opportunity, pre = false }: Props) {
+export default function OpportunityCard({ opportunity }: Props) {
   const { t, i18n } = useTranslation();
   const titleBtn = t("projectIntro.beVolunteerButton");
   const srcImg = useMemo(
@@ -28,11 +27,8 @@ export default function OpportunityCard({ opportunity, pre = false }: Props) {
     id: opportunity.id,
     title: opportunity.name,
   });
-  return pre ? (
-    <pre className="opportunity-card">
-      {JSON.stringify(opportunity, null, 2)}
-    </pre>
-  ) : (
+
+  return (
     <div className="opportunity-card">
       <img src={srcImg} alt="Opportunity example" />
       <h5>{opportunity.name}</h5>
