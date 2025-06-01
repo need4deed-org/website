@@ -1,15 +1,15 @@
 import styled from "styled-components";
+import { ScreenTypes } from "../../config/types";
+import useScreenType from "../../hooks/useScreenType";
 import { getImageUrl } from "../../utils";
 import { ImageWithGradient } from "../core/image";
+import { Header } from "../HeaderNew";
 import {
   FullWidthContainer,
   OverlayingSectionContainer,
 } from "../styled/containers";
 import HeroContent from "./Content";
-import useScreenType from "../../hooks/useScreenType";
-import { ScreenTypes } from "../../config/types";
 import { N4DHeaderLogo } from "./logos/N4DLogo";
-import { Header } from "../HeaderNew";
 
 const HeroSectionContainer = styled(OverlayingSectionContainer)`
   height: var(--homepage-hero-section-container-height);

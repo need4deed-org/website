@@ -1,10 +1,12 @@
-import styled from "styled-components";
 import { useTranslation } from "react-i18next";
+import styled from "styled-components";
 
 import { ListIcon } from "@phosphor-icons/react";
 import { ReactNode, useState } from "react";
-import MenuItems from "./MenuItems";
+import { useNavigate } from "react-router-dom";
+import { Subpages } from "../../config/types";
 import BurgerMenuItems from "./BurgerMenuItems";
+import MenuItems from "./MenuItems";
 
 interface HeaderContainerProps {
   height?: string;
@@ -39,12 +41,23 @@ export function Header({
   burgerMenuItemColor = "var(--color-midnight)",
 }: Props) {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState<boolean>(false);
 
-  const menuItems = [
-    t("homepage.heroSection.menuItems.about"),
-    t("homepage.heroSection.menuItems.volunteeringOpportunities"),
-    t("homepage.heroSection.menuItems.events"),
+  const menuItems: [string, () => void][] = [
+    [
+      t("homepage.heroSection.menuItems.about"),
+      () => {
+        navigate(`/${Subpages.ABOUT}`);
+      },
+    ],
+    [
+      t("homepage.heroSection.menuItems.volunteeringOpportunities"),
+      () => {
+        navigate(`/${Subpages.OPPORTUNITY_CARDS}`);
+      },
+    ],
+    [t("homepage.heroSection.menuItems.events"), () => {}],
   ];
 
   return (
