@@ -13,7 +13,6 @@ export default function Opportunities() {
   return (
     <PageLayout>
       <div
-        data-testid="opportunities-page-table-tab"
         // temporary styling for the opportunities page
         style={{
           display: "flex",
