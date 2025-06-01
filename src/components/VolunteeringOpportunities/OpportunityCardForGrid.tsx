@@ -2,11 +2,15 @@ import OpportunityCard from "./OpportunityCard";
 import { Opportunity } from "./types";
 import { CategoryTitle, getIconName } from "./utils";
 
+interface Props extends React.HTMLAttributes<HTMLDivElement> {
+  opportunity: Record<string, string>;
+  onClickHandler?: (opportunity: Opportunity) => void;
+}
+
 export default function OpportunityCardForGrid({
   opportunity,
-}: {
-  opportunity: Record<string, string>;
-}) {
+  onClickHandler,
+}: Props) {
   const opportunityProps: Opportunity = {
     accompanyingDate: opportunity.time
       ? null
@@ -36,6 +40,7 @@ export default function OpportunityCardForGrid({
       isPage
       iconName={iconName}
       opportunity={opportunityProps}
+      onClickHandler={() => onClickHandler && onClickHandler(opportunityProps)}
     />
   );
 }

@@ -30,17 +30,19 @@ const Card = styled(BaseCard)<CardProps>`
   gap: var(--homepage-volunteering-opportunity-card-gap);
 `;
 
-interface OpportunityCardProps {
+interface Props extends React.HTMLAttributes<HTMLDivElement> {
   opportunity: Opportunity;
   iconName: IconName;
   isPage?: boolean;
+  onClickHandler: (opportunity: Opportunity) => void;
 }
 
 export default function OpportunityCard({
   opportunity,
   iconName,
   isPage,
-}: OpportunityCardProps) {
+  onClickHandler,
+}: Props) {
   const { t } = useTranslation();
 
   const {
@@ -87,6 +89,7 @@ export default function OpportunityCard({
             }
           : undefined
       }
+      onClick={() => onClickHandler(opportunity)}
     >
       <IconDiv>{iconNameMap[iconName]}</IconDiv>
       <Heading3>{title}</Heading3>
