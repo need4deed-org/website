@@ -1,9 +1,10 @@
-import styled from "styled-components";
 import { useTranslation } from "react-i18next";
-import { CustomHeading, Heading4 } from "../styled/text";
-import { Button } from "../core/button";
+import { useNavigate } from "react-router-dom";
+import styled from "styled-components";
+import { ScreenTypes, Subpages } from "../../config/types";
 import useScreenType from "../../hooks/useScreenType";
-import { ScreenTypes } from "../../config/types";
+import { Button } from "../core/button";
+import { CustomHeading, Heading4 } from "../styled/text";
 
 const ContentContainer = styled.div`
   display: flex;
@@ -28,6 +29,7 @@ const ButtonsContainer = styled.div`
 export default function RacContent() {
   const { t } = useTranslation();
   const screenType = useScreenType();
+  const navigate = useNavigate();
   const isMobile = screenType === ScreenTypes.MOBILE;
 
   return (
@@ -49,7 +51,9 @@ export default function RacContent() {
 
       <ButtonsContainer>
         <Button
-          onClick={() => {}} // TODO: click handler will be implemented later
+          onClick={() => {
+            navigate(`/${Subpages.OPPORTUNITY_FORM}`);
+          }}
           text={
             isMobile
               ? t("homepage.racSection.buttonSupportMobile")
@@ -57,7 +61,9 @@ export default function RacContent() {
           }
         />
         <Button
-          onClick={() => {}} // TODO: click handler will be implemented later
+          onClick={() => {
+            navigate(`/${Subpages.RAC_GUIDELINES}`);
+          }}
           text={t("homepage.racSection.buttonHowItWorks")}
           backgroundcolor="var(--color-orchid)"
           textColor="var(--color-aubergine)"
