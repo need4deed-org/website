@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import MenuItem from "./MenuItem";
 import LanguageSwitcher from "./LanguageSwitcher";
+import MenuItem from "./MenuItem";
 
 export const MenuItemsContainer = styled.div`
   justify-content: space-between;
@@ -12,17 +12,23 @@ export const MenuItemsContainer = styled.div`
 `;
 
 interface Props {
-  items: string[];
+  items: [string, () => void][];
+  menuItemColor: string;
 }
 
-export default function MenuItems({ items }: Props) {
+export default function MenuItems({ items, menuItemColor }: Props) {
   return (
     <MenuItemsContainer>
-      {items.map((text) => (
-        <MenuItem text={text} key={text} />
+      {items.map(([text, onClickHandler]) => (
+        <MenuItem
+          text={text}
+          key={text}
+          color={menuItemColor}
+          onClickHandler={onClickHandler}
+        />
       ))}
 
-      <LanguageSwitcher />
+      <LanguageSwitcher textColor={menuItemColor} />
     </MenuItemsContainer>
   );
 }

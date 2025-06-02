@@ -55,7 +55,7 @@ export default function BecomeVolunteer() {
     title: opportunityParams.get("title") || "",
   };
 
-  const [showModal, setShowModal] = useState(!!opportunity.id);
+  const [showModal, setShowModal] = useState(false);
 
   const languages = getAllSelectedFalse(useList(ListsOfOptions.LANGUAGES));
 

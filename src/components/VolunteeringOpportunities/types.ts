@@ -15,6 +15,7 @@ export interface Opportunity {
   title: string;
   updatedAt: Date;
   voInformation: string;
+  categoryId: string;
 }
 
 export interface OpportunityApi {
@@ -34,4 +35,5 @@ export interface OpportunityApi {
   title: string;
   updated_at: string;
   vo_information: string;
+  category_id: string;
 }

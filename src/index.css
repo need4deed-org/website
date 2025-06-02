@@ -41,6 +41,7 @@ html {
   --color-papaya: rgba(255, 125, 104, 1);
   --color-white: rgba(255, 255, 255, 1);
   --color-black: rgba(0, 0, 0, 1);
+  --color-dimmed-background: rgba(0, 0, 0, 0.4);
 
   /* text */
   --text-h2-font-weight: 600;
@@ -86,6 +87,13 @@ html {
   /* hero section */
   --homepage-hero-section-language-option-button-background-color: var(
     --color-sand
+  );
+
+  /* layout-static-page */
+  --layout-static-page-background-default: linear-gradient(
+    180deg,
+    var(--color-magnolia)-5.53%,
+    var(--color-orchid-dark) 100%
   );
 }
 
@@ -138,6 +146,13 @@ html {
     --homepage-volunteering-opportunity-card-gap: 16px;
     --homepage-volunteering-opportunity-details-gap: 12px;
 
+    --page-opportunity-grid-max-width: 360px;
+    --page-opportunity-grid-template-columns: 1fr;
+    --page-opportunity-card-width: 312px;
+    --page-opportunity-card-height: auto; /*421px;*/
+    --page-opportunity-popup-card-width: 328px;
+    --page-opportunity-popup-card-height: auto;
+
     --homepage-testimonials-header-gap: 16px;
     --homepage-testimonial-card-width: 320px;
     --homepage-testimonial-card-padding-top: 24px;
@@ -166,7 +181,6 @@ html {
     --homepage-hero-section-header-menu-item-fontWeight: 600;
     --homepage-hero-section-header-menu-item-letterSpacing: 0px;
     --homepage-hero-section-header-menu-item-lineheight: 16px;
-    --homepage-hero-section-header-menu-item-color: var(--color-midnight);
     --homepage-hero-section-language-switcher-gap: 5px;
     --homepage-hero-section-language-switcher-width: fit-content;
     --homepage-hero-section-language-selection-gap: 4px;
@@ -209,19 +223,18 @@ html {
     --homepage-footer-partners-section-logo-n4d-width: 68px;
     --homepage-footer-partners-section-logo-n4d-height: 90px;
     --homepage-footer-partners-section-footer-container-height: 364px;
-    --homepage-footer-partners-section-footer-container-flex-direction: column ;
+    --homepage-footer-partners-section-footer-container-flex-direction: column;
     --homepage-footer-partners-section-footer-container-justify-content: space-between;
-    --homepage-footer-partners-section-contact-socials-container-flex-direction: column ;
+    --homepage-footer-partners-section-contact-socials-container-flex-direction: column;
     --homepage-footer-partners-section-contact-socials-container-justify-content: unset;
-    --homepage-footer-partners-section-contact-socials-container-gap: 32px ;
-    --homepage-footer-partners-section-contact-container-gap: 10px ;
-    --homepage-footer-partners-section-socials-container-gap: 20px ;
-    --homepage-footer-partners-section-footer-links-container-width:310px ;
-    --homepage-footer-partners-section-footer-frame-container-gap: 16px ;
-    --homepage-footer-partners-section-p-fontWeight-large:500 ;
-    --homepage-footer-partners-section-p-fontWeight-small:400 ;
-    --homepage-footer-partners-section-p-fontSize:16px ;
-    
+    --homepage-footer-partners-section-contact-socials-container-gap: 32px;
+    --homepage-footer-partners-section-contact-container-gap: 10px;
+    --homepage-footer-partners-section-socials-container-gap: 20px;
+    --homepage-footer-partners-section-footer-links-container-width: 310px;
+    --homepage-footer-partners-section-footer-frame-container-gap: 16px;
+    --homepage-footer-partners-section-p-fontWeight-large: 500;
+    --homepage-footer-partners-section-p-fontWeight-small: 400;
+    --homepage-footer-partners-section-p-fontSize: 16px;
 
     --homepage-rac-section-container-height: 720px;
     --homepage-rac-section-content-container-gap: 80px;
@@ -233,22 +246,21 @@ html {
     --homepage-rac-section-content-buttons-container-flex-direction: column;
     --homepage-rac-section-content-buttons-container-gap: 16px;
 
-
-    --homepage-process-section-gap: 40px ;
-    --homepage-process-section-header-gap: 24px ;
-    --homepage-process-section-video-height: 208px ;
-    --homepage-process-section-video-width: 360px ;
-    --homepage-process-section-video-border-radius: 8px ;
-    --homepage-process-section-video-margin-left: -20px ;
-    --homepage-process-section-card-flex-direction: column ;
+    --homepage-process-section-gap: 40px;
+    --homepage-process-section-header-gap: 24px;
+    --homepage-process-section-video-height: 208px;
+    --homepage-process-section-video-width: 360px;
+    --homepage-process-section-video-border-radius: 8px;
+    --homepage-process-section-video-margin-left: -20px;
+    --homepage-process-section-card-flex-direction: column;
     --homepage-process-section-card-width: 320px;
     --homepage-process-section-card-height: 330px;
     --homepage-process-section-card-border-radius: 24px;
-    --homepage-process-section-card-padding: 20px 28px 32px 20px; 
+    --homepage-process-section-card-padding: 20px 28px 32px 20px;
     --homepage-process-section-card-gap: 24px;
     --homepage-process-section-card-header-flex-direction: row;
-    --homepage-process-section-card-header-gap:20px;
-    --homepage-process-section-card-week-div-padding:8px 12px 6px 12px;
+    --homepage-process-section-card-header-gap: 20px;
+    --homepage-process-section-card-week-div-padding: 8px 12px 6px 12px;
     --homepage-process-section-card-week-div-radius: 4px;
     --homepage-process-section-card-info-div-gap: 16px;
     --homepage-process-section-card-info-headline-div-gap: 12px;
@@ -259,8 +271,17 @@ html {
     --homepage-process-section-card-info-text-lineheight: 20px;
     --homepage-process-section-card-info-text-letterSpacing: 0px;
     --homepage-process-section-card-icon-size: 40px;
-    --homepage-process-section-card-last-step-width:320px;
+    --homepage-process-section-card-last-step-width: 320px;
 
+    --homepage-events-section-container-height: 455px;
+    --homepage-events-section-content-container-gap: 32px;
+    --homepage-events-section-event-container-flex-direction: column;
+    --homepage-events-section-event-container-gap: 32px;
+    --homepage-events-section-event-card-gap: 20px;
+    --homepage-events-section-event-card-headline-gap: 16px;
+    --homepage-events-section-event-card-event-title-tag-padding: 8px 12px;
+    --homepage-events-section-event-card-event-title-tag-border-radius: 8px;
+    --homepage-events-section-button-container-justify-content: center;
 
     --button-height: 64px;
     --button-width: auto;
@@ -276,6 +297,10 @@ html {
     --numbering-div-height: 32px;
     --numbering-div-border-radius: 16.57px;
 
+    --layout-static-page-n4d-logo-width: 144;
+    --layout-static-page-n4d-logo-height: 24;
+    --layout-static-page-header-height: 64px;
+    --layout-static-page-header-padding: 10px 18px;
   }
 }
 
@@ -328,6 +353,13 @@ html {
     --homepage-volunteering-opportunity-card-gap: 20px;
     --homepage-volunteering-opportunity-details-gap: 16px;
 
+    --page-opportunity-grid-max-width: 768px;
+    --page-opportunity-grid-template-columns: repeat(2, 1fr);
+    --page-opportunity-card-width: 332px;
+    --page-opportunity-card-height: auto; /*472px;*/
+    --page-opportunity-popup-card-width: 688px;
+    --page-opportunity-popup-card-height: auto;
+
     --homepage-testimonials-header-gap: 24px;
     --homepage-testimonial-card-width: 328px;
     --homepage-testimonial-card-padding-top: 28px;
@@ -350,7 +382,6 @@ html {
     --homepage-hero-section-header-menu-item-fontWeight: 600;
     --homepage-hero-section-header-menu-item-letterSpacing: 0px;
     --homepage-hero-section-header-menu-item-lineheight: 16px;
-    --homepage-hero-section-header-menu-item-color: var(--color-white);
     --homepage-hero-section-language-switcher-gap: 5px;
     --homepage-hero-section-language-switcher-width: 95px;
     --homepage-hero-section-language-selection-gap: 4px;
@@ -396,19 +427,19 @@ html {
     --homepage-footer-partners-section-logo-n4d-width: 68px;
     --homepage-footer-partners-section-logo-n4d-height: 90px;
     --homepage-footer-partners-section-footer-container-height: 200px;
-    --homepage-footer-partners-section-footer-container-flex-direction: row ;
+    --homepage-footer-partners-section-footer-container-flex-direction: row;
     --homepage-footer-partners-section-footer-container-justify-content: space-between;
-    --homepage-footer-partners-section-contact-socials-container-flex-direction: row ;
+    --homepage-footer-partners-section-contact-socials-container-flex-direction: row;
     --homepage-footer-partners-section-contact-socials-container-justify-content: space-between;
-    --homepage-footer-partners-section-contact-socials-container-gap: 110px ;
-    --homepage-footer-partners-section-contact-container-gap: 10px ;
-    --homepage-footer-partners-section-socials-container-gap: 20px ;
-    --homepage-footer-partners-section-footer-links-container-gap:40px ;
-    --homepage-footer-partners-section-footer-links-container-width:500px ;
-    --homepage-footer-partners-section-footer-frame-container-gap:20px ;
-    --homepage-footer-partners-section-p-fontWeight-large:500 ;
-    --homepage-footer-partners-section-p-fontWeight-small:400 ;
-    --homepage-footer-partners-section-p-fontSize:18px ;
+    --homepage-footer-partners-section-contact-socials-container-gap: 110px;
+    --homepage-footer-partners-section-contact-container-gap: 10px;
+    --homepage-footer-partners-section-socials-container-gap: 20px;
+    --homepage-footer-partners-section-footer-links-container-gap: 40px;
+    --homepage-footer-partners-section-footer-links-container-width: 500px;
+    --homepage-footer-partners-section-footer-frame-container-gap: 20px;
+    --homepage-footer-partners-section-p-fontWeight-large: 500;
+    --homepage-footer-partners-section-p-fontWeight-small: 400;
+    --homepage-footer-partners-section-p-fontSize: 18px;
 
     --homepage-rac-section-container-height: 720px;
     --homepage-rac-section-content-container-gap: 80px;
@@ -420,21 +451,21 @@ html {
     --homepage-rac-section-content-buttons-container-flex-direction: row;
     --homepage-rac-section-content-buttons-container-gap: 16px;
 
-    --homepage-process-section-gap: 80px ;
-    --homepage-process-section-header-gap: 40px ;
-    --homepage-process-section-video-height: 378px ;
-    --homepage-process-section-video-width: 672px ;
-    --homepage-process-section-video-border-radius: 8px ;
-    --homepage-process-section-video-margin-left: 0 ;
-    --homepage-process-section-card-flex-direction: column ;
+    --homepage-process-section-gap: 80px;
+    --homepage-process-section-header-gap: 40px;
+    --homepage-process-section-video-height: 378px;
+    --homepage-process-section-video-width: 672px;
+    --homepage-process-section-video-border-radius: 8px;
+    --homepage-process-section-video-margin-left: 0;
+    --homepage-process-section-card-flex-direction: column;
     --homepage-process-section-card-width: 328px;
     --homepage-process-section-card-height: 330px;
     --homepage-process-section-card-border-radius: 24px;
-    --homepage-process-section-card-padding: 20px 28px 32px 20px; 
+    --homepage-process-section-card-padding: 20px 28px 32px 20px;
     --homepage-process-section-card-gap: 24px;
     --homepage-process-section-card-header-flex-direction: row;
-    --homepage-process-section-card-header-gap:20px;
-    --homepage-process-section-card-week-div-padding:8px 12px 6px 12px;
+    --homepage-process-section-card-header-gap: 20px;
+    --homepage-process-section-card-week-div-padding: 8px 12px 6px 12px;
     --homepage-process-section-card-week-div-radius: 4px;
     --homepage-process-section-card-info-div-gap: 16px;
     --homepage-process-section-card-info-headline-div-gap: 20px;
@@ -445,7 +476,17 @@ html {
     --homepage-process-section-card-info-text-lineheight: 20px;
     --homepage-process-section-card-info-text-letterSpacing: 0px;
     --homepage-process-section-card-icon-size: 40px;
-    --homepage-process-section-card-last-step-width:328px;
+    --homepage-process-section-card-last-step-width: 328px;
+
+    --homepage-events-section-container-height: 455px;
+    --homepage-events-section-content-container-gap: 48px;
+    --homepage-events-section-event-container-flex-direction: column;
+    --homepage-events-section-event-container-gap: 48px;
+    --homepage-events-section-event-card-gap: 20px;
+    --homepage-events-section-event-card-headline-gap: 16px;
+    --homepage-events-section-event-card-event-title-tag-padding: 8px 12px;
+    --homepage-events-section-event-card-event-title-tag-border-radius: 8px;
+    --homepage-events-section-button-container-justify-content: end;
 
     --button-height: 72px;
     --button-width: fit-content;
@@ -462,6 +503,11 @@ html {
     --numbering-div-width: 32px;
     --numbering-div-height: 32px;
     --numbering-div-border-radius: 16.57px;
+
+    --layout-static-page-n4d-logo-width: 230;
+    --layout-static-page-n4d-logo-height: 32;
+    --layout-static-page-header-height: 76px;
+    --layout-static-page-header-padding: 20px 36px;
   }
 }
 
@@ -503,6 +549,13 @@ html {
     --homepage-volunteering-category-card-padding-left: 32px;
     --homepage-volunteering-category-card-gap: 24px;
 
+    --page-opportunity-grid-max-width: 1440px;
+    --page-opportunity-grid-template-columns: 1fr 1fr 1fr 1fr;
+    --page-opportunity-card-width: 310px;
+    --page-opportunity-card-height: auto; /*472px;*/
+    --page-opportunity-popup-card-width: 688px;
+    --page-opportunity-popup-card-height: auto;
+
     --homepage-volunteering-opportunities-grid-template-columns: repeat(3, 1fr);
     --homepage-volunteering-opportunities-grid-template-rows: auto;
     --homepage-volunteering-opportunities-grid-gap: 40px;
@@ -536,7 +589,6 @@ html {
     --homepage-hero-section-header-menu-item-fontWeight: 600;
     --homepage-hero-section-header-menu-item-letterSpacing: 0px;
     --homepage-hero-section-header-menu-item-lineheight: 16px;
-    --homepage-hero-section-header-menu-item-color: var(--color-white);
     --homepage-hero-section-language-switcher-gap: 5px;
     --homepage-hero-section-language-switcher-width: 95px;
     --homepage-hero-section-language-selection-gap: 4px;
@@ -578,19 +630,19 @@ html {
     --homepage-footer-partners-section-logo-n4d-width: 100px;
     --homepage-footer-partners-section-logo-n4d-height: 132px;
     --homepage-footer-partners-section-footer-container-height: 260px;
-    --homepage-footer-partners-section-footer-container-flex-direction: row ;
+    --homepage-footer-partners-section-footer-container-flex-direction: row;
     --homepage-footer-partners-section-footer-container-justify-content: space-between;
-    --homepage-footer-partners-section-contact-socials-container-flex-direction: column ;
+    --homepage-footer-partners-section-contact-socials-container-flex-direction: column;
     --homepage-footer-partners-section-contact-socials-container-justify-content: unset;
-    --homepage-footer-partners-section-contact-socials-container-gap: 20px ;
-    --homepage-footer-partners-section-contact-container-gap: 10px ;
-    --homepage-footer-partners-section-socials-container-gap: 20px ;
-    --homepage-footer-partners-section-footer-links-container-gap:100px ;
-    --homepage-footer-partners-section-footer-links-container-width:770px ;
-    --homepage-footer-partners-section-footer-frame-container-gap:20px ;
-    --homepage-footer-partners-section-p-fontWeight-large:500 ;
-    --homepage-footer-partners-section-p-fontWeight-small:400 ;
-    --homepage-footer-partners-section-p-fontSize:18px ;
+    --homepage-footer-partners-section-contact-socials-container-gap: 20px;
+    --homepage-footer-partners-section-contact-container-gap: 10px;
+    --homepage-footer-partners-section-socials-container-gap: 20px;
+    --homepage-footer-partners-section-footer-links-container-gap: 100px;
+    --homepage-footer-partners-section-footer-links-container-width: 770px;
+    --homepage-footer-partners-section-footer-frame-container-gap: 20px;
+    --homepage-footer-partners-section-p-fontWeight-large: 500;
+    --homepage-footer-partners-section-p-fontWeight-small: 400;
+    --homepage-footer-partners-section-p-fontSize: 18px;
 
     --homepage-rac-section-container-height: 720px;
     --homepage-rac-section-content-container-gap: 80px;
@@ -602,21 +654,21 @@ html {
     --homepage-rac-section-content-buttons-container-flex-direction: row;
     --homepage-rac-section-content-buttons-container-gap: 24px;
 
-    --homepage-process-section-gap: 80px ;
-    --homepage-process-section-header-gap: 56px ;
-    --homepage-process-section-video-height: 562px ;
-    --homepage-process-section-video-width: 1000px ;
-    --homepage-process-section-video-border-radius: 10px ;
-    --homepage-process-section-video-margin-left: 0 ;
-    --homepage-process-section-card-flex-direction: row ;
+    --homepage-process-section-gap: 80px;
+    --homepage-process-section-header-gap: 56px;
+    --homepage-process-section-video-height: 562px;
+    --homepage-process-section-video-width: 1000px;
+    --homepage-process-section-video-border-radius: 10px;
+    --homepage-process-section-video-margin-left: 0;
+    --homepage-process-section-card-flex-direction: row;
     --homepage-process-section-card-width: 880px;
     --homepage-process-section-card-height: 274px;
     --homepage-process-section-card-border-radius: 24px;
-    --homepage-process-section-card-padding: 32px 64px 48px 32px; 
+    --homepage-process-section-card-padding: 32px 64px 48px 32px;
     --homepage-process-section-card-gap: 32px;
     --homepage-process-section-card-header-flex-direction: column;
-    --homepage-process-section-card-header-gap:20px;
-    --homepage-process-section-card-week-div-padding:8px 12px 6px 12px;
+    --homepage-process-section-card-header-gap: 20px;
+    --homepage-process-section-card-week-div-padding: 8px 12px 6px 12px;
     --homepage-process-section-card-week-div-radius: 4px;
     --homepage-process-section-card-info-div-gap: 20px;
     --homepage-process-section-card-info-headline-div-gap: 16px;
@@ -626,7 +678,18 @@ html {
     --homepage-process-section-card-info-text-lineheight: 20px;
     --homepage-process-section-card-info-text-letterSpacing: 0px;
     --homepage-process-section-card-icon-size: 40px;
-    --homepage-process-section-card-last-step-width:296px;
+    --homepage-process-section-card-last-step-width: 296px;
+
+    --homepage-events-section-container-height: 400px;
+    --homepage-events-section-content-container-gap: 48px;
+    --homepage-events-section-event-container-flex-direction: row;
+    --homepage-events-section-event-container-gap: 200px;
+    --homepage-events-section-event-card-width: 682px;
+    --homepage-events-section-event-card-gap: 20px;
+    --homepage-events-section-event-card-headline-gap: 16px;
+    --homepage-events-section-event-card-event-title-tag-padding: 8px 12px;
+    --homepage-events-section-event-card-event-title-tag-border-radius: 8px;
+    --homepage-events-section-button-container-justify-content: end;
 
     --button-height: 72px;
     --button-width: fit-content;
@@ -639,9 +702,24 @@ html {
     --button-text-text-align: center;
 
     --paginated-cards-visible-cards-container-gap: 24px;
-    
+
     --numbering-div-width: 36px;
     --numbering-div-height: 36px;
     --numbering-div-border-radius: 18.64px;
+
+    --layout-static-page-n4d-logo-width: 230;
+    --layout-static-page-n4d-logo-height: 32;
+    --layout-static-page-header-height: 80px;
+    --layout-static-page-header-padding: 20px 36px;
   }
+}
+
+.temp-opportunities-container {
+  width: fit-content;
+  max-width: var(--page-opportunity-grid-max-width);
+  margin-inline: auto;
+  margin-block: 0 40px;
+  display: grid;
+  grid-template-columns: var(--page-opportunity-grid-template-columns);
+  gap: 24px;
 }

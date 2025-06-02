@@ -101,19 +101,39 @@ const mapOpportunity = (opp: OpportunityApi) => {
     title: opp.title,
     updatedAt: new Date(opp.updated_at),
     voInformation: opp.vo_information,
+    categoryId: opp.category_id,
   };
 
   return newOpp;
 };
 
-const iconNames = [IconName.Users, IconName.Baby, IconName.Bicycle];
-
 export const getMappedOpportunities = (opps: OpportunityApi[]) => {
-  return opps.map((opp, index) => ({
-    ...mapOpportunity(opp),
-    iconName: iconNames[index],
-  }));
+  return opps.map((opp) => mapOpportunity(opp));
 };
+
+export enum CategoryTitle {
+  ACCOMPANYING = "6",
+  SPORT_ACTIVITIES = "5",
+  EVENTS = "4",
+  SKILLS_BASED = "3",
+  CHILD_CARE = "2",
+  DE_LNG_SUPPORT = "1",
+}
+
+export function getIconName(category: CategoryTitle) {
+  const categoryIconMap = {
+    [CategoryTitle.ACCOMPANYING]: IconName.Users,
+    [CategoryTitle.SPORT_ACTIVITIES]: IconName.PingPong,
+    [CategoryTitle.EVENTS]: IconName.CalendarStar,
+    [CategoryTitle.SKILLS_BASED]: IconName.Bicycle,
+    [CategoryTitle.CHILD_CARE]: IconName.Baby,
+    [CategoryTitle.DE_LNG_SUPPORT]: IconName.ChatsTeardrop,
+  };
+
+  return category in categoryIconMap
+    ? categoryIconMap[category]
+    : categoryIconMap[`${Math.ceil(Math.random() * 6)}` as CategoryTitle]; // random 1..6
+}
 
 const aubergineColorActivities = [
   "doctors appointment",

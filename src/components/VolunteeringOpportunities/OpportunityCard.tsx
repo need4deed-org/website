@@ -1,19 +1,30 @@
-import { CalendarDots, MapPin, Translate } from "@phosphor-icons/react";
+import {
+  CalendarDotsIcon as CalendarDots,
+  MapPinIcon as MapPin,
+  TranslateIcon as Translate,
+} from "@phosphor-icons/react";
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
+
+import { ScreenTypes } from "../../config/types";
+import useScreenType from "../../hooks/useScreenType";
+import { Activities } from "../core/common";
 import { BaseCard, IconDiv } from "../styled/containers";
 import { Heading3, Paragraph } from "../styled/text";
 import { iconNameMap } from "../VolunteeringCategories/icon";
 import { IconName } from "../VolunteeringCategories/types";
 import OpportunityCardDetails, { CardDetail } from "./OpportunityCardDetail";
 import { Opportunity } from "./types";
-import { Activities } from "../core/common";
 
-const charlimit = 160;
+interface CardProps extends React.CSSProperties {}
 
-const Card = styled(BaseCard)`
-  background-color: var(--color-magnolia);
-  width: var(--homepage-volunteering-opportunity-card-width);
+const Card = styled(BaseCard)<CardProps>`
+  background-color: ${({ backgroundColor }) =>
+    backgroundColor || "var(--color-magnolia)"};
+  width: ${({ width }) =>
+    width || "var(--homepage-volunteering-opportunity-card-width)"};
+  height: ${({ height }) =>
+    height || "var(--homepage-volunteering-opportunity-card-height)"};
   padding-top: var(--homepage-volunteering-opportunity-card-padding-top);
   padding-right: var(--homepage-volunteering-opportunity-card-padding-right);
   padding-bottom: var(--homepage-volunteering-opportunity-card-padding-bottom);
@@ -21,35 +32,46 @@ const Card = styled(BaseCard)`
   gap: var(--homepage-volunteering-opportunity-card-gap);
 `;
 
-interface OpportunityCardProps extends Opportunity {
+interface Props extends React.CSSProperties {
+  opportunity: Opportunity;
   iconName: IconName;
+  vo?: boolean;
+  onClickHandler?: (opportunity: Opportunity) => void;
+  CTAs?: ({
+    flexDirection,
+    opportunity,
+  }: React.CSSProperties & { opportunity: Opportunity }) => React.ReactNode;
 }
 
 export default function OpportunityCard({
-  title,
-  voInformation,
+  opportunity,
   iconName,
-  languages,
-  schedule,
-  locations,
-  activities,
-  accompanyingDate,
-}: OpportunityCardProps) {
+  onClickHandler,
+  width,
+  height,
+  backgroundColor,
+  vo = false,
+  CTAs = undefined,
+}: Props) {
   const { t } = useTranslation();
+  const screenType = useScreenType();
 
-  const languagesText = languages.join("; ");
-  const district = locations.join(",");
+  const {
+    title,
+    languages,
+    schedule,
+    locations,
+    activities,
+    accompanyingDate,
+    voInformation,
+  } = opportunity;
+
+  const languagesText = languages.join(", ");
+  const district = locations.join(", ");
   const scheduleAsStr =
     accompanyingDate?.toDateString().split(" ").slice(0, 3).join(" ") ||
     schedule ||
     "";
-
-  const titleLen = title?.length || 0;
-  const totalTitleInfoLen = titleLen + (voInformation?.length || 0);
-
-  let truncatedVoInformation = null;
-  if (totalTitleInfoLen > charlimit)
-    truncatedVoInformation = `${voInformation.slice(0, charlimit - titleLen)}...`;
 
   const cardDetails: CardDetail[] = [
     {
@@ -70,12 +92,23 @@ export default function OpportunityCard({
   ];
 
   return (
-    <Card>
+    <Card
+      width={width}
+      height={height}
+      backgroundColor={backgroundColor}
+      onClick={() => onClickHandler && onClickHandler(opportunity)}
+    >
       <IconDiv>{iconNameMap[iconName]}</IconDiv>
       <Heading3>{title}</Heading3>
-      <Paragraph>{truncatedVoInformation || voInformation}</Paragraph>
+      {vo && <Paragraph>{voInformation}</Paragraph>}
       <Activities activities={activities} />
       <OpportunityCardDetails cardDetails={cardDetails} />
+      {CTAs && (
+        <CTAs
+          flexDirection={screenType === ScreenTypes.MOBILE ? "column" : "row"}
+          opportunity={opportunity}
+        />
+      )}
     </Card>
   );
 }

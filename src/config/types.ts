@@ -38,29 +38,40 @@ export enum YesNo {
 }
 
 export enum Subpages {
-  NOTICE = "impressum",
-  DATA_PROTECTION = "datenschutzerklaerung",
-  AGREEMENT = "vereinbarung",
-  GUIDELINES = "guidelines",
-  BECOME_VOLUNTEER = "become-volunteer",
-  ANNOUNCEMENT = "announcement",
-  OPPORTUNITIES = "opportunities",
-  ACCOMPANYING = "accompanying",
-  OPPORTUNITIES_TEST = "0pp4-test",
-  ACCOMPANYING_TEST = "4cc0-test",
-  EVENT = "event",
-  EVENTS = "events",
-  PAST_EVENTS = "past-events",
-  ADD_OPPORTUNITY = "add-opportunity",
-  COOKIES = "cookies",
-  FAQS = "faqs",
+  NOTICE = "old/impressum",
+  DATA_PROTECTION = "old/datenschutzerklaerung",
+  AGREEMENT = "old/vereinbarung",
+  GUIDELINES = "old/guidelines",
+  BECOME_VOLUNTEER = "old/become-volunteer",
+  ANNOUNCEMENT = "old/announcement",
+  OPPORTUNITIES = "old/opportunities",
+  ACCOMPANYING = "old/accompanying",
+  OPPORTUNITIES_TEST = "old/0pp4-test",
+  ACCOMPANYING_TEST = "old/4cc0-test",
+  EVENT = "old/event",
+  EVENTS = "old/events",
+  PAST_EVENTS = "old/past-events",
+  ADD_OPPORTUNITY = "old/add-opportunity",
+  COOKIES = "old/cookies",
+  FAQS = "old/faqs",
+  OLD = "old",
+  FAQ = "faq",
+  ABOUT = "about",
+  LEGAL_NOTICE = "legal-notice",
+  DATA_PRIVACY = "data-privacy",
+  VPA = "vpa",
+  OPPORTUNITY_CARDS = "opportunity-cards",
+  OPPORTUNITY_FORM = "opportunity-form",
+  OPPORTUNITY_FORM_LEGACY = "add-opportunity",
+  VOLUNTEER_FORM = "volunteer-form",
+  RAC_GUIDELINES = "rac-guidelines",
 }
 
 export enum Events {
   EVENT_8_31_24 = "event-8-31-24",
 }
 
-// conjunction between keys and disjunction between possible values are applied for seach
+// conjunction between keys and disjunction between possible values are applied for search
 export interface OpportunityParams {
   search?: Record<string, string[]>;
   primaryKeys?: string[];
@@ -72,12 +83,18 @@ export type AlfredOpportunity = Record<string, any>;
 
 export type KeyMap = {
   id: string;
-  type: string;
-  name: string;
+  type?: string;
+  name?: string;
   languages: string;
   time: string;
   location: string;
   vo?: string;
+  categoryId?: string;
+  title?: string;
+  activities?: string;
+  createdAt?: string;
+  updatedAt?: string;
+  accompDate?: string;
 };
 
 // copied from tanstack internals
@@ -114,3 +131,5 @@ export enum ScreenTypes {
   TABLET = "tablet",
   DESKTOP = "desktop",
 }
+
+export type FooterLink = [string, string];

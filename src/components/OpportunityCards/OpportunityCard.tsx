@@ -11,12 +11,15 @@ import {
 } from "../../utils";
 import VOInformation from "./VOInformation";
 
-interface Props {
+interface Props extends React.HTMLAttributes<HTMLDivElement> {
   opportunity: Record<string, string>;
-  pre?: boolean;
+  onClickHandler?: () => void;
 }
 
-export default function OpportunityCard({ opportunity, pre = false }: Props) {
+export default function OpportunityCard({
+  opportunity,
+  onClickHandler = () => {},
+}: Props) {
   const { t, i18n } = useTranslation();
   const titleBtn = t("projectIntro.beVolunteerButton");
   const srcImg = useMemo(
@@ -28,12 +31,10 @@ export default function OpportunityCard({ opportunity, pre = false }: Props) {
     id: opportunity.id,
     title: opportunity.name,
   });
-  return pre ? (
-    <pre className="opportunity-card">
-      {JSON.stringify(opportunity, null, 2)}
-    </pre>
-  ) : (
-    <div className="opportunity-card">
+
+  return (
+    // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
+    <div className="opportunity-card" onClick={onClickHandler}>
       <img src={srcImg} alt="Opportunity example" />
       <h5>{opportunity.name}</h5>
       {opportunity.vo ? (

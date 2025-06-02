@@ -213,6 +213,15 @@ export function getMainCtaUrl({ lng, id = "", title = "" }: MainCtaUrl) {
   return `/${Subpages.BECOME_VOLUNTEER}/${lng}/?id=${id}&title=${title}`;
 }
 
+interface MainREgisterUrl {
+  id?: string;
+  title?: string;
+}
+
+export function getRegisterCtaUrl({ id = "", title = "" }: MainREgisterUrl) {
+  return `/${Subpages.VOLUNTEER_FORM}/?id=${id}&title=${title}`;
+}
+
 export function getLocale(lang: Lang) {
   if (lang === Lang.EN) return "en-UK";
 
@@ -407,4 +416,66 @@ export function getTimeFrameString(lang: Lang, from: Date, to?: Date) {
   const toString = to ? (toDate as Date).toLocaleString(locale, toOptions) : "";
 
   return toString ? `${fromString} - ${toString}` : fromString;
+}
+
+const defaultDateOptions: Intl.DateTimeFormatOptions = {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+
+export const formatDateRange = (
+  fromDate: Date,
+  toDate?: Date | null,
+  separator: string = " | ",
+  locales: Intl.LocalesArgument = "en-US",
+  dateOptions: Intl.DateTimeFormatOptions = defaultDateOptions,
+): string => {
+  if (!(fromDate instanceof Date) || Number.isNaN(fromDate.getTime())) {
+    // eslint-disable-next-line no-console
+    console.error("Invalid 'fromDate' provided to formatDateRange.");
+    return "";
+  }
+
+  const timeOptions: Intl.DateTimeFormatOptions = {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false, // Use 24-hour format
+  };
+
+  const formattedDate = fromDate.toLocaleDateString(locales, dateOptions);
+  const formattedStartTime = fromDate.toLocaleTimeString(locales, timeOptions);
+
+  let timeRangeString = formattedStartTime;
+
+  if (toDate && toDate instanceof Date && !Number.isNaN(toDate.getTime())) {
+    const formattedEndTime = toDate.toLocaleTimeString("en-US", timeOptions);
+    timeRangeString += `-${formattedEndTime}`;
+  }
+
+  return `${formattedDate}${separator} ${timeRangeString}`;
+};
+
+export function getOpportunityForGrid(opportunity: Record<string, string>) {
+  return {
+    accompanyingDate: opportunity.time
+      ? null
+      : new Date(opportunity.accompDate),
+    accompanyingInfo: null,
+    activities: opportunity.activities.split(","),
+    createdAt: new Date(opportunity.createdAt),
+    datetime: null,
+    id: opportunity.id,
+    languages: opportunity.languages.split(","),
+    locations: opportunity.location.split(","),
+    opportunityType: opportunity.type,
+    schedule: opportunity.time,
+    skills: [""],
+    status: "",
+    timeslots: [{ key: "" }],
+    title: opportunity.title,
+    updatedAt: new Date(opportunity.updatedAt),
+    voInformation: opportunity.vo,
+    categoryId: opportunity.categoryId,
+  };
 }

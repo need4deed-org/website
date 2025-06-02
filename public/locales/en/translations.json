@@ -661,6 +661,23 @@
           "text": "Incase you are multilingual, you may be asked to accompany and translate when needed"
         }
       }
+    },
+    "events": {
+      "headLine": "Upcoming Events",
+      "button": "Learn More & Register"
+    }
+  },
+  "opportunityPage": {
+    "header": "Explore Volunteering Opportunities",
+    "popup": {
+      "register": {
+        "title": "New here? Register now",
+        "button": "Register and Apply"
+      },
+      "apply": {
+        "title": "Already Registered?",
+        "button": "Apply Now"
+      }
     }
   }
 }

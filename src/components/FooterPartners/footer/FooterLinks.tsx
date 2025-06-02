@@ -1,9 +1,11 @@
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
+import { FooterLink } from "../../../config/types";
+import { ATag } from "../../styled/tags";
 import { Paragraph } from "../../styled/text";
 
 interface FooterLinkProps {
-  links: string[];
+  links: FooterLink[];
 }
 const FrameContainer = styled.div`
   display: flex;
@@ -16,17 +18,21 @@ export default function FooterLinks({ links }: FooterLinkProps) {
 
   return (
     <FrameContainer>
-      {links.map((link) => (
-        <Paragraph
-          key={link}
-          color="var(--color-magnolia)"
-          fontWeight="var(--homepage-footer-partners-section-p-fontWeight-large)"
-          fontSize="var(--homepage-footer-partners-section-p-fontSize)"
-          lineheight="var(--homepage-footer-partners-section-p-fontSize)"
-        >
-          {t(link)}
-        </Paragraph>
-      ))}
+      {links.map(([link, href]) => {
+        return (
+          <ATag key={link} href={`/${href}`}>
+            <Paragraph
+              key={link}
+              color="var(--color-magnolia)"
+              fontWeight="var(--homepage-footer-partners-section-p-fontWeight-large)"
+              fontSize="var(--homepage-footer-partners-section-p-fontSize)"
+              lineheight="var(--homepage-footer-partners-section-p-fontSize)"
+            >
+              {t(link)}
+            </Paragraph>
+          </ATag>
+        );
+      })}
     </FrameContainer>
   );
 }

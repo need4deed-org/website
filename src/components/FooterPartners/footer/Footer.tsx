@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ScreenTypes } from "../../../config/types";
+import { FooterLink, ScreenTypes, Subpages } from "../../../config/types";
 import useScreenType from "../../../hooks/useScreenType";
 import { LogoN4D } from "../logos";
 import ContactSocials from "./ContactSocials";
@@ -34,16 +34,16 @@ const FooterLinksContainer = styled.div<FooterLinksContainerProps>`
   width: var(--homepage-footer-partners-section-footer-links-container-width);
 `;
 
-const links1 = [
-  "homepage.footer.about",
-  "homepage.footer.resources",
-  "homepage.footer.faq",
+const links1: FooterLink[] = [
+  ["homepage.footer.about", Subpages.ABOUT],
+  ["homepage.footer.resources", "#"],
+  ["homepage.footer.faq", Subpages.FAQ],
 ];
 
-const links2 = [
-  "homepage.footer.legalNotice",
-  "homepage.footer.privacy",
-  "homepage.footer.vpa",
+const links2: FooterLink[] = [
+  ["homepage.footer.legalNotice", Subpages.LEGAL_NOTICE],
+  ["homepage.footer.privacy", Subpages.DATA_PRIVACY],
+  ["homepage.footer.vpa", Subpages.VPA],
 ];
 
 const desktopFooter = (

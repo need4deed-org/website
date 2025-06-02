@@ -1,7 +1,11 @@
-import styled from "styled-components";
 import { useTranslation } from "react-i18next";
-import { CustomHeading } from "../styled/text";
+import { useNavigate } from "react-router-dom";
+import styled from "styled-components";
+
+import { Subpages } from "../../config/types";
 import { Button } from "../core/button";
+import { ATag } from "../styled/tags";
+import { CustomHeading } from "../styled/text";
 
 const ContentDiv = styled.div`
   display: flex;
@@ -32,6 +36,7 @@ const HeroButtonsContainer = styled.div`
 
 export default function HeroContent() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   return (
     <ContentDiv>
@@ -61,13 +66,17 @@ export default function HeroContent() {
 
         <HeroButtonsContainer>
           <Button
-            onClick={() => {}} // TODO: click handler will be implemented later
+            onClick={() => {
+              navigate(`/${Subpages.VOLUNTEER_FORM}`);
+            }}
             text={t("homepage.heroSection.content.buttonJoinVolunteer")}
           />
-          <Button
-            onClick={() => {}} // TODO: click handler will be implemented later
-            text={t("homepage.heroSection.content.buttonJoinRefugeeCenter")}
-          />
+          <ATag href="#rac-section-container">
+            <Button
+              onClick={() => {}}
+              text={t("homepage.heroSection.content.buttonJoinRefugeeCenter")}
+            />
+          </ATag>
         </HeroButtonsContainer>
       </ContentContainer>
     </ContentDiv>

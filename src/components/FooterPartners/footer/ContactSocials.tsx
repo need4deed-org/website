@@ -1,10 +1,11 @@
-import styled from "styled-components";
-import { useTranslation } from "react-i18next";
 import {
   FacebookLogo,
   InstagramLogo,
   LinkedinLogo,
 } from "@phosphor-icons/react";
+import { useTranslation } from "react-i18next";
+import styled from "styled-components";
+import { ATag } from "../../styled/tags";
 import { Paragraph } from "../../styled/text";
 
 const ContactSocialsContainer = styled.div`
@@ -61,13 +62,27 @@ function Contact() {
 function Socials() {
   return (
     <SocialsContainer>
-      <LinkedinLogo size={40} weight="fill" color="var(--color-orchid-light)" />
-      <FacebookLogo size={40} weight="fill" color="var(--color-orchid-light)" />
-      <InstagramLogo
-        weight="bold"
-        size={40}
-        color="var(--color-orchid-light)"
-      />
+      <ATag href="https://www.linkedin.com/company/need4deed/">
+        <LinkedinLogo
+          size={40}
+          weight="fill"
+          color="var(--color-orchid-light)"
+        />
+      </ATag>
+      <ATag href="https://www.facebook.com/need4deedberlin/">
+        <FacebookLogo
+          size={40}
+          weight="fill"
+          color="var(--color-orchid-light)"
+        />
+      </ATag>
+      <ATag href="https://www.instagram.com/need4deed/">
+        <InstagramLogo
+          weight="bold"
+          size={40}
+          color="var(--color-orchid-light)"
+        />
+      </ATag>
     </SocialsContainer>
   );
 }
