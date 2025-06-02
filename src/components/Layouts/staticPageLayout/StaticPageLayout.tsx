@@ -1,10 +1,11 @@
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import styled from "styled-components";
+import { ScreenTypes } from "../../../config/types";
+import useScreenType from "../../../hooks/useScreenType";
 import { FooterPartnersSection } from "../../FooterPartners";
 import { Header } from "../../HeaderNew";
 import { N4DLogo } from "./logos/N4DLogo";
-import useScreenType from "../../../hooks/useScreenType";
-import { ScreenTypes } from "../../../config/types";
 
 interface Props {
   children: ReactNode;
@@ -30,6 +31,11 @@ const PageContentHeaderContainer = styled.div<PageContentHeaderContainerProps>`
 export function StaticPageLayout({ children, background }: Props) {
   const screenType = useScreenType();
   const isBurgerMenu = screenType !== ScreenTypes.DESKTOP;
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <PageContainer>

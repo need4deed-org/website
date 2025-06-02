@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 import { Subpages } from "../../config/types";
 import { Button } from "../core/button";
+import { ATag } from "../styled/tags";
 import { CustomHeading } from "../styled/text";
 
 const ContentDiv = styled.div`
@@ -70,10 +71,12 @@ export default function HeroContent() {
             }}
             text={t("homepage.heroSection.content.buttonJoinVolunteer")}
           />
-          <Button
-            onClick={() => {}} // TODO: click handler will be implemented later
-            text={t("homepage.heroSection.content.buttonJoinRefugeeCenter")}
-          />
+          <ATag href="#rac-section-container">
+            <Button
+              onClick={() => {}}
+              text={t("homepage.heroSection.content.buttonJoinRefugeeCenter")}
+            />
+          </ATag>
         </HeroButtonsContainer>
       </ContentContainer>
     </ContentDiv>

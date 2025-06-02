@@ -13,6 +13,7 @@ import AppContainerContext from "./contexts/AppContainerContext";
 import About from "./pages/About";
 import DataPrivacy from "./pages/DataPrivacy";
 import FAQ from "./pages/FAQ";
+import GuidelinesPage from "./pages/GuidelinesPage";
 import Home from "./pages/Home";
 import Landing from "./pages/Landing";
 import LegalNotice from "./pages/LegalNotice";
@@ -201,6 +202,10 @@ function App() {
                 <Route
                   path={`/${Subpages.VOLUNTEER_FORM}`}
                   element={<VolunteerForm />}
+                />
+                <Route
+                  path={`/${Subpages.RAC_GUIDELINES}`}
+                  element={<GuidelinesPage />}
                 />
                 <Route path="/:lng" element={<Landing />} />
                 <Route
