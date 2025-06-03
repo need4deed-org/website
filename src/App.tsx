@@ -12,6 +12,7 @@ import { Subpages } from "./config/types";
 import AppContainerContext from "./contexts/AppContainerContext";
 import About from "./pages/About";
 import DataPrivacy from "./pages/DataPrivacy";
+import EventPage from "./pages/EventPage";
 import FAQ from "./pages/FAQ";
 import GuidelinesPage from "./pages/GuidelinesPage";
 import Home from "./pages/Home";
@@ -206,6 +207,10 @@ function App() {
                 <Route
                   path={`/${Subpages.RAC_GUIDELINES}`}
                   element={<GuidelinesPage />}
+                />
+                <Route
+                  path={`/${Subpages.EVENT_PAGE}`}
+                  element={<EventPage />}
                 />
                 <Route path="/:lng" element={<Landing />} />
                 <Route
