@@ -65,6 +65,7 @@ export enum Subpages {
   OPPORTUNITY_FORM_LEGACY = "add-opportunity",
   VOLUNTEER_FORM = "volunteer-form",
   RAC_GUIDELINES = "rac-guidelines",
+  EVENT_PAGE = "event-page",
 }
 
 export enum Events {
