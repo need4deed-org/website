@@ -1,26 +1,26 @@
-import { Opportunity, OpportunityType } from "need4deed-sdk";
+import { OpportunityType } from "need4deed-sdk";
 
 import { useState } from "react";
-import { KeyMap, OpportunityParams } from "../../config/types";
+import { OpportunityParams } from "../../config/types";
 import useOpportunities from "../../hooks/api/useOpportunities";
 import useOpportunitiesFromFile from "../../hooks/api/useOpportunitiesFromFile";
-import { getOpportunityForGrid, mapOpportunity } from "../../utils";
 import Announcement from "../Announcement";
 import OpportunityCardPopup from "../VolunteeringOpportunities/OpportunityCardPopup";
-import OpportunityCard from "./OpportunityCard";
 import "./index.css";
+import {
+  CategoryTitle,
+  getIconName,
+  getMappedOpportunities,
+} from "../VolunteeringOpportunities/utils";
+import {
+  Opportunity,
+  OpportunityApi,
+} from "../VolunteeringOpportunities/types";
+import OpportunityCard from "../VolunteeringOpportunities/OpportunityCard";
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   url: string;
   opportunityParams?: OpportunityParams;
-  keyMap?: KeyMap;
-  CardComponent?: ({
-    opportunity,
-    onClickHandler,
-  }: {
-    opportunity: Record<string, string>;
-    onClickHandler: () => void;
-  }) => JSX.Element;
   popup?: boolean;
 }
 
@@ -30,8 +30,6 @@ export default function OpportunityCards({
   className,
   url,
   opportunityParams = {},
-  keyMap = {} as KeyMap,
-  CardComponent = OpportunityCard,
   popup = false,
 }: Props) {
   const isUrl = url.toLowerCase().match(regexHttpSchema);
@@ -55,33 +53,30 @@ export default function OpportunityCards({
     );
   }
 
+  const opportunitiesRaw = (opportunities || []) as unknown as OpportunityApi[];
+
+  const mappedOpportunities = getMappedOpportunities(opportunitiesRaw);
+
   return opportunities?.length ? (
     <div className={className || "n4d-container opportunity-container"}>
       {popup && modalOpportunity && (
         <OpportunityCardPopup
           close={() => setModalOpportunity(undefined)}
-          opportunity={getOpportunityForGrid(
-            mapOpportunity(modalOpportunity, keyMap) as unknown as Record<
-              string,
-              string
-            >,
-          )}
+          opportunity={modalOpportunity}
         />
       )}
-      {opportunities.map((opportunity) => {
-        const mappedOpportunity = mapOpportunity(opportunity, keyMap);
-        return (
-          <CardComponent
-            // eslint-disable-next-line no-underscore-dangle
-            key={opportunity.id || opportunity._id || crypto.randomUUID()}
-            opportunity={mappedOpportunity}
-            onClickHandler={() => {
-              if (opportunity)
-                setModalOpportunity(opportunity as unknown as Opportunity);
-            }}
-          />
-        );
-      })}
+
+      {mappedOpportunities.map((opp) => (
+        <OpportunityCard
+          key={opp.id}
+          iconName={getIconName(opp.categoryId as CategoryTitle)}
+          opportunity={opp}
+          onClickHandler={() => setModalOpportunity(opp)}
+          width="var(--page-opportunity-card-width)"
+          height="var(--page-opportunity-card-height)"
+          backgroundColor="var(--color-white)"
+        />
+      ))}
     </div>
   ) : (
     <Announcement copies={loading ? "spinner" : "emptyList"} />

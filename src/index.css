@@ -303,6 +303,9 @@ html {
     --layout-static-page-n4d-logo-height: 24;
     --layout-static-page-header-height: 64px;
     --layout-static-page-header-padding: 10px 18px;
+
+    --opportunities-container-gap: 40px;
+    --opportunities-container-padding-inline: 16px;
   }
 }
 
@@ -512,6 +515,9 @@ html {
     --layout-static-page-n4d-logo-height: 32;
     --layout-static-page-header-height: 76px;
     --layout-static-page-header-padding: 20px 36px;
+
+    --opportunities-container-gap: 40px;
+    --opportunities-container-padding-inline: 16px;
   }
 }
 
@@ -717,6 +723,9 @@ html {
     --layout-static-page-n4d-logo-height: 32;
     --layout-static-page-header-height: 80px;
     --layout-static-page-header-padding: 20px 36px;
+
+    --opportunities-container-gap: 40px;
+    --opportunities-container-padding-inline: 16px;
   }
 }
 
