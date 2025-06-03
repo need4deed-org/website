@@ -1,10 +1,7 @@
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
-
-import WidthLanguageQueryParam from "../components/core/WidthLanguageQueryParam";
 import { EventsSection } from "../components/EventsSection";
 import { FooterPartnersSection } from "../components/FooterPartners";
 import { HeroSection } from "../components/HeroSection";
+import PageWrapper from "../components/Layouts/staticPageLayout/PageWrapper";
 import { ProcessStepsSection } from "../components/ProcessSteps";
 import { RacSection } from "../components/RacSection";
 import { AppContainer } from "../components/styled/containers";
@@ -13,14 +10,8 @@ import { VolunteeringCategoriesSection } from "../components/VolunteeringCategor
 import { VolunteeringOpportunitiesSection } from "../components/VolunteeringOpportunities";
 
 export default function Landing() {
-  const location = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location.pathname]);
-
   return (
-    <WidthLanguageQueryParam>
+    <PageWrapper>
       <AppContainer id="app-container">
         <HeroSection />
         <VolunteeringCategoriesSection />
@@ -31,6 +22,6 @@ export default function Landing() {
         <RacSection />
         <FooterPartnersSection />
       </AppContainer>
-    </WidthLanguageQueryParam>
+    </PageWrapper>
   );
 }
