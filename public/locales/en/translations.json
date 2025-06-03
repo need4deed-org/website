@@ -599,7 +599,8 @@
       "languages": "Languages",
       "schedule": "Schedule",
       "district": "District",
-      "footerButton": "See all volunteering opportunities"
+      "footerButton": "See all volunteering opportunities",
+      "dateOfAppointment": "Date Of Appointment"
     },
     "testimonials": {
       "header": "TESTIMONIALS",

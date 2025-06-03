@@ -156,4 +156,26 @@ export const getActivityBackgroundColor = (activity: string) => {
     : "var(--color-papaya)";
 };
 
+export const formatAccompanyingDate = (date: Date) => {
+  const dateOptions: Intl.DateTimeFormatOptions = {
+    weekday: "long",
+    month: "long",
+    day: "numeric",
+  };
+
+  const timeOptions: Intl.DateTimeFormatOptions = {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+  };
+
+  const dateFormatter = new Intl.DateTimeFormat("en-US", dateOptions);
+  const timeFormatter = new Intl.DateTimeFormat("en-US", timeOptions);
+
+  const formattedDatePart: string = dateFormatter.format(date);
+  const formattedTimePart: string = timeFormatter.format(date);
+
+  return `${formattedDatePart}, ${formattedTimePart}`;
+};
+
 export default {};

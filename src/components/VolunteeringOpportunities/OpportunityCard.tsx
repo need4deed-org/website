@@ -15,6 +15,7 @@ import { iconNameMap } from "../VolunteeringCategories/icon";
 import { IconName } from "../VolunteeringCategories/types";
 import OpportunityCardDetails, { CardDetail } from "./OpportunityCardDetail";
 import { Opportunity } from "./types";
+import { formatAccompanyingDate } from "./utils";
 
 interface CardProps extends React.CSSProperties {}
 
@@ -69,7 +70,7 @@ export default function OpportunityCard({
   const languagesText = languages.join(", ");
   const district = locations.join(", ");
   const scheduleAsStr =
-    accompanyingDate?.toDateString().split(" ").slice(0, 3).join(" ") ||
+    (accompanyingDate && formatAccompanyingDate(accompanyingDate)) ||
     schedule ||
     "";
 
@@ -81,7 +82,9 @@ export default function OpportunityCard({
     },
     {
       icon: <CalendarDots size={20} color="var(--icon-color)" />,
-      headerText: t(`homepage.volunteeringOpportunities.schedule`),
+      headerText: accompanyingDate
+        ? t(`homepage.volunteeringOpportunities.dateOfAppointment`)
+        : t(`homepage.volunteeringOpportunities.schedule`),
       bodyText: scheduleAsStr,
     },
     {
