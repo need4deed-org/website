@@ -1,5 +1,7 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { useLocation, useSearchParams } from "react-router-dom";
+
 import { EventsSection } from "../components/EventsSection";
 import { FooterPartnersSection } from "../components/FooterPartners";
 import { HeroSection } from "../components/HeroSection";
@@ -12,10 +14,17 @@ import { VolunteeringOpportunitiesSection } from "../components/VolunteeringOppo
 
 export default function Landing() {
   const location = useLocation();
+  const { i18n } = useTranslation();
+  const [queryParams] = useSearchParams();
+  const language = queryParams.get("language");
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
+
+  useEffect(() => {
+    i18n.changeLanguage(language || "en");
+  }, [i18n, language]);
 
   return (
     <AppContainer id="app-container">

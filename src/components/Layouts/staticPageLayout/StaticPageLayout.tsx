@@ -1,6 +1,8 @@
 import { ReactNode, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { useLocation, useSearchParams } from "react-router-dom";
 import styled from "styled-components";
+
 import { ScreenTypes } from "../../../config/types";
 import useScreenType from "../../../hooks/useScreenType";
 import { FooterPartnersSection } from "../../FooterPartners";
@@ -32,10 +34,17 @@ export function StaticPageLayout({ children, background }: Props) {
   const screenType = useScreenType();
   const isBurgerMenu = screenType !== ScreenTypes.DESKTOP;
   const location = useLocation();
+  const { i18n } = useTranslation();
+  const [queryParams] = useSearchParams();
+  const language = queryParams.get("language");
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
+
+  useEffect(() => {
+    i18n.changeLanguage(language || "en");
+  }, [i18n, language]);
 
   return (
     <PageContainer>
