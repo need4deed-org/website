@@ -153,6 +153,8 @@ html {
     --page-opportunity-popup-card-width: 328px;
     --page-opportunity-popup-card-height: auto;
 
+    --page-content-margin-bottom: 24px;
+
     --homepage-testimonials-header-gap: 16px;
     --homepage-testimonial-card-width: 320px;
     --homepage-testimonial-card-padding-top: 24px;
@@ -360,6 +362,8 @@ html {
     --page-opportunity-popup-card-width: 688px;
     --page-opportunity-popup-card-height: auto;
 
+    --page-content-margin-bottom: 24px;
+
     --homepage-testimonials-header-gap: 24px;
     --homepage-testimonial-card-width: 328px;
     --homepage-testimonial-card-padding-top: 28px;
@@ -555,6 +559,8 @@ html {
     --page-opportunity-card-height: auto; /*472px;*/
     --page-opportunity-popup-card-width: 688px;
     --page-opportunity-popup-card-height: auto;
+
+    --page-content-margin-bottom: 24px;
 
     --homepage-volunteering-opportunities-grid-template-columns: repeat(3, 1fr);
     --homepage-volunteering-opportunities-grid-template-rows: auto;

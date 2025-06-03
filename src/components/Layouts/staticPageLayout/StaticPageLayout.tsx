@@ -1,11 +1,12 @@
-import { ReactNode, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { ReactNode } from "react";
 import styled from "styled-components";
+
 import { ScreenTypes } from "../../../config/types";
 import useScreenType from "../../../hooks/useScreenType";
 import { FooterPartnersSection } from "../../FooterPartners";
 import { Header } from "../../HeaderNew";
 import { N4DLogo } from "./logos/N4DLogo";
+import PageWrapper from "./PageWrapper";
 
 interface Props {
   children: ReactNode;
@@ -28,30 +29,31 @@ const PageContentHeaderContainer = styled.div<PageContentHeaderContainerProps>`
     props.background || "var(--layout-static-page-background-default)"};
 `;
 
+const PageContentContainer = styled.div`
+  margin-block-end: var(--page-content-margin-bottom);
+`;
+
 export function StaticPageLayout({ children, background }: Props) {
   const screenType = useScreenType();
   const isBurgerMenu = screenType !== ScreenTypes.DESKTOP;
-  const location = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location.pathname]);
 
   return (
-    <PageContainer>
-      <PageContentHeaderContainer background={background}>
-        <Header
-          logo={<N4DLogo />}
-          isBurgerMenu={isBurgerMenu}
-          height="var(--layout-static-page-header-height)"
-          padding="var(--layout-static-page-header-padding)"
-          menuItemColor="var(--color-midnight)"
-        />
-        {children}
-      </PageContentHeaderContainer>
+    <PageWrapper>
+      <PageContainer>
+        <PageContentHeaderContainer background={background}>
+          <Header
+            logo={<N4DLogo />}
+            isBurgerMenu={isBurgerMenu}
+            height="var(--layout-static-page-header-height)"
+            padding="var(--layout-static-page-header-padding)"
+            menuItemColor="var(--color-midnight)"
+          />
+          <PageContentContainer>{children}</PageContentContainer>
+        </PageContentHeaderContainer>
 
-      <FooterPartnersSection />
-    </PageContainer>
+        <FooterPartnersSection />
+      </PageContainer>
+    </PageWrapper>
   );
 }
 
