@@ -1,8 +1,11 @@
-import styled from "styled-components";
-import { useTranslation } from "react-i18next";
 import { EventN4DType } from "need4deed-sdk";
-import { Heading1 } from "../styled/text";
+import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
+import styled from "styled-components";
+
+import { Subpages } from "../../config/types";
 import { Button } from "../core/button";
+import { Heading1 } from "../styled/text";
 import EventCard from "./EventCard";
 
 const ContentContainer = styled.div`
@@ -31,6 +34,7 @@ interface Props {
 
 export default function EventsContent({ onEventDataFetch }: Props) {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   return (
     <ContentContainer>
@@ -43,7 +47,9 @@ export default function EventsContent({ onEventDataFetch }: Props) {
 
         <ButtonContainer>
           <Button
-            onClick={() => {}} // TODO: click handler will be implemented later
+            onClick={() => {
+              navigate(`/${Subpages.EVENT_PAGE}`);
+            }}
             text={t("homepage.events.button")}
           />
         </ButtonContainer>
