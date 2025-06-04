@@ -798,7 +798,8 @@ export default function AddOpportunity() {
                       if (!value) {
                         return t("form.error.required");
                       }
-                      if (Number.isNaN(parseInt(value as string, 10))) {
+                      const numVolunteers = Number(value as string);
+                      if (Number.isNaN(numVolunteers)) {
                         return t(
                           "form.addOpportunity.fields.voGroup.numberVolunteers.error",
                         );
