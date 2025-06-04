@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { getRegisterCtaUrl } from "../../utils";
 import { Button } from "../core/button";
 import Popup from "../Popup";
+import { ATag } from "../styled/tags";
 import { Paragraph } from "../styled/text";
 import CloseIcon from "../svg/CloseIcon";
 import OpportunityCard from "./OpportunityCard";
@@ -46,12 +47,15 @@ const CTAsContainer = styled.div<CTAsContainerProps>`
   display: flex;
   flex-direction: ${({ flexDirection }) => flexDirection || "row"};
   justify-content: space-between;
+  gap: 24px;
   margin-top: 24px;
   > span {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     gap: 12px;
+    text-align: center;
   }
 `;
 
@@ -85,12 +89,14 @@ function CTAs({ flexDirection, opportunity }: CTAsProps) {
         <Paragraph fontSize="20px" fontWeight={600}>
           {t("opportunityPage.popup.apply.title")}
         </Paragraph>
-        <Button
-          text={t("opportunityPage.popup.apply.button")}
-          textColor="var(--color-midnight)"
-          backgroundcolor="var(--color-orchid)"
-          onClick={() => {}}
-        />
+        <ATag href="mailto:volunteer@need4deed.org">
+          <Button
+            text={t("opportunityPage.popup.apply.button")}
+            textColor="var(--color-midnight)"
+            backgroundcolor="var(--color-orchid)"
+            onClick={() => {}}
+          />
+        </ATag>
       </span>
     </CTAsContainer>
   );
