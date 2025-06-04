@@ -30,8 +30,8 @@ const PopupCard = styled(Popup)<PopupCardProps>`
 
   > button {
     position: absolute;
-    top: 58px;
-    right: 54px;
+    top: var(--page-opportunity-popup-card-x-margins);
+    right: var(--page-opportunity-popup-card-x-margins);
     padding: 0;
     color: var(--n4d-neutral-500);
     background: unset;
@@ -47,8 +47,8 @@ const CTAsContainer = styled.div<CTAsContainerProps>`
   display: flex;
   flex-direction: ${({ flexDirection }) => flexDirection || "row"};
   justify-content: space-between;
-  gap: 24px;
-  margin-top: 24px;
+  gap: var(--page-opportunity-popup-ctas-gap);
+  margin-top: var(--page-opportunity-popup-ctas-margin-top);
   > span {
     display: flex;
     flex-direction: column;
