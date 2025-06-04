@@ -108,7 +108,7 @@ export function parseFormStateDTOOpportunity(value: OpportunityData) {
 }
 
 export function isValidPLZ(code: string, scope: TypePLZ = TypePLZ.BERLIN) {
-  const codeNum = parseInt(code, 10);
+  const codeNum = Number(code);
 
   if (Number.isNaN(codeNum)) return false;
 
