@@ -1,7 +1,7 @@
-import { OpportunityType } from "need4deed-sdk";
+import { OpportunityType, TranslatedIntoType } from "need4deed-sdk";
 
 import { IconName } from "../VolunteeringCategories/types";
-import { Opportunity, OpportunityApi } from "./types";
+import { AccompanyingTranslation, Opportunity, OpportunityApi } from "./types";
 
 export const getSortedAccompanyingOpps = (
   opportunities: OpportunityApi[],
@@ -81,12 +81,25 @@ export const getMostPopularOpportunities = (
   ];
 };
 
+const accompanyingTranslationMap: Record<
+  TranslatedIntoType,
+  AccompanyingTranslation
+> = {
+  [TranslatedIntoType.ENGLISH_OK]: AccompanyingTranslation.en,
+  [TranslatedIntoType.DEUTSCHE]: AccompanyingTranslation.de,
+  [TranslatedIntoType.NO_TRANSLATION]: AccompanyingTranslation.no,
+};
+
 const mapOpportunity = (opp: OpportunityApi) => {
   const newOpp: Opportunity = {
     accompanyingDate: opp.accomp_datetime
       ? new Date(opp.accomp_datetime)
       : null,
     accompanyingInfo: opp.accomp_information,
+    accompanyingTranslation:
+      accompanyingTranslationMap[
+        opp.accomp_translation || TranslatedIntoType.NO_TRANSLATION
+      ],
     activities: opp.activities,
     createdAt: new Date(opp.created_at),
     datetime: opp.datetime_str,

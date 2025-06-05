@@ -600,7 +600,10 @@
       "schedule": "Schedule",
       "district": "District",
       "footerButton": "See all volunteering opportunities",
-      "dateOfAppointment": "Date Of Appointment"
+      "dateOfAppointment": "Date Of Appointment",
+      "mainCommunication":"Main communication",
+      "translationTo":"Translation to",
+      "residentsSpeak":"Residents speak"
     },
     "testimonials": {
       "header": "TESTIMONIALS",

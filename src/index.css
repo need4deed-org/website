@@ -145,6 +145,8 @@ html {
     --homepage-volunteering-opportunity-card-padding-left: 24px;
     --homepage-volunteering-opportunity-card-gap: 16px;
     --homepage-volunteering-opportunity-details-gap: 12px;
+    --homepage-volunteering-opportunity-details-languages-gap: 4px;
+    --homepage-volunteering-opportunity-details-languages-detail-gap: 4px;
 
     --page-opportunity-grid-max-width: 360px;
     --page-opportunity-grid-template-columns: 1fr;
@@ -306,6 +308,7 @@ html {
 
     --opportunities-container-gap: 40px;
     --opportunities-container-padding-inline: 16px;
+
   }
 }
 

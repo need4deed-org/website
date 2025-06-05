@@ -6,6 +6,7 @@ import {
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 
+import { OpportunityType } from "need4deed-sdk";
 import { ScreenTypes } from "../../config/types";
 import useScreenType from "../../hooks/useScreenType";
 import { Activities } from "../core/common";
@@ -31,6 +32,18 @@ const Card = styled(BaseCard)<CardProps>`
   padding-bottom: var(--homepage-volunteering-opportunity-card-padding-bottom);
   padding-left: var(--homepage-volunteering-opportunity-card-padding-left);
   gap: var(--homepage-volunteering-opportunity-card-gap);
+`;
+
+const LanguagesContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: var(--homepage-volunteering-opportunity-details-languages-gap);
+`;
+
+const LanguageDetailContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: var(--homepage-volunteering-opportunity-details-languages-gap);
 `;
 
 interface Props extends React.CSSProperties {
@@ -65,9 +78,39 @@ export default function OpportunityCard({
     activities,
     accompanyingDate,
     voInformation,
+    opportunityType,
+    accompanyingTranslation,
   } = opportunity;
 
   const languagesText = languages.join(", ");
+
+  const languagesComponent = (
+    <LanguagesContainer>
+      {opportunityType === OpportunityType.GENERAL ? (
+        <LanguageDetailContainer>
+          <Paragraph fontWeight={400}>
+            {t("homepage.volunteeringOpportunities.mainCommunication")}:
+          </Paragraph>
+          <Paragraph>English, German</Paragraph>
+        </LanguageDetailContainer>
+      ) : (
+        <LanguageDetailContainer>
+          <Paragraph fontWeight={400}>
+            {t("homepage.volunteeringOpportunities.translationTo")}:
+          </Paragraph>
+          <Paragraph>{accompanyingTranslation}</Paragraph>
+        </LanguageDetailContainer>
+      )}
+
+      <LanguageDetailContainer>
+        <Paragraph fontWeight={400}>
+          {t("homepage.volunteeringOpportunities.residentsSpeak")}:
+        </Paragraph>
+        <Paragraph>{languagesText}</Paragraph>
+      </LanguageDetailContainer>
+    </LanguagesContainer>
+  );
+
   const district = locations.join(", ");
   const scheduleAsStr =
     (accompanyingDate && formatAccompanyingDate(accompanyingDate)) ||
@@ -78,19 +121,19 @@ export default function OpportunityCard({
     {
       icon: <Translate size={20} color="var(--icon-color)" />,
       headerText: t(`homepage.volunteeringOpportunities.languages`),
-      bodyText: languagesText,
+      bodyTextComponent: languagesComponent,
     },
     {
       icon: <CalendarDots size={20} color="var(--icon-color)" />,
       headerText: accompanyingDate
         ? t(`homepage.volunteeringOpportunities.dateOfAppointment`)
         : t(`homepage.volunteeringOpportunities.schedule`),
-      bodyText: scheduleAsStr,
+      bodyTextComponent: <Paragraph>{scheduleAsStr}</Paragraph>,
     },
     {
       icon: <MapPin size={20} weight="fill" color="var(--icon-color)" />,
       headerText: t(`homepage.volunteeringOpportunities.district`),
-      bodyText: district,
+      bodyTextComponent: <Paragraph>{district}</Paragraph>,
     },
   ];
 
