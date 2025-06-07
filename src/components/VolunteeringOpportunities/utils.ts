@@ -1,7 +1,12 @@
-import { OpportunityType } from "need4deed-sdk";
+import { Lang, OpportunityType, TranslatedIntoType } from "need4deed-sdk";
 
 import { IconName } from "../VolunteeringCategories/types";
-import { Opportunity, OpportunityApi } from "./types";
+import {
+  AccompanyingTranslationDE,
+  AccompanyingTranslationEN,
+  Opportunity,
+  OpportunityApi,
+} from "./types";
 
 export const getSortedAccompanyingOpps = (
   opportunities: OpportunityApi[],
@@ -81,12 +86,41 @@ export const getMostPopularOpportunities = (
   ];
 };
 
-const mapOpportunity = (opp: OpportunityApi) => {
+const accompanyingTranslationMapWithLang: Partial<
+  Record<
+    Lang,
+    Record<
+      TranslatedIntoType,
+      AccompanyingTranslationEN | AccompanyingTranslationDE
+    >
+  >
+> = {
+  [Lang.EN]: {
+    [TranslatedIntoType.ENGLISH_OK]: AccompanyingTranslationEN.en,
+    [TranslatedIntoType.DEUTSCHE]: AccompanyingTranslationEN.de,
+    [TranslatedIntoType.NO_TRANSLATION]: AccompanyingTranslationEN.no,
+  },
+  [Lang.DE]: {
+    [TranslatedIntoType.ENGLISH_OK]: AccompanyingTranslationDE.en,
+    [TranslatedIntoType.DEUTSCHE]: AccompanyingTranslationDE.de,
+    [TranslatedIntoType.NO_TRANSLATION]: AccompanyingTranslationDE.no,
+  },
+};
+
+const mapOpportunity = (opp: OpportunityApi, lang: Lang) => {
+  const accompanyingTranslationMap =
+    accompanyingTranslationMapWithLang[lang] ||
+    accompanyingTranslationMapWithLang[Lang.EN]!;
+
   const newOpp: Opportunity = {
     accompanyingDate: opp.accomp_datetime
       ? new Date(opp.accomp_datetime)
       : null,
     accompanyingInfo: opp.accomp_information,
+    accompanyingTranslation:
+      accompanyingTranslationMap[
+        opp.accomp_translation || TranslatedIntoType.NO_TRANSLATION
+      ],
     activities: opp.activities,
     createdAt: new Date(opp.created_at),
     datetime: opp.datetime_str,
@@ -107,8 +141,8 @@ const mapOpportunity = (opp: OpportunityApi) => {
   return newOpp;
 };
 
-export const getMappedOpportunities = (opps: OpportunityApi[]) => {
-  return opps.map((opp) => mapOpportunity(opp));
+export const getMappedOpportunities = (opps: OpportunityApi[], lang: Lang) => {
+  return opps.map((opp) => mapOpportunity(opp, lang));
 };
 
 export enum CategoryTitle {
@@ -154,6 +188,28 @@ export const getActivityBackgroundColor = (activity: string) => {
   return aubergineColorActivities.includes(activity.toLowerCase())
     ? "var(--color-aubergine-light)"
     : "var(--color-papaya)";
+};
+
+export const formatAccompanyingDate = (date: Date) => {
+  const dateOptions: Intl.DateTimeFormatOptions = {
+    weekday: "long",
+    month: "long",
+    day: "numeric",
+  };
+
+  const timeOptions: Intl.DateTimeFormatOptions = {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+  };
+
+  const dateFormatter = new Intl.DateTimeFormat("en-US", dateOptions);
+  const timeFormatter = new Intl.DateTimeFormat("en-US", timeOptions);
+
+  const formattedDatePart: string = dateFormatter.format(date);
+  const formattedTimePart: string = timeFormatter.format(date);
+
+  return `${formattedDatePart}, ${formattedTimePart}`;
 };
 
 export default {};

@@ -564,7 +564,11 @@
       "languages": "Sprachen",
       "schedule": "Zeitplan",
       "district": "Bezirk",
-      "footerButton": "Alle Freiwilligenmöglichkeiten ansehen"
+      "footerButton": "Alle Freiwilligenmöglichkeiten ansehen",
+      "dateOfAppointment": "Datum der Ernennung",
+      "mainCommunication": "Hauptkommunikation",
+      "translationTo": "Übersetzung nach",
+      "residentsSpeak": "Bewohner sprechen"
     },
     "testimonials": {
       "header": "ERFAHRUNGSBERICHTE",

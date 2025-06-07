@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ReactNode } from "react";
 import { Paragraph } from "../styled/text";
 import { OpportunityDetailsContainer } from "../styled/containers";
 
@@ -20,7 +21,7 @@ const DetailHeader = styled.div`
 export interface CardDetail {
   icon: JSX.Element;
   headerText: string;
-  bodyText: string;
+  bodyTextComponent: ReactNode;
 }
 
 interface Props {
@@ -36,8 +37,7 @@ export default function OpportunityCardDetails({ cardDetails }: Props) {
             {d.icon}
             <Paragraph fontWeight={550}>{d.headerText}:</Paragraph>
           </DetailHeader>
-
-          <Paragraph>{d.bodyText}</Paragraph>
+          {d.bodyTextComponent}
         </DetailSection>
       ))}
     </OpportunityDetailsContainer>

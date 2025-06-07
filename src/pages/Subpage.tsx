@@ -80,14 +80,14 @@ function Subpage({ type }: Props) {
                 Status: ["Not started"],
               },
             }}
-            keyMap={{
-              id: "id",
-              type: "appointment",
-              name: "name",
-              languages: "languages", // need to combine refugee lang and lang translation lang
-              time: "date",
-              location: "district",
-            }}
+            // keyMap={{
+            //   id: "id",
+            //   type: "appointment",
+            //   name: "name",
+            //   languages: "languages", // need to combine refugee lang and lang translation lang
+            //   time: "date",
+            //   location: "district",
+            // }}
           />
         );
       case Subpages.OPPORTUNITIES_TEST:
@@ -100,15 +100,15 @@ function Subpage({ type }: Props) {
               },
               primaryKeys: ["title", "name"],
             }}
-            keyMap={{
-              id: "id",
-              type: "type",
-              name: "name",
-              languages: "languages",
-              time: "schedule",
-              location: "district",
-              vo: "vo",
-            }}
+            // keyMap={{
+            //   id: "id",
+            //   type: "type",
+            //   name: "name",
+            //   languages: "languages",
+            //   time: "schedule",
+            //   location: "district",
+            //   vo: "vo",
+            // }}
           />
         );
       case Subpages.OPPORTUNITIES:
@@ -123,15 +123,15 @@ function Subpage({ type }: Props) {
               primaryKeys: ["title", "name"],
               language: i18n.language as Lang,
             }}
-            keyMap={{
-              id: "id",
-              type: "activities",
-              name: "title",
-              languages: "languages",
-              time: "schedule_str",
-              location: "berlin_locations",
-              vo: "vo_information",
-            }}
+            // keyMap={{
+            //   id: "id",
+            //   type: "activities",
+            //   name: "title",
+            //   languages: "languages",
+            //   time: "schedule_str",
+            //   location: "berlin_locations",
+            //   vo: "vo_information",
+            // }}
           />
         );
       case Subpages.ACCOMPANYING:
@@ -146,15 +146,15 @@ function Subpage({ type }: Props) {
               primaryKeys: ["title", "name"],
               language: i18n.language as Lang,
             }}
-            keyMap={{
-              id: "id",
-              type: "activities",
-              name: "title",
-              languages: "languages",
-              time: "accomp_datetime",
-              location: "berlin_locations",
-              vo: "vo_information",
-            }}
+            // keyMap={{
+            //   id: "id",
+            //   type: "activities",
+            //   name: "title",
+            //   languages: "languages",
+            //   time: "accomp_datetime",
+            //   location: "berlin_locations",
+            //   vo: "vo_information",
+            // }}
           />
         );
       case Subpages.BECOME_VOLUNTEER:
