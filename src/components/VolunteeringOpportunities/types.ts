@@ -1,15 +1,23 @@
 import { OpportunityType, TranslatedIntoType } from "need4deed-sdk";
 
-export enum AccompanyingTranslation {
-  "en" = "English",
+export enum AccompanyingTranslationEN {
+  "en" = "German, English",
   "de" = "German",
-  "no" = "No Translation",
+  "no" = "No Translation needed",
+}
+
+export enum AccompanyingTranslationDE {
+  "en" = "Deutsch, Englisch",
+  "de" = "Deutsch",
+  "no" = "Sprachmittlung ist nicht nötig",
 }
 
 export interface Opportunity {
   accompanyingDate: Date | null;
   accompanyingInfo: string | null;
-  accompanyingTranslation: AccompanyingTranslation;
+  accompanyingTranslation:
+    | AccompanyingTranslationEN
+    | AccompanyingTranslationDE;
   activities: string[];
   createdAt: Date;
   datetime: string | null;

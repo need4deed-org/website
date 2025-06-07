@@ -1,6 +1,7 @@
-import { OpportunityType } from "need4deed-sdk";
+import { Lang, OpportunityType } from "need4deed-sdk";
 
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { OpportunityParams } from "../../config/types";
 import useOpportunities from "../../hooks/api/useOpportunities";
 import useOpportunitiesFromFile from "../../hooks/api/useOpportunitiesFromFile";
@@ -38,6 +39,8 @@ export default function OpportunityCards({
   const [modalOpportunity, setModalOpportunity] = useState<
     Opportunity | undefined
   >();
+  const { i18n } = useTranslation();
+  const lang = i18n.language as Lang;
 
   // Hard coded sorting for 'ACCOMPANYING' page
   if (
@@ -55,7 +58,7 @@ export default function OpportunityCards({
 
   const opportunitiesRaw = (opportunities || []) as unknown as OpportunityApi[];
 
-  const mappedOpportunities = getMappedOpportunities(opportunitiesRaw);
+  const mappedOpportunities = getMappedOpportunities(opportunitiesRaw, lang);
 
   return opportunities?.length ? (
     <div className={className || "n4d-container opportunity-container"}>

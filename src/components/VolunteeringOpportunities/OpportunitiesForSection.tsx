@@ -44,7 +44,10 @@ export default function OpportunitiesForSection() {
     truncateNumber,
   );
 
-  const mappedOpportunities = getMappedOpportunities(popularOpportunities);
+  const mappedOpportunities = getMappedOpportunities(
+    popularOpportunities,
+    opportunityParams.language,
+  );
 
   return (
     <OpportunitiesContainer id="opportunities-container">
