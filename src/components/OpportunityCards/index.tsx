@@ -77,6 +77,7 @@ export default function OpportunityCards({
           width="var(--page-opportunity-card-width)"
           height="var(--page-opportunity-card-height)"
           backgroundColor="var(--color-white)"
+          enableHoverEffect={!modalOpportunity}
         />
       ))}
     </div>
