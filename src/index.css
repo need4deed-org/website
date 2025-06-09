@@ -95,6 +95,10 @@ html {
     var(--color-magnolia)-5.53%,
     var(--color-orchid-dark) 100%
   );
+
+  /* hover effects */
+  --card-hover-transform: translateY(-5px);
+  --card-hover-box-shadow: 0 10px 20px var(--color-magnolia);
 }
 
 .with-linebreaks {

@@ -35,19 +35,17 @@ const Card = styled(BaseCard)<CardProps>`
   padding-left: var(--homepage-volunteering-opportunity-card-padding-left);
   gap: var(--homepage-volunteering-opportunity-card-gap);
 
-  // Hover Effect
   transition:
     transform 0.3s ease-in-out,
     box-shadow 0.3s ease-in-out;
 
-  // Apply hover effect ONLY when isPopupOpen is NOT true
   ${({ enableHoverEffect }) =>
     enableHoverEffect &&
     `
     cursor: pointer;
     &:hover {
-      transform: translateY(-5px); // Lifts the card up by 5px
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); // Adds a shadow
+      transform: var(--card-hover-transform); 
+      box-shadow: var(--card-hover-box-shadow); 
     }
   `}
 `;
