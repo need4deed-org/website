@@ -675,8 +675,8 @@
         "button": "Register and Apply"
       },
       "apply": {
-        "title": "Already Registered? Email:",
-        "button": "volunteer@need4deed.org"
+        "title": "Already Registered?",
+        "button": "Apply Now"
       }
     }
   }
