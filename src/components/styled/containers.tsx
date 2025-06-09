@@ -144,7 +144,6 @@ export const FullWidthContainer = styled.div.attrs<ContainerProps>((props) => ({
   align-items: center;
   background-color: ${(props) => props["background-color"]};
   position: relative;
-  z-index: -9999;
 `;
 
 export const BaseCard = styled.div`
