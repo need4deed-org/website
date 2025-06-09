@@ -569,10 +569,10 @@
       "mainCommunication": "Hauptkommunikation",
       "translationTo": "Übersetzung nach",
       "residentsSpeak": "Bewohner sprechen",
-      "accompanyingTranslation":{
-        "en" : "Deutsch, Englisch",
-        "de" : "Deutsch",
-        "no" : "Sprachmittlung ist nicht nötig"
+      "accompanyingTranslation": {
+        "en": "Deutsch, Englisch",
+        "de": "Deutsch",
+        "no": "Sprachmittlung ist nicht nötig"
       }
     },
     "testimonials": {

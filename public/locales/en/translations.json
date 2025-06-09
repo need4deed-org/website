@@ -604,10 +604,10 @@
       "mainCommunication": "Main communication",
       "translationTo": "Translation to",
       "residentsSpeak": "Residents speak",
-      "accompanyingTranslation":{
-        "en" : "German, English",
-        "de" : "German",
-        "no" : "No Translation needed"
+      "accompanyingTranslation": {
+        "en": "German, English",
+        "de": "German",
+        "no": "No Translation needed"
       }
     },
     "testimonials": {
