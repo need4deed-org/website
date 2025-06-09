@@ -21,6 +21,7 @@ const DimmedBackground = styled.div`
   background-color: var(--color-dimmed-background);
   display: grid;
   place-items: center;
+  z-index: 999;
 `;
 
 interface PopupCardProps extends React.CSSProperties {}
