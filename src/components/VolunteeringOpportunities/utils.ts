@@ -1,12 +1,8 @@
-import { Lang, OpportunityType, TranslatedIntoType } from "need4deed-sdk";
+import { OpportunityType, TranslatedIntoType } from "need4deed-sdk";
 
+import { TFunction } from "i18next";
 import { IconName } from "../VolunteeringCategories/types";
-import {
-  AccompanyingTranslationDE,
-  AccompanyingTranslationEN,
-  Opportunity,
-  OpportunityApi,
-} from "./types";
+import { Opportunity, OpportunityApi } from "./types";
 
 export const getSortedAccompanyingOpps = (
   opportunities: OpportunityApi[],
@@ -86,31 +82,18 @@ export const getMostPopularOpportunities = (
   ];
 };
 
-const accompanyingTranslationMapWithLang: Partial<
-  Record<
-    Lang,
-    Record<
-      TranslatedIntoType,
-      AccompanyingTranslationEN | AccompanyingTranslationDE
-    >
-  >
-> = {
-  [Lang.EN]: {
-    [TranslatedIntoType.ENGLISH_OK]: AccompanyingTranslationEN.en,
-    [TranslatedIntoType.DEUTSCHE]: AccompanyingTranslationEN.de,
-    [TranslatedIntoType.NO_TRANSLATION]: AccompanyingTranslationEN.no,
-  },
-  [Lang.DE]: {
-    [TranslatedIntoType.ENGLISH_OK]: AccompanyingTranslationDE.en,
-    [TranslatedIntoType.DEUTSCHE]: AccompanyingTranslationDE.de,
-    [TranslatedIntoType.NO_TRANSLATION]: AccompanyingTranslationDE.no,
-  },
-};
-
-const mapOpportunity = (opp: OpportunityApi, lang: Lang) => {
-  const accompanyingTranslationMap =
-    accompanyingTranslationMapWithLang[lang] ||
-    accompanyingTranslationMapWithLang[Lang.EN]!;
+const mapOpportunity = (opp: OpportunityApi, t: TFunction) => {
+  const accompanyingTranslationMap = {
+    [TranslatedIntoType.ENGLISH_OK]: t(
+      "homepage.volunteeringOpportunities.accompanyingTranslation.en",
+    ),
+    [TranslatedIntoType.DEUTSCHE]: t(
+      "homepage.volunteeringOpportunities.accompanyingTranslation.de",
+    ),
+    [TranslatedIntoType.NO_TRANSLATION]: t(
+      "homepage.volunteeringOpportunities.accompanyingTranslation.no",
+    ),
+  };
 
   const newOpp: Opportunity = {
     accompanyingDate: opp.accomp_datetime
@@ -141,8 +124,11 @@ const mapOpportunity = (opp: OpportunityApi, lang: Lang) => {
   return newOpp;
 };
 
-export const getMappedOpportunities = (opps: OpportunityApi[], lang: Lang) => {
-  return opps.map((opp) => mapOpportunity(opp, lang));
+export const getMappedOpportunities = (
+  opps: OpportunityApi[],
+  t: TFunction,
+) => {
+  return opps.map((opp) => mapOpportunity(opp, t));
 };
 
 export enum CategoryTitle {
