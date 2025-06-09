@@ -24,7 +24,7 @@ const opportunityParams: OpportunityParams = {
 };
 
 export default function OpportunitiesForSection() {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
   const screenType = useScreenType();
 
   const truncateNumber = screenType === ScreenTypes.DESKTOP ? 3 : 2;
@@ -44,7 +44,7 @@ export default function OpportunitiesForSection() {
     truncateNumber,
   );
 
-  const mappedOpportunities = getMappedOpportunities(popularOpportunities);
+  const mappedOpportunities = getMappedOpportunities(popularOpportunities, t);
 
   return (
     <OpportunitiesContainer id="opportunities-container">
