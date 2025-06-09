@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { getRegisterCtaUrl } from "../../utils";
 import { Button } from "../core/button";
 import Popup from "../Popup";
+import { ATag } from "../styled/tags";
 import { Paragraph } from "../styled/text";
 import CloseIcon from "../svg/CloseIcon";
 import OpportunityCard from "./OpportunityCard";
@@ -29,8 +30,8 @@ const PopupCard = styled(Popup)<PopupCardProps>`
 
   > button {
     position: absolute;
-    top: 58px;
-    right: 54px;
+    top: var(--page-opportunity-popup-card-x-margins);
+    right: var(--page-opportunity-popup-card-x-margins);
     padding: 0;
     color: var(--n4d-neutral-500);
     background: unset;
@@ -46,12 +47,15 @@ const CTAsContainer = styled.div<CTAsContainerProps>`
   display: flex;
   flex-direction: ${({ flexDirection }) => flexDirection || "row"};
   justify-content: space-between;
-  margin-top: 24px;
+  gap: var(--page-opportunity-popup-ctas-gap);
+  margin-top: var(--page-opportunity-popup-ctas-margin-top);
   > span {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     gap: 12px;
+    text-align: center;
   }
 `;
 
@@ -85,12 +89,14 @@ function CTAs({ flexDirection, opportunity }: CTAsProps) {
         <Paragraph fontSize="20px" fontWeight={600}>
           {t("opportunityPage.popup.apply.title")}
         </Paragraph>
-        <Button
-          text={t("opportunityPage.popup.apply.button")}
-          textColor="var(--color-midnight)"
-          backgroundcolor="var(--color-orchid)"
-          onClick={() => {}}
-        />
+        <ATag href="mailto:volunteer@need4deed.org">
+          <Button
+            text={t("opportunityPage.popup.apply.button")}
+            textColor="var(--color-midnight)"
+            backgroundcolor="var(--color-orchid)"
+            onClick={() => {}}
+          />
+        </ATag>
       </span>
     </CTAsContainer>
   );

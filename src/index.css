@@ -152,6 +152,9 @@ html {
     --page-opportunity-card-height: auto; /*421px;*/
     --page-opportunity-popup-card-width: 328px;
     --page-opportunity-popup-card-height: auto;
+    --page-opportunity-popup-card-x-margins: 36px;
+    --page-opportunity-popup-ctas-gap: 24px;
+    --page-opportunity-popup-ctas-margin-top: 24px;
 
     --page-content-margin-bottom: 24px;
 
@@ -361,6 +364,9 @@ html {
     --page-opportunity-card-height: auto; /*472px;*/
     --page-opportunity-popup-card-width: 688px;
     --page-opportunity-popup-card-height: auto;
+    --page-opportunity-popup-card-x-margins: 36px;
+    --page-opportunity-popup-ctas-gap: 24px;
+    --page-opportunity-popup-ctas-margin-top: 24px;
 
     --page-content-margin-bottom: 24px;
 
@@ -559,6 +565,9 @@ html {
     --page-opportunity-card-height: auto; /*472px;*/
     --page-opportunity-popup-card-width: 688px;
     --page-opportunity-popup-card-height: auto;
+    --page-opportunity-popup-card-x-margins: 36px;
+    --page-opportunity-popup-ctas-gap: 24px;
+    --page-opportunity-popup-ctas-margin-top: 24px;
 
     --page-content-margin-bottom: 24px;
 
