@@ -119,6 +119,7 @@ const mapOpportunity = (opp: OpportunityApi, t: TFunction) => {
     updatedAt: new Date(opp.updated_at),
     voInformation: opp.vo_information,
     categoryId: opp.category_id,
+    lastEditedTimeNotion: new Date(opp.last_edited_time_notion),
   };
 
   return newOpp;

@@ -1,5 +1,3 @@
-import { OpportunityType } from "need4deed-sdk";
-
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { OpportunityParams } from "../../config/types";
@@ -41,23 +39,14 @@ export default function OpportunityCards({
   >();
   const { t } = useTranslation();
 
-  // Hard coded sorting for 'ACCOMPANYING' page
-  if (
-    opportunities?.length &&
-    opportunityParams.search?.opportunity_type.includes(
-      OpportunityType.ACCOMPANYING,
-    )
-  ) {
-    opportunities.sort(
-      (a, b) =>
-        new Date(a.accomp_datetime).getTime() -
-        new Date(b.accomp_datetime).getTime(),
-    );
-  }
-
   const opportunitiesRaw = (opportunities || []) as unknown as OpportunityApi[];
 
   const mappedOpportunities = getMappedOpportunities(opportunitiesRaw, t);
+
+  mappedOpportunities.sort(
+    (a, b) =>
+      b.lastEditedTimeNotion.getTime() - a.lastEditedTimeNotion.getTime(),
+  );
 
   return opportunities?.length ? (
     <div className={className || "n4d-container opportunity-container"}>
