@@ -36,6 +36,7 @@ html {
   --color-orchid: rgba(251, 226, 255, 1);
   --color-orchid-dark: rgba(242, 177, 255, 1);
   --color-orchid-light: rgba(251, 226, 255, 1);
+  --color-orchid-subtle: rgba(254, 244, 255, 1);
   --color-sand: rgba(242, 226, 211, 1);
   --color-magnolia: rgba(246, 238, 231, 1);
   --color-papaya: rgba(255, 125, 104, 1);
@@ -95,9 +96,6 @@ html {
     var(--color-magnolia)-5.53%,
     var(--color-orchid-dark) 100%
   );
-
-  /* hover effects */
-  --card-hover-transform: translateY(-5px);
 }
 
 .with-linebreaks {

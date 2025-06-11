@@ -44,8 +44,7 @@ const Card = styled(BaseCard)<CardProps>`
     `
     cursor: pointer;
     &:hover {
-      transform: var(--card-hover-transform); 
-      background-color:var(--color-orchid-dark)
+      background-color:var(--color-orchid-subtle)
       }
 
   `}
