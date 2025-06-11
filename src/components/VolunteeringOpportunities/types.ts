@@ -19,6 +19,7 @@ export interface Opportunity {
   updatedAt: Date;
   voInformation: string;
   categoryId: string;
+  lastEditedTimeNotion: Date;
 }
 
 export interface OpportunityApi {
@@ -40,4 +41,5 @@ export interface OpportunityApi {
   updated_at: string;
   vo_information: string;
   category_id: string;
+  last_edited_time_notion: string;
 }
