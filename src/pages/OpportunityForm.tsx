@@ -5,12 +5,14 @@ import { useTranslation } from "react-i18next";
 import Form from "../components/forms";
 import { FormType } from "../components/forms/types";
 import { StaticPageLayout } from "../components/Layouts/staticPageLayout";
+import { setStoredLang } from "../utils";
 
 export default function VolunteerForm() {
   const { i18n } = useTranslation();
 
   useEffect(() => {
     i18n.changeLanguage(Lang.DE);
+    setStoredLang(Lang.DE);
   }, [i18n]);
 
   return (
