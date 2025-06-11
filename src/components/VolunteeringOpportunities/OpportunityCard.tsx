@@ -18,7 +18,9 @@ import OpportunityCardDetails, { CardDetail } from "./OpportunityCardDetail";
 import { Opportunity } from "./types";
 import { formatAccompanyingDate } from "./utils";
 
-interface CardProps extends React.CSSProperties {}
+interface CardProps extends React.CSSProperties {
+  enableHoverEffect?: boolean;
+}
 
 const Card = styled(BaseCard)<CardProps>`
   background-color: ${({ backgroundColor }) =>
@@ -32,6 +34,20 @@ const Card = styled(BaseCard)<CardProps>`
   padding-bottom: var(--homepage-volunteering-opportunity-card-padding-bottom);
   padding-left: var(--homepage-volunteering-opportunity-card-padding-left);
   gap: var(--homepage-volunteering-opportunity-card-gap);
+
+  transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+
+  ${({ enableHoverEffect }) =>
+    enableHoverEffect &&
+    `
+    cursor: pointer;
+    &:hover {
+      background-color:var(--color-orchid-subtle)
+      }
+
+  `}
 `;
 
 const LanguagesContainer = styled.div`
@@ -55,6 +71,7 @@ interface Props extends React.CSSProperties {
     flexDirection,
     opportunity,
   }: React.CSSProperties & { opportunity: Opportunity }) => React.ReactNode;
+  enableHoverEffect?: boolean;
 }
 
 export default function OpportunityCard({
@@ -66,6 +83,7 @@ export default function OpportunityCard({
   backgroundColor,
   vo = false,
   CTAs = undefined,
+  enableHoverEffect,
 }: Props) {
   const { t } = useTranslation();
   const screenType = useScreenType();
@@ -143,6 +161,7 @@ export default function OpportunityCard({
       height={height}
       backgroundColor={backgroundColor}
       onClick={() => onClickHandler && onClickHandler(opportunity)}
+      enableHoverEffect={enableHoverEffect}
     >
       <IconDiv>{iconNameMap[iconName]}</IconDiv>
       <Heading3>{title}</Heading3>

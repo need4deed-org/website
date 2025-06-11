@@ -53,9 +53,6 @@ export default function OpportunitiesForSection() {
           key={opp.id}
           iconName={getIconName(opp.categoryId as CategoryTitle)}
           opportunity={opp}
-          onClickHandler={() => {
-            // Handle click event, e.g., open a modal or navigate to details page
-          }}
         />
       ))}
     </OpportunitiesContainer>
