@@ -98,7 +98,6 @@ html {
 
   /* hover effects */
   --card-hover-transform: translateY(-5px);
-  --card-hover-box-shadow: 0 10px 20px var(--color-black);
 }
 
 .with-linebreaks {
