@@ -13,6 +13,7 @@ export const AppContainer = styled.div.attrs<ContainerProps>((props) => ({
   flex-direction: column;
   min-height: 100vh;
   align-items: center;
+  overflow-x: hidden;
 `;
 
 export const SectionContainer = styled.div.attrs<ContainerProps>((props) => ({
