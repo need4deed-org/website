@@ -46,3 +46,5 @@ export const screenSizeThresholds = {
 
 export const videoGuideURL =
   "https://www.youtube.com/embed/tk5akHPd9oo?si=k01Klx7SxIWwKHO_&rel=0&autoplay=0";
+
+export const n4dLanguageLocalStorageKey = "n4d-language";
