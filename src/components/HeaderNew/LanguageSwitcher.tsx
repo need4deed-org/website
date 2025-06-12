@@ -5,6 +5,7 @@ import styled from "styled-components";
 
 import { ScreenTypes } from "../../config/types";
 import useScreenType from "../../hooks/useScreenType";
+import { setStoredLang } from "../../utils";
 import { CustomHeading } from "../styled/text";
 import Arrow from "../svg/Arrow";
 import MenuItem from "./MenuItem";
@@ -71,6 +72,7 @@ export default function LanguageSwitcher({ textColor }: Props) {
 
   const handleLangChange = (lang: Lang) => {
     i18n.changeLanguage(lang);
+    setStoredLang(lang);
     setIsOptionsVisible(false);
   };
 

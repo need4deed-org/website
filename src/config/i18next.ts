@@ -9,10 +9,11 @@ import enTranslation from "../../public/locales/en/translations.json";
 import faTranslation from "../../public/locales/fa/translations.json";
 import ruTranslation from "../../public/locales/ru/translations.json";
 import trTranslation from "../../public/locales/tr/translations.json";
+import { getStoredLang } from "../utils";
 import { Env } from "./types";
 
 i18next.use(initReactI18next).init({
-  lng: Lang.EN,
+  lng: getStoredLang() || Lang.EN,
   fallbackLng: Lang.EN,
   debug: process.env.NODE_ENV === Env.DEVELOP,
   resources: {

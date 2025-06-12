@@ -599,7 +599,16 @@
       "languages": "Languages",
       "schedule": "Schedule",
       "district": "District",
-      "footerButton": "See all volunteering opportunities"
+      "footerButton": "See all volunteering opportunities",
+      "dateOfAppointment": "Date Of Appointment",
+      "mainCommunication": "Main communication",
+      "translationTo": "Translation to",
+      "residentsSpeak": "Residents speak",
+      "accompanyingTranslation": {
+        "en": "German, English",
+        "de": "German",
+        "no": "No Translation needed"
+      }
     },
     "testimonials": {
       "header": "TESTIMONIALS",

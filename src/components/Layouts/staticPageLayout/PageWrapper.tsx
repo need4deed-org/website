@@ -1,6 +1,8 @@
+import { Lang } from "need4deed-sdk";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useLocation, useSearchParams } from "react-router-dom";
+import { setStoredLang } from "../../../utils";
 
 interface Props extends React.PropsWithChildren {}
 
@@ -11,7 +13,10 @@ export default function PageWrapper({ children }: Props): React.ReactElement {
   const location = useLocation();
 
   useEffect(() => {
-    i18n.changeLanguage(language || "en");
+    if (language) {
+      i18n.changeLanguage(language);
+      setStoredLang(language as Lang);
+    }
   }, [i18n, language]);
 
   useEffect(() => {

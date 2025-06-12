@@ -1,5 +1,6 @@
-import { OpportunityType } from "need4deed-sdk";
+import { OpportunityType, TranslatedIntoType } from "need4deed-sdk";
 
+import { TFunction } from "i18next";
 import { IconName } from "../VolunteeringCategories/types";
 import { Opportunity, OpportunityApi } from "./types";
 
@@ -81,12 +82,28 @@ export const getMostPopularOpportunities = (
   ];
 };
 
-const mapOpportunity = (opp: OpportunityApi) => {
+const mapOpportunity = (opp: OpportunityApi, t: TFunction) => {
+  const accompanyingTranslationMap = {
+    [TranslatedIntoType.ENGLISH_OK]: t(
+      "homepage.volunteeringOpportunities.accompanyingTranslation.en",
+    ),
+    [TranslatedIntoType.DEUTSCHE]: t(
+      "homepage.volunteeringOpportunities.accompanyingTranslation.de",
+    ),
+    [TranslatedIntoType.NO_TRANSLATION]: t(
+      "homepage.volunteeringOpportunities.accompanyingTranslation.no",
+    ),
+  };
+
   const newOpp: Opportunity = {
     accompanyingDate: opp.accomp_datetime
       ? new Date(opp.accomp_datetime)
       : null,
     accompanyingInfo: opp.accomp_information,
+    accompanyingTranslation:
+      accompanyingTranslationMap[
+        opp.accomp_translation || TranslatedIntoType.NO_TRANSLATION
+      ],
     activities: opp.activities,
     createdAt: new Date(opp.created_at),
     datetime: opp.datetime_str,
@@ -102,13 +119,17 @@ const mapOpportunity = (opp: OpportunityApi) => {
     updatedAt: new Date(opp.updated_at),
     voInformation: opp.vo_information,
     categoryId: opp.category_id,
+    lastEditedTimeNotion: new Date(opp.last_edited_time_notion),
   };
 
   return newOpp;
 };
 
-export const getMappedOpportunities = (opps: OpportunityApi[]) => {
-  return opps.map((opp) => mapOpportunity(opp));
+export const getMappedOpportunities = (
+  opps: OpportunityApi[],
+  t: TFunction,
+) => {
+  return opps.map((opp) => mapOpportunity(opp, t));
 };
 
 export enum CategoryTitle {
@@ -154,6 +175,28 @@ export const getActivityBackgroundColor = (activity: string) => {
   return aubergineColorActivities.includes(activity.toLowerCase())
     ? "var(--color-aubergine-light)"
     : "var(--color-papaya)";
+};
+
+export const formatAccompanyingDate = (date: Date) => {
+  const dateOptions: Intl.DateTimeFormatOptions = {
+    weekday: "long",
+    month: "long",
+    day: "numeric",
+  };
+
+  const timeOptions: Intl.DateTimeFormatOptions = {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+  };
+
+  const dateFormatter = new Intl.DateTimeFormat("en-US", dateOptions);
+  const timeFormatter = new Intl.DateTimeFormat("en-US", timeOptions);
+
+  const formattedDatePart: string = dateFormatter.format(date);
+  const formattedTimePart: string = timeFormatter.format(date);
+
+  return `${formattedDatePart}, ${formattedTimePart}`;
 };
 
 export default {};

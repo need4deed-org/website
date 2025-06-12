@@ -197,6 +197,10 @@ function App() {
                   element={<OpportunityForm />}
                 />
                 <Route
+                  path={`/${Subpages.OPPORTUNITY_FORM_LEGACY}`}
+                  element={<OpportunityForm />}
+                />
+                <Route
                   path={`/${Subpages.OPPORTUNITY_FORM_LEGACY}/:lng`}
                   element={<OpportunityForm />}
                 />

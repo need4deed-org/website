@@ -33,3 +33,6 @@ public/version.json
 
 # dev
 dev.*
+
+# env
+.env

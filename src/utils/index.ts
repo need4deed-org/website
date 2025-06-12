@@ -1,7 +1,11 @@
 import { Lang } from "need4deed-sdk";
 import { MutableRefObject } from "react";
 
-import { CLOUDFRONT_URL, timeZone } from "../config/constants";
+import {
+  CLOUDFRONT_URL,
+  n4dLanguageLocalStorageKey,
+  timeZone,
+} from "../config/constants";
 import {
   AlfredOpportunity,
   Env,
@@ -478,4 +482,21 @@ export function getOpportunityForGrid(opportunity: Record<string, string>) {
     voInformation: opportunity.vo,
     categoryId: opportunity.categoryId,
   };
+}
+
+export function getStoredLang(): Lang | null {
+  const storedLang = localStorage.getItem(n4dLanguageLocalStorageKey);
+  if (storedLang && isEnumValue(Lang, storedLang)) {
+    return storedLang as Lang;
+  }
+  return null;
+}
+
+export function setStoredLang(lang: Lang) {
+  if (isEnumValue(Lang, lang)) {
+    localStorage.setItem(n4dLanguageLocalStorageKey, lang);
+  } else {
+    // eslint-disable-next-line no-console
+    console.warn(`Invalid language code: ${lang}`);
+  }
 }
