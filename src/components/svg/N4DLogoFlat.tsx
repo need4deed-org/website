@@ -1,4 +1,4 @@
-interface Props {
+interface Props extends React.SVGProps<SVGSVGElement> {
   color?: string;
   width: string;
   height: string;
@@ -8,6 +8,7 @@ export default function N4DLogoFlat({
   color = "var(--color-midnight)",
   width,
   height,
+  ...rest
 }: Props) {
   return (
     <svg
@@ -16,6 +17,9 @@ export default function N4DLogoFlat({
       viewBox="0 0 360 50"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      style={{ cursor: "pointer" }}
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      {...rest}
     >
       <path
         d="M27.8465 49.5805L12.0933 24.6634V49.5903H0V0.0195312H10.5732L26.3264 24.9464V0.0195312H38.4197V49.5903H27.8465V49.5805Z"
