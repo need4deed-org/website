@@ -25,7 +25,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 
 const regexHttpSchema = /^(http|https):\/\/.*/;
 
-export default function OpportunityCards({
+export default function Cards({
   className,
   url,
   opportunityParams = {},

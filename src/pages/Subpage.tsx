@@ -20,7 +20,7 @@ import Cookie from "../components/Legal/Cookies";
 import DataPrivacy from "../components/Legal/DataPrivacy";
 import Guidelines from "../components/Legal/Guidelines";
 import LegalNotice from "../components/Legal/Notice";
-import OpportunityCards from "../components/OpportunityCards";
+import Cards from "../components/OpportunityCards/Cards";
 import { FF, showEvent, urlApiOpportunity } from "../config/constants";
 import { Subpages } from "../config/types";
 import AppContainerContext from "../contexts/AppContainerContext";
@@ -73,7 +73,7 @@ function Subpage({ type }: Props) {
         return <Guidelines />;
       case Subpages.ACCOMPANYING_TEST:
         return (
-          <OpportunityCards
+          <Cards
             url="/data/accompanying.json"
             opportunityParams={{
               search: {
@@ -92,7 +92,7 @@ function Subpage({ type }: Props) {
         );
       case Subpages.OPPORTUNITIES_TEST:
         return (
-          <OpportunityCards
+          <Cards
             url="/data/opportunities.json"
             opportunityParams={{
               search: {
@@ -113,7 +113,7 @@ function Subpage({ type }: Props) {
         );
       case Subpages.OPPORTUNITIES:
         return (
-          <OpportunityCards
+          <Cards
             url={urlApiOpportunity}
             opportunityParams={{
               search: {
@@ -136,7 +136,7 @@ function Subpage({ type }: Props) {
         );
       case Subpages.ACCOMPANYING:
         return (
-          <OpportunityCards
+          <Cards
             url={urlApiOpportunity}
             opportunityParams={{
               search: {
