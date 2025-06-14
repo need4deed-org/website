@@ -18,6 +18,7 @@ import OpportunityCardDetails, { CardDetail } from "./OpportunityCardDetail";
 import { Opportunity } from "./types";
 import { formatAccompanyingDate } from "./utils";
 
+export const defaultMainCommunication = "English, German";
 interface CardProps extends React.CSSProperties {
   enableHoverEffect?: boolean;
 }
@@ -109,7 +110,7 @@ export default function OpportunityCard({
           <Paragraph fontWeight={400}>
             {t("homepage.volunteeringOpportunities.mainCommunication")}:
           </Paragraph>
-          <Paragraph>English, German</Paragraph>
+          <Paragraph>{defaultMainCommunication}</Paragraph>
         </LanguageDetailContainer>
       ) : (
         <LanguageDetailContainer>
