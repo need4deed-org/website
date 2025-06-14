@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { OpportunityParams } from "../../config/types";
 import useOpportunities from "../../hooks/api/useOpportunities";
@@ -16,11 +16,15 @@ import {
   OpportunityApi,
 } from "../VolunteeringOpportunities/types";
 import OpportunityCard from "../VolunteeringOpportunities/OpportunityCard";
+import { filterOpportunity } from "./helpers";
+import { CardsFilter } from "./types";
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   url: string;
   opportunityParams?: OpportunityParams;
   popup?: boolean;
+  setNumOfOpportunities: (numOfOpportunities: number) => void;
+  cardsFilter: CardsFilter;
 }
 
 const regexHttpSchema = /^(http|https):\/\/.*/;
@@ -30,6 +34,8 @@ export default function Cards({
   url,
   opportunityParams = {},
   popup = false,
+  setNumOfOpportunities,
+  cardsFilter,
 }: Props) {
   const isUrl = url.toLowerCase().match(regexHttpSchema);
   const useOpp = isUrl ? useOpportunities : useOpportunitiesFromFile;
@@ -43,10 +49,18 @@ export default function Cards({
 
   const mappedOpportunities = getMappedOpportunities(opportunitiesRaw, t);
 
-  mappedOpportunities.sort(
+  const filteredOpportunities = mappedOpportunities.filter((opp) =>
+    filterOpportunity(opp, cardsFilter),
+  );
+
+  filteredOpportunities.sort(
     (a, b) =>
       b.lastEditedTimeNotion.getTime() - a.lastEditedTimeNotion.getTime(),
   );
+
+  useEffect(() => {
+    setNumOfOpportunities(filteredOpportunities.length);
+  }, [filteredOpportunities, setNumOfOpportunities]);
 
   return opportunities?.length ? (
     <div className={className || "n4d-container opportunity-container"}>
@@ -57,7 +71,7 @@ export default function Cards({
         />
       )}
 
-      {mappedOpportunities.map((opp) => (
+      {filteredOpportunities.map((opp) => (
         <OpportunityCard
           key={opp.id}
           iconName={getIconName(opp.categoryId as CategoryTitle)}

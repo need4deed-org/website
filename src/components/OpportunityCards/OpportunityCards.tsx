@@ -1,9 +1,11 @@
 import styled from "styled-components";
 import { Lang, OpportunityType } from "need4deed-sdk";
 import { useTranslation } from "react-i18next";
-import { Heading2 } from "../styled/text";
+import { useState } from "react";
 import Cards from "./Cards";
 import { urlApiOpportunity } from "../../config/constants";
+import OpportunityCardsHeader from "./OpportunityCardsHeader";
+import { CardsFilter } from "./types";
 
 const OpportunitiesContainer = styled.div`
   display: flex;
@@ -14,12 +16,23 @@ const OpportunitiesContainer = styled.div`
   padding-inline: var(--opportunities-container-padding-inline);
 `;
 
+const defaultFilter: CardsFilter = { searchInput: "" };
+
 export function OpportunityCards() {
-  const { i18n, t } = useTranslation();
+  const { i18n } = useTranslation();
+  const [numOfOpportunities, setNumOfOpportunities] = useState(0);
+  const [cardsFilter, setCardsFilter] = useState(defaultFilter);
+
+  const onSearchInputChange = (searchInput: string) => {
+    setCardsFilter({ ...cardsFilter, searchInput });
+  };
 
   return (
     <OpportunitiesContainer>
-      <Heading2>{t("opportunityPage.header")}</Heading2>
+      <OpportunityCardsHeader
+        numOfOpportunities={numOfOpportunities}
+        onSearchInputChange={onSearchInputChange}
+      />
       <Cards
         className="temp-opportunities-container"
         url={urlApiOpportunity}
@@ -35,6 +48,8 @@ export function OpportunityCards() {
           language: i18n.language as Lang,
         }}
         popup
+        setNumOfOpportunities={setNumOfOpportunities}
+        cardsFilter={cardsFilter}
       />
     </OpportunitiesContainer>
   );

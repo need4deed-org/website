@@ -1,4 +1,4 @@
-import { Lang, OpportunityType } from "need4deed-sdk";
+import { Lang } from "need4deed-sdk";
 import { useContext, useEffect, useMemo } from "react";
 import ReactGA from "react-ga4";
 import { useTranslation } from "react-i18next";
@@ -20,8 +20,7 @@ import Cookie from "../components/Legal/Cookies";
 import DataPrivacy from "../components/Legal/DataPrivacy";
 import Guidelines from "../components/Legal/Guidelines";
 import LegalNotice from "../components/Legal/Notice";
-import Cards from "../components/OpportunityCards/Cards";
-import { FF, showEvent, urlApiOpportunity } from "../config/constants";
+import { FF, showEvent } from "../config/constants";
 import { Subpages } from "../config/types";
 import AppContainerContext from "../contexts/AppContainerContext";
 import useEvents from "../hooks/api/useEvents";
@@ -71,92 +70,6 @@ function Subpage({ type }: Props) {
         return <Agreement />;
       case Subpages.GUIDELINES:
         return <Guidelines />;
-      case Subpages.ACCOMPANYING_TEST:
-        return (
-          <Cards
-            url="/data/accompanying.json"
-            opportunityParams={{
-              search: {
-                Status: ["Not started"],
-              },
-            }}
-            // keyMap={{
-            //   id: "id",
-            //   type: "appointment",
-            //   name: "name",
-            //   languages: "languages", // need to combine refugee lang and lang translation lang
-            //   time: "date",
-            //   location: "district",
-            // }}
-          />
-        );
-      case Subpages.OPPORTUNITIES_TEST:
-        return (
-          <Cards
-            url="/data/opportunities.json"
-            opportunityParams={{
-              search: {
-                Status: ["Volunteers Needed", "Search in process"],
-              },
-              primaryKeys: ["title", "name"],
-            }}
-            // keyMap={{
-            //   id: "id",
-            //   type: "type",
-            //   name: "name",
-            //   languages: "languages",
-            //   time: "schedule",
-            //   location: "district",
-            //   vo: "vo",
-            // }}
-          />
-        );
-      case Subpages.OPPORTUNITIES:
-        return (
-          <Cards
-            url={urlApiOpportunity}
-            opportunityParams={{
-              search: {
-                status: ["Volunteers Needed", "Search in process"],
-                opportunity_type: [OpportunityType.GENERAL],
-              },
-              primaryKeys: ["title", "name"],
-              language: i18n.language as Lang,
-            }}
-            // keyMap={{
-            //   id: "id",
-            //   type: "activities",
-            //   name: "title",
-            //   languages: "languages",
-            //   time: "schedule_str",
-            //   location: "berlin_locations",
-            //   vo: "vo_information",
-            // }}
-          />
-        );
-      case Subpages.ACCOMPANYING:
-        return (
-          <Cards
-            url={urlApiOpportunity}
-            opportunityParams={{
-              search: {
-                status: ["Search in process", "Not started"],
-                opportunity_type: [OpportunityType.ACCOMPANYING],
-              },
-              primaryKeys: ["title", "name"],
-              language: i18n.language as Lang,
-            }}
-            // keyMap={{
-            //   id: "id",
-            //   type: "activities",
-            //   name: "title",
-            //   languages: "languages",
-            //   time: "accomp_datetime",
-            //   location: "berlin_locations",
-            //   vo: "vo_information",
-            // }}
-          />
-        );
       case Subpages.BECOME_VOLUNTEER:
         return FF.NEW_FORMS_VOLUNTEER || ffVol ? (
           // eslint-disable-next-line react/jsx-props-no-spreading

@@ -1,6 +1,5 @@
 import { Lang } from "need4deed-sdk";
 import { useContext, useMemo, useState } from "react";
-import ReactGA from "react-ga4";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useSearchParams } from "react-router-dom";
 
@@ -36,13 +35,6 @@ function Header({ showEvent }: Props) {
     navigate(
       `${getBaseUrl(window.location.href)}/${lng}${queryParams.size ? `/?${queryParams}` : ""}`,
     );
-  };
-
-  const handleAccompanyingButtonClick = () => {
-    ReactGA.send({
-      hitType: "buttonClick",
-      title: "Accompanying Volunteering Header Button",
-    });
   };
 
   return (
@@ -101,24 +93,6 @@ function Header({ showEvent }: Props) {
                   </button>
                 </li>
               </ul>
-            </li>
-            <li className="nav-item">
-              <a
-                className="nav-link"
-                href={`/${Subpages.OPPORTUNITIES}/${i18n.language}`}
-              >
-                {t("workingWithRefugees")}
-              </a>
-            </li>
-
-            <li className="nav-item">
-              <a
-                className="nav-link"
-                href={`/${Subpages.ACCOMPANYING}/${i18n.language}`}
-                onClick={handleAccompanyingButtonClick}
-              >
-                {t("accompanyingVolunteering")}
-              </a>
             </li>
 
             <li className="nav-item">
