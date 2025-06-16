@@ -652,6 +652,14 @@
         "title": "Bereits registriert? E-mail:",
         "button": "volunteer@need4deed.org"
       }
-    }
+    },
+     "tabs": {
+      "tab1": "TABELLENANSICHT",
+      "tab2": "KARTENANSICHT"
+    },
+    "resultsFound": "ergebnisse gefunden",
+    "searchPlaceHolder": "Suchbegriff eingeben",
+    "filters":"FILTER",
+    "mapViewMessage": "Wird bald verfügbar sein"
   }
 }

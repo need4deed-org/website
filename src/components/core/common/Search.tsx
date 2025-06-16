@@ -2,19 +2,24 @@ import styled from "styled-components";
 import { MagnifyingGlassIcon } from "@phosphor-icons/react";
 import { ChangeEvent, useState } from "react";
 
-const SearchContainer = styled.div`
+interface SearchContainerProps {
+  width?: string;
+}
+
+const SearchContainer = styled.div<SearchContainerProps>`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: var(--search-container-height);
+  width: ${(props) => props.width || "-webkit-fill-available"};
   background-color: var(--color-white);
-  border-radius: 160px;
-  height: 60px;
+  border-radius: var(--search-container-border-radius);
   align-items: center;
-  padding: 0 32px;
+  padding: var(--search-container-padding);
 `;
 
 const StyledInput = styled.input`
-  font-size: 16px;
+  font-size: var(--search-input-font-size);
   border: none;
 
   &:focus {
@@ -25,9 +30,14 @@ const StyledInput = styled.input`
 interface Props {
   placeHolder?: string;
   onInputChange: (input: string) => void;
+  width?: string;
 }
 
-export function Search({ placeHolder = "Search", onInputChange }: Props) {
+export function Search({
+  placeHolder = "Search",
+  onInputChange,
+  width,
+}: Props) {
   const [inputValue, setInputValue] = useState("");
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -37,7 +47,7 @@ export function Search({ placeHolder = "Search", onInputChange }: Props) {
   };
 
   return (
-    <SearchContainer>
+    <SearchContainer width={width}>
       <StyledInput
         placeholder={placeHolder}
         value={inputValue}

@@ -96,6 +96,9 @@ html {
     var(--color-magnolia)-5.53%,
     var(--color-orchid-dark) 100%
   );
+
+  /* button */
+  --button-gap:12px
 }
 
 .with-linebreaks {
@@ -310,9 +313,28 @@ html {
     --layout-static-page-header-height: 64px;
     --layout-static-page-header-padding: 10px 18px;
 
-    --opportunities-container-gap: 40px;
+    --opportunities-container-width: fit-content;
+    --opportunities-container-gap: 24px;
     --opportunities-container-padding-inline: 16px;
+    --opportunities-header-title-tabs-gap: 24px;
+    --opportunities-header-tabs-searchbar-gap: 12px;
+    --opportunities-header-tabs-section-width: -webkit-fill-available;
+    --opportunities-header-tabs-gap: 16px;
+    --opportunities-header-tabs-border-bottom: 4px;
+    --opportunities-header-tabs-padding-bottom: 4px;
+    --opportunities-header-result-gap: 10px;
+    --opportunities-header-result-padding:10px;
+    --opportunities-filters-button-height: 48px;
+    --opportunities-filters-button-width: 48px;
+    --opportunities-filters-button-icon-size: 32px;
+    --opportunities-header-searchbar-flex-direction: column;
+    --opportunities-header-searchbar-width: -webkit-fill-available;
+    --opportunities-map-view-container-height: 200px;
 
+    --search-container-height:64px;
+    --search-container-border-radius:40px;
+    --search-container-padding: 0 32px;
+    --search-input-font-size: 16px;
   }
 }
 
@@ -526,8 +548,27 @@ html {
     --layout-static-page-header-height: 76px;
     --layout-static-page-header-padding: 20px 36px;
 
+    --opportunities-container-width: 720px;
     --opportunities-container-gap: 40px;
     --opportunities-container-padding-inline: 16px;
+    --opportunities-header-title-tabs-gap: 27px;
+    --opportunities-header-tabs-searchbar-gap: 20px;
+    --opportunities-header-tabs-section-width: 688px;
+    --opportunities-header-tabs-gap: 16px;
+    --opportunities-header-tabs-border-bottom: 4px;
+    --opportunities-header-tabs-padding-bottom: 4px;
+    --opportunities-header-result-gap: 10px;
+    --opportunities-header-result-padding:10px;
+    --opportunities-filters-button-height: 64px;
+    --opportunities-filters-button-icon-size: 32px;
+    --opportunities-header-searchbar-width:  466px;
+    --opportunities-header-searchbar-flex-direction: row;
+    --opportunities-map-view-container-height: 300px;
+
+    --search-container-height:64px;
+    --search-container-border-radius:40px;
+    --search-container-padding: 0 32px;
+    --search-input-font-size: 16px;
   }
 }
 
@@ -737,8 +778,27 @@ html {
     --layout-static-page-header-height: 80px;
     --layout-static-page-header-padding: 20px 36px;
 
+    --opportunities-container-width: 1340px;
     --opportunities-container-gap: 40px;
     --opportunities-container-padding-inline: 16px;
+    --opportunities-header-title-tabs-gap: 24px;
+    --opportunities-header-tabs-searchbar-gap: 20px;
+    --opportunities-header-tabs-section-width: 980px;
+    --opportunities-header-tabs-gap: 16px;
+    --opportunities-header-tabs-border-bottom: 4px;
+    --opportunities-header-tabs-padding-bottom: 4px;
+    --opportunities-header-result-gap: 10px;
+    --opportunities-header-result-padding:10px;
+    --opportunities-filters-button-height: 64px;
+    --opportunities-filters-button-icon-size: 32px;
+    --opportunities-header-searchbar-width: 980px;
+    --opportunities-header-searchbar-flex-direction: row;
+    --opportunities-map-view-container-height: 300px;
+
+    --search-container-height: 60px;
+    --search-container-border-radius: 160px;
+    --search-container-padding: 0 32px;
+    --search-input-font-size: 16px;
   }
 }
 

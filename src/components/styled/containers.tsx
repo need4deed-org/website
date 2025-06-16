@@ -90,6 +90,7 @@ export const IndicatorsContainer = styled.div.attrs<ContainerProps>(
 
 interface IconDiVProps {
   size?: string;
+  color?: string;
 }
 
 export const IconDiv = styled.div<IconDiVProps>`
@@ -104,7 +105,7 @@ export const IconDiv = styled.div<IconDiVProps>`
     // Target the SVG inside IconDiv
     width: 100%; // Make the SVG fill the IconDiv
     height: 100%;
-    fill: var(--icon-color);
+    fill: ${(props) => props.color || "var(--icon-color)"};
   }
 `;
 
