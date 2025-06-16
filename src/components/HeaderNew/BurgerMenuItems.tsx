@@ -53,6 +53,10 @@ const BurgerMenuItemsContainer = styled(MenuItemsContainer)<BurgerMenuProps>`
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
 
+  a {
+    text-decoration: none;
+  }
+
   /* Apply animation based on isOpen prop */
   ${(props) =>
     props.isOpen &&

@@ -12,6 +12,9 @@ export const MenuItemsContainer = styled.div`
   width: var(--homepage-hero-section-header-menu-items-width);
   gap: var(--homepage-hero-section-header-menu-items-gap);
   height: fit-content;
+  a {
+    text-decoration: none;
+  }
 `;
 
 interface Props {
