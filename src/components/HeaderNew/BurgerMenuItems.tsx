@@ -1,6 +1,8 @@
 import { XIcon } from "@phosphor-icons/react";
+import { HashLink } from "react-router-hash-link";
 import styled, { css, keyframes } from "styled-components";
 
+import { MenuItemType } from "../../config/types";
 import N4DLogoFlat from "../svg/N4DLogoFlat";
 import LanguageSwitcher from "./LanguageSwitcher";
 import MenuItem from "./MenuItem";
@@ -73,7 +75,7 @@ const BurgerMenuHeader = styled.div`
 
 interface Props {
   isOpen: boolean;
-  items: [string, () => void][];
+  items: MenuItemType[];
   setIsOpen: (isOpen: boolean) => void;
   menuItemColor?: string;
 }
@@ -91,14 +93,21 @@ export default function BurgerMenuItems({
         <XIcon size={32} onClick={() => setIsOpen(false)} />
       </BurgerMenuHeader>
 
-      {items.map(([text, onClickHandler]) => (
-        <MenuItem
-          text={text}
-          key={text}
-          color={menuItemColor}
-          onClickHandler={onClickHandler}
-        />
-      ))}
+      {items.map(([text, whatsOnClick]) =>
+        typeof whatsOnClick === "function" ? (
+          <MenuItem
+            text={text}
+            key={text}
+            color={menuItemColor}
+            onClickHandler={whatsOnClick}
+          />
+        ) : (
+          // @ts-expect-error TS2786
+          <HashLink smooth to={whatsOnClick}>
+            <MenuItem text={text} key={text} color={menuItemColor} />
+          </HashLink>
+        ),
+      )}
 
       <LanguageSwitcher textColor={menuItemColor} />
     </BurgerMenuItemsContainer>
