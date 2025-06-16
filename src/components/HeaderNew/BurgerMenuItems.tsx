@@ -1,12 +1,11 @@
 import { XIcon } from "@phosphor-icons/react";
-import { HashLink } from "react-router-hash-link";
 import styled, { css, keyframes } from "styled-components";
 
 import { MenuItemType } from "../../config/types";
 import N4DLogoFlat from "../svg/N4DLogoFlat";
 import LanguageSwitcher from "./LanguageSwitcher";
-import MenuItem from "./MenuItem";
 import { MenuItemsContainer } from "./MenuItems";
+import MenuitemList from "./MenuitemList";
 
 const slideIn = keyframes`
   from {
@@ -97,21 +96,7 @@ export default function BurgerMenuItems({
         <XIcon size={32} onClick={() => setIsOpen(false)} />
       </BurgerMenuHeader>
 
-      {items.map(([text, whatsOnClick]) =>
-        typeof whatsOnClick === "function" ? (
-          <MenuItem
-            text={text}
-            key={text}
-            color={menuItemColor}
-            onClickHandler={whatsOnClick}
-          />
-        ) : (
-          // @ts-expect-error TS2786
-          <HashLink smooth to={whatsOnClick}>
-            <MenuItem text={text} key={text} color={menuItemColor} />
-          </HashLink>
-        ),
-      )}
+      <MenuitemList items={items} menuItemColor={menuItemColor} />
 
       <LanguageSwitcher textColor={menuItemColor} />
     </BurgerMenuItemsContainer>

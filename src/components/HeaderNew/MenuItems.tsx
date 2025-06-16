@@ -1,9 +1,8 @@
-import { HashLink } from "react-router-hash-link";
 import styled from "styled-components";
 
 import { MenuItemType } from "../../config/types";
 import LanguageSwitcher from "./LanguageSwitcher";
-import MenuItem from "./MenuItem";
+import MenuitemList from "./MenuitemList";
 
 export const MenuItemsContainer = styled.div`
   justify-content: space-between;
@@ -25,21 +24,7 @@ interface Props {
 export default function MenuItems({ items, menuItemColor }: Props) {
   return (
     <MenuItemsContainer>
-      {items.map(([text, whatsOnClick]) =>
-        typeof whatsOnClick === "function" ? (
-          <MenuItem
-            text={text}
-            key={text}
-            color={menuItemColor}
-            onClickHandler={whatsOnClick}
-          />
-        ) : (
-          // @ts-expect-error TS2786
-          <HashLink smooth to={whatsOnClick}>
-            <MenuItem text={text} key={text} color={menuItemColor} />
-          </HashLink>
-        ),
-      )}
+      <MenuitemList items={items} menuItemColor={menuItemColor} />
 
       <LanguageSwitcher textColor={menuItemColor} />
     </MenuItemsContainer>
