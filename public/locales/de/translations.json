@@ -653,13 +653,13 @@
         "button": "volunteer@need4deed.org"
       }
     },
-     "tabs": {
+    "tabs": {
       "tab1": "TABELLENANSICHT",
       "tab2": "KARTENANSICHT"
     },
     "resultsFound": "ergebnisse gefunden",
     "searchPlaceHolder": "Suchbegriff eingeben",
-    "filters":"FILTER",
+    "filters": "FILTER",
     "mapViewMessage": "Wird bald verfügbar sein"
   }
 }

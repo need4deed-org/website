@@ -688,13 +688,13 @@
         "button": "volunteer@need4deed.org"
       }
     },
-    "tabs":{
-      "tab1":"TABLE VIEW",
-      "tab2":"MAP VIEW"
+    "tabs": {
+      "tab1": "TABLE VIEW",
+      "tab2": "MAP VIEW"
     },
-    "resultsFound":"results found",
-     "searchPlaceHolder":"Enter search term",
-     "filters":"FILTERS",
-     "mapViewMessage":"Will be available soon"
+    "resultsFound": "results found",
+    "searchPlaceHolder": "Enter search term",
+    "filters": "FILTERS",
+    "mapViewMessage": "Will be available soon"
   }
 }
