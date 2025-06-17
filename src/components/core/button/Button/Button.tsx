@@ -1,8 +1,17 @@
 import styled from "styled-components";
 import { ButtonSpan } from "../../../styled/text";
 
+const defaultBGColor = "var(--color-aubergine)";
+
+const hoverBGColorMap = {
+  "var(--color-orchid)": "var(--color-orchid-light)",
+  [defaultBGColor]: "var(--color-aubergine-light)",
+};
+
+type BackgroundColorKeys = keyof typeof hoverBGColorMap;
+
 interface StyledButtonProps {
-  backgroundcolor?: string;
+  backgroundcolor?: BackgroundColorKeys;
 }
 
 const StyledButton = styled.button<StyledButtonProps>`
@@ -13,16 +22,20 @@ const StyledButton = styled.button<StyledButtonProps>`
   height: var(--button-height);
   padding: var(--button-padding);
   border-radius: var(--button-border-radius);
-  background-color: ${(props) =>
-    props.backgroundcolor || "var(--color-aubergine)"};
+  background-color: ${(props) => props.backgroundcolor || defaultBGColor};
   border: none;
   white-space: pre-wrap;
+
+  &:hover {
+    background-color: ${(props) =>
+      hoverBGColorMap[props.backgroundcolor || defaultBGColor]};
+  }
 `;
 
 interface Props {
   text: string;
   onClick: () => void;
-  backgroundcolor?: string;
+  backgroundcolor?: BackgroundColorKeys;
   textColor?: string;
 }
 

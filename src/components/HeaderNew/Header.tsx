@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { ListIcon } from "@phosphor-icons/react";
 import { ReactNode, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Subpages } from "../../config/types";
+import { MenuItemType, Subpages } from "../../config/types";
 import BurgerMenuItems from "./BurgerMenuItems";
 import MenuItems from "./MenuItems";
 
@@ -44,7 +44,7 @@ export function Header({
   const navigate = useNavigate();
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState<boolean>(false);
 
-  const menuItems: [string, () => void][] = [
+  const menuItems: MenuItemType[] = [
     [
       t("homepage.heroSection.menuItems.about"),
       () => {
@@ -57,7 +57,7 @@ export function Header({
         navigate(`/${Subpages.OPPORTUNITY_CARDS}`);
       },
     ],
-    [t("homepage.heroSection.menuItems.events"), () => {}],
+    [t("homepage.heroSection.menuItems.events"), "/#events-section-container"],
   ];
 
   return (
