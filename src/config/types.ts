@@ -134,3 +134,5 @@ export enum ScreenTypes {
 }
 
 export type FooterLink = [string, string];
+
+export type MenuItemType = [string, (() => void) | string];
