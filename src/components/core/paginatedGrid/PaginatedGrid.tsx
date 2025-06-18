@@ -22,12 +22,11 @@ const MainContainer = styled.div`
 
 const GridContainer = styled.div<GridContainerProps>`
   display: grid;
-  grid-template-columns: repeat(${(props) => props.columns}, auto);
+  grid-template-columns: repeat(${(props) => props.columns}, 1fr);
   grid-template-rows: repeat(${(props) => props.rows}, auto);
   gap: 16px;
   width: 100%;
   height: 100%;
-  justify-content: center;
 `;
 
 function PaginatedGrid({ items, columns, rows }: Props) {

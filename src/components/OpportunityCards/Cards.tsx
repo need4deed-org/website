@@ -33,7 +33,10 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 
 const regexHttpSchema = /^(http|https):\/\/.*/;
 
-const CardsContainer = styled.div``;
+const CardsContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;
 
 const screenColumnRowsMap: Record<
   ScreenTypes,

@@ -654,8 +654,8 @@
       }
     },
     "tabs": {
-      "tab1": "TABELLENANSICHT",
-      "tab2": "KARTENANSICHT"
+      "tab1": "TABELLE",
+      "tab2": "KARTE"
     },
     "resultsFound": "ergebnisse gefunden",
     "searchPlaceHolder": "Suchbegriff eingeben",
