@@ -801,13 +801,3 @@ html {
     --search-input-font-size: 16px;
   }
 }
-
-.temp-opportunities-container {
-  width: fit-content;
-  max-width: var(--page-opportunity-grid-max-width);
-  margin-inline: auto;
-  margin-block: 0 40px;
-  display: grid;
-  grid-template-columns: var(--page-opportunity-grid-template-columns);
-  gap: 24px;
-}

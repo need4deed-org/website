@@ -41,9 +41,9 @@ export function OpportunityCards() {
         selectedTabIndex={selectedTabIndex}
         setSelectedTabIndex={setSelectedTabIndex}
       />
+
       {selectedTabIndex === 0 ? (
         <Cards
-          className="temp-opportunities-container"
           url={urlApiOpportunity}
           opportunityParams={{
             search: {
