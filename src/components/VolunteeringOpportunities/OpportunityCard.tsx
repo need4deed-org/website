@@ -17,6 +17,7 @@ import { IconName } from "../VolunteeringCategories/types";
 import OpportunityCardDetails, { CardDetail } from "./OpportunityCardDetail";
 import { Opportunity } from "./types";
 import { formatAccompanyingDate } from "./utils";
+import { hyphenationStyles } from "../styled/mixins";
 
 export const defaultMainCommunication = "English, German";
 interface CardProps extends React.CSSProperties {
@@ -63,6 +64,10 @@ const LanguageDetailContainer = styled.div`
   gap: var(--homepage-volunteering-opportunity-details-languages-gap);
 `;
 
+const HyphenatedHeading3 = styled(Heading3)`
+  ${hyphenationStyles}/* Apply the hyphenation mixin */
+`;
+
 interface Props extends React.CSSProperties {
   opportunity: Opportunity;
   iconName: IconName;
@@ -86,7 +91,7 @@ export default function OpportunityCard({
   CTAs = undefined,
   enableHoverEffect,
 }: Props) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const screenType = useScreenType();
 
   const {
@@ -165,7 +170,7 @@ export default function OpportunityCard({
       enableHoverEffect={enableHoverEffect}
     >
       <IconDiv>{iconNameMap[iconName]}</IconDiv>
-      <Heading3>{title}</Heading3>
+      <HyphenatedHeading3 lang={i18n.language}>{title}</HyphenatedHeading3>
       {vo && <Paragraph>{voInformation}</Paragraph>}
       <Activities activities={activities} />
       <OpportunityCardDetails cardDetails={cardDetails} />

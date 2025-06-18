@@ -414,7 +414,7 @@ html {
     --homepage-hero-section-logo-height: 200px;
     --homepage-hero-section-logo-width: 370px;
     --homepage-hero-section-header-height: 202px;
-    --homepage-hero-section-header-menu-items-width: min-content;
+    --homepage-hero-section-header-menu-items-width: 200px;
     --homepage-hero-section-header-menu-items-gap: 24px;
     --homepage-hero-section-header-menu-items-flex-direction: column;
     --homepage-hero-section-header-menu-item-fontSize: 16px;

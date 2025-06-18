@@ -1,10 +1,11 @@
 import { XIcon } from "@phosphor-icons/react";
 import styled, { css, keyframes } from "styled-components";
 
+import { MenuItemType } from "../../config/types";
 import N4DLogoFlat from "../svg/N4DLogoFlat";
 import LanguageSwitcher from "./LanguageSwitcher";
-import MenuItem from "./MenuItem";
 import { MenuItemsContainer } from "./MenuItems";
+import MenuitemList from "./MenuitemList";
 
 const slideIn = keyframes`
   from {
@@ -51,6 +52,10 @@ const BurgerMenuItemsContainer = styled(MenuItemsContainer)<BurgerMenuProps>`
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
 
+  a {
+    text-decoration: none;
+  }
+
   /* Apply animation based on isOpen prop */
   ${(props) =>
     props.isOpen &&
@@ -73,7 +78,7 @@ const BurgerMenuHeader = styled.div`
 
 interface Props {
   isOpen: boolean;
-  items: [string, () => void][];
+  items: MenuItemType[];
   setIsOpen: (isOpen: boolean) => void;
   menuItemColor?: string;
 }
@@ -91,14 +96,7 @@ export default function BurgerMenuItems({
         <XIcon size={32} onClick={() => setIsOpen(false)} />
       </BurgerMenuHeader>
 
-      {items.map(([text, onClickHandler]) => (
-        <MenuItem
-          text={text}
-          key={text}
-          color={menuItemColor}
-          onClickHandler={onClickHandler}
-        />
-      ))}
+      <MenuitemList items={items} menuItemColor={menuItemColor} />
 
       <LanguageSwitcher textColor={menuItemColor} />
     </BurgerMenuItemsContainer>

@@ -1,6 +1,8 @@
 import styled from "styled-components";
+
+import { MenuItemType } from "../../config/types";
 import LanguageSwitcher from "./LanguageSwitcher";
-import MenuItem from "./MenuItem";
+import MenuitemList from "./MenuitemList";
 
 export const MenuItemsContainer = styled.div`
   justify-content: space-between;
@@ -9,24 +11,20 @@ export const MenuItemsContainer = styled.div`
   width: var(--homepage-hero-section-header-menu-items-width);
   gap: var(--homepage-hero-section-header-menu-items-gap);
   height: fit-content;
+  a {
+    text-decoration: none;
+  }
 `;
 
 interface Props {
-  items: [string, () => void][];
+  items: MenuItemType[];
   menuItemColor: string;
 }
 
 export default function MenuItems({ items, menuItemColor }: Props) {
   return (
     <MenuItemsContainer>
-      {items.map(([text, onClickHandler]) => (
-        <MenuItem
-          text={text}
-          key={text}
-          color={menuItemColor}
-          onClickHandler={onClickHandler}
-        />
-      ))}
+      <MenuitemList items={items} menuItemColor={menuItemColor} />
 
       <LanguageSwitcher textColor={menuItemColor} />
     </MenuItemsContainer>
