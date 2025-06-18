@@ -16,7 +16,6 @@ interface GridContainerProps {
 const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
   gap: var(--opportunities-container-gap);
 `;
 
@@ -24,9 +23,7 @@ const GridContainer = styled.div<GridContainerProps>`
   display: grid;
   grid-template-columns: repeat(${(props) => props.columns}, 1fr);
   grid-template-rows: repeat(${(props) => props.rows}, auto);
-  gap: 16px;
-  width: 100%;
-  height: 100%;
+  gap: var(--paginated-grid-container-gap);
 `;
 
 function PaginatedGrid({ items, columns, rows }: Props) {

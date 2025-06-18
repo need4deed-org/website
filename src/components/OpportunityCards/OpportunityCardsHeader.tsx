@@ -6,6 +6,7 @@ import FiltersButton from "./FiltersButton";
 import useScreenType from "../../hooks/useScreenType";
 import { ScreenTypes } from "../../config/types";
 import ResultsFound from "./ResultsFound";
+import { hyphenationStyles } from "../styled/mixins";
 
 const HeaderContainer = styled.div`
   display: flex;
@@ -52,6 +53,10 @@ const TabHeading = styled(Heading4)<TabHeadingProps>`
     props.isSelected ? "var(--opportunities-header-tabs-padding-bottom)" : "0"};
 `;
 
+const HyphenatedHeading2 = styled(Heading2)`
+  ${hyphenationStyles}
+`;
+
 interface Props {
   numOfOpportunities: number;
   onSearchInputChange: (input: string) => void;
@@ -73,13 +78,14 @@ export default function OpportunityCardsHeader({
 
   return (
     <HeaderContainer>
-      <Heading2>{t("opportunityPage.header")}</Heading2>
+      <HyphenatedHeading2>{t("opportunityPage.header")}</HyphenatedHeading2>
 
       <TabsSearchBarContainer>
         <TabsSectionContainer>
           <Tabs>
             {tabs.map((tab, index) => (
               <TabHeading
+                key={tab}
                 onClick={() => setSelectedTabIndex(index)}
                 isSelected={selectedTabIndex === index}
               >

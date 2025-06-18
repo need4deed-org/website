@@ -18,11 +18,9 @@ const NumberDiv = styled.div<NumberDivProps>`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 36px;
-  height: 44px;
-  gap: 8px;
-  border-radius: 6px;
-  padding: 8px;
+  width: var(--paginated-grid-pagination-number-width);
+  height: var(--paginated-grid-pagination-number-height);
+  border-radius: var(--paginated-grid-pagination-number-border-radius);
   background-color: ${(props) => props.bgColor};
   cursor: pointer;
 `;
@@ -104,7 +102,7 @@ export default function PaginationNumbers({
   return (
     <PaginationContainer>
       <CaretLeftIcon
-        size={16}
+        size={20}
         onClick={handlePrevPage}
         cursor={isFirstPage ? "default" : "pointer"}
         color={isFirstPage ? "var(--color-sand)" : "var(--color-midnight)"}
@@ -112,7 +110,7 @@ export default function PaginationNumbers({
 
       {uniquePages.map((page) =>
         page === "..." ? (
-          <Heading4>{page}</Heading4>
+          <Heading4 key={page}>{page}</Heading4>
         ) : (
           <NumberDiv
             bgColor={page === currentPage ? "var(--color-midnight)" : "none"}
@@ -134,7 +132,7 @@ export default function PaginationNumbers({
       )}
 
       <CaretRightIcon
-        size={16}
+        size={20}
         onClick={handleNextPage}
         cursor={isLastPage ? "default" : "pointer"}
         color={isLastPage ? "var(--color-sand)" : "var(--color-midnight)"}

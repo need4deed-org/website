@@ -335,6 +335,11 @@ html {
     --search-container-border-radius:40px;
     --search-container-padding: 0 32px;
     --search-input-font-size: 16px;
+
+    --paginated-grid-container-gap:24px;
+    --paginated-grid-pagination-number-width:36px;
+    --paginated-grid-pagination-number-height:44px;
+    --paginated-grid-pagination-number-border-radius:6px
   }
 }
 
@@ -569,6 +574,11 @@ html {
     --search-container-border-radius:40px;
     --search-container-padding: 0 32px;
     --search-input-font-size: 16px;
+
+    --paginated-grid-container-gap:24px ;
+    --paginated-grid-pagination-number-width:36px;
+    --paginated-grid-pagination-number-height:44px;
+    --paginated-grid-pagination-number-border-radius:6px
   }
 }
 
@@ -799,5 +809,10 @@ html {
     --search-container-border-radius: 160px;
     --search-container-padding: 0 32px;
     --search-input-font-size: 16px;
+
+    --paginated-grid-container-gap:24px;
+    --paginated-grid-pagination-number-width:36px;
+    --paginated-grid-pagination-number-height:44px;
+    --paginated-grid-pagination-number-border-radius:6px
   }
 }

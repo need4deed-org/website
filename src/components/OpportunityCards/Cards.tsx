@@ -7,7 +7,6 @@ import useOpportunities from "../../hooks/api/useOpportunities";
 import useOpportunitiesFromFile from "../../hooks/api/useOpportunitiesFromFile";
 import Announcement from "../Announcement";
 import OpportunityCardPopup from "../VolunteeringOpportunities/OpportunityCardPopup";
-import "./index.css";
 import {
   CategoryTitle,
   getIconName,

@@ -7,14 +7,7 @@ export const filterOpportunity = (
   opportunity: Opportunity,
   cardsFilter: CardsFilter,
 ) => {
-  const {
-    title,
-    activities,
-    languages,
-    accompanyingTranslation,
-    locations,
-    schedule,
-  } = opportunity;
+  const { title, activities, languages, accompanyingTranslation } = opportunity;
   const { searchInput } = cardsFilter;
 
   if (searchInput) {
@@ -24,8 +17,6 @@ export const filterOpportunity = (
       activities.join("") +
       languages.join(", ") +
       accompanyingTranslation +
-      locations.join(", ") +
-      schedule +
       defaultMainCommunication;
     if (!searchableData.toLowerCase().includes(siLowerCased)) return false;
   }
