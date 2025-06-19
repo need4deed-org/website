@@ -602,6 +602,7 @@
       "footerButton": "See all volunteering opportunities",
       "dateOfAppointment": "Date Of Appointment",
       "mainCommunication": "Main communication",
+      "defaultMainCommunication": "English, German",
       "translationTo": "Translation to",
       "residentsSpeak": "Residents speak",
       "accompanyingTranslation": {
@@ -687,6 +688,14 @@
         "title": "Already Registered? Email:",
         "button": "volunteer@need4deed.org"
       }
-    }
+    },
+    "tabs": {
+      "tab1": "TABLE VIEW",
+      "tab2": "MAP VIEW"
+    },
+    "resultsFound": "results found",
+    "searchPlaceHolder": "Enter search term",
+    "filters": "FILTERS",
+    "mapViewMessage": "Will be available soon"
   }
 }
