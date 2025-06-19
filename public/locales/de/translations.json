@@ -567,6 +567,7 @@
       "footerButton": "Alle Freiwilligenmöglichkeiten ansehen",
       "dateOfAppointment": "Datum der Ernennung",
       "mainCommunication": "Hauptkommunikation",
+      "defaultMainCommunication": "Englisch, Deutsch",
       "translationTo": "Übersetzung nach",
       "residentsSpeak": "Bewohner sprechen",
       "accompanyingTranslation": {

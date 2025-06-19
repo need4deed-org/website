@@ -602,6 +602,7 @@
       "footerButton": "See all volunteering opportunities",
       "dateOfAppointment": "Date Of Appointment",
       "mainCommunication": "Main communication",
+      "defaultMainCommunication": "English, German",
       "translationTo": "Translation to",
       "residentsSpeak": "Residents speak",
       "accompanyingTranslation": {

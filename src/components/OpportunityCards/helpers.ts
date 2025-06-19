@@ -1,5 +1,4 @@
 /* eslint-disable import/prefer-default-export */
-import { defaultMainCommunication } from "../VolunteeringOpportunities/OpportunityCard";
 import { Opportunity } from "../VolunteeringOpportunities/types";
 import { CardsFilter } from "./types";
 
@@ -7,7 +6,13 @@ export const filterOpportunity = (
   opportunity: Opportunity,
   cardsFilter: CardsFilter,
 ) => {
-  const { title, activities, languages, accompanyingTranslation } = opportunity;
+  const {
+    title,
+    activities,
+    languages,
+    accompanyingTranslation,
+    defaultMainCommunication,
+  } = opportunity;
   const { searchInput } = cardsFilter;
 
   if (searchInput) {
@@ -15,7 +20,7 @@ export const filterOpportunity = (
     const searchableData =
       title +
       activities.join("") +
-      languages.join(", ") +
+      languages.join("") +
       accompanyingTranslation +
       defaultMainCommunication;
     if (!searchableData.toLowerCase().includes(siLowerCased)) return false;

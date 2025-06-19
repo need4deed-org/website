@@ -19,7 +19,6 @@ import { Opportunity } from "./types";
 import { formatAccompanyingDate } from "./utils";
 import { hyphenationStyles } from "../styled/mixins";
 
-export const defaultMainCommunication = "English, German";
 interface CardProps extends React.CSSProperties {
   enableHoverEffect?: boolean;
 }
@@ -104,6 +103,7 @@ export default function OpportunityCard({
     voInformation,
     opportunityType,
     accompanyingTranslation,
+    defaultMainCommunication,
   } = opportunity;
 
   const languagesText = languages.join(", ");

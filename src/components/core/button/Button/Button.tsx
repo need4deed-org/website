@@ -13,10 +13,8 @@ const hoverBGColorMap = {
 
 type BackgroundColorKeys = keyof typeof hoverBGColorMap;
 
-interface StyledButtonProps {
+interface StyledButtonProps extends React.HTMLProps<HTMLButtonElement> {
   backgroundcolor?: BackgroundColorKeys;
-  height?: string;
-  width?: string;
   gap?: string;
   padding?: string;
 }
