@@ -20,6 +20,7 @@ export interface Opportunity {
   voInformation: string;
   categoryId: string;
   lastEditedTimeNotion: Date;
+  defaultMainCommunication: string;
 }
 
 export interface OpportunityApi {

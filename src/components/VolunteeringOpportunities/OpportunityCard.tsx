@@ -103,6 +103,7 @@ export default function OpportunityCard({
     voInformation,
     opportunityType,
     accompanyingTranslation,
+    defaultMainCommunication,
   } = opportunity;
 
   const languagesText = languages.join(", ");
@@ -114,7 +115,7 @@ export default function OpportunityCard({
           <Paragraph fontWeight={400}>
             {t("homepage.volunteeringOpportunities.mainCommunication")}:
           </Paragraph>
-          <Paragraph>English, German</Paragraph>
+          <Paragraph>{defaultMainCommunication}</Paragraph>
         </LanguageDetailContainer>
       ) : (
         <LanguageDetailContainer>

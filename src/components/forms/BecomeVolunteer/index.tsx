@@ -71,7 +71,10 @@ export default function BecomeVolunteer() {
       languagesNative: languages,
       languagesFluent: languages,
       languagesIntermediate: languages,
-      activities: getAllSelectedFalse(useList(ListsOfOptions.ACTIVITIES)),
+      activities: getAllSelectedFalse([
+        ...useList(ListsOfOptions.ACTIVITIES),
+        ...useList(ListsOfOptions.ACTIVITIES_ACCOMPANYING),
+      ]),
       skills: getAllSelectedFalse(useList(ListsOfOptions.SKILLS)),
       certOfGoodConduct: undefined,
       certMeaslesVaccination: undefined,

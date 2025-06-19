@@ -567,6 +567,7 @@
       "footerButton": "Alle Freiwilligenmöglichkeiten ansehen",
       "dateOfAppointment": "Datum der Ernennung",
       "mainCommunication": "Hauptkommunikation",
+      "defaultMainCommunication": "Englisch, Deutsch",
       "translationTo": "Übersetzung nach",
       "residentsSpeak": "Bewohner sprechen",
       "accompanyingTranslation": {
@@ -652,6 +653,14 @@
         "title": "Bereits registriert? E-mail:",
         "button": "volunteer@need4deed.org"
       }
-    }
+    },
+    "tabs": {
+      "tab1": "TABELLE",
+      "tab2": "KARTE"
+    },
+    "resultsFound": "ergebnisse gefunden",
+    "searchPlaceHolder": "Suchbegriff eingeben",
+    "filters": "FILTER",
+    "mapViewMessage": "Wird bald verfügbar sein"
   }
 }

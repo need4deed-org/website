@@ -27,10 +27,7 @@ const PageContentHeaderContainer = styled.div<PageContentHeaderContainerProps>`
   flex-direction: column;
   background: ${(props) =>
     props.background || "var(--layout-static-page-background-default)"};
-`;
-
-const PageContentContainer = styled.div`
-  margin-block-end: var(--page-content-margin-bottom);
+  padding-bottom: var(--layout-static-page-header-content-bottom-padding);
 `;
 
 export function StaticPageLayout({ children, background }: Props) {
@@ -48,7 +45,7 @@ export function StaticPageLayout({ children, background }: Props) {
             padding="var(--layout-static-page-header-padding)"
             menuItemColor="var(--color-midnight)"
           />
-          <PageContentContainer>{children}</PageContentContainer>
+          {children}
         </PageContentHeaderContainer>
 
         <FooterPartnersSection />

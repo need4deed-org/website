@@ -42,6 +42,7 @@ export const Heading3 = styled.h3<TextProps>`
   line-height: var(--text-h3-line-height);
   letter-spacing: var(--text-h3-letter-spacing);
   margin: ${(props) => props.margin};
+  color: ${(props) => props.color || "var(--color-midnight)"};
 `;
 
 export const Heading4 = styled.h4<TextProps>`
