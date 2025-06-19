@@ -105,7 +105,7 @@ export default function PaginationNumbers({
         size={20}
         onClick={handlePrevPage}
         cursor={isFirstPage ? "default" : "pointer"}
-        color={isFirstPage ? "var(--color-sand)" : "var(--color-midnight)"}
+        color={isFirstPage ? "var(--color-sand-dark)" : "var(--color-midnight)"}
       />
 
       {uniquePages.map((page) =>
@@ -135,7 +135,7 @@ export default function PaginationNumbers({
         size={20}
         onClick={handleNextPage}
         cursor={isLastPage ? "default" : "pointer"}
-        color={isLastPage ? "var(--color-sand)" : "var(--color-midnight)"}
+        color={isLastPage ? "var(--color-sand-dark)" : "var(--color-midnight)"}
       />
     </PaginationContainer>
   );
