@@ -9,6 +9,7 @@ function DataPrivacy() {
 
   return (
     <div className="n4d-container legal-container">
+      <p>Israa Test</p>
       <h2>{t("legal:dataPrivacy.header")}</h2>
       <p>{t("legal:dataPrivacy.intro1")}</p>
       <p>{t("legal:dataPrivacy.intro2")}</p>
