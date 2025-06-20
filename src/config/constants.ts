@@ -32,6 +32,9 @@ export const FF = {
   NEW_FORMS_OPPORTUNITY: positives.includes(
     import.meta.env.VITE_FF_NEW_FORMS_OPPORTUNITY,
   ),
+  SHOW_OPPORTUNITY_FILTER: positives.includes(
+    import.meta.env.VITE_FF_OPPORTUNITY_FILTER,
+  ),
 };
 
 export const timeZone = import.meta.env.VITE_TZ || "Europe/Berlin";
