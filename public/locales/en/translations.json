@@ -696,6 +696,8 @@
     "resultsFound": "results found",
     "searchPlaceHolder": "Enter search term",
     "filters": "FILTERS",
-    "mapViewMessage": "Will be available soon"
+    "mapViewMessage": "Will be available soon",
+    "closeFilters":"CLOSE FILTERS",
+    "clearAllFilters": "CLEAR ALL FILTERS"
   }
 }

@@ -331,6 +331,8 @@ html {
     --opportunities-header-searchbar-flex-direction: column;
     --opportunities-header-searchbar-width: -webkit-fill-available;
     --opportunities-map-view-container-height: 200px;
+    --opportunities-cards-container-justify-content: center;
+
 
     --search-container-height:64px;
     --search-container-border-radius:40px;
@@ -570,6 +572,8 @@ html {
     --opportunities-header-searchbar-width:  466px;
     --opportunities-header-searchbar-flex-direction: row;
     --opportunities-map-view-container-height: 300px;
+    --opportunities-cards-container-justify-content: center;
+
 
     --search-container-height:64px;
     --search-container-border-radius:40px;
@@ -804,6 +808,7 @@ html {
     --opportunities-header-searchbar-width: 980px;
     --opportunities-header-searchbar-flex-direction: row;
     --opportunities-map-view-container-height: 300px;
+    --opportunities-cards-container-justify-content: left;
 
     --search-container-height: 60px;
     --search-container-border-radius: 160px;

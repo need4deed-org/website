@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
@@ -28,13 +27,14 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   popup?: boolean;
   setNumOfOpportunities: (numOfOpportunities: number) => void;
   cardsFilter: CardsFilter;
+  isFiltersOpen: boolean;
 }
 
 const regexHttpSchema = /^(http|https):\/\/.*/;
 
 const CardsContainer = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: var(--opportunities-cards-container-justify-content);
 `;
 
 const screenColumnRowsMap: Record<
@@ -52,6 +52,7 @@ export default function Cards({
   popup = false,
   setNumOfOpportunities,
   cardsFilter,
+  isFiltersOpen,
 }: Props) {
   const isUrl = url.toLowerCase().match(regexHttpSchema);
   const useOpp = isUrl ? useOpportunities : useOpportunitiesFromFile;
@@ -61,6 +62,7 @@ export default function Cards({
   >();
   const { t } = useTranslation();
   const screenSize = useScreenType();
+  const isDesktop = screenSize === ScreenTypes.DESKTOP;
 
   const opportunitiesRaw = (opportunities || []) as unknown as OpportunityApi[];
 
@@ -74,6 +76,8 @@ export default function Cards({
     (a, b) =>
       b.lastEditedTimeNotion.getTime() - a.lastEditedTimeNotion.getTime(),
   );
+
+  const { columns, rows } = screenColumnRowsMap[screenSize];
 
   useEffect(() => {
     setNumOfOpportunities(filteredOpportunities.length);
@@ -101,7 +105,8 @@ export default function Cards({
             enableHoverEffect={!modalOpportunity}
           />
         ))}
-        {...screenColumnRowsMap[screenSize]}
+        columns={columns - (isDesktop && isFiltersOpen ? 1 : 0)}
+        rows={rows}
       />
     </CardsContainer>
   ) : (

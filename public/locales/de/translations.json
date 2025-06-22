@@ -661,6 +661,8 @@
     "resultsFound": "ergebnisse gefunden",
     "searchPlaceHolder": "Suchbegriff eingeben",
     "filters": "FILTER",
-    "mapViewMessage": "Wird bald verfügbar sein"
+    "mapViewMessage": "Wird bald verfügbar sein",
+    "closeFilters": "FILTER SCLIEẞEN",
+    "clearAllFilters": "ALLE FILTER LÖSCHEN"
   }
 }
