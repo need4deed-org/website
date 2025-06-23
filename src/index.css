@@ -45,6 +45,15 @@ html {
   --color-white: rgba(255, 255, 255, 1);
   --color-black: rgba(0, 0, 0, 1);
   --color-dimmed-background: rgba(0, 0, 0, 0.4);
+  --color-neutral-900: #fff;
+  --color-neutral-800: #eee;
+  --color-neutral-700: #ddd;
+  --color-neutral-600: #ccc;
+  --color-neutral-500: #bbb;
+  --color-neutral-400: #aaa;
+  --color-neutral-300: #888;
+  --color-neutral-200: #444;
+  --color-neutral-100: #000;
 
   /* text */
   --text-h2-font-weight: 600;
