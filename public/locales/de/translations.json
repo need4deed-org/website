@@ -40,7 +40,7 @@
   "form": {
     "error": {
       "required": "Dieses Feld ist erforderlich",
-      "postcode": "Muss eine gültige Postleitzahl von Berlin sein",
+      "postcode": "Bitte nur die PLZ eintragen (keine Buchstaben, nur Zahlen)",
       "email": "Muss eine gültige E-Mail-Adresse sein",
       "badEmail": "Keine gültige Betreiber E-Mail",
       "location": "Bitte wähle mindestens einen Standort aus",
