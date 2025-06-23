@@ -7,7 +7,7 @@ import { urlApiOpportunity } from "../../config/constants";
 import OpportunityCardsHeader from "./OpportunityCardsHeader";
 import { CardsFilter } from "./types";
 import MapView from "./MapView";
-import Filters from "./Filters";
+import Filters from "./Filters/Filters";
 
 const OpportunitiesContainer = styled.div`
   display: flex;

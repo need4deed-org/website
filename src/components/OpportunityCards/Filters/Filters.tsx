@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { ArrowLeftIcon } from "@phosphor-icons/react";
 import { useTranslation } from "react-i18next";
-import { Heading4 } from "../styled/text";
-import { Button } from "../core/button";
-import { IconName } from "../core/button/Button/icon";
+import { Heading4 } from "../../styled/text";
+import { Button } from "../../core/button";
+import { IconName } from "../../core/button/Button/icon";
+import CloseFilters from "./CloseFilters";
 
 const FiltersContainer = styled.div`
   position: absolute;
@@ -13,16 +13,6 @@ const FiltersContainer = styled.div`
   background: var(--color-orchid-subtle);
 `;
 
-const CloseFiltersDiv = styled.div`
-  display: flex;
-  align-items: center;
-  background: var(--color-orchid-light);
-  justify-content: left;
-  height: 64px;
-  gap: 12px;
-  padding: 16px 0px 16px 32px;
-  cursor: pointer;
-`;
 const FiltersContentContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -38,15 +28,8 @@ const FiltersContentContainer = styled.div`
 const ClearAllFiltersDiv = styled.div`
   display: flex;
   align-items: center;
-  /* background: var(--color-white); */
   justify-content: center;
-  /* height: 48px; */
-  /* width: fit-content; */
-  /* gap: 8px; */
-  /* padding: 10px 20px 10px 24px; */
   padding-bottom: 24px;
-  /* cursor: pointer; */
-  /* border-radius: 100px; */
 `;
 
 interface Props {
@@ -59,12 +42,7 @@ export default function Filters({ isFiltersOpen, setIsFiltersOpen }: Props) {
 
   return isFiltersOpen ? (
     <FiltersContainer>
-      <CloseFiltersDiv onClick={() => setIsFiltersOpen(false)}>
-        <ArrowLeftIcon color="var(--color-midnight)" size={32} />
-        <Heading4 margin={0} color="var(--color-midnight)">
-          {t("opportunityPage.closeFilters")}
-        </Heading4>
-      </CloseFiltersDiv>
+      <CloseFilters setIsFiltersOpen={setIsFiltersOpen} />
 
       <FiltersContentContainer>
         <Heading4 margin={0} color="var(--color-midnight)">
