@@ -1,27 +1,9 @@
 import { Lang } from "need4deed-sdk";
-import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 
-import { ScreenTypes } from "../../config/types";
-import useScreenType from "../../hooks/useScreenType";
 import { setStoredLang } from "../../utils";
-import { CustomHeading } from "../styled/text";
-import Arrow from "../svg/Arrow";
 import MenuItem from "./MenuItem";
-
-const languageOptions = [
-  { value: Lang.DE, label: "DEUTSCH" },
-  { value: Lang.EN, label: "ENGLISH " },
-];
-
-const languageLabelMap = languageOptions.reduce(
-  (obj, cur) => ({
-    ...obj,
-    [cur.value]: cur.label,
-  }),
-  {},
-) as Record<Lang, string>;
 
 const LanguageSwitcherContainer = styled.div`
   display: flex;
@@ -36,24 +18,13 @@ const LanguageSelectionDiv = styled.div`
   flex-direction: row;
   gap: var(--homepage-hero-section-language-selection-gap);
   align-items: center;
+  justify-content: right;
   cursor: pointer;
-  justify-content: left;
   min-width: var(--homepage-hero-section-language-selection-min-width);
 `;
 
-const LanguageOptionsDiv = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: var(--homepage-hero-section-language-switcher-gap);
-`;
-
-const OptionButton = styled.button`
-  background: var(
-    --homepage-hero-section-language-option-button-background-color
-  );
-  border-color: transparent;
-  border-radius: var(--homepage-hero-section-language-option-button-radius);
-`;
+const en = "ENGLISH";
+const de = "DEUTSCH";
 
 interface Props {
   textColor?: string;
@@ -61,62 +32,26 @@ interface Props {
 
 export default function LanguageSwitcher({ textColor }: Props) {
   const { i18n } = useTranslation();
-  const [isOptionsVisible, setIsOptionsVisible] = useState<boolean>(false);
-  const screenType = useScreenType();
-
-  const selectedLang = i18n.language as Lang;
-
-  const visibleLangOptions = languageOptions.filter(
-    (o) => o.value !== selectedLang,
-  );
 
   const handleLangChange = (lang: Lang) => {
     i18n.changeLanguage(lang);
     setStoredLang(lang);
-    setIsOptionsVisible(false);
   };
 
-  const selectedLangTextColor =
-    screenType !== ScreenTypes.MOBILE && isOptionsVisible
-      ? "var(--color-orchid-dark)"
-      : textColor;
+  const selectedLangTextColor = textColor;
 
   return (
     <LanguageSwitcherContainer>
       <LanguageSelectionDiv
-        onClick={() => setIsOptionsVisible(!isOptionsVisible)}
+        onClick={() =>
+          handleLangChange(i18n.language === Lang.EN ? Lang.DE : Lang.EN)
+        }
       >
         <MenuItem
-          text={languageLabelMap[selectedLang]}
+          text={i18n.language === Lang.EN ? de : en}
           color={selectedLangTextColor}
         />
-        <Arrow
-          direction={isOptionsVisible ? "up" : "down"}
-          color={textColor || "var(--color-white)"}
-        />
       </LanguageSelectionDiv>
-
-      {isOptionsVisible && (
-        <LanguageOptionsDiv>
-          {visibleLangOptions.map((o) => (
-            <OptionButton
-              key={o.value}
-              onClick={() => handleLangChange(o.value)}
-            >
-              <CustomHeading
-                color="var(--homepage-hero-section-language-option-button-text-color)"
-                fontSize="var(--homepage-hero-section-header-menu-item-fontSize)"
-                fontWeight="var(--homepage-hero-section-header-menu-item-fontWeight)"
-                letterSpacing="var(--homepage-hero-section-header-menu-item-letterSpacing)"
-                lineheight="var(--homepage-hero-section-header-menu-item-lineheight)"
-                margin={0}
-              >
-                {languageLabelMap[o.value]}
-              </CustomHeading>
-            </OptionButton>
-          ))}
-        </LanguageOptionsDiv>
-      )}
     </LanguageSwitcherContainer>
   );
 }
