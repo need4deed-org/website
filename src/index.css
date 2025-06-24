@@ -4,7 +4,15 @@ body {
   margin: 0;
 }
 
-html {
+* {
+  box-sizing: border-box;
+}
+
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -214,7 +222,7 @@ html {
     --homepage-hero-section-content-hero-button-container-gap: 16px;
     --homepage-hero-section-content-hero-button-container-flex-direction: column;
 
-    --homepage-footer-partners-section-container-height: 870px;
+    --homepage-footer-partners-section-container-height: auto;
     --homepage-footer-partners-section-container-padding: 32px 20px;
     --homepage-footer-partners-section-container-gap: 64px;
     --homepage-footer-partners-section-partners-container-height: 443px;
