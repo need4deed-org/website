@@ -24,6 +24,7 @@ import Subpage from "./pages/Subpage";
 import VolunteerForm from "./pages/VolunteerForm";
 import Agreement from "./pages/VPA";
 import { consoleLogDeveloperContributionMessage } from "./utils";
+import Announcement from "./pages/Announcement";
 
 const queryClient = new QueryClient();
 
@@ -140,8 +141,13 @@ function App() {
                 path={`/${Subpages.FAQS}`}
                 element={<Subpage type={Subpages.FAQS} />}
               />
+
               <Route path={`/${Subpages.FAQ}`} element={<FAQ />} />
               <Route path={`/${Subpages.ABOUT}`} element={<About />} />
+              <Route
+                path={`/${Subpages.ANNOUNCEMENT}`}
+                element={<Announcement />}
+              />
               <Route
                 path={`/${Subpages.LEGAL_NOTICE}`}
                 element={<LegalNotice />}
@@ -175,6 +181,7 @@ function App() {
                 path={`/${Subpages.RAC_GUIDELINES}`}
                 element={<GuidelinesPage />}
               />
+
               <Route path={`/${Subpages.EVENT_PAGE}`} element={<EventPage />} />
               <Route path="/:lng" element={<Landing />} />
               <Route
