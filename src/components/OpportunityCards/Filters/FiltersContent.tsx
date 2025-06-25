@@ -3,6 +3,8 @@ import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import { Heading4, Paragraph } from "../../styled/text";
 import { SwitchButton } from "../../core/button";
+import AccordionFilter from "./AccordionFilter";
+import { CardsFilter } from "../types";
 
 const FiltersContentContainer = styled.div`
   display: flex;
@@ -29,9 +31,50 @@ const AccompanyingFilterHeaderContainer = styled.div`
   align-items: center;
 `;
 
-export default function FiltersContent() {
+interface Props {
+  filter: CardsFilter;
+
+  setCardsFilter: (filter: CardsFilter) => void;
+}
+
+export default function FiltersContent({ setCardsFilter, filter }: Props) {
   const { t } = useTranslation();
   const [isAccompanyingChecked, setIsAccompanyingChecked] = useState(false);
+
+  const activityTypeFilters = [
+    {
+      text: "Daycare",
+      onChange: (checked: boolean) => {
+        const { activityType } = filter;
+
+        if (checked) activityType.push("Daycare");
+        else activityType.splice(activityType.indexOf("Daycare"), 1);
+
+        setCardsFilter({
+          ...filter,
+          activityType,
+        });
+      },
+    },
+    {
+      text: "German language support",
+      onChange: (checked: boolean) => {
+        const { activityType } = filter;
+
+        if (checked) activityType.push("German language support");
+        else
+          activityType.splice(
+            activityType.indexOf("German language support"),
+            1,
+          );
+
+        setCardsFilter({
+          ...filter,
+          activityType,
+        });
+      },
+    },
+  ];
 
   return (
     <FiltersContentContainer>
@@ -55,6 +98,8 @@ export default function FiltersContent() {
           {t("opportunityPage.accompanyingDesc")}
         </Paragraph>
       </AccompanyingFilterContainer>
+
+      <AccordionFilter header="Activity Type" items={activityTypeFilters} />
     </FiltersContentContainer>
   );
 }

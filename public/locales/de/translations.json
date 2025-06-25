@@ -664,8 +664,7 @@
     "mapViewMessage": "Wird bald verfügbar sein",
     "closeFilters": "FILTER SCLIEẞEN",
     "clearAllFilters": "ALLE FILTER LÖSCHEN",
-     "accompanying": "Begleitung",
-  "accompanyingDesc": "Offen für die Begleitung von Bewohnern zu einzelnen Terminen. Einmalige Ehrenämter, die Deutschkenntnisse erfordern."
-
+    "accompanying": "Begleitung",
+    "accompanyingDesc": "Offen für die Begleitung von Bewohnern zu einzelnen Terminen. Einmalige Ehrenämter, die Deutschkenntnisse erfordern."
   }
 }

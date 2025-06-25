@@ -2,6 +2,7 @@ import styled from "styled-components";
 import CloseFilters from "./CloseFilters";
 import FiltersContent from "./FiltersContent";
 import ClearAllFilters from "./ClearAllFilters";
+import { CardsFilter } from "../types";
 
 const FiltersContainer = styled.div`
   position: absolute;
@@ -14,13 +15,20 @@ const FiltersContainer = styled.div`
 interface Props {
   isFiltersOpen: boolean;
   setIsFiltersOpen: (isOpen: boolean) => void;
+  filter: CardsFilter;
+  setCardsFilter: (filter: CardsFilter) => void;
 }
 
-export default function Filters({ isFiltersOpen, setIsFiltersOpen }: Props) {
+export default function Filters({
+  isFiltersOpen,
+  setIsFiltersOpen,
+  filter,
+  setCardsFilter,
+}: Props) {
   return isFiltersOpen ? (
     <FiltersContainer>
       <CloseFilters setIsFiltersOpen={setIsFiltersOpen} />
-      <FiltersContent />
+      <FiltersContent setCardsFilter={setCardsFilter} filter={filter} />
       <ClearAllFilters />
     </FiltersContainer>
   ) : null;

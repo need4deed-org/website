@@ -18,7 +18,7 @@ const OpportunitiesContainer = styled.div`
   position: relative;
 `;
 
-const defaultFilter: CardsFilter = { searchInput: "" };
+const defaultFilter: CardsFilter = { searchInput: "", activityType: [] };
 
 export function OpportunityCards() {
   const { i18n, t } = useTranslation();
@@ -31,12 +31,19 @@ export function OpportunityCards() {
     setCardsFilter({ ...cardsFilter, searchInput });
   };
 
+  // const onFiltersChange = (filter: Omit<CardsFilter, "searchInput">) => {
+  //   console.log("filter", filter);
+  //   setCardsFilter({ ...cardsFilter, ...filter });
+  // };
+
   const tabs = [t("opportunityPage.tabs.tab1"), t("opportunityPage.tabs.tab2")];
 
   return (
     <OpportunitiesContainer>
       <Filters
         isFiltersOpen={isFiltersOpen}
+        setCardsFilter={setCardsFilter}
+        filter={cardsFilter}
         setIsFiltersOpen={setIsFiltersOpen}
       />
       <OpportunityCardsHeader

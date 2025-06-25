@@ -2,6 +2,10 @@
 import { Opportunity } from "../VolunteeringOpportunities/types";
 import { CardsFilter } from "./types";
 
+// const activityTypeGroupMap = {
+//   Daycare: ["DayCare", "DayCare-2", "DayCare-3"],
+// };
+
 export const filterOpportunity = (
   opportunity: Opportunity,
   cardsFilter: CardsFilter,
@@ -25,6 +29,18 @@ export const filterOpportunity = (
       defaultMainCommunication;
     if (!searchableData.toLowerCase().includes(siLowerCased)) return false;
   }
+
+  // if (cardsFilter.activityType.length) {
+  //   const filterActivities = new Set();
+
+  //   cardsFilter.activityType.forEach((type: string) =>
+  //     filterActivities.add(activityTypeGroupMap[type]),
+  //   );
+
+  //   const hasIntersection = activities.some((a) => filterActivities.has(a));
+
+  //   if (!hasIntersection) return false;
+  // }
 
   return true;
 };

@@ -1,0 +1,61 @@
+import { useState } from "react";
+import styled from "styled-components";
+import CheckboxSVG from "../../../svg/CheckboxSVG";
+import { Paragraph } from "../../../styled/text";
+
+export interface Props {
+  width: string;
+  height: string;
+  color?: string;
+  label?: string;
+  onChange?: (checked: boolean) => void;
+}
+
+const CheckboxContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+`;
+
+export function Checkbox({
+  height,
+  width,
+  color = "var(--color-midnight)",
+  label,
+  onChange,
+}: Props) {
+  const [checked, setChecked] = useState(false);
+
+  const onClick = () => {
+    const newCheckState = !checked;
+
+    if (onChange) onChange(newCheckState);
+
+    setChecked(newCheckState);
+  };
+
+  return (
+    <CheckboxContainer>
+      <CheckboxSVG
+        width={width}
+        height={height}
+        checked={checked}
+        onClick={onClick}
+        color={color}
+      />
+
+      {label && (
+        <Paragraph
+          fontWeight={checked ? 400 : 300}
+          fontSize="18px"
+          lineheight="32px"
+        >
+          {label}
+        </Paragraph>
+      )}
+    </CheckboxContainer>
+  );
+}
+
+export default Checkbox;
