@@ -13,11 +13,6 @@ const LanguageSwitcherContainer = styled.div`
   width: var(--homepage-hero-section-language-switcher-width);
 `;
 
-const LanguageSelectionDiv = styled.div`
-  cursor: pointer;
-  min-width: var(--homepage-hero-section-language-selection-min-width);
-`;
-
 const en = "ENGLISH";
 const de = "DEUTSCH";
 
@@ -37,16 +32,13 @@ export default function LanguageSwitcher({ textColor }: Props) {
 
   return (
     <LanguageSwitcherContainer>
-      <LanguageSelectionDiv
+      <MenuItem
+        text={i18n.language === Lang.EN ? de : en}
+        color={selectedLangTextColor}
         onClick={() =>
           handleLangChange(i18n.language === Lang.EN ? Lang.DE : Lang.EN)
         }
-      >
-        <MenuItem
-          text={i18n.language === Lang.EN ? de : en}
-          color={selectedLangTextColor}
-        />
-      </LanguageSelectionDiv>
+      />
     </LanguageSwitcherContainer>
   );
 }
