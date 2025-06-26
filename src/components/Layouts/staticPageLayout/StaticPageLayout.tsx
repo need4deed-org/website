@@ -20,6 +20,7 @@ interface PageContentHeaderContainerProps {
 const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 `;
 
 const PageContentHeaderContainer = styled.div<PageContentHeaderContainerProps>`
@@ -30,6 +31,12 @@ const PageContentHeaderContainer = styled.div<PageContentHeaderContainerProps>`
   padding-bottom: var(--layout-static-page-header-content-bottom-padding);
 `;
 
+const PageContentWrapper = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+`;
+
 export function StaticPageLayout({ children, background }: Props) {
   const screenType = useScreenType();
   const isBurgerMenu = screenType !== ScreenTypes.DESKTOP;
@@ -37,17 +44,18 @@ export function StaticPageLayout({ children, background }: Props) {
   return (
     <PageWrapper>
       <PageContainer>
-        <PageContentHeaderContainer background={background}>
-          <Header
-            logo={<N4DLogo />}
-            isBurgerMenu={isBurgerMenu}
-            height="var(--layout-static-page-header-height)"
-            padding="var(--layout-static-page-header-padding)"
-            menuItemColor="var(--color-midnight)"
-          />
-          {children}
-        </PageContentHeaderContainer>
-
+        <PageContentWrapper>
+          <PageContentHeaderContainer background={background}>
+            <Header
+              logo={<N4DLogo />}
+              isBurgerMenu={isBurgerMenu}
+              height="var(--layout-static-page-header-height)"
+              padding="var(--layout-static-page-header-padding)"
+              menuItemColor="var(--color-midnight)"
+            />
+            {children}
+          </PageContentHeaderContainer>
+        </PageContentWrapper>
         <FooterPartnersSection />
       </PageContainer>
     </PageWrapper>
