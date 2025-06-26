@@ -1,10 +1,10 @@
+import React from "react";
 import styled from "styled-components";
 import { CustomHeading } from "../styled/text";
 
-interface Props {
+interface Props extends React.HTMLAttributes<HTMLDivElement> {
   text: string;
   color?: string;
-  onClickHandler?: () => void;
 }
 
 const MenuItemDiv = styled.div`
@@ -12,7 +12,7 @@ const MenuItemDiv = styled.div`
   width: fit-content;
 `;
 
-export default function MenuItem({ text, color, onClickHandler }: Props) {
+export default function MenuItem({ text, color, onClick }: Props) {
   return (
     <MenuItemDiv>
       <CustomHeading
@@ -21,7 +21,7 @@ export default function MenuItem({ text, color, onClickHandler }: Props) {
         fontWeight="var(--homepage-hero-section-header-menu-item-fontWeight)"
         letterSpacing="var(--homepage-hero-section-header-menu-item-letterSpacing)"
         lineheight="var(--homepage-hero-section-header-menu-item-lineheight)"
-        onClick={onClickHandler}
+        onClick={onClick}
         margin={0}
       >
         {text}

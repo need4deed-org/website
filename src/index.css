@@ -86,11 +86,6 @@ html {
   --homepage-testimonials-profile-height: 60px;
   --homepage-testimonials-profile-gap: 16px;
 
-  /* hero section */
-  --homepage-hero-section-language-option-button-background-color: var(
-    --color-sand
-  );
-
   /* layout-static-page */
   --layout-static-page-background-default: linear-gradient(
     180deg,
@@ -99,7 +94,7 @@ html {
   );
 
   /* button */
-  --button-gap:12px
+  --button-gap: 12px;
 }
 
 .with-linebreaks {
@@ -163,7 +158,6 @@ html {
     --page-opportunity-popup-ctas-gap: 24px;
     --page-opportunity-popup-ctas-margin-top: 24px;
 
-
     --homepage-testimonials-header-gap: 16px;
     --homepage-testimonial-card-width: 320px;
     --homepage-testimonial-card-padding-top: 24px;
@@ -192,9 +186,6 @@ html {
     --homepage-hero-section-header-menu-item-fontWeight: 600;
     --homepage-hero-section-header-menu-item-letterSpacing: 0px;
     --homepage-hero-section-header-menu-item-lineheight: 16px;
-    --homepage-hero-section-language-switcher-gap: 5px;
-    --homepage-hero-section-language-switcher-width: fit-content;
-    --homepage-hero-section-language-selection-gap: 4px;
     --homepage-hero-section-language-option-button-radius: 4px;
     --homepage-hero-section-language-option-button-text-color: var(
       --color-midnight-light
@@ -324,7 +315,7 @@ html {
     --opportunities-header-tabs-border-bottom: 4px;
     --opportunities-header-tabs-padding-bottom: 4px;
     --opportunities-header-result-gap: 10px;
-    --opportunities-header-result-padding:10px;
+    --opportunities-header-result-padding: 10px;
     --opportunities-filters-button-height: 48px;
     --opportunities-filters-button-width: 48px;
     --opportunities-filters-button-icon-size: 32px;
@@ -332,15 +323,15 @@ html {
     --opportunities-header-searchbar-width: -webkit-fill-available;
     --opportunities-map-view-container-height: 200px;
 
-    --search-container-height:64px;
-    --search-container-border-radius:40px;
+    --search-container-height: 64px;
+    --search-container-border-radius: 40px;
     --search-container-padding: 0 32px;
     --search-input-font-size: 16px;
 
-    --paginated-grid-container-gap:24px;
-    --paginated-grid-pagination-number-width:36px;
-    --paginated-grid-pagination-number-height:44px;
-    --paginated-grid-pagination-number-border-radius:6px
+    --paginated-grid-container-gap: 24px;
+    --paginated-grid-pagination-number-width: 36px;
+    --paginated-grid-pagination-number-height: 44px;
+    --paginated-grid-pagination-number-border-radius: 6px;
   }
 }
 
@@ -403,7 +394,6 @@ html {
     --page-opportunity-popup-ctas-gap: 24px;
     --page-opportunity-popup-ctas-margin-top: 24px;
 
-
     --homepage-testimonials-header-gap: 24px;
     --homepage-testimonial-card-width: 328px;
     --homepage-testimonial-card-padding-top: 28px;
@@ -426,9 +416,6 @@ html {
     --homepage-hero-section-header-menu-item-fontWeight: 600;
     --homepage-hero-section-header-menu-item-letterSpacing: 0px;
     --homepage-hero-section-header-menu-item-lineheight: 16px;
-    --homepage-hero-section-language-switcher-gap: 5px;
-    --homepage-hero-section-language-switcher-width: 95px;
-    --homepage-hero-section-language-selection-gap: 4px;
     --homepage-hero-section-language-option-button-radius: 4px;
     --homepage-hero-section-language-option-button-text-color: var(
       --color-aubergine-light
@@ -564,22 +551,22 @@ html {
     --opportunities-header-tabs-border-bottom: 4px;
     --opportunities-header-tabs-padding-bottom: 4px;
     --opportunities-header-result-gap: 10px;
-    --opportunities-header-result-padding:10px;
+    --opportunities-header-result-padding: 10px;
     --opportunities-filters-button-height: 64px;
     --opportunities-filters-button-icon-size: 32px;
-    --opportunities-header-searchbar-width:  466px;
+    --opportunities-header-searchbar-width: 466px;
     --opportunities-header-searchbar-flex-direction: row;
     --opportunities-map-view-container-height: 300px;
 
-    --search-container-height:64px;
-    --search-container-border-radius:40px;
+    --search-container-height: 64px;
+    --search-container-border-radius: 40px;
     --search-container-padding: 0 32px;
     --search-input-font-size: 16px;
 
-    --paginated-grid-container-gap:24px ;
-    --paginated-grid-pagination-number-width:36px;
-    --paginated-grid-pagination-number-height:44px;
-    --paginated-grid-pagination-number-border-radius:6px
+    --paginated-grid-container-gap: 24px;
+    --paginated-grid-pagination-number-width: 36px;
+    --paginated-grid-pagination-number-height: 44px;
+    --paginated-grid-pagination-number-border-radius: 6px;
   }
 }
 
@@ -664,9 +651,6 @@ html {
     --homepage-hero-section-header-menu-item-fontWeight: 600;
     --homepage-hero-section-header-menu-item-letterSpacing: 0px;
     --homepage-hero-section-header-menu-item-lineheight: 16px;
-    --homepage-hero-section-language-switcher-gap: 5px;
-    --homepage-hero-section-language-switcher-width: 95px;
-    --homepage-hero-section-language-selection-gap: 4px;
     --homepage-hero-section-language-selection-min-width: 95px;
     --homepage-hero-section-language-option-button-radius: 4px;
     --homepage-hero-section-language-option-button-text-color: var(
@@ -798,7 +782,7 @@ html {
     --opportunities-header-tabs-border-bottom: 4px;
     --opportunities-header-tabs-padding-bottom: 4px;
     --opportunities-header-result-gap: 10px;
-    --opportunities-header-result-padding:10px;
+    --opportunities-header-result-padding: 10px;
     --opportunities-filters-button-height: 64px;
     --opportunities-filters-button-icon-size: 32px;
     --opportunities-header-searchbar-width: 980px;
@@ -810,9 +794,9 @@ html {
     --search-container-padding: 0 32px;
     --search-input-font-size: 16px;
 
-    --paginated-grid-container-gap:24px;
-    --paginated-grid-pagination-number-width:36px;
-    --paginated-grid-pagination-number-height:44px;
-    --paginated-grid-pagination-number-border-radius:6px
+    --paginated-grid-container-gap: 24px;
+    --paginated-grid-pagination-number-width: 36px;
+    --paginated-grid-pagination-number-height: 44px;
+    --paginated-grid-pagination-number-border-radius: 6px;
   }
 }
