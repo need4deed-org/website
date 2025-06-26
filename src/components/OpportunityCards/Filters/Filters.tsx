@@ -16,19 +16,19 @@ interface Props {
   isFiltersOpen: boolean;
   setIsFiltersOpen: (isOpen: boolean) => void;
   filter: CardsFilter;
-  setCardsFilter: (filter: CardsFilter) => void;
+  setFilter: (filter: CardsFilter) => void;
 }
 
 export default function Filters({
   isFiltersOpen,
   setIsFiltersOpen,
   filter,
-  setCardsFilter,
+  setFilter,
 }: Props) {
   return isFiltersOpen ? (
     <FiltersContainer>
       <CloseFilters setIsFiltersOpen={setIsFiltersOpen} />
-      <FiltersContent setCardsFilter={setCardsFilter} filter={filter} />
+      <FiltersContent setFilter={setFilter} filter={filter} />
       <ClearAllFilters />
     </FiltersContainer>
   ) : null;

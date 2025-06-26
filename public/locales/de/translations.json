@@ -660,11 +660,21 @@
     },
     "resultsFound": "ergebnisse gefunden",
     "searchPlaceHolder": "Suchbegriff eingeben",
-    "filters": "FILTER",
     "mapViewMessage": "Wird bald verfügbar sein",
-    "closeFilters": "FILTER SCLIEẞEN",
-    "clearAllFilters": "ALLE FILTER LÖSCHEN",
-    "accompanying": "Begleitung",
-    "accompanyingDesc": "Offen für die Begleitung von Bewohnern zu einzelnen Terminen. Einmalige Ehrenämter, die Deutschkenntnisse erfordern."
+    
+    "filters":{
+      "button": "FILTER",
+      "closeFilters": "FILTER SCLIEẞEN",
+      "clearAllFilters": "ALLE FILTER LÖSCHEN",
+      "accompanying": "Begleitung",
+      "accompanyingDesc": "Offen für die Begleitung von Bewohnern zu einzelnen Terminen. Einmalige Ehrenämter, die Deutschkenntnisse erfordern.",
+      "activityType": "Aktivitätstyp",
+       "daycare": "Kindertagesstätte",
+  "germanLanguageSupport": "Deutschsprachige Unterstützung",
+  "skillsBasedVolunteering": "Kompetenzbasiertes Ehrenamt",
+  "events": "Veranstaltungen",
+  "sportsActivities": "Sportliche Aktivitäten"
+    }
+
   }
 }

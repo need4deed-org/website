@@ -38,7 +38,7 @@ export default function CloseFilters({ setIsFiltersOpen }: Props) {
     <CloseFiltersDiv onClick={() => setIsFiltersOpen(false)}>
       <ArrowLeftIcon size={32} />
       <Heading4 margin={0} color="var(--color-midnight)">
-        {t("opportunityPage.closeFilters")}
+        {t("opportunityPage.filters.closeFilters")}
       </Heading4>
     </CloseFiltersDiv>
   );

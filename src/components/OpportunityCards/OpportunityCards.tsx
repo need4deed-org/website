@@ -5,9 +5,9 @@ import { useState } from "react";
 import Cards from "./Cards";
 import { urlApiOpportunity } from "../../config/constants";
 import OpportunityCardsHeader from "./OpportunityCardsHeader";
-import { CardsFilter } from "./types";
 import MapView from "./MapView";
 import Filters from "./Filters/Filters";
+import { defaultFilter } from "./Filters/constants";
 
 const OpportunitiesContainer = styled.div`
   display: flex;
@@ -17,8 +17,6 @@ const OpportunitiesContainer = styled.div`
   margin-inline: auto;
   position: relative;
 `;
-
-const defaultFilter: CardsFilter = { searchInput: "", activityType: [] };
 
 export function OpportunityCards() {
   const { i18n, t } = useTranslation();
@@ -31,18 +29,13 @@ export function OpportunityCards() {
     setCardsFilter({ ...cardsFilter, searchInput });
   };
 
-  // const onFiltersChange = (filter: Omit<CardsFilter, "searchInput">) => {
-  //   console.log("filter", filter);
-  //   setCardsFilter({ ...cardsFilter, ...filter });
-  // };
-
   const tabs = [t("opportunityPage.tabs.tab1"), t("opportunityPage.tabs.tab2")];
 
   return (
     <OpportunitiesContainer>
       <Filters
         isFiltersOpen={isFiltersOpen}
-        setCardsFilter={setCardsFilter}
+        setFilter={setCardsFilter}
         filter={cardsFilter}
         setIsFiltersOpen={setIsFiltersOpen}
       />

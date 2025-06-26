@@ -16,7 +16,7 @@ export default function ClearAllFilters() {
   return (
     <ClearAllFiltersContainer>
       <Button
-        text={t("opportunityPage.clearAllFilters")}
+        text={t("opportunityPage.filters.clearAllFilters")}
         iconName={IconName.X}
         iconColor="var(--color-midnight)"
         iconSize="24px"

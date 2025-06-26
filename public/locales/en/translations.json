@@ -695,11 +695,20 @@
     },
     "resultsFound": "results found",
     "searchPlaceHolder": "Enter search term",
-    "filters": "FILTERS",
     "mapViewMessage": "Will be available soon",
-    "closeFilters": "CLOSE FILTERS",
-    "clearAllFilters": "CLEAR ALL FILTERS",
-    "accompanying": "Accompanying",
-    "accompanyingDesc": "Open to bring residents to individual appointments. One-time volunteering posts that require german language skills."
+
+    "filters":{
+      "button": "FILTERS",
+      "closeFilters": "CLOSE FILTERS",
+      "clearAllFilters": "CLEAR ALL FILTERS",
+      "accompanying": "Accompanying",
+      "accompanyingDesc": "Open to bring residents to individual appointments. One-time volunteering posts that require german language skills.",
+      "activityType":"Activity Type",
+      "daycare": "Daycare",
+      "germanLanguageSupport": "German language support",
+      "skillsBasedVolunteering": "Skills based volunteering",
+      "events": "Events",
+      "sportsActivities": "Sports Activities"
+    }
   }
 }

@@ -10,7 +10,8 @@ interface Props {
 }
 
 interface FilterItem extends Pick<CheckboxProps, "onChange"> {
-  text: string;
+  label: string;
+  checked: boolean;
 }
 
 const FilterContainer = styled.div`
@@ -51,11 +52,12 @@ export default function AccordionFilter({ header, items }: Props) {
         <OptionsContainer>
           {items.map((item) => (
             <Checkbox
-              key={item.text}
+              key={item.label}
               width="18px"
               height="18px"
               onChange={item.onChange}
-              label={item.text}
+              label={item.label}
+              checked={item.checked}
             />
           ))}
         </OptionsContainer>

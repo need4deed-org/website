@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
 import { Heading4, Paragraph } from "../../styled/text";
 import { SwitchButton } from "../../core/button";
 import AccordionFilter from "./AccordionFilter";
-import { CardsFilter } from "../types";
+import { ActivityTypeKeys, CardsFilter } from "../types";
+import { defaultFilter } from "./constants";
 
 const FiltersContentContainer = styled.div`
   display: flex;
@@ -33,59 +33,44 @@ const AccompanyingFilterHeaderContainer = styled.div`
 
 interface Props {
   filter: CardsFilter;
-
-  setCardsFilter: (filter: CardsFilter) => void;
+  setFilter: (filter: CardsFilter) => void;
 }
 
-export default function FiltersContent({ setCardsFilter, filter }: Props) {
+const activityTypes = Object.keys(
+  defaultFilter.activityType,
+) as ActivityTypeKeys[];
+
+export default function FiltersContent({ setFilter, filter }: Props) {
   const { t } = useTranslation();
-  const [isAccompanyingChecked, setIsAccompanyingChecked] = useState(false);
 
-  const activityTypeFilters = [
-    {
-      text: "Daycare",
+  const activityTypeFilterItems = activityTypes.map((activity) => {
+    return {
+      label: t(`opportunityPage.filters.${activity}`),
+      checked: filter.activityType[activity],
       onChange: (checked: boolean) => {
         const { activityType } = filter;
+        activityType[activity] = checked;
 
-        if (checked) activityType.push("Daycare");
-        else activityType.splice(activityType.indexOf("Daycare"), 1);
-
-        setCardsFilter({
-          ...filter,
-          activityType,
-        });
+        setFilter({ ...filter, activityType });
       },
-    },
-    {
-      text: "German language support",
-      onChange: (checked: boolean) => {
-        const { activityType } = filter;
+    };
+  });
 
-        if (checked) activityType.push("German language support");
-        else
-          activityType.splice(
-            activityType.indexOf("German language support"),
-            1,
-          );
-
-        setCardsFilter({
-          ...filter,
-          activityType,
-        });
-      },
-    },
-  ];
+  const accompanyingClickHandler = () => {
+    const accompanying = !filter.accompanying;
+    setFilter({ ...filter, accompanying });
+  };
 
   return (
     <FiltersContentContainer>
       <AccompanyingFilterContainer>
         <AccompanyingFilterHeaderContainer>
           <Heading4 margin={0} color="var(--color-midnight)">
-            {t("opportunityPage.accompanying")}
+            {t("opportunityPage.filters.accompanying")}
           </Heading4>
           <SwitchButton
-            isChecked={isAccompanyingChecked}
-            onToggle={() => setIsAccompanyingChecked(!isAccompanyingChecked)}
+            isChecked={filter.accompanying}
+            onToggle={accompanyingClickHandler}
           />
         </AccompanyingFilterHeaderContainer>
 
@@ -95,11 +80,14 @@ export default function FiltersContent({ setCardsFilter, filter }: Props) {
           color="var(--color-midnight)"
           lineheight="14px"
         >
-          {t("opportunityPage.accompanyingDesc")}
+          {t("opportunityPage.filters.accompanyingDesc")}
         </Paragraph>
       </AccompanyingFilterContainer>
 
-      <AccordionFilter header="Activity Type" items={activityTypeFilters} />
+      <AccordionFilter
+        header={t("opportunityPage.filters.activityType")}
+        items={activityTypeFilterItems}
+      />
     </FiltersContentContainer>
   );
 }

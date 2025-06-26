@@ -15,7 +15,7 @@ export default function FiltersButton({ setIsFiltersOpen }: Props) {
 
   return (
     <Button
-      text={isMobile ? undefined : t("opportunityPage.filters")}
+      text={isMobile ? undefined : t("opportunityPage.filters.button")}
       backgroundcolor="var(--color-midnight)"
       height="var(--opportunities-filters-button-height)"
       width={isMobile ? "var(--opportunities-filters-button-width)" : undefined}
