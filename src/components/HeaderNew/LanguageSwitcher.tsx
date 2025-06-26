@@ -28,13 +28,11 @@ export default function LanguageSwitcher({ textColor }: Props) {
     setStoredLang(lang);
   };
 
-  const selectedLangTextColor = textColor;
-
   return (
     <LanguageSwitcherContainer>
       <MenuItem
         text={i18n.language === Lang.EN ? de : en}
-        color={selectedLangTextColor}
+        color={textColor}
         onClick={() =>
           handleLangChange(i18n.language === Lang.EN ? Lang.DE : Lang.EN)
         }
