@@ -14,11 +14,6 @@ const LanguageSwitcherContainer = styled.div`
 `;
 
 const LanguageSelectionDiv = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: var(--homepage-hero-section-language-selection-gap);
-  align-items: center;
-  justify-content: right;
   cursor: pointer;
   min-width: var(--homepage-hero-section-language-selection-min-width);
 `;
