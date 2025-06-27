@@ -675,12 +675,12 @@
       "events": "Veranstaltungen",
       "sportsActivities": "Sportliche Aktivitäten",
       "district": "Bezirk",
- "germanLevel": "Deutschkenntnisse",
-  "none": "Keine",
-  "basicGermanSkills": "Grundlegende Deutschkenntnisse",
-  "mediumGermanSkills": "Mittlere Deutschkenntnisse",
-  "advancedGermanSkills": "Fortgeschrittene Deutschkenntnisse",
-  "germanMotherTongue": "Deutsch Muttersprache"
+      "germanLevel": "Deutschkenntnisse",
+      "none": "Keine",
+      "basicGermanSkills": "Grundlegende Deutschkenntnisse",
+      "mediumGermanSkills": "Mittlere Deutschkenntnisse",
+      "advancedGermanSkills": "Fortgeschrittene Deutschkenntnisse",
+      "germanMotherTongue": "Deutsch Muttersprache"
     }
   }
 }
