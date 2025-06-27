@@ -1,11 +1,17 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { Heading4 } from "../../styled/text";
+import { Heading4, Paragraph } from "../../styled/text";
 import CircleArrow from "../../svg/CircleArrow";
 import { Checkbox, Props as CheckboxProps } from "../../core/button";
 
 interface Props {
   header: string;
+  items?: FilterItem[];
+  groupedItems?: GroupedFilterItem[];
+}
+
+interface GroupedFilterItem {
+  label: string;
   items: FilterItem[];
 }
 
@@ -33,7 +39,23 @@ const OptionsContainer = styled.div`
   gap: 8px;
 `;
 
-export default function AccordionFilter({ header, items }: Props) {
+const GroupContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+`;
+
+const GroupOptionsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+export default function AccordionFilter({
+  header,
+  items,
+  groupedItems,
+}: Props) {
   const [isOpen, setIsOpen] = useState(true);
 
   return (
@@ -48,7 +70,7 @@ export default function AccordionFilter({ header, items }: Props) {
         />
       </FilterHeaderContainer>
 
-      {isOpen && (
+      {isOpen && items && (
         <OptionsContainer>
           {items.map((item) => (
             <Checkbox
@@ -59,6 +81,30 @@ export default function AccordionFilter({ header, items }: Props) {
               label={item.label}
               checked={item.checked}
             />
+          ))}
+        </OptionsContainer>
+      )}
+
+      {isOpen && groupedItems && (
+        <OptionsContainer>
+          {groupedItems.map((groupeItem) => (
+            <GroupContainer key={groupeItem.label}>
+              <Paragraph>{groupeItem.label}</Paragraph>
+
+              <GroupOptionsContainer>
+                {groupeItem.items.map((item) => (
+                  <Checkbox
+                    key={item.label}
+                    width="16px"
+                    height="16px"
+                    onChange={item.onChange}
+                    label={item.label}
+                    labelFontSize="14px"
+                    checked={item.checked}
+                  />
+                ))}
+              </GroupOptionsContainer>
+            </GroupContainer>
           ))}
         </OptionsContainer>
       )}

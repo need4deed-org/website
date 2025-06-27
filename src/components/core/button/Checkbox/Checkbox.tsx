@@ -7,6 +7,7 @@ export interface Props {
   height: string;
   color?: string;
   label?: string;
+  labelFontSize?: string;
   onChange: (checked: boolean) => void;
   checked: boolean;
 }
@@ -23,6 +24,7 @@ export function Checkbox({
   width,
   color = "var(--color-midnight)",
   label,
+  labelFontSize,
   onChange,
   checked,
 }: Props) {
@@ -39,7 +41,7 @@ export function Checkbox({
       {label && (
         <Paragraph
           fontWeight={checked ? 400 : 300}
-          fontSize="18px"
+          fontSize={labelFontSize || "18px"}
           lineheight="32px"
         >
           {label}

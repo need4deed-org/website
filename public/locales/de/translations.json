@@ -661,7 +661,6 @@
     "resultsFound": "ergebnisse gefunden",
     "searchPlaceHolder": "Suchbegriff eingeben",
     "mapViewMessage": "Wird bald verfügbar sein",
-
     "filters": {
       "button": "FILTER",
       "closeFilters": "FILTER SCLIEẞEN",
@@ -680,7 +679,11 @@
       "basicGermanSkills": "Grundlegende Deutschkenntnisse",
       "mediumGermanSkills": "Mittlere Deutschkenntnisse",
       "advancedGermanSkills": "Fortgeschrittene Deutschkenntnisse",
-      "germanMotherTongue": "Deutsch Muttersprache"
+      "germanMotherTongue": "Deutsch Muttersprache",
+       "days": "Tage",
+        "morning": "Morgen",
+      "afternoon": "Nachmittag",
+      "evening": "Abend"
     }
   }
 }

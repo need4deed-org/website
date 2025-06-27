@@ -6,6 +6,8 @@ import AccordionFilter from "./AccordionFilter";
 import {
   ActivityTypeKeys,
   CardsFilter,
+  DayKeys,
+  DaysKeys,
   DistrictKeys,
   GermanLevelKeys,
 } from "../types";
@@ -51,6 +53,19 @@ const germanLevels = Object.keys(
   defaultFilter.germanLevel,
 ) as GermanLevelKeys[];
 
+const weekDays = Object.keys(defaultFilter.days) as DaysKeys[];
+const daySlots = Object.keys(defaultFilter.days.monday) as DayKeys[];
+
+const daysTranslationMap: Record<DaysKeys, string> = {
+  monday: "1",
+  tuesday: "2",
+  wednesday: "3",
+  thursday: "4",
+  friday: "5",
+  saturday: "6",
+  sunday: "0",
+};
+
 export default function FiltersContent({ setFilter, filter }: Props) {
   const { t } = useTranslation();
 
@@ -90,6 +105,25 @@ export default function FiltersContent({ setFilter, filter }: Props) {
 
         setFilter({ ...filter, germanLevel });
       },
+    };
+  });
+
+  const daysFilterItems = weekDays.map((day) => {
+    return {
+      label: `${t(`weekdays.${daysTranslationMap[day]}`)}s`,
+      items: daySlots.map((daySlot) => {
+        return {
+          label: t(`opportunityPage.filters.${daySlot}`),
+          checked: filter.days[day][daySlot],
+          onChange: (checked: boolean) => {
+            const { days } = filter;
+
+            days[day][daySlot] = checked;
+
+            setFilter({ ...filter, days });
+          },
+        };
+      }),
     };
   });
 
@@ -134,6 +168,11 @@ export default function FiltersContent({ setFilter, filter }: Props) {
       <AccordionFilter
         header={t("opportunityPage.filters.germanLevel")}
         items={germanLevelFilterItems}
+      />
+
+      <AccordionFilter
+        header={t("opportunityPage.filters.days")}
+        groupedItems={daysFilterItems}
       />
     </FiltersContentContainer>
   );

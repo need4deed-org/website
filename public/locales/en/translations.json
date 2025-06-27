@@ -722,7 +722,11 @@
       "basicGermanSkills": "Basic German Skills",
       "mediumGermanSkills": "Medium German Skills",
       "advancedGermanSkills": "Advanced German Skills",
-      "germanMotherTongue": "German mother tongue"
+      "germanMotherTongue": "German mother tongue",
+      "days":"Days",
+      "morning": "Morning",
+      "afternoon": "Afternoon",
+      "evening": "Evening" 
     }
   }
 }
