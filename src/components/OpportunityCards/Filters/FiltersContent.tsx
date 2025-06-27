@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Heading4, Paragraph } from "../../styled/text";
 import { SwitchButton } from "../../core/button";
 import AccordionFilter from "./AccordionFilter";
-import { ActivityTypeKeys, CardsFilter } from "../types";
+import { ActivityTypeKeys, CardsFilter, DistrictKeys } from "../types";
 import { defaultFilter } from "./constants";
 
 const FiltersContentContainer = styled.div`
@@ -40,6 +40,8 @@ const activityTypes = Object.keys(
   defaultFilter.activityType,
 ) as ActivityTypeKeys[];
 
+const districts = Object.keys(defaultFilter.district) as DistrictKeys[];
+
 export default function FiltersContent({ setFilter, filter }: Props) {
   const { t } = useTranslation();
 
@@ -52,6 +54,19 @@ export default function FiltersContent({ setFilter, filter }: Props) {
         activityType[activity] = checked;
 
         setFilter({ ...filter, activityType });
+      },
+    };
+  });
+
+  const districtFilterItems = districts.map((d) => {
+    return {
+      label: t(`opportunityPage.filters.${d}`),
+      checked: filter.district[d],
+      onChange: (checked: boolean) => {
+        const { district } = filter;
+        district[d] = checked;
+
+        setFilter({ ...filter, district });
       },
     };
   });
@@ -87,6 +102,11 @@ export default function FiltersContent({ setFilter, filter }: Props) {
       <AccordionFilter
         header={t("opportunityPage.filters.activityType")}
         items={activityTypeFilterItems}
+      />
+
+      <AccordionFilter
+        header={t("opportunityPage.filters.district")}
+        items={districtFilterItems}
       />
     </FiltersContentContainer>
   );

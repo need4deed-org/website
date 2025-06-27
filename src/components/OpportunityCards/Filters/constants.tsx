@@ -11,4 +11,13 @@ export const defaultFilter: CardsFilter = {
     events: false,
     sportsActivities: false,
   },
+  district: {
+    lichtenberg: false,
+    mitte: false,
+    neukölln: false,
+    pankow: false,
+    steglitzZehlendorf: false,
+    templehof: false,
+    treptowKöpenick: false,
+  },
 };

@@ -708,7 +708,15 @@
       "germanLanguageSupport": "German language support",
       "skillsBasedVolunteering": "Skills based volunteering",
       "events": "Events",
-      "sportsActivities": "Sports Activities"
+      "sportsActivities": "Sports Activities",
+        "district": "District",
+      "lichtenberg": "Lichtenberg",
+       "mitte": "Mitte",
+      "neukölln":"Neukölln",
+      "pankow":"Pankow",
+      "steglitzZehlendorf":"Steglitz-Zehlendorf",
+      "templehof":"Templehof",
+      "treptowKöpenick": "Treptow-Köpenic"
     }
   }
 }
