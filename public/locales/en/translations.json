@@ -709,14 +709,20 @@
       "skillsBasedVolunteering": "Skills based volunteering",
       "events": "Events",
       "sportsActivities": "Sports Activities",
-        "district": "District",
+      "district": "District",
       "lichtenberg": "Lichtenberg",
-       "mitte": "Mitte",
-      "neukölln":"Neukölln",
-      "pankow":"Pankow",
-      "steglitzZehlendorf":"Steglitz-Zehlendorf",
-      "templehof":"Templehof",
-      "treptowKöpenick": "Treptow-Köpenic"
+      "mitte": "Mitte",
+      "neukölln": "Neukölln",
+      "pankow": "Pankow",
+      "steglitzZehlendorf": "Steglitz-Zehlendorf",
+      "templehof": "Templehof",
+      "treptowKöpenick": "Treptow-Köpenic",
+      "germanLevel": "German Level",
+      "none": "None",
+      "basicGermanSkills": "Basic German Skills",
+      "mediumGermanSkills": "Medium German Skills",
+      "advancedGermanSkills": "Advanced German Skills",
+      "germanMotherTongue" : "German mother tongue" 
     }
   }
 }

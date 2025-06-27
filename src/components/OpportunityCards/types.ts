@@ -3,6 +3,7 @@ export interface CardsFilter {
   accompanying: boolean;
   activityType: ActivityType;
   district: District;
+  germanLevel: GermanLevel;
 }
 
 export interface ActivityType {
@@ -23,5 +24,14 @@ interface District {
   treptowKöpenick: boolean;
 }
 
+interface GermanLevel {
+  none: boolean;
+  basicGermanSkills: boolean;
+  mediumGermanSkills: boolean;
+  advancedGermanSkills: boolean;
+  germanMotherTongue: boolean;
+}
+
 export type ActivityTypeKeys = keyof ActivityType;
 export type DistrictKeys = keyof District;
+export type GermanLevelKeys = keyof GermanLevel;

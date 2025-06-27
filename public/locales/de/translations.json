@@ -674,7 +674,13 @@
       "skillsBasedVolunteering": "Kompetenzbasiertes Ehrenamt",
       "events": "Veranstaltungen",
       "sportsActivities": "Sportliche Aktivitäten",
-      "district": "Bezirk"
+      "district": "Bezirk",
+ "germanLevel": "Deutschkenntnisse",
+  "none": "Keine",
+  "basicGermanSkills": "Grundlegende Deutschkenntnisse",
+  "mediumGermanSkills": "Mittlere Deutschkenntnisse",
+  "advancedGermanSkills": "Fortgeschrittene Deutschkenntnisse",
+  "germanMotherTongue": "Deutsch Muttersprache"
     }
   }
 }
