@@ -38,11 +38,6 @@ const AccompanyingFilterHeaderContainer = styled.div`
   align-items: center;
 `;
 
-interface Props {
-  filter: CardsFilter;
-  setFilter: (filter: CardsFilter) => void;
-}
-
 const activityTypes = Object.keys(
   defaultFilter.activityType,
 ) as ActivityTypeKeys[];
@@ -65,6 +60,11 @@ const daysTranslationMap: Record<DaysKeys, string> = {
   saturday: "6",
   sunday: "0",
 };
+
+interface Props {
+  filter: CardsFilter;
+  setFilter: (filter: CardsFilter) => void;
+}
 
 export default function FiltersContent({ setFilter, filter }: Props) {
   const { t } = useTranslation();

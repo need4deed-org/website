@@ -29,7 +29,7 @@ export default function Filters({
     <FiltersContainer>
       <CloseFilters setIsFiltersOpen={setIsFiltersOpen} />
       <FiltersContent setFilter={setFilter} filter={filter} />
-      <ClearAllFilters />
+      <ClearAllFilters filter={filter} setFilter={setFilter} />
     </FiltersContainer>
   ) : null;
 }

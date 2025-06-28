@@ -2,6 +2,8 @@ import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import { IconName } from "../../core/button/Button/icon";
 import { Button } from "../../core/button";
+import { CardsFilter } from "../types";
+import { getClearFilter } from "../helpers";
 
 const ClearAllFiltersContainer = styled.div`
   display: flex;
@@ -10,7 +12,12 @@ const ClearAllFiltersContainer = styled.div`
   padding-bottom: 24px;
 `;
 
-export default function ClearAllFilters() {
+interface Props {
+  setFilter: (filter: CardsFilter) => void;
+  filter: CardsFilter;
+}
+
+export default function ClearAllFilters({ setFilter, filter }: Props) {
   const { t } = useTranslation();
 
   return (
@@ -21,7 +28,9 @@ export default function ClearAllFilters() {
         iconColor="var(--color-midnight)"
         iconSize="24px"
         iconPosition="right"
-        onClick={() => {}}
+        onClick={() =>
+          setFilter(getClearFilter(filter) as unknown as CardsFilter)
+        }
         backgroundcolor="var(--color-white)"
         textColor="var(--color-midnight)"
         height="48px"
