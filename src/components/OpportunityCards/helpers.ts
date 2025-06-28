@@ -1,5 +1,4 @@
 /* eslint-disable no-restricted-syntax */
-/* eslint-disable import/prefer-default-export */
 import { Opportunity } from "../VolunteeringOpportunities/types";
 import { CardsFilter } from "./types";
 
