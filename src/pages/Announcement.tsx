@@ -1,10 +1,10 @@
-import AnnouncementComponent from "../components/Announcement";
+import AnnouncementPage from "../components/Announcement";
 import { StaticPageLayout } from "../components/Layouts/staticPageLayout";
 
 export default function Announcement() {
   return (
     <StaticPageLayout>
-      <AnnouncementComponent />
+      <AnnouncementPage />
     </StaticPageLayout>
   );
 }
