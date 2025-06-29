@@ -21,7 +21,7 @@ interface District {
   neukölln: boolean;
   pankow: boolean;
   steglitzZehlendorf: boolean;
-  templehof: boolean;
+  tempelhof: boolean;
   treptowKöpenick: boolean;
 }
 

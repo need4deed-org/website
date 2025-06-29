@@ -20,6 +20,16 @@ interface Props {
 export default function ClearAllFilters({ setFilter, filter }: Props) {
   const { t } = useTranslation();
 
+  const handleClick = () => {
+    const { searchInput } = filter;
+    const clearFilter = getClearFilter(filter) as unknown as CardsFilter;
+
+    /* Exclude 'search bar' input from cleaning process */
+    clearFilter.searchInput = searchInput;
+
+    setFilter(clearFilter);
+  };
+
   return (
     <ClearAllFiltersContainer>
       <Button
@@ -28,9 +38,7 @@ export default function ClearAllFilters({ setFilter, filter }: Props) {
         iconColor="var(--color-midnight)"
         iconSize="24px"
         iconPosition="right"
-        onClick={() =>
-          setFilter(getClearFilter(filter) as unknown as CardsFilter)
-        }
+        onClick={handleClick}
         backgroundcolor="var(--color-white)"
         textColor="var(--color-midnight)"
         height="48px"

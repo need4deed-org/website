@@ -17,7 +17,7 @@ export const defaultFilter: CardsFilter = {
     neukölln: false,
     pankow: false,
     steglitzZehlendorf: false,
-    templehof: false,
+    tempelhof: false,
     treptowKöpenick: false,
   },
   germanLevel: {

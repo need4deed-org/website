@@ -1,14 +1,23 @@
 /* eslint-disable no-restricted-syntax */
 import { Opportunity } from "../VolunteeringOpportunities/types";
-import { CardsFilter } from "./types";
+import { ActivityTypeKeys, CardsFilter, DistrictKeys } from "./types";
 
-// const activityTypeGroupMap = {
-//   Daycare: ["DayCare", "DayCare-2", "DayCare-3"],
-// };
+const activityTypeGroupMap: Record<ActivityTypeKeys, string[]> = {
+  daycare: ["daycare", "daycare 2", "daycare 3"],
+  germanLanguageSupport: [],
+  skillsBasedVolunteering: ["one-day volunteering", "mentorship"],
+  events: [],
+  sportsActivities: [],
+};
+
+const districtGroupMap: Partial<Record<DistrictKeys, string[]>> = {
+  steglitzZehlendorf: ["steglitz", "zehlendorf"],
+  treptowKöpenick: ["treptow", "köpenick"],
+};
 
 export const filterOpportunity = (
   opportunity: Opportunity,
-  cardsFilter: CardsFilter,
+  filter: CardsFilter,
 ) => {
   const {
     title,
@@ -16,9 +25,11 @@ export const filterOpportunity = (
     languages,
     accompanyingTranslation,
     defaultMainCommunication,
+    locations,
   } = opportunity;
-  const { searchInput } = cardsFilter;
+  const { searchInput, activityType, district } = filter;
 
+  /* Filter Search Bar */
   if (searchInput) {
     const siLowerCased = searchInput.toLowerCase();
     const searchableData =
@@ -30,17 +41,55 @@ export const filterOpportunity = (
     if (!searchableData.toLowerCase().includes(siLowerCased)) return false;
   }
 
-  // if (cardsFilter.activityType.length) {
-  //   const filterActivities = new Set();
+  /* Filter Activity Type */
+  /* TODO: do not calculate selected types in this function, because its doing same thing for every opportunity, time complexity leak */
+  const selectedActivityTypes = (
+    Object.keys(activityType) as Array<ActivityTypeKeys>
+  ).filter((type) => activityType[type]);
 
-  //   cardsFilter.activityType.forEach((type: string) =>
-  //     filterActivities.add(activityTypeGroupMap[type]),
-  //   );
+  if (selectedActivityTypes.length) {
+    if (!activities?.length) return false;
 
-  //   const hasIntersection = activities.some((a) => filterActivities.has(a));
+    const activityTypeComparisonMap: Record<string, number> = {};
 
-  //   if (!hasIntersection) return false;
-  // }
+    selectedActivityTypes.forEach((type) => {
+      const extractedTypes = activityTypeGroupMap[type];
+
+      extractedTypes.forEach((activityTpe) => {
+        activityTypeComparisonMap[activityTpe] = 1;
+      });
+    });
+
+    let activitySeen = false;
+    for (const act of activities) {
+      if (act && activityTypeComparisonMap[act.toLowerCase()]) {
+        activitySeen = true;
+        break;
+      }
+    }
+
+    if (!activitySeen) return false;
+  }
+
+  /* Filter District */
+  const selectedDistricts = (Object.keys(district) as Array<DistrictKeys>)
+    .filter((d) => district[d])
+    .map((d) => districtGroupMap[d] || d)
+    .flat();
+
+  if (selectedDistricts.length) {
+    let districtFound = false;
+
+    for (const d of selectedDistricts) {
+      const searchableData = locations.join("").toLowerCase();
+      if (searchableData.includes(d)) {
+        districtFound = true;
+        break;
+      }
+    }
+
+    if (!districtFound) return false;
+  }
 
   return true;
 };
