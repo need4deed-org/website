@@ -43,7 +43,7 @@ export enum Subpages {
   AGREEMENT = "old/vereinbarung",
   GUIDELINES = "old/guidelines",
   BECOME_VOLUNTEER = "old/become-volunteer",
-  ANNOUNCEMENT = "old/announcement",
+  ANNOUNCEMENT = "/announcement",
   EVENT = "old/event",
   EVENTS = "old/events",
   PAST_EVENTS = "old/past-events",
