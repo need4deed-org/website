@@ -1,6 +1,11 @@
 /* eslint-disable no-restricted-syntax */
 import { Opportunity } from "../VolunteeringOpportunities/types";
-import { ActivityTypeKeys, CardsFilter, DistrictKeys } from "./types";
+import {
+  ActivityTypeKeys,
+  CardsFilter,
+  DistrictKeys,
+  SearchKeywords,
+} from "./types";
 
 const activityTypeGroupMap: Record<ActivityTypeKeys, string[]> = {
   daycare: ["daycare", "daycare 2", "daycare 3"],
@@ -18,6 +23,7 @@ const districtGroupMap: Partial<Record<DistrictKeys, string[]>> = {
 export const filterOpportunity = (
   opportunity: Opportunity,
   filter: CardsFilter,
+  searchKeywords: SearchKeywords,
 ) => {
   const {
     title,
@@ -27,7 +33,8 @@ export const filterOpportunity = (
     defaultMainCommunication,
     locations,
   } = opportunity;
-  const { searchInput, activityType, district } = filter;
+
+  const { searchInput, activityType, district, accompanying } = filter;
 
   /* Filter Search Bar */
   if (searchInput) {
@@ -39,6 +46,13 @@ export const filterOpportunity = (
       accompanyingTranslation +
       defaultMainCommunication;
     if (!searchableData.toLowerCase().includes(siLowerCased)) return false;
+  }
+
+  /* Filter Accompanying Switch */
+  if (accompanying) {
+    const searchableData = activities.join("").toLowerCase();
+
+    if (!searchableData.includes(searchKeywords.accompanying)) return false;
   }
 
   /* Filter Activity Type */
