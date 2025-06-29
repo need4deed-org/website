@@ -25,16 +25,11 @@ const PageContainer = styled.div`
 
 const PageContentHeaderContainer = styled.div<PageContentHeaderContainerProps>`
   display: flex;
+  flex: 1;
   flex-direction: column;
   background: ${(props) =>
     props.background || "var(--layout-static-page-background-default)"};
   padding-bottom: var(--layout-static-page-header-content-bottom-padding);
-`;
-
-const PageContentWrapper = styled.div`
-  flex: 1;
-  display: flex;
-  flex-direction: column;
 `;
 
 export function StaticPageLayout({ children, background }: Props) {
@@ -44,18 +39,16 @@ export function StaticPageLayout({ children, background }: Props) {
   return (
     <PageWrapper>
       <PageContainer>
-        <PageContentWrapper>
-          <PageContentHeaderContainer background={background}>
-            <Header
-              logo={<N4DLogo />}
-              isBurgerMenu={isBurgerMenu}
-              height="var(--layout-static-page-header-height)"
-              padding="var(--layout-static-page-header-padding)"
-              menuItemColor="var(--color-midnight)"
-            />
-            {children}
-          </PageContentHeaderContainer>
-        </PageContentWrapper>
+        <PageContentHeaderContainer background={background}>
+          <Header
+            logo={<N4DLogo />}
+            isBurgerMenu={isBurgerMenu}
+            height="var(--layout-static-page-header-height)"
+            padding="var(--layout-static-page-header-padding)"
+            menuItemColor="var(--color-midnight)"
+          />
+          {children}
+        </PageContentHeaderContainer>
         <FooterPartnersSection />
       </PageContainer>
     </PageWrapper>
