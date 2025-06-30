@@ -54,7 +54,3 @@ export type DistrictKeys = keyof District;
 export type GermanLevelKeys = keyof GermanLevel;
 export type DaysKeys = keyof Days;
 export type DayKeys = keyof Day;
-
-export interface SearchKeywords {
-  accompanying: string;
-}

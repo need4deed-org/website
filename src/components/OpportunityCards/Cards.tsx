@@ -17,7 +17,7 @@ import {
 } from "../VolunteeringOpportunities/types";
 import OpportunityCard from "../VolunteeringOpportunities/OpportunityCard";
 import { filterOpportunity } from "./helpers";
-import { CardsFilter, SearchKeywords } from "./types";
+import { CardsFilter } from "./types";
 import PaginatedGrid from "../core/paginatedGrid/PaginatedGrid";
 import useScreenType from "../../hooks/useScreenType";
 
@@ -68,12 +68,8 @@ export default function Cards({
 
   const mappedOpportunities = getMappedOpportunities(opportunitiesRaw, t);
 
-  const searchKeywords: SearchKeywords = {
-    accompanying: t("opportunityPage.filters.accompanying").toLowerCase(),
-  };
-
   const filteredOpportunities = mappedOpportunities.filter((opp) =>
-    filterOpportunity(opp, cardsFilter, searchKeywords),
+    filterOpportunity(opp, cardsFilter),
   );
 
   filteredOpportunities.sort(

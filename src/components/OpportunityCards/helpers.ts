@@ -1,11 +1,7 @@
 /* eslint-disable no-restricted-syntax */
+import { OpportunityType } from "need4deed-sdk";
 import { Opportunity } from "../VolunteeringOpportunities/types";
-import {
-  ActivityTypeKeys,
-  CardsFilter,
-  DistrictKeys,
-  SearchKeywords,
-} from "./types";
+import { ActivityTypeKeys, CardsFilter, DistrictKeys } from "./types";
 
 const activityTypeGroupMap: Record<ActivityTypeKeys, string[]> = {
   daycare: ["daycare", "daycare 2", "daycare 3"],
@@ -23,7 +19,6 @@ const districtGroupMap: Partial<Record<DistrictKeys, string[]>> = {
 export const filterOpportunity = (
   opportunity: Opportunity,
   filter: CardsFilter,
-  searchKeywords: SearchKeywords,
 ) => {
   const {
     title,
@@ -32,6 +27,7 @@ export const filterOpportunity = (
     accompanyingTranslation,
     defaultMainCommunication,
     locations,
+    opportunityType,
   } = opportunity;
 
   const { searchInput, activityType, district, accompanying } = filter;
@@ -49,11 +45,8 @@ export const filterOpportunity = (
   }
 
   /* Filter Accompanying Switch */
-  if (accompanying) {
-    const searchableData = activities.join("").toLowerCase();
-
-    if (!searchableData.includes(searchKeywords.accompanying)) return false;
-  }
+  if (accompanying && opportunityType !== OpportunityType.ACCOMPANYING)
+    return false;
 
   /* Filter Activity Type */
   /* TODO: do not calculate selected types in this function, because its doing same thing for every opportunity, time complexity leak */
