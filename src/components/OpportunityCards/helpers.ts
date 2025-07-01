@@ -54,8 +54,10 @@ const getSearchableTimeSlotsMap = (timeslots: Record<string, string>[]) => {
   return timeslotsMap;
 };
 
-const getSelectedTimeSlots = (daysFilter: Days) => {
-  const selectedDays: Partial<Record<DaysKeys, Partial<Day>>> = {};
+interface SelectedDays extends Partial<Record<DaysKeys, Partial<Day>>> {}
+
+const getSelectedDays = (daysFilter: Days) => {
+  const selectedDays: SelectedDays = {};
 
   for (const day of Object.keys(daysFilter) as Array<DaysKeys>) {
     const dayFilter = daysFilter[day];
@@ -75,9 +77,44 @@ const getSelectedTimeSlots = (daysFilter: Days) => {
   return selectedDays;
 };
 
+interface ReducedFilter
+  extends Pick<CardsFilter, "searchInput" | "accompanying"> {
+  selectedActivityTypes: ActivityTypeKeys[];
+  selectedDistricts: string[];
+  selectedDays: SelectedDays;
+}
+
+export const reduceFilter = ({
+  searchInput,
+  accompanying,
+  activityType,
+  district,
+  days,
+}: CardsFilter) => {
+  const reducedFilter: Partial<ReducedFilter> = {
+    searchInput,
+    accompanying,
+  };
+
+  reducedFilter.selectedActivityTypes = (
+    Object.keys(activityType) as Array<ActivityTypeKeys>
+  ).filter((type) => activityType[type]);
+
+  reducedFilter.selectedDistricts = (
+    Object.keys(district) as Array<DistrictKeys>
+  )
+    .filter((d) => district[d])
+    .map((d) => districtGroupMap[d] || d)
+    .flat();
+
+  reducedFilter.selectedDays = getSelectedDays(days);
+
+  return reducedFilter as ReducedFilter;
+};
+
 export const filterOpportunity = (
   opportunity: Opportunity,
-  filter: CardsFilter,
+  reducedFilter: ReducedFilter,
 ) => {
   const {
     title,
@@ -91,7 +128,13 @@ export const filterOpportunity = (
     category,
   } = opportunity;
 
-  const { searchInput, activityType, district, accompanying, days } = filter;
+  const {
+    searchInput,
+    accompanying,
+    selectedActivityTypes,
+    selectedDistricts,
+    selectedDays,
+  } = reducedFilter;
 
   /* Filter Search Bar */
   if (searchInput) {
@@ -110,11 +153,6 @@ export const filterOpportunity = (
     return false;
 
   /* Filter Activity Type */
-  /* TODO: do not calculate selected types in this function, because its doing same thing for every opportunity, time complexity leak */
-  const selectedActivityTypes = (
-    Object.keys(activityType) as Array<ActivityTypeKeys>
-  ).filter((type) => activityType[type]);
-
   if (selectedActivityTypes.length) {
     if (!category) return false;
 
@@ -131,11 +169,6 @@ export const filterOpportunity = (
   }
 
   /* Filter District */
-  const selectedDistricts = (Object.keys(district) as Array<DistrictKeys>)
-    .filter((d) => district[d])
-    .map((d) => districtGroupMap[d] || d)
-    .flat();
-
   if (selectedDistricts.length) {
     let districtFound = false;
 
@@ -151,19 +184,15 @@ export const filterOpportunity = (
   }
 
   /* Filter Days */
-  const selectedTimeSlots = getSelectedTimeSlots(days);
-
-  if (Object.keys(selectedTimeSlots).length) {
+  if (Object.keys(selectedDays).length) {
     if (!timeslots.length) return false; // If there is no timeslot for an opp, just filter it.
 
     const searchableTimeSlotsMapData = getSearchableTimeSlotsMap(timeslots);
 
     let timeslotFound = false;
 
-    for (const selectedDay of Object.keys(
-      selectedTimeSlots,
-    ) as Array<DaysKeys>) {
-      const selectedDayFilter = selectedTimeSlots[selectedDay];
+    for (const selectedDay of Object.keys(selectedDays) as Array<DaysKeys>) {
+      const selectedDayFilter = selectedDays[selectedDay];
       const searchableSlotsData = searchableTimeSlotsMapData[selectedDay];
 
       if (selectedDayFilter && searchableSlotsData) {

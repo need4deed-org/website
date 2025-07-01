@@ -16,7 +16,7 @@ import {
   OpportunityApi,
 } from "../VolunteeringOpportunities/types";
 import OpportunityCard from "../VolunteeringOpportunities/OpportunityCard";
-import { filterOpportunity } from "./helpers";
+import { filterOpportunity, reduceFilter } from "./helpers";
 import { CardsFilter } from "./types";
 import PaginatedGrid from "../core/paginatedGrid/PaginatedGrid";
 import useScreenType from "../../hooks/useScreenType";
@@ -68,8 +68,10 @@ export default function Cards({
 
   const mappedOpportunities = getMappedOpportunities(opportunitiesRaw, t);
 
+  const reducedFilter = reduceFilter(cardsFilter);
+
   const filteredOpportunities = mappedOpportunities.filter((opp) =>
-    filterOpportunity(opp, cardsFilter),
+    filterOpportunity(opp, reducedFilter),
   );
 
   filteredOpportunities.sort(
