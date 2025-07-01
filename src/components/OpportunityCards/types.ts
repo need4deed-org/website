@@ -15,7 +15,7 @@ export interface ActivityType {
   sportsActivities: boolean;
 }
 
-interface District {
+export interface District {
   lichtenberg: boolean;
   mitte: boolean;
   neukölln: boolean;
@@ -25,7 +25,7 @@ interface District {
   treptowKöpenick: boolean;
 }
 
-interface GermanLevel {
+export interface GermanLevel {
   none: boolean;
   basicGermanSkills: boolean;
   mediumGermanSkills: boolean;
@@ -33,7 +33,7 @@ interface GermanLevel {
   germanMotherTongue: boolean;
 }
 
-interface Days {
+export interface Days {
   monday: Day;
   tuesday: Day;
   wednesday: Day;
@@ -43,7 +43,7 @@ interface Days {
   sunday: Day;
 }
 
-interface Day {
+export interface Day {
   morning: boolean;
   afternoon: boolean;
   evening: boolean;

@@ -1,7 +1,15 @@
 /* eslint-disable no-restricted-syntax */
 import { OpportunityType } from "need4deed-sdk";
 import { Opportunity } from "../VolunteeringOpportunities/types";
-import { ActivityTypeKeys, CardsFilter, DistrictKeys } from "./types";
+import {
+  ActivityTypeKeys,
+  CardsFilter,
+  Day,
+  DayKeys,
+  Days,
+  DaysKeys,
+  DistrictKeys,
+} from "./types";
 
 const activityTypeGroupMap: Record<ActivityTypeKeys, string[]> = {
   daycare: ["daycare", "daycare 2", "daycare 3"],
@@ -16,6 +24,57 @@ const districtGroupMap: Partial<Record<DistrictKeys, string[]>> = {
   treptowKöpenick: ["treptow", "köpenick"],
 };
 
+const dayEnumMap: Record<string, DaysKeys> = {
+  1: "monday",
+  2: "tuesday",
+  3: "wednesday",
+  4: "thursday",
+  5: "friday",
+  6: "saturday",
+  7: "sunday",
+};
+
+enum Slot {
+  MORNING = "08-11",
+  NOON = "11-14",
+  AFTERNOON = "14-17",
+  EVENING = "17-20",
+}
+
+const getSearchableTimeSlotsMap = (timeslots: Record<string, string>[]) => {
+  const timeslotsMap: Partial<Record<DaysKeys, string[]>> = {};
+
+  for (const timeslotObj of timeslots) {
+    const day = dayEnumMap[timeslotObj.day];
+
+    if (timeslotsMap[day]) timeslotsMap[day].push(timeslotObj.time_slot);
+    else timeslotsMap[day] = [timeslotObj.time_slot];
+  }
+
+  return timeslotsMap;
+};
+
+const getSelectedTimeSlots = (daysFilter: Days) => {
+  const selectedDays: Partial<Record<DaysKeys, Partial<Day>>> = {};
+
+  for (const day of Object.keys(daysFilter) as Array<DaysKeys>) {
+    const dayFilter = daysFilter[day];
+
+    for (const daySlot of Object.keys(dayFilter) as Array<DayKeys>) {
+      const isSelected = dayFilter[daySlot];
+
+      if (isSelected) {
+        if (selectedDays[day]) selectedDays[day][daySlot] = isSelected;
+        else {
+          selectedDays[day] = { [daySlot]: isSelected };
+        }
+      }
+    }
+  }
+
+  return selectedDays;
+};
+
 export const filterOpportunity = (
   opportunity: Opportunity,
   filter: CardsFilter,
@@ -28,9 +87,10 @@ export const filterOpportunity = (
     defaultMainCommunication,
     locations,
     opportunityType,
+    timeslots,
   } = opportunity;
 
-  const { searchInput, activityType, district, accompanying } = filter;
+  const { searchInput, activityType, district, accompanying, days } = filter;
 
   /* Filter Search Bar */
   if (searchInput) {
@@ -96,6 +156,54 @@ export const filterOpportunity = (
     }
 
     if (!districtFound) return false;
+  }
+
+  /* Filter Days */
+  const selectedTimeSlots = getSelectedTimeSlots(days);
+
+  if (Object.keys(selectedTimeSlots).length) {
+    if (!timeslots.length) return false; // If there is no timeslot for an opp, just filter it.
+
+    const searchableTimeSlotsMapData = getSearchableTimeSlotsMap(timeslots);
+
+    let timeslotFound = false;
+
+    for (const selectedDay of Object.keys(
+      selectedTimeSlots,
+    ) as Array<DaysKeys>) {
+      const selectedDayFilter = selectedTimeSlots[selectedDay];
+      const searchableSlotsData = searchableTimeSlotsMapData[selectedDay];
+
+      if (selectedDayFilter && searchableSlotsData) {
+        if (
+          selectedDayFilter.morning &&
+          searchableSlotsData.some(
+            (slot) => slot === Slot.MORNING || slot === Slot.NOON,
+          )
+        ) {
+          timeslotFound = true;
+          break;
+        }
+
+        if (
+          selectedDayFilter.afternoon &&
+          searchableSlotsData.some((slot) => slot === Slot.AFTERNOON)
+        ) {
+          timeslotFound = true;
+          break;
+        }
+
+        if (
+          selectedDayFilter.evening &&
+          searchableSlotsData.some((slot) => slot === Slot.EVENING)
+        ) {
+          timeslotFound = true;
+          break;
+        }
+      }
+    }
+
+    if (!timeslotFound) return false;
   }
 
   return true;
