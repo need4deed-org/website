@@ -5,7 +5,7 @@ export const defaultFilter: CardsFilter = {
   searchInput: "",
   accompanying: false,
   activityType: {
-    daycare: false,
+    childcare: false,
     germanLanguageSupport: false,
     skillsBasedVolunteering: false,
     events: false,

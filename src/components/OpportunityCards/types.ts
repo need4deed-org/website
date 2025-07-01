@@ -7,7 +7,7 @@ export interface CardsFilter {
 }
 
 export interface ActivityType {
-  daycare: boolean;
+  childcare: boolean;
   germanLanguageSupport: boolean;
   skillsBasedVolunteering: boolean;
   events: boolean;

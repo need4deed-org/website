@@ -11,12 +11,12 @@ import {
   DistrictKeys,
 } from "./types";
 
-const activityTypeGroupMap: Record<ActivityTypeKeys, string[]> = {
-  daycare: ["daycare", "daycare 2", "daycare 3"],
-  germanLanguageSupport: [],
-  skillsBasedVolunteering: ["one-day volunteering", "mentorship"],
-  events: [],
-  sportsActivities: [],
+const activityTypeMap: Record<ActivityTypeKeys, string> = {
+  childcare: "Childcare",
+  germanLanguageSupport: "German Language Support",
+  skillsBasedVolunteering: "Skills Based Volunteering",
+  events: "Events",
+  sportsActivities: "Sport activities",
 };
 
 const districtGroupMap: Partial<Record<DistrictKeys, string[]>> = {
@@ -88,6 +88,7 @@ export const filterOpportunity = (
     locations,
     opportunityType,
     timeslots,
+    category,
   } = opportunity;
 
   const { searchInput, activityType, district, accompanying, days } = filter;
@@ -115,27 +116,18 @@ export const filterOpportunity = (
   ).filter((type) => activityType[type]);
 
   if (selectedActivityTypes.length) {
-    if (!activities?.length) return false;
+    if (!category) return false;
 
-    const activityTypeComparisonMap: Record<string, number> = {};
+    let categoryFound = false;
 
-    selectedActivityTypes.forEach((type) => {
-      const extractedTypes = activityTypeGroupMap[type];
-
-      extractedTypes.forEach((activityTpe) => {
-        activityTypeComparisonMap[activityTpe] = 1;
-      });
-    });
-
-    let activitySeen = false;
-    for (const act of activities) {
-      if (act && activityTypeComparisonMap[act.toLowerCase()]) {
-        activitySeen = true;
+    for (const selectedType of selectedActivityTypes) {
+      if (activityTypeMap[selectedType] === category) {
+        categoryFound = true;
         break;
       }
     }
 
-    if (!activitySeen) return false;
+    if (!categoryFound) return false;
   }
 
   /* Filter District */
