@@ -20,13 +20,6 @@ export const defaultFilter: CardsFilter = {
     tempelhof: false,
     treptowKöpenick: false,
   },
-  germanLevel: {
-    none: false,
-    basicGermanSkills: false,
-    mediumGermanSkills: false,
-    advancedGermanSkills: false,
-    germanMotherTongue: false,
-  },
   days: {
     monday: {
       morning: false,

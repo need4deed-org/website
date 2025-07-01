@@ -3,7 +3,6 @@ export interface CardsFilter {
   accompanying: boolean;
   activityType: ActivityType;
   district: District;
-  germanLevel: GermanLevel;
   days: Days;
 }
 
@@ -25,14 +24,6 @@ export interface District {
   treptowKöpenick: boolean;
 }
 
-export interface GermanLevel {
-  none: boolean;
-  basicGermanSkills: boolean;
-  mediumGermanSkills: boolean;
-  advancedGermanSkills: boolean;
-  germanMotherTongue: boolean;
-}
-
 export interface Days {
   monday: Day;
   tuesday: Day;
@@ -51,6 +42,5 @@ export interface Day {
 
 export type ActivityTypeKeys = keyof ActivityType;
 export type DistrictKeys = keyof District;
-export type GermanLevelKeys = keyof GermanLevel;
 export type DaysKeys = keyof Days;
 export type DayKeys = keyof Day;
