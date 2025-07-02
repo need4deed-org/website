@@ -109,7 +109,14 @@ html {
   );
 
   /* button */
-  --button-gap:12px
+  --button-gap:12px;
+
+  /* checkbox */
+  --checkbox-container-gap: 8px;
+  --checkbox-label-font-size: 18px;
+  --checkbox-label-line-height: 32px;
+  --checkbox-label-font-weight-selected: 400;
+  --checkbox-label-font-weight-not-selected: 300;
 }
 
 .with-linebreaks {
@@ -335,14 +342,30 @@ html {
     --opportunities-header-tabs-padding-bottom: 4px;
     --opportunities-header-result-gap: 10px;
     --opportunities-header-result-padding:10px;
-    --opportunities-filters-button-height: 48px;
-    --opportunities-filters-button-width: 48px;
-    --opportunities-filters-button-icon-size: 32px;
     --opportunities-header-searchbar-flex-direction: column;
     --opportunities-header-searchbar-width: -webkit-fill-available;
     --opportunities-map-view-container-height: 200px;
     --opportunities-cards-container-justify-content: center;
-
+    --opportunities-filters-button-height: 48px;
+    --opportunities-filters-button-width: 48px;
+    --opportunities-filters-button-icon-size: 32px;
+    --opportunities-filters-container-width: auto;
+    --opportunities-filters-container-border-bottom-radius:40px;
+    --opportunities-filters-close-filter-height: 64px;
+    --opportunities-filters-close-filter-gap: 12px;
+    --opportunities-filters-close-filter-padding: 16px 0px 16px 32px;
+    --opportunities-filters-content-container-width: auto;
+    --opportunities-filters-content-container-gap: 16px;
+    --opportunities-filters-content-container-padding: 20px 20px 20px 20px;
+    --opportunities-filters-content-filter-container-gap: 16px;
+    --opportunities-filters-content-accordion-options-gap: 6px;
+    --opportunities-filters-content-accordion-options-checkbox-height: 18px;
+    --opportunities-filters-content-accordion-group-options-checkbox-height: 16px;
+    --opportunities-filters-content-accordion-group-options-checkbox-labelFontSize: 14px;
+    --opportunities-filters-clear-all-button-padding-bottom:20px;
+    --opportunities-filters-clear-all-button-icon-size:24px;
+    --opportunities-filters-clear-all-button-height:64px;
+    --opportunities-filters-clear-all-button-text-font-size:20px;
 
     --search-container-height:64px;
     --search-container-border-radius:40px;
@@ -577,13 +600,28 @@ html {
     --opportunities-header-tabs-padding-bottom: 4px;
     --opportunities-header-result-gap: 10px;
     --opportunities-header-result-padding:10px;
-    --opportunities-filters-button-height: 64px;
-    --opportunities-filters-button-icon-size: 32px;
     --opportunities-header-searchbar-width:  466px;
     --opportunities-header-searchbar-flex-direction: row;
     --opportunities-map-view-container-height: 300px;
     --opportunities-cards-container-justify-content: center;
-
+    --opportunities-filters-button-height: 64px;
+    --opportunities-filters-button-icon-size: 32px;
+    --opportunities-filters-container-width: auto;
+    --opportunities-filters-container-border-bottom-radius:40px;
+    --opportunities-filters-close-filter-height: 64px;
+    --opportunities-filters-close-filter-gap: 12px;
+    --opportunities-filters-close-filter-padding: 16px 0px 16px 32px;
+    --opportunities-filters-content-container-width: auto;
+    --opportunities-filters-content-container-gap: 16px;
+    --opportunities-filters-content-container-padding: 40px 40px 40px 32px;
+    --opportunities-filters-content-filter-container-gap: 16px;
+    --opportunities-filters-content-accordion-options-gap: 8px;
+    --opportunities-filters-content-accordion-options-checkbox-height: 18px;
+    --opportunities-filters-content-accordion-group-options-checkbox-height: 16px;
+    --opportunities-filters-content-accordion-group-options-checkbox-labelFontSize: 14px;
+    --opportunities-filters-clear-all-button-padding-bottom:24px;
+    --opportunities-filters-clear-all-button-icon-size:24px;
+    --opportunities-filters-clear-all-button-text-font-size:16px;
 
     --search-container-height:64px;
     --search-container-border-radius:40px;
@@ -813,12 +851,28 @@ html {
     --opportunities-header-tabs-padding-bottom: 4px;
     --opportunities-header-result-gap: 10px;
     --opportunities-header-result-padding:10px;
-    --opportunities-filters-button-height: 64px;
-    --opportunities-filters-button-icon-size: 32px;
     --opportunities-header-searchbar-width: 980px;
     --opportunities-header-searchbar-flex-direction: row;
     --opportunities-map-view-container-height: 300px;
     --opportunities-cards-container-justify-content: left;
+    --opportunities-filters-button-height: 64px;
+    --opportunities-filters-button-icon-size: 32px;
+    --opportunities-filters-container-width: 340px;
+    --opportunities-filters-container-border-bottom-radius:none;
+    --opportunities-filters-close-filter-height: 64px;
+    --opportunities-filters-close-filter-gap: 12px;
+    --opportunities-filters-close-filter-padding: 16px 0px 16px 32px;
+    --opportunities-filters-content-container-width: 350px;
+    --opportunities-filters-content-container-gap: 16px;
+    --opportunities-filters-content-container-padding: 40px 40px 40px 32px;
+    --opportunities-filters-content-filter-container-gap: 16px;
+    --opportunities-filters-content-accordion-options-gap: 8px;
+    --opportunities-filters-content-accordion-options-checkbox-height: 18px;
+    --opportunities-filters-content-accordion-group-options-checkbox-height: 16px;
+    --opportunities-filters-content-accordion-group-options-checkbox-labelFontSize: 14px;
+    --opportunities-filters-clear-all-button-padding-bottom:24px;
+    --opportunities-filters-clear-all-button-icon-size:24px;
+    --opportunities-filters-clear-all-button-text-font-size:16px;
 
     --search-container-height: 60px;
     --search-container-border-radius: 160px;

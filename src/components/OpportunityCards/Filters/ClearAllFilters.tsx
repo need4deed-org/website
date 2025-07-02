@@ -9,7 +9,7 @@ const ClearAllFiltersContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 24px;
+  padding-bottom: var(--opportunities-filters-clear-all-button-padding-bottom);
 `;
 
 interface Props {
@@ -36,12 +36,13 @@ export default function ClearAllFilters({ setFilter, filter }: Props) {
         text={t("opportunityPage.filters.clearAllFilters")}
         iconName={IconName.X}
         iconColor="var(--color-midnight)"
-        iconSize="24px"
+        iconSize="var(--opportunities-filters-clear-all-button-icon-size)"
         iconPosition="right"
         onClick={handleClick}
         backgroundcolor="var(--color-white)"
         textColor="var(--color-midnight)"
-        height="48px"
+        height="var(--opportunities-filters-clear-all-button-height)"
+        textFontSize="var(--opportunities-filters-clear-all-button-text-font-size)"
       />
     </ClearAllFiltersContainer>
   );

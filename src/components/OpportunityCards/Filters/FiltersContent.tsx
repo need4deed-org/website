@@ -15,19 +15,16 @@ import { defaultFilter } from "./constants";
 const FiltersContentContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 350;
-  height: 2155;
-  gap: 16px;
-  padding-top: 40px;
-  padding-right: 40px;
-  padding-bottom: 40px;
-  padding-left: 32px;
+  width: var(--opportunities-filters-content-container-width);
+  height: auto;
+  gap: var(--opportunities-filters-content-container-gap);
+  padding: var(--opportunities-filters-content-container-padding);
 `;
 
 const AccompanyingFilterContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: var(--opportunities-filters-content-filter-container-gap);
 `;
 
 const AccompanyingFilterHeaderContainer = styled.div`

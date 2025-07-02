@@ -16,7 +16,7 @@ const CheckboxContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 8px;
+  gap: var(--checkbox-container-gap);
 `;
 
 export function Checkbox({
@@ -40,9 +40,13 @@ export function Checkbox({
 
       {label && (
         <Paragraph
-          fontWeight={checked ? 400 : 300}
-          fontSize={labelFontSize || "18px"}
-          lineheight="32px"
+          fontWeight={
+            checked
+              ? "var(--checkbox-label-font-weight-selected)"
+              : "var(--checkbox-label-font-weight-not-selected)"
+          }
+          fontSize={labelFontSize || "var(--checkbox-label-font-size)"}
+          lineheight="var(--checkbox-label-line-height)"
         >
           {label}
         </Paragraph>

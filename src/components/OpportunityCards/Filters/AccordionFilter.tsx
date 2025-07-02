@@ -23,7 +23,7 @@ interface FilterItem extends Pick<CheckboxProps, "onChange"> {
 const FilterContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: var(--opportunities-filters-content-filter-container-gap);
 `;
 
 const FilterHeaderContainer = styled.div`
@@ -36,13 +36,13 @@ const OptionsContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: left;
-  gap: 8px;
+  gap: var(--opportunities-filters-content-accordion-options-gap);
 `;
 
 const GroupContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: var(--opportunities-filters-content-accordion-options-gap);
 `;
 
 const GroupOptionsContainer = styled.div`
@@ -57,6 +57,18 @@ export default function AccordionFilter({
   groupedItems,
 }: Props) {
   const [isOpen, setIsOpen] = useState(true);
+
+  const checkboxHeight = getComputedStyle(
+    document.documentElement,
+  ).getPropertyValue(
+    "--opportunities-filters-content-accordion-options-checkbox-height",
+  );
+
+  const groupCheckboxHeight = getComputedStyle(
+    document.documentElement,
+  ).getPropertyValue(
+    "--opportunities-filters-content-accordion-group-options-checkbox-height",
+  );
 
   return (
     <FilterContainer>
@@ -75,8 +87,8 @@ export default function AccordionFilter({
           {items.map((item) => (
             <Checkbox
               key={item.label}
-              width="18px"
-              height="18px"
+              width={checkboxHeight}
+              height={checkboxHeight}
               onChange={item.onChange}
               label={item.label}
               checked={item.checked}
@@ -95,11 +107,11 @@ export default function AccordionFilter({
                 {groupeItem.items.map((item) => (
                   <Checkbox
                     key={item.label}
-                    width="16px"
-                    height="16px"
+                    width={groupCheckboxHeight}
+                    height={groupCheckboxHeight}
                     onChange={item.onChange}
                     label={item.label}
-                    labelFontSize="14px"
+                    labelFontSize="var(--opportunities-filters-content-accordion-group-options-checkbox-labelFontSize)"
                     checked={item.checked}
                   />
                 ))}

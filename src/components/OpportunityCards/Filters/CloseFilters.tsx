@@ -8,9 +8,9 @@ const CloseFiltersDiv = styled.div`
   align-items: center;
   background: var(--color-orchid-light);
   justify-content: left;
-  height: 64px;
-  gap: 12px;
-  padding: 16px 0px 16px 32px;
+  height: var(--opportunities-filters-close-filter-height);
+  gap: var(--opportunities-filters-close-filter-gap);
+  padding: var(--opportunities-filters-close-filter-padding);
   cursor: pointer;
 
   svg {

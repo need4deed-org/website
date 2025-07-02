@@ -44,6 +44,7 @@ const StyledButton = styled.button<StyledButtonProps>`
 
 interface Props {
   text?: string;
+  textFontSize?: string;
   onClick: () => void;
   backgroundcolor?: BackgroundColorKeys;
   textColor?: string;
@@ -57,6 +58,7 @@ interface Props {
 
 export function Button({
   text,
+  textFontSize,
   onClick,
   backgroundcolor,
   textColor,
@@ -83,7 +85,11 @@ export function Button({
         </IconDiv>
       )}
 
-      {text && <ButtonSpan color={textColor}>{text}</ButtonSpan>}
+      {text && (
+        <ButtonSpan fontSize={textFontSize} color={textColor}>
+          {text}
+        </ButtonSpan>
+      )}
     </StyledButton>
   );
 }

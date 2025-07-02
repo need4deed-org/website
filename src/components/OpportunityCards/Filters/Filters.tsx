@@ -7,9 +7,15 @@ import { CardsFilter } from "../types";
 const FiltersContainer = styled.div`
   position: absolute;
   right: 0;
-  width: 340px;
+  width: var(--opportunities-filters-container-width);
   z-index: 1;
   background: var(--color-orchid-subtle);
+  border-bottom-left-radius: var(
+    --opportunities-filters-container-border-bottom-radius
+  );
+  border-bottom-right-radius: var(
+    --opportunities-filters-container-border-bottom-radius
+  );
 `;
 
 interface Props {
