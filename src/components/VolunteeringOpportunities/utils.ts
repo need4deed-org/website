@@ -99,8 +99,6 @@ const mapOpportunity = (opp: OpportunityApi, t: TFunction) => {
     "homepage.volunteeringOpportunities.defaultMainCommunication",
   );
 
-  const defaultCategory = t("opportunityPage.filters.other");
-
   const newOpp: Opportunity = {
     accompanyingDate: opp.accomp_datetime
       ? new Date(opp.accomp_datetime)
@@ -127,7 +125,7 @@ const mapOpportunity = (opp: OpportunityApi, t: TFunction) => {
     categoryId: opp.category_id,
     lastEditedTimeNotion: new Date(opp.last_edited_time_notion),
     defaultMainCommunication,
-    category: opp.category || defaultCategory,
+    category: opp.category,
   };
 
   return newOpp;

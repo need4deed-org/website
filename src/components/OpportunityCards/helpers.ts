@@ -11,13 +11,13 @@ import {
   DistrictKeys,
 } from "./types";
 
-const activityTypeMap: Record<ActivityTypeKeys, string> = {
-  childcare: "Childcare",
-  germanLanguageSupport: "German Language Support",
-  skillsBasedVolunteering: "Skills Based Volunteering",
-  events: "Events",
-  sportsActivities: "Sport activities",
-  other: "Other",
+const activityTypeCategoryIdMap: Record<ActivityTypeKeys, number | null> = {
+  childcare: 2,
+  germanLanguageSupport: 1,
+  skillsBasedVolunteering: 3,
+  events: 4,
+  sportsActivities: 5,
+  other: null,
 };
 
 const districtGroupMap: Partial<Record<DistrictKeys, string[]>> = {
@@ -126,7 +126,7 @@ export const filterOpportunity = (
     locations,
     opportunityType,
     timeslots,
-    category,
+    categoryId,
   } = opportunity;
 
   const {
@@ -155,12 +155,10 @@ export const filterOpportunity = (
 
   /* Filter Activity Type */
   if (selectedActivityTypes.length) {
-    if (!category) return false;
-
     let categoryFound = false;
 
     for (const selectedType of selectedActivityTypes) {
-      if (activityTypeMap[selectedType] === category) {
+      if (activityTypeCategoryIdMap[selectedType] === categoryId) {
         categoryFound = true;
         break;
       }
