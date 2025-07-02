@@ -20,11 +20,6 @@ const activityTypeCategoryIdMap: Record<ActivityTypeKeys, number | null> = {
   other: null,
 };
 
-const districtGroupMap: Partial<Record<DistrictKeys, string[]>> = {
-  steglitzZehlendorf: ["steglitz", "zehlendorf"],
-  treptowKöpenick: ["treptow", "köpenick"],
-};
-
 const dayEnumMap: Record<string, DaysKeys> = {
   1: "monday",
   2: "tuesday",
@@ -81,7 +76,7 @@ const getSelectedDays = (daysFilter: Days) => {
 interface ReducedFilter
   extends Pick<CardsFilter, "searchInput" | "accompanying"> {
   selectedActivityTypes: ActivityTypeKeys[];
-  selectedDistricts: string[];
+  selectedDistricts: DistrictKeys[];
   selectedDays: SelectedDays;
 }
 
@@ -103,10 +98,7 @@ export const reduceFilter = ({
 
   reducedFilter.selectedDistricts = (
     Object.keys(district) as Array<DistrictKeys>
-  )
-    .filter((d) => district[d])
-    .map((d) => districtGroupMap[d] || d)
-    .flat();
+  ).filter((d) => district[d]);
 
   reducedFilter.selectedDays = getSelectedDays(days);
 
@@ -172,7 +164,11 @@ export const filterOpportunity = (
     let districtFound = false;
 
     for (const d of selectedDistricts) {
-      const searchableData = locations.join("").toLowerCase();
+      const searchableData = locations
+        .join("")
+        .toLowerCase()
+        .replace(/\s/g, "");
+
       if (searchableData.includes(d)) {
         districtFound = true;
         break;

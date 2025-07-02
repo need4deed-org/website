@@ -16,13 +16,30 @@ export interface ActivityType {
 }
 
 export interface District {
+  charlottenburg: boolean;
+  friedrichshain: boolean;
+  hellersdorf: boolean;
+  köpenick: boolean;
+  kreuzberg: boolean;
   lichtenberg: boolean;
+  marzahn: boolean;
   mitte: boolean;
+  moabit: boolean;
   neukölln: boolean;
   pankow: boolean;
-  steglitzZehlendorf: boolean;
+  prenzlauerberg: boolean;
+  reinickendorf: boolean;
+  rudow: boolean;
+  schöneberg: boolean;
+  spandau: boolean;
+  steglitz: boolean;
+  tegel: boolean;
   tempelhof: boolean;
-  treptowKöpenick: boolean;
+  treptow: boolean;
+  wedding: boolean;
+  weißensee: boolean;
+  wilmersdorf: boolean;
+  zehlendorf: boolean;
 }
 
 export interface Days {
