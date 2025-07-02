@@ -10,6 +10,7 @@ export const defaultFilter: CardsFilter = {
     skillsBasedVolunteering: false,
     events: false,
     sportsActivities: false,
+    other: false,
   },
   district: {
     lichtenberg: false,

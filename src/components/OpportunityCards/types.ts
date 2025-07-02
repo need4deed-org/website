@@ -12,6 +12,7 @@ export interface ActivityType {
   skillsBasedVolunteering: boolean;
   events: boolean;
   sportsActivities: boolean;
+  other: boolean;
 }
 
 export interface District {

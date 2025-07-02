@@ -17,6 +17,7 @@ const activityTypeMap: Record<ActivityTypeKeys, string> = {
   skillsBasedVolunteering: "Skills Based Volunteering",
   events: "Events",
   sportsActivities: "Sport activities",
+  other: "Other",
 };
 
 const districtGroupMap: Partial<Record<DistrictKeys, string[]>> = {

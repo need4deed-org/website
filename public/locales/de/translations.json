@@ -677,7 +677,8 @@
       "days": "Tage",
       "morning": "Morgen",
       "afternoon": "Nachmittag",
-      "evening": "Abend"
+      "evening": "Abend",
+      "other": "Sonstiges"
     }
   }
 }

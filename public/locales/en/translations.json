@@ -696,7 +696,6 @@
     "resultsFound": "results found",
     "searchPlaceHolder": "Enter search term",
     "mapViewMessage": "Will be available soon",
-
     "filters": {
       "button": "FILTERS",
       "closeFilters": "CLOSE FILTERS",
@@ -720,7 +719,8 @@
       "days": "Days",
       "morning": "Morning",
       "afternoon": "Afternoon",
-      "evening": "Evening"
+      "evening": "Evening",
+      "other": "Other"
     }
   }
 }
