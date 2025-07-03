@@ -17,6 +17,7 @@ const OpportunitiesContainer = styled.div`
   min-height: var(--opportunities-container-min-height);
   margin-inline: auto;
   position: relative;
+  padding: var(--opportunities-container-padding);
 `;
 
 export function OpportunityCards() {
