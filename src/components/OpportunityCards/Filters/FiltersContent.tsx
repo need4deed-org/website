@@ -41,6 +41,7 @@ const activityTypes = Object.keys(
 const districts = Object.keys(defaultFilter.district) as DistrictKeys[];
 
 const weekDays = Object.keys(defaultFilter.days) as DaysKeys[];
+
 const daySlots = Object.keys(defaultFilter.days.monday) as DayKeys[];
 
 const daysTranslationMap: Record<DaysKeys, string> = {
@@ -125,10 +126,10 @@ export default function FiltersContent({ setFilter, filter }: Props) {
         </AccompanyingFilterHeaderContainer>
 
         <Paragraph
-          fontWeight={400}
-          fontSize="14px"
+          fontWeight="var(--opportunities-filters-description-font-weight)"
+          fontSize="var(--opportunities-filters-description-font-size)"
           color="var(--color-midnight)"
-          lineheight="14px"
+          lineheight="var(--opportunities-filters-description-font-size)"
         >
           {t("opportunityPage.filters.accompanyingDesc")}
         </Paragraph>

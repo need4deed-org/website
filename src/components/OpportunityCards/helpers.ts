@@ -12,8 +12,8 @@ import {
 } from "./types";
 
 const activityTypeCategoryIdMap: Record<ActivityTypeKeys, number | null> = {
-  childcare: 2,
   germanLanguageSupport: 1,
+  childcare: 2,
   skillsBasedVolunteering: 3,
   events: 4,
   sportsActivities: 5,

@@ -368,6 +368,8 @@ html {
     --opportunities-filters-clear-all-button-icon-size:24px;
     --opportunities-filters-clear-all-button-height:64px;
     --opportunities-filters-clear-all-button-text-font-size:20px;
+    --opportunities-filters-description-font-size:14px;
+    --opportunities-filters-description-font-weight:400;
 
     --search-container-height:64px;
     --search-container-border-radius:40px;
@@ -626,6 +628,8 @@ html {
     --opportunities-filters-clear-all-button-padding-bottom:24px;
     --opportunities-filters-clear-all-button-icon-size:24px;
     --opportunities-filters-clear-all-button-text-font-size:16px;
+    --opportunities-filters-description-font-size:14px;
+    --opportunities-filters-description-font-weight:400;
 
     --search-container-height:64px;
     --search-container-border-radius:40px;
@@ -879,6 +883,9 @@ html {
     --opportunities-filters-clear-all-button-padding-bottom:24px;
     --opportunities-filters-clear-all-button-icon-size:24px;
     --opportunities-filters-clear-all-button-text-font-size:16px;
+    --opportunities-filters-description-font-size:14px;
+    --opportunities-filters-description-font-weight:400;
+
 
     --search-container-height: 60px;
     --search-container-border-radius: 160px;
