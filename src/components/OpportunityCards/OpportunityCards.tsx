@@ -14,6 +14,7 @@ const OpportunitiesContainer = styled.div`
   flex-direction: column;
   gap: var(--opportunities-container-gap);
   width: var(--opportunities-container-width);
+  min-height: var(--opportunities-container-min-height);
   margin-inline: auto;
   position: relative;
 `;

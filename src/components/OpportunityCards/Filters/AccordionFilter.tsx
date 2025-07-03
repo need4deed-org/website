@@ -37,6 +37,8 @@ const OptionsContainer = styled.div`
   flex-direction: column;
   justify-content: left;
   gap: var(--opportunities-filters-content-accordion-options-gap);
+  max-height: var(--opportunities-filters-content-accordion-options-max-height);
+  overflow-y: auto;
 `;
 
 const GroupContainer = styled.div`
