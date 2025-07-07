@@ -23,7 +23,7 @@ function Header({ showEvent }: Props) {
 
   const eventActive = useMemo(
     () => events?.find((event) => event.active),
-    [events],
+    [events]
   );
 
   const toggleMenu = () => {
@@ -33,7 +33,7 @@ function Header({ showEvent }: Props) {
   const handleLanguageChange = (lng: Lang) => {
     setLangDirection(containerRef, lng as Lang);
     navigate(
-      `${getBaseUrl(window.location.href)}/${lng}${queryParams.size ? `/?${queryParams}` : ""}`,
+      `${getBaseUrl(window.location.href)}/${lng}${queryParams.size ? `/?${queryParams}` : ""}`
     );
   };
 
@@ -94,26 +94,6 @@ function Header({ showEvent }: Props) {
                 </li>
               </ul>
             </li>
-
-            <li className="nav-item">
-              <a
-                className="nav-link"
-                href={`/${Subpages.FAQS}/${i18n.language}`}
-              >
-                {t("faqs.faqs")}
-              </a>
-            </li>
-
-            {showEvent && eventActive ? (
-              <li className="nav-item">
-                <a
-                  className="nav-link nav-link-secondary"
-                  href={`/${Subpages.EVENT}/${i18n.language}`}
-                >
-                  {eventActive.menuTitle}
-                </a>
-              </li>
-            ) : null}
           </ul>
         </div>
       </div>

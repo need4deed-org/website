@@ -203,7 +203,7 @@ export default function BecomeVolunteer() {
                 <HeaderWithHelp
                   textHelp={t("form.becomeVolunteer.fields.locations.helpText")}
                   titleHelp={t(
-                    "form.becomeVolunteer.fields.locations.helpTitle",
+                    "form.becomeVolunteer.fields.locations.helpTitle"
                   )}
                   classNamePopup="form-help"
                 >
@@ -239,10 +239,10 @@ export default function BecomeVolunteer() {
               <fieldset>
                 <HeaderWithHelp
                   textHelp={t(
-                    "form.becomeVolunteer.fields.availability.helpText",
+                    "form.becomeVolunteer.fields.availability.helpText"
                   )}
                   titleHelp={t(
-                    "form.becomeVolunteer.fields.availability.helpTitle",
+                    "form.becomeVolunteer.fields.availability.helpTitle"
                   )}
                   classNamePopup="form-help"
                 >
@@ -265,7 +265,7 @@ export default function BecomeVolunteer() {
                           >
                             <span className="form-availability-weekday">
                               {t(
-                                `form.schedule.${availabilityObj.weekday}`,
+                                `form.schedule.${availabilityObj.weekday}`
                               ).toLocaleUpperCase()}
                             </span>
                             <formVolunteer.Field
@@ -288,7 +288,7 @@ export default function BecomeVolunteer() {
                                               type="checkbox"
                                               onChange={(e) =>
                                                 field.handleChange(
-                                                  e.target.checked,
+                                                  e.target.checked
                                                 )
                                               }
                                             />
@@ -299,20 +299,20 @@ export default function BecomeVolunteer() {
                                                 t,
                                                 title[
                                                   i18n.language as Lang
-                                                ] as string,
+                                                ] as string
                                               )}
                                             </label>
                                           </span>
                                         )}
                                       </formVolunteer.Field>
-                                    ),
+                                    )
                                   )
                                 );
                               }}
                             </formVolunteer.Field>
                           </div>
                         );
-                      },
+                      }
                     )}
                   <FieldInfo field={fieldAvailability} />
                 </div>
@@ -344,7 +344,7 @@ export default function BecomeVolunteer() {
                 <>
                   <h6>
                     {t(
-                      "form.becomeVolunteer.fields.languages.languagesNative.header",
+                      "form.becomeVolunteer.fields.languages.languagesNative.header"
                     )}
                   </h6>
                   <WithParentRef
@@ -372,7 +372,7 @@ export default function BecomeVolunteer() {
                 <>
                   <h6>
                     {t(
-                      "form.becomeVolunteer.fields.languages.languagesFluent.header",
+                      "form.becomeVolunteer.fields.languages.languagesFluent.header"
                     )}
                   </h6>
                   <WithParentRef
@@ -400,7 +400,7 @@ export default function BecomeVolunteer() {
                 <>
                   <h6>
                     {t(
-                      "form.becomeVolunteer.fields.languages.languagesIntermediate.header",
+                      "form.becomeVolunteer.fields.languages.languagesIntermediate.header"
                     )}
                   </h6>
                   <WithParentRef className="form-chip-list form-pick">
@@ -435,10 +435,10 @@ export default function BecomeVolunteer() {
               <fieldset>
                 <HeaderWithHelp
                   textHelp={t(
-                    "form.becomeVolunteer.fields.activities.helpText",
+                    "form.becomeVolunteer.fields.activities.helpText"
                   )}
                   titleHelp={t(
-                    "form.becomeVolunteer.fields.activities.helpTitle",
+                    "form.becomeVolunteer.fields.activities.helpTitle"
                   )}
                   classNamePopup="form-help"
                 >
@@ -499,10 +499,10 @@ export default function BecomeVolunteer() {
               >
                 <HeaderWithHelp
                   textHelp={t(
-                    "form.becomeVolunteer.fields.certOfGoodConduct.helpText",
+                    "form.becomeVolunteer.fields.certOfGoodConduct.helpText"
                   )}
                   titleHelp={t(
-                    "form.becomeVolunteer.fields.certOfGoodConduct.helpTitle",
+                    "form.becomeVolunteer.fields.certOfGoodConduct.helpTitle"
                   )}
                   classNamePopup="form-help"
                 >
@@ -544,10 +544,10 @@ export default function BecomeVolunteer() {
             >
               <HeaderWithHelp
                 textHelp={t(
-                  "form.becomeVolunteer.fields.certMeaslesVaccination.helpText",
+                  "form.becomeVolunteer.fields.certMeaslesVaccination.helpText"
                 )}
                 titleHelp={t(
-                  "form.becomeVolunteer.fields.certMeaslesVaccination.helpTitle",
+                  "form.becomeVolunteer.fields.certMeaslesVaccination.helpTitle"
                 )}
                 classNamePopup="form-help"
               >
@@ -571,7 +571,7 @@ export default function BecomeVolunteer() {
                 <HeaderWithHelp
                   textHelp={t("form.becomeVolunteer.fields.leadFrom.helpText")}
                   titleHelp={t(
-                    "form.becomeVolunteer.fields.leadFrom.helpTitle",
+                    "form.becomeVolunteer.fields.leadFrom.helpTitle"
                   )}
                   classNamePopup="form-help"
                 >
@@ -616,16 +616,6 @@ export default function BecomeVolunteer() {
                   <label htmlFor="consent">
                     {getTickMark(!!fieldConsent.state.value)}
                   </label>
-                  <span>
-                    {t("form.becomeVolunteer.fields.consent.header")}{" "}
-                    <a href={`/${Subpages.DATA_PROTECTION}/${lng}`}>
-                      {t("footer.legal.dataPrivacy")}
-                    </a>{" "}
-                    {t("form.becomeVolunteer.fields.consent.and")}{" "}
-                    <a href={`/${Subpages.AGREEMENT}/${lng}`}>
-                      {t("footer.legal.agreement")}
-                    </a>
-                  </span>
                 </div>
                 <FieldInfo field={fieldConsent} />
               </div>
@@ -645,8 +635,8 @@ export default function BecomeVolunteer() {
                     errorList.push(fieldErrors);
                     return errorList;
                   }, [])
-                  .filter(Boolean),
-              ),
+                  .filter(Boolean)
+              )
             )
               .concat(state.errors as string[])
               .join(", ");

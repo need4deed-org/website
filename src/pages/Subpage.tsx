@@ -43,7 +43,7 @@ function Subpage({ type }: Props) {
 
   const eventActive = useMemo(
     () => events?.find((event) => event.active),
-    [events],
+    [events]
   );
 
   useEffect(() => {
@@ -62,38 +62,6 @@ function Subpage({ type }: Props) {
 
   const component = (pageType: Subpages) => {
     switch (pageType) {
-      case Subpages.DATA_PROTECTION:
-        return <DataPrivacy />;
-      case Subpages.NOTICE:
-        return <LegalNotice />;
-      case Subpages.AGREEMENT:
-        return <Agreement />;
-      case Subpages.GUIDELINES:
-        return <Guidelines />;
-      case Subpages.BECOME_VOLUNTEER:
-        return FF.NEW_FORMS_VOLUNTEER || ffVol ? (
-          // eslint-disable-next-line react/jsx-props-no-spreading
-          <NewForm<typeof volunteer.defaultValues> {...volunteer} />
-        ) : (
-          <Form form={FormType.VOLUNTEER} />
-        );
-      case Subpages.ADD_OPPORTUNITY:
-        return FF.NEW_FORMS_OPPORTUNITY || ffOpp ? (
-          // eslint-disable-next-line react/jsx-props-no-spreading
-          <NewForm<typeof opportunity.defaultValues> {...opportunity} />
-        ) : (
-          <Form form={FormType.OPPORTUNITY} />
-        );
-      case Subpages.ANNOUNCEMENT:
-        return <Announcement />;
-      case Subpages.EVENT:
-        return <Event eventData={{ event: eventActive }} />;
-      case Subpages.EVENTS:
-        return <Events />;
-      case Subpages.COOKIES:
-        return <Cookie />;
-      case Subpages.FAQS:
-        return <FAQs />;
       default:
         return null;
     }
