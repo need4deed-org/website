@@ -30,6 +30,11 @@ const FilterHeaderContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  border-top: var(--opportunities-filters-content-accordion-header-border-top)
+    solid var(--color-orchid);
+  padding-top: var(
+    --opportunities-filters-content-accordion-header-padding-top
+  );
 `;
 
 const OptionsContainer = styled.div`
