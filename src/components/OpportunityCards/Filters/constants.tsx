@@ -4,14 +4,7 @@ import { CardsFilter } from "../types";
 export const defaultFilter: CardsFilter = {
   searchInput: "",
   accompanying: false,
-  activityType: {
-    childcare: false,
-    germanLanguageSupport: false,
-    skillsBasedVolunteering: false,
-    events: false,
-    sportsActivities: false,
-    other: false,
-  },
+  activityType: {},
   district: {
     charlottenburg: false,
     friedrichshain: false,

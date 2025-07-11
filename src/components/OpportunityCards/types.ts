@@ -1,18 +1,11 @@
+import { Dispatch, SetStateAction } from "react";
+
 export interface CardsFilter {
   searchInput: string;
   accompanying: boolean;
-  activityType: ActivityType;
+  activityType: Record<string, boolean>;
   district: District;
   days: Days;
-}
-
-export interface ActivityType {
-  childcare: boolean;
-  germanLanguageSupport: boolean;
-  skillsBasedVolunteering: boolean;
-  events: boolean;
-  sportsActivities: boolean;
-  other: boolean;
 }
 
 export interface District {
@@ -58,7 +51,8 @@ export interface Day {
   evening: boolean;
 }
 
-export type ActivityTypeKeys = keyof ActivityType;
 export type DistrictKeys = keyof District;
 export type DaysKeys = keyof Days;
 export type DayKeys = keyof Day;
+
+export type SetFilter = Dispatch<SetStateAction<CardsFilter>>;

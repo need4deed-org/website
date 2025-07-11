@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import { IconName } from "../../core/button/Button/icon";
 import { Button } from "../../core/button";
-import { CardsFilter } from "../types";
+import { CardsFilter, SetFilter } from "../types";
 import { getClearFilter } from "../helpers";
 
 const ClearAllFiltersContainer = styled.div`
@@ -13,7 +13,7 @@ const ClearAllFiltersContainer = styled.div`
 `;
 
 interface Props {
-  setFilter: (filter: CardsFilter) => void;
+  setFilter: SetFilter;
   filter: CardsFilter;
 }
 

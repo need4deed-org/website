@@ -574,7 +574,9 @@
         "en": "Deutsch, Englisch",
         "de": "Deutsch",
         "no": "Sprachmittlung ist nicht nötig"
-      }
+      },
+      "otherCategory": "Sonstiges"
+
     },
     "testimonials": {
       "header": "ERFAHRUNGSBERICHTE",
@@ -668,17 +670,11 @@
       "accompanying": "Begleitung",
       "accompanyingDesc": "Offen für die Begleitung von Bewohnern zu einzelnen Terminen. Einmalige Ehrenämter, die Deutschkenntnisse erfordern.",
       "activityType": "Aktivitätstyp",
-      "childcare": "Kinderbetreuung",
-      "germanLanguageSupport": "Deutschsprachige Unterstützung",
-      "skillsBasedVolunteering": "Kompetenzbasiertes Ehrenamt",
-      "events": "Veranstaltungen",
-      "sportsActivities": "Sportliche Aktivitäten",
       "district": "Bezirk",
       "days": "Tage",
       "morning": "Morgen",
       "afternoon": "Nachmittag",
-      "evening": "Abend",
-      "other": "Sonstiges"
+      "evening": "Abend"
     }
   }
 }

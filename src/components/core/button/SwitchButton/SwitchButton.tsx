@@ -1,3 +1,4 @@
+import { CSSProperties } from "react";
 import styled from "styled-components";
 
 // Base dimensions for the switch
@@ -13,7 +14,7 @@ const SwitchContainer = styled.div`
   margin: 0.5rem 0;
 `;
 
-interface SwitchButtonProps {
+interface SwitchButtonProps extends CSSProperties {
   width: number;
   height: number;
   isChecked: boolean;

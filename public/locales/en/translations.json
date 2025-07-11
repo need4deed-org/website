@@ -609,7 +609,8 @@
         "en": "German, English",
         "de": "German",
         "no": "No Translation needed"
-      }
+      },
+      "otherCategory": "Other"
     },
     "testimonials": {
       "header": "TESTIMONIALS",
@@ -703,11 +704,6 @@
       "accompanying": "Accompanying",
       "accompanyingDesc": "Open to bring residents to individual appointments. One-time volunteering posts that require german language skills.",
       "activityType": "Activity Type",
-      "childcare": "Childcare",
-      "germanLanguageSupport": "German language support",
-      "skillsBasedVolunteering": "Skills based volunteering",
-      "events": "Events",
-      "sportsActivities": "Sports Activities",
       "district": "District",
       "charlottenburg": "Charlottenburg",
       "friedrichshain": "Friedrichshain",
@@ -736,8 +732,7 @@
       "days": "Days",
       "morning": "Morning",
       "afternoon": "Afternoon",
-      "evening": "Evening",
-      "other": "Other"
+      "evening": "Evening"
     }
   }
 }

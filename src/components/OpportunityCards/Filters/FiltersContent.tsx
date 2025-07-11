@@ -4,11 +4,11 @@ import { Heading4, Paragraph } from "../../styled/text";
 import { SwitchButton } from "../../core/button";
 import AccordionFilter from "./AccordionFilter";
 import {
-  ActivityTypeKeys,
   CardsFilter,
   DayKeys,
   DaysKeys,
   DistrictKeys,
+  SetFilter,
 } from "../types";
 import { defaultFilter } from "./constants";
 
@@ -34,10 +34,6 @@ const AccompanyingFilterHeaderContainer = styled.div`
   align-items: center;
 `;
 
-const activityTypes = Object.keys(
-  defaultFilter.activityType,
-) as ActivityTypeKeys[];
-
 const districts = Object.keys(defaultFilter.district) as DistrictKeys[];
 
 const weekDays = Object.keys(defaultFilter.days) as DaysKeys[];
@@ -56,24 +52,25 @@ const daysTranslationMap: Record<DaysKeys, string> = {
 
 interface Props {
   filter: CardsFilter;
-  setFilter: (filter: CardsFilter) => void;
+  setFilter: SetFilter;
 }
 
 export default function FiltersContent({ setFilter, filter }: Props) {
   const { t } = useTranslation();
+  const { activityType } = filter;
 
-  const activityTypeFilterItems = activityTypes.map((activity) => {
-    return {
-      label: t(`opportunityPage.filters.${activity}`),
-      checked: filter.activityType[activity],
-      onChange: (checked: boolean) => {
-        const { activityType } = filter;
-        activityType[activity] = checked;
-
-        setFilter({ ...filter, activityType });
-      },
-    };
-  });
+  const activityTypeFilterItems = Object.keys(activityType).map(
+    (activityCategory) => {
+      return {
+        label: activityCategory,
+        checked: activityType[activityCategory],
+        onChange: (checked: boolean) => {
+          activityType[activityCategory] = checked;
+          setFilter({ ...filter, activityType });
+        },
+      };
+    },
+  );
 
   const districtFilterItems = districts.map((d) => {
     return {

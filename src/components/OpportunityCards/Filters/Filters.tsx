@@ -2,7 +2,7 @@ import styled from "styled-components";
 import CloseFilters from "./CloseFilters";
 import FiltersContent from "./FiltersContent";
 import ClearAllFilters from "./ClearAllFilters";
-import { CardsFilter } from "../types";
+import { CardsFilter, SetFilter } from "../types";
 
 const FiltersContainer = styled.div`
   position: absolute;
@@ -22,7 +22,7 @@ interface Props {
   isFiltersOpen: boolean;
   setIsFiltersOpen: (isOpen: boolean) => void;
   filter: CardsFilter;
-  setFilter: (filter: CardsFilter) => void;
+  setFilter: SetFilter;
 }
 
 export default function Filters({

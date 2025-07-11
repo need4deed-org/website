@@ -2,7 +2,6 @@
 import { OpportunityType } from "need4deed-sdk";
 import { Opportunity } from "../VolunteeringOpportunities/types";
 import {
-  ActivityTypeKeys,
   CardsFilter,
   Day,
   DayKeys,
@@ -10,15 +9,7 @@ import {
   DaysKeys,
   DistrictKeys,
 } from "./types";
-
-const activityTypeCategoryIdMap: Record<ActivityTypeKeys, number | null> = {
-  germanLanguageSupport: 1,
-  childcare: 2,
-  skillsBasedVolunteering: 3,
-  events: 4,
-  sportsActivities: 5,
-  other: null,
-};
+import { TimeSlot } from "../forms/types";
 
 const dayEnumMap: Record<string, DaysKeys> = {
   1: "monday",
@@ -29,13 +20,6 @@ const dayEnumMap: Record<string, DaysKeys> = {
   6: "saturday",
   7: "sunday",
 };
-
-enum Slot {
-  MORNING = "08-11",
-  NOON = "11-14",
-  AFTERNOON = "14-17",
-  EVENING = "17-20",
-}
 
 const getSearchableTimeSlotsMap = (timeslots: Record<string, string>[]) => {
   const timeslotsMap: Partial<Record<DaysKeys, string[]>> = {};
@@ -75,7 +59,7 @@ const getSelectedDays = (daysFilter: Days) => {
 
 interface ReducedFilter
   extends Pick<CardsFilter, "searchInput" | "accompanying"> {
-  selectedActivityTypes: ActivityTypeKeys[];
+  selectedActivityTypes: string[];
   selectedDistricts: DistrictKeys[];
   selectedDays: SelectedDays;
 }
@@ -92,9 +76,9 @@ export const reduceFilter = ({
     accompanying,
   };
 
-  reducedFilter.selectedActivityTypes = (
-    Object.keys(activityType) as Array<ActivityTypeKeys>
-  ).filter((type) => activityType[type]);
+  reducedFilter.selectedActivityTypes = Object.keys(activityType).filter(
+    (type) => activityType[type],
+  );
 
   reducedFilter.selectedDistricts = (
     Object.keys(district) as Array<DistrictKeys>
@@ -118,7 +102,7 @@ export const filterOpportunity = (
     locations,
     opportunityType,
     timeslots,
-    categoryId,
+    category,
   } = opportunity;
 
   const {
@@ -147,14 +131,9 @@ export const filterOpportunity = (
 
   /* Filter Activity Type */
   if (selectedActivityTypes.length) {
-    let categoryFound = false;
-
-    for (const selectedType of selectedActivityTypes) {
-      if (activityTypeCategoryIdMap[selectedType] === categoryId) {
-        categoryFound = true;
-        break;
-      }
-    }
+    const categoryFound = selectedActivityTypes.find(
+      (aType) => aType === category,
+    );
 
     if (!categoryFound) return false;
   }
@@ -194,7 +173,7 @@ export const filterOpportunity = (
         if (
           selectedDayFilter.morning &&
           searchableSlotsData.some(
-            (slot) => slot === Slot.MORNING || slot === Slot.NOON,
+            (slot) => slot === TimeSlot.MORNING || slot === TimeSlot.NOON,
           )
         ) {
           timeslotFound = true;
@@ -203,7 +182,7 @@ export const filterOpportunity = (
 
         if (
           selectedDayFilter.afternoon &&
-          searchableSlotsData.some((slot) => slot === Slot.AFTERNOON)
+          searchableSlotsData.some((slot) => slot === TimeSlot.AFTERNOON)
         ) {
           timeslotFound = true;
           break;
@@ -211,7 +190,7 @@ export const filterOpportunity = (
 
         if (
           selectedDayFilter.evening &&
-          searchableSlotsData.some((slot) => slot === Slot.EVENING)
+          searchableSlotsData.some((slot) => slot === TimeSlot.EVENING)
         ) {
           timeslotFound = true;
           break;
@@ -236,4 +215,28 @@ export const getClearFilter = (filter: object) => {
   }
 
   return newFilter;
+};
+
+const createDefaultFilterFromSet = (set: Set<string>) => {
+  const filter: Record<string, boolean> = {};
+
+  for (const key of set) {
+    filter[key] = false;
+  }
+
+  return filter;
+};
+
+export const extractCardsFilter = (
+  opportunities: Opportunity[],
+): Partial<CardsFilter> => {
+  const categoriesSet = new Set<string>();
+
+  for (const opp of opportunities) {
+    categoriesSet.add(opp.category);
+  }
+
+  const activityType = createDefaultFilterFromSet(categoriesSet);
+
+  return { activityType };
 };

@@ -16,8 +16,8 @@ import {
   OpportunityApi,
 } from "../VolunteeringOpportunities/types";
 import OpportunityCard from "../VolunteeringOpportunities/OpportunityCard";
-import { filterOpportunity, reduceFilter } from "./helpers";
-import { CardsFilter } from "./types";
+import { extractCardsFilter, filterOpportunity, reduceFilter } from "./helpers";
+import { CardsFilter, SetFilter } from "./types";
 import PaginatedGrid from "../core/paginatedGrid/PaginatedGrid";
 import useScreenType from "../../hooks/useScreenType";
 
@@ -27,6 +27,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   popup?: boolean;
   setNumOfOpportunities: (numOfOpportunities: number) => void;
   cardsFilter: CardsFilter;
+  setCardsFilter: SetFilter;
   isFiltersOpen: boolean;
 }
 
@@ -52,6 +53,7 @@ export default function Cards({
   popup = false,
   setNumOfOpportunities,
   cardsFilter,
+  setCardsFilter,
   isFiltersOpen,
 }: Props) {
   const isUrl = url.toLowerCase().match(regexHttpSchema);
@@ -60,13 +62,37 @@ export default function Cards({
   const [modalOpportunity, setModalOpportunity] = useState<
     Opportunity | undefined
   >();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const screenSize = useScreenType();
   const isDesktop = screenSize === ScreenTypes.DESKTOP;
+  const [selectedLan, setSelectedLan] = useState(i18n.language);
 
   const opportunitiesRaw = (opportunities || []) as unknown as OpportunityApi[];
 
   const mappedOpportunities = getMappedOpportunities(opportunitiesRaw, t);
+
+  useEffect(() => {
+    if (
+      mappedOpportunities.length &&
+      (!Object.keys(cardsFilter.activityType).length ||
+        selectedLan !== i18n.language)
+    ) {
+      const dynamicFilters = extractCardsFilter(mappedOpportunities);
+
+      setCardsFilter((prevFilter: CardsFilter) => ({
+        ...prevFilter,
+        ...dynamicFilters,
+      }));
+
+      setSelectedLan(i18n.language);
+    }
+  }, [
+    mappedOpportunities,
+    cardsFilter,
+    setCardsFilter,
+    selectedLan,
+    i18n.language,
+  ]);
 
   const reducedFilter = reduceFilter(cardsFilter);
 

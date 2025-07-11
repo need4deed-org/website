@@ -68,6 +68,7 @@ export function OpportunityCards() {
           popup
           setNumOfOpportunities={setNumOfOpportunities}
           cardsFilter={cardsFilter}
+          setCardsFilter={setCardsFilter}
           isFiltersOpen={isFiltersOpen}
         />
       ) : (
