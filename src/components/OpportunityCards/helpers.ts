@@ -1,14 +1,7 @@
 /* eslint-disable no-restricted-syntax */
 import { OpportunityType } from "need4deed-sdk";
 import { Opportunity } from "../VolunteeringOpportunities/types";
-import {
-  CardsFilter,
-  Day,
-  DayKeys,
-  Days,
-  DaysKeys,
-  DistrictKeys,
-} from "./types";
+import { CardsFilter, Day, DayKeys, Days, DaysKeys } from "./types";
 import { TimeSlot } from "../forms/types";
 
 const dayEnumMap: Record<string, DaysKeys> = {
@@ -60,7 +53,7 @@ const getSelectedDays = (daysFilter: Days) => {
 interface ReducedFilter
   extends Pick<CardsFilter, "searchInput" | "accompanying"> {
   selectedActivityTypes: string[];
-  selectedDistricts: DistrictKeys[];
+  selectedDistricts: string[];
   selectedDays: SelectedDays;
 }
 
@@ -80,9 +73,9 @@ export const reduceFilter = ({
     (type) => activityType[type],
   );
 
-  reducedFilter.selectedDistricts = (
-    Object.keys(district) as Array<DistrictKeys>
-  ).filter((d) => district[d]);
+  reducedFilter.selectedDistricts = Object.keys(district).filter(
+    (d) => district[d],
+  );
 
   reducedFilter.selectedDays = getSelectedDays(days);
 
@@ -140,19 +133,7 @@ export const filterOpportunity = (
 
   /* Filter District */
   if (selectedDistricts.length) {
-    let districtFound = false;
-
-    for (const d of selectedDistricts) {
-      const searchableData = locations
-        .join("")
-        .toLowerCase()
-        .replace(/\s/g, "");
-
-      if (searchableData.includes(d)) {
-        districtFound = true;
-        break;
-      }
-    }
+    const districtFound = selectedDistricts.find((d) => locations.includes(d));
 
     if (!districtFound) return false;
   }
@@ -231,12 +212,18 @@ export const extractCardsFilter = (
   opportunities: Opportunity[],
 ): Partial<CardsFilter> => {
   const categoriesSet = new Set<string>();
+  const districtSet = new Set<string>();
 
   for (const opp of opportunities) {
     categoriesSet.add(opp.category);
+
+    opp.locations.forEach((l) => districtSet.add(l));
   }
 
   const activityType = createDefaultFilterFromSet(categoriesSet);
+  const district = createDefaultFilterFromSet(districtSet);
 
-  return { activityType };
+  return { activityType, district };
 };
+
+export const isObjectEmpty = (obj: object) => Object.keys(obj).length === 0;

@@ -16,7 +16,12 @@ import {
   OpportunityApi,
 } from "../VolunteeringOpportunities/types";
 import OpportunityCard from "../VolunteeringOpportunities/OpportunityCard";
-import { extractCardsFilter, filterOpportunity, reduceFilter } from "./helpers";
+import {
+  extractCardsFilter,
+  filterOpportunity,
+  isObjectEmpty,
+  reduceFilter,
+} from "./helpers";
 import { CardsFilter, SetFilter } from "./types";
 import PaginatedGrid from "../core/paginatedGrid/PaginatedGrid";
 import useScreenType from "../../hooks/useScreenType";
@@ -74,8 +79,7 @@ export default function Cards({
   useEffect(() => {
     if (
       mappedOpportunities.length &&
-      (!Object.keys(cardsFilter.activityType).length ||
-        selectedLan !== i18n.language)
+      (isObjectEmpty(cardsFilter.activityType) || selectedLan !== i18n.language)
     ) {
       const dynamicFilters = extractCardsFilter(mappedOpportunities);
 

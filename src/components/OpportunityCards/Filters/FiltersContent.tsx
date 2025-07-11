@@ -3,13 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Heading4, Paragraph } from "../../styled/text";
 import { SwitchButton } from "../../core/button";
 import AccordionFilter from "./AccordionFilter";
-import {
-  CardsFilter,
-  DayKeys,
-  DaysKeys,
-  DistrictKeys,
-  SetFilter,
-} from "../types";
+import { CardsFilter, DayKeys, DaysKeys, SetFilter } from "../types";
 import { defaultFilter } from "./constants";
 
 const FiltersContentContainer = styled.div`
@@ -34,8 +28,6 @@ const AccompanyingFilterHeaderContainer = styled.div`
   align-items: center;
 `;
 
-const districts = Object.keys(defaultFilter.district) as DistrictKeys[];
-
 const weekDays = Object.keys(defaultFilter.days) as DaysKeys[];
 
 const daySlots = Object.keys(defaultFilter.days.monday) as DayKeys[];
@@ -57,27 +49,24 @@ interface Props {
 
 export default function FiltersContent({ setFilter, filter }: Props) {
   const { t } = useTranslation();
-  const { activityType } = filter;
+  const { activityType, district } = filter;
 
-  const activityTypeFilterItems = Object.keys(activityType).map(
-    (activityCategory) => {
-      return {
-        label: activityCategory,
-        checked: activityType[activityCategory],
-        onChange: (checked: boolean) => {
-          activityType[activityCategory] = checked;
-          setFilter({ ...filter, activityType });
-        },
-      };
-    },
-  );
-
-  const districtFilterItems = districts.map((d) => {
+  const activityTypeFilterItems = Object.keys(activityType).map((a) => {
     return {
-      label: t(`opportunityPage.filters.${d}`),
-      checked: filter.district[d],
+      label: a,
+      checked: activityType[a],
       onChange: (checked: boolean) => {
-        const { district } = filter;
+        activityType[a] = checked;
+        setFilter({ ...filter, activityType });
+      },
+    };
+  });
+
+  const districtFilterItems = Object.keys(district).map((d) => {
+    return {
+      label: d,
+      checked: district[d],
+      onChange: (checked: boolean) => {
         district[d] = checked;
 
         setFilter({ ...filter, district });
