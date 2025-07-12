@@ -164,7 +164,7 @@ export default function AddOpportunity() {
             onChangeAsyncValidator={({ value }) => {
               return validateRACEmail(
                 value as string,
-                t("form.error.badEmail")
+                t("form.error.badEmail"),
               );
             }}
           />
@@ -230,10 +230,10 @@ export default function AddOpportunity() {
             >
               <HeaderWithHelp
                 textHelp={t(
-                  "form.addOpportunity.fields.opportunityType.helpText"
+                  "form.addOpportunity.fields.opportunityType.helpText",
                 )}
                 titleHelp={t(
-                  "form.addOpportunity.fields.opportunityType.helpTitle"
+                  "form.addOpportunity.fields.opportunityType.helpTitle",
                 )}
                 classNamePopup="form-help"
               >
@@ -271,7 +271,7 @@ export default function AddOpportunity() {
                             classNamePopup="form-help"
                           >
                             {t(
-                              "form.addOpportunity.fields.aaGroup.activities.header"
+                              "form.addOpportunity.fields.aaGroup.activities.header",
                             )}
                           </HeaderWithHelp>
                           <WithParentRef
@@ -309,13 +309,13 @@ export default function AddOpportunity() {
                       >
                         <HeaderWithHelp
                           textHelp={t(
-                            "form.addOpportunity.fields.aaGroup.translatedInto.helpText"
+                            "form.addOpportunity.fields.aaGroup.translatedInto.helpText",
                           )}
                           className="form-chiplist-header-within-group"
                           classNamePopup="form-help"
                         >
                           {t(
-                            "form.addOpportunity.fields.aaGroup.translatedInto.header"
+                            "form.addOpportunity.fields.aaGroup.translatedInto.header",
                           )}
                         </HeaderWithHelp>
                         <div className="form-chip-list">
@@ -349,13 +349,13 @@ export default function AddOpportunity() {
                             >
                               <HeaderWithHelp
                                 textHelp={t(
-                                  "form.addOpportunity.fields.aaGroup.languagesTranslation.helpText"
+                                  "form.addOpportunity.fields.aaGroup.languagesTranslation.helpText",
                                 )}
                                 className="form-chiplist-header-within-group"
                                 classNamePopup="form-help"
                               >
                                 {t(
-                                  "form.addOpportunity.fields.aaGroup.languagesTranslation.header"
+                                  "form.addOpportunity.fields.aaGroup.languagesTranslation.header",
                                 )}
                               </HeaderWithHelp>
                               <WithParentRef className="form-chip-list form-pick">
@@ -388,7 +388,7 @@ export default function AddOpportunity() {
                     name="aaAddress"
                     FieldTag={formOpportunity.Field}
                     label={t(
-                      "form.addOpportunity.fields.aaGroup.address.label"
+                      "form.addOpportunity.fields.aaGroup.address.label",
                     )}
                     onChangeValidator={({ value }) =>
                       !value ? t("form.error.required") : undefined
@@ -398,7 +398,7 @@ export default function AddOpportunity() {
                     name="aaPostcode"
                     FieldTag={formOpportunity.Field}
                     label={t(
-                      "form.addOpportunity.fields.aaGroup.postcode.label"
+                      "form.addOpportunity.fields.aaGroup.postcode.label",
                     )}
                     onChangeValidator={({ value }) => {
                       if (!value) {
@@ -416,7 +416,7 @@ export default function AddOpportunity() {
                     name="dateTime"
                     FieldTag={formOpportunity.Field}
                     label={t(
-                      "form.addOpportunity.fields.aaGroup.dateTime.label"
+                      "form.addOpportunity.fields.aaGroup.dateTime.label",
                     )}
                     inputType="datetime-local"
                     onChangeValidator={({ value }) => {
@@ -430,7 +430,7 @@ export default function AddOpportunity() {
                         getDate(value as string).valueOf() - Date.now();
                       if (difference < eightDays) {
                         return t(
-                          "form.addOpportunity.fields.aaGroup.dateTime.tooClose"
+                          "form.addOpportunity.fields.aaGroup.dateTime.tooClose",
                         );
                       }
                       return undefined;
@@ -440,7 +440,7 @@ export default function AddOpportunity() {
                     name="refugeeName"
                     FieldTag={formOpportunity.Field}
                     label={t(
-                      "form.addOpportunity.fields.aaGroup.refugeeName.label"
+                      "form.addOpportunity.fields.aaGroup.refugeeName.label",
                     )}
                     onChangeValidator={({ value }) =>
                       !value ? t("form.error.required") : undefined
@@ -450,7 +450,7 @@ export default function AddOpportunity() {
                     name="refugeeNumber"
                     FieldTag={formOpportunity.Field}
                     label={t(
-                      "form.addOpportunity.fields.aaGroup.refugeeNumber.label"
+                      "form.addOpportunity.fields.aaGroup.refugeeNumber.label",
                     )}
                     onChangeValidator={({ value }) => {
                       if (!value) return t("form.error.required");
@@ -465,7 +465,7 @@ export default function AddOpportunity() {
                     name="aaInformation"
                     FieldTag={formOpportunity.Field}
                     label={t(
-                      "form.addOpportunity.fields.aaGroup.information.label"
+                      "form.addOpportunity.fields.aaGroup.information.label",
                     )}
                     onChangeValidator={({ value }) =>
                       !value ? t("form.error.required") : undefined
@@ -497,7 +497,7 @@ export default function AddOpportunity() {
                             classNamePopup="form-help"
                           >
                             {t(
-                              "form.addOpportunity.fields.voGroup.locations.header"
+                              "form.addOpportunity.fields.voGroup.locations.header",
                             )}
                           </HeaderWithHelp>
                           <WithParentRef
@@ -532,7 +532,7 @@ export default function AddOpportunity() {
                             classNamePopup="form-help"
                           >
                             {t(
-                              "form.addOpportunity.fields.voGroup.activities.header"
+                              "form.addOpportunity.fields.voGroup.activities.header",
                             )}
                           </HeaderWithHelp>
                           <WithParentRef
@@ -564,13 +564,13 @@ export default function AddOpportunity() {
                         <fieldset>
                           <HeaderWithHelp
                             textHelp={t(
-                              "form.addOpportunity.fields.voGroup.languagesRefugee.helpText"
+                              "form.addOpportunity.fields.voGroup.languagesRefugee.helpText",
                             )}
                             className="form-chiplist-header-within-group"
                             classNamePopup="form-help"
                           >
                             {t(
-                              "form.addOpportunity.fields.voGroup.languagesRefugee.header"
+                              "form.addOpportunity.fields.voGroup.languagesRefugee.header",
                             )}
                           </HeaderWithHelp>
                           <WithParentRef
@@ -596,13 +596,13 @@ export default function AddOpportunity() {
                         <fieldset>
                           <HeaderWithHelp
                             textHelp={t(
-                              "form.addOpportunity.fields.voGroup.skills.helpText"
+                              "form.addOpportunity.fields.voGroup.skills.helpText",
                             )}
                             className="form-chiplist-header-within-group"
                             classNamePopup="form-help"
                           >
                             {t(
-                              "form.addOpportunity.fields.voGroup.skills.header"
+                              "form.addOpportunity.fields.voGroup.skills.header",
                             )}
                           </HeaderWithHelp>
                           <WithParentRef className="form-chip-list form-pick">
@@ -627,20 +627,20 @@ export default function AddOpportunity() {
                           () =>
                             fieldApi.form.validateField(
                               "onetimeDateTime",
-                              "change"
+                              "change",
                             ),
-                          0
+                          0,
                         );
                         const isDateTime =
                           !!fieldApi.form.getFieldValue("onetimeDateTime");
                         const isScheduleEmpty = !isTimeSlotSelected(value);
                         if (!isScheduleEmpty && isDateTime)
                           return t(
-                            "form.addOpportunity.fields.voGroup.schedule.errorBoth"
+                            "form.addOpportunity.fields.voGroup.schedule.errorBoth",
                           );
                         if (isScheduleEmpty && !isDateTime)
                           return t(
-                            "form.addOpportunity.fields.voGroup.schedule.error"
+                            "form.addOpportunity.fields.voGroup.schedule.error",
                           );
 
                         return undefined;
@@ -653,13 +653,13 @@ export default function AddOpportunity() {
                         <fieldset className="form-schedule">
                           <HeaderWithHelp
                             textHelp={t(
-                              "form.addOpportunity.fields.voGroup.schedule.helpText"
+                              "form.addOpportunity.fields.voGroup.schedule.helpText",
                             )}
                             className="form-chiplist-header-within-group"
                             classNamePopup="form-help"
                           >
                             {t(
-                              "form.addOpportunity.fields.voGroup.schedule.header"
+                              "form.addOpportunity.fields.voGroup.schedule.header",
                             )}
                           </HeaderWithHelp>
                           <div
@@ -677,7 +677,7 @@ export default function AddOpportunity() {
                                   >
                                     <span className="form-availability-weekday">
                                       {t(
-                                        `form.schedule.${weekday}`
+                                        `form.schedule.${weekday}`,
                                       ).toLocaleUpperCase()}
                                     </span>
 
@@ -703,7 +703,7 @@ export default function AddOpportunity() {
                                                           type="checkbox"
                                                           onChange={(e) => {
                                                             fieldTimeslot.handleChange(
-                                                              e.target.checked
+                                                              e.target.checked,
                                                             );
                                                           }}
                                                         />
@@ -715,7 +715,7 @@ export default function AddOpportunity() {
                                                               t,
                                                               title[
                                                                 i18n.language as Lang
-                                                              ] as string
+                                                              ] as string,
                                                             )}
                                                           </span>
                                                         </label>
@@ -724,7 +724,7 @@ export default function AddOpportunity() {
                                                   }}
                                                 </formOpportunity.Field>
                                               );
-                                            }
+                                            },
                                           )
                                         );
                                       }}
@@ -736,7 +736,7 @@ export default function AddOpportunity() {
                           <h6>
                             <i>
                               {t(
-                                "form.addOpportunity.fields.voGroup.schedule.or"
+                                "form.addOpportunity.fields.voGroup.schedule.or",
                               ).toUpperCase()}
                             </i>
                           </h6>
@@ -744,7 +744,7 @@ export default function AddOpportunity() {
                             name="onetimeDateTime"
                             FieldTag={formOpportunity.Field}
                             label={t(
-                              "form.addOpportunity.fields.voGroup.schedule.oneTimeLabel"
+                              "form.addOpportunity.fields.voGroup.schedule.oneTimeLabel",
                             )}
                             inputType="datetime-local"
                             validators={{
@@ -753,24 +753,24 @@ export default function AddOpportunity() {
                                   () =>
                                     fieldApi.form.validateField(
                                       "schedule",
-                                      "blur"
+                                      "blur",
                                     ),
-                                  0
+                                  0,
                                 );
                                 if (
                                   !value &&
                                   !isTimeSlotSelected(
-                                    fieldApi.form.getFieldValue("schedule")
+                                    fieldApi.form.getFieldValue("schedule"),
                                   )
                                 ) {
                                   return t(
-                                    "form.addOpportunity.fields.voGroup.schedule.error"
+                                    "form.addOpportunity.fields.voGroup.schedule.error",
                                   );
                                 }
                                 if (
                                   value &&
                                   Number.isNaN(
-                                    getDate(value as string).getTime()
+                                    getDate(value as string).getTime(),
                                   )
                                 ) {
                                   return t("form.error.badTime");
@@ -792,7 +792,7 @@ export default function AddOpportunity() {
                     name="numberVolunteers"
                     FieldTag={formOpportunity.Field}
                     label={t(
-                      "form.addOpportunity.fields.voGroup.numberVolunteers.label"
+                      "form.addOpportunity.fields.voGroup.numberVolunteers.label",
                     )}
                     onChangeValidator={({ value }) => {
                       if (!value) {
@@ -801,7 +801,7 @@ export default function AddOpportunity() {
                       const numVolunteers = Number(value as string);
                       if (Number.isNaN(numVolunteers)) {
                         return t(
-                          "form.addOpportunity.fields.voGroup.numberVolunteers.error"
+                          "form.addOpportunity.fields.voGroup.numberVolunteers.error",
                         );
                       }
                       return undefined;
@@ -811,7 +811,7 @@ export default function AddOpportunity() {
                     name="voInformation"
                     FieldTag={formOpportunity.Field}
                     label={t(
-                      "form.addOpportunity.fields.voGroup.information.label"
+                      "form.addOpportunity.fields.voGroup.information.label",
                     )}
                   />
                 </fieldset>
@@ -866,8 +866,8 @@ export default function AddOpportunity() {
                     errorList.push(errorsMsgs);
                     return errorList;
                   }, [])
-                  .filter(Boolean)
-              )
+                  .filter(Boolean),
+              ),
             ).join(", ");
             return (
               <div className="form-submit">

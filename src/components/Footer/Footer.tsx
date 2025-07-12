@@ -1,7 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { HashLink } from "react-router-hash-link";
 
-import { Subpages } from "../../config/types";
 import CookieConsentBanner from "../CookieConsentBanner";
 import Sponsors from "../Sponsors/Sponsors";
 import "./Footer.css";
