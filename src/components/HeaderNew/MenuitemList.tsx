@@ -17,7 +17,7 @@ export default function MenuitemList({ items, menuItemColor }: Props) {
             text={text}
             key={text}
             color={menuItemColor}
-            onClickHandler={whatsOnClick}
+            onClick={whatsOnClick}
           />
         ) : (
           <HashLink smooth to={whatsOnClick}>

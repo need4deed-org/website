@@ -38,6 +38,8 @@ export enum YesNo {
 }
 
 export enum Subpages {
+  BECOME_VOLUNTEER = "become-volunteer",
+  ANNOUNCEMENT = "/announcement",
   FAQ = "faq",
   ABOUT = "about",
   LEGAL_NOTICE = "legal-notice",

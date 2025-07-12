@@ -27,6 +27,11 @@ function Footer({ showSponsors = true }: Props) {
                   {t("footer.aboutUs.project")}
                 </HashLink>
               </li>
+              <li>
+                <HashLink smooth to={`/${Subpages.FAQS}/${i18n.language}`}>
+                  {t("faqs.faqs")}
+                </HashLink>
+              </li>
             </ul>
           </div>
           <div className="footer-column">

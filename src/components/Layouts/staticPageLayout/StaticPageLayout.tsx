@@ -20,10 +20,12 @@ interface PageContentHeaderContainerProps {
 const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 `;
 
 const PageContentHeaderContainer = styled.div<PageContentHeaderContainerProps>`
   display: flex;
+  flex: 1;
   flex-direction: column;
   background: ${(props) =>
     props.background || "var(--layout-static-page-background-default)"};
@@ -47,7 +49,6 @@ export function StaticPageLayout({ children, background }: Props) {
           />
           {children}
         </PageContentHeaderContainer>
-
         <FooterPartnersSection />
       </PageContainer>
     </PageWrapper>
