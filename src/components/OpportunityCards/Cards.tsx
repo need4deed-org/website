@@ -81,7 +81,7 @@ export default function Cards({
       mappedOpportunities.length &&
       (isObjectEmpty(cardsFilter.activityType) || selectedLan !== i18n.language)
     ) {
-      const dynamicFilters = extractCardsFilter(mappedOpportunities);
+      const dynamicFilters = extractCardsFilter(mappedOpportunities, t);
 
       setCardsFilter((prevFilter: CardsFilter) => ({
         ...prevFilter,
@@ -96,6 +96,7 @@ export default function Cards({
     setCardsFilter,
     selectedLan,
     i18n.language,
+    t,
   ]);
 
   const reducedFilter = reduceFilter(cardsFilter);

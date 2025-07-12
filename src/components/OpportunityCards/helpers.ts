@@ -1,5 +1,6 @@
 /* eslint-disable no-restricted-syntax */
 import { OpportunityType } from "need4deed-sdk";
+import { TFunction } from "i18next";
 import { Opportunity } from "../VolunteeringOpportunities/types";
 import { CardsFilter, Day, DayKeys, Days, DaysKeys } from "./types";
 import { TimeSlot } from "../forms/types";
@@ -208,8 +209,16 @@ const createDefaultFilterFromSet = (set: Set<string>) => {
   return filter;
 };
 
+const putItemToEnd = <T>(set: Set<T>, item: T) => {
+  if (set.has(item)) {
+    set.delete(item);
+    set.add(item);
+  }
+};
+
 export const extractCardsFilter = (
   opportunities: Opportunity[],
+  t: TFunction,
 ): Partial<CardsFilter> => {
   const categoriesSet = new Set<string>();
   const districtSet = new Set<string>();
@@ -219,6 +228,11 @@ export const extractCardsFilter = (
 
     opp.locations.forEach((l) => districtSet.add(l));
   }
+
+  putItemToEnd(
+    categoriesSet,
+    t("homepage.volunteeringOpportunities.otherCategory"),
+  );
 
   const activityType = createDefaultFilterFromSet(categoriesSet);
   const district = createDefaultFilterFromSet(districtSet);
