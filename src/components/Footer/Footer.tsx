@@ -4,6 +4,7 @@ import { HashLink } from "react-router-hash-link";
 import CookieConsentBanner from "../CookieConsentBanner";
 import Sponsors from "../Sponsors/Sponsors";
 import "./Footer.css";
+import { Subpages } from "../../config/types";
 
 interface Props {
   showSponsors?: boolean;
@@ -28,7 +29,7 @@ function Footer({ showSponsors = true }: Props) {
                 </HashLink>
               </li>
               <li>
-                <HashLink smooth to={`/${Subpages.FAQS}/${i18n.language}`}>
+                <HashLink smooth to={`/${Subpages.FAQ}/${i18n.language}`}>
                   {t("faqs.faqs")}
                 </HashLink>
               </li>
