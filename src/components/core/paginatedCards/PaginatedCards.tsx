@@ -8,6 +8,7 @@ import {
 import { ArrowButtons } from "./ArrowButtons";
 import { colorMap } from "../../svg/utils";
 import { PaginationIndicators } from "./PaginationIndicators";
+import useSwipe from "../../../hooks/useSwipe";
 
 interface Props {
   cards: ReactNode[];
@@ -39,9 +40,21 @@ export function PaginatedCards({
   const goToPage = (pageNumber: number) => {
     setCurrentPage(pageNumber);
   };
+  const { swipeRight, swipeLeft } = useSwipe(
+    () => {
+      if (currentPage < totalPages - 1) setCurrentPage(currentPage + 1);
+    },
+    () => {
+      if (currentPage > 0) setCurrentPage(currentPage - 1);
+    },
+  );
 
   return (
-    <PaginatedCardsContainer id="paginated-cards-container">
+    <PaginatedCardsContainer
+      id="paginated-cards-container"
+      onTouchStart={swipeRight}
+      onTouchEnd={swipeLeft}
+    >
       <ArrowButtons
         currentIndex={currentPage}
         lastIndex={totalPages - 1}
