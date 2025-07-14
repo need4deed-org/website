@@ -1,7 +1,8 @@
-import { FadersHorizontalIcon } from "@phosphor-icons/react";
+import { FadersHorizontalIcon, XIcon } from "@phosphor-icons/react";
 
 export enum IconName {
   FadersHorizontal = "fadersHorizontal",
+  X = "x",
 }
 
 export type IconMap = {
@@ -10,4 +11,5 @@ export type IconMap = {
 
 export const iconNameMap: IconMap = {
   [IconName.FadersHorizontal]: <FadersHorizontalIcon />,
+  [IconName.X]: <XIcon />,
 };
