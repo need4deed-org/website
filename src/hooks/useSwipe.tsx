@@ -30,8 +30,8 @@ const useSwipe = (
   };
 
   return {
-    swipeRight: handleTouchStart,
-    swipeLeft: handleTouchEnd,
+    onTouchStart: handleTouchStart,
+    onTouchEnd: handleTouchEnd,
   };
 };
 

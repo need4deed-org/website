@@ -40,20 +40,15 @@ export function PaginatedCards({
   const goToPage = (pageNumber: number) => {
     setCurrentPage(pageNumber);
   };
-  const { swipeRight, swipeLeft } = useSwipe(
-    () => {
-      if (currentPage < totalPages - 1) setCurrentPage(currentPage + 1);
-    },
-    () => {
-      if (currentPage > 0) setCurrentPage(currentPage - 1);
-    },
+  const { onTouchStart, onTouchEnd } = useSwipe(
+    () => setCurrentPage((prev) => (prev < totalPages - 1 ? prev + 1 : prev)),
+    () => setCurrentPage((prev) => (prev > 0 ? prev - 1 : prev)),
   );
 
   return (
     <PaginatedCardsContainer
       id="paginated-cards-container"
-      onTouchStart={swipeRight}
-      onTouchEnd={swipeLeft}
+      {...{ onTouchStart, onTouchEnd }}
     >
       <ArrowButtons
         currentIndex={currentPage}
