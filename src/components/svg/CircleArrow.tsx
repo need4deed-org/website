@@ -3,7 +3,7 @@ import { colorMap } from "./utils";
 
 interface Props extends React.SVGProps<SVGSVGElement> {
   color: keyof typeof colorMap;
-  direction: "left" | "right";
+  direction: "left" | "right" | "up" | "down";
   isFilled?: boolean;
 }
 
@@ -16,6 +16,8 @@ const arrowColorMap: Partial<Record<keyof typeof colorMap, string>> = {
 const arrowDirectionMap: Record<Props["direction"], string> = {
   left: "M16.2148 8.75L10.9648 14L16.2148 19.25",
   right: "M12.25 19.25L17.5 14L12.25 8.75",
+  up: "M19.25 16.2166L14 10.9666L8.75 16.2166",
+  down: "M8.75 12.25L14 17.5L19.25 12.25",
 };
 
 // eslint-disable-next-line react/function-component-definition

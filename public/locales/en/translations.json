@@ -609,7 +609,8 @@
         "en": "German, English",
         "de": "German",
         "no": "No Translation needed"
-      }
+      },
+      "otherCategory": "Other"
     },
     "testimonials": {
       "header": "TESTIMONIALS",
@@ -695,7 +696,19 @@
     },
     "resultsFound": "results found",
     "searchPlaceHolder": "Enter search term",
-    "filters": "FILTERS",
-    "mapViewMessage": "Will be available soon"
+    "mapViewMessage": "Will be available soon",
+    "filters": {
+      "button": "FILTERS",
+      "closeFilters": "CLOSE FILTERS",
+      "clearAllFilters": "CLEAR ALL FILTERS",
+      "accompanying": "Accompanying",
+      "accompanyingDesc": "Open to bring residents to individual appointments. One-time volunteering posts that require german language skills.",
+      "activityType": "Activity Type",
+      "district": "District",
+      "days": "Days",
+      "morning": "Morning",
+      "afternoon": "Afternoon",
+      "evening": "Evening"
+    }
   }
 }

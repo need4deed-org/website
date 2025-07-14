@@ -63,6 +63,7 @@ interface Props {
   tabs: string[];
   selectedTabIndex: number;
   setSelectedTabIndex: (index: number) => void;
+  setIsFiltersOpen: (isOpen: boolean) => void;
 }
 
 export default function OpportunityCardsHeader({
@@ -71,6 +72,7 @@ export default function OpportunityCardsHeader({
   selectedTabIndex,
   setSelectedTabIndex,
   tabs,
+  setIsFiltersOpen,
 }: Props) {
   const { t } = useTranslation();
   const screenSize = useScreenType();
@@ -95,7 +97,7 @@ export default function OpportunityCardsHeader({
           </Tabs>
 
           {isMobile ? (
-            <FiltersButton />
+            <FiltersButton setIsFiltersOpen={setIsFiltersOpen} />
           ) : (
             <ResultsFound numOfOpportunities={numOfOpportunities} />
           )}
@@ -110,7 +112,7 @@ export default function OpportunityCardsHeader({
           {isMobile ? (
             <ResultsFound numOfOpportunities={numOfOpportunities} />
           ) : (
-            <FiltersButton />
+            <FiltersButton setIsFiltersOpen={setIsFiltersOpen} />
           )}
         </SearchBarSectionContainer>
       </TabsSearchBarContainer>

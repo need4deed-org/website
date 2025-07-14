@@ -5,25 +5,27 @@ import { useState } from "react";
 import Cards from "./Cards";
 import { urlApiOpportunity } from "../../config/constants";
 import OpportunityCardsHeader from "./OpportunityCardsHeader";
-import { CardsFilter } from "./types";
 import MapView from "./MapView";
+import Filters from "./Filters/Filters";
+import { defaultFilter } from "./Filters/constants";
 
 const OpportunitiesContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: var(--opportunities-container-gap);
   width: var(--opportunities-container-width);
+  min-height: var(--opportunities-container-min-height);
   margin-inline: auto;
-  padding-inline: var(--opportunities-container-padding-inline);
+  position: relative;
+  padding: var(--opportunities-container-padding);
 `;
-
-const defaultFilter: CardsFilter = { searchInput: "" };
 
 export function OpportunityCards() {
   const { i18n, t } = useTranslation();
   const [numOfOpportunities, setNumOfOpportunities] = useState(0);
   const [cardsFilter, setCardsFilter] = useState(defaultFilter);
   const [selectedTabIndex, setSelectedTabIndex] = useState(0);
+  const [isFiltersOpen, setIsFiltersOpen] = useState(false);
 
   const onSearchInputChange = (searchInput: string) => {
     setCardsFilter({ ...cardsFilter, searchInput });
@@ -33,6 +35,12 @@ export function OpportunityCards() {
 
   return (
     <OpportunitiesContainer>
+      <Filters
+        isFiltersOpen={isFiltersOpen}
+        setFilter={setCardsFilter}
+        filter={cardsFilter}
+        setIsFiltersOpen={setIsFiltersOpen}
+      />
       <OpportunityCardsHeader
         // Todo: temporarily just show numOfOpportunities as 0. when map view is available refactor below line.
         numOfOpportunities={selectedTabIndex === 0 ? numOfOpportunities : 0}
@@ -40,6 +48,7 @@ export function OpportunityCards() {
         tabs={tabs}
         selectedTabIndex={selectedTabIndex}
         setSelectedTabIndex={setSelectedTabIndex}
+        setIsFiltersOpen={setIsFiltersOpen}
       />
 
       {selectedTabIndex === 0 ? (
@@ -59,6 +68,8 @@ export function OpportunityCards() {
           popup
           setNumOfOpportunities={setNumOfOpportunities}
           cardsFilter={cardsFilter}
+          setCardsFilter={setCardsFilter}
+          isFiltersOpen={isFiltersOpen}
         />
       ) : (
         <MapView />

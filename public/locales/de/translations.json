@@ -593,7 +593,8 @@
         "en": "Deutsch, Englisch",
         "de": "Deutsch",
         "no": "Sprachmittlung ist nicht nötig"
-      }
+      },
+      "otherCategory": "Sonstiges"
     },
     "testimonials": {
       "header": "ERFAHRUNGSBERICHTE",
@@ -679,7 +680,19 @@
     },
     "resultsFound": "ergebnisse gefunden",
     "searchPlaceHolder": "Suchbegriff eingeben",
-    "filters": "FILTER",
-    "mapViewMessage": "Wird bald verfügbar sein"
+    "mapViewMessage": "Wird bald verfügbar sein",
+    "filters": {
+      "button": "FILTER",
+      "closeFilters": "FILTER SCLIEẞEN",
+      "clearAllFilters": "ALLE FILTER LÖSCHEN",
+      "accompanying": "Begleitung",
+      "accompanyingDesc": "Offen für die Begleitung von Bewohnern zu einzelnen Terminen. Einmalige Ehrenämter, die Deutschkenntnisse erfordern.",
+      "activityType": "Aktivitätstyp",
+      "district": "Bezirk",
+      "days": "Tage",
+      "morning": "Morgen",
+      "afternoon": "Nachmittag",
+      "evening": "Abend"
+    }
   }
 }
