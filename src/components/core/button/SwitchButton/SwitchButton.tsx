@@ -1,55 +1,90 @@
-import "./SwitchButton.css";
+import { CSSProperties } from "react";
+import styled from "styled-components";
 
-interface SwitchButtonProps {
+// Base dimensions for the switch
+const BASE_WIDTH = 50; // px
+const BASE_HEIGHT = 24; // px
+const BASE_CIRCLE_SIZE = 20; // px
+
+type ScaleValue = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
+
+const SwitchContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+`;
+
+interface SwitchButtonProps extends CSSProperties {
+  width: number;
+  height: number;
   isChecked: boolean;
-  onToggle: () => void;
-  scale?: number; // Scale number from 1 to 10
 }
 
-export function SwitchButton({
-  isChecked,
-  onToggle,
-  scale = 5,
-}: SwitchButtonProps) {
-  // Clamp the scale between 1 and 10 to avoid unintended sizes
-  const clampedScale = Math.min(Math.max(scale, 1), 10);
+const SwitchButtonStyled = styled.button<SwitchButtonProps>`
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s;
+  background: ${(props) =>
+    props.isChecked
+      ? "var(--color-aubergine-light)"
+      : "var(--color-neutral-300)"};
+  border: none;
+  padding: 0;
+  width: ${(props) => props.width}px;
+  height: ${(props) => props.height}px;
+  border-radius: ${(props) => props.height / 2}px;
+`;
 
-  // Base dimensions for the switch
-  const baseWidth = 50;
-  const baseHeight = 24;
-  const baseCircle = 20;
+interface SwitchCircleProps {
+  circleSize: number;
+  height: number;
+  width: number;
+  isChecked: boolean;
+}
 
-  // Calculate sizes based on scale
-  const width = (baseWidth / 5) * clampedScale;
-  const height = (baseHeight / 5) * clampedScale;
-  const circleSize = (baseCircle / 5) * clampedScale;
+const SwitchCircle = styled.div<SwitchCircleProps>`
+  position: absolute;
+  border-radius: 50%;
+  background: var(--color-neutral-900);
+  transition: left 0.3s;
+  width: ${(props) => props.circleSize}px;
+  height: ${(props) => props.circleSize}px;
+  top: ${(props) => (props.height - props.circleSize) / 2}px;
+  left: ${(props) =>
+    props.isChecked ? `${props.width - props.circleSize - 2}px` : "2px"};
+`;
+
+interface Props {
+  isChecked: boolean;
+  onToggle: () => void;
+  scale?: ScaleValue;
+}
+
+export function SwitchButton({ isChecked, onToggle, scale = 5 }: Props) {
+  const width = (BASE_WIDTH / 5) * scale;
+  const height = (BASE_HEIGHT / 5) * scale;
+  const circleSize = (BASE_CIRCLE_SIZE / 5) * scale;
 
   return (
-    <div className="switch-container">
-      <button
+    <SwitchContainer>
+      <SwitchButtonStyled
         onClick={onToggle}
         role="switch"
         type="button"
         aria-checked={isChecked}
         aria-label={`Toggle ${isChecked ? "on" : "off"}`}
-        className={`switch-button ${isChecked ? "switch-checked" : ""}`}
-        style={{
-          width: `${width}px`,
-          height: `${height}px`,
-          borderRadius: `${height / 2}px`,
-        }}
+        width={width}
+        height={height}
+        isChecked={isChecked}
       >
-        <div
-          className="switch-circle"
-          style={{
-            width: `${circleSize}px`,
-            height: `${circleSize}px`,
-            top: `${(height - circleSize) / 2}px`,
-            left: isChecked ? `${width - circleSize - 2}px` : "2px",
-          }}
+        <SwitchCircle
+          circleSize={circleSize}
+          height={height}
+          width={width}
+          isChecked={isChecked}
         />
-      </button>
-    </div>
+      </SwitchButtonStyled>
+    </SwitchContainer>
   );
 }
 

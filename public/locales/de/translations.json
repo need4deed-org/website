@@ -6,26 +6,26 @@
   "learnMoreButton": "Möglichkeiten anzeigen",
   "bas2022": "BAS (2022)",
   "formLink": "https://forms.gle/yU4mg6YXfmheKmio6",
-  "accompanyingVolunteering": "Begleitendes Ehrenamt",
+  "accompanyingVolunteering": "Begleitung",
   "projectIntro": {
     "slogan": "Bedarfsorientierte ehrenamtliche Unterstützung für Geflüchtete in Berlin",
     "beVolunteerButton": "Mach mit ehrenamlich!"
   },
   "weekdays": {
+    "0": "Sonntag",
     "1": "Montag",
     "2": "Dienstag",
     "3": "Mittwoch",
     "4": "Donnerstag",
     "5": "Freitag",
-    "6": "Samstag",
-    "0": "Sonntag"
+    "6": "Samstag"
   },
   "emptyList": {
     "header": "Angebote werden aktualisiert...",
-    "para": "Wir aktualisieren gerade die Freiwilligenangebote. Dies kann einige Zeit dauern. Wir empfehlen, die Seite später am Tag erneut zu aktualisieren. Wenn Sie Fragen haben, wenden Sie sich bitte an volunteer@need4deed.org"
+    "para": "Wir aktualisieren gerade die Engagementangebote. Dies kann einige Zeit dauern. Wir empfehlen, die Seite später am Tag erneut zu aktualisieren. Wenn Du Fragen hast, wende Dich bitte an volunteer@need4deed.org"
   },
   "spinner": {
-    "header": "Lade Möglichkeiten...",
+    "header": "Lade Engagementangebote...",
     "para": ""
   },
   "iframeTitles": {
@@ -40,7 +40,7 @@
   "form": {
     "error": {
       "required": "Dieses Feld ist erforderlich",
-      "postcode": "Muss eine gültige Postleitzahl von Berlin sein",
+      "postcode": "Bitte nur die PLZ eintragen (keine Buchstaben, nur Zahlen)",
       "email": "Muss eine gültige E-Mail-Adresse sein",
       "badEmail": "Keine gültige Betreiber E-Mail",
       "location": "Bitte wähle mindestens einen Standort aus",
@@ -49,10 +49,14 @@
       "labelErrors": "Fehler",
       "activity": "Bitte wähle mindestens eine Aktivität aus",
       "language": "Bitte wähle mindestens eine Sprache aus",
-      "number": "Bitte geben Sie eine Nummer ein"
+      "number": "Bitte gib eine Nummer ein"
     },
-    "button": { "more": "mehr...", "submit": "Senden" },
+    "button": {
+      "more": "mehr...",
+      "submit": "Senden"
+    },
     "schedule": {
+      "0": "Gelegentlich verfügbar",
       "1": "Montag",
       "2": "Dienstag",
       "3": "Mittwoch",
@@ -60,25 +64,24 @@
       "5": "Freitag",
       "6": "Samstag",
       "7": "Sonntag",
-      "0": "Gelegentlich verfügbar",
       "weekdays": "Wochentags",
       "weekends": "Wochenenden"
     },
     "becomeVolunteer": {
-      "header": "Werde Freiwilliger bei",
+      "header": "Werde Freiwillige*r bei",
       "thankYou": {
-        "header": "Danke für Ihr Interesse an der Freiwilligenarbeit mit Flüchtlingen :-)",
-        "para": "Wir melden uns in den nächsten Tagen mit den nächsten Schritten bei Ihnen!"
+        "header": "Danke für Dein Interesse an der Freiwilligenarbeit mit Geflüchteten :-)",
+        "para": "Wir melden uns in den nächsten Tagen mit den nächsten Schritten bei Dir!"
       },
       "somethingWrong": {
-        "header": "Da ist etwas schiefgelaufen! ",
-        "para": "Bitte überprüfen Sie alle Pflichtfelder und versuchen Sie es erneut."
+        "header": "Da ist etwas schief gelaufen! ",
+        "para": "Bitte überprüfe alle Pflichtfelder und versuche es erneut."
       },
-      "thanks": "Danke, dass du dich entschieden hast",
+      "thanks": "Danke, dass Du Dich für ehrenamtliches Engagement entschieden hast.",
       "reset": "Zurücksetzen",
       "modal": {
         "continue": "Zur Registrierung",
-        "already": "Schon als Freiwilliger registriert?\nKopiere dies:",
+        "already": "Schon als Freiwillige*r registriert?\nKopiere dies:",
         "copied": "Kopiert",
         "email": "Und sende es per E-Mail an:",
         "number": "Oder via WhatsApp/Telegram an:"
@@ -103,19 +106,19 @@
           "header": "Bevorzugte Bezirke* (Berlin)",
           "para": "*Denke daran, dass die meisten Unterkünfte außerhalb des Rings liegen!",
           "error": "",
-          "helpText": "Falls wir keine perfekte Übereinstimmung finden, können wir dir Angebote senden, die auch auf deinem Standort basieren!",
+          "helpText": "Falls wir kein perfektes Angebot finden, schicken wir Dir die Angebote, die auch auf deinem Standort basieren!",
           "helpTitle": ""
         },
         "availability": {
           "header": "Bevorzugte Zeiträume*",
-          "para": "*Denke daran, dass die meisten Möglichkeiten auf die Arbeitszeiten von 9-17 Uhr begrenzt sind, zumindest am Anfang!",
+          "para": "*Denke daran, dass die meisten Angebote auf die Arbeitszeiten von 9-17 Uhr begrenzt sind, zumindest am Anfang!",
           "error": "",
           "helpText": "Die Verfügbarkeiten von Mo-So beziehen sich auf regelmäßig wiederkehrende Freiwilligenarbeit. Wenn die Zeiträume auf bestimmte Zeiträume begrenzt sind oder erklärt werden müssen, schreibe bitte im letzten Abschnitt in die Kommentare.",
           "helpTitle": ""
         },
         "languages": {
           "header": "Sprachen",
-          "para": "*Wenn Sie Ihre Sprache nicht finden, wählen Sie bitte \"Other\" und geben Sie Ihre bevorzugte Sprache im Kommentarfeld unten an",
+          "para": "*Wenn Du Deine Sprache nicht findest, wähle bitte \"Andere\" und gib Deine bevorzugte Sprache im Kommentarfeld unten an",
           "languagesNative": {
             "header": "Muttersprache",
             "error": ""
@@ -127,25 +130,24 @@
           "languagesIntermediate": {
             "header": "Mittelstufe"
           },
-          "singleLevelError": "Bitte wählen Sie nur auf einer Ebene eine Sprache aus",
-
-          "helpText": "Fließend bedeutet, dass du denkst, dass du es unterstützen kannst, falls einige Übersetzungen zwischen Sprachen benötigt werden. Diese Sprachen sind an den Bedürfnissen von Geflüchteten orientiert. Wenn die Sprache, die du als Muttersprache oder fließend sprichst, nicht hier aufgeführt ist, füge sie bitte im letzten Kommentarfeld hinzu!",
+          "singleLevelError": "Bitte wähle nur auf einer Ebene eine Sprache aus",
+          "helpText": "Fließend bedeutet, dass Du denkst, dass Du bei Übersetzungen zwischen Sprachen unterstützen kannst, falls es nötig ist. Diese Sprachen sind an den Bedürfnissen von Geflüchteten orientiert. Wenn die Sprache, die Du als Muttersprache oder fließend beherrschst, nicht hier aufgelistet ist, füge sie bitte im letzten Kommentarfeld hinzu!",
           "helpTitle": ""
         },
         "activities": {
           "header": "Bevorzugte Aktivitäten",
           "error": "Bitte wähle mindestens eine Aktivität aus",
-          "helpText": "Dies sind die häufigsten Bedürfnisse, die freiwillige Unterstützung erfordern. Manchmal können sie sich ändern, sobald du mit dem Freiwilligendienst beginnst.",
+          "helpText": "Dies sind die häufigsten Bedürfnisse, die freiwillige Unterstützung erfordern. Manchmal können sie sich ändern, sobald Du mit der Freiwilligenarbeit beginnst.",
           "helpTitle": ""
         },
         "skills": {
           "header": "Zusätzliche Fähigkeiten oder Erfahrungen",
-          "helpText": "Alles, was du denkst, dass du aus deiner Erfahrung, deinen Fähigkeiten oder deinem Fachwissen teilen kannst, kann nützlich sein, aber keine Sorge, es ist keine Voraussetzung für Freiwilligenarbeit!",
+          "helpText": "Alles, was Du aus deiner Erfahrung, deinen Fähigkeiten oder deinem Fachwissen teilen kannst, kann nützlich sein, aber keine Sorge, es ist keine Voraussetzung für Freiwilligenarbeit!",
           "helpTitle": ""
         },
         "certOfGoodConduct": {
           "header": "Führungszeugnis",
-          "error": "Bitte wähle mindestens eine Aktivität aus",
+          "error": "Bitte wähle mindestens eine Option aus",
           "why": "Warum brauche ich das?",
           "true": "Ich habe eines",
           "false": "Muss beantragt werden",
@@ -154,14 +156,14 @@
         },
         "certMeaslesVaccination": {
           "header": "Masernimpfnachweis",
-          "error": "Bitte wähle mindestens eine Aktivität aus",
+          "error": "Bitte wähle mindestens eine Option aus",
           "true": "Ich habe einen",
           "false": "Muss nachgewiesen werden",
           "helpText": "",
           "helpTitle": ""
         },
         "leadFrom": {
-          "header": "Woher hast du von uns erfahren?",
+          "header": "Woher hast Du von uns erfahren?",
           "helpText": "",
           "helpTitle": ""
         },
@@ -182,25 +184,25 @@
     "addOpportunity": {
       "header": "Bedarf an Freiwilligenarbeit",
       "thankYou": {
-        "header": "Vielen Dank für das Ausfüllen des Antragsformulars zur freiwilligen Unterstützung Ihrer Unterkunft!",
-        "para": "Wir sollten uns in den nächsten 3 Arbeitstagen bei Ihnen melden. Sollte dies nicht der Fall sein, wenden Sie sich bitte an contact@need4deed.org"
+        "header": "Vielen Dank für das Ausfüllen des Antragsformulars zur freiwilligen Unterstützung der Unterkunft!",
+        "para": "Wir sollten uns in den nächsten 3 Arbeitstagen bei Dir melden. Sollte dies nicht der Fall sein, wende Dich bitte an contact@need4deed.org"
       },
       "wentWrong": {
         "header": "Entschuldigung, auf unserer Seite ist etwas schief gelaufen :-(",
-        "para": "Bitte bewerbt euch zunächst über diese Google-Formulare:",
+        "para": "Bitte nütze zunächst diese Google-Formulare:",
         "volunteeringLink": "Freizeit",
         "accompanyingLink": "Begleitung"
       },
       "temporaryDown": {
-        "header": "Entschuldigung, auf unserer Seite ist etwas schiefgelaufen. Bitte wenden Sie an contact@need4deed.org.",
+        "header": "Entschuldigung, auf unserer Seite ist etwas schiefgelaufen. Bitte wende Dich an contact@need4deed.org.",
         "para": ""
       },
-      "bottomMsg": "Bei Problemen oder Fragen wenden Sie sich bitte an: contact@need4deed.org",
+      "bottomMsg": "Bei Problemen oder Fragen wende Dich bitte an: contact@need4deed.org",
       "fields": {
         "title": {
           "label": "Was wird gebraucht?",
           "example": "z.B. \"Begleitung zur Augenklinik\", \"Basteln & Malen\"",
-          "errorTooLong": "Bitte kürzen Sie den Titel auf 128 Zeichen"
+          "errorTooLong": "Bitte kürze den Titel auf 128 Zeichen"
         },
         "consent": {
           "header": "",
@@ -208,7 +210,7 @@
           "and": "und"
         },
         "contactGroup": {
-          "label": "GU Kontaktinformationen",
+          "label": "Kontaktinformationen der Einrichtung",
           "info": "Nur das Sozialteam oder die Ehrenamtskoordinator*innen dürfen dieses Formular ausfüllen.",
           "email": {
             "label": "E-Mail",
@@ -216,7 +218,7 @@
           },
           "fullName": {
             "label": "Name",
-            "info": "Name des Ehrenamtskoordinator*in oder Sozialarbeiter*in"
+            "info": "Name der*des Ehrenamtskoordinator*in oder Sozialarbeiter*in"
           },
           "address": {
             "label": "Anschrift",
@@ -226,7 +228,9 @@
             "label": "PLZ",
             "info": "der Unterkunft"
           },
-          "phone": { "label": "Telefonnummer" }
+          "phone": {
+            "label": "Telefonnummer"
+          }
         },
         "opportunityType": {
           "header": "Art des Bedarfs",
@@ -245,21 +249,31 @@
             "noTranslation": "Keine Sprachmittlung (Wegebegleitung)",
             "englishOk": "Deutsch oder Englisch",
             "deutsche": "Nur Deutsch",
-            "helpText": "Bitte wählen Sie die Sprache aus, in die übersetzt werden soll (wenn Englisch in Ordnung ist, wählen Sie bitte Englisch und Deutsch aus - das kann bei der Suche nach einem Freiwilligen helfen!). Falls keine Übersetzung benötigt wird, wählen Sie bitte die Option wegebegleitung."
+            "helpText": "Bitte wähle die Sprache aus, in die übersetzt werden soll (wenn Englisch in Ordnung ist, wähle bitte Englisch und Deutsch aus - das kann bei der Suche nach Freiwilligen helfen!). Falls keine Übersetzung benötigt wird, wähle bitte die Option Wegebegleitung."
           },
           "languagesTranslation": {
             "header": "Sprachen, die Geflüchtete sprechen",
-            "helpText": "Bitte wählen Sie die während des Termins benötigten Sprachen aus."
+            "helpText": "Bitte wählen die während des Termins benötigten Sprachen aus."
           },
           "dateTime": {
             "label": "Termin Datum und Uhrzeit",
             "tooClose": "Der Termin muss frühestens nach 7 Werktagen stattfinden."
           },
-          "address": { "label": "Terminanschrift" },
-          "postcode": { "label": "Termin PLZ" },
-          "refugeeName": { "label": "Name des Geflüchteten" },
-          "refugeeNumber": { "label": "Telefonnummer des Geflüchteten" },
-          "information": { "label": "Mehr Informationen" }
+          "address": {
+            "label": "Terminanschrift"
+          },
+          "postcode": {
+            "label": "Termin PLZ"
+          },
+          "refugeeName": {
+            "label": "Name der*des Geflüchteten"
+          },
+          "refugeeNumber": {
+            "label": "Telefonnummer der*des Geflüchteten"
+          },
+          "information": {
+            "label": "Mehr Informationen"
+          }
         },
         "voGroup": {
           "label": "",
@@ -271,7 +285,7 @@
           },
           "schedule": {
             "header": "Zeitplan",
-            "helpText": "Bitte wählen Sie Zeitfenster für die Freiwilligenarbeit aus.",
+            "helpText": "Bitte wähle Zeitfenster für die Freiwilligenarbeit aus.",
             "or": "oder",
             "oneTimeLabel": "Einmaliges Veranstaltungsdatum",
             "error": "Veranstaltungsdatum oder Zeitplan erforderlich",
@@ -279,17 +293,19 @@
           },
           "skills": {
             "header": "Fähigkeiten",
-            "helpText": "Bitte wählen Sie die für die Freiwilligenarbeit benötigten Fähigkeiten aus."
+            "helpText": "Bitte wähle die für die Freiwilligenarbeit benötigten Fähigkeiten aus."
           },
           "languagesRefugee": {
             "header": "Kommunikation ist möglich mit",
-            "helpText": "Bitte wählen Sie die während der Freiwilligenarbeit benötigten Sprachen aus."
+            "helpText": "Bitte wähle die während der Freiwilligenarbeit benötigten Sprachen aus."
           },
           "numberVolunteers": {
             "label": "Wie viele Freiwillige werden benötigt",
-            "error": "Bitte geben Sie eine Zahl ein"
+            "error": "Bitte gib eine Zahl ein"
           },
-          "information": { "label": "Mehr Informationen" }
+          "information": {
+            "label": "Mehr Informationen"
+          }
         }
       }
     }
@@ -300,7 +316,7 @@
     "rsvp": "RSVP bitte",
     "missing": "Keine Informationen",
     "click": "Hier klicken, um mehr zu erfahren.",
-    "locationLink": "Position auf der Karte",
+    "locationLink": "Standort auf der Karte",
     "past": "Vergangene Veranstaltungen",
     "noEvents": "Keine Veranstaltungen"
   },
@@ -343,21 +359,21 @@
     "main": {
       "title": "Was ist ein VolunTea?",
       "para1": "Ein kleines Treffen von Freiwilligen, bei dem man voneinander und vom Team hören kann, wie es ist, Geflüchtete zu unterstützen, und gemeinsam über neue Möglichkeiten nachdenken kann, um mit Menschen in Not in Berlin in Kontakt zu treten.",
-      "para2": "- Wenn du bereits mit dem Freiwilligendienst begonnen hast, bieten diese Treffen Raum, um deine Erfahrungen zu teilen und von anderen zu hören.",
+      "para2": "- Wenn du bereits mit der Freiwilligenarbeit begonnen hast, bieten diese Treffen Raum, um deine Erfahrungen zu teilen und von anderen zu hören.",
       "para3": "- Falls du gemeinsam mit anderen etwas planen möchtest, um Geflüchtete in Berlin zu unterstützen, wird ein Teil des Treffens darauf verwendet, neue Ideen zu hören und herauszufinden, ob andere Freiwillige und unser Team daran interessiert sind, sie zu unterstützen.",
-      "para4": "- Wenn du noch nicht mit dem Freiwilligendienst begonnen hast oder dir unsicher bist, was dich erwartet, hast du hier die Möglichkeit, unser Team kennenzulernen und von aktiven Freiwilligen mehr darüber zu erfahren.",
+      "para4": "- Wenn du noch nicht mit der Freiwilligenarbeit begonnen hast oder dir unsicher bist, was dich erwartet, hast du hier die Möglichkeit, unser Team kennenzulernen und von aktiven Freiwilligen mehr darüber zu erfahren.",
       "para5": "- Bürokratie :) Falls du noch kein Führungszeugnis hast, können wir es für dich beantragen, solange du deinen Reisepass oder Personalausweis mitbringst."
     },
     "outro": {
       "benefits": "Getränke und Snacks gehen auf uns!",
       "rsvp": {
-        "text": "Bitte lass uns wissen, ob du kommst, ",
+        "text": "Bitte lass uns wissen, ob du dabei bist, ",
         "link": "indem du dieses Formular ausfüllst."
       },
       "expired": "Abgelaufen!",
       "address": {
         "floor": "Erster Stock",
-        "lead": "Betreten Sie durch die kleine Tür, direkt neben (links von) dem Haupteingang zum Parken"
+        "lead": "Eingang durch die kleine Tür direkt links neben der Haupteinfahrt."
       }
     }
   },
@@ -413,7 +429,10 @@
       "para1": "Liebe Freiwillige, wir freuen uns, euch zu unserem Sommerfest einladen zu dürfen, das in Zusammenarbeit mit Du für Berlin am Samstag, den 31. August von 13.00 bis 18.00 Uhr organisiert wird.",
       "para2": "Egal, ob Sie bereits freiwillig helfen oder sich für die Freiwilligenarbeit mit geflüchteten Menschen interessieren, kommen Sie vorbei, bringen Sie einen Freund oder mehrere mit!",
       "para3": {
-        "morning": { "timeslot": "13:00-13:30", "title1": "Begrüßung" },
+        "morning": {
+          "timeslot": "13:00-13:30",
+          "title1": "Begrüßung"
+        },
         "day": {
           "timeslot": "13:30-18:00",
           "title1": "Live Musik (Bağlama)",
@@ -501,23 +520,23 @@
     "first_steps_question": "Was sind die ersten Schritte, um Freiwilliger zu werden?",
     "first_steps_answer": "Beginnen Sie mit dem Ausfüllen des Freiwilligenantragsformulars auf der Need4Deed-Website.",
     "after_form_question": "Was passiert, nachdem ich das Formular ausgefüllt habe?",
-    "after_form_answer": "Nachdem wir Ihre Präferenzen und Standorte haben, suchen wir nach einer passenden Gelegenheit für Sie und kontaktieren Sie in den nächsten Tagen.",
+    "after_form_answer": "Nachdem wir Ihre Präferenzen und Standorte haben, suchen wir nach einem passenden Angebot für Sie und kontaktieren Sie in den nächsten Tagen.",
     "find_opportunities_question": "Wie finde ich verfügbare Freiwilligenmöglichkeiten?",
     "find_opportunities_answer": "Sehen Sie auf der Seite 'Möglichkeiten' auf der Need4Deed-Website nach aktuellen Freiwilligenrollen.",
     "volunteer_roles_question": "Welche Arten von Freiwilligenrollen werden angeboten?",
     "volunteer_roles_answer": "Die Rollen umfassen Kinderbetreuung, Sprachcafés, Übersetzungsdienste und Unterstützung bei offiziellen Terminen und sportlichen Aktivitäten.",
-    "special_skills_question": "Brauche ich spezielle Fähigkeiten, um Freiwilliger zu werden?",
+    "special_skills_question": "Brauche ich spezielle Fähigkeiten, um mich freiwillig zu engagieren?",
     "special_skills_answer": "Viele Rollen stehen allen Freiwilligen offen, obwohl für bestimmte Positionen spezielle Fähigkeiten erforderlich sein können.",
     "volunteering_time_question": "Wie viel Zeit nimmt das Freiwilligenengagement in Anspruch?",
     "volunteering_time_answer": "Regelmäßiges Freiwilligenengagement erfordert normalerweise etwa 2 Stunden pro Woche oder zweimal im Monat. Unregelmäßiges Freiwilligenengagement kann stattfinden, wann immer Sie Zeit haben, insbesondere bei Veranstaltungen oder Aufgaben wie Übersetzungen bei Arztterminen.",
     "age_requirements_question": "Gibt es Altersanforderungen für Freiwillige?",
     "age_requirements_answer": "Die Altersanforderungen können variieren, aber die meisten Orte verlangen, dass die Person über 18 Jahre alt ist. Bitte überprüfen Sie die spezifischen Anforderungen in den Angeboten.",
     "voluntea_gatherings_question": "Was kann ich bei den VolunTea-Treffen erwarten?",
-    "voluntea_gatherings_answer": "Die VolunTea-Orientierung umfasst die Mission von Need4Deed, Freiwilligenrollen und Unterstützung bei der Suche nach geeigneten Unterkünften für Flüchtlinge.",
+    "voluntea_gatherings_answer": "Die VolunTea-Treffen umfasst die Mission von Need4Deed, Freiwilligenrollen und Unterstützung bei der Suche nach geeigneten Unterkünften für Geflüchtete.",
     "training_question": "Gibt es eine spezielle Schulung?",
     "training_answer": "Alle paar Monate werden Schulungen angeboten, insbesondere für diejenigen, die Übersetzungsunterstützung leisten.",
     "group_volunteering_question": "Kann ich mit einer Gruppe oder Organisation freiwillig arbeiten?",
-    "group_volunteering_answer": "Ja, Gruppenfreiwilligenarbeit wird gefördert, insbesondere für diejenigen, die Flüchtlingsunterkünfte unterstützen."
+    "group_volunteering_answer": "Ja, Gruppenfreiwilligenarbeit wird gefördert, insbesondere für diejenigen, die Unterkünfte für Geflüchtete unterstützen."
   },
   "opportunityCard": {
     "titles": {
@@ -536,7 +555,7 @@
       "content": {
         "heroText": "Ehrenamtliche Unterstützung für Geflüchtete",
         "heroSupportingText": "Wir verbinden Freiwillige mit Gemeinschaftsunterkünften in Berlin",
-        "buttonJoinVolunteer": "Jetzt freiwillig engagieren",
+        "buttonJoinVolunteer": "Jetzt sich engagieren",
         "buttonJoinRefugeeCenter": "Unterstützung als Unterkunft beantragen"
       }
     },
@@ -545,36 +564,37 @@
       "headerParagraph": "Wir bieten verschiedene Arten von ehrenamtlichen Tätigkeiten an, entweder regelmäßig oder gelegentlich.",
       "card": {
         "germanLanguageSupport": "Deutsche Unterstützung",
-        "germanLanguageSupportInfo": "Sprichst du fließend Deutsch? Unterstütze Geflüchtete, indem du in Sprachcafés unterrichtest oder Nachhilfe gibst – privat oder in Gruppen.",
+        "germanLanguageSupportInfo": "Sprichst Du fließend Deutsch? Unterstütze Geflüchtete, indem du in Sprachcafés unterrichtest oder Nachhilfe gibst – privat oder in Gruppen.",
         "childcare": "Kinderbetreuung",
         "childcareInfo": "Hilf Kindern in Unterkünften – bei der Betreuung am Tag oder den Hausaufgaben. Erfahrung mit Kindern ist ein Plus!",
         "skillsBasedVolunteering": "Ehrenamt mit Fachkenntnissen",
         "skillsBasedVolunteeringInfo": "Nutze deine Fähigkeiten – z. B. Fahrradreparatur, Gartenarbeit oder Musik.",
         "events": "Veranstaltungen",
-        "eventsInfo": "Manche Events brauchen extra Hilfe – Festivals, Ausflüge, Gartenarbeit oder Kleiderkammer einrichten.",
+        "eventsInfo": "Manche Events brauchen extra Hilfe - Festivals, Ausflüge, Gartenarbeit oder Eintichtung von Kleiderkammer.",
         "sportsActivities": "Allgemeines Engagement",
-        "sportsActivitiesInfo": "Hilf mit Kleiderkammer, Tandem oder Sportangebote für Kinder, Jugendliche oder Erwachsene in Unterkünften zu organisieren.",
+        "sportsActivitiesInfo": "Unterstütze mit Kleiderkammer, Tandem oder Sportangebote für Kinder, Jugendliche oder Erwachsene in Unterkünften.",
         "accompanyARefugee": "Begleitung",
-        "accompanyARefugeeInfo": "Sprichst du fließend Deutsch und eine weitere Sprache? Begleite Geflüchtete zu Ämtern, Ärzt:innen oder anderen Terminen."
+        "accompanyARefugeeInfo": "Sprichst Du fließend Deutsch und eine weitere Sprache? Begleite Geflüchtete zu Ämtern, Ärzt*innen oder anderen Terminen."
       },
       "footerButton": "Siehe Ehrenamtsangebote"
     },
     "volunteeringOpportunities": {
-      "header": "Freiwilligenmöglichkeiten entdecken",
+      "header": "Ehrenamtsangebote entdecken",
       "languages": "Sprachen",
       "schedule": "Zeitplan",
       "district": "Bezirk",
-      "footerButton": "Alle Freiwilligenmöglichkeiten ansehen",
-      "dateOfAppointment": "Datum der Ernennung",
+      "footerButton": "Alle Ehrenamtsangebote ansehen",
+      "dateOfAppointment": "Datum des Termins",
       "mainCommunication": "Hauptkommunikation",
       "defaultMainCommunication": "Englisch, Deutsch",
       "translationTo": "Übersetzung nach",
-      "residentsSpeak": "Bewohner sprechen",
+      "residentsSpeak": "Bewohnende sprechen",
       "accompanyingTranslation": {
         "en": "Deutsch, Englisch",
         "de": "Deutsch",
         "no": "Sprachmittlung ist nicht nötig"
-      }
+      },
+      "otherCategory": "Sonstiges"
     },
     "testimonials": {
       "header": "ERFAHRUNGSBERICHTE",
@@ -582,7 +602,7 @@
     },
     "racSection": {
       "headLine1": "Wir unterstützen Organisationen",
-      "headLine2": "Arbeiten Sie in einer Unterkunft für Geflüchtete?",
+      "headLine2": "Arbeitest Du in einer Unterkunft für Geflüchtete?",
       "buttonSupport": "Freiwillige Unterstützung beantragen",
       "buttonSupportMobile": "Freiwillige Hilfe anfragen",
       "buttonHowItWorks": "So funktioniert es"
@@ -597,43 +617,43 @@
       "contact": "Kontakt"
     },
     "processSteps": {
-      "headline": "Wie Sie Geflüchtete in Ihrer Gemeinde unterstützen können",
-      "stepsHeadline": "So fangen Sie an",
+      "headline": "Wie Du Geflüchtete in Deiner Nachbarschaft unterstützen können",
+      "stepsHeadline": "So fängst Du an",
       "steps": {
         "1": {
           "title": "Anmelden",
           "week": "WOCHE 1",
-          "infoText1": "Klicken Sie auf „Freiwillige:r werden“",
-          "infoText2": "Nutzen Sie unser Online-Formular, um grundlegende Informationen, Fähigkeiten und Präferenzen einzugeben"
+          "infoText1": "Klick auf „Jetzt sich engagieren“",
+          "infoText2": "Nutze unser Online-Formular, um grundlegende Informationen, Fähigkeiten und Präferenzen einzugeben"
         },
         "2": {
           "title": "Zusätzliche Dokumente beantragen und einreichen",
           "week": "WOCHE 1",
-          "infoText1": "Beantragen Sie ein erweitertes Führungszeugnis individuell oder mit Hilfe von Need4Deed",
-          "infoText2": "Holen Sie sich eine Masernimpfung"
+          "infoText1": "Beantrage ein erweitertes Führungszeugnis individuell oder mit Hilfe von Need4Deed",
+          "infoText2": "Stelle sicher, dass ein Masernschutz vorliegt."
         },
         "3": {
-          "title": "Wir suchen Ihren Einsatzort",
+          "title": "Wir suchen Deinen Einsatzort",
           "week": "WOCHE 1",
-          "infoText1": "Währenddessen suchen wir nach der besten Übereinstimmung mit einem Koordinator einer Flüchtlingseinrichtung, die Unterstützung benötigt"
+          "infoText1": "Währenddessen suchen wir nach dem besten Match mit der Ehenamtskoordination einer Unterkunft für Geflüchtete, die Unterstützung benötigt"
         },
         "4": {
           "title": "Wir finden eine passende Stelle!",
           "week": "WOCHE 1-2",
-          "infoText1": "Wir finden eine Flüchtlingseinrichtung, die Sie aufgrund Ihrer Fähigkeiten und Präferenzen am besten unterstützen können"
+          "infoText1": "Wir finden eine Unterkunft für Geflüchtete, die du aufgrund deiner Fähigkeiten und Präferenzen am besten unterstützen kannst"
         },
         "5": {
           "title": "Erster Kontakt und Kennenlerntreffen",
           "week": "WOCHE 2-3",
-          "infoText1": "Sie werden per E-Mail mit einem Koordinator der Flüchtlingseinrichtung in Kontakt gebracht, der Sie zu einem Kennenlerntreffen einlädt, bei dem Sie mehr über Ihren ersten Einsatz erfahren"
+          "infoText1": "Wir verbinden Dich per E-Mail mit der Ehrenamtskoordination der Unterkunft, die Dich zu einem Kennenlerntreffen einlädt, bei dem Du mehr über Deinen ersten Einsatz erfährst"
         },
         "6": {
-          "title": "Sie können mit Ihrem ersten Freiwilligendienst beginnen!",
+          "title": "Du kannst anfangen, Dich freiwillig zu engagieren!",
           "week": "WOCHE 3-4",
-          "infoText1": "Sie sollten inzwischen Ihr erweitertes Führungszeugnis per Post erhalten haben – dieses legen Sie im Flüchtlingsheim vor"
+          "infoText1": "Du solltest inzwischen das erweitertes Führungszeugnis per Post erhalten haben – dieses zeigst Du in der Unterkinft für Geflüchtete vor"
         },
         "lastStep": {
-          "text": "Falls Sie mehrsprachig sind, werden Sie möglicherweise gebeten, bei Bedarf zu begleiten und zu übersetzen"
+          "text": "Falls Du mehrsprachig bist, wirst Du möglicherweise gebeten, bei Bedarf zu begleiten und zu dolmetschen"
         }
       }
     },
@@ -643,7 +663,7 @@
     }
   },
   "opportunityPage": {
-    "header": "Entdecke Freiwilligenmöglichkeiten",
+    "header": "Entdecke Ehrenamtsangebote",
     "popup": {
       "register": {
         "title": "Neu hier? Jetzt registrieren",
@@ -660,7 +680,19 @@
     },
     "resultsFound": "ergebnisse gefunden",
     "searchPlaceHolder": "Suchbegriff eingeben",
-    "filters": "FILTER",
-    "mapViewMessage": "Wird bald verfügbar sein"
+    "mapViewMessage": "Wird bald verfügbar sein",
+    "filters": {
+      "button": "FILTER",
+      "closeFilters": "FILTER SCLIEẞEN",
+      "clearAllFilters": "ALLE FILTER LÖSCHEN",
+      "accompanying": "Begleitung",
+      "accompanyingDesc": "Offen für die Begleitung von Bewohnern zu einzelnen Terminen. Einmalige Ehrenämter, die Deutschkenntnisse erfordern.",
+      "activityType": "Aktivitätstyp",
+      "district": "Bezirk",
+      "days": "Tage",
+      "morning": "Morgen",
+      "afternoon": "Nachmittag",
+      "evening": "Abend"
+    }
   }
 }
