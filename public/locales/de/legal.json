@@ -338,7 +338,8 @@
       "part1": "We have implemented technical and organizational measures to ensure compliance with the GDPR, both internally and by external service providers working on our behalf. When we collaborate with other companies—such as email and server providers—this only occurs following a comprehensive selection process. Each provider is carefully assessed for their data protection capabilities. This process is documented in writing, and a data processing agreement according to Art. 28(3) GDPR is only signed if the provider meets all requirements under Art. 28 GDPR.",
       "part2": "Your data is stored on specially secured servers, accessible only to a few specially authorized persons.",
       "part3": "Our website uses SSL/TLS encryption, identifiable by “https://” in the URL. If personal data is involved in email communication, it is also encrypted using an integrated SSL certificate.",
-      "link1": "You can find a"
+      "link1": "You can find a",
+      "link2": " link here"
     },
     "accordion-2": {
       "header": "Deletion of Personal Data",
@@ -363,6 +364,36 @@
       "h-3": "Data is deleted once no longer needed, usually when the session ends. Our host may use anonymized data for statistics. All-inkl.com deletes data after 7 days.",
       "head4": "Objection Option",
       "h-4": "The website can only be displayed if this data is processed. Objections must be directed to our data protection officer or hosting provider."
+    },
+    "accordion-4": {
+      "header": "Use of Cookies",
+      "part1": "Our website uses cookies, which are stored on your device when you visit. Cookies are small text files stored on your hard drive and assigned to your browser. They cannot execute programs or transmit viruses.",
+      "part2": "We use them to anonymously or pseudonymously analyze use of the website and present relevant offers. This can involve collecting data such as:",
+      "part3": "Frequency of visits",
+      "part4": "Features used",
+      "part5": "Search terms used",
+      "part6": "Cookie settings",
+      "part7": "Language preferences",
+      "head1": "Legal Basis",
+      "h-1": "For non-essential cookies: Art. 6(1)(a) GDPR (your consent).For essential cookies: Art. 6(1)(f) GDPR (our legitimate interest in basic functionality).",
+      "head2": "Purpose",
+      "h-2": "Our interest lies in providing smooth access, user-friendly browsing, and security monitoring. Data is also used for anonymous usage statistics.",
+      "head3": "Storage Duration",
+      "h-3": "We use two types of cookies: a) Transient cookies (e.g., session cookies), which are deleted when you close your browser. These include session IDs to recognize returning users. b) Persistent cookies, which are deleted after a set period, depending on the cookie.",
+      "head4": "Objection Option",
+      "h-4": "You may withdraw consent for non-essential cookies at any time. Cookies are only used after you agree via the banner.  You can also delete cookies in your browser’s security settings or prevent them entirely. Note: Some features may then be unavailable."
+    },
+    "accordion-5": {
+      "header": "Contact",
+      "part1": "You can contact us via email at info@club-dialog.de. In doing so, necessary data is collected and automatically stored for processing the inquiry. No data is passed on to third parties.",
+      "head1": "Legal Basis",
+      "h-1": "Art. 6(1)(b) GDPR – processing necessary for responding to your inquiry.",
+      "head2": "Purpose",
+      "h-2": "We use your data solely to respond to your contact request.",
+      "head3": "Storage Duration",
+      "h-3": "Your data will be deleted after your request has been addressed, unless legal obligations require us to keep it longer.",
+      "head4": "Objection Option",
+      "h-4": "You can object at any time. In that case, we can no longer continue the communication. All data will be deleted unless legally required otherwise."
     }
   },
   "agreement": {
