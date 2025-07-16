@@ -51,28 +51,32 @@ export default function FiltersContent({ setFilter, filter }: Props) {
   const { t } = useTranslation();
   const { activityType, district } = filter;
 
-  const activityTypeFilterItems = Object.keys(activityType).map((a) => {
-    return {
-      label: a,
-      checked: activityType[a],
-      onChange: (checked: boolean) => {
-        activityType[a] = checked;
-        setFilter({ ...filter, activityType });
-      },
-    };
-  });
+  const activityTypeFilterItems = Object.keys(activityType)
+    .sort()
+    .map((a) => {
+      return {
+        label: a,
+        checked: activityType[a],
+        onChange: (checked: boolean) => {
+          activityType[a] = checked;
+          setFilter({ ...filter, activityType });
+        },
+      };
+    });
 
-  const districtFilterItems = Object.keys(district).map((d) => {
-    return {
-      label: d,
-      checked: district[d],
-      onChange: (checked: boolean) => {
-        district[d] = checked;
+  const districtFilterItems = Object.keys(district)
+    .sort()
+    .map((d) => {
+      return {
+        label: d,
+        checked: district[d],
+        onChange: (checked: boolean) => {
+          district[d] = checked;
 
-        setFilter({ ...filter, district });
-      },
-    };
-  });
+          setFilter({ ...filter, district });
+        },
+      };
+    });
 
   const daysFilterItems = weekDays.map((day) => {
     return {
