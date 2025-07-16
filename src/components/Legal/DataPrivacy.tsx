@@ -141,6 +141,7 @@ function DataPrivacy() {
             <p>{t("legal:dataPrivacy.accordion-5.h-3")}</p>
             <h4>{t("legal:dataPrivacy.accordion-5.head4")}</h4>
             <p>{t("legal:dataPrivacy.accordion-5.h-4")}</p>
+            <p>test</p>
           </Accordion.Body>
         </Accordion>
       </div>

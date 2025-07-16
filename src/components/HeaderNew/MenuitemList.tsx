@@ -20,7 +20,6 @@ export default function MenuitemList({ items, menuItemColor }: Props) {
             onClickHandler={whatsOnClick}
           />
         ) : (
-          // @ts-expect-error TS2786
           <HashLink smooth to={whatsOnClick}>
             <MenuItem text={text} key={text} color={menuItemColor} />
           </HashLink>
