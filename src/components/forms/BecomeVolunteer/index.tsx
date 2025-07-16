@@ -34,7 +34,7 @@ import {
 import { VolunteerData, VolunteerParsedData } from "./dataStructure";
 import FillOrNotify from "./FillOrNotify";
 
-const thankYou = "?pointer=form.becomeVolunteer.thankYou";
+const thankYou = "form.becomeVolunteer.thankYou";
 const somethingWrong = "form.becomeVolunteer.somethingWrong";
 
 export default function BecomeVolunteer() {
@@ -97,7 +97,7 @@ export default function BecomeVolunteer() {
 
       const { success } = await postRequest(data);
       if (success) {
-        navigate(`/${Subpages.ANNOUNCEMENT}/${lng}${thankYou}`);
+        navigate(`/${Subpages.ANNOUNCEMENT}/?pointer=${thankYou}`);
       } else {
         setShowErrorAnnouncement(true);
       }
