@@ -11,6 +11,7 @@ import { googleAnalyticsId } from "./config/constants";
 import { Subpages } from "./config/types";
 import AppContainerContext from "./contexts/AppContainerContext";
 import About from "./pages/About";
+import Announcement from "./pages/Announcement";
 import DataPrivacy from "./pages/DataPrivacy";
 import EventPage from "./pages/EventPage";
 import FAQ from "./pages/FAQ";
@@ -24,7 +25,6 @@ import Subpage from "./pages/Subpage";
 import VolunteerForm from "./pages/VolunteerForm";
 import Agreement from "./pages/VPA";
 import { consoleLogDeveloperContributionMessage } from "./utils";
-import Announcement from "./pages/Announcement";
 
 const queryClient = new QueryClient();
 
