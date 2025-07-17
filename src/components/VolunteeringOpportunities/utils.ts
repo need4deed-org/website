@@ -141,12 +141,12 @@ export const getMappedOpportunities = (
 };
 
 export enum CategoryTitle {
-  ACCOMPANYING = "6",
-  SPORT_ACTIVITIES = "5",
-  EVENTS = "4",
-  SKILLS_BASED = "3",
-  CHILD_CARE = "2",
-  DE_LNG_SUPPORT = "1",
+  ACCOMPANYING = 6,
+  SPORT_ACTIVITIES = 5,
+  EVENTS = 4,
+  SKILLS_BASED = 3,
+  CHILD_CARE = 2,
+  DE_LNG_SUPPORT = 1,
 }
 
 export function getIconName(category: CategoryTitle) {
@@ -161,7 +161,7 @@ export function getIconName(category: CategoryTitle) {
 
   return category in categoryIconMap
     ? categoryIconMap[category]
-    : categoryIconMap[`${Math.ceil(Math.random() * 6)}` as CategoryTitle]; // random 1..6
+    : IconName.Sparkle;
 }
 
 const aubergineColorActivities = [
