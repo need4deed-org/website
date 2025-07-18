@@ -51,28 +51,33 @@ export default function FiltersContent({ setFilter, filter }: Props) {
   const { t } = useTranslation();
   const { activityType, district } = filter;
 
-  const activityTypeFilterItems = Object.keys(activityType).map((a) => {
-    return {
-      label: a,
-      checked: activityType[a],
-      onChange: (checked: boolean) => {
-        activityType[a] = checked;
-        setFilter({ ...filter, activityType });
-      },
-    };
-  });
+  const activityTypeFilterItems = Object.keys(activityType)
+    .sort()
+    .map((a) => {
+      return {
+        label: a,
+        checked: activityType[a],
+        onChange: (checked: boolean) => {
+          activityType[a] = checked;
 
-  const districtFilterItems = Object.keys(district).map((d) => {
-    return {
-      label: d,
-      checked: district[d],
-      onChange: (checked: boolean) => {
-        district[d] = checked;
+          setFilter((prevFilter) => ({ ...prevFilter, activityType }));
+        },
+      };
+    });
 
-        setFilter({ ...filter, district });
-      },
-    };
-  });
+  const districtFilterItems = Object.keys(district)
+    .sort()
+    .map((d) => {
+      return {
+        label: d,
+        checked: district[d],
+        onChange: (checked: boolean) => {
+          district[d] = checked;
+
+          setFilter((prevFilter) => ({ ...prevFilter, district }));
+        },
+      };
+    });
 
   const daysFilterItems = weekDays.map((day) => {
     return {
@@ -86,7 +91,7 @@ export default function FiltersContent({ setFilter, filter }: Props) {
 
             days[day][daySlot] = checked;
 
-            setFilter({ ...filter, days });
+            setFilter((prevFilter) => ({ ...prevFilter, days }));
           },
         };
       }),
@@ -95,7 +100,8 @@ export default function FiltersContent({ setFilter, filter }: Props) {
 
   const accompanyingClickHandler = () => {
     const accompanying = !filter.accompanying;
-    setFilter({ ...filter, accompanying });
+
+    setFilter((prevFilter) => ({ ...prevFilter, accompanying }));
   };
 
   return (

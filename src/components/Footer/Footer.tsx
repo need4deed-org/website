@@ -29,7 +29,9 @@ function Footer({ showSponsors = true }: Props) {
                 </HashLink>
               </li>
               <li>
-                <HashLink smooth to={`/${Subpages.FAQ}/${i18n.language}`}>
+
+                {/* @ts-expect-error TS2786 */}
+                <HashLink smooth to={`/${Subpages.FAQS}/${i18n.language}`}>
                   {t("faqs.faqs")}
                 </HashLink>
               </li>
