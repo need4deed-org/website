@@ -98,7 +98,7 @@ function Header({ showEvent }: Props) {
             <li className="nav-item">
               <a
                 className="nav-link"
-                href={`/${Subpages.FAQS}/${i18n.language}`}
+                href={`/${Subpages.FAQ}/${i18n.language}`}
               >
                 {t("faqs.faqs")}
               </a>
@@ -108,7 +108,7 @@ function Header({ showEvent }: Props) {
               <li className="nav-item">
                 <a
                   className="nav-link nav-link-secondary"
-                  href={`/${Subpages.EVENT}/${i18n.language}`}
+                  href={`/${Subpages.EVENT_PAGE}/${i18n.language}`}
                 >
                   {eventActive.menuTitle}
                 </a>

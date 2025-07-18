@@ -38,19 +38,7 @@ export enum YesNo {
 }
 
 export enum Subpages {
-  NOTICE = "old/impressum",
-  DATA_PROTECTION = "old/datenschutzerklaerung",
-  AGREEMENT = "old/vereinbarung",
-  GUIDELINES = "old/guidelines",
-  BECOME_VOLUNTEER = "old/become-volunteer",
-  ANNOUNCEMENT = "announcement",
-  EVENT = "old/event",
-  EVENTS = "old/events",
-  PAST_EVENTS = "old/past-events",
-  ADD_OPPORTUNITY = "old/add-opportunity",
-  COOKIES = "old/cookies",
-  FAQS = "old/faqs",
-  OLD = "old",
+  ANNOUNCEMENT = "/announcement",
   FAQ = "faq",
   ABOUT = "about",
   LEGAL_NOTICE = "legal-notice",
