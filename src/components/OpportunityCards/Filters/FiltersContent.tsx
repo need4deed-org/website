@@ -59,7 +59,8 @@ export default function FiltersContent({ setFilter, filter }: Props) {
         checked: activityType[a],
         onChange: (checked: boolean) => {
           activityType[a] = checked;
-          setFilter({ ...filter, activityType });
+
+          setFilter((prevFilter) => ({ ...prevFilter, activityType }));
         },
       };
     });
@@ -73,7 +74,7 @@ export default function FiltersContent({ setFilter, filter }: Props) {
         onChange: (checked: boolean) => {
           district[d] = checked;
 
-          setFilter({ ...filter, district });
+          setFilter((prevFilter) => ({ ...prevFilter, district }));
         },
       };
     });
@@ -90,7 +91,7 @@ export default function FiltersContent({ setFilter, filter }: Props) {
 
             days[day][daySlot] = checked;
 
-            setFilter({ ...filter, days });
+            setFilter((prevFilter) => ({ ...prevFilter, days }));
           },
         };
       }),
@@ -99,7 +100,8 @@ export default function FiltersContent({ setFilter, filter }: Props) {
 
   const accompanyingClickHandler = () => {
     const accompanying = !filter.accompanying;
-    setFilter({ ...filter, accompanying });
+
+    setFilter((prevFilter) => ({ ...prevFilter, accompanying }));
   };
 
   return (
