@@ -4,6 +4,15 @@ import { TFunction } from "i18next";
 import { IconName } from "../VolunteeringCategories/types";
 import { Opportunity, OpportunityApi } from "./types";
 
+export enum CategoryTitle {
+  ACCOMPANYING = 6,
+  SPORT_ACTIVITIES = 5,
+  EVENTS = 4,
+  SKILLS_BASED = 3,
+  CHILD_CARE = 2,
+  DE_LNG_SUPPORT = 1,
+}
+
 export const getSortedAccompanyingOpps = (
   opportunities: OpportunityApi[],
   order: "ASC" | "DESC" = "ASC",
@@ -101,6 +110,13 @@ const mapOpportunity = (opp: OpportunityApi, t: TFunction) => {
 
   const otherCategory = t("homepage.volunteeringOpportunities.otherCategory");
 
+  const category =
+    (opp.category_id === CategoryTitle.ACCOMPANYING &&
+      opp.opportunity_type === OpportunityType.GENERAL) ||
+    !opp.category
+      ? otherCategory
+      : opp.category;
+
   const newOpp: Opportunity = {
     accompanyingDate: opp.accomp_datetime
       ? new Date(opp.accomp_datetime)
@@ -127,7 +143,7 @@ const mapOpportunity = (opp: OpportunityApi, t: TFunction) => {
     categoryId: opp.category_id,
     lastEditedTimeNotion: new Date(opp.last_edited_time_notion),
     defaultMainCommunication,
-    category: opp.category || otherCategory,
+    category,
   };
 
   return newOpp;
@@ -139,15 +155,6 @@ export const getMappedOpportunities = (
 ) => {
   return opps.map((opp) => mapOpportunity(opp, t));
 };
-
-export enum CategoryTitle {
-  ACCOMPANYING = "6",
-  SPORT_ACTIVITIES = "5",
-  EVENTS = "4",
-  SKILLS_BASED = "3",
-  CHILD_CARE = "2",
-  DE_LNG_SUPPORT = "1",
-}
 
 export function getIconName(category: CategoryTitle) {
   const categoryIconMap = {
@@ -161,7 +168,7 @@ export function getIconName(category: CategoryTitle) {
 
   return category in categoryIconMap
     ? categoryIconMap[category]
-    : categoryIconMap[`${Math.ceil(Math.random() * 6)}` as CategoryTitle]; // random 1..6
+    : IconName.Sparkle;
 }
 
 const aubergineColorActivities = [
