@@ -47,7 +47,7 @@ export function getBaseUrl(url: string) {
   return baseUrl ? `/${baseUrl}` : "";
 }
 
-export const isRtlLang = (lang: Lang) => [Lang.AR, Lang.FA].includes(lang);
+// export const isRtlLang = (lang: Lang) => [Lang.AR, Lang.FA].includes(lang);
 
 export function setLangDirection(
   containerRef: MutableRefObject<HTMLDivElement | null>,
@@ -56,7 +56,8 @@ export function setLangDirection(
   if (isEnumValue(Lang, lng)) {
     containerRef?.current?.style.setProperty(
       "--n4d-lang-direction",
-      isRtlLang(lng) ? "rtl" : "ltr",
+      // isRtlLang(lng) ? "rtl" : "ltr",
+      "ltr",
     );
   }
 }
