@@ -47,18 +47,12 @@ export function getBaseUrl(url: string) {
   return baseUrl ? `/${baseUrl}` : "";
 }
 
-// export const isRtlLang = (lang: Lang) => [Lang.AR, Lang.FA].includes(lang);
-
 export function setLangDirection(
   containerRef: MutableRefObject<HTMLDivElement | null>,
   lng: Lang,
 ) {
   if (isEnumValue(Lang, lng)) {
-    containerRef?.current?.style.setProperty(
-      "--n4d-lang-direction",
-      // isRtlLang(lng) ? "rtl" : "ltr",
-      "ltr",
-    );
+    containerRef?.current?.style.setProperty("--n4d-lang-direction", "ltr");
   }
 }
 
@@ -132,31 +126,6 @@ export function isoCodesToNames(isoCodes: string) {
     console.error(error);
     return "";
   }
-}
-
-export function getFilter(search: OpportunityParams["search"]) {
-  return search
-    ? (item: Record<string, string>) =>
-        Object.entries(search).reduce(
-          (target, [searchKey, searchValues]) =>
-            target &&
-            searchValues.reduce(
-              (trg, value) => trg || item[searchKey] === value,
-              false,
-            ),
-          true,
-        )
-    : () => true;
-}
-
-export function mapToOpportunity(opportunity: Record<string, string>) {
-  return Object.entries(opportunity).reduce(
-    (result: Record<string, string>, [key, value]) => ({
-      ...result,
-      [key.split(" ")[0].toLowerCase()]: value,
-    }),
-    {},
-  );
 }
 
 export function mapOpportunity(opportunity: AlfredOpportunity, keyMap: KeyMap) {

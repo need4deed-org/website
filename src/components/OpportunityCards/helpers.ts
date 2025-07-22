@@ -4,6 +4,7 @@ import { TFunction } from "i18next";
 import { Opportunity } from "../VolunteeringOpportunities/types";
 import { CardsFilter, Day, DayKeys, Days, DaysKeys } from "./types";
 import { TimeSlot } from "../forms/types";
+import { CategoryTitle } from "../VolunteeringOpportunities/utils";
 
 const dayEnumMap: Record<string, DaysKeys> = {
   1: "monday",
@@ -224,7 +225,9 @@ export const extractCardsFilter = (
   const districtSet = new Set<string>();
 
   for (const opp of opportunities) {
-    categoriesSet.add(opp.category);
+    // exclude "accompanying" from category "Activity Type" filters
+    if (opp.categoryId !== CategoryTitle.ACCOMPANYING)
+      categoriesSet.add(opp.category);
 
     opp.locations.forEach((l) => districtSet.add(l));
   }

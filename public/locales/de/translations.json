@@ -272,7 +272,7 @@
             "label": "Telefonnummer der*des Geflüchteten"
           },
           "information": {
-            "label": "Mehr Informationen"
+            "label": "Gib Informationen über die Aufgabe, die von den Freiwilligen erwartet wird"
           }
         },
         "voGroup": {
@@ -304,7 +304,7 @@
             "error": "Bitte gib eine Zahl ein"
           },
           "information": {
-            "label": "Mehr Informationen"
+            "label": "Gib Informationen über die Aufgabe, die von den Freiwilligen erwartet wird"
           }
         }
       }
@@ -594,7 +594,7 @@
         "de": "Deutsch",
         "no": "Sprachmittlung ist nicht nötig"
       },
-      "otherCategory": "Sonstiges"
+      "otherCategory": "Allgemeines Engagement"
     },
     "testimonials": {
       "header": "ERFAHRUNGSBERICHTE",
