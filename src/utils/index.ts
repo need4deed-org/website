@@ -128,31 +128,6 @@ export function isoCodesToNames(isoCodes: string) {
   }
 }
 
-export function getFilter(search: OpportunityParams["search"]) {
-  return search
-    ? (item: Record<string, string>) =>
-        Object.entries(search).reduce(
-          (target, [searchKey, searchValues]) =>
-            target &&
-            searchValues.reduce(
-              (trg, value) => trg || item[searchKey] === value,
-              false,
-            ),
-          true,
-        )
-    : () => true;
-}
-
-export function mapToOpportunity(opportunity: Record<string, string>) {
-  return Object.entries(opportunity).reduce(
-    (result: Record<string, string>, [key, value]) => ({
-      ...result,
-      [key.split(" ")[0].toLowerCase()]: value,
-    }),
-    {},
-  );
-}
-
 export function mapOpportunity(opportunity: AlfredOpportunity, keyMap: KeyMap) {
   return Object.entries(keyMap).reduce(
     (mapped: Record<string, string>, [key, value]) => {
