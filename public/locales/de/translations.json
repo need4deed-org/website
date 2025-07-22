@@ -304,7 +304,7 @@
             "error": "Bitte gib eine Zahl ein"
           },
           "information": {
-            "label": "Mehr Informationen"
+            "label": "Gib Informationen über die Aufgabe, die von den Freiwilligen erwartet wird"
           }
         }
       }
