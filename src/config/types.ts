@@ -52,6 +52,7 @@ export enum Subpages {
   FAQS = "old/faqs",
   OLD = "old",
   FAQ = "faq",
+  FAQ2 = "FAQ2",
   ABOUT = "about",
   LEGAL_NOTICE = "legal-notice",
   DATA_PRIVACY = "data-privacy",

@@ -23,6 +23,7 @@ import OpportunityForm from "./pages/OpportunityForm";
 import Subpage from "./pages/Subpage";
 import VolunteerForm from "./pages/VolunteerForm";
 import Agreement from "./pages/VPA";
+import FAQ2 from "./pages/FAQ2";
 import { consoleLogDeveloperContributionMessage } from "./utils";
 
 const queryClient = new QueryClient();
@@ -140,6 +141,7 @@ function App() {
                 path={`/${Subpages.FAQS}`}
                 element={<Subpage type={Subpages.FAQS} />}
               />
+              <Route path={`/${Subpages.FAQ2}`} element={<FAQ2 />} />
               <Route path={`/${Subpages.FAQ}`} element={<FAQ />} />
               <Route path={`/${Subpages.ABOUT}`} element={<About />} />
               <Route
