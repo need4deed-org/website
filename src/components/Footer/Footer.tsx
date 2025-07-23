@@ -1,10 +1,10 @@
 import { useTranslation } from "react-i18next";
 import { HashLink } from "react-router-hash-link";
 
-import { Subpages } from "../../config/types";
 import CookieConsentBanner from "../CookieConsentBanner";
 import Sponsors from "../Sponsors/Sponsors";
 import "./Footer.css";
+import { Subpages } from "../../config/types";
 
 interface Props {
   showSponsors?: boolean;
@@ -24,12 +24,12 @@ function Footer({ showSponsors = true }: Props) {
             <h6>{t("footer.aboutUs.aboutUsHeading")}</h6>
             <ul>
               <li>
-                {/* @ts-expect-error TS2786 */}
                 <HashLink smooth to={`/${i18n.language}#about-project`}>
                   {t("footer.aboutUs.project")}
                 </HashLink>
               </li>
               <li>
+
                 {/* @ts-expect-error TS2786 */}
                 <HashLink smooth to={`/${Subpages.FAQS}/${i18n.language}`}>
                   {t("faqs.faqs")}
@@ -39,28 +39,6 @@ function Footer({ showSponsors = true }: Props) {
           </div>
           <div className="footer-column">
             <h6>{t("footer.legal.legalHeading")}</h6>
-            <ul>
-              <li>
-                <a href={`/${Subpages.NOTICE}/${i18n.language}`}>
-                  {t("footer.legal.impressum")}
-                </a>
-              </li>
-              <li>
-                <a href={`/${Subpages.DATA_PROTECTION}/${i18n.language}`}>
-                  {t("footer.legal.dataPrivacy")}
-                </a>
-              </li>
-              <li>
-                <a href={`/${Subpages.AGREEMENT}/${i18n.language}`}>
-                  {t("footer.legal.agreement")}
-                </a>
-              </li>
-              <li>
-                <a href={`/${Subpages.COOKIES}/${i18n.language}`}>
-                  {t("footer.legal.cookies")}
-                </a>
-              </li>
-            </ul>
           </div>
           <div className="footer-column">
             <h6>{t("footer.contact.contactHeading")}</h6>

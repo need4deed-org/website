@@ -848,13 +848,7 @@ export default function AddOpportunity() {
                   <span>
                     {t("form.addOpportunity.fields.consent.header")}{" "}
                     {t("form.addOpportunity.fields.consent.agree")}{" "}
-                    <a href={`/${Subpages.GUIDELINES}/${lng}`}>
-                      {t("footer.legal.guidelines")}
-                    </a>{" "}
                     {t("form.addOpportunity.fields.consent.and")}{" "}
-                    <a href={`/${Subpages.DATA_PROTECTION}/${lng}`}>
-                      {t("footer.legal.dataPrivacy")}
-                    </a>
                   </span>
                 </div>
                 <FieldInfo field={field} />

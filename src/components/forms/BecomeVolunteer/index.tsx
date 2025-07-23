@@ -618,11 +618,11 @@ export default function BecomeVolunteer() {
                   </label>
                   <span>
                     {t("form.becomeVolunteer.fields.consent.header")}{" "}
-                    <a href={`/${Subpages.DATA_PROTECTION}/${lng}`}>
+                    <a href={`/${Subpages.DATA_PRIVACY}/${lng}`}>
                       {t("footer.legal.dataPrivacy")}
                     </a>{" "}
                     {t("form.becomeVolunteer.fields.consent.and")}{" "}
-                    <a href={`/${Subpages.AGREEMENT}/${lng}`}>
+                    <a href={`/${Subpages.VPA}/${lng}`}>
                       {t("footer.legal.agreement")}
                     </a>
                   </span>

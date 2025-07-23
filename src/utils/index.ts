@@ -177,16 +177,6 @@ export function getUrlWithEncodedParams(
   return `${url}?${queryStringParams.join("&")}`;
 }
 
-interface MainCtaUrl {
-  lng: Lang;
-  id?: string;
-  title?: string;
-}
-
-export function getMainCtaUrl({ lng, id = "", title = "" }: MainCtaUrl) {
-  return `/${Subpages.BECOME_VOLUNTEER}/${lng}/?id=${id}&title=${title}`;
-}
-
 interface MainREgisterUrl {
   id?: string;
   title?: string;
