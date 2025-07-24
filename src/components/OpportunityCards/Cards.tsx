@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import { OpportunityParams, ScreenTypes } from "../../config/types";
 import useOpportunities from "../../hooks/api/useOpportunities";
-import useOpportunitiesFromFile from "../../hooks/api/useOpportunitiesFromFile";
 import Announcement from "../Announcement";
 import OpportunityCardPopup from "../VolunteeringOpportunities/OpportunityCardPopup";
 import {
@@ -36,8 +35,6 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   isFiltersOpen: boolean;
 }
 
-const regexHttpSchema = /^(http|https):\/\/.*/;
-
 const CardsContainer = styled.div`
   display: flex;
   justify-content: var(--opportunities-cards-container-justify-content);
@@ -61,9 +58,7 @@ export default function Cards({
   setCardsFilter,
   isFiltersOpen,
 }: Props) {
-  const isUrl = url.toLowerCase().match(regexHttpSchema);
-  const useOpp = isUrl ? useOpportunities : useOpportunitiesFromFile;
-  const { opportunities, loading } = useOpp(url, opportunityParams);
+  const { opportunities, loading } = useOpportunities(url, opportunityParams);
   const [modalOpportunity, setModalOpportunity] = useState<
     Opportunity | undefined
   >();

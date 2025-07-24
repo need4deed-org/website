@@ -11,4 +11,5 @@ export enum IconName {
   CalendarStar = "calendarStar",
   PingPong = "pingPong",
   Users = "users",
+  Sparkle = "sparkle",
 }

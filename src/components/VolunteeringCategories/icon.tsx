@@ -1,10 +1,11 @@
 import {
-  BabyIcon as Baby,
-  BicycleIcon as Bicycle,
-  CalendarStarIcon as CalendarStar,
-  ChatsTeardropIcon as ChatsTeardrop,
-  PingPongIcon as PingPong,
-  UsersIcon as Users,
+  BabyIcon,
+  BicycleIcon,
+  CalendarStarIcon,
+  ChatsTeardropIcon,
+  PingPongIcon,
+  SparkleIcon,
+  UsersIcon,
 } from "@phosphor-icons/react";
 import { IconName } from "./types";
 
@@ -14,10 +15,11 @@ type IconMap = {
 
 // eslint-disable-next-line import/prefer-default-export
 export const iconNameMap: IconMap = {
-  [IconName.ChatsTeardrop]: <ChatsTeardrop />,
-  [IconName.Baby]: <Baby />,
-  [IconName.Bicycle]: <Bicycle />,
-  [IconName.CalendarStar]: <CalendarStar />,
-  [IconName.PingPong]: <PingPong />,
-  [IconName.Users]: <Users />,
+  [IconName.ChatsTeardrop]: <ChatsTeardropIcon />,
+  [IconName.Baby]: <BabyIcon />,
+  [IconName.Bicycle]: <BicycleIcon />,
+  [IconName.CalendarStar]: <CalendarStarIcon />,
+  [IconName.PingPong]: <PingPongIcon />,
+  [IconName.Users]: <UsersIcon />,
+  [IconName.Sparkle]: <SparkleIcon />,
 };

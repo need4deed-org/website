@@ -813,6 +813,9 @@ export default function AddOpportunity() {
                     label={t(
                       "form.addOpportunity.fields.voGroup.information.label",
                     )}
+                    onChangeValidator={({ value }) =>
+                      !value ? t("form.error.required") : undefined
+                    }
                   />
                 </fieldset>
               );
