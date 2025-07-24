@@ -36,6 +36,7 @@ export function PaginatedCards({
   const visibleCards = cards.slice(startIndex, endIndex);
 
   const nextCardElement = cards[endIndex];
+  const showNavigation = totalPages > 1;
 
   const goToPage = (pageNumber: number) => {
     setCurrentPage(pageNumber);
@@ -50,12 +51,14 @@ export function PaginatedCards({
       id="paginated-cards-container"
       {...{ onTouchStart, onTouchEnd }}
     >
-      <ArrowButtons
-        currentIndex={currentPage}
-        lastIndex={totalPages - 1}
-        setCurrentIndex={setCurrentPage}
-        color={arrowButtonColor}
-      />
+      {showNavigation && (
+        <ArrowButtons
+          currentIndex={currentPage}
+          lastIndex={totalPages - 1}
+          setCurrentIndex={setCurrentPage}
+          color={arrowButtonColor}
+        />
+      )}
 
       {isOverlayingCards ? (
         <OverlayingVisibleCardsContainer id="overlaying-visible-cards-container">
@@ -74,13 +77,15 @@ export function PaginatedCards({
         </VisibleCardsContainer>
       )}
 
-      <PaginationIndicators
-        currentPage={currentPage}
-        totalPages={totalPages}
-        indicatorColor={bottomIndicatorColor}
-        currentIndicatorColor={bottomCurrentIndicatorColor}
-        goToPage={goToPage}
-      />
+      {showNavigation && (
+        <PaginationIndicators
+          currentPage={currentPage}
+          totalPages={totalPages}
+          indicatorColor={bottomIndicatorColor}
+          currentIndicatorColor={bottomCurrentIndicatorColor}
+          goToPage={goToPage}
+        />
+      )}
     </PaginatedCardsContainer>
   );
 }
