@@ -23,9 +23,8 @@
     "dataProtectionOfficer": "Datenschutzbeauftragter"
   },
   "dataPrivacy": {
-    "header": "Datenschutzerklärung",
-    "intro1": "Jegliche Erhebung, Verwendung, Speicherung, Löschung oder sonstige Nutzung (nachfolgend „Verarbeitung“) von Daten dient ausschließlich der Erbringung unserer Dienstleistungen. Unsere Dienste sind mit dem Ziel gestaltet worden, so wenig personenbezogene Daten wie möglich zu verwenden. Dabei werden unter “personenbezogenen Daten” (nachfolgend auch „Daten“ genannt) alle Einzelangaben über persönliche oder sachliche Verhältnisse einer bestimmten oder bestimmbaren natürlichen Person (sog. „betroffene Person“) verstanden.",
-    "intro2": "Die folgenden Ausführungen zum Datenschutz beschreiben, welche Arten von personenbezogenen Daten beim Aufruf unseres Internetangebotes verarbeitet werden, was mit diesen personenbezogenen Daten geschieht und wie Sie einer Datenverarbeitung gegebenenfalls widersprechen können.",
+    "header": "Data Protection Privacy Policy",
+    "intro1": "Any collection, use, storage, deletion, or other use (hereinafter referred to as “processing”) of data is solely for the provision of our services. Our services are designed with the aim of using as little personal data as possible. “Personal data” (hereinafter also referred to as “data”) refers to any information relating to an identified or identifiable natural person (so-called “data subject”).  The following data protection information describes what types of personal data are processed when visiting our website, what happens to this data, and how you may object to data processing if necessary.",
     "generalInfo": {
       "header": "Allgemeines zur Datenverarbeitung auf dieser Webseite",
       "responsible": {
@@ -333,6 +332,68 @@
       "header": "Änderungsvorbehalt",
       "para1": "Wir behalten uns vor, diese Datenschutzerklärung unter Beachtung der gesetzlichen Bestimmungen zu ändern.",
       "para2": "Stand September 2022"
+    },
+    "accordion-1": {
+      "header": "Protection of Your Data",
+      "part1": "We have implemented technical and organizational measures to ensure compliance with the GDPR, both internally and by external service providers working on our behalf. When we collaborate with other companies—such as email and server providers—this only occurs following a comprehensive selection process. Each provider is carefully assessed for their data protection capabilities. This process is documented in writing, and a data processing agreement according to Art. 28(3) GDPR is only signed if the provider meets all requirements under Art. 28 GDPR.",
+      "part2": "Your data is stored on specially secured servers, accessible only to a few specially authorized persons.",
+      "part3": "Our website uses SSL/TLS encryption, identifiable by “https://” in the URL. If personal data is involved in email communication, it is also encrypted using an integrated SSL certificate.",
+      "link1": "You can find a",
+      "link2": " link here"
+    },
+    "accordion-2": {
+      "header": "Deletion of Personal Data",
+      "part1": "We process personal data only as long as necessary. Once the purpose has been fulfilled, the data is blocked and deleted according to our deletion policy—unless legal obligations prevent this.",
+      "part2": "Your data is stored on specially secured servers, accessible only to a few specially authorized persons.",
+      "part3": "Our website uses SSL/TLS encryption, identifiable by “https://” in the URL. If personal data is involved in email communication, it is also encrypted using an integrated SSL certificate.",
+      "link1": "You can find a"
+    },
+    "accordion-3": {
+      "header": "Data Processing and Log Files",
+      "part1": "When visiting our website, our web servers temporarily log every access in a log file. The following personal data is collected and stored until automated deletion:",
+      "part2": "We use All-inkl.com as our hosting provider, which sets cookies. These make the website usable by enabling basic functions such as navigation and access.",
+      "part3": "Data processing is carried out by:",
+      "part4": "Neue Medien Münnich, Hauptstraße 68, 02742 Friedersdorf, Germany.",
+      "linkh": "See their privacy policy:",
+      "link1": "https://all-inkl.com/datenschutzinformationen/",
+      "head1": "Legal Basis",
+      "h-1": "Data processing is based on Art. 6(1)(f) GDPR. Our legitimate interest lies in providing access to our website.",
+      "head2": "Purpose",
+      "h-2": "The purpose is to enable use of the website (connection setup), ensure system security, manage technical infrastructure, and optimize the site. IP addresses are only evaluated in case of attacks.",
+      "head3": "Storage Duration",
+      "h-3": "Data is deleted once no longer needed, usually when the session ends. Our host may use anonymized data for statistics. All-inkl.com deletes data after 7 days.",
+      "head4": "Objection Option",
+      "h-4": "The website can only be displayed if this data is processed. Objections must be directed to our data protection officer or hosting provider."
+    },
+    "accordion-4": {
+      "header": "Use of Cookies",
+      "part1": "Our website uses cookies, which are stored on your device when you visit. Cookies are small text files stored on your hard drive and assigned to your browser. They cannot execute programs or transmit viruses.",
+      "part2": "We use them to anonymously or pseudonymously analyze use of the website and present relevant offers. This can involve collecting data such as:",
+      "part3": "Frequency of visits",
+      "part4": "Features used",
+      "part5": "Search terms used",
+      "part6": "Cookie settings",
+      "part7": "Language preferences",
+      "head1": "Legal Basis",
+      "h-1": "For non-essential cookies: Art. 6(1)(a) GDPR (your consent).For essential cookies: Art. 6(1)(f) GDPR (our legitimate interest in basic functionality).",
+      "head2": "Purpose",
+      "h-2": "Our interest lies in providing smooth access, user-friendly browsing, and security monitoring. Data is also used for anonymous usage statistics.",
+      "head3": "Storage Duration",
+      "h-3": "We use two types of cookies: a) Transient cookies (e.g., session cookies), which are deleted when you close your browser. These include session IDs to recognize returning users. b) Persistent cookies, which are deleted after a set period, depending on the cookie.",
+      "head4": "Objection Option",
+      "h-4": "You may withdraw consent for non-essential cookies at any time. Cookies are only used after you agree via the banner.  You can also delete cookies in your browser’s security settings or prevent them entirely. Note: Some features may then be unavailable."
+    },
+    "accordion-5": {
+      "header": "Contact",
+      "part1": "You can contact us via email at info@club-dialog.de. In doing so, necessary data is collected and automatically stored for processing the inquiry. No data is passed on to third parties.",
+      "head1": "Legal Basis",
+      "h-1": "Art. 6(1)(b) GDPR – processing necessary for responding to your inquiry.",
+      "head2": "Purpose",
+      "h-2": "We use your data solely to respond to your contact request.",
+      "head3": "Storage Duration",
+      "h-3": "Your data will be deleted after your request has been addressed, unless legal obligations require us to keep it longer.",
+      "head4": "Objection Option",
+      "h-4": "You can object at any time. In that case, we can no longer continue the communication. All data will be deleted unless legally required otherwise."
     }
   },
   "agreement": {
