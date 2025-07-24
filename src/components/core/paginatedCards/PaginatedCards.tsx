@@ -36,7 +36,7 @@ export function PaginatedCards({
   const visibleCards = cards.slice(startIndex, endIndex);
 
   const nextCardElement = cards[endIndex];
-  const shouldShowNavigation = totalPages > 1;
+  const showNavigation = totalPages > 1;
 
   const goToPage = (pageNumber: number) => {
     setCurrentPage(pageNumber);
@@ -51,7 +51,7 @@ export function PaginatedCards({
       id="paginated-cards-container"
       {...{ onTouchStart, onTouchEnd }}
     >
-      {shouldShowNavigation && (
+      {showNavigation && (
         <ArrowButtons
           currentIndex={currentPage}
           lastIndex={totalPages - 1}
@@ -77,7 +77,7 @@ export function PaginatedCards({
         </VisibleCardsContainer>
       )}
 
-      {shouldShowNavigation && (
+      {showNavigation && (
         <PaginationIndicators
           currentPage={currentPage}
           totalPages={totalPages}
