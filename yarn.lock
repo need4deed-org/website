@@ -10947,9 +10947,10 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-"need4deed-sdk@git+https://github.com/need4deed-org/sdk.git":
-  version "0.0.7"
-  resolved "git+https://github.com/need4deed-org/sdk.git#3b1902a7c19966f66168d0f2ad761ea095e9dd21"
+need4deed-sdk@:
+  version "0.0.12"
+  resolved "https://registry.yarnpkg.com/need4deed-sdk/-/need4deed-sdk-0.0.12.tgz#8d66a411f4ef6ce3ed5cb867457e51faf63df74c"
+  integrity sha512-SxTPpBMnbOD8csadN1UV/li7lXKPa9psUB0HexmC1o6PDIowMcp9ky+Ylw1dHAlQVJCYm7JdpNYq/YMobguMQA==
 
 neo-async@^2.6.0:
   version "2.6.2"
