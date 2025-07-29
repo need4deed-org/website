@@ -7,6 +7,7 @@ import useScreenType from "../../hooks/useScreenType";
 import { ScreenTypes } from "../../config/types";
 import ResultsFound from "./ResultsFound";
 import { hyphenationStyles } from "../styled/mixins";
+import { CardsFilter } from "./types";
 
 const HeaderContainer = styled.div`
   display: flex;
@@ -64,6 +65,7 @@ interface Props {
   selectedTabIndex: number;
   setSelectedTabIndex: (index: number) => void;
   setIsFiltersOpen: (isOpen: boolean) => void;
+  cardsFilter?: CardsFilter;
 }
 
 export default function OpportunityCardsHeader({
@@ -73,11 +75,11 @@ export default function OpportunityCardsHeader({
   setSelectedTabIndex,
   tabs,
   setIsFiltersOpen,
+  cardsFilter,
 }: Props) {
   const { t } = useTranslation();
   const screenSize = useScreenType();
   const isMobile = screenSize === ScreenTypes.MOBILE;
-
   return (
     <HeaderContainer>
       <HyphenatedHeading2>{t("opportunityPage.header")}</HyphenatedHeading2>
@@ -108,6 +110,7 @@ export default function OpportunityCardsHeader({
             placeHolder={`${t("opportunityPage.searchPlaceHolder")} ...`}
             onInputChange={onSearchInputChange}
             width="var(--opportunities-header-searchbar-width)"
+            cardsFilter={cardsFilter}
           />
           {isMobile ? (
             <ResultsFound numOfOpportunities={numOfOpportunities} />

@@ -44,3 +44,11 @@ export const defaultFilter: CardsFilter = {
     },
   },
 };
+
+export const FILTER_KEYS = [
+  "searchInput",
+  "activityType",
+  "district",
+  "daySlot",
+  "accompanying",
+] as const;
