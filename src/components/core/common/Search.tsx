@@ -22,7 +22,6 @@ const SearchContainer = styled.div<SearchContainerProps>`
 const StyledInput = styled.input`
   font-size: var(--search-input-font-size);
   border: none;
-  flex: 1;
   &:focus {
     outline: none;
   }
