@@ -45,10 +45,16 @@ export const defaultFilter: CardsFilter = {
   },
 };
 
-export const FILTER_KEYS = [
-  "searchInput",
-  "activityType",
-  "district",
-  "daySlot",
-  "accompanying",
-] as const;
+export const FILTER_KEY = {
+  SEARCH_INPUT: "searchInput",
+  ACTIVITY_TYPE: "activityType",
+  DISTRICT: "district",
+  DAY_SLOT: "daySlot",
+  ACCOMPANYING: "accompanying",
+} as const;
+
+export const FILTER_KEY_LIST = Object.values(FILTER_KEY);
+
+export type FilterKey = (typeof FILTER_KEY)[keyof typeof FILTER_KEY];
+
+export const DASH = "-";

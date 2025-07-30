@@ -3,8 +3,9 @@ import { OpportunityType } from "need4deed-sdk";
 import { TFunction } from "i18next";
 import { Opportunity } from "../VolunteeringOpportunities/types";
 import { CardsFilter, Day, DayKeys, Days, DaysKeys } from "./types";
-import { TimeSlot } from "../forms/types";
+import { TimeSlot, Weekday } from "../forms/types";
 import { CategoryTitle } from "../VolunteeringOpportunities/utils";
+import { DASH, FILTER_KEY_LIST, FilterKey } from "./Filters/constants";
 
 const dayEnumMap: Record<string, DaysKeys> = {
   1: "monday",
@@ -244,3 +245,100 @@ export const extractCardsFilter = (
 };
 
 export const isObjectEmpty = (obj: object) => Object.keys(obj).length === 0;
+
+export const hasKey = <T extends object>(
+  obj: T | null | undefined,
+  key: PropertyKey,
+): key is keyof T => !!obj && Object.prototype.hasOwnProperty.call(obj, key);
+
+export function serializeFilters(filters: CardsFilter): URLSearchParams {
+  const params = new URLSearchParams();
+
+  if (filters.searchInput) {
+    params.set("searchInput", filters.searchInput);
+  }
+
+  if (filters.accompanying) {
+    params.set("accompanying", "true");
+  }
+
+  if (filters.activityType) {
+    Object.entries(filters.activityType).forEach(([key, value]) => {
+      if (value === true) {
+        params.append("activityType", key);
+      }
+    });
+  }
+
+  if (filters.district) {
+    Object.entries(filters.district).forEach(([key, value]) => {
+      if (value === true) {
+        params.append("district", key);
+      }
+    });
+  }
+
+  if (filters.days) {
+    Object.entries(filters.days).forEach(([day, timeSlots]) => {
+      const dayKey = day as Weekday; // safely cast string to enum
+
+      Object.entries(timeSlots as TimeSlot).forEach(([slot, value]) => {
+        if (value) {
+          params.append("daySlot", `${dayKey}${DASH}${slot}`);
+        }
+      });
+    });
+  }
+
+  return params;
+}
+
+export function deserializeFilters(
+  query: URLSearchParams,
+  defaultFilter: CardsFilter,
+): CardsFilter {
+  const filters: CardsFilter = structuredClone(defaultFilter);
+
+  const search = query.get("searchInput");
+  if (search !== null) {
+    filters.searchInput = search;
+  }
+
+  const accompanying = query.get("accompanying");
+  if (accompanying === "true") {
+    filters.accompanying = true;
+  }
+
+  const activityTypes = query.getAll("activityType");
+  activityTypes.forEach((type) => {
+    if (hasKey(filters.activityType, type)) {
+      filters.activityType[type] = true;
+    }
+  });
+
+  const districts = query.getAll("district");
+  districts.forEach((dist) => {
+    if (hasKey(filters.district, dist)) {
+      filters.district[dist] = true;
+    }
+  });
+
+  const daySlots = query.getAll("daySlot");
+  daySlots.forEach((slot) => {
+    const [day, time] = slot.split("-");
+    const dayKey = day as keyof Days;
+    const timeKey = time as keyof Day;
+
+    if (filters.days[dayKey] && filters.days[dayKey][timeKey] !== undefined) {
+      filters.days[dayKey][timeKey] = true;
+    }
+  });
+
+  return filters;
+}
+
+export const getFilterKeysExcluding = (
+  exclude: FilterKey[] = [],
+): FilterKey[] => {
+  return FILTER_KEY_LIST.filter((key) => !exclude.includes(key));
+};

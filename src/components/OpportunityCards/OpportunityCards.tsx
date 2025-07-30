@@ -8,10 +8,14 @@ import { urlApiOpportunity } from "../../config/constants";
 import OpportunityCardsHeader from "./OpportunityCardsHeader";
 import MapView from "./MapView";
 import Filters from "./Filters/Filters";
-import { defaultFilter, FILTER_KEYS } from "./Filters/constants";
+import {
+  defaultFilter,
+  FILTER_KEY,
+  FILTER_KEY_LIST,
+} from "./Filters/constants";
 import {
   deserializeFilters,
-  getFilterKeysExcludingSearch,
+  getFilterKeysExcluding,
   serializeFilters,
 } from "../../utils";
 import { CardsFilter } from "./types";
@@ -60,7 +64,7 @@ export function OpportunityCards() {
         ? incomingFilter(cardsFilter)
         : incomingFilter;
 
-    const hasFilterParams = FILTER_KEYS.some((key) => query.has(key));
+    const hasFilterParams = FILTER_KEY_LIST.some((key) => query.has(key));
 
     const finalFilter = hasFilterParams
       ? deserializeFilters(query, baseFilter)
@@ -76,9 +80,9 @@ export function OpportunityCards() {
   useEffect(() => {
     if (ToggledFilters) return;
 
-    const hasRelevantFilters = getFilterKeysExcludingSearch().some((key) =>
-      searchParams.has(key),
-    );
+    const hasRelevantFilters = getFilterKeysExcluding([
+      FILTER_KEY.SEARCH_INPUT,
+    ]).some((key) => searchParams.has(key));
 
     setIsFiltersOpen(hasRelevantFilters);
   }, [searchParams, ToggledFilters]);
