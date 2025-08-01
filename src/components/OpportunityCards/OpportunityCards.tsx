@@ -13,12 +13,12 @@ import {
   FILTER_KEY,
   FILTER_KEY_LIST,
 } from "./Filters/constants";
+import { CardsFilter } from "./types";
 import {
   deserializeFilters,
   getFilterKeysExcluding,
   serializeFilters,
-} from "../../utils";
-import { CardsFilter } from "./types";
+} from "./helpers";
 
 const OpportunitiesContainer = styled.div`
   display: flex;

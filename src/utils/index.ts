@@ -470,3 +470,12 @@ export function setStoredLang(lang: Lang) {
     console.warn(`Invalid language code: ${lang}`);
   }
 }
+
+export function getLangFromUrl(): Lang | null {
+  const segments = window.location.pathname.split("/").filter(Boolean); // removes empty ""
+  const langCandidate = segments.find((s) =>
+    Object.values(Lang).includes(s as Lang),
+  );
+
+  return langCandidate ? (langCandidate as Lang) : null;
+}

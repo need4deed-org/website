@@ -4,11 +4,19 @@ import { initReactI18next } from "react-i18next";
 import legal from "../../public/locales/de/legal.json";
 import deTranslation from "../../public/locales/de/translations.json";
 import enTranslation from "../../public/locales/en/translations.json";
-import { getStoredLang } from "../utils";
+import { getLangFromUrl, getStoredLang, setStoredLang } from "../utils";
 import { Env } from "./types";
 
+// Step 1: Pick the language
+const urlLang = getLangFromUrl();
+const storedLang = getStoredLang();
+const initialLang = urlLang || storedLang || Lang.EN;
+
+setStoredLang(initialLang);
+
+// Step 2: Initialize i18n
 i18next.use(initReactI18next).init({
-  lng: getStoredLang() || Lang.EN,
+  lng: initialLang,
   fallbackLng: Lang.EN,
   debug: process.env.NODE_ENV === Env.DEVELOP,
   resources: {
