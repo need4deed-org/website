@@ -472,10 +472,8 @@ export function setStoredLang(lang: Lang) {
 }
 
 export function getLangFromUrl(): Lang | null {
-  const segments = window.location.pathname.split("/").filter(Boolean); // removes empty ""
-  const langCandidate = segments.find((s) =>
-    Object.values(Lang).includes(s as Lang),
-  );
+  const params = new URLSearchParams(window.location.search);
+  const lang = params.get("lang") as Lang;
 
-  return langCandidate ? (langCandidate as Lang) : null;
+  return Object.values(Lang).includes(lang) ? lang : null;
 }

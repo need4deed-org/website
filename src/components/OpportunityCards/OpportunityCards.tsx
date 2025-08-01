@@ -2,23 +2,15 @@ import { useLocation, useSearchParams } from "react-router-dom";
 import styled from "styled-components";
 import { Lang, OpportunityType } from "need4deed-sdk";
 import { useTranslation } from "react-i18next";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Cards from "./Cards";
 import { urlApiOpportunity } from "../../config/constants";
 import OpportunityCardsHeader from "./OpportunityCardsHeader";
 import MapView from "./MapView";
 import Filters from "./Filters/Filters";
-import {
-  defaultFilter,
-  FILTER_KEY,
-  FILTER_KEY_LIST,
-} from "./Filters/constants";
+import { defaultFilter, FILTER_KEY_LIST } from "./Filters/constants";
 import { CardsFilter } from "./types";
-import {
-  deserializeFilters,
-  getFilterKeysExcluding,
-  serializeFilters,
-} from "./helpers";
+import { deserializeFilters, openFilters, serializeFilters } from "./helpers";
 
 const OpportunitiesContainer = styled.div`
   display: flex;
@@ -36,24 +28,21 @@ export function OpportunityCards() {
   const [searchParams, setSearchParams] = useSearchParams();
   const query = new URLSearchParams(location.search);
   const { i18n, t } = useTranslation();
+  const language = i18n.language as Lang;
   const [numOfOpportunities, setNumOfOpportunities] = useState(0);
   const [cardsFilter, setCardsFilter] = useState(defaultFilter);
   const [selectedTabIndex, setSelectedTabIndex] = useState(0);
   const [isFiltersOpen, setIsFiltersOpen] = useState(false);
-  const [ToggledFilters, setToggledFilters] = useState(false);
 
   const handleFilterUpdate = (
     newFilter: CardsFilter | ((prev: CardsFilter) => CardsFilter),
   ) => {
-    setToggledFilters(true);
     const updatedFilter =
       typeof newFilter === "function" ? newFilter(cardsFilter) : newFilter;
 
     setCardsFilter(updatedFilter);
 
-    const queryParams = serializeFilters(updatedFilter);
-
-    setSearchParams(queryParams);
+    setSearchParams(serializeFilters(updatedFilter, language));
   };
 
   const initializeFilter = (
@@ -71,21 +60,12 @@ export function OpportunityCards() {
       : baseFilter;
 
     setCardsFilter(finalFilter);
+    setIsFiltersOpen(openFilters(searchParams));
   };
 
   const onSearchInputChange = (searchInput: string) => {
     handleFilterUpdate((prev) => ({ ...prev, searchInput }));
   };
-
-  useEffect(() => {
-    if (ToggledFilters) return;
-
-    const hasRelevantFilters = getFilterKeysExcluding([
-      FILTER_KEY.SEARCH_INPUT,
-    ]).some((key) => searchParams.has(key));
-
-    setIsFiltersOpen(hasRelevantFilters);
-  }, [searchParams, ToggledFilters]);
 
   const tabs = [t("opportunityPage.tabs.tab1"), t("opportunityPage.tabs.tab2")];
 
@@ -120,7 +100,7 @@ export function OpportunityCards() {
               ],
             },
             primaryKeys: ["title", "name"],
-            language: i18n.language as Lang,
+            language,
           }}
           popup
           setNumOfOpportunities={setNumOfOpportunities}

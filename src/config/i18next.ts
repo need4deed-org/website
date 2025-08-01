@@ -7,14 +7,12 @@ import enTranslation from "../../public/locales/en/translations.json";
 import { getLangFromUrl, getStoredLang, setStoredLang } from "../utils";
 import { Env } from "./types";
 
-// Step 1: Pick the language
 const urlLang = getLangFromUrl();
 const storedLang = getStoredLang();
 const initialLang = urlLang || storedLang || Lang.EN;
 
 setStoredLang(initialLang);
 
-// Step 2: Initialize i18n
 i18next.use(initReactI18next).init({
   lng: initialLang,
   fallbackLng: Lang.EN,
