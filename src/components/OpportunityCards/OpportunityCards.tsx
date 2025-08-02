@@ -60,7 +60,7 @@ export function OpportunityCards() {
       : baseFilter;
 
     setCardsFilter(finalFilter);
-    setIsFiltersOpen(openFilters(searchParams));
+    setIsFiltersOpen(isFiltersOpen || openFilters(searchParams));
   };
 
   const onSearchInputChange = (searchInput: string) => {
