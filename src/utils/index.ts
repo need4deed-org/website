@@ -470,3 +470,10 @@ export function setStoredLang(lang: Lang) {
     console.warn(`Invalid language code: ${lang}`);
   }
 }
+
+export function getQueryParamLang(): Lang | null {
+  const params = new URLSearchParams(window.location.search);
+  const lang = params.get("lang") as Lang;
+
+  return Object.values(Lang).includes(lang) ? lang : null;
+}

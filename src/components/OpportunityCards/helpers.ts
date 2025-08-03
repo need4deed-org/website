@@ -1,10 +1,17 @@
 /* eslint-disable no-restricted-syntax */
-import { OpportunityType } from "need4deed-sdk";
+import { Lang, OpportunityType } from "need4deed-sdk";
 import { TFunction } from "i18next";
 import { Opportunity } from "../VolunteeringOpportunities/types";
 import { CardsFilter, Day, DayKeys, Days, DaysKeys } from "./types";
-import { TimeSlot } from "../forms/types";
+import { TimeSlot, Weekday } from "../forms/types";
 import { CategoryTitle } from "../VolunteeringOpportunities/utils";
+import {
+  DASH,
+  FILTER_KEY,
+  FILTER_KEY_LIST,
+  FilterKey,
+  langQueryParamKey,
+} from "./Filters/constants";
 
 const dayEnumMap: Record<string, DaysKeys> = {
   1: "monday",
@@ -244,3 +251,111 @@ export const extractCardsFilter = (
 };
 
 export const isObjectEmpty = (obj: object) => Object.keys(obj).length === 0;
+
+export const hasKey = <T extends object>(
+  obj: T | null | undefined,
+  key: PropertyKey,
+): key is keyof T => !!obj && Object.prototype.hasOwnProperty.call(obj, key);
+
+export function serializeFilters(filters: CardsFilter, language: Lang) {
+  const params = new URLSearchParams();
+
+  if (filters.searchInput) {
+    params.set(FILTER_KEY.SEARCH_INPUT, filters.searchInput);
+  }
+
+  if (filters.accompanying) {
+    params.set(FILTER_KEY.ACCOMPANYING, "true");
+  }
+
+  if (filters.activityType) {
+    Object.entries(filters.activityType).forEach(([key, value]) => {
+      if (value === true) {
+        params.append(FILTER_KEY.ACTIVITY_TYPE, key);
+      }
+    });
+  }
+
+  if (filters.district) {
+    Object.entries(filters.district).forEach(([key, value]) => {
+      if (value === true) {
+        params.append(FILTER_KEY.DISTRICT, key);
+      }
+    });
+  }
+
+  if (filters.days) {
+    Object.entries(filters.days).forEach(([day, timeSlots]) => {
+      const dayKey = day as Weekday;
+
+      Object.entries(timeSlots as TimeSlot).forEach(([slot, value]) => {
+        if (value) {
+          params.append(FILTER_KEY.DAYS, `${dayKey}${DASH}${slot}`);
+        }
+      });
+    });
+  }
+
+  if (params.size) params.set(langQueryParamKey, language);
+  else params.delete(langQueryParamKey, language);
+
+  return params;
+}
+
+export function deserializeFilters(
+  query: URLSearchParams,
+  filter: CardsFilter,
+): CardsFilter {
+  const filters: CardsFilter = structuredClone(filter);
+
+  const search = query.get(FILTER_KEY.SEARCH_INPUT);
+  if (search !== null) {
+    filters.searchInput = search;
+  }
+
+  const accompanying = query.get(FILTER_KEY.ACCOMPANYING);
+  if (accompanying === "true") {
+    filters.accompanying = true;
+  }
+
+  const activityTypes = query.getAll(FILTER_KEY.ACTIVITY_TYPE);
+  activityTypes.forEach((type) => {
+    if (hasKey(filters.activityType, type)) {
+      filters.activityType[type] = true;
+    }
+  });
+
+  const districts = query.getAll(FILTER_KEY.DISTRICT);
+  districts.forEach((dist) => {
+    if (hasKey(filters.district, dist)) {
+      filters.district[dist] = true;
+    }
+  });
+
+  const daySlots = query.getAll(FILTER_KEY.DAYS);
+  daySlots.forEach((slot) => {
+    const [day, time] = slot.split(DASH);
+    const dayKey = day as DaysKeys;
+    const timeKey = time as DayKeys;
+
+    if (filters.days[dayKey] && filters.days[dayKey][timeKey] !== undefined) {
+      filters.days[dayKey][timeKey] = true;
+    }
+  });
+
+  return filters;
+}
+
+export const getFilterKeysExcluding = (
+  exclude: FilterKey[] = [],
+): FilterKey[] => {
+  return FILTER_KEY_LIST.filter((key) => !exclude.includes(key));
+};
+
+export const openFilters = (searchParams: URLSearchParams) => {
+  const hasRelevantFilters = getFilterKeysExcluding([
+    FILTER_KEY.SEARCH_INPUT,
+  ]).some((key) => searchParams.has(key));
+
+  return hasRelevantFilters;
+};

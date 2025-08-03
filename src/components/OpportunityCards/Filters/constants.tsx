@@ -1,6 +1,5 @@
-import { CardsFilter } from "../types";
+import { CardFilterKeys, CardsFilter } from "../types";
 
-/* eslint-disable import/prefer-default-export */
 export const defaultFilter: CardsFilter = {
   searchInput: "",
   accompanying: false,
@@ -44,3 +43,19 @@ export const defaultFilter: CardsFilter = {
     },
   },
 };
+
+export const FILTER_KEY = {
+  SEARCH_INPUT: "searchInput",
+  ACTIVITY_TYPE: "activityType",
+  DISTRICT: "district",
+  DAYS: "days",
+  ACCOMPANYING: "accompanying",
+} as const satisfies Record<string, CardFilterKeys>;
+
+export const FILTER_KEY_LIST = Object.values(FILTER_KEY);
+
+export type FilterKey = (typeof FILTER_KEY)[keyof typeof FILTER_KEY];
+
+export const DASH = "-";
+
+export const langQueryParamKey = "language";
