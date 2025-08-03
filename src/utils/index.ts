@@ -471,7 +471,7 @@ export function setStoredLang(lang: Lang) {
   }
 }
 
-export function getLangFromUrl(): Lang | null {
+export function getQueryParamLang(): Lang | null {
   const params = new URLSearchParams(window.location.search);
   const lang = params.get("lang") as Lang;
 

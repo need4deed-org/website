@@ -58,4 +58,4 @@ export type FilterKey = (typeof FILTER_KEY)[keyof typeof FILTER_KEY];
 
 export const DASH = "-";
 
-export const langQueryParamKey = "lang";
+export const langQueryParamKey = "language";
