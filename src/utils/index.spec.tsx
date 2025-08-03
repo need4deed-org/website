@@ -5,7 +5,6 @@ import { RefObject, act, createRef } from "react";
 import { OpportunityParams } from "../config/types";
 import {
   getBaseUrl,
-  getFilter,
   getFirstThursdayOfMonth,
   getOpportunityImg,
   getReadableLocalTime,
@@ -13,7 +12,6 @@ import {
   haveCommonElements,
   isEnumValue,
   isoCodesToNames,
-  mapToOpportunity,
   parseYesNo,
   pivotArrayToObj,
   range,
@@ -135,60 +133,6 @@ describe("utils", () => {
 
     it("should return an empty string for a non-string input", () => {
       expect(isoCodesToNames(123 as unknown as string)).toBe("");
-    });
-  });
-
-  describe("getFilter()", () => {
-    it("should return a function that always returns true when search is empty", () => {
-      const filter = getFilter({});
-      expect(filter({})).toBe(true);
-      expect(filter({ key: "value" })).toBe(true);
-    });
-
-    it("should return a function that filters based on a single search criterion", () => {
-      const filter = getFilter({ key: ["value"] });
-      expect(filter({ key: "value" })).toBe(true);
-      expect(filter({ key: "otherValue" })).toBe(false);
-    });
-
-    it("should return a function that filters based on multiple search criteria", () => {
-      const filter = getFilter({ key1: ["value1"], key2: ["value2"] });
-      expect(filter({ key1: "value1", key2: "value2" })).toBe(true);
-      expect(filter({ key1: "value1", key2: "otherValue" })).toBe(false);
-      expect(filter({ key1: "otherValue", key2: "value2" })).toBe(false);
-    });
-
-    it("should return a function that always returns true for invalid search input", () => {
-      const filter = getFilter(123 as unknown as OpportunityParams["search"]);
-      expect(filter({ key: "value" })).toBe(true);
-      expect(filter(undefined as unknown as Record<string, string>)).toBe(true);
-    });
-  });
-
-  describe("mapToOpportunity()", () => {
-    it("should return an empty object for an empty opportunity", () => {
-      expect(mapToOpportunity({})).toEqual({});
-    });
-
-    it("should convert the first word of keys to lowercase", () => {
-      expect(mapToOpportunity({ UppercaseKey: "value" })).toEqual({
-        uppercasekey: "value",
-      });
-      expect(mapToOpportunity({ lowercaseKey: "value" })).toEqual({
-        lowercasekey: "value",
-      });
-    });
-
-    it("should handle multiple key-value pairs", () => {
-      expect(
-        mapToOpportunity({ MixedCaseKey: "value1", anotherKey: "value2" }),
-      ).toEqual({ mixedcasekey: "value1", anotherkey: "value2" });
-    });
-
-    it("should return an empty object for a non-object input", () => {
-      expect(
-        mapToOpportunity(123 as unknown as Record<string, string>),
-      ).toEqual({});
     });
   });
 

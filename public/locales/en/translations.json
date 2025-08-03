@@ -264,7 +264,9 @@
           "postcode": { "label": "PLZ" },
           "refugeeName": { "label": "Name Of Refugee" },
           "refugeeNumber": { "label": "Phone Number Of Refugee" },
-          "information": { "label": "More information" }
+          "information": {
+            "label": "Provide information about the task the volunteers are expected to perform"
+          }
         },
         "voGroup": {
           "label": "",
@@ -294,7 +296,9 @@
             "label": "How many volunteers are needed",
             "error": "Please enter a number"
           },
-          "information": { "label": "More information" }
+          "information": {
+            "label": "Provide information about the task the volunteers are expected to perform"
+          }
         }
       }
     }

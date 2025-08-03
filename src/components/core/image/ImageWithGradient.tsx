@@ -1,4 +1,3 @@
-import "../../../index.css";
 import { BackgroundImg } from "../../styled/img";
 
 interface Props {

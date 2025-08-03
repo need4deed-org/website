@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { MagnifyingGlassIcon } from "@phosphor-icons/react";
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
+import { CardsFilter } from "../../OpportunityCards/types";
 
 interface SearchContainerProps {
   width?: string;
@@ -21,7 +22,6 @@ const SearchContainer = styled.div<SearchContainerProps>`
 const StyledInput = styled.input`
   font-size: var(--search-input-font-size);
   border: none;
-
   &:focus {
     outline: none;
   }
@@ -31,14 +31,22 @@ interface Props {
   placeHolder?: string;
   onInputChange: (input: string) => void;
   width?: string;
+  cardsFilter?: CardsFilter;
 }
 
 export function Search({
   placeHolder = "Search",
   onInputChange,
   width,
+  cardsFilter,
 }: Props) {
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState<string>("");
+
+  useEffect(() => {
+    if (cardsFilter) {
+      setInputValue(cardsFilter.searchInput);
+    }
+  }, [cardsFilter]);
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     const newValue = e.target.value;
