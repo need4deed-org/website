@@ -110,7 +110,7 @@ export default function OpportunityCardsHeader({
             placeHolder={`${t("opportunityPage.searchPlaceHolder")} ...`}
             onInputChange={onSearchInputChange}
             width="var(--opportunities-header-searchbar-width)"
-            cardsFilter={cardsFilter}
+            value={cardsFilter?.searchInput ?? ""}
           />
           {isMobile ? (
             <ResultsFound numOfOpportunities={numOfOpportunities} />
