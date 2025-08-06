@@ -52,18 +52,6 @@ export const CategoriesContainer = styled.div.attrs<ContainerProps>(
   gap: var(--homepage-volunteering-categories-grid-gap);
 `;
 
-// TODO: delete this container after paginated cards container
-export const CategoriesContainerMobile = styled.div.attrs<ContainerProps>(
-  (props) => ({
-    id: props.id,
-  }),
-)<ContainerProps>`
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  background-color: var(--color-magnolia);
-`;
-
 export const ArrowsButtonContainer = styled.div.attrs<ContainerProps>(
   (props) => ({
     id: props.id,
