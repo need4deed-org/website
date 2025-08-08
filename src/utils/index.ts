@@ -1,5 +1,4 @@
 import { Lang } from "need4deed-sdk";
-import { MutableRefObject } from "react";
 
 import {
   CLOUDFRONT_URL,
@@ -45,15 +44,6 @@ export function isEnumValue<E>(enumObject: object, value: E) {
 export function getBaseUrl(url: string) {
   const [baseUrl] = url.split("/").slice(3, -1);
   return baseUrl ? `/${baseUrl}` : "";
-}
-
-export function setLangDirection(
-  containerRef: MutableRefObject<HTMLDivElement | null>,
-  lng: Lang,
-) {
-  if (isEnumValue(Lang, lng)) {
-    containerRef?.current?.style.setProperty("--n4d-lang-direction", "ltr");
-  }
 }
 
 export const getImageUrl = (imageName: string): string => {

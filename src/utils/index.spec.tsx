@@ -1,6 +1,4 @@
-import { render } from "@testing-library/react";
 import { Lang } from "need4deed-sdk";
-import { RefObject, act, createRef } from "react";
 
 import { OpportunityParams } from "../config/types";
 import {
@@ -14,7 +12,6 @@ import {
   parseYesNo,
   pivotArrayToObj,
   range,
-  setLangDirection,
 } from "./index";
 
 describe("utils", () => {
@@ -56,36 +53,6 @@ describe("utils", () => {
       test(`should return ${returnWhat}`, () => {
         expect(getBaseUrl(url)).toBe(baseUrl);
       });
-    });
-  });
-
-  describe("setLangDirection()", () => {
-    let containerRef: RefObject<HTMLDivElement>;
-    const [ltr] = ["ltr"];
-
-    beforeEach(() => {
-      containerRef = createRef<HTMLDivElement>();
-      render(<div ref={containerRef} />);
-    });
-
-    it('should set the value of the prop direction to ltr if "en" is provided', () => {
-      act(() => {
-        setLangDirection(containerRef, Lang.EN);
-      });
-
-      expect(
-        containerRef.current?.style.getPropertyValue("--n4d-lang-direction"),
-      ).toBe(ltr);
-    });
-
-    it("should do nothing if non language is provided", () => {
-      act(() => {
-        setLangDirection(containerRef, "gibberish" as Lang);
-      });
-
-      expect(
-        containerRef.current?.style.getPropertyValue("--n4d-lang-direction"),
-      ).toBe("");
     });
   });
 
