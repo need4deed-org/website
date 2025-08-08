@@ -1,4 +1,0 @@
-.iframe-container iframe {
-  width: var(--n4d-w);
-  height: clamp(25rem, 50vh, 50rem);
-}
