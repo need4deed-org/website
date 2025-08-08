@@ -10,10 +10,6 @@ export const urlApiTestimonial = `${urlApi}/testimonial/`;
 export const urlApiEvent = `${urlApi}/event/`;
 export const CLOUDFRONT_URL = "https://d2nwrdddg8skub.cloudfront.net/images";
 
-const positives = ["1", "YES", "Yes", "yes", "TRUE", "True", "true"];
-
-export const showEvent = positives.includes(import.meta.env.VITE_SHOW_EVENT);
-
 export const eightDays = 1000 * 60 * 60 * 24 * 8;
 
 export const minPLZGermany = 1067;
