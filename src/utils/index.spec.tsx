@@ -2,7 +2,6 @@ import { Lang } from "need4deed-sdk";
 
 import { OpportunityParams } from "../config/types";
 import {
-  getBaseUrl,
   getOpportunityImg,
   getReadableLocalTime,
   getUrlWithEncodedParams,
@@ -32,26 +31,6 @@ describe("utils", () => {
     ].forEach(([enumObj, value, reason]) => {
       test(`should return false if ${reason}`, () => {
         expect(isEnumValue(enumObj as object, value)).toBeFalsy();
-      });
-    });
-  });
-
-  describe("getBaseUrl()", () => {
-    [
-      ["empty string url given root url", "http://need4deed.org/en", ""],
-      [
-        "proper base url given subpage url",
-        "http://need4deed.org/impressum/en",
-        "/impressum",
-      ],
-      [
-        "irrelevant base url given url without prefix",
-        "/need4deed.org/impressum/en",
-        "",
-      ],
-    ].forEach(([returnWhat, url, baseUrl]) => {
-      test(`should return ${returnWhat}`, () => {
-        expect(getBaseUrl(url)).toBe(baseUrl);
       });
     });
   });
