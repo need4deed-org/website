@@ -5,7 +5,6 @@ import { RefObject, act, createRef } from "react";
 import { OpportunityParams } from "../config/types";
 import {
   getBaseUrl,
-  getFirstThursdayOfMonth,
   getOpportunityImg,
   getReadableLocalTime,
   getUrlWithEncodedParams,
@@ -275,53 +274,6 @@ describe("utils", () => {
       expect(parseYesNo(false)).toBe("No");
       expect(parseYesNo(undefined)).toBe("No");
       expect(parseYesNo(0 as unknown as boolean)).toBe("No");
-    });
-  });
-
-  describe("getFirstThursdayOfMonth", () => {
-    it("should return 02.01 given today is 15.12", () => {
-      const today = new Date("2024-12-15");
-      const firstThursday = new Date("2025-01-02");
-
-      const result = getFirstThursdayOfMonth(today);
-
-      expect(result).toEqual(firstThursday);
-    });
-
-    it("should return 06.02 given today is 16.01", () => {
-      const today = new Date("2025-01-16");
-      const firstThursday = new Date("2025-02-06");
-
-      const result = getFirstThursdayOfMonth(today);
-
-      expect(result).toEqual(firstThursday);
-    });
-
-    it("should return 06.03 given today is 15.02", () => {
-      const today = new Date("2025-02-15");
-      const firstThursday = new Date("2025-03-06");
-
-      const result = getFirstThursdayOfMonth(today);
-
-      expect(result).toEqual(firstThursday);
-    });
-
-    it("should return 2026.01.01 given today is 12.06", () => {
-      const today = new Date("2025-12-06");
-      const firstThursday = new Date("2026-01-01");
-
-      const result = getFirstThursdayOfMonth(today);
-
-      expect(result).toEqual(firstThursday);
-    });
-
-    it("should return undefined given today is 10.12.2026", () => {
-      const today = new Date("2026-12-10");
-      const firstThursday = undefined;
-
-      const result = getFirstThursdayOfMonth(today);
-
-      expect(result).toEqual(firstThursday);
     });
   });
 
