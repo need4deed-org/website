@@ -1,5 +1,4 @@
 import { Lang } from "need4deed-sdk";
-import { MutableRefObject } from "react";
 
 import {
   CLOUDFRONT_URL,
@@ -40,20 +39,6 @@ export function isEnumValue<E>(enumObject: object, value: E) {
   return typeof enumObject === "object"
     ? Object.values(enumObject).includes(value)
     : false;
-}
-
-export function getBaseUrl(url: string) {
-  const [baseUrl] = url.split("/").slice(3, -1);
-  return baseUrl ? `/${baseUrl}` : "";
-}
-
-export function setLangDirection(
-  containerRef: MutableRefObject<HTMLDivElement | null>,
-  lng: Lang,
-) {
-  if (isEnumValue(Lang, lng)) {
-    containerRef?.current?.style.setProperty("--n4d-lang-direction", "ltr");
-  }
 }
 
 export const getImageUrl = (imageName: string): string => {
@@ -177,16 +162,6 @@ export function getUrlWithEncodedParams(
   return `${url}?${queryStringParams.join("&")}`;
 }
 
-interface MainCtaUrl {
-  lng: Lang;
-  id?: string;
-  title?: string;
-}
-
-export function getMainCtaUrl({ lng, id = "", title = "" }: MainCtaUrl) {
-  return `/${Subpages.BECOME_VOLUNTEER}/${lng}/?id=${id}&title=${title}`;
-}
-
 interface MainREgisterUrl {
   id?: string;
   title?: string;
@@ -231,43 +206,6 @@ export function getReadableLocalTime(
 export function parseYesNo(value: boolean | undefined): YesNo {
   if (value) return YesNo.YES;
   return YesNo.NO;
-}
-
-export function getFirstThursdayOfMonth(
-  today: Date = new Date(),
-): Date | undefined {
-  const firstThursdaysOf25And26 = [
-    new Date(Date.UTC(2025, 0, 2)),
-    new Date(Date.UTC(2025, 1, 6)),
-    new Date(Date.UTC(2025, 2, 6)),
-    new Date(Date.UTC(2025, 3, 3)),
-    new Date(Date.UTC(2025, 4, 1)),
-    new Date(Date.UTC(2025, 5, 5)),
-    new Date(Date.UTC(2025, 6, 3)),
-    new Date(Date.UTC(2025, 7, 7)),
-    new Date(Date.UTC(2025, 8, 4)),
-    new Date(Date.UTC(2025, 9, 2)),
-    new Date(Date.UTC(2025, 10, 6)),
-    new Date(Date.UTC(2025, 11, 4)),
-    new Date(Date.UTC(2026, 0, 1)),
-    new Date(Date.UTC(2026, 1, 5)),
-    new Date(Date.UTC(2026, 2, 5)),
-    new Date(Date.UTC(2026, 3, 2)),
-    new Date(Date.UTC(2026, 4, 7)),
-    new Date(Date.UTC(2026, 5, 4)),
-    new Date(Date.UTC(2026, 6, 2)),
-    new Date(Date.UTC(2026, 7, 6)),
-    new Date(Date.UTC(2026, 8, 3)),
-    new Date(Date.UTC(2026, 9, 1)),
-    new Date(Date.UTC(2026, 10, 5)),
-    new Date(Date.UTC(2026, 11, 3)),
-  ];
-
-  const nextFirstThursday = firstThursdaysOf25And26.find(
-    (date) => date >= today,
-  );
-
-  return nextFirstThursday;
 }
 
 export function consoleLogDeveloperContributionMessage() {

@@ -1,6 +1,5 @@
 import { DeepKeys } from "@tanstack/react-form";
-import { EventN4D, Lang } from "need4deed-sdk";
-import React from "react";
+import { Lang } from "need4deed-sdk";
 
 export interface IncludeClassName {
   className?: string;
@@ -109,19 +108,6 @@ export type PrefixObjectAccessor<T extends object, TDepth extends any[]> = {
         | `${PrefixFromDepth<K, TDepth>}${DeepKeys<T[K], [TDepth]>}`
     : never;
 }[keyof T];
-
-export interface EventComponentInfo {
-  title: string;
-  component: React.FC<EventPropType | object>;
-  eventData?: EventPropType;
-  active?: boolean;
-}
-
-export type EventDataType =
-  | { event: EventN4D }
-  | { events: EventComponentInfo[] };
-
-export type EventPropType = { eventData: EventDataType } | object;
 
 export enum ScreenTypes {
   MOBILE = "mobile",
