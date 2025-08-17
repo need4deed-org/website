@@ -20,10 +20,10 @@ import Landing from "./pages/Landing";
 import LegalNotice from "./pages/LegalNotice";
 import Opportunities from "./pages/Opportunities";
 import OpportunityForm from "./pages/OpportunityForm";
-import Subpage from "./pages/Subpage";
 import VolunteerForm from "./pages/VolunteerForm";
 import Agreement from "./pages/VPA";
 import { consoleLogDeveloperContributionMessage } from "./utils";
+import Cookie from "./components/Legal/Cookies";
 
 const queryClient = new QueryClient();
 
@@ -54,91 +54,7 @@ function App() {
           <div ref={containerRef} className="app-container">
             <Routes>
               <Route path="/" element={<Landing />} />
-              <Route
-                path={`/${Subpages.NOTICE}/:lng`}
-                element={<Subpage type={Subpages.NOTICE} />}
-              />
-              <Route
-                path={`/${Subpages.NOTICE}`}
-                element={<Subpage type={Subpages.NOTICE} />}
-              />
-              <Route
-                path={`/${Subpages.DATA_PROTECTION}/:lng`}
-                element={<Subpage type={Subpages.DATA_PROTECTION} />}
-              />
-              <Route
-                path={`/${Subpages.DATA_PROTECTION}`}
-                element={<Subpage type={Subpages.DATA_PROTECTION} />}
-              />
-              <Route
-                path={`/${Subpages.AGREEMENT}/:lng`}
-                element={<Subpage type={Subpages.AGREEMENT} />}
-              />
-              <Route
-                path={`/${Subpages.AGREEMENT}`}
-                element={<Subpage type={Subpages.AGREEMENT} />}
-              />
-              <Route
-                path={`/${Subpages.GUIDELINES}/:lng`}
-                element={<Subpage type={Subpages.GUIDELINES} />}
-              />
-              <Route
-                path={`/${Subpages.GUIDELINES}`}
-                element={<Subpage type={Subpages.GUIDELINES} />}
-              />
-              <Route
-                path={`/${Subpages.BECOME_VOLUNTEER}/:lng`}
-                element={<Subpage type={Subpages.BECOME_VOLUNTEER} />}
-              />
-              <Route
-                path={`/${Subpages.BECOME_VOLUNTEER}`}
-                element={<Subpage type={Subpages.BECOME_VOLUNTEER} />}
-              />
-              <Route
-                path={`/${Subpages.ANNOUNCEMENT}/:lng`}
-                element={<Subpage type={Subpages.ANNOUNCEMENT} />}
-              />
-              <Route
-                path={`/${Subpages.ADD_OPPORTUNITY}`}
-                element={<Subpage type={Subpages.ADD_OPPORTUNITY} />}
-              />
-              <Route
-                path={`/${Subpages.ADD_OPPORTUNITY}/:lng`}
-                element={<Subpage type={Subpages.ADD_OPPORTUNITY} />}
-              />
-              <Route
-                path={`/${Subpages.EVENT}/:lng`}
-                element={<Subpage type={Subpages.EVENT} />}
-              />
-              <Route
-                path={`/${Subpages.EVENT}`}
-                element={<Subpage type={Subpages.EVENT} />}
-              />
-              <Route
-                path={`/${Subpages.EVENTS}/:lng`}
-                element={<Subpage type={Subpages.EVENTS} />}
-              />
-              <Route
-                path={`/${Subpages.EVENTS}`}
-                element={<Subpage type={Subpages.EVENTS} />}
-              />
-              <Route
-                path={`/${Subpages.COOKIES}/:lng`}
-                element={<Subpage type={Subpages.COOKIES} />}
-              />
-              <Route
-                path={`/${Subpages.COOKIES}`}
-                element={<Subpage type={Subpages.COOKIES} />}
-              />
-              <Route
-                path={`/${Subpages.FAQS}/:lng`}
-                element={<Subpage type={Subpages.FAQS} />}
-              />
-              <Route
-                path={`/${Subpages.FAQS}`}
-                element={<Subpage type={Subpages.FAQS} />}
-              />
-
+              <Route path={`/${Subpages.COOKIES}`} element={<Cookie />} />
               <Route path={`/${Subpages.FAQ}`} element={<FAQ />} />
               <Route path={`/${Subpages.ABOUT}`} element={<About />} />
               <Route
