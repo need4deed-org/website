@@ -1,9 +1,4 @@
-export const sleep = (ms: number): Promise<void> =>
-  new Promise((resolve) => {
-    setTimeout(resolve, ms);
-  });
-
-export function getMockMatchMedia() {
+const getMockMatchMedia = () => {
   let selector = "(max-width: 768px)";
   let eventListenerCB: (ev: { matches: boolean }) => void;
 
@@ -33,4 +28,5 @@ export function getMockMatchMedia() {
       };
     }),
   };
-}
+};
+export default getMockMatchMedia;

@@ -6,14 +6,7 @@ import {
   n4dLanguageLocalStorageKey,
   timeZone,
 } from "../config/constants";
-import {
-  AlfredOpportunity,
-  Env,
-  KeyMap,
-  OpportunityParams,
-  Subpages,
-  YesNo,
-} from "../config/types";
+import { Env, OpportunityParams, Subpages, YesNo } from "../config/types";
 
 export function pivotArrayToObj(arr: Array<Record<string, unknown>>) {
   const [first] = arr;
@@ -126,28 +119,6 @@ export function isoCodesToNames(isoCodes: string) {
     console.error(error);
     return "";
   }
-}
-
-export function mapOpportunity(opportunity: AlfredOpportunity, keyMap: KeyMap) {
-  return Object.entries(keyMap).reduce(
-    (mapped: Record<string, string>, [key, value]) => {
-      const path = value.split(".");
-      let mappedValue = opportunity;
-      path.forEach((opportunityKey) => {
-        const nextValue = mappedValue[opportunityKey];
-        mappedValue = Array.isArray(nextValue)
-          ? pivotArrayToObj(nextValue)
-          : nextValue;
-      });
-      return {
-        ...mapped,
-        [key]: Array.isArray(mappedValue)
-          ? mappedValue.join(", ")
-          : (mappedValue as unknown as string),
-      };
-    },
-    {},
-  );
 }
 
 const paramEncoderFnMap = {
@@ -429,30 +400,6 @@ export const formatDateRange = (
 
   return `${formattedDate}${separator} ${timeRangeString}`;
 };
-
-export function getOpportunityForGrid(opportunity: Record<string, string>) {
-  return {
-    accompanyingDate: opportunity.time
-      ? null
-      : new Date(opportunity.accompDate),
-    accompanyingInfo: null,
-    activities: opportunity.activities.split(","),
-    createdAt: new Date(opportunity.createdAt),
-    datetime: null,
-    id: opportunity.id,
-    languages: opportunity.languages.split(","),
-    locations: opportunity.location.split(","),
-    opportunityType: opportunity.type,
-    schedule: opportunity.time,
-    skills: [""],
-    status: "",
-    timeslots: [{ key: "" }],
-    title: opportunity.title,
-    updatedAt: new Date(opportunity.updatedAt),
-    voInformation: opportunity.vo,
-    categoryId: opportunity.categoryId,
-  };
-}
 
 export function getStoredLang(): Lang | null {
   const storedLang = localStorage.getItem(n4dLanguageLocalStorageKey);

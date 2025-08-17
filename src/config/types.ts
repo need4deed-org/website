@@ -1,4 +1,3 @@
-import { DeepKeys } from "@tanstack/react-form";
 import { EventN4D, Lang } from "need4deed-sdk";
 import React from "react";
 
@@ -64,10 +63,6 @@ export enum Subpages {
   EVENT_PAGE = "event-page",
 }
 
-export enum Events {
-  EVENT_8_31_24 = "event-8-31-24",
-}
-
 // conjunction between keys and disjunction between possible values are applied for search
 export interface OpportunityParams {
   search?: Record<string, string[]>;
@@ -93,22 +88,6 @@ export type KeyMap = {
   updatedAt?: string;
   accompDate?: string;
 };
-
-// copied from tanstack internals
-export type PrefixFromDepth<
-  T extends string | number,
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  TDepth extends any[],
-> = TDepth["length"] extends 0 ? T : `.${T}`;
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export type PrefixObjectAccessor<T extends object, TDepth extends any[]> = {
-  [K in keyof T]-?: K extends string | number
-    ?
-        | PrefixFromDepth<K, TDepth>
-        | `${PrefixFromDepth<K, TDepth>}${DeepKeys<T[K], [TDepth]>}`
-    : never;
-}[keyof T];
 
 export interface EventComponentInfo {
   title: string;

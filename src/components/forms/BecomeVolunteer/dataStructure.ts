@@ -23,17 +23,6 @@ export interface VolunteerData {
   language: Lang;
 }
 
-export enum VolunteerArrayDataKeys {
-  LOCATIONS = "locations",
-  LANGUAGESNATIVE = "languagesNative",
-  LANGUAGESFLUENT = "languagesFluent",
-  LANGUAGESINTERMEDIATE = "languagesIntermediate",
-  ACTIVITIES = "activities",
-  SKILLS = "skills",
-  LEADFROM = "leadFrom",
-}
-export type VolunteerDataLists = `${VolunteerArrayDataKeys}`;
-
 export interface VolunteerParsedData extends Volunteer {
   language: Lang;
 }

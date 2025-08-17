@@ -1,9 +1,7 @@
 import "@testing-library/jest-dom";
-
-import { getMockMatchMedia } from "./utils";
-
 // init i18next
 import "../config/i18next";
+import getMockMatchMedia from "./utils";
 
 // this mock is needed cos jsdom doesn't support window.matchMedia method
 const { fireEventListenerCB, mockMatchMedia, setMockSelector } =
