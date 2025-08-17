@@ -16,7 +16,6 @@ import DataPrivacy from "./pages/DataPrivacy";
 import EventPage from "./pages/EventPage";
 import FAQ from "./pages/FAQ";
 import GuidelinesPage from "./pages/GuidelinesPage";
-import Home from "./pages/Home";
 import Landing from "./pages/Landing";
 import LegalNotice from "./pages/LegalNotice";
 import Opportunities from "./pages/Opportunities";
@@ -55,8 +54,6 @@ function App() {
           <div ref={containerRef} className="app-container">
             <Routes>
               <Route path="/" element={<Landing />} />
-              <Route path={`/${Subpages.OLD}/:lng`} element={<Home />} />
-              <Route path={`/${Subpages.OLD}`} element={<Home />} />
               <Route
                 path={`/${Subpages.NOTICE}/:lng`}
                 element={<Subpage type={Subpages.NOTICE} />}
