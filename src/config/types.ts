@@ -70,25 +70,6 @@ export interface OpportunityParams {
   language?: Lang;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export type AlfredOpportunity = Record<string, any>;
-
-export type KeyMap = {
-  id: string;
-  type?: string;
-  name?: string;
-  languages: string;
-  time: string;
-  location: string;
-  vo?: string;
-  categoryId?: string;
-  title?: string;
-  activities?: string;
-  createdAt?: string;
-  updatedAt?: string;
-  accompDate?: string;
-};
-
 export interface EventComponentInfo {
   title: string;
   component: React.FC<EventPropType | object>;
