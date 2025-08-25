@@ -1,0 +1,136 @@
+.pastEventCard {
+  margin-bottom: 4rem;
+}
+
+
+.eventContent {
+  display: flex;
+  gap: 2rem;
+  margin-block: 1rem;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.eventContent h1 {
+  margin-block: 1rem 0;
+}
+
+
+
+.eventContent strong {
+  font-weight: 700;
+}
+
+.eventImage {
+  width: 328px;
+  height: 328px;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+}
+
+
+.eventStatus {
+  align-items: center;
+  font-size: 14px;
+  padding: 0.375rem 1rem;
+  background: var(--color-white);
+  width: fit-content;
+  margin-bottom: 1rem;
+}
+
+.eventStatus p {
+  color: var(--color-midnight-bright);
+  margin: 0;
+  font-weight: 600;
+}
+
+.eventTitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-midnight);
+}
+
+.eventSubtitle {
+  font-size: 14px;
+  font-weight: 550;
+  color: var(--color-midnight);
+}
+
+.eventDate h6 {
+  color: var(--color-midnight);
+  font-size: 20px;
+  font-weight: 600;
+  margin: 2rem auto;
+}
+
+
+.eventDescription {
+  font-size: 20px;
+  font-weight: 400;
+  white-space: pre-line;
+  margin-top: 1rem;
+  color: var(--color-midnight);
+}
+
+.additionalTitle {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: var(--color-midnight);
+}
+
+
+.additionalInfoList {
+  margin-top: 1rem;
+  padding-left: 20px;
+}
+
+.additionalInfoItem {
+  margin-bottom: 0.5rem;
+  color: var(--color-midnight);
+}
+
+
+
+@media (max-width: 1024px) {
+  .eventDetails {
+    width: 350px
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 576px) {
+  .eventContent {
+    grid-template-columns: unset;
+    gap: 1rem;
+  }
+
+
+
+  .eventImage {
+    height: 200px;
+    width: 200px;
+  }
+
+  .eventImage {
+    width: 328px;
+    height: 328px;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+  }
+
+  .eventDescription {
+    font-size: 16px;
+    font-weight: 400;
+    white-space: pre-line;
+    margin-top: 1rem;
+    color: var(--color-midnight);
+  }
+
+
+}

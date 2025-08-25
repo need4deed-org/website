@@ -1,0 +1,197 @@
+.eventContainer {
+  background: var(--layout-static-page-background-default);
+  color: var(--color-midnight);
+
+
+}
+
+/* Ensure all child elements inherit the default text color */
+.eventContainer h1,
+.eventContainer h2,
+.eventContainer h3,
+.eventContainer h4,
+.eventContainer h5,
+.eventContainer h6,
+.eventContainer p,
+.eventContainer li {
+  color: inherit;
+}
+
+.eventTitle {
+  font-weight: 700;
+  font-size: 32px;
+  margin-bottom: 1rem;
+}
+
+
+.eventSubtitle {
+  font-weight: 600;
+  letter-spacing: 0.5%;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.eventDate h6 {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 1rem;
+}
+
+.eventAddress {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.eventAddress h6,
+.eventAddress span {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.cityZip {
+  background-color: var(--color-white);
+  padding: 6px 8px;
+  border-radius: 4px;
+}
+
+.locationComment {
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 1rem;
+}
+
+
+.eventImage {
+  width: 100%;
+  max-width: 880px;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+  margin: 2rem 0;
+}
+
+.eventDescription h6 {
+  white-space: pre-wrap;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 1rem;
+}
+
+.additionalInfoList {
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 1rem;
+}
+
+.eventStatus {
+  align-items: center;
+  padding: 0.375rem 1rem;
+  background: var(--color-white);
+  width: fit-content;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
+.eventStatus p {
+  color: var(--n4d-secondary-darker);
+  margin: 0;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.eventActions {
+  margin: 3rem 0;
+  display: flex;
+}
+
+/* Responsive styles for tablets and mobile devices */
+@media (max-width: 1024px) {
+  .eventContainer {
+    padding: 1.5rem;
+  }
+
+  .eventTitle {
+    font-size: 28px;
+  }
+
+  .eventSubtitle {
+    font-size: 18px;
+  }
+
+  .eventDate h6 {
+    font-size: 18px;
+  }
+
+  .eventAddress h6,
+  .eventAddress span {
+    font-size: 18px;
+  }
+
+  .eventDescription h6 {
+    font-size: 18px;
+  }
+
+  .additionalInfoList {
+    font-size: 18px;
+  }
+
+  .eventImage {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (max-width: 576px) {
+  .eventContainer {
+    padding: 1rem;
+  }
+
+  .eventTitle {
+    font-size: 24px;
+  }
+
+  .eventSubtitle {
+    font-size: 16px;
+  }
+
+  .eventDate h6 {
+    font-size: 16px;
+  }
+
+  .eventAddress {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .eventAddress h6,
+  .eventAddress span {
+    font-size: 16px;
+  }
+
+  .eventDescription h6 {
+    font-size: 16px;
+  }
+
+  .additionalInfoList {
+    font-size: 16px;
+  }
+
+  .eventImage {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  .eventActions {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
