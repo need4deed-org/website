@@ -1,0 +1,383 @@
+{
+  "language": "Türkçe",
+  "need4deed": "NEED 4 DEED",
+  "workingWithRefugees": "Mültecilerle çalışma konusunda gönüllülük fırsatları",
+  "accompanyTranslate": "Eşlik edin, tercüme edin",
+  "learnMoreButton": "Seçenekleri Görüntüle",
+  "bas2022": "BAS (2022)",
+  "formLink": "https://forms.gle/XWnU4znoAFaU9HfW9",
+  "accompanyingVolunteering": "Refakatçi Gönüllülük",
+  "CookieConsentBanner": {
+    "message": "Bu web sitesi Google Analytics kullanır. Kabul ederek, ziyaretçilerin web sitemizle nasıl etkileşim kurduğunu anlamamıza yardımcı olursunuz.",
+    "decline": "Reddet",
+    "accept": "Kabul et",
+    "linkPrivacyPolicy": "Gizlilik Politikası"
+  },
+  "projectIntro": {
+    "slogan": "Berlin’de mülteciler için gönüllü desteği",
+    "beVolunteerButton": "Gönüllü Olun!"
+  },
+  "weekdays": {
+    "1": "Pazartesi",
+    "2": "Salı",
+    "3": "Çarşamba",
+    "4": "Perşembe",
+    "5": "Cuma",
+    "6": "Cumartesi",
+    "0": "Pazar"
+  },
+  "iframeTitles": {
+    "calendar": "Takvim",
+    "howToVolunteer": "Harekete Geçin! - Gönüllü Olun"
+  },
+  "emptyList": {
+    "header": "Fırsatlar güncelleniyor...",
+    "para": "Şu anda gönüllülük fırsatlarını güncelliyoruz. Bu biraz zaman alabilir. Sayfayı gün içinde daha sonra yenilemenizi öneririz. Herhangi sorunuz varsa lütfen volunteer@need4deed.org ile iletişime geçin"
+  },
+  "spinner": {
+    "header": "Fırsatlar yükleniyor...",
+    "para": ""
+  },
+  "linkToPrevProj": "Mültecilerle Gönüllü Olmak Hakkında",
+  "contactForRAC": {
+    "heading": "Mülteci konaklama merkezinde gönüllü koordinatörü müsünüz?",
+    "emailUs": "bize yazın"
+  },
+  "form": {
+    "error": {
+      "required": "Bu alan zorunludur",
+      "postcode": "Geçerli bir Berlin posta kodu olmalıdır",
+      "email": "Geçerli bir e-posta adresi olmalıdır",
+      "location": "Lütfen en az bir konum seçin",
+      "availability": "Please pick at least one timeframe",
+      "labelErrors": "Hatalar",
+      "language": "Lütfen en az bir dil seçin"
+    },
+    "button": { "more": "daha...", "submit": "Gönder" },
+    "becomeVolunteer": {
+      "header": "ile Gönüllü Olun",
+      "thankYou": {
+        "header": "Teşekkür Ederiz!",
+        "para": ""
+      },
+      "thanks": "Seçtiğiniz için teşekkür ederiz",
+      "reset": "Sıfırla",
+      "fields": {
+        "name": {
+          "label": "Ad Soyad"
+        },
+        "email": {
+          "label": "E-posta",
+          "error": ""
+        },
+        "phone": {
+          "label": "Telefon Numarası veya Telegram Kullanıcı Adı",
+          "error": "Telefon numarası olmalıdır"
+        },
+        "postcode": {
+          "label": "Posta Kodu (Berlin) konumunuz",
+          "error": ""
+        },
+        "locations": {
+          "header": "Tercih Edilen Bölgeler* (Berlin)",
+          "para": "*Çoğu konaklama merkezinin halkanın dışında olduğunu unutmayın!",
+          "error": "",
+          "helpText": "Mükemmel bir eşleşme bulamazsak, size konumunuza da dayalı teklifler gönderebiliriz!",
+          "helpTitle": ""
+        },
+        "availability": {
+          "header": "Tercih Edilen Zaman Dilimleri*",
+          "para": "*Çoğu fırsatın en azından başlangıçta 9-17 çalışma saatleriyle sınırlı olduğunu unutmayın!",
+          "error": "Lütfen en az bir zaman dilimini seçin",
+          "helpText": "Pzt-Pazar kullanılabilirlikleri düzenli olarak tekrarlanan gönüllülüğü ifade eder. Zaman dilimleri belirli dönemlerle sınırlıysa veya açıklamalar gerektiriyorsa, lütfen son bölümdeki yorumlara yazın.",
+          "helpTitle": ""
+        },
+        "languages": {
+          "header": "Diller*",
+          "para": "*Eğer dilinizi bulamadıysanız, lütfen \"Other\" seçeneğini seçin ve tercih ettiğiniz dili aşağıdaki yorum bölümüne yazın",
+          "languagesNative": {
+            "header": "Ana Dil",
+            "error": ""
+          },
+          "languagesFluent": {
+            "header": "Akıcı",
+            "error": "Lütfen en az bir dil seçin"
+          },
+          "languagesIntermediate": {
+            "header": "Orta Seviye"
+          },
+          "helpText": "Akıcı, bazı dil çevirilerine ihtiyaç duyulduğunda destekleyebileceğinizi düşündüğünüz anlamına gelir. Bu diller, mültecilerin ihtiyaçlarına yöneliktir. Ana diliniz veya akıcı olduğunuz dil burada yoksa, lütfen son yorum bölümüne ekleyin!",
+          "helpTitle": ""
+        },
+        "activities": {
+          "header": "Tercih Edilen Aktiviteler",
+          "error": "Lütfen en az bir aktivite seçin",
+          "helpText": "Bunlar, gönüllü desteğe ihtiyaç duyan en yaygın ihtiyaçlardır. Bazen gönüllülüğe başladıktan sonra değişebilirler.",
+          "helpTitle": ""
+        },
+        "skills": {
+          "header": "Ek Beceriler veya Deneyimler",
+          "helpText": "Deneyiminizden, yeteneklerinizden veya uzmanlığınızdan paylaşabileceğinizi düşündüğünüz her şey bilmek faydalı olabilir, ancak endişelenmeyin, gönüllülük için gerekli değildir!",
+          "helpTitle": ""
+        },
+        "certOfGoodConduct": {
+          "header": "Adli Sicil Kaydı",
+          "error": "Lütfen en az bir aktivite seçin",
+          "why": "Neden buna ihtiyacım var?",
+          "yes": "Var",
+          "no": "Başvurmam gerekiyor",
+          "helpText": "",
+          "helpTitle": ""
+        },
+        "certMeaslesVaccination": {
+          "header": "Kızamık Aşı Kaydı",
+          "error": "Lütfen en az bir aktivite seçin",
+          "yes": "Var",
+          "no": "Kanıtlamam gerekiyor",
+          "helpText": "",
+          "helpTitle": ""
+        },
+        "leadFrom": {
+          "header": "Bizi nereden duydunuz?",
+          "helpText": "",
+          "helpTitle": ""
+        },
+        "comments": {
+          "label": "Yorumlar (diğer diller, zamanlar, yerler, etkinlikler vb.)",
+          "helpText": "",
+          "helpTitle": ""
+        },
+        "consent": {
+          "header": "Bunu kabul ediyorum:",
+          "and": "ve",
+          "label": "",
+          "helpText": "",
+          "helpTitle": ""
+        }
+      }
+    },
+    "addOpportunity": {
+      "header": "Bir Fırsat Ekle",
+      "fields": {
+        "title": { "label": "Kısaca ne tür yardım gerekiyor" },
+        "contactGroup": { "label": "İletişim bilgileri" },
+        "aaGroup": { "label": "Randevu Esnasında Yardım" },
+        "voGroup": { "label": "Gönüllülük Fırsatı" },
+        "email": { "label": "E-posta" },
+        "fullName": { "label": "Ad Soyad" },
+        "postcode": { "label": "Posta Kodu" },
+        "phone": { "label": "Telefon numarası" },
+        "opportunityType": {
+          "header": "Fırsat Türü",
+          "volunteering": "Gönüllülük Fırsatı",
+          "accompanying": "Randevu Esnasında Yardım",
+          "helpText": "Yardım etmek için iki yol vardır: Çeşitli etkinliklerde gönüllü olmak veya randevulara eşlik ederek temelde tercümanlık yapmak.",
+          "helpTitle": ""
+        },
+        "activities": {
+          "header": "Etkinlikler"
+        },
+        "schedule": {
+          "header": "Program",
+          "helpText": "Lütfen gönüllülük için zaman dilimleri seçin."
+        },
+        "skills": {
+          "header": "Beceriler",
+          "helpText": "Lütfen gönüllülük için gerekli becerileri seçin."
+        },
+        "languagesRefugee": {
+          "header": "Mültecilerin konuştuğu diller",
+          "helpText": "Lütfen gönüllülük sırasında gerekli dilleri seçin."
+        },
+        "languagesTranslation": {
+          "header": "Tercüme dilleri",
+          "helpText": "Lütfen randevu sırasında gerekli dilleri seçin."
+        },
+        "dateTime": {
+          "label": "Randevu tarihi ve saati (YYYY-AA-GG SS:DD)",
+          "error": "Yanlış tarih veya saat formatı.",
+          "tooClose": "Randevu tarihi en az 7 gün sonra olmalıdır"
+        },
+        "ifTranslationToEnOkay": {
+          "label": "İngilizceye çeviri yapılabilir"
+        },
+        "address": { "label": "Randevu Adresi" },
+        "refugeeName": { "label": "Mültecinin Adı" },
+        "refugeeNumber": { "label": "Mültecinin Telefon Numarası" },
+        "aaInformation": { "label": "Bilgi" },
+        "voInformation": { "label": "Bilgi" },
+        "numberVolunteers": {
+          "label": "Kaç gönüllü gerekiyor",
+          "error": "Lütfen bir sayı girin"
+        }
+      }
+    }
+  },
+  "event": { "menuItem": "VolunTea Event" },
+  "VolunTea": {
+    "greeting": {
+      "invite": "Bir sonraki VolunTea etkinliğimize davetlisiniz.",
+      "when": "Her zamanki gibi, ayın ilk Perşembe günü!"
+    },
+    "main": {
+      "title": "VolunTea nedir?",
+      "para1": "Mültecilere nasıl destek olunacağı ve Berlin'deki ihtiyaç sahibi insanlarla etkileşime girmenin yeni yolları hakkında birbirlerinden ve ekipten haber almak için gönüllülerin bir araya geldiği küçük bir toplantı.",
+      "para2": "- Eğer zaten gönüllü olarak çalışmaya başladıysanız, bu buluşmalar gönüllülük deneyimlerinizi paylaşmak ve diğerlerinden haber almak için bir alan sağlar.",
+      "para3": "- Berlin'deki mültecileri desteklemek için birlikte bir şeyler planlamak istiyorsanız, toplantının bir kısmı yeni fikirleri dinlemek ve diğer gönüllüler ile ekibimizin desteklemek isteyip istemediğini görmek için ayrılacaktır.",
+      "para4": "- Eğer henüz gönüllü olarak çalışmaya başlamadıysanız veya ne bekleyeceğinizden hala emin değilseniz, bu ekibimizi tanımak ve aktif gönüllülerden neler olduğunu öğrenmek için bir fırsattır.",
+      "para5": "- Bürokrasi :) Eğer hala sabıka kaydı yoksa, pasaportunuzu veya kimliğinizi getirdiğiniz sürece sizin için başvuru yapabiliriz."
+    },
+    "outro": {
+      "benefits": "İçecekler ve atıştırmalıklar ikramımızdır!",
+      "rsvp": {
+        "text": "Lütfen gelip gelmeyeceğinizi bize bildirin ",
+        "link": "bu formu kullanarak"
+      },
+      "expired": "Süresi Doldu!",
+      "address": {
+        "floor": "Birinci kat",
+        "lead": "Ana park girişinin hemen yanında (solunda) bulunan küçük kapıdan giriniz"
+      }
+    }
+  },
+  "eventHolidayGift": {
+    "header": "Mülteci Çocuklar İçin Bayram Hediyeleri",
+    "paras": {
+      "para1": "Yıl sonuna yaklaşırken, sizden Berlin genelinde ve diğer çatışma bölgelerindeki mülteci barınaklarında yaşayan yerinden edilmiş çocuklara bayram hediyeleri toplamamıza ve destek sağlamamıza yardımcı olmanızı istiyoruz.",
+      "para2": "Noel ve yıl sonu fırsatını kullanarak, yerinden edilmiş çocuklara hediye toplamamıza ve destek sağlamamıza yardımcı olmanızı istiyoruz. Bu genç mülteciler, Berlin genelindeki mülteci barınaklarında yaşıyorlar ve çeşitli çatışma bölgelerinden geliyorlar. Genellikle aylarca veya yıllarca orada kalıyorlar, Ukraynaca, Arapça, Dari, Farsça, Rusça, Türkçe ve birçok başka dil konuşuyorlar. Çocuklar için hediyeler, Need4Deed ekibi ve gönüllüler tarafından Aralık ayının ilk haftası boyunca satın alınacak ve dağıtılacak. Hediyeleri, şu anda 30 binden fazla mültecinin yaşadığı Berlin'deki barınaklarda dağıtacağız. Ayrıca, hediyelerin dörtte biri, Lübnan ve Güney Sudan'daki yerinden edilmiş çocukları destekleyen yerel organizasyonlara bağışlanacaktır."
+    },
+    "donate": {
+      "money": {
+        "invite": "Lütfen bağış yapın:",
+        "where": "betterplace.org"
+      },
+      "things": {
+        "invite": "Hediye bağışlayın:",
+        "where": "\nElsenstr 87\nBerlin 12435\nSalı-Perşembe\n9:30-17:00"
+      },
+      "wrapping": {
+        "invite": "Hediye paketlemeye katılın:",
+        "registration": "Kayıt Ol"
+      }
+    },
+    "final": {
+      "feelFree": "Herhangi bir sorunuz varsa, lütfen bizimle iletişime geçmekten çekinmeyin!",
+      "team": "Ekip"
+    }
+  },
+  "event831": {
+    "header": "Need4Deed Yaz Şenliği",
+    "menuItem": "Yaz Şenliği",
+    "paras": {
+      "para1": "Sevgili gönüllüler, Du für Berlin işbirliğiyle 31 Ağustos Cumartesi günü saat 13.00'ten 18.00'e kadar düzenleyeceğimiz Yaz Şenliğimize sizleri davet etmekten mutluluk duyuyoruz.",
+      "para2": "İster halihazırda gönüllü olun, ister mültecilerle gönüllü olmakla ilgilenin, bize katılın, bir arkadaşınızı veya daha fazlasını getirin!",
+      "para3": {
+        "morning": {
+          "timeslot": "13:00-13:30",
+          "title1": "Tanışma ve Karşılama"
+        },
+        "day": {
+          "timeslot": "13:30-18:00",
+          "title1": "Canlı Müzik (Bağlama)",
+          "title2": "Canlı Müzik (Caz ve Sukus)",
+          "title3": "Canlı Elektronik DJ Seti"
+        },
+        "afternoon": {
+          "timeslot": "13:30-17:00",
+          "title1": "Über den Tellerand e.V. işbirliğiyle Yemek Atölyesi",
+          "title2": "Tohum Bombası Atölyesi",
+          "title3": "Grup Atölyesi"
+        },
+        "all": {
+          "timeslot": "All Day",
+          "title1": "Çocuk Alanı",
+          "title2": "Hafif yemek ve içecekler ikramımız!"
+        }
+      },
+      "para4": "Etkinlik, ArtSpace in Exile, Elsenstraße 87, 12435 Berlin (Alt-Treptow) adresinde gerçekleşecektir."
+    },
+    "rsvp": {
+      "invite": "Ücretsiz Giriş. Lütfen buradan kaydolun:",
+      "registration": "Kayıt Formu"
+    },
+    "final": {
+      "feelFree": "Herhangi bir sorunuz varsa, lütfen bizimle iletişime geçmekten çekinmeyin!",
+      "team": "Takım"
+    }
+  },
+  "volunteeringProjects": {
+    "header": "Gönüllülük Fırsatları",
+    "overComeObstaclesHeading": "Mentor olmak ister misiniz?",
+    "overComeObstaclesSubheading": " Hürdenspringer projesinde, eşleştiğiniz bir kişiyle, o Berlin'de ilk adımlarını atarken hobilerine eşlik ederek veya birlikte kararlaştırdığınız herhangi bir aktiviteyi yaparak ona destek olacaksınız. Bu programda mültecilerin yaşadığı Hürdenspringer Tempelhof-Schöneberg'den özel bir ekip de görev almaktadır.",
+    "childCareHeading": "Çocuk Bakımı",
+    "childCareSubheading": "Konaklama Merkezlerinde çocuklarla ilgili çalışmaları yürütecek ve bunlara yardımcı olacak olacak gönüllülere ihtiyacımız var.",
+    "sportProgramHeading": "Spor Etkinlikleri",
+    "sportProgramSubheading": "Konaklama Merkezlerinde çocuklarla, gençlerle ve yetişkinlerle spor aktiviteleri gerçekleştirmemize yardımcı olacak gönüllülere ihtiyacımız var.",
+    "translationHeading": "Almanca ve ikinci bir dilde de akıcı konuşuyor musunuz?",
+    "translationSubheading": "Doktorda, JobCenter'da veya ihtiyaç duyulan herhangi bir yerde Arapça / Ukraynaca / Rusça / Darice / Farsça / Türkçe / Fransızca ve daha fazlasından çeviri yaparak mültecilere destek olun!"
+  },
+  "aboutProject": {
+    "aboutProjectHeading": "Proje Hakkında",
+    "aboutProjectSubheading": "Dünya genelinde çatışma bölgelerinden, baskılardan, insan hakları ihlallerinden kaçan insanların sayısı hiç bu kadar yüksek olmamıştı. Need4Deed, gönüllülüğü kolay erişilebilir duruma getirerek sivil toplumun etkinliği aracılığı ile mültecilerin Berlin’de toplumsal yaşama katılımını ve uyum sağlamasını teşvik etmeyi amaçlamaktadır. Bunun için Berlin’de konaklama merkezlerinde kalan mültecilerin ihtiyaçları ile gönüllüleri ilişkilendirecek, sürdürülebilir ve yaygınlaştırılabilir bir işleyiş oluşturmayı hedeflemektedir."
+  },
+  "values": {
+    "valuesHeading": "Değerlerimiz",
+    "equalOpportunityHeading": "Fırsat eşitliği",
+    "equalOpportunitySubheading": "Dezavantajlı koşullarda yaşayan insanlara eşit fırsatlar sunulması gerekmektedir. Zorunlu göçten etkilenerek hizmetlere erişimde zorluk çeken bireyler ve gruplar da bu kapsama dahildir.",
+    "responsibilityHeading": "Sorumluluk",
+    "responsibilitySubheading": "Hem ülkelerin (devletin) hem de sivil toplumun, zorunlu göçten etkilenenler dahil olmak üzere hizmetlere erişmekte zorluk çeken topluluklara karşı sorumlulukları vardır.",
+    "migranToMigranSupportHeading": "Göçmenden göçmene destek",
+    "migranToMigranSupportSubheading": "Zorunlu göçe maruz kalmış gruplar ve bireyler, entegrasyon süreçleri boyunca göçmenlik geçmişi olanlar tarafından daha iyi anlaşılabilir ve desteklenebilir, böylece eşit fırsatlar elde edebilir ve nihayetinde topluma katkı sağlayabilir.",
+    "activeParticipationHeading": "Aktif Katılım",
+    "activeParticipationSubheading": "Hem göçmenlerin birbirini desteklemesi hem de göçmen olmayanların desteği, hızlı bir uyum sağlama ve aktif katılım sürecini kolaylaştırarak önemli bir sosyal görev üstlenir.",
+    "technologyHeading": "Teknoloji",
+    "technologySubheading": "Hizmetlere erişimde zorluk çeken toplulukları destekleme çalışmalarında teknolojinin kullanılması, destek verme ve almanın daha kapsayıcı, erişilebilir ve yaygınlaştırılabilir hale getirilmesinde anahtar bir rol oynar."
+  },
+  "footer": {
+    "aboutUs": {
+      "aboutUsHeading": "Hakkımızda",
+      "project": "Proje",
+      "aboutUs": "Hakkımızda"
+    },
+    "legal": {
+      "legalHeading": "Yasal",
+      "impressum": "Yasal Bildirim",
+      "dataPrivacy": "Gizlilik",
+      "agreement": "Gönüllü Katılım Sözleşmesi",
+      "cookies": "Çerezler"
+    },
+    "contact": {
+      "contactHeading": "İletişim",
+      "email": "Email",
+      "emailAddress": "info@need4deed.org"
+    }
+  },
+  "cookieSettings": {
+    "title": "Çerez Ayarlarını Yönet",
+    "saveButton": "Kaydet & Ana Sayfaya Git"
+  },
+  "faqs": {
+    "faqs": "SSS",
+    "title": "Sıkça Sorulan Sorular",
+    "first_steps_question": "Gönüllü olmak için ilk adımlar nelerdir?",
+    "first_steps_answer": "Need4Deed web sitesinde gönüllü başvuru formunu doldurarak başlayın.",
+    "after_form_question": "Formu doldurduktan sonra ne olur?",
+    "after_form_answer": "Tercihleriniz ve konumlarınızı aldıktan sonra sizin için uygun bir fırsat aramaya başlıyoruz ve önümüzdeki günlerde sizinle iletişime geçiyoruz.",
+    "find_opportunities_question": "Mevcut gönüllü fırsatlarını nasıl bulabilirim?",
+    "find_opportunities_answer": "Need4Deed web sitesindeki 'Fırsatlar' sayfasını kontrol ederek mevcut gönüllü rollerini görebilirsiniz.",
+    "volunteer_roles_question": "Hangi tür gönüllü rolleri sunuluyor?",
+    "volunteer_roles_answer": "Roller arasında çocuk bakımı, dil kafeleri, çeviri hizmetleri ve resmi randevular ile spor aktivitelerinde destek bulunuyor.",
+    "special_skills_question": "Gönüllü olmak için özel becerilere ihtiyacım var mı?",
+    "special_skills_answer": "Birçok rol tüm gönüllülere açıktır, ancak bazı pozisyonlar için özel beceriler gerekebilir.",
+    "volunteering_time_question": "Gönüllülük ne kadar zaman alır?",
+    "volunteering_time_answer": "Düzenli gönüllülük genellikle haftada yaklaşık 2 saat veya ayda iki kez bir taahhüt gerektirir. Düzensiz gönüllülük, özellikle etkinlikler veya doktor randevularındaki çeviriler gibi görevlerde, zamanınız olduğunda gerçekleşebilir.",
+    "age_requirements_question": "Gönüllüler için yaş sınırı var mı?",
+    "age_requirements_answer": "Yaş gereksinimleri değişiklik gösterebilir ancak çoğu yerde gönüllülerin 18 yaşından büyük olması gereklidir. Lütfen fırsat açıklamalarını kontrol edin.",
+    "voluntea_gatherings_question": "VolunTea toplantılarında ne beklemeliyim?",
+    "voluntea_gatherings_answer": "VolunTea orientasyonu, Need4Deed'in misyonunu, gönüllü rollerini ve uygun mülteci barınma merkezlerinin bulunmasına yardım etmeyi kapsar.",
+    "training_question": "Özel bir eğitim var mı?",
+    "training_answer": "Her birkaç ayda bir, özellikle çeviri desteği sağlayanlar için eğitimler sunulmaktadır.",
+    "group_volunteering_question": "Bir grup veya organizasyonla gönüllü olabilir miyim?",
+    "group_volunteering_answer": "Evet, grup gönüllülüğü teşvik edilmektedir, özellikle mülteci barınma merkezlerini destekleyenler için."
+  }
+}

@@ -1,0 +1,718 @@
+{
+  "language": "English",
+  "need4deed": "NEED 4 DEED",
+  "workingWithRefugees": "Volunteering Opportunities",
+  "accompanyTranslate": "Accompany and translate",
+  "learnMoreButton": "View opportunities",
+  "bas2022": "BAS (2022)",
+  "formLink": "https://forms.gle/XWnU4znoAFaU9HfW9",
+  "accompanyingVolunteering": "Accompanying Volunteering",
+
+  "CookieConsentBanner": {
+    "message": "This website uses Google Analytics. By accepting, you help us understand how visitors interact with our website.",
+    "decline": "Decline",
+    "accept": "Accept",
+    "linkPrivacyPolicy": "Privacy Policy"
+  },
+  "weekdays": {
+    "1": "Monday",
+    "2": "Tuesday",
+    "3": "Wednesday",
+    "4": "Thursday",
+    "5": "Friday",
+    "6": "Saturday",
+    "0": "Sunday"
+  },
+  "languages": {
+    "arabic": "Arabic",
+    "farsi": "Farsi/Dari",
+    "turkish": "Turkish",
+    "russian": "Russian",
+    "english": "English",
+    "german": "German",
+    "ukrainian": "Ukrainian",
+    "kurdish": "Kurdish"
+  },
+  "projectIntro": {
+    "slogan": "Need based voluntary support for refugees in Berlin",
+    "beVolunteerButton": "Become a Volunteer!"
+  },
+  "emptyList": {
+    "header": "Opportunities are being updated...",
+    "para": "We are currently updating the volunteering opportunities. This may take a while. We recommend refreshing the page later on today.  If you have any specific question please contact us at volunteer@need4deed.org"
+  },
+  "spinner": {
+    "header": "Loading opportunities...",
+    "para": ""
+  },
+  "iframeTitles": {
+    "calendar": "Calendar",
+    "howToVolunteer": "Take action! - volunteer"
+  },
+  "linkToPrevProj": "About Volunteering with Refugees",
+  "contactForRAC": {
+    "heading": "Are you a volunteer coordinator in a refugee accommodation center?",
+    "emailUs": "write us to"
+  },
+  "thankYou": { "header": "Thank You!", "para": "" },
+  "form": {
+    "error": {
+      "required": "This field is required",
+      "postcode": "Must be a valid postcode of Berlin",
+      "email": "Must be a valid email",
+      "badEmail": "Bad email",
+      "location": "Please pick at least one location",
+      "availability": "Please pick at least one time slot",
+      "badTime": "Bad date or time format",
+      "labelErrors": "Errors",
+      "number": "Please enter a number",
+      "activity": "Please pick at least one activity",
+      "language": "Please pick at least one language"
+    },
+    "button": { "more": "more...", "submit": "Submit" },
+    "schedule": {
+      "1": "Monday",
+      "2": "Tuesday",
+      "3": "Wednesday",
+      "4": "Thursday",
+      "5": "Friday",
+      "6": "Saturday",
+      "7": "Sunday",
+      "0": "Occasionally available",
+      "weekdays": "Weekdays",
+      "weekends": "Weekends"
+    },
+    "becomeVolunteer": {
+      "header": "Become a Volunteer with",
+      "thankYou": {
+        "header": "Thanks for your interest in volunteering with refugees :-)",
+        "para": "We will get back to you in the coming days with the next steps!"
+      },
+      "somethingWrong": {
+        "header": "Something went wrong!",
+        "para": "Please check all mandatory fields and try to submit once more."
+      },
+      "thanks": "Thank you for choosing",
+      "reset": "Reset",
+      "modal": {
+        "continue": "Click here to register",
+        "already": "Already registered as a volunteer?\nCopy this:",
+        "copied": "Copied",
+        "email": "And email it to:",
+        "number": "Or via WhatsApp/Telegram at"
+      },
+      "fields": {
+        "name": { "label": "Name" },
+        "email": { "label": "E-mail" },
+        "phone": {
+          "label": "Phone Number or Telegram Handle"
+        },
+        "postcode": {
+          "label": "PLZ (Berlin) of your location"
+        },
+        "locations": {
+          "header": "Preferred districts* (Berlin)",
+          "para": "*keep in mind that most accommodation centers are outside the ring!",
+          "helpText": "In case we cant find a perfect match we might send you offers that are also based on your location!",
+          "helpTitle": ""
+        },
+        "availability": {
+          "header": "Preferred timeframes*",
+          "para": "*keep in mind that most opportunities are limited to the 9-17 working hours, at least for the beginning!",
+          "helpText": "The Mon-Sun availabilities refer to regularly repeating volunteering. If the time frames are limited to some periods or need explaining, please write in the comments at the last section",
+          "helpTitle": ""
+        },
+        "languages": {
+          "header": "Languages*",
+          "para": "*if you can't find your language, please select \"Other\" and indicate your preferable language in comments section bellow",
+          "languagesNative": {
+            "header": "Native"
+          },
+          "languagesFluent": {
+            "header": "Fluent",
+            "error": "Please pick at least one language"
+          },
+          "languagesIntermediate": {
+            "header": "Intermediate"
+          },
+          "singleLevelError": "Please pick a language at one level only",
+          "helpText": "Fluent means you think you can support it in case some translations between languages are needed\nThese languages are oriented by the needs of refugees, if the language you are native or fluent at is not here, please add it in the last comment section!",
+          "helpTitle": ""
+        },
+        "activities": {
+          "header": "Preferred Activities",
+          "error": "Please pick at least one activity",
+          "helpText": "These are the most common needs that require voluntary support. Sometimes they can change once you started volunteering.",
+          "helpTitle": ""
+        },
+        "skills": {
+          "header": "Additional skills or experience",
+          "helpText": "Anything you feel that you can share from your experience, abilities or expertise can  be useful to know, but don't worry, its not a must for volunteering!",
+          "helpTitle": ""
+        },
+        "certOfGoodConduct": {
+          "header": "Certificate of Good Conduct (Erweitertes Führungszeungnis)",
+          "why": "Why do I need this?",
+          "true": "I have one",
+          "false": " Need to apply",
+          "helpText": "",
+          "helpTitle": ""
+        },
+        "certMeaslesVaccination": {
+          "header": "Certificate of Measles Vaccination",
+          "true": "I have one",
+          "false": "Need to prove it",
+          "helpText": "",
+          "helpTitle": ""
+        },
+        "leadFrom": {
+          "header": "Where did you hear about us?",
+          "helpText": "",
+          "helpTitle": ""
+        },
+        "comments": {
+          "label": "Comments (other languages, times, locations, activities, etc.)",
+          "helpText": "",
+          "helpTitle": ""
+        },
+        "consent": {
+          "header": "I hereby agree to the:",
+          "and": "and",
+          "label": "",
+          "helpText": "",
+          "helpTitle": ""
+        }
+      }
+    },
+    "addOpportunity": {
+      "header": "Need For Volunteer Work",
+      "thankYou": {
+        "header": "Thanks for filling in an opportunity helping refugees",
+        "para": "We will get back to you in the coming days with the next steps!"
+      },
+      "wentWrong": {
+        "header": "Sorry something went wrong on our side :-(",
+        "para": "For now, please apply using these Google Forms:",
+        "volunteeringLink": "Regular volunteering",
+        "accompanyingLink": "Accompanying"
+      },
+      "temporaryDown": {
+        "header": "We apologize, but something went wrong on our site. Please contact contact@need4deed.org.",
+        "para": ""
+      },
+      "bottomMsg": "For assistance with any problems or queries, please reach out to: contact@need4deed.org",
+      "fields": {
+        "title": {
+          "label": "What help is needed in short",
+          "example": "E.g. \"Accompanying to the eye clinic\" or \"Crafts & painting\"",
+          "errorTooLong": "Please shorten the title to 128 chars"
+        },
+        "consent": {
+          "header": "",
+          "agree": "I hereby agree to the:",
+          "and": "and"
+        },
+        "contactGroup": {
+          "label": "Contact information",
+          "info": "Only the social team or volunteer coordinators may fill out this form.",
+          "email": {
+            "label": "E-mail",
+            "info": "only an official email address of the institution can be used"
+          },
+          "fullName": {
+            "label": "Name",
+            "info": "of the volunteer coordinator or social worker"
+          },
+          "address": {
+            "label": "Street address",
+            "info": "of the accommodation centre"
+          },
+          "postcode": {
+            "label": "PLZ",
+            "info": "of the accommodation centre"
+          },
+          "phone": { "label": "Phone number" }
+        },
+        "opportunityType": {
+          "header": "Type Of Opportunity",
+          "volunteering": "Volunteering Opportunity",
+          "accompanying": "Accompanying Appointment",
+          "helpText": "There are two ways of helping: Volunteering doing various activities and Accompanying to appointments essentially providing translation",
+          "helpTitle": ""
+        },
+        "aaGroup": {
+          "label": "",
+          "activities": {
+            "header": "Activities"
+          },
+          "translatedInto": {
+            "header": "Language to be translated into:",
+            "noTranslation": "No translation",
+            "englishOk": "English is OK",
+            "deutsche": "German",
+            "helpText": "Please pick to what language translation is needed."
+          },
+          "languagesTranslation": {
+            "header": "Languages for translation",
+            "helpText": "Please pick languages needed during appointment."
+          },
+          "dateTime": {
+            "label": "Appointment date and time (YYYY-MM-DD HH:MM)",
+            "tooClose": "The appointment must take place after 7 working days at the earliest."
+          },
+          "address": { "label": "Appointment Address" },
+          "postcode": { "label": "PLZ" },
+          "refugeeName": { "label": "Name Of Refugee" },
+          "refugeeNumber": { "label": "Phone Number Of Refugee" },
+          "information": {
+            "label": "Provide information about the task the volunteers are expected to perform"
+          }
+        },
+        "voGroup": {
+          "label": "",
+          "activities": {
+            "header": "Activities"
+          },
+          "locations": {
+            "header": "Locations"
+          },
+          "schedule": {
+            "header": "Schedule",
+            "helpText": "Please pick time slots or one-time event date for volunteering.",
+            "or": "or",
+            "oneTimeLabel": "Event date (YYYY-MM-DD HH:MM)",
+            "error": "Event date or schedule is required.",
+            "errorBoth": "Please select either schedule or event date."
+          },
+          "skills": {
+            "header": "Skills",
+            "helpText": "Please pick skills that are needed for volunteering."
+          },
+          "languagesRefugee": {
+            "header": "Languages that refugees speak",
+            "helpText": "Please pick languages needed during volunteering."
+          },
+          "numberVolunteers": {
+            "label": "How many volunteers are needed",
+            "error": "Please enter a number"
+          },
+          "information": {
+            "label": "Provide information about the task the volunteers are expected to perform"
+          }
+        }
+      }
+    }
+  },
+  "event": {
+    "menuItem": "Workshop",
+    "rsvp": "Please RSVP",
+    "registration": "Registration",
+    "missing": "No information",
+    "click": "Click on a list item to view an event.",
+    "locationLink": "Location on maps",
+    "past": "Past events",
+    "noEvents": "No events."
+  },
+  "VolunTea": {
+    "greeting": {
+      "invite": "You are more than invited to our next VolunTea.",
+      "when": "As usual, it's on the first Thursday of the month!"
+    },
+    "main": {
+      "title": "What is a VolunTea?",
+      "para1": "A small gathering of volunteers to hear from each other and from the team about how it is to support refugees and to think of new ways for engaging with people in need in Berlin.",
+      "para2": "- If you already started volunteering, these meetups are a space to share your volunteering experiences and hear from others.",
+      "para3": "- In case you want to plan something together to support refugees in Berlin, part of the meeting will be dedicated to hearing about new ideas and seeing if other volunteers and our team are interested in supporting.",
+      "para4": "- If you haven't started volunteering or are still not sure what to expect, this is an opportunity to get to know our team and know more from active volunteers what it is about.",
+      "para5": "- Bureaucracy :) If you still don't have a certificate of good conduct, we will be able to apply for you as long as you bring your passport or ID."
+    },
+    "outro": {
+      "benefits": "Drinks and snacks are on the house!",
+      "rsvp": {
+        "text": "Please let us know if you are coming ",
+        "link": "using this form"
+      },
+      "expired": "Expired!",
+      "address": {
+        "floor": "First floor",
+        "lead": "Enter through the small door, directly next to  (left of) the main paring entrance"
+      }
+    }
+  },
+  "eventAccompanying": {
+    "greeting": {
+      "title": "Accompanying Refugees to Appointments",
+      "invite1": "An interactive workshop",
+      "host": "With Peyvand (DE)",
+      "registration1": "Registration",
+      "registration2": "Register now"
+    },
+    "main": {
+      "title1": "What is the workshop about?",
+      "para11": "In order to provide empathetic and helpful support, it is important to be informed about the realities of life for the people we accompany.",
+      "para12": "In this workshop, you will gain insight into the everyday challenges faced by people who have been forced to flee.",
+      "para13": "It aims to give you ideas on how we can make Berlin a little softer for the people we accompany.",
+      "para14": "You will also receive tips on how to behave well during your commitment and how to take care of yourself.",
+      "title2": "Practical part – What can you concretely expect?",
+      "para21": "What is specifically expected of me as an accompanying person – and what is not?",
+      "para22": "What agreements should I make with the refugee person in advance?",
+      "para23": "How do I communicate respectfully, clearly, and on an equal footing?",
+      "para24": "Should I give out my phone number – and if so, how do I do it meaningfully and safely?",
+      "para25": "What do I do if I feel uncomfortable during the accompaniment?",
+      "para26": "What emergency contacts or support options are there?"
+    },
+    "outro": {
+      "para1": "This interactive workshop (in German) optimally prepares you for your commitment!",
+      "para2": "Afterwards, we invite you to VolunTea at 18:45.",
+      "address": {
+        "floor": "1st floor",
+        "lead": "Entrance through the small door directly to the left of the main entrance."
+      }
+    }
+  },
+  "eventCooking": {
+    "greeting": {
+      "invite": "Dear Volunteers (past, current and future",
+      "when": "Join an Iftar co-cooking with Need4Deed and Kiezkantine.",
+      "registration": "Registration"
+    },
+    "main": {
+      "title": "What to expect?",
+      "para1": "A gathering of volunteers and friends to cook and eat together!",
+      "para2": "Who is welcome to join? (everyone",
+      "para3": "- If you already started volunteering at refugee accommodation centers or in accompanying ",
+      "para4": "- Interested? If you haven't started volunteering or are still not sure what to expect",
+      "para5": "- Bureaucracy :) If you still don't have a certificate of good conduct, we will be able to apply for you as long as you bring your passport or ID."
+    },
+    "outro": {
+      "rsvp": {
+        "text": "RSVP here"
+      }
+    }
+  },
+  "eventKids": {
+    "greeting": {
+      "title": "Volunteering with kids!!",
+      "invite1": "An interactive workshop",
+      "invite2": "with Need4Deed intern",
+      "host": "Jamie Durant",
+      "when": "Join an Iftar co-cooking with Need4Deed and Kiezkantine.",
+      "registration": "Registration"
+    },
+    "main": {
+      "title": "What will we learn about?",
+      "para1": "How should I conceptualize my relationship with kids?",
+      "para2": "What are boundaries I should enforce when working with kids?",
+      "para3": "How do I work across cultural differences?",
+      "para4": "How do I manage conflict?",
+      "para5": "What do I do if a kid gets upset?",
+      "para6": "How do I get a group of kids engaged?",
+      "para7": "How do I make sure we all have fun?"
+    },
+    "outro": {
+      "rsvp": {
+        "text": "RSVP here"
+      },
+      "para1": "Working with kids is one of the most rewarding volunteer opportunities at Need4Deed, but it becomes even more rewarding when you have some basic skills, principles and tricks up your sleeve.",
+      "para2": "This interactive workshop (in English) will set you up for success! It will be followed by a VolunTea at 19:00",
+      "address": {
+        "floor": "First floor",
+        "lead": "Enter through the small door, directly next to  (left of) the main paring entrance"
+      }
+    }
+  },
+  "eventHolidayGift": {
+    "header": "Holiday Gifts For Refugee Children",
+    "paras": {
+      "para1": "As the year comes to an end we ask you to help us collect holiday gifts and support to displaced children living in Refugee Accommodation Centers all around Berlin and in other conflict zones.",
+      "para2": "Using the opportunity of Christmas and the end of the year time, we ask you to help us collect gifts and support to displaced  children. These young refugees are living in Refugee Accommodation Centers all around Berlin and come from various conflict zones. They are usually there for months to years, they speak Ukrainian, Arabic, Dari, Persian, Russian, Turkish and many other languages. The gifts for children are to be bought and distributed by the Need4Deed team and volunteers during the first week of December. We will distribute them in Berlins accommodation centers where more than 30 thousand refugees currently live. Additionally a quarter of the gifts will be then dedicated to local organizations supporting displaced children in Lebanon and South-Sudan."
+    },
+    "donate": {
+      "money": {
+        "invite": "Please donate money:",
+        "where": "betterplace.org"
+      },
+      "things": {
+        "invite": "Donate gifts:",
+        "where": "\nElsenstr 87\nBerlin 12435\nTuesday-Thursdays\n9:30-17:00"
+      },
+      "wrapping": {
+        "invite": "Join gift wrapping:",
+        "registration": "Register"
+      }
+    },
+    "final": {
+      "feelFree": "If you have any questions, please do not hesitate to contact us!",
+      "team": "Team"
+    }
+  },
+  "event831": {
+    "header": "Need4Deed Sommerfest",
+    "paras": {
+      "para1": "Dear volunteers, we are pleased to invite you to our Sommerfest organized in collaboration with Du für Berlin on Saturday August 31st from 13.00 till 18.00.",
+      "para2": "Whether you’re already a volunteer or interested in volunteering with refugees, come join us, bring a friend or more!",
+      "para3": {
+        "morning": { "timeslot": "13:00-13:30", "title1": "Meet and Greet" },
+        "day": {
+          "timeslot": "13:30-18:00",
+          "title1": "Live Music (Bağlama)",
+          "title2": "Live Music (Jazz and Soukous)",
+          "title3": "Live Electronic DJ Set"
+        },
+        "afternoon": {
+          "timeslot": "13:30-17:00",
+          "title1": "Food it yourself with Über den Tellerand e.V.",
+          "title2": "Seedbombs Workshop",
+          "title3": "Group Workshop"
+        },
+        "all": {
+          "timeslot": "All Day",
+          "title1": "Kids Space",
+          "title2": "Light food and drinks are on the house!"
+        }
+      },
+      "para4": "The event will take place at ArtSpace in Exile, Elsenstraße 87, 12435 Berlin (Alt-Treptow)"
+    },
+    "rsvp": {
+      "invite": "Free Admission. Please RSVP here:",
+      "registration": "Registration form"
+    },
+    "final": {
+      "feelFree": "If you have any questions, please do not hesitate to contact us!",
+      "team": "Team"
+    }
+  },
+  "volunteeringProjects": {
+    "header": "Volunteering opportunities",
+    "overComeObstaclesHeading": "Overcome barriers together!",
+    "overComeObstaclesSubheading": "In the project “Hürdenspringer” in Tempelhof-Schöneberg, you get to know new people and support them in getting a foothold in Berlin. German language skills of B1 level are required to take part in the project.",
+    "childCareHeading": "Childcare",
+    "childCareSubheading": "In various refugee accommodation centers, there are recreational activities for children. For these, we are looking for volunteers who already have experience in working with children and young people. ",
+    "sportProgramHeading": "Sport activities",
+    "sportProgramSubheading": "We are looking for volunteers to help us organize sports activities for children, teenagers or adults in accommodation centers!",
+    "translationHeading": "Fluent in German and a second language?",
+    "translationSubheading": "Support refugees by translating from Arabic / Ukranian / Russian / Dari / Persian / Turkish / French and more at the doctor's, JobCenter or where ever it is needed!"
+  },
+  "aboutProject": {
+    "aboutProjectHeading": "About the project",
+    "aboutProjectSubheading": "The number of people fleeing conflict zones, persecution and human rights violations worldwide has never been as high as it is today. Need4Deed is set to promote the inclusion and integration of refugees in Berlin through the actions of civil society by making volunteering more accessible. We aim to build a sustainable and scalable mechanism for this purpose by connecting volunteers with refugees that are living in accommodation centers in Berlin based on their specific needs."
+  },
+  "values": {
+    "valuesHeading": "Our values",
+    "equalOpportunityHeading": "Equal opportunities",
+    "equalOpportunitySubheading": "People living under destitute life conditions should be given equal opportunities. The latter includes underserved individuals and groups affected by forced migration.",
+    "responsibilityHeading": "Responsibility",
+    "responsibilitySubheading": "Both countries (the state) and civil society, have responsibility towards its underserved communities including those affected by forced migration.",
+    "migranToMigranSupportHeading": "Migrant-to-migrant support",
+    "migranToMigranSupportSubheading": "In particular, groups and individuals who have undergone forced migration could be best understood and supported by others with migration background in the course of their integration process, so that they receive equal opportunities and eventually benefit society themselves.",
+    "activeParticipationHeading": "Active participation",
+    "activeParticipationSubheading": "A migrant-to-migrant support alongside non-migrant support, can both play a key social role by facilitating a more rapid integration process and active participation of the supported communities.",
+    "technologyHeading": "Technology",
+    "technologySubheading": "Applying technology in the effort to support underserved communities is a key value to make support giving and receiving more inclusive, accessible and scalable."
+  },
+  "footer": {
+    "aboutUs": {
+      "aboutUsHeading": "About us",
+      "project": "The Project",
+      "aboutUs": "About us"
+    },
+    "legal": {
+      "legalHeading": "Legal",
+      "impressum": "Legal notice",
+      "dataPrivacy": "Privacy",
+      "agreement": "Voluntary Participation Agreement",
+      "guidelines": "Need4Deed Guidelines",
+      "cookies": "Cookies"
+    },
+    "contact": {
+      "contactHeading": "Contact",
+      "email": "Email",
+      "emailAddress": "info@need4deed.org"
+    }
+  },
+  "cookieSettings": {
+    "title": "Manage Cookie Settings",
+    "saveButton": "Save & Go to Home Page"
+  },
+  "faqs": {
+    "faqs": "FAQs",
+    "title": "Frequently Asked Questions",
+    "first_steps_question": "What are the first steps to become a volunteer?",
+    "first_steps_answer": "Begin by completing the volunteer application form on the Need4Deed website.",
+    "after_form_question": "What happens after I fill out the form?",
+    "after_form_answer": "After we have your preferences and locations we start searching for a suitable opportunity for you and contact you in the next days.",
+    "find_opportunities_question": "How do I find available volunteer opportunities?",
+    "find_opportunities_answer": "Check the 'Opportunities' page on the Need4Deed website for current volunteer roles.",
+    "volunteer_roles_question": "What types of volunteer roles are offered?",
+    "volunteer_roles_answer": "Roles include child care, language cafés, translation services, and support with official appointments and sports activities.",
+    "special_skills_question": "Do I need any special skills to volunteer?",
+    "special_skills_answer": "Many roles are open to all volunteers, although specific skills may be required for certain positions.",
+    "volunteering_time_question": "How long does volunteering take?",
+    "volunteering_time_answer": "Regular volunteering usually requires a commitment of about 2 hours a week or twice a month. Irregular volunteering can happen whenever you have time, especially for events or tasks like translations at doctors' appointments.",
+    "age_requirements_question": "Are there age requirements for volunteers?",
+    "age_requirements_answer": "Age requirements may vary but most places require the person to be over 18; please check the opportunity listings for specifics.",
+    "voluntea_gatherings_question": "What can I expect during the VolunTea gatherings?",
+    "voluntea_gatherings_answer": "VolunTea orientation covers Need4Deed's mission, volunteer roles, and assisting in finding the suitable refugee accommodation centers.",
+    "training_question": "Is there a special training?",
+    "training_answer": "Every few months training are offered, especially for those supporting with translations.",
+    "group_volunteering_question": "Can I volunteer with a group or organisation?",
+    "group_volunteering_answer": "Yes, group volunteering is encouraged, especially for those supporting refugee accommodation centers."
+  },
+  "opportunityCard": {
+    "titles": {
+      "languages": "Languages",
+      "time": "Time",
+      "location": "District"
+    }
+  },
+  "homepage": {
+    "heroSection": {
+      "menuItems": {
+        "about": "ABOUT",
+        "volunteeringOpportunities": "VOLUNTEERING OPPORTUNITIES",
+        "events": "EVENTS"
+      },
+      "content": {
+        "heroText": "Voluntary support for refugees",
+        "heroSupportingText": "We connect volunteers to accommodation centers in Berlin",
+        "buttonJoinVolunteer": "Join as a volunteer",
+        "buttonJoinRefugeeCenter": "Join as an accommodation centre"
+      }
+    },
+    "volunteeringCategories": {
+      "header": "Ways you can volunteer",
+      "headerParagraph": "We offer various types of volunteer opportunities with refugee accommodation centers, either on a continuous or occasional basis.",
+      "card": {
+        "germanLanguageSupport": "German Language Support",
+        "germanLanguageSupportInfo": "Fluent in German? Support refugees by teaching german at language cafes and tutoring privately or in groups.",
+        "childcare": "Childcare",
+        "childcareInfo": "We are looking for volunteers to support children in refugee accommodation centers by assisting in daycare or helping with homework. Experience with children is a plus!",
+        "skillsBasedVolunteering": "Skills Based Volunteering",
+        "skillsBasedVolunteeringInfo": "Some opportunities may offer a chance to use your special expertise, such as bike repair, gardening, musical skills, or organizational savvy.",
+        "events": "Events",
+        "eventsInfo": "Occasionally events require unique support from volunteers. These might be festivals, dinners, outings, cultural activities, a day of setting up a clothes sorting station, gardening, or a workshop.",
+        "sportsActivities": "General Volunteering",
+        "sportsActivitiesInfo": "We are always looking for volunteers either for tandem, clothes sorting or to help organize sports activities for children, teenagers or adults in accommodation centers.",
+        "accompanyARefugee": "Accompany",
+        "accompanyARefugeeInfo": "Fluent in German and a second language? Support individuals in dealing with bureaucracy at appointments - going with them to the doctor, Job Centre or otherwise."
+      },
+      "footerButton": "See volunteering opportunities"
+    },
+    "volunteeringOpportunities": {
+      "header": "Discover Volunteering Opportunities",
+      "languages": "Languages",
+      "schedule": "Schedule",
+      "district": "District",
+      "footerButton": "See all volunteering opportunities",
+      "dateOfAppointment": "Date Of Appointment",
+      "mainCommunication": "Main communication",
+      "defaultMainCommunication": "English, German",
+      "translationTo": "Translation to",
+      "residentsSpeak": "Residents speak",
+      "accompanyingTranslation": {
+        "en": "German, English",
+        "de": "German",
+        "no": "No Translation needed"
+      },
+      "otherCategory": "General Volunteering"
+    },
+    "testimonials": {
+      "header": "TESTIMONIALS",
+      "headerParagraph": "What Volunteers & Coordinators Say"
+    },
+    "racSection": {
+      "headLine1": "We support organizations",
+      "headLine2": "Do you work in a Refugee Accommodation Center?",
+      "buttonSupport": "Apply to receive voluntary support",
+      "buttonSupportMobile": "Apply to receive support",
+      "buttonHowItWorks": "How it works"
+    },
+    "footer": {
+      "about": "ABOUT",
+      "resources": "RESOURCES",
+      "faq": "FAQ",
+      "legalNotice": "Legal notice",
+      "privacy": "Privacy",
+      "vpa": "Volunteer Participation Agreement",
+      "contact": "Contact"
+    },
+    "processSteps": {
+      "headline": "How you can support refugees in your community",
+      "stepsHeadline": "How to start",
+      "steps": {
+        "1": {
+          "title": "Sign Up",
+          "week": "WEEK 1",
+          "infoText1": "Click become a volunteer",
+          "infoText2": "Use our online form to fill out basic information, skills and preferences"
+        },
+        "2": {
+          "title": "Apply for and Supply Additional Documents",
+          "week": "WEEK 1",
+          "infoText1": "Apply for a Certificate of Good Conduct individually or with the help of Need4Deed",
+          "infoText2": "Obtain a measles vaccination"
+        },
+        "3": {
+          "title": "We look for your placement",
+          "week": "WEEK 1",
+          "infoText1": "Meanwhile, we start searching for your best match with a refugee centre coordinator in need"
+        },
+        "4": {
+          "title": "We find a match!",
+          "week": "WEEK 1-2",
+          "infoText1": "We find a refugee centre that you can best support based on your skills and preferences"
+        },
+        "5": {
+          "title": "First contact and intro meeting",
+          "week": "WEEK 2-3",
+          "infoText1": "You are put in contact with a refugee centre coordinator, via email, who will invite you to an intro meeting where you’ll learn more about your first placement"
+        },
+        "6": {
+          "title": "You can begin your first volunteering post!",
+          "week": "WEEK 3-4",
+          "infoText1": "You should receive your Certificate of Good Conduct by now, by post - which you bring to show at the Refugee Accommodation Centre"
+        },
+        "lastStep": {
+          "text": "Incase you are multilingual, you may be asked to accompany and translate when needed"
+        }
+      }
+    },
+    "events": {
+      "headLine": "Upcoming Events",
+      "button": "Learn More & Register"
+    }
+  },
+  "opportunityPage": {
+    "header": "Explore Volunteering Opportunities",
+    "popup": {
+      "register": {
+        "title": "New here? Register now",
+        "button": "Register and Apply"
+      },
+      "apply": {
+        "title": "Already Registered? Email:",
+        "button": "volunteer@need4deed.org"
+      }
+    },
+    "tabs": {
+      "tab1": "TABLE VIEW",
+      "tab2": "MAP VIEW"
+    },
+    "resultsFound": "results found",
+    "searchPlaceHolder": "Enter search term",
+    "mapViewMessage": "Will be available soon",
+    "filters": {
+      "button": "FILTERS",
+      "closeFilters": "CLOSE FILTERS",
+      "clearAllFilters": "CLEAR ALL FILTERS",
+      "accompanying": "Accompanying",
+      "accompanyingDesc": "Open to bring residents to individual appointments. One-time volunteering posts that require german language skills.",
+      "activityType": "Activity Type",
+      "district": "District",
+      "days": "Days",
+      "morning": "Morning",
+      "afternoon": "Afternoon",
+      "evening": "Evening"
+    }
+  }
+}

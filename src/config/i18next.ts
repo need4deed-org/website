@@ -1,9 +1,9 @@
 import i18next from "i18next";
 import { Lang } from "need4deed-sdk";
 import { initReactI18next } from "react-i18next";
-import legal from "../../public/locales/de/legal.json";
-import deTranslation from "../../public/locales/de/translations.json";
-import enTranslation from "../../public/locales/en/translations.json";
+import legal from "../locales/de/legal.json";
+import deTranslation from "../locales/de/translations.json";
+import enTranslation from "../locales/en/translations.json";
 import { getQueryParamLang, getStoredLang, setStoredLang } from "../utils";
 import { Env } from "./types";
 
