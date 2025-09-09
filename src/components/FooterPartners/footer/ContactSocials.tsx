@@ -3,6 +3,7 @@ import {
   InstagramLogo,
   LinkedinLogo,
   ApplePodcastsLogo,
+  Microphone,
 } from "@phosphor-icons/react";
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
@@ -83,6 +84,9 @@ function Socials() {
           size={40}
           color="var(--color-orchid-light)"
         />
+      </ATag>
+      <ATag href="https://open.spotify.com/show/0jZKki7RWqJL2RzvmF6hzp">
+        <Microphone weight="bold" size={40} color="var(--color-orchid-light)" />
       </ATag>
       <ATag href="https://podcast.app/need4deed-p7041615">
         <ApplePodcastsLogo
