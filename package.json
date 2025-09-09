@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "prebuild": "echo \"{\\\"commitHash\\\": \\\"$(git rev-parse --short HEAD)\\\"}\" > public/version.json",
-    "dev": "cross-env NODE_ENV=develop vite --host",
+    "dev": "NODE_ENV=develop vite --host",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint \"**/*.{ts,tsx}\" --report-unused-disable-directives --max-warnings 0",
@@ -17,7 +17,7 @@
     "test:coverage": "NODE_ENV=test vitest run --coverage",
     "type-check": "tsc --noEmit",
     "prepare": "husky install",
-    "pre-commit": "npm run lint && npm run type-check && npm run format"
+    "pre-commit": "yarn lint && yarn type-check && yarn format"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
@@ -66,7 +66,6 @@
     "aws-cdk": "^2.136.1",
     "aws-cdk-lib": "^2.136.1",
     "constructs": "^10.3.0",
-    "cross-env": "^10.0.0",
     "eslint": "^8.57.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.1.0",

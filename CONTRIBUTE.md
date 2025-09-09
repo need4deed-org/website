@@ -62,6 +62,7 @@ Step 3: Add the Original Repository as a Remote
    ```
 
    You should see:
+
    - `origin` → Your forked repository.
    - `upstream` → The original repository.
 
