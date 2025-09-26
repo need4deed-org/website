@@ -45,7 +45,7 @@ export function getSelectedIds(state: Selected[]): OptionId[] {
 }
 
 export function parseFormStateDTOVolunteer(value: VolunteerData) {
-  const data = {} as VolunteerParsedData;
+  const data: Record<string, unknown> = {};
   data.origin_opportunity = value.opportunityId
     ? +value.opportunityId
     : undefined;
@@ -66,7 +66,7 @@ export function parseFormStateDTOVolunteer(value: VolunteerData) {
   data.comments = value.comments;
   data.language = value.language;
 
-  return data;
+  return data as unknown as VolunteerParsedData;
 }
 
 export function parseFormStateDTOOpportunity(value: OpportunityData) {
