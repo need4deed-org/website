@@ -84,7 +84,7 @@ function Socials() {
           color="var(--color-orchid-light)"
         />
       </ATag>
-      <ATag href="https://podcast.app/need4deed-p7041615">
+      <ATag href="https://open.spotify.com/show/0jZKki7RWqJL2RzvmF6hzp">
         <ApplePodcastsLogo
           weight="bold"
           size={40}
