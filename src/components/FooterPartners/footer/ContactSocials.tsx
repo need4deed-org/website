@@ -2,6 +2,7 @@ import {
   FacebookLogo,
   InstagramLogo,
   LinkedinLogo,
+  ApplePodcastsLogo,
 } from "@phosphor-icons/react";
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
@@ -78,6 +79,13 @@ function Socials() {
       </ATag>
       <ATag href="https://www.instagram.com/need4deed/">
         <InstagramLogo
+          weight="bold"
+          size={40}
+          color="var(--color-orchid-light)"
+        />
+      </ATag>
+      <ATag href="https://open.spotify.com/show/0jZKki7RWqJL2RzvmF6hzp">
+        <ApplePodcastsLogo
           weight="bold"
           size={40}
           color="var(--color-orchid-light)"

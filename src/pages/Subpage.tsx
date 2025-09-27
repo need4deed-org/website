@@ -1,5 +1,5 @@
 import { Lang } from "need4deed-sdk";
-import { useContext, useEffect, useMemo } from "react";
+import { useContext, useEffect } from "react";
 import ReactGA from "react-ga4";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useParams } from "react-router-dom";
@@ -34,11 +34,6 @@ function Subpage({ type }: Props) {
   const containerRef = useContext(AppContainerContext);
   const [events] = useEvents(i18n.language as Lang);
 
-  const eventActive = useMemo(
-    () => events?.find((event) => event.active),
-    [events],
-  );
-
   useEffect(() => {
     if (isEnumValue(Lang, lng)) {
       i18n.changeLanguage(lng);
@@ -70,7 +65,7 @@ function Subpage({ type }: Props) {
       case Subpages.ANNOUNCEMENT:
         return <Announcement />;
       case Subpages.EVENT:
-        return <Event eventData={{ event: eventActive }} />;
+        return <Event eventData={events} />;
       case Subpages.EVENTS:
         return <Events />;
       case Subpages.COOKIES:

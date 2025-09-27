@@ -26,5 +26,6 @@ export interface Day {
 
 export type DaysKeys = keyof Days;
 export type DayKeys = keyof Day;
+export type CardFilterKeys = keyof CardsFilter;
 
 export type SetFilter = Dispatch<SetStateAction<CardsFilter>>;
