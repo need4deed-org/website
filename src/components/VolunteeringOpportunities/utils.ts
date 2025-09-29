@@ -1,4 +1,4 @@
-import { OpportunityType, TranslatedIntoType } from "need4deed-sdk";
+import { Lang, OpportunityType, TranslatedIntoType } from "need4deed-sdk";
 
 import { TFunction } from "i18next";
 import { IconName } from "../VolunteeringCategories/types";
@@ -192,7 +192,14 @@ export const getActivityBackgroundColor = (activity: string) => {
     : "var(--color-papaya)";
 };
 
-export const formatAccompanyingDate = (date: Date) => {
+const langLocaleMap: Record<Lang, string> = {
+  [Lang.EN]: "en-US",
+  [Lang.DE]: "de-DE",
+};
+
+export const formatAccompanyingDate = (date: Date, lang: Lang): string => {
+  const locale = langLocaleMap[lang];
+
   const dateOptions: Intl.DateTimeFormatOptions = {
     weekday: "long",
     month: "long",
@@ -205,8 +212,8 @@ export const formatAccompanyingDate = (date: Date) => {
     hour12: false,
   };
 
-  const dateFormatter = new Intl.DateTimeFormat("en-US", dateOptions);
-  const timeFormatter = new Intl.DateTimeFormat("en-US", timeOptions);
+  const dateFormatter = new Intl.DateTimeFormat(locale, dateOptions);
+  const timeFormatter = new Intl.DateTimeFormat(locale, timeOptions);
 
   const formattedDatePart: string = dateFormatter.format(date);
   const formattedTimePart: string = timeFormatter.format(date);
