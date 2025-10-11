@@ -32,6 +32,13 @@ Applying technology in the effort to support underserved communities is a key va
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
+## Background
+We use simple react/vite app for landing page, aka [website], which is being served from files on S3 using Amplify
+we're also developing a PWA on nextjs for automation of need4deed business processes, this is fe repo. also we use separate repo sdk mostly for sharing of types between fron and backend.
+also we plan merging our landing page into the app so in the end there should be frontend, backend, and sdk.
+so the website is now kind of frozen in terms of development. it still operates along with legacy backend before we launch the app with the new backend.
+
+
 ## Step 1: Fork the Repository
 
 1. Go to the our repository: [https://gitlab.com/need4deed/website](https://gitlab.com/need4deed/website).
