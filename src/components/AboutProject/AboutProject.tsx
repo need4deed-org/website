@@ -1,4 +1,11 @@
 import { useTranslation } from "react-i18next";
+import {
+  Scales,
+  HandHeart,
+  Users,
+  Sparkle,
+  Gear,
+} from "@phosphor-icons/react";
 import "./AboutProject.css";
 
 interface Prop {
@@ -16,20 +23,48 @@ function AboutProject({ wrappingClassName }: Prop) {
 
         <h2>{t("values.valuesHeading")}</h2>
 
-        <h6>{t("values.equalOpportunityHeading")}</h6>
-        <p>{t("values.equalOpportunitySubheading")}</p>
+        <div className="value-item">
+          <div className="value-header">
+            <Scales size={24} className="value-icon" />
+            <h6>{t("values.equalOpportunityHeading")}</h6>
+          </div>
+          <p>{t("values.equalOpportunitySubheading")}</p>
+        </div>
 
-        <h6>{t("values.responsibilityHeading")}</h6>
-        <p>{t("values.responsibilitySubheading")}</p>
+        <div className="value-item">
+          <div className="value-header">
+            <HandHeart size={24} className="value-icon" />
+            <h6>{t("values.responsibilityHeading")}</h6>
+          </div>
+          <p>{t("values.responsibilitySubheading")}</p>
+        </div>
 
-        <h6>{t("values.migranToMigranSupportHeading")}</h6>
-        <p>{t("values.migranToMigranSupportSubheading")}</p>
+        <div className="value-item">
+          <div className="value-header">
+            <Users size={24} className="value-icon" />
+            <h6>{t("values.migranToMigranSupportHeading")}</h6>
+          </div>
+          <p>{t("values.migranToMigranSupportSubheading")}</p>
+        </div>
 
-        <h6>{t("values.activeParticipationHeading")}</h6>
-        <p>{t("values.activeParticipationSubheading")}</p>
+        <div className="value-item">
+          <div className="value-header">
+            <Sparkle size={24} className="value-icon" />
+            <h6>{t("values.activeParticipationHeading")}</h6>
+          </div>
+          <p>{t("values.activeParticipationSubheading")}</p>
+        </div>
 
-        <h6>{t("values.technologyHeading")}</h6>
-        <p>{t("values.technologySubheading")}</p>
+        <div className="value-item">
+          <div className="value-header">
+            <Gear size={24} className="value-icon" />
+            <h6>{t("values.technologyHeading")}</h6>
+          </div>
+          <p>{t("values.technologySubheading")}</p>
+        </div>
+
+        <h2>{t("team.teamHeading")}</h2>
+        <p>{t("team.teamSubheading")}</p>
       </div>
     </div>
   );
