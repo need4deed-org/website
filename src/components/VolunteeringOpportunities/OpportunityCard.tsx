@@ -6,7 +6,7 @@ import {
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 
-import { OpportunityType } from "need4deed-sdk";
+import { Lang, OpportunityType } from "need4deed-sdk";
 import { ScreenTypes } from "../../config/types";
 import useScreenType from "../../hooks/useScreenType";
 import { Activities } from "../core/common";
@@ -92,6 +92,7 @@ export default function OpportunityCard({
 }: Props) {
   const { t, i18n } = useTranslation();
   const screenType = useScreenType();
+  const language = i18n.language as Lang;
 
   const {
     title,
@@ -137,7 +138,7 @@ export default function OpportunityCard({
 
   const district = locations.join(", ");
   const scheduleAsStr =
-    (accompanyingDate && formatAccompanyingDate(accompanyingDate)) ||
+    (accompanyingDate && formatAccompanyingDate(accompanyingDate, language)) ||
     schedule ||
     "";
 
@@ -170,7 +171,7 @@ export default function OpportunityCard({
       enableHoverEffect={enableHoverEffect}
     >
       <IconDiv>{iconNameMap[iconName]}</IconDiv>
-      <HyphenatedHeading3 lang={i18n.language}>{title}</HyphenatedHeading3>
+      <HyphenatedHeading3 lang={language}>{title}</HyphenatedHeading3>
       {vo && <Paragraph>{voInformation}</Paragraph>}
       <Activities activities={activities} />
       <OpportunityCardDetails cardDetails={cardDetails} />
