@@ -10,7 +10,7 @@ The number of people fleeing conflict zones, persecution and human rights violat
 
 ## Equal opportunities
 
-People living under destitute life conditions should be given equal opportunities. The latter includes underserved individuals and groups affected by forced migration.
+People living under destitute life conditions should be given equal opportunities. The latter includes undeserved individuals and groups affected by forced migration.
 
 ## Responsibility
 
@@ -33,17 +33,17 @@ Applying technology in the effort to support underserved communities is a key va
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 ## Background
+
 We use simple react/vite app for landing page, aka [website], which is being served from files on S3 using Amplify
 we're also developing a PWA on nextjs for automation of need4deed business processes, this is fe repo. also we use separate repo sdk mostly for sharing of types between fron and backend.
 also we plan merging our landing page into the app so in the end there should be frontend, backend, and sdk.
 so the website is now kind of frozen in terms of development. it still operates along with legacy backend before we launch the app with the new backend.
 
-
 ## Step 1: Fork the Repository
 
 1. Go to the our repository: [https://github.com/need4deed-org/website](https://github.com/need4deed-org/website).
 1. Click the **Fork** button in the top-right corner.
-1. Choose where to fork the repository (usually your own GitLab account).
+1. Choose where to fork the repository (usually your own GitHub account).
 
 See [CONTRIBUTE.md](CONTRIBUTE.md) for the next steps and detailed contribution guidelines.
 
@@ -65,7 +65,7 @@ See [CONTRIBUTE.md](CONTRIBUTE.md) for the next steps and detailed contribution 
 1. Clone the repository
 
 ```bash
-git clone git@gitlab.com:need4deed/website.git
+git clone git@github.com:need4deed-org/website.git
 ```
 
 2. Install dependencies
@@ -115,6 +115,6 @@ This project is licensed under the Common Clause and the MIT License - see the [
 
 ## Support 💬
 
-- Create an [Issue](https://gitlab.com/need4deed/website/-/issues)
+- Create an [Issue](https://github.com/need4deed-org/website/issues)
 - Join our Slack - ask as for an inivatation
 - Email: h4ck@need4deed.org
