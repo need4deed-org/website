@@ -41,7 +41,7 @@ so the website is now kind of frozen in terms of development. it still operates 
 
 ## Step 1: Fork the Repository
 
-1. Go to the our repository: [https://gitlab.com/need4deed/website](https://gitlab.com/need4deed/website).
+1. Go to the our repository: [https://github.com/need4deed-org/website](https://github.com/need4deed-org/website).
 1. Click the **Fork** button in the top-right corner.
 1. Choose where to fork the repository (usually your own GitLab account).
 
