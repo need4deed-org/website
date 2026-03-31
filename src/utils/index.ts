@@ -3,6 +3,8 @@ import { MutableRefObject } from "react";
 
 import {
   CLOUDFRONT_URL,
+  EXTERNAL_OPPORTUNITY_FORM,
+  EXTERNAL_VOLUNTEER_FORM,
   n4dLanguageLocalStorageKey,
   timeZone,
 } from "../config/constants";
@@ -476,4 +478,20 @@ export function getQueryParamLang(): Lang | null {
   const lang = params.get("lang") as Lang;
 
   return Object.values(Lang).includes(lang) ? lang : null;
+}
+
+export function getExternalUrl(lng: Lang, type: "opportunity" | "volunteer") {
+  if (!lng || !type) {
+    return "";
+  }
+  const url =
+    type === "opportunity"
+      ? EXTERNAL_OPPORTUNITY_FORM
+      : EXTERNAL_VOLUNTEER_FORM;
+
+  if (lng === Lang.DE) {
+    return url;
+  }
+
+  return url.replace("/de/", "/en/");
 }
