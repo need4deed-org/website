@@ -4,7 +4,10 @@ import { getCookieConsentValue } from "react-cookie-consent";
 import ReactGA from "react-ga4";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
+import { Lang } from "need4deed-sdk";
+import { useTranslation } from "react-i18next";
 import "./App.css";
+import { ExternalLink } from "./components/core/common";
 import JsonLd from "./components/JsonLd";
 import { TestLayout } from "./components/Layouts/TestLayout";
 import { googleAnalyticsId } from "./config/constants";
@@ -20,16 +23,18 @@ import Home from "./pages/Home";
 import Landing from "./pages/Landing";
 import LegalNotice from "./pages/LegalNotice";
 import Opportunities from "./pages/Opportunities";
-import OpportunityForm from "./pages/OpportunityForm";
 import Subpage from "./pages/Subpage";
-import VolunteerForm from "./pages/VolunteerForm";
 import Agreement from "./pages/VPA";
-import { consoleLogDeveloperContributionMessage } from "./utils";
+import {
+  consoleLogDeveloperContributionMessage,
+  getExternalUrl,
+} from "./utils";
 
 const queryClient = new QueryClient();
 
 function App() {
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const { i18n } = useTranslation();
   const cookieConsent = getCookieConsentValue();
 
   useEffect(() => {
@@ -89,26 +94,26 @@ function App() {
                 path={`/${Subpages.GUIDELINES}`}
                 element={<Subpage type={Subpages.GUIDELINES} />}
               />
-              <Route
+              {/* <Route
                 path={`/${Subpages.BECOME_VOLUNTEER}/:lng`}
                 element={<Subpage type={Subpages.BECOME_VOLUNTEER} />}
               />
               <Route
                 path={`/${Subpages.BECOME_VOLUNTEER}`}
                 element={<Subpage type={Subpages.BECOME_VOLUNTEER} />}
-              />
+              /> */}
               <Route
                 path={`/${Subpages.ANNOUNCEMENT}/:lng`}
                 element={<Subpage type={Subpages.ANNOUNCEMENT} />}
               />
-              <Route
+              {/* <Route
                 path={`/${Subpages.ADD_OPPORTUNITY}`}
                 element={<Subpage type={Subpages.ADD_OPPORTUNITY} />}
               />
               <Route
                 path={`/${Subpages.ADD_OPPORTUNITY}/:lng`}
                 element={<Subpage type={Subpages.ADD_OPPORTUNITY} />}
-              />
+              /> */}
               <Route
                 path={`/${Subpages.EVENT}/:lng`}
                 element={<Subpage type={Subpages.EVENT} />}
@@ -163,19 +168,57 @@ function App() {
               />
               <Route
                 path={`/${Subpages.OPPORTUNITY_FORM}`}
-                element={<OpportunityForm />}
+                // element={<OpportunityForm />}
+                element={
+                  <ExternalLink
+                    to={getExternalUrl(i18n.language as Lang, "opportunity")}
+                  />
+                }
+              />
+              <Route
+                path={`/${Subpages.OPPORTUNITY_FORM}/:lng`}
+                // element={<OpportunityForm />}
+                element={
+                  <ExternalLink
+                    to={getExternalUrl(i18n.language as Lang, "opportunity")}
+                  />
+                }
               />
               <Route
                 path={`/${Subpages.OPPORTUNITY_FORM_LEGACY}`}
-                element={<OpportunityForm />}
+                // element={<OpportunityForm />}
+                element={
+                  <ExternalLink
+                    to={getExternalUrl(i18n.language as Lang, "opportunity")}
+                  />
+                }
               />
               <Route
                 path={`/${Subpages.OPPORTUNITY_FORM_LEGACY}/:lng`}
-                element={<OpportunityForm />}
+                // element={<OpportunityForm />}
+                element={
+                  <ExternalLink
+                    to={getExternalUrl(i18n.language as Lang, "opportunity")}
+                  />
+                }
               />
               <Route
                 path={`/${Subpages.VOLUNTEER_FORM}`}
-                element={<VolunteerForm />}
+                // element={<VolunteerForm />}
+                element={
+                  <ExternalLink
+                    to={getExternalUrl(i18n.language as Lang, "volunteer")}
+                  />
+                }
+              />
+              <Route
+                path={`/${Subpages.VOLUNTEER_FORM}/:lng`}
+                // element={<VolunteerForm />}
+                element={
+                  <ExternalLink
+                    to={getExternalUrl(i18n.language as Lang, "volunteer")}
+                  />
+                }
               />
               <Route
                 path={`/${Subpages.RAC_GUIDELINES}`}
