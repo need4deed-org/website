@@ -1,6 +1,7 @@
 import { Lang } from "need4deed-sdk";
 import { MutableRefObject } from "react";
 
+import { FormType } from "../components/forms/types";
 import {
   CLOUDFRONT_URL,
   EXTERNAL_OPPORTUNITY_FORM,
@@ -480,12 +481,12 @@ export function getQueryParamLang(): Lang | null {
   return Object.values(Lang).includes(lang) ? lang : null;
 }
 
-export function getExternalUrl(lng: Lang, type: "opportunity" | "volunteer") {
+export function getExternalUrl(lng: Lang, type: FormType) {
   if (!lng || !type) {
     return "";
   }
   const url =
-    type === "opportunity"
+    type === FormType.OPPORTUNITY
       ? EXTERNAL_OPPORTUNITY_FORM
       : EXTERNAL_VOLUNTEER_FORM;
 
