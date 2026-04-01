@@ -9,6 +9,10 @@ export const urlApiAuthEmailDomain = `${urlApi}/auth-email-domain/`;
 export const urlApiTestimonial = `${urlApi}/testimonial/`;
 export const urlApiEvent = `${urlApi}/event/`;
 export const CLOUDFRONT_URL = "https://d2nwrdddg8skub.cloudfront.net/images";
+export const EXTERNAL_OPPORTUNITY_FORM =
+  "http://app.need4deed.org/de/forms/opportunity";
+export const EXTERNAL_VOLUNTEER_FORM =
+  "http://app.need4deed.org/de/forms/volunteer";
 
 const positives = ["1", "YES", "Yes", "yes", "TRUE", "True", "true"];
 
