@@ -153,7 +153,8 @@ export const getMappedOpportunities = (
   opps: OpportunityApi[],
   t: TFunction,
 ) => {
-  return opps.map((opp) => mapOpportunity(opp, t));
+  const oppArray = Array.isArray(opps) ? opps : [];
+  return oppArray.map((opp) => mapOpportunity(opp, t));
 };
 
 export function getIconName(category: CategoryTitle) {

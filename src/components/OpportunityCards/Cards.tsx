@@ -3,18 +3,20 @@ import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import { OpportunityParams, ScreenTypes } from "../../config/types";
 import useOpportunities from "../../hooks/api/useOpportunities";
+import useScreenType from "../../hooks/useScreenType";
 import Announcement from "../Announcement";
+import PaginatedGrid from "../core/paginatedGrid/PaginatedGrid";
+import OpportunityCard from "../VolunteeringOpportunities/OpportunityCard";
 import OpportunityCardPopup from "../VolunteeringOpportunities/OpportunityCardPopup";
+import {
+  Opportunity,
+  OpportunityApi,
+} from "../VolunteeringOpportunities/types";
 import {
   CategoryTitle,
   getIconName,
   getMappedOpportunities,
 } from "../VolunteeringOpportunities/utils";
-import {
-  Opportunity,
-  OpportunityApi,
-} from "../VolunteeringOpportunities/types";
-import OpportunityCard from "../VolunteeringOpportunities/OpportunityCard";
 import {
   extractCardsFilter,
   filterOpportunity,
@@ -22,8 +24,6 @@ import {
   reduceFilter,
 } from "./helpers";
 import { CardsFilter, SetFilter } from "./types";
-import PaginatedGrid from "../core/paginatedGrid/PaginatedGrid";
-import useScreenType from "../../hooks/useScreenType";
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   url: string;
