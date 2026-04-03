@@ -1,16 +1,16 @@
+import { Lang, OpportunityType } from "need4deed-sdk";
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useLocation, useSearchParams } from "react-router-dom";
 import styled from "styled-components";
-import { Lang, OpportunityType } from "need4deed-sdk";
-import { useTranslation } from "react-i18next";
-import { useState } from "react";
-import Cards from "./Cards";
 import { urlApiOpportunity } from "../../config/constants";
-import OpportunityCardsHeader from "./OpportunityCardsHeader";
-import MapView from "./MapView";
+import Cards from "./Cards";
 import Filters from "./Filters/Filters";
 import { defaultFilter, FILTER_KEY_LIST } from "./Filters/constants";
-import { CardsFilter } from "./types";
+import MapView from "./MapView";
+import OpportunityCardsHeader from "./OpportunityCardsHeader";
 import { deserializeFilters, openFilters, serializeFilters } from "./helpers";
+import { CardsFilter } from "./types";
 
 const OpportunitiesContainer = styled.div`
   display: flex;
@@ -90,7 +90,7 @@ export function OpportunityCards() {
 
       {selectedTabIndex === 0 ? (
         <Cards
-          url={urlApiOpportunity}
+          url={`${urlApiOpportunity}/legacy`}
           opportunityParams={{
             search: {
               status: ["Volunteers Needed", "Search in process"],

@@ -3,16 +3,17 @@ export const urlApi =
 
 export const googleAnalyticsId = "G-5RG5NQ12YS";
 
-export const urlApiVolunteer = `${urlApi}/volunteer/`;
-export const urlApiOpportunity = `${urlApi}/opportunity/`;
+export const urlApiVolunteer = `${urlApi}/volunteer`;
+export const urlApiOpportunity = `${urlApi}/opportunity`;
 export const urlApiAuthEmailDomain = `${urlApi}/auth-email-domain/`;
 export const urlApiTestimonial = `${urlApi}/testimonial/`;
 export const urlApiEvent = `${urlApi}/event/`;
 export const CLOUDFRONT_URL = "https://d2nwrdddg8skub.cloudfront.net/images";
 export const EXTERNAL_OPPORTUNITY_FORM =
-  "http://app.need4deed.org/de/forms/opportunity";
-export const EXTERNAL_VOLUNTEER_FORM =
-  "http://app.need4deed.org/de/forms/volunteer";
+  "http://vmpub:3000/de/forms/opportunity";
+//  "https://app.need4deed.org/de/forms/opportunity";
+export const EXTERNAL_VOLUNTEER_FORM = "http://vmpub:3000/de/forms/volunteer";
+//  "https://app.need4deed.org/de/forms/volunteer";
 
 const positives = ["1", "YES", "Yes", "yes", "TRUE", "True", "true"];
 
