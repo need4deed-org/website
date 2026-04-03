@@ -48,7 +48,7 @@ export default function BecomeVolunteer() {
   const { postRequest } = usePostRequest<
     VolunteerParsedData,
     Record<string, string | string[]>
-  >({ url: `${urlApi}/volunteer/legacy` });
+  >({ url: `${urlApi}/api/volunteer/legacy` });
 
   const opportunity: OpportunityInfo = {
     id: opportunityParams.get("id") || "",
