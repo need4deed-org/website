@@ -26,22 +26,22 @@ This project and everyone participating in it is governed by our [Code of Conduc
 
 ### Your First Code Contribution
 
-Unsure where to begin contributing? You can start by looking through `good-first-issue` labeled [issues](https://gitlab.com/need4deed/website/-/issues/?label_name%5B%5D=good-first-issue)
+Unsure where to begin contributing? You can start by looking through `good-first-issue` labeled [issues](https://github.com/need4deed-org/website/issues?q=is%3Aissue%20state%3Aopen%20label%3A%22good%20first%20issue%22)
 
 ### First Merge Request
 
 Step 1: Fork the Repository
 
-1. Go to the our repository: [https://gitlab.com/need4deed/website](https://gitlab.com/need4deed/website).
+1. Go to the our repository: [https://github.com/need4deed-org/website](https://github.com/need4deed-org/website).
 1. Click the **Fork** button in the top-right corner.
-1. Choose where to fork the repository (usually your own GitLab account).
+1. Choose where to fork the repository (usually your own GitHub account).
 
 Step 2: Clone Your Forked Repository
 
-1. Go to your forked repository (e.g., `https://gitlab.com/your-username/website`).
+1. Go to your forked repository (e.g., `https://github.com/your-username/website`).
 1. Click the **Clone** button and copy it e.g. with HTTPS URL.
    ```bash
-   git clone https://gitlab.com/your-username/website.git
+   git clone git@github.com:need4deed-org/website.git
    ```
 1. Navigate into the cloned repository:
 
@@ -53,7 +53,7 @@ Step 3: Add the Original Repository as a Remote
 
 1. Add the original repository as a remote called `upstream`:
    ```bash
-   git remote add upstream https://gitlab.com/need4deed/website.git
+   git remote add upstream https://github.com/need4deed-org/website.git
    ```
 1. Verify the remotes:
 
@@ -70,7 +70,7 @@ Step 3: Add the Original Repository as a Remote
    ```bash
    git checkout -b your-branch-name
    ```
-   The branch should titled be your_nick-feature-title
+   The branch should titled be issue#-your_nick-feature-title, like `123-johndoe-update-readme`
 
 Step 4: Commit and Push Your Changes
 
@@ -87,15 +87,16 @@ Step 4: Commit and Push Your Changes
    git push origin your-branch-name
    ```
 
-Step 5: Create a merge request
+Step 5: Create a pull request (PR)
 
-1. Go to your forked repository on GitLab: `https://gitlab.com/your-username/website`.
-1. Click on **Merge Requests** in the left sidebar.
-1. Click **New Merge Request**.
-1. Select your branch (`your-branch-name`) as the **Source Branch** and `main` as the **Target Branch**.
-1. Fill in the Merge Request template
-1. Click **Create Merge Request**.
-1. Let us know about the awaiting review!
+1. Go to your forked repository on GitHub: `https://github.com/your-username/website`.
+2. Click on **Pull requests** in the left sidebar.
+3. Click **New pull request**.
+4. Select your branch (`your-branch-name`) on the right and make sure `develop` is on the left.
+5. Click **Create pull request**.
+6. Fill in the Pull Request template
+7. Click **Create pull request**.
+8. Let us know about the awaiting review!
 
 ### Reporting Bugs
 
@@ -103,15 +104,15 @@ Before creating bug reports, please check [this list](#before-submitting-a-bug-r
 
 #### Before Submitting A Bug Report
 
-- Please check [check](https://gitlab.com/need4deed/website/-/issues/?sort=created_date&state=opened&label_name%5B%5D=Any&first_page_size=20) if the problem has already been reported.
+- Please check [already reported bugs](https://github.com/need4deed-org/website/issues?q=is%3Aissue%20state%3Aopen%20type%3ABug) if the problem has already been reported.
 
 #### How Do I Submit A Bug Report?
 
-Bugs are tracked as [GitLab issues](https://gitlab.com/need4deed/website/-/issues). Create a bug issue. All the necesary info should be in the bug template.
+Bugs are tracked as [GitHub issues](https://github.com/need4deed-org/website/issues). Create a bug issue. All the necessary info should be in the bug template.
 
 ### Suggesting features
 
-Feature suggestions are also tracked as [GitLab issues](https://gitlab.com/need4deed/website/-/issues). Please refer to the feature template.
+Feature suggestions are also tracked as [GitHub issues](https://github.com/need4deed-org/website/issues). Please refer to the feature template.
 
 ## Styleguides
 
@@ -128,6 +129,8 @@ Feature suggestions are also tracked as [GitLab issues](https://gitlab.com/need4
   - 🐛 `:bug:` when fixing a bug
   - 🔥 `:fire:` when removing code or files
 
+Please keep commits reasonably scoped, e.g. a single commit containing all the diffs is hard to comprehend.
+
 ### JavaScript Styleguide
 
 Please refer to the linter.
@@ -141,7 +144,7 @@ By contributing, you agree that your contributions will be licensed under its [C
 Don't hesitate to reach out if you have any questions! You can:
 
 - Open an issue
-- Reach out to [@maintainer](https://gitlab.com/szymon.skorupinski.need4deed])
-- Join our Slack (please request an access h4ck@need4deed.org)
+- Reach out to [@need4deed](https://github.com/need4deed)
+- Join our Slack (please request an access dev@need4deed.org)
 
 Any contributions are welcome! 🙏

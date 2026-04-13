@@ -63,7 +63,7 @@ export default function AddOpportunity() {
   const { postRequest } = usePostRequest<
     OpportunityParsedData,
     Record<string, string | string[]>
-  >({ url: `${urlApi}/opportunity/` });
+  >({ url: `${urlApi}/api/opportunity/legacy` });
 
   const formOpportunity = useForm<OpportunityData>({
     defaultValues: {

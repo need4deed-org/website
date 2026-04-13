@@ -2,9 +2,11 @@ import { render } from "@testing-library/react";
 import { Lang } from "need4deed-sdk";
 import { RefObject, act, createRef } from "react";
 
+import { FormType } from "../components/forms/types";
 import { OpportunityParams } from "../config/types";
 import {
   getBaseUrl,
+  getExternalUrl,
   getFirstThursdayOfMonth,
   getOpportunityImg,
   getReadableLocalTime,
@@ -405,6 +407,48 @@ describe("utils", () => {
     it("should throw RangeError if step is zero", () => {
       expect(() => Array.from(range(0, 5, 0.4))).toThrow(RangeError);
       expect(() => Array.from(range(0, 5, 0))).toThrow(RangeError);
+    });
+  });
+
+  describe("getExternalUrl()", () => {
+    describe("Edge Cases / Invalid Inputs", () => {
+      it("should return an empty string if lng is missing", () => {
+        // @ts-expect-error - testing runtime safety
+        expect(getExternalUrl(null, FormType.OPPORTUNITY)).toBe("");
+      });
+
+      it("should return an empty string if type is missing", () => {
+        // @ts-expect-error - testing runtime safety
+        expect(getExternalUrl(Lang.DE, null)).toBe("");
+      });
+    });
+
+    describe("German (DE) - Default Language", () => {
+      it("should return the base URL for OPPORTUNITY in German", () => {
+        const result = getExternalUrl(Lang.DE, FormType.OPPORTUNITY);
+        // Assuming EXTERNAL_OPPORTUNITY_FORM contains "/de/"
+        expect(result).toContain("/de/");
+        expect(result).not.toContain("/en/");
+      });
+
+      it("should return the base URL for VOLUNTEER in German", () => {
+        const result = getExternalUrl(Lang.DE, FormType.VOLUNTEER);
+        expect(result).toContain("/de/");
+      });
+    });
+
+    describe("English (EN) - URL Transformation", () => {
+      it('should replace "/de/" with "/en/" for OPPORTUNITY', () => {
+        const result = getExternalUrl(Lang.EN, FormType.OPPORTUNITY);
+        expect(result).toContain("/en/");
+        expect(result).not.toContain("/de/");
+      });
+
+      it('should replace "/de/" with "/en/" for VOLUNTEER', () => {
+        const result = getExternalUrl(Lang.EN, FormType.VOLUNTEER);
+        expect(result).toContain("/en/");
+        expect(result).not.toContain("/de/");
+      });
     });
   });
 });

@@ -166,6 +166,10 @@ function App() {
                 element={<OpportunityForm />}
               />
               <Route
+                path={`/${Subpages.OPPORTUNITY_FORM}/:lng`}
+                element={<OpportunityForm />}
+              />
+              <Route
                 path={`/${Subpages.OPPORTUNITY_FORM_LEGACY}`}
                 element={<OpportunityForm />}
               />
@@ -175,6 +179,10 @@ function App() {
               />
               <Route
                 path={`/${Subpages.VOLUNTEER_FORM}`}
+                element={<VolunteerForm />}
+              />
+              <Route
+                path={`/${Subpages.VOLUNTEER_FORM}/:lng`}
                 element={<VolunteerForm />}
               />
               <Route

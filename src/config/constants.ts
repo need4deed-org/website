@@ -1,14 +1,15 @@
-export const urlApi =
-  import.meta.env.VITE_API_URL ?? "http://localhost:8000/api";
+export const urlApi = import.meta.env.VITE_API_URL ?? "http://localhost:8000";
 
 export const googleAnalyticsId = "G-5RG5NQ12YS";
 
-export const urlApiVolunteer = `${urlApi}/volunteer/`;
-export const urlApiOpportunity = `${urlApi}/opportunity/`;
-export const urlApiAuthEmailDomain = `${urlApi}/auth-email-domain/`;
-export const urlApiTestimonial = `${urlApi}/testimonial/`;
-export const urlApiEvent = `${urlApi}/event/`;
+export const urlApiVolunteer = `${urlApi}/api/volunteer`;
+export const urlApiOpportunity = `${urlApi}/api/opportunity`;
+export const urlApiAuthEmailDomain = `${urlApi}/api/auth-email-domain/`;
+export const urlApiTestimonial = `${urlApi}/api/testimonial/`;
+export const urlApiEvent = `${urlApi}/api/event/`;
 export const CLOUDFRONT_URL = "https://d2nwrdddg8skub.cloudfront.net/images";
+export const EXTERNAL_OPPORTUNITY_FORM = `${urlApi}/de/forms/opportunity`;
+export const EXTERNAL_VOLUNTEER_FORM = `${urlApi}/de/forms/volunteer`;
 
 const positives = ["1", "YES", "Yes", "yes", "TRUE", "True", "true"];
 

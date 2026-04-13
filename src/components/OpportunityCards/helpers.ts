@@ -1,9 +1,8 @@
 /* eslint-disable no-restricted-syntax */
-import { Lang, OpportunityType } from "need4deed-sdk";
 import { TFunction } from "i18next";
-import { Opportunity } from "../VolunteeringOpportunities/types";
-import { CardsFilter, Day, DayKeys, Days, DaysKeys } from "./types";
+import { Lang, OpportunityType } from "need4deed-sdk";
 import { TimeSlot, Weekday } from "../forms/types";
+import { Opportunity } from "../VolunteeringOpportunities/types";
 import { CategoryTitle } from "../VolunteeringOpportunities/utils";
 import {
   DASH,
@@ -12,6 +11,7 @@ import {
   FilterKey,
   langQueryParamKey,
 } from "./Filters/constants";
+import { CardsFilter, Day, DayKeys, Days, DaysKeys } from "./types";
 
 const dayEnumMap: Record<string, DaysKeys> = {
   1: "monday",
@@ -236,7 +236,7 @@ export const extractCardsFilter = (
     if (opp.categoryId !== CategoryTitle.ACCOMPANYING)
       categoriesSet.add(opp.category);
 
-    opp.locations.forEach((l) => districtSet.add(l));
+    opp.locations?.forEach((l) => districtSet.add(l));
   }
 
   putItemToEnd(
