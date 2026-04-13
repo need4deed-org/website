@@ -90,7 +90,7 @@ export function OpportunityCards() {
 
       {selectedTabIndex === 0 ? (
         <Cards
-          url={`${urlApiOpportunity}/legacy`}
+          url={`${urlApiOpportunity}/legacy`} // external API endpoint for opportunity cards
           opportunityParams={{
             search: {
               status: ["Volunteers Needed", "Search in process"],
