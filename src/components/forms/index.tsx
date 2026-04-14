@@ -1,5 +1,6 @@
-import AddOpportunity from "./AddOpportunity";
-import BecomeVolunteer from "./BecomeVolunteer";
+import { Lang } from "need4deed-sdk";
+import { useTranslation } from "react-i18next";
+import { getExternalUrl } from "../../utils";
 import { FormType } from "./types";
 
 interface Props {
@@ -7,12 +8,10 @@ interface Props {
 }
 
 export default function Form({ form }: Props) {
-  switch (form) {
-    case FormType.VOLUNTEER:
-      return <BecomeVolunteer />;
-    case FormType.OPPORTUNITY:
-      return <AddOpportunity />;
-    default:
-      return null;
-  }
+  const { i18n } = useTranslation();
+
+  // Redirect to the external form URL based on the current language and form type
+  const to = getExternalUrl(i18n.language as Lang, form);
+  window.location.replace(to);
+  return null;
 }
