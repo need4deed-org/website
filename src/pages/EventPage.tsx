@@ -56,8 +56,13 @@ export default function EventPage() {
       <Container>
         <Title>Workshop für Freiwillige</Title>
         <Meta>
-          <MetaItem>📅 Donnerstag, 07.05.2026 &mdash; 17:30&ndash;19:30 Uhr (Einlass ab 17:00)</MetaItem>
-          <MetaItem>📍 Art Space in Exile, Elsenstraße 87, 12435 Berlin</MetaItem>
+          <MetaItem>
+            📅 Donnerstag, 07.05.2026 &mdash; 17:30&ndash;19:30 Uhr (Einlass ab
+            17:00)
+          </MetaItem>
+          <MetaItem>
+            📍 Art Space in Exile, Elsenstraße 87, 12435 Berlin
+          </MetaItem>
           <MetaItem>👥 Für Freiwillige, die Geflüchtete unterstützen</MetaItem>
           <MetaItem>🗣️ Sprache: Deutsch</MetaItem>
         </Meta>
@@ -69,7 +74,11 @@ export default function EventPage() {
           die Konzentration fördern kannst. Der Workshop bietet zudem Raum für
           deine persönlichen Fragen und den Austausch mit anderen Freiwilligen.
         </Description>
-        <RegisterButton href={REGISTRATION_URL} target="_blank" rel="noopener noreferrer">
+        <RegisterButton
+          href={REGISTRATION_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Jetzt anmelden
         </RegisterButton>
       </Container>
