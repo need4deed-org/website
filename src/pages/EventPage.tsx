@@ -1,17 +1,12 @@
-import { Lang } from "need4deed-sdk";
-import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
 
-import Event from "../components/Event/Event";
-import { StaticPageLayout } from "../components/Layouts/staticPageLayout";
-import useEvents from "../hooks/api/useEvents";
+const EVENT_FORM_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLSft1xi4NrQB_O6-OyOvVm_HcDSzQtog_3MMj2XAIVNaLKEJxA/viewform?usp=dialog";
 
 export default function EventPage() {
-  const { i18n } = useTranslation();
-  const [events] = useEvents(i18n.language as Lang);
+  useEffect(() => {
+    window.location.replace(EVENT_FORM_URL);
+  }, []);
 
-  return (
-    <StaticPageLayout>
-      <Event eventData={events} />
-    </StaticPageLayout>
-  );
+  return null;
 }
