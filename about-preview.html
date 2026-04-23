@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Need4Deed - About Us (Enhanced)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .header {
+            background: white;
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #007bff;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+        
+        .about-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+        
+        .values-section {
+            margin: 2rem 0;
+        }
+        
+        .value-item {
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #007bff;
+        }
+        
+        .value-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .value-icon {
+            width: 24px;
+            height: 24px;
+            color: #007bff;
+            font-size: 24px;
+        }
+        
+        .value-header h6 {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .team-section {
+            margin-top: 2rem;
+            padding: 2rem;
+            background: #e3f2fd;
+            border-radius: 8px;
+            border-left: 4px solid #2196f3;
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, #a8e6cf 0%, #dcedc1 100%);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+        }
+        
+        .contact-link {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .contact-link:hover {
+            text-decoration: underline;
+        }
+        
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+        
+        .implementation-note {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .implementation-note h4 {
+            color: #856404;
+            margin-bottom: 0.5rem;
+        }
+        
+        .implementation-note p {
+            color: #856404;
+            margin: 0;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <nav class="nav">
+            <div class="logo">Need4Deed</div>
+            <ul class="nav-links">
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#opportunities">VOLUNTEERING OPPORTUNITIES</a></li>
+                <li><a href="#events">EVENTS</a></li>
+                <li><a href="#language">ENGLISH</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container">
+        <!-- Implementation Note -->
+        <div class="implementation-note">
+            <h4>✅ About Page Enhancement Complete</h4>
+            <p>This preview shows the enhanced About page with icons, improved layout, and the new Team section. The actual React components have been updated with the same functionality.</p>
+        </div>
+
+        <div class="about-container">
+            <!-- About the Project -->
+            <section>
+                <h2>About the Project</h2>
+                <p>The number of people fleeing conflict zones, persecution and human rights violations worldwide has never been as high as it is today. <span class="highlight">Need4Deed is set to promote the inclusion and integration of refugees in Berlin</span> through the actions of civil society by making volunteering more accessible. We aim to build a sustainable and scalable mechanism for this purpose by connecting volunteers with refugees that are living in accommodation centers in Berlin based on their specific needs.</p>
+            </section>
+
+            <!-- Our Values -->
+            <section class="values-section">
+                <h2>Our Values</h2>
+
+                <div class="value-item">
+                    <div class="value-header">
+                        <span class="value-icon">⚖️</span>
+                        <h6>Equal opportunities</h6>
+                    </div>
+                    <p>People living under destitute life conditions should be given equal opportunities. The latter includes underserved individuals and groups affected by forced migration.</p>
+                </div>
+
+                <div class="value-item">
+                    <div class="value-header">
+                        <span class="value-icon">❤️</span>
+                        <h6>Responsibility</h6>
+                    </div>
+                    <p>Both countries (the state) and civil society, have responsibility towards its underserved communities including those affected by forced migration.</p>
+                </div>
+
+                <div class="value-item">
+                    <div class="value-header">
+                        <span class="value-icon">👥</span>
+                        <h6>Migrant-to-migrant support</h6>
+                    </div>
+                    <p>In particular, groups and individuals who have undergone forced migration could be best understood and supported by others with migration background in the course of their integration process, so that they receive equal opportunities and eventually benefit society themselves.</p>
+                </div>
+
+                <div class="value-item">
+                    <div class="value-header">
+                        <span class="value-icon">✨</span>
+                        <h6>Active participation</h6>
+                    </div>
+                    <p>A migrant-to-migrant support alongside non-migrant support, can both play a key social role by facilitating a more rapid integration process and active participation of the supported communities.</p>
+                </div>
+
+                <div class="value-item">
+                    <div class="value-header">
+                        <span class="value-icon">⚙️</span>
+                        <h6>Technology</h6>
+                    </div>
+                    <p>Applying technology in the effort to support underserved communities is a key value to make support giving and receiving more inclusive, accessible and scalable.</p>
+                </div>
+            </section>
+
+            <!-- The Team Section (NEW) -->
+            <section class="team-section">
+                <h2>The Team</h2>
+                <p><strong>Need4Deed has five team members in various capacities:</strong> two volunteer coordinators, one refugee accommodation coordinator, a programmer, and a project coordinator. Among other responsibilities, the team is responsible for managing the volunteer intake and matching the volunteers with refugees. If you have any questions, contact us at <a href="mailto:info@need4deed.org" class="contact-link">info@need4deed.org</a></p>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Need4Deed - Need based voluntary support for refugees in Berlin</p>
+        </div>
+    </div>
+</body>
+</html>

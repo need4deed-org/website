@@ -30,6 +30,7 @@ const SocialsContainer = styled.div`
   display: flex;
   flex-direction: row;
   gap: var(--homepage-footer-partners-section-socials-container-gap);
+  margin-top: var(--homepage-footer-partners-section-socials-margin-top, 0);
 `;
 
 function Contact() {
@@ -64,32 +65,16 @@ function Socials() {
   return (
     <SocialsContainer>
       <ATag href="https://www.linkedin.com/company/need4deed/">
-        <LinkedinLogo
-          size={40}
-          weight="fill"
-          color="var(--color-orchid-light)"
-        />
+        <LinkedinLogo size={Number(getComputedStyle(document.documentElement).getPropertyValue("--homepage-footer-partners-section-social-icon-size").trim().replace("px","")) || 24} weight="fill" color="var(--color-orchid-light)" />
       </ATag>
       <ATag href="https://www.facebook.com/need4deedberlin/">
-        <FacebookLogo
-          size={40}
-          weight="fill"
-          color="var(--color-orchid-light)"
-        />
+        <FacebookLogo size={Number(getComputedStyle(document.documentElement).getPropertyValue("--homepage-footer-partners-section-social-icon-size").trim().replace("px","")) || 24} weight="fill" color="var(--color-orchid-light)" />
       </ATag>
       <ATag href="https://www.instagram.com/need4deed/">
-        <InstagramLogo
-          weight="bold"
-          size={40}
-          color="var(--color-orchid-light)"
-        />
+        <InstagramLogo weight="bold" size={Number(getComputedStyle(document.documentElement).getPropertyValue("--homepage-footer-partners-section-social-icon-size").trim().replace("px","")) || 24} color="var(--color-orchid-light)" />
       </ATag>
       <ATag href="https://open.spotify.com/show/0jZKki7RWqJL2RzvmF6hzp">
-        <ApplePodcastsLogo
-          weight="bold"
-          size={40}
-          color="var(--color-orchid-light)"
-        />
+        <ApplePodcastsLogo weight="bold" size={Number(getComputedStyle(document.documentElement).getPropertyValue("--homepage-footer-partners-section-social-icon-size").trim().replace("px","")) || 24} color="var(--color-orchid-light)" />
       </ATag>
     </SocialsContainer>
   );

@@ -1,12 +1,7 @@
 import styled from "styled-components";
 import useScreenType from "../../hooks/useScreenType";
 import { ScreenTypes } from "../../config/types";
-import {
-  LogoBerlin,
-  LogoClubDialog,
-  LogoEU,
-  LogoSchönebergHilft,
-} from "./logos";
+import { LogoBerlin, LogoClubDialog, LogoEU, LogoSchönebergHilft } from "./logos";
 
 const PartnersContainer = styled.div`
   display: flex;
@@ -34,13 +29,25 @@ const FrameContainer = styled.div<FrameProps>`
   gap: ${(props) => props.gap};
 `;
 
+const DesktopGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: var(--homepage-footer-partners-section-partners-grid-column-gap, 40px);
+  row-gap: var(--homepage-footer-partners-section-partners-grid-row-gap, 24px);
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+`;
+
 const partnerLogos = {
-  [ScreenTypes.DESKTOP]: [
-    <LogoClubDialog key="club" />,
-    <LogoBerlin key="berlin" />,
-    <LogoEU key="eu" />,
-    <LogoSchönebergHilft key="schoneberg" />,
-  ],
+  [ScreenTypes.DESKTOP]: (
+    <DesktopGrid>
+      <LogoClubDialog />
+      <LogoEU />
+      <LogoBerlin />
+      <LogoSchönebergHilft />
+    </DesktopGrid>
+  ),
   [ScreenTypes.TABLET]: [
     <FrameContainer
       key="frame1"
