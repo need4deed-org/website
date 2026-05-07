@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 import { StaticPageLayout } from "../components/Layouts/staticPageLayout";
 
-const REGISTRATION_URL =
-  "https://docs.google.com/forms/d/e/1FAIpQLSft1xi4NrQB_O6-OyOvVm_HcDSzQtog_3MMj2XAIVNaLKEJxA/viewform?usp=dialog";
+const REGISTRATION_URL = "https://forms.gle/hFJTszu4tCoeDRy4A";
 
 const Container = styled.div`
   max-width: 680px;
