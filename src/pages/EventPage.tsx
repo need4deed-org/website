@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 import { StaticPageLayout } from "../components/Layouts/staticPageLayout";
 
-const REGISTRATION_URL =
-  "https://docs.google.com/forms/d/e/1FAIpQLSft1xi4NrQB_O6-OyOvVm_HcDSzQtog_3MMj2XAIVNaLKEJxA/viewform?usp=dialog";
+const REGISTRATION_URL = "https://forms.gle/hFJTszu4tCoeDRy4A";
 
 const Container = styled.div`
   max-width: 680px;
@@ -54,20 +53,19 @@ export default function EventPage() {
   return (
     <StaticPageLayout>
       <Container>
-        <Title>Workshop für Freiwillige</Title>
+        <Title>VolunTea</Title>
         <Meta>
-          <MetaItem>📅 Donnerstag, 07.05.2026 &mdash; 17:30&ndash;19:30 Uhr (Einlass ab 17:00)</MetaItem>
+          <MetaItem>📅 Donnerstag, 05.06.2026 &mdash; 17:30&ndash;19:30 Uhr (Einlass ab 17:00)</MetaItem>
           <MetaItem>📍 Art Space in Exile, Elsenstraße 87, 12435 Berlin</MetaItem>
           <MetaItem>👥 Für Freiwillige, die Geflüchtete unterstützen</MetaItem>
           <MetaItem>🗣️ Sprache: Deutsch</MetaItem>
         </Meta>
         <Description>
-          Unterstützt du geflüchtete Kinder bei den Hausaufgaben oder beim
-          Deutschlernen? In diesem kompakten Workshop vermitteln wir das nötige
-          Rüstzeug für deine ehrenamtliche Arbeit. Wir zeigen einfache, aber
-          effektive pädagogische Methoden, mit denen du Lernblockaden lösen und
-          die Konzentration fördern kannst. Der Workshop bietet zudem Raum für
-          deine persönlichen Fragen und den Austausch mit anderen Freiwilligen.
+          Ein kleines Treffen für Freiwillige, um Erfahrungen auszutauschen und
+          mehr darüber zu erfahren, wie man Menschen in Not in Berlin
+          unterstützen kann. Ob du schon aktiv bist oder erst anfangen möchtest
+          &mdash; komm vorbei, triff das Team und andere Freiwillige, und lass
+          dich inspirieren.
         </Description>
         <RegisterButton href={REGISTRATION_URL} target="_blank" rel="noopener noreferrer">
           Jetzt anmelden
