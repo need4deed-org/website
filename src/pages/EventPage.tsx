@@ -56,7 +56,7 @@ export default function EventPage() {
         <Title>VolunTea</Title>
         <Meta>
           <MetaItem>
-            📅 Donnerstag, 05.06.2026 &mdash; 17:30&ndash;19:30 Uhr (Einlass ab
+            📅 Donnerstag, 04.06.2026 &mdash; 17:30&ndash;19:30 Uhr (Einlass ab
             17:00)
           </MetaItem>
           <MetaItem>
